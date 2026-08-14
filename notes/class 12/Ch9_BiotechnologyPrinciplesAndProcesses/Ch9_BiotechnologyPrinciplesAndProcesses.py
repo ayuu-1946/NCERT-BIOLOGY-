@@ -996,6 +996,34 @@ story.append(note(
     "denaturation</b> of double stranded DNA. That heat-stability is precisely why the cycle can be "
     "repeated without adding fresh enzyme."))
 story.append(Paragraph(
+    "The <b>template is the <i>ds DNA</i></b> (double stranded DNA). Only the <b>region to be "
+    "amplified</b> - the stretch flanked by the two primer binding sites - is copied; the "
+    "<b>flanking DNA on either side is not</b>. Each strand is <b>antiparallel</b>, so every strand "
+    "end carries a polarity label: the strand that reads <b>5' to 3'</b> left to right is paired "
+    "with one that reads <b>3' to 5'</b>. Each <b>primer</b> is likewise labelled <b>5'</b> and "
+    "<b>3'</b> and anneals in the <b>orientation opposite to the strand it binds</b>, so the "
+    "polymerase extends the two primers in <b>opposite directions</b> along the two template "
+    "strands.", STYLES["Body"]))
+story.append(heading("9.3.3", "Reading one PCR cycle, step by step", 3, has_table=True))
+story.append(data_table([
+    ["Step", "What is done to the DNA", "What drives it"],
+    ["<b>Denaturation</b>",
+     "The <b>ds DNA</b> is <b>separated</b> into its two single strands.",
+     "<b>Heat</b>."],
+    ["<b>Primer annealing</b>",
+     "The <b>two sets of primers</b> bind to their <b>complementary regions</b>, one on each "
+     "separated strand, bracketing the <b>region to be amplified</b>.",
+     "<b>Primers</b> - chemically synthesised <b>oligonucleotides</b>."],
+    ["<b>Extension of primers</b>",
+     "The bound primers are <b>extended</b> along the template, copying the region to be "
+     "amplified and restoring two <b>double stranded</b> molecules.",
+     "<b>DNA polymerase</b> (<b><i>Taq</i> polymerase</b>) <b>+ deoxynucleotides</b>."],
+    ["<b>Repeat the cycle</b>",
+     "The products become templates for the next round, so copy number <b>doubles each cycle</b>.",
+     "<b>30 cycles</b>, giving DNA <b>amplified about 1 billion times</b>."],
+], col_widths=[1.9, 3.7, 2.4]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
     "The amplified fragment, if desired, can now be used to <b>ligate with a vector for further "
     "cloning</b>.", STYLES["Body"]))
 story.append(Spacer(1, 3))
