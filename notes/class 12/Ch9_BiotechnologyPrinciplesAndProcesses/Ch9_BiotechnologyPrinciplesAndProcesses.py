@@ -3,14 +3,18 @@ NCERT Biology -> NEET replacement notes
 Class 12, Chapter 9 : Biotechnology : Principles and Processes
 
 Source  : Chapter/class 12/Chapter 9 - Biotechnology Principles and Processes.pdf
-Built to: SUPREME COMMAND PROMPT.md v4 (full-replacement edition, original NCERT figures)
+Built to: SUPREME COMMAND PROMPT.md v5 (full-replacement edition, print-hardened B&W figures)
 
 Run from the repository root:
-    .venv/bin/python "notes/class 12/Ch9_BiotechnologyPrinciplesAndProcesses/Ch9_BiotechnologyPrinciplesAndProcesses.py"
+    python3 "notes/class 12/Ch9_BiotechnologyPrinciplesAndProcesses/Ch9_BiotechnologyPrinciplesAndProcesses.py"
+
+Figures: every asset in assets/ has already been clip-extracted at 300 dpi and pushed
+through convert_figures_mono.py (PIL convert("L") + autocontrast). figure() re-asserts
+mode == "L" at build time, so a raw or colour asset cannot silently reach the PDF (§4.4).
 
 Structure of this file:
   1. Canonical style block (§4)
-  2. The three sanctioned helpers: process_flow() (§4.2), figure() (§4.4), boxes/headings (§4.1/§4.3)
+  2. The sanctioned helpers: process_flow() (§4.2), figure() (§4.4), boxes/headings (§4.1/§4.3)
   3. One linear sequence of story.append(...) calls in Content Order (§5),
      each block commented with its NCERT section number for fast auditing.
 """
@@ -305,9 +309,17 @@ def data_table(rows, col_widths=None, font_size=9.5):
 
 def figure(asset_name: str, caption_text: str, max_width_cm: float = 15.9):
     """Embed an extracted NCERT figure with its caption (§4.4).
+
     Scales to the text column preserving aspect ratio, never upscaled beyond 300 dpi
-    effective resolution, and kept together with its caption across page breaks.
-    A missing asset raises a loud, named error - the figure is never silently skipped."""
+    effective resolution, sits inside a thin GRID_LINE box so it reads as part of this
+    design system rather than a pasted-in foreign object, and is kept together with its
+    caption across page breaks.
+
+    Two loud failures, never silent ones:
+      - a missing asset raises FileNotFoundError naming the caption that needed it;
+      - an asset that is not true monochrome raises RuntimeError, so a raw or colour
+        extraction cannot reach the PDF even if convert_figures_mono.py was skipped.
+    """
     path = os.path.join(ASSETS, asset_name)
     if not os.path.exists(path):
         raise FileNotFoundError(f"MISSING FIGURE ASSET: {path} (required by caption: {caption_text})")
@@ -315,16 +327,32 @@ def figure(asset_name: str, caption_text: str, max_width_cm: float = 15.9):
         from PIL import Image as PILImage
         with PILImage.open(path) as im:
             px_w, px_h = im.size
+            mode = im.mode
     except Exception as exc:
         raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
+    if mode != "L":
+        raise RuntimeError(
+            f"FIGURE NOT MONOCHROME: {asset_name} has mode {mode!r}, expected 'L'. "
+            f"Run convert_figures_mono.py before building (§4.4 Step 2).")
 
     max_w = min(max_width_cm * cm, FRAME_WIDTH)
     natural_w = px_w / 300.0 * 2.54 * cm          # width at 300 dpi effective resolution
     width = min(max_w, natural_w)
     height = width * px_h / px_w
     img = Image(path, width=width, height=height)
-    img.hAlign = "CENTER"
-    return KeepTogether([img, Paragraph(caption_text, STYLES["Caption"])])
+
+    framed = Table([[img]], colWidths=[width + 10])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    framed.hAlign = "CENTER"
+    return KeepTogether([framed, Paragraph(caption_text, STYLES["Caption"])])
 
 
 # --------------------------------------------------------------------------------------
@@ -370,6 +398,9 @@ story.append(Paragraph(
 story.append(Spacer(1, 4))
 
 # ---- Scientist profile box: Herbert Boyer (chapter opener page) ----
+# TEXT ONLY - the source page carries a headshot, which is deliberately not embedded.
+# A likeness carries no testable fact, and §4.4's hard no on photographs of people is not
+# waived by monochrome conversion. Name, dates and achievements carry everything examinable.
 _boyer_text = [
     Paragraph("<b>HERBERT BOYER (1936 - )</b>", STYLES["Body"]),
     Paragraph(
@@ -395,9 +426,8 @@ _boyer_text = [
         "manufacturing plants for specific proteins. This breakthrough was the basis upon which "
         "the discipline of biotechnology was founded.", STYLES["Body"]),
 ]
-_boyer = Table([[Image(os.path.join(ASSETS, "fig_boyer.png"), width=2.6 * cm, height=3.88 * cm),
-                 _boyer_text]],
-               colWidths=[2.9 * cm, FRAME_WIDTH - 2.9 * cm])
+_boyer = Table([[_icon_definition(), _boyer_text]],
+               colWidths=[0.55 * cm, FRAME_WIDTH - 0.55 * cm])
 _boyer.setStyle(TableStyle([
     ("VALIGN", (0, 0), (-1, -1), "TOP"),
     ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
@@ -531,3 +561,649 @@ story.append(memory_aid(
     "Cut (restriction enzyme), paste (ligase), carry (vector into a competent host), copy "
     "(origin of replication / PCR), harvest (bioreactor then downstream processing)."))
 story.append(Spacer(1, 4))
+
+# ---- 9.2 Tools of Recombinant DNA Technology ----
+story.append(heading("9.2", "TOOLS OF RECOMBINANT DNA TECHNOLOGY", 1))
+story.append(Paragraph(
+    "Genetic engineering (recombinant DNA technology) can be accomplished <b>only</b> if we have "
+    "the key tools. There are <b>five</b>: <b>restriction enzymes</b>, <b>polymerase enzymes</b>, "
+    "<b>ligases</b>, <b>vectors</b> and the <b>host organism</b>.", STYLES["Body"]))
+story.append(Spacer(1, 3))
+
+# ---- 9.2.1 Restriction Enzymes ----
+story.append(heading("9.2.1", "Restriction Enzymes", 2, has_table=True))
+story.append(Paragraph(
+    "The discovery ran in two stages, five years apart.", STYLES["Body"]))
+story.append(data_table([
+    ["Year", "What was found", "Significance"],
+    ["<b>1963</b>",
+     "The <b>two enzymes</b> responsible for restricting the growth of <b>bacteriophage</b> in "
+     "<i>Escherichia coli</i> were isolated. One <b>added methyl groups</b> to DNA; the other "
+     "<b>cut</b> DNA.",
+     "The cutting enzyme was called <b>restriction endonuclease</b>."],
+    ["<b>Five years later</b> (i.e. after 1963)",
+     "The <b>first</b> restriction endonuclease - <b>Hind II</b> - whose functioning depended on a "
+     "specific DNA nucleotide sequence, was isolated and characterised.",
+     "Hind II always cuts DNA at a particular point by recognising a specific sequence of "
+     "<b>six base pairs</b>. That sequence is its <b>recognition sequence</b>."],
+    ["<b>Today</b>",
+     "More than <b>900</b> restriction enzymes are known, isolated from over <b>230 strains</b> of "
+     "bacteria.",
+     "Each recognises a <b>different</b> recognition sequence."],
+], col_widths=[1.5, 3.4, 3.1]))
+story.append(Spacer(1, 4))
+
+story.append(heading("9.2.1", "How restriction enzymes are named", 3, has_table=True))
+story.append(Paragraph(
+    "The name is not arbitrary - every part of <b>EcoRI</b> is readable:", STYLES["Body"]))
+story.append(data_table([
+    ["Part of the name", "Where it comes from", "In <b>EcoRI</b>"],
+    ["<b>First letter</b>", "The <b>genus</b> of the prokaryotic cell it was isolated from",
+     "<b>E</b> = <i>Escherichia</i>"],
+    ["<b>Next two letters</b>", "The <b>species</b>", "<b>co</b> = <i>coli</i>"],
+    ["<b>Following letter(s)</b>", "The name of the <b>strain</b>",
+     "<b>R</b> = from strain <b>RY 13</b>"],
+    ["<b>Roman number</b>",
+     "The <b>order</b> in which the enzymes were isolated from that strain of bacteria",
+     "<b>I</b> = the first isolated"],
+], col_widths=[1.7, 4.3, 2.0]))
+story.append(Spacer(1, 4))
+
+story.append(heading("9.2.1", "Where restriction enzymes sit among the nucleases", 3,
+                     has_table=True))
+story.append(Paragraph(
+    "Restriction enzymes belong to a larger class of enzymes called <b>nucleases</b>. These are of "
+    "<b>two</b> kinds.", STYLES["Body"]))
+story.append(data_table([
+    ["Kind of nuclease", "Where it cuts"],
+    ["<b>Exonucleases</b>", "Remove nucleotides <b>from the ends</b> of the DNA."],
+    ["<b>Endonucleases</b>", "Make cuts at <b>specific positions within</b> the DNA."],
+], col_widths=[2.2, 5.8]))
+story.append(Spacer(1, 4))
+
+story.append(heading("9.2.1", "How a restriction endonuclease works", 3))
+story.append(process_flow([
+    "<b>Inspect</b> - each restriction endonuclease functions by 'inspecting' the length of a DNA "
+    "sequence.",
+    "<b>Bind</b> - once it finds its specific <b>recognition sequence</b>, it binds to the DNA.",
+    "<b>Cut</b> - it cuts <b>each of the two strands</b> of the double helix at specific points in "
+    "their <b>sugar-phosphate backbones</b>.",
+]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "Each restriction endonuclease recognises a specific <b>palindromic nucleotide sequence</b> in "
+    "the DNA. A palindrome is a group of letters that forms the same word read both forward and "
+    "backward, e.g. <b>'MALAYALAM'</b>. But note the difference: in a word-palindrome the same "
+    "word is read in both directions, whereas <b>the palindrome in DNA is a sequence of base "
+    "pairs that reads the same on the two strands when the orientation of reading is kept the "
+    "same</b>."))
+story.append(Paragraph(
+    "For example, the following sequence reads the same on the two strands in the "
+    "<b>5' to 3'</b> direction - and this is also true if read in the <b>3' to 5'</b> direction:",
+    STYLES["Body"]))
+story.append(data_table([
+    ["Strand", "Sequence"],
+    ["<b>5'</b> ---", "<b>G A A T T C</b> --- <b>3'</b>"],
+    ["<b>3'</b> ---", "<b>C T T A A G</b> --- <b>5'</b>"],
+], col_widths=[1.6, 6.4]))
+story.append(Spacer(1, 4))
+
+story.append(heading("9.2.1", "Sticky ends - why the cut is off-centre", 3))
+story.append(Paragraph(
+    "Restriction enzymes cut the strand of DNA <b>a little away from the centre</b> of the "
+    "palindrome sites, but <b>between the same two bases on the opposite strands</b>. This leaves "
+    "<b>single stranded portions at the ends</b> - overhanging stretches called <b>sticky ends</b> "
+    "on each strand.", STYLES["Body"]))
+story.append(keyterm(
+    "They are named <b>sticky</b> because they form <b>hydrogen bonds</b> with their complementary "
+    "cut counterparts. This stickiness of the ends facilitates the action of the enzyme "
+    "<b>DNA ligase</b>."))
+story.append(Paragraph(
+    "Restriction endonucleases are therefore used in genetic engineering to form "
+    "<b>'recombinant' molecules of DNA</b>, which are composed of DNA <b>from different "
+    "sources/genomes</b>. When cut by the <b>same</b> restriction enzyme, the resultant DNA "
+    "fragments have the <b>same kind of sticky ends</b>, and these can be joined together "
+    "(end-to-end) using DNA ligases.", STYLES["Body"]))
+story.append(note(
+    "Normally, <b>unless one cuts the vector and the source DNA with the same restriction "
+    "enzyme</b>, the recombinant vector molecule <b>cannot</b> be created."))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_9_1.png",
+    "<b>Fig. 9.1</b> - Steps in formation of recombinant DNA by action of restriction "
+    "endonuclease enzyme - EcoRI. The enzyme cuts both DNA strands at the same site, cutting "
+    "between bases G and A only where the sequence GAATTC is present, so that the vector DNA and "
+    "the foreign DNA both end in matching sticky ends and can join to give recombinant DNA. "
+    "<i>The original is colour-coded; here the vector DNA is the outline strand and the foreign "
+    "DNA the solid black strand.</i>",
+    max_width_cm=14.5))
+
+story.append(heading("9.2.1", "Separation and isolation of DNA fragments", 3))
+story.append(Paragraph(
+    "Cutting DNA with restriction endonucleases results in <b>fragments</b> of DNA. These "
+    "fragments are separated by a technique known as <b>gel electrophoresis</b>.", STYLES["Body"]))
+story.append(process_flow([
+    "<b>Move them in a field</b> - since DNA fragments are <b>negatively charged</b> molecules, "
+    "they are separated by forcing them to move <b>towards the anode</b> under an electric field "
+    "through a medium/matrix.",
+    "<b>Sieve them by size</b> - the most commonly used matrix nowadays is <b>agarose</b>, a "
+    "<b>natural polymer extracted from sea weeds</b>. The fragments separate (resolve) according "
+    "to their size through the <b>sieving effect</b> provided by the agarose gel. Hence the "
+    "<b>smaller the fragment size, the farther it moves</b>.",
+    "<b>Stain and view</b> - the separated fragments can be visualised <b>only after staining</b> "
+    "the DNA with <b>ethidium bromide</b> followed by exposure to <b>UV radiation</b>. You cannot "
+    "see pure DNA fragments in visible light without staining. You then see <b>bright orange "
+    "coloured bands</b> of DNA.",
+    "<b>Cut out and elute</b> - the separated bands of DNA are cut out from the agarose gel and "
+    "extracted from the gel piece. This step is known as <b>elution</b>.",
+]))
+story.append(Paragraph(
+    "The DNA fragments purified in this way are used in constructing recombinant DNA by joining "
+    "them with <b>cloning vectors</b>.", STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(figure(
+    "fig_9_3.png",
+    "<b>Fig. 9.3</b> - A typical agarose gel electrophoresis showing migration of <b>undigested</b> "
+    "DNA (lane 1) and <b>digested</b> sets of DNA fragments (lanes 2 to 4). The largest fragments "
+    "stay nearest the wells and the smallest travel farthest.",
+    max_width_cm=13.0))
+story.append(memory_aid(
+    "Gel electrophoresis in one line: <b>negative DNA runs to the positive anode, small runs "
+    "fast</b>. Then <b>stain (ethidium bromide) - shine (UV) - see (orange bands) - snip "
+    "(elution)</b>."))
+story.append(Spacer(1, 4))
+
+# ---- 9.2.2 Cloning Vectors ----
+story.append(heading("9.2.2", "Cloning Vectors", 2, has_table=True))
+story.append(Paragraph(
+    "<b>Plasmids</b> and <b>bacteriophages</b> have the ability to replicate within bacterial "
+    "cells <b>independent of the control of chromosomal DNA</b>. That independence is what makes "
+    "them useful as vectors.", STYLES["Body"]))
+story.append(data_table([
+    ["Vector", "Copy number within the bacterial cell"],
+    ["<b>Bacteriophages</b>",
+     "Because of their <b>high number per cell</b>, they have <b>very high copy numbers</b> of "
+     "their genome within the bacterial cells."],
+    ["<b>Plasmids</b>",
+     "Some may have only <b>one or two</b> copies per cell, whereas others may have "
+     "<b>15-100</b> copies per cell. Their numbers can go even <b>higher</b>."],
+], col_widths=[2.0, 6.0]))
+story.append(Paragraph(
+    "So if we can link an alien piece of DNA with bacteriophage or plasmid DNA, we can multiply "
+    "its numbers <b>equal to the copy number</b> of the plasmid or bacteriophage.", STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "Vectors used at present are <b>engineered</b> in such a way that they help (a) <b>easy linking "
+    "of foreign DNA</b> and (b) <b>selection of recombinants from non-recombinants</b>. Four "
+    "engineered features do this work.", STYLES["Body"]))
+story.append(Spacer(1, 3))
+
+story.append(heading("9.2.2", "Feature 1 - Origin of replication (ori)", 3))
+story.append(keyterm(
+    "<b>Origin of replication (ori)</b> is a sequence <b>from where replication starts</b>, and any "
+    "piece of DNA when linked to this sequence can be made to <b>replicate within the host "
+    "cells</b>. This sequence is <b>also responsible for controlling the copy number</b> of the "
+    "linked DNA."))
+story.append(note(
+    "Practical consequence: if one wants to recover <b>many copies</b> of the target DNA, it should "
+    "be cloned in a vector <b>whose origin supports high copy number</b>."))
+story.append(Spacer(1, 3))
+
+story.append(heading("9.2.2", "Feature 2 - Selectable marker", 3))
+story.append(keyterm(
+    "In addition to 'ori', the vector requires a <b>selectable marker</b>, which helps in "
+    "<b>identifying and eliminating non-transformants</b> and <b>selectively permitting the growth "
+    "of the transformants</b>."))
+story.append(keyterm(
+    "<b>Transformation</b> is a procedure through which a piece of DNA is <b>introduced in a host "
+    "bacterium</b>."))
+story.append(Paragraph(
+    "Normally the genes encoding <b>resistance to antibiotics</b> such as <b>ampicillin</b>, "
+    "<b>chloramphenicol</b>, <b>tetracycline</b> or <b>kanamycin</b> are considered useful "
+    "selectable markers for <i>E. coli</i>. This works because <b>normal <i>E. coli</i> cells do "
+    "not carry resistance against any of these antibiotics</b>.", STYLES["Body"]))
+story.append(Spacer(1, 3))
+
+story.append(heading("9.2.2", "Feature 3 - Cloning sites", 3))
+story.append(Paragraph(
+    "In order to link the alien DNA, the vector needs to have <b>very few, preferably single</b>, "
+    "recognition sites for the commonly used restriction enzymes. Presence of <b>more than one</b> "
+    "recognition site within the vector will generate <b>several fragments</b>, which will "
+    "complicate the gene cloning.", STYLES["Body"]))
+story.append(Paragraph(
+    "The ligation of alien DNA is carried out at a restriction site present in <b>one of the two "
+    "antibiotic resistance genes</b>. For example, you can ligate a foreign DNA at the "
+    "<b>BamH I site of the tetracycline resistance gene</b> in the vector <b>pBR322</b>. The "
+    "recombinant plasmids will <b>lose tetracycline resistance</b> due to insertion of foreign "
+    "DNA, but can still be selected out from non-recombinant ones by <b>plating the transformants "
+    "on ampicillin containing medium</b>.", STYLES["Body"]))
+story.append(process_flow([
+    "Plate the transformants on <b>ampicillin</b> containing medium.",
+    "Transfer the transformants growing on ampicillin medium onto a medium containing "
+    "<b>tetracycline</b>.",
+    "Read the result: the <b>recombinants will grow in ampicillin</b> containing medium but "
+    "<b>not on tetracycline</b>. The <b>non-recombinants will grow on the medium containing both "
+    "the antibiotics</b>.",
+]))
+story.append(Paragraph(
+    "In this case <b>one</b> antibiotic resistance gene helps in <b>selecting the transformants</b>, "
+    "whereas the <b>other</b> antibiotic resistance gene gets <b>'inactivated due to insertion'</b> "
+    "of alien DNA and helps in <b>selection of recombinants</b>.", STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(figure(
+    "fig_9_4.png",
+    "<b>Fig. 9.4</b> - <i>E. coli</i> cloning vector <b>pBR322</b> showing restriction sites "
+    "(Hind III, EcoR I, BamH I, Sal I, Pvu II, Pst I, Cla I), <b>ori</b>, and the antibiotic "
+    "resistance genes <b>amp<super>R</super></b> and <b>tet<super>R</super></b>. <b>rop</b> codes "
+    "for the proteins involved in the replication of the plasmid. <i>The original distinguishes "
+    "the amp<super>R</super>, tet<super>R</super>, ori and rop arcs by colour; in this monochrome "
+    "print each region is identified by its printed label, and the arcs are separated by the "
+    "boundary lines at the restriction sites.</i>",
+    max_width_cm=11.5))
+
+story.append(heading("9.2.2", "A better marker - insertional inactivation with a colour readout",
+                     3))
+story.append(Paragraph(
+    "Selection of recombinants due to inactivation of antibiotics is a <b>cumbersome</b> procedure, "
+    "because it requires <b>simultaneous plating on two plates having different antibiotics</b>. "
+    "Therefore alternative selectable markers have been developed which differentiate recombinants "
+    "from non-recombinants on the basis of their <b>ability to produce colour in the presence of a "
+    "chromogenic substrate</b>.", STYLES["Body"]))
+story.append(process_flow([
+    "A recombinant DNA is inserted <b>within the coding sequence of an enzyme, "
+    "beta-galactosidase</b>.",
+    "This results in <b>inactivation of the gene</b> for synthesis of this enzyme - referred to as "
+    "<b>insertional inactivation</b>.",
+    "Read the colour on a <b>chromogenic substrate</b>: <b>blue coloured colonies</b> mean the "
+    "plasmid in the bacteria <b>does not have an insert</b>; colonies that <b>do not produce any "
+    "colour</b> have suffered insertional inactivation of the beta-galactosidase gene and are "
+    "<b>identified as recombinant colonies</b>.",
+]))
+story.append(Spacer(1, 3))
+
+story.append(heading("9.2.2", "Vectors for cloning genes in plants and animals", 3, has_table=True))
+story.append(Paragraph(
+    "Here biotechnologists borrowed from natural pathogens, which have always transferred genes "
+    "into eukaryotic hosts.", STYLES["Body"]))
+story.append(data_table([
+    ["Natural agent", "What it does in nature", "How it was turned into a vector"],
+    ["<b><i>Agrobacterium tumifaciens</i></b>, a pathogen of several <b>dicot</b> plants",
+     "Delivers a piece of DNA known as <b>'T-DNA'</b> to <b>transform normal plant cells into a "
+     "tumor</b>, and directs these tumor cells to <b>produce the chemicals required by the "
+     "pathogen</b>.",
+     "Its <b>tumor inducing (Ti) plasmid</b> has been modified into a cloning vector which is "
+     "<b>no more pathogenic</b> to the plants but is still able to use the mechanisms to deliver "
+     "genes of our interest into a variety of plants."],
+    ["<b>Retroviruses</b> in animals",
+     "Have the ability to <b>transform normal cells into cancerous cells</b>.",
+     "Have also been <b>disarmed</b> and are now used to deliver desirable genes into "
+     "<b>animal cells</b>."],
+], col_widths=[1.9, 3.1, 3.0]))
+story.append(Paragraph(
+    "Once a gene or a DNA fragment has been ligated into a suitable vector, it is transferred into "
+    "a <b>bacterial, plant or animal host</b>, where it multiplies.", STYLES["Body"]))
+story.append(Spacer(1, 4))
+
+# ---- 9.2.3 Competent Host (For Transformation with Recombinant DNA) ----
+story.append(heading("9.2.3", "Competent Host (for transformation with recombinant DNA)", 2))
+story.append(Paragraph(
+    "The obstacle is chemical: since <b>DNA is a hydrophilic molecule, it cannot pass through cell "
+    "membranes</b>. So the host has to be forced to take it up.", STYLES["Body"]))
+story.append(process_flow([
+    "<b>Make the cells competent</b> - in order to force bacteria to take up the plasmid, the "
+    "bacterial cells must first be made <b>'competent'</b> to take up DNA. This is done by treating "
+    "them with a <b>specific concentration of a divalent cation, such as calcium</b>, which "
+    "<b>increases the efficiency with which DNA enters the bacterium through pores in its cell "
+    "wall</b>.",
+    "<b>Incubate on ice</b> with the recombinant DNA.",
+    "<b>Heat shock</b> - place them briefly at <b>42 degrees C</b>.",
+    "<b>Return to ice</b> - this enables the bacteria to <b>take up the recombinant DNA</b>.",
+]))
+story.append(Spacer(1, 3))
+story.append(heading("9.2.3", "Three other ways to get DNA into a cell", 3, has_table=True))
+story.append(data_table([
+    ["Method", "How it works", "Suited to"],
+    ["<b>Micro-injection</b>",
+     "Recombinant DNA is <b>directly injected into the nucleus</b>.",
+     "<b>Animal</b> cells"],
+    ["<b>Biolistics</b> or <b>gene gun</b>",
+     "Cells are <b>bombarded with high velocity micro-particles of gold or tungsten coated with "
+     "DNA</b>.",
+     "<b>Plants</b>"],
+    ["<b>'Disarmed pathogen' vectors</b>",
+     "When allowed to <b>infect the cell</b>, they <b>transfer the recombinant DNA into the "
+     "host</b>.",
+     "Plant and animal cells"],
+], col_widths=[2.0, 4.4, 1.6]))
+story.append(memory_aid(
+    "Four doors into a cell: <b>C - M - G - P</b>. <b>C</b>alcium-competent heat shock (bacteria), "
+    "<b>M</b>icro-injection (animal), <b>G</b>ene gun / biolistics (plant), "
+    "<b>P</b>athogen disarmed (both)."))
+story.append(Spacer(1, 4))
+
+# ---- 9.3 Processes of Recombinant DNA Technology ----
+story.append(heading("9.3", "PROCESSES OF RECOMBINANT DNA TECHNOLOGY", 1))
+story.append(Paragraph(
+    "Recombinant DNA technology involves several steps in a <b>specific sequence</b>. The whole "
+    "chapter's machinery is now assembled in order.", STYLES["Body"]))
+story.append(process_flow([
+    "<b>Isolation</b> of DNA.",
+    "<b>Fragmentation</b> of DNA by restriction endonucleases.",
+    "<b>Isolation of a desired DNA fragment.</b>",
+    "<b>Ligation</b> of the DNA fragment into a vector.",
+    "<b>Transferring</b> the recombinant DNA into the host.",
+    "<b>Culturing</b> the host cells in a medium at large scale.",
+    "<b>Extraction</b> of the desired product.",
+]))
+story.append(Spacer(1, 3))
+story.append(figure(
+    "fig_9_2.png",
+    "<b>Fig. 9.2</b> - Diagrammatic representation of recombinant DNA technology: the <b>same "
+    "restriction enzyme</b> cuts both foreign DNA and vector DNA (plasmid) at a specific point, "
+    "<b>ligases join</b> the foreign DNA to the plasmid to give the <b>recombinant DNA "
+    "molecule</b>, <b>transformation</b> carries it into <i>E. coli</i> (the cloning host), and "
+    "the cells then <b>divide</b> - each daughter cell carrying the recombinant DNA.",
+    max_width_cm=12.5))
+
+# ---- 9.3.1 Isolation of the Genetic Material (DNA) ----
+story.append(heading("9.3.1", "Isolation of the Genetic Material (DNA)", 2))
+story.append(Paragraph(
+    "Recall that <b>nucleic acid is the genetic material of all organisms without exception</b>, and "
+    "in the majority of organisms this is <b>deoxyribonucleic acid (DNA)</b>. In order to cut the "
+    "DNA with restriction enzymes, it needs to be in <b>pure form, free from other "
+    "macro-molecules</b>.", STYLES["Body"]))
+story.append(process_flow([
+    "<b>Break the cell open</b> - since the DNA is enclosed within the membranes, the cell must be "
+    "broken open to release DNA along with other macromolecules such as <b>RNA, proteins, "
+    "polysaccharides and also lipids</b>. This is done by treating the bacterial cells / plant or "
+    "animal tissue with enzymes: <b>lysozyme</b> (bacteria), <b>cellulase</b> (plant cells), "
+    "<b>chitinase</b> (fungus).",
+    "<b>Free the DNA from its protein packing</b> - genes are located on long molecules of DNA "
+    "<b>interwined with proteins such as histones</b>.",
+    "<b>Strip away RNA and protein</b> - the <b>RNA</b> can be removed by treatment with "
+    "<b>ribonuclease</b>, whereas <b>proteins</b> can be removed by treatment with "
+    "<b>protease</b>. Other molecules can be removed by appropriate treatments.",
+    "<b>Precipitate the DNA</b> - purified DNA ultimately precipitates out after the addition of "
+    "<b>chilled ethanol</b>. This can be seen as a <b>collection of fine threads in the "
+    "suspension</b>.",
+]))
+story.append(Spacer(1, 3))
+story.append(figure(
+    "fig_9_5.png",
+    "<b>Fig. 9.5</b> - DNA that separates out can be removed by <b>spooling</b>. The precipitated "
+    "DNA appears as a collection of fine threads in the suspension.",
+    max_width_cm=7.0))
+
+# ---- 9.3.2 Cutting of DNA at Specific Locations ----
+story.append(heading("9.3.2", "Cutting of DNA at Specific Locations", 2))
+story.append(process_flow([
+    "<b>Digest</b> - restriction enzyme digestions are performed by <b>incubating purified DNA "
+    "molecules with the restriction enzyme</b>, at the <b>optimal conditions for that specific "
+    "enzyme</b>.",
+    "<b>Check the progress</b> - <b>agarose gel electrophoresis</b> is employed to check the "
+    "progression of a restriction enzyme digestion. DNA is a <b>negatively charged</b> molecule, "
+    "hence it moves <b>towards the positive electrode (anode)</b>.",
+    "<b>Repeat with the vector</b> - the process is repeated with the <b>vector DNA</b> also.",
+    "<b>Mix and ligate</b> - after having cut the source DNA as well as the vector DNA with a "
+    "<b>specific restriction enzyme</b>, the cut out <b>'gene of interest'</b> from the source DNA "
+    "and the <b>cut vector with space</b> are mixed and <b>ligase is added</b>. This results in the "
+    "preparation of <b>recombinant DNA</b>.",
+]))
+story.append(Spacer(1, 4))
+
+# ---- 9.3.3 Amplification of Gene of Interest Using PCR ----
+story.append(heading("9.3.3", "Amplification of Gene of Interest Using PCR", 2))
+story.append(keyterm(
+    "<b>PCR</b> stands for <b>Polymerase Chain Reaction</b>. In this reaction, multiple copies of "
+    "the gene (or DNA) of interest are synthesised <b>in vitro</b> using <b>two sets of "
+    "primers</b> - small chemically synthesised <b>oligonucleotides</b> that are complementary to "
+    "the regions of DNA - and the enzyme <b>DNA polymerase</b>."))
+story.append(Paragraph(
+    "The enzyme <b>extends the primers</b> using the <b>nucleotides provided in the reaction</b> "
+    "and the <b>genomic DNA as template</b>. If the process of replication of DNA is repeated many "
+    "times, the segment of DNA can be amplified to approximately <b>a billion times</b>, i.e. "
+    "<b>1 billion copies</b> are made.", STYLES["Body"]))
+story.append(process_flow([
+    "<b>Denaturation</b> - the double stranded DNA is separated by <b>heat</b>.",
+    "<b>Primer annealing</b> - the <b>two sets of primers</b> bind to their complementary regions.",
+    "<b>Extension of primers</b> - <b>DNA polymerase (Taq polymerase) + deoxynucleotides</b> extend "
+    "the primers.",
+], cyclic=True))
+story.append(note(
+    "The enzyme used is a <b>thermostable DNA polymerase</b> isolated from the bacterium "
+    "<b><i>Thermus aquaticus</i></b>, which <b>remains active during the high temperature induced "
+    "denaturation</b> of double stranded DNA. That heat-stability is precisely why the cycle can be "
+    "repeated without adding fresh enzyme."))
+story.append(Paragraph(
+    "The amplified fragment, if desired, can now be used to <b>ligate with a vector for further "
+    "cloning</b>.", STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(figure(
+    "fig_9_6.png",
+    "<b>Fig. 9.6</b> - Polymerase chain reaction (PCR). Each cycle has three steps: "
+    "(i) <b>Denaturation</b>; (ii) <b>Primer annealing</b>; and (iii) <b>Extension of primers</b>. "
+    "Run for <b>30 cycles</b>, the region to be amplified is <b>amplified about 1 billion "
+    "times</b>. <i>The shaded blocks mark the region being amplified; the outline blocks are the "
+    "flanking DNA that is not.</i>",
+    max_width_cm=12.5))
+story.append(memory_aid(
+    "PCR = <b>D - A - E</b>, thirty times over: <b>D</b>enature (heat splits the strands), "
+    "<b>A</b>nneal (primers land), <b>E</b>xtend (Taq builds). Heat is the reason "
+    "<i>Thermus aquaticus</i> is in the tube at all."))
+story.append(Spacer(1, 4))
+
+# ---- 9.3.4 Insertion of Recombinant DNA into the Host Cell/Organism ----
+story.append(heading("9.3.4", "Insertion of Recombinant DNA into the Host Cell / Organism", 2))
+story.append(Paragraph(
+    "Recipient cells, after making them <b>'competent'</b> to receive, take up DNA present in their "
+    "surroundings. The selection then does the sorting for us.", STYLES["Body"]))
+story.append(process_flow([
+    "Transfer a recombinant DNA bearing a gene for <b>resistance to an antibiotic</b> (e.g. "
+    "<b>ampicillin</b>) into <i>E. coli</i> cells - the host cells become <b>ampicillin-resistant "
+    "cells</b>.",
+    "<b>Spread</b> the transformed cells on <b>agar plates containing ampicillin</b>.",
+    "Read the plate: <b>only transformants will grow</b>; <b>untransformed recipient cells will "
+    "die</b>.",
+]))
+story.append(keyterm(
+    "The ampicillin resistance gene in this case is called a <b>selectable marker</b>."))
+story.append(Spacer(1, 4))
+
+# ---- 9.3.5 Obtaining the Foreign Gene Product ----
+story.append(heading("9.3.5", "Obtaining the Foreign Gene Product", 2, has_table=True))
+story.append(Paragraph(
+    "When you insert a piece of alien DNA into a cloning vector and transfer it into a bacterial, "
+    "plant or animal cell, <b>the alien DNA gets multiplied</b>. But in almost all recombinant "
+    "technologies the <b>ultimate aim is to produce a desirable protein</b>. Hence there is a need "
+    "for the recombinant DNA to be <b>expressed</b> - the foreign gene gets expressed under "
+    "<b>appropriate conditions</b>.", STYLES["Body"]))
+story.append(keyterm(
+    "If any protein encoding gene is expressed in a <b>heterologous host</b>, it is called a "
+    "<b>recombinant protein</b>."))
+story.append(heading("9.3.5", "From small scale to large scale", 3, has_table=True))
+story.append(data_table([
+    ["Scale", "How it is run", "What it yields"],
+    ["<b>Small scale</b> (laboratory)",
+     "The cells harbouring cloned genes of interest may be grown on a <b>small scale in the "
+     "laboratory</b>. The cultures may be used for <b>extracting the desired protein</b> and then "
+     "<b>purifying it</b> by using different <b>separation techniques</b>.",
+     "<b>Small volume cultures cannot yield appreciable quantities</b> of products."],
+    ["<b>Continuous culture system</b>",
+     "The <b>used medium is drained out from one side while fresh medium is added from the "
+     "other</b>, to maintain the cells in their <b>physiologically most active log / exponential "
+     "phase</b>.",
+     "Produces a <b>larger biomass</b>, leading to <b>higher yields of desired protein</b>."],
+    ["<b>Bioreactors</b>",
+     "Large volumes of <b>100-1000 litres</b> of culture can be processed.",
+     "The industrial scale needed once small volumes proved insufficient."],
+], col_widths=[1.9, 3.6, 2.5]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "<b>Bioreactors</b> can be thought of as <b>vessels in which raw materials are biologically "
+    "converted into specific products, individual enzymes, etc., using microbial, plant, animal or "
+    "human cells</b>. A bioreactor provides the <b>optimal conditions</b> for achieving the desired "
+    "product by providing optimum growth conditions - <b>temperature, pH, substrate, salts, "
+    "vitamins, oxygen</b>."))
+story.append(Paragraph(
+    "The <b>most commonly used bioreactors are of stirring type</b>. A <b>stirred-tank reactor</b> "
+    "is usually <b>cylindrical</b> or with a <b>curved base</b> to facilitate the <b>mixing of the "
+    "reactor contents</b>. The <b>stirrer</b> facilitates <b>even mixing and oxygen availability</b> "
+    "throughout the bioreactor. Alternatively, <b>air can be bubbled through</b> the reactor.",
+    STYLES["Body"]))
+story.append(heading("9.3.5", "What a stirred-tank bioreactor must have", 3, has_table=True))
+story.append(data_table([
+    ["System", "Its job"],
+    ["<b>Agitator system</b>", "Even mixing of the reactor contents."],
+    ["<b>Oxygen delivery system</b>", "Oxygen availability throughout the bioreactor."],
+    ["<b>Foam control system</b>", "Controls foam (the <b>foam breaker</b> in Fig. 9.7a)."],
+    ["<b>Temperature control system</b>", "Holds the optimum temperature."],
+    ["<b>pH control system</b>", "Holds the optimum pH (<b>acid/base</b> inlet in Fig. 9.7a)."],
+    ["<b>Sampling ports</b>",
+     "So that <b>small volumes of the culture can be withdrawn periodically</b>."],
+], col_widths=[2.4, 5.6]))
+story.append(Spacer(1, 3))
+story.append(figure(
+    "fig_9_7.png",
+    "<b>Fig. 9.7</b> - (a) Simple <b>stirred-tank bioreactor</b>, showing the motor, foam breaker, "
+    "flat bladed impeller, culture broth, sterile air inlet, acid/base line for pH control and "
+    "steam for sterilisation; (b) <b>Sparged stirred-tank bioreactor</b> through which sterile air "
+    "bubbles are sparged - giving <b>increased surface area for oxygen transfer</b> and <b>gas "
+    "entrainment</b>, because the <b>bubbles dramatically increase the oxygen transfer area</b>.",
+    max_width_cm=15.5))
+
+# ---- 9.3.6 Downstream Processing ----
+story.append(heading("9.3.6", "Downstream Processing", 2))
+story.append(Paragraph(
+    "After completion of the <b>biosynthetic stage</b>, the product has to be subjected to a "
+    "<b>series of processes</b> before it is ready for marketing as a finished product.",
+    STYLES["Body"]))
+story.append(keyterm(
+    "The processes include <b>separation and purification</b>, which are collectively referred to "
+    "as <b>downstream processing</b>."))
+story.append(process_flow([
+    "<b>Separation and purification</b> of the product.",
+    "<b>Formulation</b> - the product has to be formulated with <b>suitable preservatives</b>.",
+    "<b>Clinical trials</b> - such formulation has to undergo <b>thorough clinical trials</b> as in "
+    "the case of drugs.",
+    "<b>Quality control</b> - <b>strict quality control testing for each product</b> is also "
+    "required.",
+]))
+story.append(note(
+    "The <b>downstream processing and quality control testing vary from product to product</b> - "
+    "there is no single fixed protocol to memorise here."))
+story.append(Spacer(1, 4))
+
+# ---- Quick Recap (the NCERT summary, every clause traced back to the body) ----
+story.append(heading("R", "QUICK RECAP", 1))
+story.append(process_flow([
+    "<b>Biotechnology</b> deals with <b>large scale production and marketing</b> of products and "
+    "processes using <b>live organisms, cells or enzymes</b>.",
+    "Modern biotechnology using <b>genetically modified organisms</b> was made possible only when "
+    "man learnt to <b>alter the chemistry of DNA</b> and <b>construct recombinant DNA</b>. This key "
+    "process is called <b>recombinant DNA technology</b> or <b>genetic engineering</b>.",
+    "The process involves the use of <b>restriction endonucleases</b>, <b>DNA ligase</b>, and "
+    "<b>appropriate plasmid or viral vectors</b> to <b>isolate and ferry the foreign DNA</b> into "
+    "host organisms.",
+    "Then comes <b>expression of the foreign gene</b>, <b>purification of the gene product</b> "
+    "(i.e. the functional protein), and finally <b>making a suitable formulation for "
+    "marketing</b>.",
+    "<b>Large scale production involves use of bioreactors.</b>",
+]))
+story.append(Spacer(1, 4))
+
+# ---- Appendix: what the NCERT exercises assume ----
+# Rule 5 applies here too: where the chapter supplies no fact, this appendix says so instead of
+# inventing one. Nothing outside the source chapter is added.
+story.append(heading("A", "APPENDIX - WHAT THE NCERT EXERCISES ASSUME", 1, has_table=True))
+story.append(Paragraph(
+    "Every exercise question is either answerable from the sections above, or it is not answerable "
+    "from this chapter at all. Both cases are stated plainly - no outside facts have been "
+    "introduced to paper over a gap.", STYLES["Body"]))
+story.append(data_table([
+    ["Exercise asks about", "Status", "Where it is covered / why it is not"],
+    ["<b>Recombinant proteins used in medical practice</b> (list of 10)",
+     "<b>Beyond this chapter</b>",
+     "The chapter <b>defines</b> a recombinant protein (9.3.5) but supplies <b>no list</b>. The "
+     "exercise directs you to an internet search, so no list is invented here."],
+    ["<b>Restriction enzyme</b>, its substrate DNA, cut site and product",
+     "<b>Covered</b>",
+     "9.2.1 (mechanism, palindromes, sticky ends) and <b>Fig. 9.1</b>."],
+    ["<b>Relative molecular size</b> of enzymes vs DNA",
+     "<b>Beyond this chapter</b>",
+     "The chapter gives <b>no molecular sizes</b>. It is a reasoning exercise; no figure has been "
+     "invented to fill it."],
+    ["<b>Molar concentration of human DNA</b> in a human cell",
+     "<b>Beyond this chapter</b>",
+     "No data given anywhere in the chapter; the exercise itself says <b>'Consult your "
+     "teacher'</b>."],
+    ["Do <b>eukaryotic cells</b> have restriction endonucleases?",
+     "<b>Reason from the chapter</b>",
+     "9.2.1 states the enzymes were isolated <b>from bacteria</b> (over 230 strains) and that "
+     "their natural role is <b>restricting bacteriophage growth</b> - reason from those two facts "
+     "only."],
+    ["Advantages of <b>stirred tank bioreactors over shake flasks</b>",
+     "<b>Covered</b>",
+     "9.3.5 - the <b>100-1000 litre</b> volume plus the six control systems (agitator, oxygen, "
+     "foam, temperature, pH, sampling ports)."],
+    ["<b>Palindromic DNA sequences</b>",
+     "<b>Covered</b>",
+     "9.2.1 - the definition, the MALAYALAM analogy, and the <b>GAATTC / CTTAAG</b> pair."],
+    ["<b>Meiosis stage</b> at which a recombinant DNA is made",
+     "<b>Beyond this chapter</b>",
+     "Recombination / crossing over is <b>not covered</b> here; it belongs to the inheritance "
+     "chapters."],
+    ["A <b>reporter enzyme</b> to monitor transformation alongside a selectable marker",
+     "<b>Covered</b>",
+     "9.2.2 - the <b>beta-galactosidase</b> insertional-inactivation and chromogenic-substrate "
+     "colour readout is exactly this."],
+    ["<b>ori</b>; bioreactors; downstream processing; PCR; restriction enzymes; chitinase; "
+     "plasmid vs chromosomal DNA; RNA vs DNA; exonuclease vs endonuclease",
+     "<b>All covered</b>",
+     "9.1 and 9.2.2 (ori), 9.3.5 (bioreactors), 9.3.6 (downstream), 9.3.3 (PCR), 9.2.1 "
+     "(restriction enzymes, exo vs endo), 9.3.1 (chitinase, nucleic acid), 9.1 / 9.2.2 "
+     "(plasmid)."],
+], col_widths=[2.4, 1.4, 4.2]))
+story.append(Spacer(1, 4))
+story.append(note(
+    "<b>Source problems noted during extraction.</b> Page-number artifacts bleed into the extracted "
+    "text of the source PDF (e.g. \"others may have 168 15-100 copies per cell\" on page 8, and "
+    "\"117722\" on page 12). Checked against the rendered page images: the true values are "
+    "<b>15-100 copies per cell</b> and page number <b>172</b>. No content is missing. The "
+    "unit-opening page also interleaves the Unit 9 introduction with the chapter-list sidebar, so "
+    "that text was reconstructed from the rendered page image."))
+
+
+# --------------------------------------------------------------------------------------
+# 4. PAGE FURNITURE + BUILD
+# --------------------------------------------------------------------------------------
+
+def _page_furniture(canvas, doc_):
+    """Footer rule, chapter name and page number on every page. Drawn, never a glyph."""
+    canvas.saveState()
+    y = BOTTOM_MARGIN - 0.28 * cm
+    canvas.setStrokeColor(GRID_LINE)
+    canvas.setLineWidth(0.5)
+    canvas.line(MARGIN, y + 0.32 * cm, PAGE_SIZE[0] - MARGIN, y + 0.32 * cm)
+    canvas.setFont("Times-Roman", 8.5)
+    canvas.setFillColor(SOFT_GREY)
+    canvas.drawString(MARGIN, y, "Class 12 - Ch 9 : Biotechnology : Principles and Processes")
+    canvas.drawRightString(PAGE_SIZE[0] - MARGIN, y, str(canvas.getPageNumber()))
+    canvas.restoreState()
+
+
+def main():
+    doc = SimpleDocTemplate(
+        OUT_PDF, pagesize=PAGE_SIZE,
+        leftMargin=MARGIN, rightMargin=MARGIN,
+        topMargin=TOP_MARGIN, bottomMargin=BOTTOM_MARGIN,
+        title="Class 12 Chapter 9 - Biotechnology : Principles and Processes (NEET notes)",
+        author="NCERT replacement notes", subject="NEET Biology",
+    )
+    doc.build(story, onFirstPage=_page_furniture, onLaterPages=_page_furniture)
+    size_kb = os.path.getsize(OUT_PDF) / 1024
+    print(f"Built {OUT_PDF} ({size_kb:.0f} KB)")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

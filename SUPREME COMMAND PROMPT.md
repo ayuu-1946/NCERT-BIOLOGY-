@@ -1,9 +1,11 @@
-# NCERT Biology → NEET PDF — Master Prompt (Rewrite Style, ReportLab Output) v4 — Full-Replacement Edition with Original NCERT Figures
+# NCERT Biology → NEET PDF — SUPREME COMMAND PROMPT (Rewrite Style, ReportLab Output) v5 — Full-Replacement Edition, Original NCERT Figures, Print-Hardened B&W
 
 **Mode: NCERT REPLACEMENT, not high-density conversion.**
 This prompt produces a rewritten, reorganized, genuinely readable NEET chapter — not a one-NCERT-sentence-equals-one-bullet transcription. Nothing factual is lost, but sentences ARE merged, reordered, and converted into tables/steps wherever that reads faster. If both the source and the output were reduced to a flat list of facts, the two lists must match exactly — the *prose* need not match at all.
 
-**New in v4:** every NCERT figure is extracted from the source PDF and embedded inline, at original fidelity — the output is a true standalone replacement of the book, diagrams included. The fact inventory is now a saved deliverable file, and deliverables live in a fixed `notes/` tree.
+**From v4:** every NCERT figure is extracted from the source PDF and embedded inline — the output is a true standalone replacement of the book, diagrams included. The fact inventory is a saved deliverable file, and deliverables live in a fixed `notes/` tree.
+
+**New in v5 (print-hardening):** every embedded figure is converted to **true monochrome** (`.convert("L")` + `autocontrast`) before embedding, never pasted in raw or in color; figures sit inside a bordered box so they read as part of the design system; the smoke test gains a B&W photocopy check and a figure-conversion check; §7's visual pass now renders **every page**, enforces cross-page style consistency, and machine-verifies that no embedded image carries real color channels and that no photograph of a person exists anywhere in the PDF.
 
 ## Core doctrine: get it right in one pass
 
@@ -18,12 +20,12 @@ Do not skip this even if you did it in a previous session — the sandbox resets
 ### 0.1 Required packages
 - `reportlab` — generates the PDF
 - `pdfplumber` — extracts text from both the NCERT source and the generated PDF for the verification pass
-- `pymupdf` (imported as `fitz`) — two jobs: (a) renders PDF pages to images for the visual formatting check in §7, and (b) **extracts the NCERT figure images** from the source chapter PDF (§4.4)
-- `pillow` — image inspection for the B&W print-safety check and figure quality verification
+- `pymupdf` (imported as `fitz`) — two jobs: (a) renders PDF pages to images for the visual formatting check in §7 (colors, banners, and layout cannot be verified from extracted text alone), and (b) **extracts the NCERT figure regions** from the source chapter PDF at high resolution (§4.4)
+- `Pillow` (imported as `PIL`) — converts every extracted figure to true monochrome before it is embedded (§4.4), and inspects rendered pages/images for the B&W print-safety and grayscale checks (§0.4, §7)
 
 ### 0.2 Install
 ```bash
-pip install --break-system-packages reportlab pdfplumber pymupdf pillow
+pip install --break-system-packages reportlab pdfplumber pymupdf Pillow
 ```
 
 ### 0.3 Verify the install before proceeding
@@ -32,17 +34,18 @@ import reportlab, pdfplumber, fitz, PIL
 print("reportlab:", reportlab.Version)
 print("pdfplumber: OK")
 print("pymupdf/fitz: OK")
-print("pillow: OK")
+print("Pillow:", PIL.__version__)
 ```
 If any import fails, fix the environment now. Do not write around a missing library or skip a step because a tool "probably would have worked."
 
 ### 0.4 Smoke test (confirms fonts + styles render correctly, once per session)
-Generate a throwaway 1-page PDF using Times-Roman/Bold/Italic, one H1/H2/H3 banner each, one table with the exact colors from §4, one of each icon badge from §4.1, one Process Flow block (§4.2) with at least 3 steps, and one embedded test image with a caption (any small PNG) to confirm the figure component (§4.4) works. Render it with `fitz` and view the image. Check:
-1. Banners, fonts, table shading, and the embedded figure + caption look right.
-2. Every icon badge (●▲■★ shapes drawn via `reportlab.graphics.shapes`, never Unicode) is visually distinct from the others at actual print size — not just distinguishable on-screen at zoom.
+Generate a throwaway 1-page PDF using Times-Roman/Bold/Italic, one H1/H2/H3 banner each, one table with the exact colors from §4, one of each icon badge from §4.1, one Process Flow block (§4.2) with at least 3 steps, and **one real figure from an actual NCERT chapter pushed through the full §4.4 pipeline** (clip-render → `convert("L")` → `autocontrast` → embed in its bordered box with caption). Render it with `fitz` and view the image. Check:
+1. Banners, fonts, table shading, and the embedded figure + caption + border look right.
+2. Every icon badge (section-number square, key-term circle, process triangle, table square, memory-aid star, note "!" circle — all drawn via `reportlab.graphics.shapes`, never Unicode) is visually distinct from the others at actual print size — not just distinguishable on-screen at zoom.
 3. **B&W print-safety check:** convert the rendered page image to true 1-bit/grayscale (e.g. via `PIL.Image.convert("L")`) and re-view it. Confirm the NOTE box border style and the MEMORY AID box border style (§4.3) are still tell-apart-able from each other, and that no fill lighter than `#D9D9D9` is the *only* thing carrying meaning anywhere on the page (a photocopier or toner-saver print will wash it out — meaning must always survive on line/border/icon alone, with fill as decoration on top).
+4. **Figure conversion check:** the embedded test figure is genuinely monochrome (`img.mode == "L"`, or every sampled pixel R==G==B) — not merely "looks greyish" — and any two elements the original distinguished *by color* are still distinguishable after `autocontrast`. Deliberately pick a source figure that uses color to carry meaning (e.g. oxygenated vs deoxygenated blood), never one that was already black-and-white; a figure that was never colored proves nothing about the conversion.
 
-If all three checks pass, the environment and design system are trustworthy for the real run. Delete the throwaway file afterward.
+If all four checks pass, the environment and design system are trustworthy for the real run. Delete the throwaway file afterward.
 
 ### 0.5 File & folder conventions
 Deliverables live in a `notes/` tree that mirrors the source `Chapter/` tree. Source PDFs are never modified or moved. Per chapter:
@@ -91,7 +94,7 @@ Every one of these, wherever it appears in the source, must appear somewhere in 
 - Every step of a process, in its original order
 - Every comparison or exception ("unlike X, Y…")
 - Every table row/column and every figure caption or label
-- **Every figure itself** — extracted and embedded per §4.4, not merely described
+- **Every figure itself** — extracted, converted to monochrome, and embedded per §4.4, not merely described
 - Every fact sitting inside a "Do You Know?" box, footnote, margin note, or in-text activity/embedded question
 
 Default when unsure: keep it. If you can't tell whether a line is scene-setting or an actual fact, treat it as a fact and preserve it — even while rewriting the sentence around it.
@@ -124,7 +127,7 @@ Two failure modes cost marks even when "every fact is present":
 ### Rule 5 — No outside content (anti-hallucination guardrail)
 Every fact in the rewrite must trace back to the source PDF given for that chapter. Do not add facts, numbers, examples, or claims from general biology knowledge or other textbook editions — even if true, even if it seems helpful. The chapter PDF is the only source of truth. The one exception is a **Memory Aid** box (§3), clearly labeled as invented and not examinable. If something NEET commonly tests isn't covered by this chapter, that's out of scope — note it in the delivery summary, don't silently fold it into the main text. This rule matters for single-pass success specifically: an invented "helpful" detail is a fabrication the verification pass must catch and remove, which is wasted work in both directions.
 
-This rule extends to figures: only figures extracted from the source PDF may appear. Never generate, redraw, or substitute a diagram from memory or another edition.
+This rule extends to figures: only figures extracted from the source PDF may appear, and only after the §4.4 monochrome conversion. Never generate, redraw, or substitute a diagram from memory or another edition, and never embed a raw or color extraction. The single decorative exception is the title motif (§4 Title block), which is a plain outline shape carrying zero facts.
 
 ### Worked example
 **NCERT-style original:**
@@ -151,7 +154,7 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 - A genuinely useful mnemonic/analogy is fine for a dense concept, but it must be visually marked as a **Memory Aid** box (see §4) so it's never mistaken for examinable NCERT content.
 
 ### Special content handling
-- **Figures/diagrams**: the figure image itself is embedded per §4.4. IN ADDITION, pull every fact out of its caption and labels into the running text — the text must stand alone even if a print of the figure is illegible. If a figure fails extraction or verification (§4.4), flag it in the Coverage note under the fixed heading **"Figures requiring manual attention"** — never silently omit it.
+- **Figures/diagrams**: the figure image itself is extracted, converted to true monochrome, and embedded per §4.4. IN ADDITION, pull every fact out of its caption and labels into the running text — the text must stand alone even if a print of the figure is illegible. If a figure fails extraction or verification (§4.4), flag it in the Coverage note under the fixed heading **"Figures requiring manual attention"** — never silently omit it.
 - **Scientific names**: correct italics, correct binomial format.
 - **Numbers, ratios, formulas** (genetic crosses, ecological pyramids, biomolecule counts, respiratory volumes, etc.): reproduce exactly — never round or approximate.
 - **Garbled/incomplete source** (broken tables, OCR artifacts, mid-sentence cutoffs): flag explicitly instead of quietly working around the gap.
@@ -321,31 +324,45 @@ Both box types keep the existing `NOTE_BG` fill and Times-Italic text (fill is d
 - **MEMORY AID box** — clearly labeled `[MEMORY AID — not in NCERT]`: mnemonics/analogies invented to help recall. Dashed border (`GRID_LINE`, 0.75pt, alternating 3pt-on/2pt-off) and the outline-star icon (§4.1) in the top-left corner. The dash pattern alone is enough to tell it apart from a NOTE box even with the label covered.
 - Label, icon, and border are three redundant signals carrying one meaning. A reader skimming should tell NOTE from MEMORY AID from across the room by border shape alone — but the text label is always present too.
 
-### 4.4 Figures — extraction, verification, embedding (new in v4)
+### 4.4 Figures — extract, convert to monochrome, verify, embed
 
-**Every figure in the source chapter is extracted and embedded. No exceptions, no "decorative" waivers — if NCERT printed it, the replacement carries it.**
+**Every figure in the source chapter is extracted, converted to true monochrome, and embedded. No exceptions, no "decorative" waivers — if NCERT printed it, the replacement carries it.** This is not a fallback for "the text coverage wasn't enough"; text and image are complementary. A reader skimming only the image still sees the key labels; a reader skimming only the text still gets every fact; the image is what makes spatial relationships (a plasmid map, a gel-lane pattern, a nephron's loop geometry) instantly legible in a way no table can.
 
-**Extraction (per chapter, before writing the script):**
-1. Open the source chapter PDF with `fitz`. For each figure, prefer `page.get_images()` + `fitz.Pixmap` extraction of the embedded image object. If the figure is vector-drawn or composited (common in NCERT PDFs), fall back to rendering a clip rectangle of the page region at high resolution: `page.get_pixmap(clip=rect, dpi=300)`.
+**Step 1 — Locate and extract (per chapter, before writing the script):**
+1. Open the source chapter PDF with `fitz`. **Prefer a high-resolution clip render of the figure's bounding box: `page.get_pixmap(clip=rect, dpi=300)`.** A clipped render survives vector diagrams and mixed text/graphic figures that a raw embedded-image extraction (`page.get_images()` / `pdfplumber`) can miss or mangle. Only use embedded-object extraction when the figure is genuinely a single raster image and the clip render is worse.
 2. Save each figure to `assets/fig_<ch>_<n>.png` per the naming rule in §0.5.
-3. Build a **figure manifest** as a section of the inventory file (§6): one row per figure — [Figure number] [Caption text, verbatim] [Asset filename] [Source page] [Verified: yes/no].
+3. Build a **figure manifest** as a section of the inventory file (§6): one row per figure — [Figure number] [Caption text, verbatim] [Asset filename] [Source page] [Mono: yes/no] [Verified: yes/no].
 
-**Verification (mandatory, every figure — not a spot-check):**
-Open every extracted image and visually confirm: (a) it is the correct figure for its caption, (b) no labels or leader lines are cropped off at the edges, (c) it is legible at the size it will print (test-render if in doubt), (d) it isn't an accidental grab of a neighboring figure, table, or text block. Mark `Verified: yes` in the manifest only after this check. A figure that cannot be extracted cleanly after honest attempts goes in the Coverage note under **"Figures requiring manual attention"** with the reason — never embed a bad crop silently, and never skip the figure silently.
+**Step 2 — Convert to true monochrome (mandatory, every figure):**
+```python
+from PIL import Image, ImageOps
+img = Image.open(figure_path).convert("L")   # true greyscale, one channel
+img = ImageOps.autocontrast(img, cutoff=1)   # recover contrast lost when hue disappears
+img.save(output_path)
+```
+`autocontrast` is not optional polish: a figure that used hue to separate two elements (two DNA strands, arterial vs venous blood) can collapse to near-identical greys under a flat `convert("L")`, and autocontrast stretches the tonal range back out so the distinction survives. Only the converted file is ever embedded — the raw extraction is an intermediate, never a deliverable asset.
 
-**Embedding:**
-- Use a reusable `figure(asset_path, caption_text, max_width_cm=...)` helper returning `[Image, Paragraph(caption, STYLES["Caption"])]` wrapped in `KeepTogether`, so a figure never separates from its caption across a page break.
-- Scale to fit the text column width preserving aspect ratio; a small figure may sit at natural size. Never upscale beyond 300 dpi effective resolution.
-- Caption format: **"Fig. 14.2 — <caption>"** keeping the NCERT figure number verbatim, caption text rewritten-but-factually-exact under the same rules as all other text (Rules 1 & 4 apply to captions).
-- Placement is **inline at the exact point where the figure's topic is covered** in the rewrite — even if the rewrite reordered sections, the figure follows its topic, not its original page position.
+**Step 3 — Verify (mandatory, every figure — not a spot-check):**
+Open every converted image and confirm: (a) it is the correct figure for its caption, (b) no labels or leader lines are cropped at the edges, (c) it is legible at the size it will print (test-render if in doubt), (d) it isn't an accidental grab of a neighboring figure, table, or text block, (e) it is genuinely monochrome (`img.mode == "L"`, or sampled pixels all R==G==B), and (f) any distinction the original carried by color is still visible. Mark `Mono: yes` / `Verified: yes` only after this check.
+- If two elements remain visually indistinguishable after conversion, that is a **real information loss**: state the distinction explicitly in the caption and in the surrounding text/table, and record it in the Coverage note.
+- A figure that cannot be extracted or converted cleanly after honest attempts goes in the Coverage note under **"Figures requiring manual attention"** with the reason — never embed a bad crop silently, and never skip a figure silently.
+
+**Step 4 — Embed:**
+- Use a reusable `figure(asset_path, caption_text, max_width_cm=...)` helper returning the image and its caption `Paragraph(caption, STYLES["Caption"])` wrapped in `KeepTogether`, so a figure never separates from its caption across a page break.
+- Wrap the image in a **thin 0.5pt `GRID_LINE` border box** (same visual family as the NOTE/MEMORY AID boxes) so an embedded figure reads as a deliberate part of this design system rather than a pasted-in foreign object.
+- Scale to fit the text column width (page width minus margins) preserving aspect ratio; a small figure may sit at natural size. Never upscale beyond 300 dpi effective resolution.
+- Caption format: **"Fig. 14.2 — <caption>"** keeping the NCERT figure number verbatim, caption text rewritten-but-factually-exact under the same rules as all other text (Rules 1 & 4 apply to captions — a caption is Rule-1 content, not decoration, and keeps its own inventory rows).
+- If the figure's meaning depended on color, the caption carries one added sentence stating that distinction in words.
+- Placement is **inline at the exact point where the figure's topic is covered** in the rewrite — even if the rewrite reordered sections, the figure follows its topic, not its original page position. Never group figures at the end.
 - Every label on the figure must ALSO exist in the running text or a table (per §3 Special content handling) — the figure is the visual; the text stands alone if the print is poor.
 
-**B&W note:** NCERT figures are often colored. They will print greyscale — that is acceptable (the originals are designed to survive it and labels are line-work), but if a specific figure's meaning depends on a color distinction (e.g. oxygenated vs deoxygenated blood in red/blue), add one sentence to its caption stating the distinction in words.
+**Hard no:** the scientist profile photograph (§5 Content Order item 3) is never embedded, converted or not. It carries no testable fact, and a greyscaled photo is still a banned photo.
 
 ### ReportLab strict technical rules
 - Use Paragraph objects for ALL text
 - Use ONLY these inline tags: `<b>`, `<sub>`, `<super>`, `<i>` (for correct scientific-name italics)
 - The icon/badge/process-flow system (§4.1–§4.2) is drawn with `reportlab.graphics.shapes` (`Drawing`, `Circle`, `Rect`, `Polygon`) as its own flowable layer, composed alongside Paragraphs — this is not an exception to "no decorative Unicode glyphs" below, it's a different mechanism entirely (vector drawing vs. inline text), so it stays fully within the rule.
+- **`Image()` is used only for figures processed through the full §4.4 pipeline** — clip-extracted, `convert("L")`'d, autocontrasted, saved as a new file, and verified. Never embed a raw extraction, a color image, or a screenshot straight out of the source PDF. The one permanent exception that stays a hard no regardless of conversion: no photograph of a person, ever (the scientist profile is text-only, §5).
 - NEVER use Unicode subscripts/superscripts (O₂, CO₂, H⁺, etc.) — always use `<sub>`/`<super>` tags (e.g. `O<sub>2</sub>`, `Na<super>+</super>`)
 - NEVER use Unicode arrows (→, ⇌) — write "to", "yields", or plain ASCII
 - NEVER use raw Greek letters (α, β, γ, Δ) — Times-Roman's default encoding renders these unreliably; spell them out ("alpha helix," "Delta G")
@@ -363,7 +380,7 @@ Open every extracted image and visually confirm: (a) it is the correct figure fo
 
 1. Title block
 2. Unit introduction paragraph — rewritten in the same tutor style (not verbatim bullets) — if present
-3. Scientist profile box — rewritten but factually exact (name, dates, discovery) — if present
+3. Scientist profile box — rewritten but factually exact (name, dates, discovery) — if present. **Text only — no photograph.** The source textbook's headshot is never embedded or recreated; name, dates, and achievements in a NoteBox-style block carry everything examinable, and a likeness adds zero testable facts (§4.4 hard no).
 4. Chapter sections — reorganized where it helps (per Rule 3), using headers with section-number badges, bold key terms, tables for comparisons, the Process Flow component (§4.2) for processes, and **figures inline at their topic** (§4.4)
 5. Disorders / special topics (if present)
 6. NOTE boxes at the end of the relevant section they belong to
@@ -398,15 +415,15 @@ Source: <path to source PDF> | Frozen: <date> | Rows: <n>
 |---|---|
 
 ## Figure manifest
-| Fig # | Caption (verbatim) | Asset file | Source page | Verified |
-|---|---|---|---|---|
+| Fig # | Caption (verbatim) | Asset file | Source page | Mono | Verified |
+|---|---|---|---|---|---|
 ```
 
 Steps:
 1. **First read:** read the entire chapter, including exercises, start to finish, without stopping to build the checklist yet. Get the shape of the chapter in your head.
 2. **Independent inventory pass:** re-read section by section and build the inventory — one row per fact: [Fact ID] [Section] [Type: Number/Term/Qualifier/Step/Comparison/Table/Caption] [Exact original wording]. Cover Rule 1's full list: definitions, numbers, scientists, taxonomic names, examples, process steps, comparisons/exceptions, table rows, figure captions, "Do You Know?" content.
 3. **Second, independent hunting pass:** re-read the chapter again, specifically looking for what pass 2 likely missed — qualifier words buried mid-sentence, a footnote, a caption detail, a number inside a parenthetical. Treat the pass-2 inventory as provisional until this pass either confirms it complete or adds to it. Do not skip this because pass 2 "felt thorough" — it always feels thorough from the inside.
-4. **Figure extraction & verification pass (§4.4):** extract every figure to `assets/`, verify each one visually, and complete the figure manifest. Doing this before writing means the script can reference verified assets from the start, and a problem figure is discovered while there's still time to re-extract.
+4. **Figure extraction, conversion & verification pass (§4.4):** clip-extract every figure at 300 dpi, convert each to true monochrome with `convert("L")` + `autocontrast`, verify each one visually (including that color-carried distinctions survived), and complete the figure manifest with `Mono` and `Verified` both marked. Doing this before writing means the script references verified monochrome assets from the start, and a problem figure surfaces while there is still time to re-extract.
 5. **Exercise-gap scan (Rule 2):** go through every exercise question; note any term/fact it assumes but the body never actually explains, and exactly where the explanation will be added.
 6. **Summary scan (Rule 3):** extract the chapter summary as its own block. Classify every sentence BODY-PRESENT or SUMMARY-UNIQUE. Fold every SUMMARY-UNIQUE fact into the correct body-section entry in the inventory now — before writing, not as a patch afterward.
 7. **Freeze the inventory and save the file.** This combined list (body facts + exercise-gap terms + summary-unique facts + figure manifest) is now the single source of truth. Number every row; you'll tick items off in the file itself while writing (step 8) and check again in §7.
@@ -426,7 +443,11 @@ If the chapter genuinely cannot be completed at full quality in one session:
 If §6 was done properly, this pass exists to catch the rare slip — a fact ticked off but subtly mis-transcribed, a qualifier that drifted during the rewrite, a table cell typo — not to discover large gaps. Run it once, thoroughly, and expect it to come back clean.
 
 ### Step 1 — Visual render check (do this before extracting text)
-Render page 1 and every table-heavy, multi-heading-level, process-flow, or **figure-bearing** page to an image with `fitz` and look at it directly. Layout bugs — overflow, clipping, a table running off the page, a heading orphaned at the bottom, a process-flow rule that doesn't line up with its badges, a figure separated from its caption or squashed to the wrong aspect ratio — do not show up in extracted text, only in the rendered page. Confirm colors, banners, table shading, section-number badges, icons, box border styles, and figure rendering all match §4 while you're looking.
+Render **every page** — not page 1, not only the obviously heavy ones — to an image with `fitz` and look at each directly. Layout bugs (overflow, clipping, a table running off the page, a heading orphaned at the bottom, a process-flow rule that doesn't line up with its badges, a figure separated from its caption or squashed to the wrong aspect ratio) do not show up in extracted text, only in the rendered page. Confirm colors, banners, table shading, section-number badges, icons, box border styles, and figure rendering all match §4 while you're looking.
+
+Two checks specifically target the failure modes that slip past a page-1-only glance:
+1. **Cross-page style consistency.** Pull one rendered instance of each element type (H1, H2, H3, table, NOTE box, MEMORY AID box, process flow, figure box) from at least three different points in the chapter and compare them side by side. They must be visually *identical* — same grey, same padding, same font size, same border weight — not just "close." A style that was right on page 1 and drifted by page 8 is exactly what this check exists to catch, and it is invisible if you only ever render the first page.
+2. **Grayscale-only images, and no photographs.** For every embedded image, open it with `PIL` and confirm either `img.mode == "L"` or, if saved as RGB, that every sampled pixel has R==G==B. Any image carrying real color channels is an automatic fail — go back to §4.4 and re-run the conversion; do not eyeball it as "looks grey enough." Separately confirm no image anywhere in the PDF is a photograph of a person (§5 item 3) — conversion does not make a banned photo allowed.
 
 ### Step 2 — Extract text
 ```python
@@ -460,8 +481,9 @@ YOUR JOB for your 2 assigned sections:
    FABRICATED — in script but not in NCERT or the inventory
    DRIFTED    — present but the value/qualifier/direction/term is wrong
 4. For each figure-manifest row in your sections: confirm the script references the
-   correct asset file, the caption keeps the NCERT figure number, and the figure sits
-   at the topic it illustrates. Classify the same way.
+   correct asset file, the asset is the converted monochrome file (not a raw extraction),
+   the caption keeps the NCERT figure number, every label on the figure also appears in
+   the text/tables, and the figure sits at the topic it illustrates. Classify the same way.
 5. Return:
    SECTION: <n>
    STATUS: CLEAN | ISSUES FOUND
@@ -501,15 +523,16 @@ Once every confirmed item from Step 5 is fixed and spot-verified, deliver the fu
 - The PDF.
 - The `.py` script that generated it, saved as an actual file (not just shown as a code block).
 - The frozen inventory file, with every row ticked.
-- The `assets/` folder with every verified figure.
+- The `assets/` folder with every verified monochrome figure.
 
 Along with the files, include:
-- A **section-wise coverage confirmation** (e.g. "14.1 Breathing Mechanism — 12/12 body facts covered, 2/2 summary-unique facts covered, 3/3 figures embedded")
+- A **section-wise coverage confirmation** (e.g. "14.1 Breathing Mechanism — 12/12 body facts covered, 2/2 summary-unique facts covered, 3/3 figures embedded, 3/3 verified monochrome")
 - A short **Coverage note** with these fixed headings so the audit prompt can consume it mechanically:
   - **Compression decisions** — what was merged/reformatted and why it's safe
   - **Exercise-gap terms** — confirmation every exercise-assumed term is covered
   - **Drift caught and fixed** — anything §7 found
-  - **Figures requiring manual attention** — figures that failed extraction or verification, with reasons (write "None" if empty)
+  - **Figures requiring manual attention** — figures that failed extraction, monochrome conversion, or verification, with reasons (write "None" if empty)
+  - **Color-dependent figures** — figures whose meaning relied on color, and where that distinction is now stated in words (write "None" if empty)
   - **Source problems** — any part of the source flagged as garbled or unrecoverable (write "None" if empty)
 
 ---
