@@ -240,7 +240,6 @@ Note: the summary is a single short paragraph; each clause is treated as a sente
 
 | Fig # | Caption (verbatim) | Asset file | Source page | Verified |
 |---|---|---|---|---|
-| Boyer portrait | "HERBERT BOYER (1936 )" | assets/fig_boyer.png | 2 | yes |
 | 9.1 | "Steps in formation of recombinant DNA by action of restriction endonuclease enzyme - EcoRI" | assets/fig_9_1.png | 6 | yes |
 | 9.2 | "Diagrammatic representation of recombinant DNA technology" | assets/fig_9_2.png | 7 | yes |
 | 9.3 | "A typical agarose gel electrophoresis showing migration of undigested (lane 1) and digested set of DNA fragments (lane 2 to 4)" | assets/fig_9_3.png | 8 | yes |
@@ -253,3 +252,4 @@ Note: the summary is a single short paragraph; each clause is treated as a sente
 
 - Page-number artifacts bleed into the pdfplumber text stream (e.g. "others may have 168 15-100 copies per cell" on page 8, "117722" on page 12). Verified against the rendered page images: the true values are **15-100 copies per cell** and page number 172. No content is missing from the source.
 - The unit-opening page interleaves the Unit 9 introduction with the chapter-list sidebar ("Chapter 9 / Chapter 10 Biotechnology and Its Applications"), so extracted text is out of order there. Reconstructed from the rendered page image.
+- The source page 2 sidebar carries a **photograph of Herbert Boyer** ("HERBERT BOYER (1936 )"). Per §0.2/§4 (no person photographs), this was intentionally **not extracted or embedded** — the biographical text was retained and rendered as a text-only profile box (F008-F020) with a definition-icon marker instead of an image. No asset file exists for it; it is correctly excluded from the figure manifest above.
