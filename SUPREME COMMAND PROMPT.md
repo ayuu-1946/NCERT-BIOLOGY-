@@ -93,21 +93,39 @@ notes/
 
 ### 0.6 The frozen `neet_template.py` module contract
 
-`neet_template.py` is a **frozen, repo-level module**: chapters `import` it and never re-declare the styles it owns. Freezing the style layer in one file is what permanently kills defect classes 1–3 (footer, illegible badge, tiny step-digit) and the cross-page style drift the old §7 hunted by hand — a chapter cannot drift from a spec it imports rather than retypes. Treat the module as an API: change it only deliberately, and when you do, every chapter re-rendered against it changes identically.
+`neet_template.py` is a **frozen, repo-level module** (it lives at the repo root, alongside `check_pdf.py`): chapters `import` it and never re-declare the styles it owns. Freezing the style layer in one file is what permanently kills defect classes 1–3 (footer, illegible badge, tiny step-digit) and the cross-page style drift the old §7 hunted by hand — a chapter cannot drift from a spec it imports rather than retypes. Treat the module as an API: change it only deliberately, and when you do, every chapter re-rendered against it changes identically.
 
-The module **must export** (names are the contract; chapters depend on them):
+**Font rule (no exceptions):** every piece of type in every chapter PDF is Times New Roman. The module defines `FONT_REGULAR = "Times-Roman"`, `FONT_BOLD = "Times-Bold"`, `FONT_ITALIC = "Times-Italic"`, `FONT_BOLD_ITALIC = "Times-BoldItalic"` — ReportLab's base-14 PDF fonts, which *are* Times New Roman's metrics and are guaranteed present in every PDF viewer with no font embedding required. Every entry in `STYLES` uses one of these four; no chapter script may reference any other `fontName`.
 
-- **Geometry & color constants** — `PAGE_SIZE` (A4), `MARGIN` (1.5 cm), `TOP_MARGIN`/`BOTTOM_MARGIN` (1.4 cm), and the seven canonical colors `DARK_GREY`, `MED_GREY`, `SOFT_GREY`, `ROW_ALT`, `NOTE_BG`, `GRID_LINE`, `INK` (exact hex in §4). These are the single source of truth for the margins and bands `check_pdf.py` enforces.
-- **`STYLES`** — the canonical `ParagraphStyle` dict (Title, H1, H2, H3, Body, Bullet1–3, NoteBox, Caption) exactly as in §4. Body running text is fontSize ~10.8; no style produces text below the linter's legibility floor.
-- **`TABLE_STYLE`** (or a `table_style()` factory) — DARK_GREY header row, white bold text, ROW_ALT alternating rows, 0.4pt GRID_LINE gridlines with a 0.25pt rule under *every* row, 3pt top/bottom + 4pt left/right padding.
-- **`section_badge(number, level)`** — the filled-square section-number badge, **sized by `pdfmetrics.stringWidth`** so the box always encloses its text and the digits never collapse below print legibility. This is the permanent fix for defect 2; the badge must remain readable at true print DPI, above `check_pdf.py`'s `TINY_FAIL_PT` (5.0pt) floor and ideally at/above the `TINY_WARN_PT` (6.0pt) review band.
-- **`_step_badge(n, size)`** — the filled-triangle step badge with white digit at the **corrected** digit size (the fix for defect 3); the digit is a real text span, so `check_pdf.py`'s legibility check will catch any regression.
-- **`process_flow(steps, cyclic=False)`** — the reference Process Flow component (§4.2), a single bordered-column Table with the vertical rule, splitting cleanly across pages.
-- **`figure(asset_path, caption_text, max_width_cm=...)`** — returns the monochrome image + its `Caption` paragraph wrapped in `KeepTogether`, inside a thin 0.5pt GRID_LINE border box (§4.4).
-- **`note_box(...)`** and **`memory_aid_box(...)`** — the NOTE (solid double-rule, `!` icon, `[NOTE]` label) and MEMORY AID (dashed border, star icon, `[MEMORY AID — not in NCERT]` label) box helpers (§4.3).
-- **A page template / build helper with NO footer, header, or page number** — content fills the full margin area only. This is the permanent fix for defect 1 and the reason `check_pdf.py`'s band check can be a hard gate rather than a hopeful convention.
+The module **exports** (these are the real names shipped in `neet_template.py`; chapters depend on them):
 
-A chapter script's top is therefore just `from neet_template import STYLES, TABLE_STYLE, section_badge, process_flow, figure, note_box, memory_aid_box, ...` followed by its linear `story.append(...)` sequence. The three sanctioned helpers and the styles all come from the module; nothing style-level is redefined per chapter.
+- **Geometry & color constants** — `PAGE_SIZE` (A4), `MARGIN` (1.5 cm), `TOP_MARGIN`/`BOTTOM_MARGIN` (1.4 cm), `FRAME_WIDTH`, and the seven canonical colors `DARK_GREY`, `MED_GREY`, `SOFT_GREY`, `ROW_ALT`, `NOTE_BG`, `GRID_LINE`, `INK` (exact hex in §4). These are the single source of truth for the margins and bands `check_pdf.py` enforces.
+- **`STYLES`** — the canonical `ParagraphStyle` dict (Title, H1, H2, H3, Body, Bullet1–3, NoteBox, Caption, TableCell, TableHead) exactly as in §4, all built on the Times New Roman font canon above. Body running text is fontSize 10.8; no style produces text below the linter's legibility floor.
+- **`heading(number, text, level, has_table=False)`** — banner heading with its section-number badge, sized internally by `pdfmetrics.stringWidth` so the box always encloses its text and the digits never collapse below print legibility. This is the permanent fix for defect 2; the badge stays above `check_pdf.py`'s `TINY_FAIL_PT` (5.0pt) floor and at/above the `TINY_WARN_PT` (6.0pt) review band.
+- **`process_flow(steps, cyclic=False)`** — the reference Process Flow component (§4.2): a bordered-column Table with numbered triangle step-badges at the **corrected** digit size (the fix for defect 3 — the digit is a real text span, so `check_pdf.py`'s legibility check catches any regression) and a vertical rule, splitting cleanly across pages.
+- **`keyterm(text)`** — a bullet marked with the filled-circle definition icon (§4.1).
+- **`note(text)`** and **`memory_aid(text)`** — the NOTE (solid double-rule, `!` icon, `[NOTE]` label) and MEMORY AID (dashed border, star icon, `[MEMORY AID - not in NCERT]` label) box helpers (§4.3).
+- **`data_table(rows, col_widths=None, font_size=9.5)`** — the standard table: DARK_GREY header row with white bold text, ROW_ALT alternating rows, 0.4pt GRID_LINE gridlines with a 0.25pt rule under *every* row, `repeatRows=1` so a data row never appears without its header.
+- **`figure(asset_name, caption_text, assets_dir, max_width_cm=15.9)`** — returns the monochrome image + its `Caption` paragraph wrapped in `KeepTogether`, inside a thin 0.5pt GRID_LINE border box (§4.4). Takes `assets_dir` explicitly (each chapter's own `assets/` folder) rather than a hidden global, so the module stays chapter-agnostic; a chapter script binds it once with a one-line local wrapper (see below).
+- **`title_block(title_text, motif_size=42)`** — the page-1 DNA-motif + Times-Bold title row and rule, no separate title page (§4 title block).
+- **`build_pdf(out_pdf, story, title, author=..., subject=...)`** — builds the `SimpleDocTemplate` with the canonical geometry, **no footer, header, or page number**, and prints the output size. This is the permanent fix for defect 1 and the reason `check_pdf.py`'s band check can be a hard gate rather than a hopeful convention.
+
+A chapter script's top is therefore: a small sys.path bootstrap that walks up from the script to the directory containing `neet_template.py` (chapter scripts live several directories deep under `notes/`), then
+
+```python
+from neet_template import (
+    STYLES, FRAME_WIDTH, DARK_GREY, GRID_LINE,
+    heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
+)
+from neet_template import figure as _shared_figure
+
+ASSETS = os.path.join(HERE, "assets")
+
+def figure(asset_name, caption_text, max_width_cm=15.9):
+    return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+```
+
+followed by its linear `story.append(...)` sequence and a `main()` that calls `build_pdf(OUT_PDF, story, title=...)`. Nothing style-level, nothing geometry-level, and no font name is redefined per chapter.
 
 ---
 
@@ -190,7 +208,7 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 - **Bold** key terms on first use.
 - Convert anything comparative or enumerable into a table.
 - Write processes/pathways using the **Process Flow** component (§4.2, imported from `neet_template`) — a connected sequence of numbered badges, not a plain numbered list and not prose paragraphs. Use it for every multi-step process, pathway, or cycle in the chapter — with the fallback rule in §4.2 if it misbehaves.
-- Every heading gets a small **section-number badge** (§4.1, from `neet_template.section_badge`) instead of a bare number typed inline — same traceability, more visual structure.
+- Every heading gets a small **section-number badge** (§4.1, built automatically inside `neet_template.heading()`) instead of a bare number typed inline — same traceability, more visual structure.
 - **Figures appear inline, at the exact point in the rewrite where their topic is covered** — never grouped at the end. Each carries its NCERT figure number and rewritten-but-factually-exact caption (§4.4).
 - Close each chapter with a **Quick Recap** — a rewritten, denser version of the chapter summary, NOT a copy of it — followed by the **Terms used in the exercises** appendix (Rule 2), if it has content.
 - **Design for the photocopier, not the screen.** These notes exist to be printed and re-photocopied in black and white — often several generations deep, on a cheap office/college printer. Every visual distinction (NOTE vs MEMORY AID, H1 vs H2 vs H3, "this row matters" vs "this row doesn't") must be carried by shape, border style, or icon first, with grey fill as a bonus, never the only signal. If you'd have to ask "is that light grey or white?" on a bad photocopy, redesign it.
@@ -272,7 +290,7 @@ STYLES = {
                                 alignment=TA_CENTER, leading=12.5, spaceBefore=3, spaceAfter=8),
 }
 ```
-Table styling (`TableStyle`) uses `DARK_GREY` header row with white bold text, `ROW_ALT` alternating rows, 0.4pt `GRID_LINE` gridlines, 3pt top/bottom and 4pt left/right padding — exported from the module as `TABLE_STYLE`/`table_style()`, never re-typed hex strings, so a single source of truth exists.
+Table styling uses `DARK_GREY` header row with white bold text, `ROW_ALT` alternating rows, 0.4pt `GRID_LINE` gridlines, 3pt top/bottom and 4pt left/right padding — built by the module's `data_table(rows, col_widths=None)` helper, never re-typed hex strings, so a single source of truth exists.
 
 ### Heading structure
 - **H1** (main sections, e.g. 14.1): dark grey banner, white bold text, fontSize 10.5, borderPad 3, preceded by a **section-number badge** (§4.1) instead of typing "14.1" inline
@@ -365,7 +383,7 @@ def process_flow(steps: list[str], cyclic: bool = False) -> Table:
 **Fallback rule (mandatory):** if a rendered flow block misaligns, clips, or breaks badly at a page boundary and one honest fix attempt doesn't cure it, fall back to plain numbered steps (`Bullet1` style, "1." "2." "3.") for that block and note it in the Coverage note. Content correctness always outranks decoration — never ship a broken flow, and never burn the session debugging graphics at the expense of content.
 
 ### 4.3 Boxes — NOTE vs MEMORY AID
-Both box types (exported as `note_box()` / `memory_aid_box()`) keep the `NOTE_BG` fill and Times-Italic text (fill is decoration) but are primarily told apart by **border style**, which survives any photocopy generation the fill doesn't:
+Both box types (exported as `note()` / `memory_aid()`) keep the `NOTE_BG` fill and Times-Italic text (fill is decoration) but are primarily told apart by **border style**, which survives any photocopy generation the fill doesn't:
 - **NOTE box** — factual, from NCERT: common confusions, important exceptions, key comparisons not to miss. Solid double-rule border (`GRID_LINE`, two parallel 0.5pt lines ~1.5pt apart), the outline-circle-with-"!" icon in the top-left corner, and the `[NOTE]` text label.
 - **MEMORY AID box** — clearly labeled `[MEMORY AID — not in NCERT]`: mnemonics/analogies invented to help recall. Dashed border (`GRID_LINE`, 0.75pt, alternating 3pt-on/2pt-off) and the outline-star icon in the top-left corner. The dash pattern alone tells it apart from a NOTE box even with the label covered.
 - Label, icon, and border are three redundant signals carrying one meaning.
