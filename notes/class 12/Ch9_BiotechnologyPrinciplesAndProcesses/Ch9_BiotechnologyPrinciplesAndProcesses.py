@@ -31,6 +31,7 @@ from reportlab.lib.enums import TA_CENTER
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
                                 Image, KeepTogether, HRFlowable)
 from reportlab.graphics.shapes import Drawing, Circle, Rect, Polygon, String, Line
+from reportlab.pdfbase.pdfmetrics import stringWidth
 
 # --------------------------------------------------------------------------------------
 # 1. CANONICAL STYLE BLOCK (§4)
@@ -88,11 +89,23 @@ TABLE_PADDING = dict(top=3, bottom=3, left=4, right=4)
 # --------------------------------------------------------------------------------------
 
 def _badge_section(label: str, size: float) -> Drawing:
-    """Filled square badge with the NCERT section number in white (§4.1)."""
-    d = Drawing(size, size)
-    d.add(Rect(0, 0, size, size, fillColor=INK, strokeColor=INK, strokeWidth=0))
-    fs = size * 0.46 if len(label) <= 3 else size * 0.34
-    d.add(String(size / 2, size * 0.5 - fs * 0.36, label, fontName="Times-Bold",
+    """Filled badge carrying the NCERT section number in white (§4.1).
+
+    The badge GROWS SIDEWAYS to fit its label instead of shrinking the type.
+    A fixed square forced long labels such as "9.2.1" down to ~3.4 pt, which
+    printed as an unreadable smudge; §0.4 check 2 requires the badge to be
+    legible at actual print size, not merely at screen zoom. The glyph height
+    is therefore pinned to a >=6 pt floor and the plate is widened to suit.
+    """
+    fs = max(size * 0.46, 6.0)
+    pad = fs * 0.42
+    text_w = stringWidth(label, "Times-Bold", fs)
+    w = max(size, text_w + 2 * pad)
+    h = size
+    d = Drawing(w, h)
+    d.add(Rect(0, 0, w, h, fillColor=INK, strokeColor=INK, strokeWidth=0))
+    # Optical centring: Times cap-height is ~0.66 em, so centre the cap box.
+    d.add(String(w / 2, (h - fs * 0.66) / 2, label, fontName="Times-Bold",
                  fontSize=fs, fillColor=white, textAnchor="middle"))
     return d
 
@@ -200,13 +213,21 @@ def keyterm(text: str):
     return t
 
 
-def _step_badge(n: int, size: float = 14) -> Drawing:
-    """Filled triangle badge with white step number (§4.2)."""
+def _step_badge(n: int, size: float = 16) -> Drawing:
+    """Filled apex-up triangle badge with the white step number (§4.2).
+
+    The digit must sit LOW, in the wide part of the triangle: the shape tapers
+    towards the apex, so type placed too high is pinched by the sloping sides.
+    The previous 14 pt plate rendered its number at ~6.2 pt and read as a black
+    blob on paper, so the plate and its digit are both scaled up here.
+    """
+    label = str(n)
+    fs = max(size * 0.5, 7.5) if len(label) == 1 else max(size * 0.38, 6.5)
     d = Drawing(size, size)
     d.add(Polygon(points=[0, 0, size, 0, size / 2, size],
                   fillColor=INK, strokeColor=INK, strokeWidth=0))
-    d.add(String(size / 2, size * 0.16, str(n), fontName="Times-Bold",
-                 fontSize=size * 0.44, fillColor=white, textAnchor="middle"))
+    d.add(String(size / 2, size * 0.12, label, fontName="Times-Bold",
+                 fontSize=fs, fillColor=white, textAnchor="middle"))
     return d
 
 
@@ -600,7 +621,7 @@ story.append(data_table([
     ["Part of the name", "Where it comes from", "In <b>EcoRI</b>"],
     ["<b>First letter</b>", "The <b>genus</b> of the prokaryotic cell it was isolated from",
      "<b>E</b> = <i>Escherichia</i>"],
-    ["<b>Next two letters</b>", "The <b>species</b>", "<b>co</b> = <i>coli</i>"],
+    ["<b>Second two letters</b>", "The <b>species</b>", "<b>co</b> = <i>coli</i>"],
     ["<b>Following letter(s)</b>", "The name of the <b>strain</b>",
      "<b>R</b> = from strain <b>RY 13</b>"],
     ["<b>Roman number</b>",
@@ -1052,15 +1073,29 @@ story.append(Paragraph(
     STYLES["Body"]))
 story.append(heading("9.3.5", "What a stirred-tank bioreactor must have", 3, has_table=True))
 story.append(data_table([
-    ["System", "Its job"],
-    ["<b>Agitator system</b>", "Even mixing of the reactor contents."],
-    ["<b>Oxygen delivery system</b>", "Oxygen availability throughout the bioreactor."],
-    ["<b>Foam control system</b>", "Controls foam (the <b>foam breaker</b> in Fig. 9.7a)."],
-    ["<b>Temperature control system</b>", "Holds the optimum temperature."],
-    ["<b>pH control system</b>", "Holds the optimum pH (<b>acid/base</b> inlet in Fig. 9.7a)."],
+    ["System", "Its job", "The part that does it"],
+    ["<b>Agitator system</b>", "Even mixing of the reactor contents.",
+     "A <b>motor</b> on top driving a <b>flat bladed impeller</b> down in the "
+     "<b>culture broth</b>."],
+    ["<b>Oxygen delivery system</b>", "Oxygen availability throughout the bioreactor.",
+     "A <b>sterile air</b> inlet."],
+    ["<b>Foam control system</b>", "Controls the foam that agitation throws up.",
+     "A <b>foam breaker</b>, mounted on the same shaft above the broth."],
+    ["<b>Temperature control system</b>", "Holds the optimum temperature.",
+     "A <b>jacket / coil</b> around the vessel; <b>steam</b> is also piped in for "
+     "<b>sterilisation</b>."],
+    ["<b>pH control system</b>", "Holds the optimum pH.",
+     "An <b>acid</b> line and a <b>base</b> line into the vessel."],
     ["<b>Sampling ports</b>",
-     "So that <b>small volumes of the culture can be withdrawn periodically</b>."],
-], col_widths=[2.4, 5.6]))
+     "So that <b>small volumes of the culture can be withdrawn periodically</b>.",
+     "A <b>sampling port</b> in the vessel wall."],
+], col_widths=[2.1, 3.0, 2.9]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "In the <b>sparged stirred-tank</b> variant, <b>sterile air is sparged</b> (blown in as fine "
+    "bubbles) from the base. This gives an <b>increased surface area for oxygen transfer</b> plus "
+    "<b>gas entrainment</b>, because the <b>bubbles dramatically increase the oxygen transfer "
+    "area</b>.", STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(figure(
     "fig_9_7.png",
@@ -1174,22 +1209,11 @@ story.append(note(
 
 
 # --------------------------------------------------------------------------------------
-# 4. PAGE FURNITURE + BUILD
+# 4. BUILD
 # --------------------------------------------------------------------------------------
-
-def _page_furniture(canvas, doc_):
-    """Footer rule, chapter name and page number on every page. Drawn, never a glyph."""
-    canvas.saveState()
-    y = BOTTOM_MARGIN - 0.28 * cm
-    canvas.setStrokeColor(GRID_LINE)
-    canvas.setLineWidth(0.5)
-    canvas.line(MARGIN, y + 0.32 * cm, PAGE_SIZE[0] - MARGIN, y + 0.32 * cm)
-    canvas.setFont("Times-Roman", 8.5)
-    canvas.setFillColor(SOFT_GREY)
-    canvas.drawString(MARGIN, y, "Class 12 - Ch 9 : Biotechnology : Principles and Processes")
-    canvas.drawRightString(PAGE_SIZE[0] - MARGIN, y, str(canvas.getPageNumber()))
-    canvas.restoreState()
-
+# Spec section 4: no header, no footer, no page numbers, and no rule lines at the top or
+# bottom of the page. Every page therefore carries content only -- there is deliberately
+# no onFirstPage / onLaterPages canvas callback.
 
 def main():
     doc = SimpleDocTemplate(
@@ -1199,7 +1223,7 @@ def main():
         title="Class 12 Chapter 9 - Biotechnology : Principles and Processes (NEET notes)",
         author="NCERT replacement notes", subject="NEET Biology",
     )
-    doc.build(story, onFirstPage=_page_furniture, onLaterPages=_page_furniture)
+    doc.build(story)
     size_kb = os.path.getsize(OUT_PDF) / 1024
     print(f"Built {OUT_PDF} ({size_kb:.0f} KB)")
     return 0
