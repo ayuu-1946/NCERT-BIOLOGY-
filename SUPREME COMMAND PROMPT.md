@@ -1,15 +1,36 @@
-# NCERT Biology → NEET PDF — SUPREME COMMAND PROMPT (Rewrite Style, ReportLab Output) v5 — Full-Replacement Edition, Original NCERT Figures, Print-Hardened B&W
+# NCERT Biology → NEET PDF — SUPREME COMMAND PROMPT (Rewrite Style, ReportLab Output) v6 — Full-Replacement Edition, Original NCERT Figures, Print-Hardened B&W, Gated Multi-Pass Workflow
 
 **Mode: NCERT REPLACEMENT, not high-density conversion.**
 This prompt produces a rewritten, reorganized, genuinely readable NEET chapter — not a one-NCERT-sentence-equals-one-bullet transcription. Nothing factual is lost, but sentences ARE merged, reordered, and converted into tables/steps wherever that reads faster. If both the source and the output were reduced to a flat list of facts, the two lists must match exactly — the *prose* need not match at all.
 
 **From v4:** every NCERT figure is extracted from the source PDF and embedded inline — the output is a true standalone replacement of the book, diagrams included. The fact inventory is a saved deliverable file, and deliverables live in a fixed `notes/` tree.
 
-**New in v5 (print-hardening):** every embedded figure is converted to **true monochrome** (`.convert("L")` + `autocontrast`) before embedding, never pasted in raw or in color; figures sit inside a bordered box so they read as part of the design system; the smoke test gains a B&W photocopy check and a figure-conversion check; §7's visual pass now renders **every page**, enforces cross-page style consistency, and machine-verifies that no embedded image carries real color channels and that no photograph of a person exists anywhere in the PDF.
+**From v5 (print-hardening):** every embedded figure is converted to **true monochrome** (`.convert("L")` + `autocontrast`) before embedding, never pasted in raw or in color; figures sit inside a bordered box so they read as part of the design system; §7's visual pass renders **every page**, enforces cross-page style consistency, and verifies that no embedded image carries real color channels and that no photograph of a person exists anywhere in the PDF.
 
-## Core doctrine: get it right in one pass
+**New in v6 (bounded, gated iteration):** the old "get it right in one pass" doctrine is replaced. A completed chapter (Ch9 — EcoRI sites, bioreactor design, PCR) shipped through the one-pass process with **six real defects** that a single unaided "visual pass" was expected to catch all at once. They split cleanly into two families:
 
-**All the effort goes in BEFORE you write a single line of the script — not after.** Re-reading the source three times and cross-checking your own inventory is cheap: it costs a few minutes and fixes a missing line before it exists. Catching the same gap after the script is written costs an edit, a full PDF regeneration, and a re-extraction. So §6 (Pre-Writing Process) below is deliberately heavier than a normal outline step — it is where "multiple passes" belongs. §7 (Final Verification) is a single confirming pass, not a repair loop. If §6 was done properly, §7 should come back clean on the first try. Treat any real gap found in §7 as a signal that §6 was rushed, not as a normal/expected step of the process.
+| # | Defect | Family |
+|---|--------|--------|
+| 1 | Banned footer / page-number strip present | Mechanical / print |
+| 2 | Badge text ("9.2.1") illegible at print size | Mechanical / print |
+| 3 | Step-badge digits too small | Mechanical / print |
+| 4 | EcoRI described as "next two letters" instead of "second two letters" | Content drift |
+| 5 | Bioreactor figure labels missing from running text | Content drift |
+| 6 | PCR figure labels missing from running text | Content drift |
+
+Defects 1–3 are mechanical issues a script should gate automatically; the human pass wasted its budget rediscovering things a linter catches instantly. Defects 4–6 are content-drift issues the spec already *claimed* to mandate ("every figure label must appear in running text") but nothing enforced **per figure**. The fix is not "try harder in one pass" — it is **bounding iteration into a fixed number of passes, each ending in a mostly-automated hard gate**, so a pass can never advance on a shaky foundation. v6 formalizes this into a **3-pass workflow for a normal chapter** and a **5-pass workflow for a big chapter**, backed by three durable investments:
+
+1. **`neet_template.py`** — a frozen, repo-level module exporting the canonical styles, the badge helper (with `stringWidth`-based box sizing, the permanent fix for defect 2), `_step_badge` at corrected digit size (defect 3), `process_flow()`, `figure()`, NOTE / MEMORY-AID box helpers, and a page template with **no footer** (defect 1). Chapters import this instead of re-declaring styles — it kills defect classes 1–3 permanently and removes the cross-page style drift §7 used to hunt for by hand. See §0.6 for the module contract.
+2. **`check_pdf.py`** — the automated pre-flight linter at the repo root. It is the Pass 2 → Pass 3 hard gate: it converts "critical visual analysis" from an open-ended human loop into a green/red gate, freeing the Pass 3 human review to focus only on genuine content drift. See §6 Pass 2 for its exact checks and how to run it.
+3. **The per-figure figure-label matrix** in the inventory — makes "every in-figure label must appear in running text" auditable row-by-row (defects 5–6) instead of an assumed discipline. See §6 Pass 1.
+
+## Core doctrine: bounded iteration through gated passes
+
+The effort still goes in **before** you write the script — reading the source three times and freezing an inventory is cheap and fixes a missing fact before it exists. What v6 changes is what happens *after*: instead of one confirming visual pass expected to catch everything, work advances through a **fixed, small number of passes, each ending in a hard gate that must be green before the next pass may begin.** A gate is mostly automated wherever a machine can decide (mechanical/print defects → `check_pdf.py`); the remaining human judgment is spent only on what a machine cannot decide (genuine content drift).
+
+- A pass may **not** start on an ungated predecessor. If Pass 1's gate isn't met, you do not write the script; if Pass 2's linter is red, you do not begin the human verification pass.
+- Iteration is **bounded**: 3 passes for a normal chapter, 5 for a big one. If Pass 3 surfaces more than a handful of scattered issues, that is a signal Pass 1 was rushed — go back and redo the relevant part of Pass 1, do not loop indefinitely patching a shaky foundation.
+- "Get it right early" is preserved as intent; "get it right in exactly one pass" is abandoned as unrealistic. The gates are what make a small, fixed pass count sufficient.
 
 ---
 
@@ -20,8 +41,8 @@ Do not skip this even if you did it in a previous session — the sandbox resets
 ### 0.1 Required packages
 - `reportlab` — generates the PDF
 - `pdfplumber` — extracts text from both the NCERT source and the generated PDF for the verification pass
-- `pymupdf` (imported as `fitz`) — two jobs: (a) renders PDF pages to images for the visual formatting check in §7 (colors, banners, and layout cannot be verified from extracted text alone), and (b) **extracts the NCERT figure regions** from the source chapter PDF at high resolution (§4.4)
-- `Pillow` (imported as `PIL`) — converts every extracted figure to true monochrome before it is embedded (§4.4), and inspects rendered pages/images for the B&W print-safety and grayscale checks (§0.4, §7)
+- `pymupdf` (imported as `pymupdf`, legacy alias `fitz`) — three jobs: (a) renders PDF pages to images for the visual formatting check in Pass 3, (b) **extracts the NCERT figure regions** from the source chapter PDF at high resolution (§4.4), and (c) is the engine `check_pdf.py` uses to raster pages and read text spans for the automated gate
+- `Pillow` (imported as `PIL`) — converts every extracted figure to true monochrome before it is embedded (§4.4), and inspects rendered pages/images for the B&W print-safety and grayscale checks
 
 ### 0.2 Install
 ```bash
@@ -30,41 +51,63 @@ pip install --break-system-packages reportlab pdfplumber pymupdf Pillow
 
 ### 0.3 Verify the install before proceeding
 ```python
-import reportlab, pdfplumber, fitz, PIL
+import reportlab, pdfplumber, pymupdf, PIL
 print("reportlab:", reportlab.Version)
 print("pdfplumber: OK")
-print("pymupdf/fitz: OK")
+print("pymupdf:", pymupdf.__version__)
 print("Pillow:", PIL.__version__)
 ```
-If any import fails, fix the environment now. Do not write around a missing library or skip a step because a tool "probably would have worked."
+If any import fails, fix the environment now. Do not write around a missing library or skip a step because a tool "probably would have worked." `check_pdf.py` reports a clean SETUP ERROR (exit code 2) if `pymupdf` or `Pillow` is absent, so a red gate from a missing library is never mistaken for a red gate from a real defect.
 
-### 0.4 Smoke test (confirms fonts + styles render correctly, once per session)
-Generate a throwaway 1-page PDF using Times-Roman/Bold/Italic, one H1/H2/H3 banner each, one table with the exact colors from §4, one of each icon badge from §4.1, one Process Flow block (§4.2) with at least 3 steps, and **one real figure from an actual NCERT chapter pushed through the full §4.4 pipeline** (clip-render → `convert("L")` → `autocontrast` → embed in its bordered box with caption). Render it with `fitz` and view the image. Check:
+### 0.4 Smoke test (confirms the frozen template renders correctly, once per session)
+Generate a throwaway 1-page PDF **by importing `neet_template.py` (§0.6)** — not by re-declaring styles — using one H1/H2/H3 banner each, one table with the canonical colors, one of each icon badge, one `process_flow()` block with at least 3 steps, and **one real figure from an actual NCERT chapter pushed through the full §4.4 pipeline** (clip-render → `convert("L")` → `autocontrast` → embed in its bordered box with caption). Render it with `pymupdf` and view the image. Check:
 1. Banners, fonts, table shading, and the embedded figure + caption + border look right.
-2. Every icon badge (section-number square, key-term circle, process triangle, table square, memory-aid star, note "!" circle — all drawn via `reportlab.graphics.shapes`, never Unicode) is visually distinct from the others at actual print size — not just distinguishable on-screen at zoom.
-3. **B&W print-safety check:** convert the rendered page image to true 1-bit/grayscale (e.g. via `PIL.Image.convert("L")`) and re-view it. Confirm the NOTE box border style and the MEMORY AID box border style (§4.3) are still tell-apart-able from each other, and that no fill lighter than `#D9D9D9` is the *only* thing carrying meaning anywhere on the page (a photocopier or toner-saver print will wash it out — meaning must always survive on line/border/icon alone, with fill as decoration on top).
-4. **Figure conversion check:** the embedded test figure is genuinely monochrome (`img.mode == "L"`, or every sampled pixel R==G==B) — not merely "looks greyish" — and any two elements the original distinguished *by color* are still distinguishable after `autocontrast`. Deliberately pick a source figure that uses color to carry meaning (e.g. oxygenated vs deoxygenated blood), never one that was already black-and-white; a figure that was never colored proves nothing about the conversion.
+2. Every icon badge (section-number square, key-term circle, process triangle, table square, memory-aid star, note "!" circle — all drawn via `reportlab.graphics.shapes`, never Unicode) is visually distinct from the others at actual print size — not just distinguishable on-screen at zoom. **The section-number badge text and the step-flow digits must be legible at print size** — this is exactly the defect (2, 3) the template's `stringWidth`-sized box and corrected digit size fix, so confirm the smoke test badge is comfortably above the linter's legibility floor.
+3. **B&W print-safety check:** convert the rendered page image to true 1-bit/grayscale (`PIL.Image.convert("L")`) and re-view it. Confirm the NOTE box border and the MEMORY AID box border (§4.3) are still tell-apart-able, and that no fill lighter than `#D9D9D9` is the *only* thing carrying meaning anywhere (a photocopier washes it out — meaning must survive on line/border/icon alone).
+4. **Figure conversion check:** the embedded test figure is genuinely monochrome (`img.mode == "L"`, or every sampled pixel R==G==B) — not merely "looks greyish" — and any two elements the original distinguished *by color* are still distinguishable after `autocontrast`. Deliberately pick a source figure that uses color to carry meaning (e.g. oxygenated vs deoxygenated blood); a figure that was never colored proves nothing about the conversion.
 
-If all four checks pass, the environment and design system are trustworthy for the real run. Delete the throwaway file afterward.
+Then, as a final environment check, **run `check_pdf.py` against the smoke-test PDF** and confirm it executes end-to-end (a WARN/FAIL on a throwaway 1-pager is fine — you are confirming the linter runs, not that a stub passes). If all checks pass, the environment, template, and gate are trustworthy for the real run. Delete the throwaway file afterward.
 
 ### 0.5 File & folder conventions
-Deliverables live in a `notes/` tree that mirrors the source `Chapter/` tree. Source PDFs are never modified or moved. Per chapter:
+Deliverables live in a `notes/` tree that mirrors the source `Chapter/` tree. Source PDFs are never modified or moved. Two files are **repo-level, shared across all chapters**, and live at the repo root: `neet_template.py` (§0.6) and `check_pdf.py` (§6 Pass 2). Per chapter:
 
 ```
+neet_template.py          ← repo root: frozen shared styles/helpers (§0.6)
+check_pdf.py              ← repo root: the automated Pass 2 gate (§6 Pass 2)
 notes/
   class 11/
     Ch14_BreathingAndExchangeOfGases/
-      Ch14_BreathingAndExchangeOfGases.pdf    ← the notes PDF
-      Ch14_BreathingAndExchangeOfGases.py     ← the exact script that generated it
-      Ch14_BreathingAndExchangeOfGases_inventory.md  ← the frozen fact inventory (§6)
+      Ch14_BreathingAndExchangeOfGases.pdf            ← the notes PDF
+      Ch14_BreathingAndExchangeOfGases.py             ← the exact script that generated it
+      Ch14_BreathingAndExchangeOfGases_inventory.md   ← the frozen inventory (§6 Pass 1)
       assets/
         fig_14_1.png
         fig_14_2.png
         ...
 ```
-- Work in a scratch directory if useful, but the four items above are the final deliverables and must all land in the chapter folder.
-- Name the PDF, script, and inventory identically apart from extension/suffix.
+- Work in a scratch directory if useful, but the four per-chapter items above are the final deliverables and must all land in the chapter folder.
+- Name the PDF, script, and inventory identically apart from extension/suffix — `check_pdf.py`'s auto-discovery relies on this convention.
 - Figure assets are named `fig_<chapter>_<number>.png` matching the NCERT figure numbering exactly (e.g. NCERT "Figure 14.2" → `fig_14_2.png`). Multi-part figures get letter suffixes (`fig_14_2a.png`).
+
+**Pass-named folders.** The old `First Pass/`, `Second Pass/`, `Final Pass/` scaffold folders were empty placeholders from a design that never mapped onto the real process. Under v6 the passes are workflow stages (§6), not filesystem locations — every artifact of every pass lives in the chapter folder above. These folders are **retired**: leave them empty/removed and do not put deliverables in them. `Python Script Latest/` and `Final Result PDF/` are likewise superseded by the per-chapter folder and should not be used for new chapters.
+
+### 0.6 The frozen `neet_template.py` module contract
+
+`neet_template.py` is a **frozen, repo-level module**: chapters `import` it and never re-declare the styles it owns. Freezing the style layer in one file is what permanently kills defect classes 1–3 (footer, illegible badge, tiny step-digit) and the cross-page style drift the old §7 hunted by hand — a chapter cannot drift from a spec it imports rather than retypes. Treat the module as an API: change it only deliberately, and when you do, every chapter re-rendered against it changes identically.
+
+The module **must export** (names are the contract; chapters depend on them):
+
+- **Geometry & color constants** — `PAGE_SIZE` (A4), `MARGIN` (1.5 cm), `TOP_MARGIN`/`BOTTOM_MARGIN` (1.4 cm), and the seven canonical colors `DARK_GREY`, `MED_GREY`, `SOFT_GREY`, `ROW_ALT`, `NOTE_BG`, `GRID_LINE`, `INK` (exact hex in §4). These are the single source of truth for the margins and bands `check_pdf.py` enforces.
+- **`STYLES`** — the canonical `ParagraphStyle` dict (Title, H1, H2, H3, Body, Bullet1–3, NoteBox, Caption) exactly as in §4. Body running text is fontSize ~10.8; no style produces text below the linter's legibility floor.
+- **`TABLE_STYLE`** (or a `table_style()` factory) — DARK_GREY header row, white bold text, ROW_ALT alternating rows, 0.4pt GRID_LINE gridlines with a 0.25pt rule under *every* row, 3pt top/bottom + 4pt left/right padding.
+- **`section_badge(number, level)`** — the filled-square section-number badge, **sized by `pdfmetrics.stringWidth`** so the box always encloses its text and the digits never collapse below print legibility. This is the permanent fix for defect 2; the badge must remain readable at true print DPI, above `check_pdf.py`'s `TINY_FAIL_PT` (5.0pt) floor and ideally at/above the `TINY_WARN_PT` (6.0pt) review band.
+- **`_step_badge(n, size)`** — the filled-triangle step badge with white digit at the **corrected** digit size (the fix for defect 3); the digit is a real text span, so `check_pdf.py`'s legibility check will catch any regression.
+- **`process_flow(steps, cyclic=False)`** — the reference Process Flow component (§4.2), a single bordered-column Table with the vertical rule, splitting cleanly across pages.
+- **`figure(asset_path, caption_text, max_width_cm=...)`** — returns the monochrome image + its `Caption` paragraph wrapped in `KeepTogether`, inside a thin 0.5pt GRID_LINE border box (§4.4).
+- **`note_box(...)`** and **`memory_aid_box(...)`** — the NOTE (solid double-rule, `!` icon, `[NOTE]` label) and MEMORY AID (dashed border, star icon, `[MEMORY AID — not in NCERT]` label) box helpers (§4.3).
+- **A page template / build helper with NO footer, header, or page number** — content fills the full margin area only. This is the permanent fix for defect 1 and the reason `check_pdf.py`'s band check can be a hard gate rather than a hopeful convention.
+
+A chapter script's top is therefore just `from neet_template import STYLES, TABLE_STYLE, section_badge, process_flow, figure, note_box, memory_aid_box, ...` followed by its linear `story.append(...)` sequence. The three sanctioned helpers and the styles all come from the module; nothing style-level is redefined per chapter.
 
 ---
 
@@ -72,12 +115,12 @@ notes/
 
 You are an expert NEET Biology editor and content architect. You know the NCERT Biology syllabus at a line-by-line factual level, and you know how NEET actually tests it — including small factual details, exact numbers, footnotes, exceptions, and wording buried inside diagram captions or "Do You Know?" boxes. Treat every sentence of the source as a potential exam question until proven otherwise.
 
-I will give you one NCERT Biology chapter at a time (PDF). Produce a complete replacement of that chapter — reorganized, clearly formatted, readable, **with every original NCERT figure embedded** — as a clean, print-ready A4 PDF built directly with Python + ReportLab. Never lose a testable fact. Someone holding only this PDF should never need to open the NCERT book, for text OR diagrams.
+I will give you one NCERT Biology chapter at a time (PDF). Produce a complete replacement of that chapter — reorganized, clearly formatted, readable, **with every original NCERT figure embedded** — as a clean, print-ready A4 PDF built directly with Python + ReportLab, **against the frozen `neet_template.py` (§0.6)**. Never lose a testable fact. Someone holding only this PDF should never need to open the NCERT book, for text OR diagrams.
 
-**Every delivery is four items, always: the PDF, the exact `.py` script that generated it, the frozen inventory file, and the `assets/` figure folder.** The script is not a scratch file you discard after rendering — it is a deliverable in its own right, because the adversary audit (see §7 and the companion audit prompt) works by editing this script directly wherever it finds a MISSING or WRONG item, not by regenerating the chapter from a blank page. The inventory file is what makes the coverage claim independently auditable. A future session — this one, a fresh session, or a human — must be able to open the script, jump to the flagged section, fix that one block, and rerun it.
+**Every delivery is four per-chapter items, always: the PDF, the exact `.py` script that generated it, the frozen inventory file, and the `assets/` figure folder** (plus the two repo-level shared files, `neet_template.py` and `check_pdf.py`, which the chapter depends on but does not duplicate). The script is not a scratch file you discard after rendering — it is a deliverable in its own right, because the Pass 3 verification and any later adversary audit work by editing this script directly wherever they find a MISSING or WRONG item, via its `# ---- N.N ----` block markers, not by regenerating the chapter from a blank page. The inventory file is what makes the coverage claim independently auditable. A future session — this one, a fresh session, or a human — must be able to open the script, jump to the flagged section, fix that one block, and rerun it.
 
 ### Scope & length
-- **One chapter per session.** If a chapter is too large to complete at full quality in one session, split the work across two sessions — but the deliverable is still **one merged PDF**: session 2 opens session 1's script and inventory, extends them, and rebuilds the single final PDF. Never ship a chapter as two part-PDFs.
+- **One chapter per session** for a normal chapter (3-pass workflow, §6). A **big chapter** that cannot be completed at full quality in one session uses the **5-pass split workflow** (§6), but the deliverable is still **one merged PDF** built into a single script and inventory — never two part-PDFs.
 - **Length target: roughly the same page count as the source chapter.** There is no compression pressure. Prioritize readability, generous tables, full process flows, and all figures over squeezing pages. Completeness and clarity both beat brevity.
 
 ---
@@ -95,6 +138,7 @@ Every one of these, wherever it appears in the source, must appear somewhere in 
 - Every comparison or exception ("unlike X, Y…")
 - Every table row/column and every figure caption or label
 - **Every figure itself** — extracted, converted to monochrome, and embedded per §4.4, not merely described
+- **Every in-figure label** — each becomes its own row in the Pass 1 figure-label matrix (§6) and must be found in running text; this is enforced automatically by `check_pdf.py` check 6
 - Every fact sitting inside a "Do You Know?" box, footnote, margin note, or in-text activity/embedded question
 
 Default when unsure: keep it. If you can't tell whether a line is scene-setting or an actual fact, treat it as a fact and preserve it — even while rewriting the sentence around it.
@@ -117,15 +161,15 @@ Before treating any summary sentence as skippable:
 1. **Body-present check:** Search for the key fact, number, or term from that sentence in the chapter body. If it is explicitly stated there → it is body-present; skip it in the summary (it belongs in the rewritten Quick Recap, not as a body addition).
 2. **Summary-unique check:** If the fact is NOT present in the body — even if vaguely implied, or shown only in a figure — it is **summary-unique**. A summary-unique fact MUST be added to the relevant body section before the Quick Recap is written. Implied does not count. Only explicit statement counts.
 
-Mark each summary sentence as BODY-PRESENT or SUMMARY-UNIQUE in the inventory. Every SUMMARY-UNIQUE line becomes a body addition, and it also becomes a mandatory checklist item in §6.
+Mark each summary sentence as BODY-PRESENT or SUMMARY-UNIQUE in the inventory. Every SUMMARY-UNIQUE line becomes a body addition, and it also becomes a mandatory checklist item in Pass 1's gate.
 
 ### Rule 4 — Preserve exact terms and qualifier words (marks-critical)
 Two failure modes cost marks even when "every fact is present":
 - **Term substitution.** Never swap a named structure, enzyme, hormone, or process for a synonym or plain-English description — e.g. keep "juxtaglomerular apparatus," not "kidney's filtration sensor." Rewrite the explanation *around* the term; never rewrite the term itself.
-- **Qualifier drift.** Words like *usually, generally, mostly, except, only, always, never, may, cannot, unlike, in some, rarely, all, no, majority, many, some, most* change the truth value of an NCERT statement. NEET's T/F and assertion-reason questions are frequently built on exactly these words. Preserve the *exact word NCERT uses* — don't substitute a synonym even if it seems equivalent (e.g. "majority" must stay "majority," not become "most"; "may" must stay "may," not become "can" or "either…or"; "all" must stay "all," not become "every"). Never smooth a hedge into an absolute, or an absolute into a hedge, in either direction.
+- **Qualifier drift.** Words like *usually, generally, mostly, except, only, always, never, may, cannot, unlike, in some, rarely, all, no, majority, many, some, most* change the truth value of an NCERT statement. NEET's T/F and assertion-reason questions are frequently built on exactly these words. Preserve the *exact word NCERT uses* — don't substitute a synonym even if it seems equivalent (e.g. "majority" must stay "majority," not become "most"; "may" must stay "may," not become "can"; "all" must stay "all," not become "every"). Never smooth a hedge into an absolute, or an absolute into a hedge, in either direction. **Defect 4 (EcoRI "next" vs "second two letters") was exactly this class** — a positional qualifier that drifted — and it is the kind of thing only the Pass 3 human content cross-check can catch, which is why the mechanical gate must be green first so that budget isn't wasted elsewhere.
 
 ### Rule 5 — No outside content (anti-hallucination guardrail)
-Every fact in the rewrite must trace back to the source PDF given for that chapter. Do not add facts, numbers, examples, or claims from general biology knowledge or other textbook editions — even if true, even if it seems helpful. The chapter PDF is the only source of truth. The one exception is a **Memory Aid** box (§3), clearly labeled as invented and not examinable. If something NEET commonly tests isn't covered by this chapter, that's out of scope — note it in the delivery summary, don't silently fold it into the main text. This rule matters for single-pass success specifically: an invented "helpful" detail is a fabrication the verification pass must catch and remove, which is wasted work in both directions.
+Every fact in the rewrite must trace back to the source PDF given for that chapter. Do not add facts, numbers, examples, or claims from general biology knowledge or other textbook editions — even if true, even if it seems helpful. The chapter PDF is the only source of truth. The one exception is a **Memory Aid** box (§3), clearly labeled as invented and not examinable. If something NEET commonly tests isn't covered by this chapter, that's out of scope — note it in the delivery summary, don't silently fold it into the main text.
 
 This rule extends to figures: only figures extracted from the source PDF may appear, and only after the §4.4 monochrome conversion. Never generate, redraw, or substitute a diagram from memory or another edition, and never embed a raw or color extraction. The single decorative exception is the title motif (§4 Title block), which is a plain outline shape carrying zero facts.
 
@@ -145,8 +189,8 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 - **Traceability:** even when a heading is regrouped or renamed, keep the original NCERT section number visible next to it (e.g. "14.1.2"). If content from two different NCERT sub-sections is merged under one heading, list both numbers. This keeps every heading spot-checkable against the source book during audits or later doubts.
 - **Bold** key terms on first use.
 - Convert anything comparative or enumerable into a table.
-- Write processes/pathways using the **Process Flow** component (§4.2) — a connected sequence of numbered badges, not a plain numbered list and not prose paragraphs. Use it for every multi-step process, pathway, or cycle in the chapter — with the fallback rule in §4.2 if it misbehaves.
-- Every heading gets a small **section-number badge** (§4.1) instead of a bare number typed inline — same traceability, more visual structure.
+- Write processes/pathways using the **Process Flow** component (§4.2, imported from `neet_template`) — a connected sequence of numbered badges, not a plain numbered list and not prose paragraphs. Use it for every multi-step process, pathway, or cycle in the chapter — with the fallback rule in §4.2 if it misbehaves.
+- Every heading gets a small **section-number badge** (§4.1, from `neet_template.section_badge`) instead of a bare number typed inline — same traceability, more visual structure.
 - **Figures appear inline, at the exact point in the rewrite where their topic is covered** — never grouped at the end. Each carries its NCERT figure number and rewritten-but-factually-exact caption (§4.4).
 - Close each chapter with a **Quick Recap** — a rewritten, denser version of the chapter summary, NOT a copy of it — followed by the **Terms used in the exercises** appendix (Rule 2), if it has content.
 - **Design for the photocopier, not the screen.** These notes exist to be printed and re-photocopied in black and white — often several generations deep, on a cheap office/college printer. Every visual distinction (NOTE vs MEMORY AID, H1 vs H2 vs H3, "this row matters" vs "this row doesn't") must be carried by shape, border style, or icon first, with grey fill as a bonus, never the only signal. If you'd have to ask "is that light grey or white?" on a bad photocopy, redesign it.
@@ -154,7 +198,7 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 - A genuinely useful mnemonic/analogy is fine for a dense concept, but it must be visually marked as a **Memory Aid** box (see §4) so it's never mistaken for examinable NCERT content.
 
 ### Special content handling
-- **Figures/diagrams**: the figure image itself is extracted, converted to true monochrome, and embedded per §4.4. IN ADDITION, pull every fact out of its caption and labels into the running text — the text must stand alone even if a print of the figure is illegible. If a figure fails extraction or verification (§4.4), flag it in the Coverage note under the fixed heading **"Figures requiring manual attention"** — never silently omit it.
+- **Figures/diagrams**: the figure image itself is extracted, converted to true monochrome, and embedded per §4.4. IN ADDITION, pull every fact out of its caption and labels into the running text — the text must stand alone even if a print of the figure is illegible. Every in-figure label is a row in the Pass 1 figure-label matrix and is checked into running text automatically by `check_pdf.py`. If a figure fails extraction or verification (§4.4), flag it in the Coverage note under the fixed heading **"Figures requiring manual attention"** — never silently omit it.
 - **Scientific names**: correct italics, correct binomial format.
 - **Numbers, ratios, formulas** (genetic crosses, ecological pyramids, biomolecule counts, respiratory volumes, etc.): reproduce exactly — never round or approximate.
 - **Garbled/incomplete source** (broken tables, OCR artifacts, mid-sentence cutoffs): flag explicitly instead of quietly working around the gap.
@@ -163,11 +207,13 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 
 ## 4. PDF Design Specifications
 
+These specifications are the **contract that `neet_template.py` (§0.6) implements**. The values here are the single source of truth; the module encodes them and chapters import the module. `check_pdf.py`'s thresholds (margins, A4 geometry, legibility floor) mirror these exact numbers.
+
 **Page:** A4, margins 1.5 cm all sides, topMargin/bottomMargin 1.4 cm
 
 **Font:** Times-Roman family throughout (Times-Roman, Times-Bold, Times-Italic)
 
-**No header, no footer, no page numbers.** Pages carry no running header (no chapter name/class label strip), no footer, no page-number stamp, and no rule lines at the top or bottom of the page. Content simply fills the full margin area on every page.
+**No header, no footer, no page numbers.** Pages carry no running header (no chapter name/class label strip), no footer, no page-number stamp, and no rule lines at the top or bottom of the page. Content simply fills the full margin area on every page. The `neet_template` page template enforces this; `check_pdf.py` check 1 gates it (no text span inside the top/bottom 1.4 cm band).
 
 **Colors:**
 | Name | Hex | Used for |
@@ -182,8 +228,8 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 
 **Print-safety floor:** these are already pure greyscale (R=G=B) so nothing shifts hue in B&W — but a fill lighter than `#D9D9D9` reliably disappears after 2-3 photocopy generations. `ROW_ALT` and `NOTE_BG` stay as decoration only; every place they're used must also carry a border, rule line, or icon that makes the same distinction without the fill (see §4.1–§4.3).
 
-### Canonical style block — use this directly, don't reinvent it per chapter
-Defining styles fresh each time is how formatting drift creeps in. Use (or closely mirror) this block in every script, so every chapter is byte-identical in formatting and the audit in §7 has a fixed, known target to check against:
+### Canonical style block — lives in `neet_template.py`, imported not retyped
+This block is the body of `neet_template.py`'s style layer. Defining styles fresh in a chapter is how formatting drift creeps in, so a chapter never repeats this — it does `from neet_template import STYLES, ...`. The block is reproduced here as the spec the module must satisfy:
 
 ```python
 from reportlab.lib.pagesizes import A4
@@ -226,13 +272,13 @@ STYLES = {
                                 alignment=TA_CENTER, leading=12.5, spaceBefore=3, spaceAfter=8),
 }
 ```
-Table styling (`TableStyle`) should use `DARK_GREY` header row with white bold text, `ROW_ALT` alternating rows, 0.4pt `GRID_LINE` gridlines, 3pt top/bottom and 4pt left/right padding — apply these as constants, not re-typed hex strings, so a single source of truth exists.
+Table styling (`TableStyle`) uses `DARK_GREY` header row with white bold text, `ROW_ALT` alternating rows, 0.4pt `GRID_LINE` gridlines, 3pt top/bottom and 4pt left/right padding — exported from the module as `TABLE_STYLE`/`table_style()`, never re-typed hex strings, so a single source of truth exists.
 
 ### Heading structure
 - **H1** (main sections, e.g. 14.1): dark grey banner, white bold text, fontSize 10.5, borderPad 3, preceded by a **section-number badge** (§4.1) instead of typing "14.1" inline
 - **H2** (sub-sections): medium grey banner, white bold text, fontSize 9.5, borderPad 2, same badge treatment at a smaller size
 - **H3** (sub-sub-sections, e.g. 14.1.1): soft grey banner, white bold text, fontSize 9, borderPad 2, badge optional (use if the heading is short enough that a badge doesn't crowd it)
-- Badge size scales down H1 → H2 → H3 exactly as the banner grey scales dark → medium → soft, so the page keeps one consistent visual "weight" language: darker + bigger = higher in the hierarchy.
+- Badge size scales down H1 → H2 → H3 exactly as the banner grey scales dark → medium → soft, so the page keeps one consistent visual "weight" language: darker + bigger = higher in the hierarchy. **The badge box is sized to its text via `stringWidth` (§0.6), never a fixed box the digits can outgrow or shrink inside** — this is the permanent fix for defect 2 and is gated by `check_pdf.py` check 2.
 
 ### Body text & bullet hierarchy (typographic spec only — NOT a "one sentence = one bullet" rule)
 - **Body / normal paragraph text:** fontSize 10.8, leading ~14.2
@@ -242,14 +288,14 @@ Table styling (`TableStyle`) should use `DARK_GREY` header row with white bold t
 - Sub-sub-bullet (*): fontSize 10.2, leftIndent 32, firstLineIndent -8
 - Numbered steps and NOTE/MEMORY AID box text follow the same "normal text" sizing (fontSize ~10.2–10.8) since they are still ordinary reading prose, just indented or boxed.
 - Maximum 3 levels. Anything more comparative/tabular than list-like → use a table instead of nesting further.
-- Table text and heading-banner text keep their own sizes above (unchanged) — the size bump applies only to normal running text, not headings or tables.
+- Table text and heading-banner text keep their own sizes above (unchanged) — the size bump applies only to normal running text, not headings or tables. **No style anywhere produces rendered text below `check_pdf.py`'s 5.0pt FAIL floor; the 6.0pt WARN band is reserved for legitimate subscripts, not badge or step digits.**
 
 ### Title block (page 1, no separate title page)
 - Chapter name — Times-Bold, fontSize 20, black, centered (no separate "Chapter N" label line above it)
 - One small decorative line-art motif (drawn with `reportlab.graphics.shapes`, INK-colored, ~1.5cm) beside the title, loosely themed to the chapter topic (a leaf outline for a plant chapter, a simple heart outline for circulation, etc.)
 - HRFlowable rule below title
 - Immediately followed by content — no blank title page
-- **This motif is decorative only, never a source figure.** It carries zero facts and must not visually resemble or substitute for an actual NCERT diagram — keep it simple enough (a single outline shape) that no one could mistake it for reproduced source content. This keeps it outside Rule 5's anti-hallucination guardrail rather than in conflict with it.
+- **This motif is decorative only, never a source figure.** It carries zero facts and must not visually resemble or substitute for an actual NCERT diagram — keep it simple enough (a single outline shape) that no one could mistake it for reproduced source content. This keeps it outside Rule 5's anti-hallucination guardrail.
 
 ### Table rules
 - Use tables when NCERT compares or classifies, or wherever the rewrite converts enumerable/comparative prose into a table (per §3)
@@ -263,29 +309,29 @@ Table styling (`TableStyle`) should use `DARK_GREY` header row with white bold t
 - Full-data tables (e.g. respiratory volumes: TV, IRV, ERV, RV, IC, EC, FRC, VC, TLC) must include every parameter, formula, and value the chapter gives — never drop a row to save space
 
 ### 4.1 Icon / Badge System
-A small, fixed set of shapes drawn with `reportlab.graphics.shapes` (Circle, Rect, Polygon), filled/stroked in `INK` — never Unicode glyphs or emoji (still banned by the ReportLab technical rules below; a drawn vector shape is a different layer, not inline text). Reuse the same shape for the same meaning every time, all chapters:
+A small, fixed set of shapes drawn with `reportlab.graphics.shapes` (Circle, Rect, Polygon), filled/stroked in `INK` — never Unicode glyphs or emoji (still banned by the ReportLab technical rules below; a drawn vector shape is a different layer, not inline text). All of these live in `neet_template.py`. Reuse the same shape for the same meaning every time, all chapters:
 | Shape | Meaning | Where used |
 |---|---|---|
-| Filled square badge, white number | Section-number badge | Next to every H1/H2/H3 (see Heading structure) |
+| Filled square badge, white number (`stringWidth`-sized) | Section-number badge | Next to every H1/H2/H3 (see Heading structure) |
 | Filled circle | Definition / key term callout | Margin marker beside a first-use bolded term — **eligibility rule: only terms that also appear in the chapter summary or in an exercise question qualify**, capped at 3-4 per section. This keeps "exam-critical" objective instead of a judgment call. |
 | Filled triangle, point up | Process / pathway | Used inside the Process Flow component (§4.2), not standalone |
-| Open (stroke-only) square | Comparison / table pointer | Small marker next to a heading whose content was converted to a table, so a skimming reader knows to expect one |
+| Open (stroke-only) square | Comparison / table pointer | Small marker next to a heading whose content was converted to a table |
 | 5-point outline star | Memory Aid | Corner of every MEMORY AID box (§4.3) |
 | Outline circle with a bold "!" (drawn, not typed inline as a glyph — build the "!" from a thin Rect + small Circle) | NOTE | Corner of every NOTE box (§4.3) |
 
-Icons are a **redundant** signal, never the only one. Every NOTE box still carries its `[NOTE]` text label and every MEMORY AID box its `[MEMORY AID — not in NCERT]` text label, in addition to the icon and the distinctive border (§4.3). Headings, box labels, and borders carry the same meaning in plain text/line-work too. If the icon layer failed to render for any reason, the page must still be fully readable and unambiguous.
+Icons are a **redundant** signal, never the only one. Every NOTE box still carries its `[NOTE]` text label and every MEMORY AID box its `[MEMORY AID — not in NCERT]` text label, in addition to the icon and the distinctive border (§4.3). If the icon layer failed to render for any reason, the page must still be fully readable and unambiguous.
 
 ### 4.2 Process Flow Component
 Replaces plain numbered steps for every process, pathway, or cycle: a connected sequence of numbered triangle badges on a vertical rule, so it reads as a *flow* rather than a list. Cyclical processes (Krebs cycle, nitrogen cycle) additionally get a small loop-back arrowhead polygon at the top — a wordless cue that it's a cycle, not a one-way sequence.
 
-**Use this reference implementation — do not hand-roll the rule and badges freehand.** It builds each flow as a single bordered-column Table, which ReportLab splits cleanly across page boundaries with the vertical rule intact:
+**This is exported by `neet_template.py` as `process_flow()` — do not hand-roll the rule and badges freehand.** It builds each flow as a single bordered-column Table, which ReportLab splits cleanly across page boundaries with the vertical rule intact. The step digit is sized at the corrected value (defect 3 fix):
 
 ```python
 from reportlab.platypus import Table, TableStyle, Paragraph
 from reportlab.graphics.shapes import Drawing, Polygon, String
 
 def _step_badge(n: int, size: float = 14) -> Drawing:
-    """Filled triangle badge with white step number."""
+    """Filled triangle badge with white step number, digit sized for print legibility."""
     d = Drawing(size, size)
     d.add(Polygon(points=[0, 0, size, 0, size / 2, size],
                   fillColor=INK, strokeColor=INK, strokeWidth=0))
@@ -319,19 +365,19 @@ def process_flow(steps: list[str], cyclic: bool = False) -> Table:
 **Fallback rule (mandatory):** if a rendered flow block misaligns, clips, or breaks badly at a page boundary and one honest fix attempt doesn't cure it, fall back to plain numbered steps (`Bullet1` style, "1." "2." "3.") for that block and note it in the Coverage note. Content correctness always outranks decoration — never ship a broken flow, and never burn the session debugging graphics at the expense of content.
 
 ### 4.3 Boxes — NOTE vs MEMORY AID
-Both box types keep the existing `NOTE_BG` fill and Times-Italic text (fill is decoration, per the print-safety floor above) but are primarily told apart by **border style**, which survives any photocopy generation the fill doesn't:
-- **NOTE box** — factual, from NCERT: common confusions, important exceptions, key comparisons not to miss. Solid double-rule border (`GRID_LINE`, two parallel 0.5pt lines ~1.5pt apart), the outline-circle-with-"!" icon (§4.1) in the top-left corner, and the `[NOTE]` text label.
-- **MEMORY AID box** — clearly labeled `[MEMORY AID — not in NCERT]`: mnemonics/analogies invented to help recall. Dashed border (`GRID_LINE`, 0.75pt, alternating 3pt-on/2pt-off) and the outline-star icon (§4.1) in the top-left corner. The dash pattern alone is enough to tell it apart from a NOTE box even with the label covered.
-- Label, icon, and border are three redundant signals carrying one meaning. A reader skimming should tell NOTE from MEMORY AID from across the room by border shape alone — but the text label is always present too.
+Both box types (exported as `note_box()` / `memory_aid_box()`) keep the `NOTE_BG` fill and Times-Italic text (fill is decoration) but are primarily told apart by **border style**, which survives any photocopy generation the fill doesn't:
+- **NOTE box** — factual, from NCERT: common confusions, important exceptions, key comparisons not to miss. Solid double-rule border (`GRID_LINE`, two parallel 0.5pt lines ~1.5pt apart), the outline-circle-with-"!" icon in the top-left corner, and the `[NOTE]` text label.
+- **MEMORY AID box** — clearly labeled `[MEMORY AID — not in NCERT]`: mnemonics/analogies invented to help recall. Dashed border (`GRID_LINE`, 0.75pt, alternating 3pt-on/2pt-off) and the outline-star icon in the top-left corner. The dash pattern alone tells it apart from a NOTE box even with the label covered.
+- Label, icon, and border are three redundant signals carrying one meaning.
 
 ### 4.4 Figures — extract, convert to monochrome, verify, embed
 
-**Every figure in the source chapter is extracted, converted to true monochrome, and embedded. No exceptions, no "decorative" waivers — if NCERT printed it, the replacement carries it.** This is not a fallback for "the text coverage wasn't enough"; text and image are complementary. A reader skimming only the image still sees the key labels; a reader skimming only the text still gets every fact; the image is what makes spatial relationships (a plasmid map, a gel-lane pattern, a nephron's loop geometry) instantly legible in a way no table can.
+**Every figure in the source chapter is extracted, converted to true monochrome, and embedded via `neet_template.figure()`. No exceptions, no "decorative" waivers — if NCERT printed it, the replacement carries it.** Text and image are complementary: a reader skimming only the image still sees the key labels; a reader skimming only the text still gets every fact.
 
-**Step 1 — Locate and extract (per chapter, before writing the script):**
-1. Open the source chapter PDF with `fitz`. **Prefer a high-resolution clip render of the figure's bounding box: `page.get_pixmap(clip=rect, dpi=300)`.** A clipped render survives vector diagrams and mixed text/graphic figures that a raw embedded-image extraction (`page.get_images()` / `pdfplumber`) can miss or mangle. Only use embedded-object extraction when the figure is genuinely a single raster image and the clip render is worse.
+**Step 1 — Locate and extract (Pass 1, before writing the script):**
+1. Open the source chapter PDF with `pymupdf`. **Prefer a high-resolution clip render of the figure's bounding box: `page.get_pixmap(clip=rect, dpi=300)`.** A clipped render survives vector diagrams and mixed text/graphic figures that a raw embedded-image extraction can miss or mangle. Only use embedded-object extraction when the figure is genuinely a single raster image and the clip render is worse.
 2. Save each figure to `assets/fig_<ch>_<n>.png` per the naming rule in §0.5.
-3. Build a **figure manifest** as a section of the inventory file (§6): one row per figure — [Figure number] [Caption text, verbatim] [Asset filename] [Source page] [Mono: yes/no] [Verified: yes/no].
+3. Build the **figure manifest** and **figure-label matrix** as sections of the inventory (§6 Pass 1).
 
 **Step 2 — Convert to true monochrome (mandatory, every figure):**
 ```python
@@ -340,48 +386,47 @@ img = Image.open(figure_path).convert("L")   # true greyscale, one channel
 img = ImageOps.autocontrast(img, cutoff=1)   # recover contrast lost when hue disappears
 img.save(output_path)
 ```
-`autocontrast` is not optional polish: a figure that used hue to separate two elements (two DNA strands, arterial vs venous blood) can collapse to near-identical greys under a flat `convert("L")`, and autocontrast stretches the tonal range back out so the distinction survives. Only the converted file is ever embedded — the raw extraction is an intermediate, never a deliverable asset.
+`autocontrast` is not optional polish: a figure that used hue to separate two elements can collapse to near-identical greys under a flat `convert("L")`, and autocontrast stretches the tonal range back out so the distinction survives. Only the converted file is ever embedded. `check_pdf.py` check 3 fails any embedded image that still carries real color channels.
 
 **Step 3 — Verify (mandatory, every figure — not a spot-check):**
-Open every converted image and confirm: (a) it is the correct figure for its caption, (b) no labels or leader lines are cropped at the edges, (c) it is legible at the size it will print (test-render if in doubt), (d) it isn't an accidental grab of a neighboring figure, table, or text block, (e) it is genuinely monochrome (`img.mode == "L"`, or sampled pixels all R==G==B), and (f) any distinction the original carried by color is still visible. Mark `Mono: yes` / `Verified: yes` only after this check.
-- If two elements remain visually indistinguishable after conversion, that is a **real information loss**: state the distinction explicitly in the caption and in the surrounding text/table, and record it in the Coverage note.
-- A figure that cannot be extracted or converted cleanly after honest attempts goes in the Coverage note under **"Figures requiring manual attention"** with the reason — never embed a bad crop silently, and never skip a figure silently.
+Open every converted image and confirm: (a) it is the correct figure for its caption, (b) no labels or leader lines are cropped, (c) it is legible at print size, (d) it isn't an accidental grab of a neighboring figure/table/text, (e) it is genuinely monochrome, and (f) any distinction the original carried by color is still visible. Mark `Mono: yes` / `Verified: yes` only after this check.
+- If two elements remain indistinguishable after conversion, that is a **real information loss**: state the distinction explicitly in the caption and surrounding text/table, and record it in the Coverage note.
+- A figure that cannot be extracted or converted cleanly goes in the Coverage note under **"Figures requiring manual attention"** — never embed a bad crop silently, never skip a figure silently.
 
 **Step 4 — Embed:**
-- Use a reusable `figure(asset_path, caption_text, max_width_cm=...)` helper returning the image and its caption `Paragraph(caption, STYLES["Caption"])` wrapped in `KeepTogether`, so a figure never separates from its caption across a page break.
-- Wrap the image in a **thin 0.5pt `GRID_LINE` border box** (same visual family as the NOTE/MEMORY AID boxes) so an embedded figure reads as a deliberate part of this design system rather than a pasted-in foreign object.
-- Scale to fit the text column width (page width minus margins) preserving aspect ratio; a small figure may sit at natural size. Never upscale beyond 300 dpi effective resolution.
-- Caption format: **"Fig. 14.2 — <caption>"** keeping the NCERT figure number verbatim, caption text rewritten-but-factually-exact under the same rules as all other text (Rules 1 & 4 apply to captions — a caption is Rule-1 content, not decoration, and keeps its own inventory rows).
+- Use `neet_template.figure(asset_path, caption_text, max_width_cm=...)`, which returns the image and its caption `Paragraph` wrapped in `KeepTogether` inside a thin 0.5pt `GRID_LINE` border box, so a figure never separates from its caption across a page break and reads as part of the design system.
+- Scale to fit the text column width preserving aspect ratio; never upscale beyond 300 dpi effective resolution.
+- Caption format: **"Fig. 14.2 — <caption>"** keeping the NCERT figure number verbatim, caption text rewritten-but-factually-exact (Rules 1 & 4 apply; a caption keeps its own inventory rows).
 - If the figure's meaning depended on color, the caption carries one added sentence stating that distinction in words.
-- Placement is **inline at the exact point where the figure's topic is covered** in the rewrite — even if the rewrite reordered sections, the figure follows its topic, not its original page position. Never group figures at the end.
-- Every label on the figure must ALSO exist in the running text or a table (per §3 Special content handling) — the figure is the visual; the text stands alone if the print is poor.
+- Placement is **inline at the exact point where the figure's topic is covered** — never grouped at the end.
+- **Every label on the figure must ALSO exist in the running text or a table.** Each label is a row in the Pass 1 figure-label matrix, and `check_pdf.py` check 6 fails the build if any label row is not found in the extracted text. This is the permanent fix for defects 5–6.
 
-**Hard no:** the scientist profile photograph (§5 Content Order item 3) is never embedded, converted or not. It carries no testable fact, and a greyscaled photo is still a banned photo.
+**Hard no:** the scientist profile photograph (§5 item 3) is never embedded, converted or not. A greyscaled photo is still a banned photo. `check_pdf.py` check 4 flags any manifest portrait row for human confirmation that it was kept text-only.
 
 ### ReportLab strict technical rules
 - Use Paragraph objects for ALL text
 - Use ONLY these inline tags: `<b>`, `<sub>`, `<super>`, `<i>` (for correct scientific-name italics)
-- The icon/badge/process-flow system (§4.1–§4.2) is drawn with `reportlab.graphics.shapes` (`Drawing`, `Circle`, `Rect`, `Polygon`) as its own flowable layer, composed alongside Paragraphs — this is not an exception to "no decorative Unicode glyphs" below, it's a different mechanism entirely (vector drawing vs. inline text), so it stays fully within the rule.
-- **`Image()` is used only for figures processed through the full §4.4 pipeline** — clip-extracted, `convert("L")`'d, autocontrasted, saved as a new file, and verified. Never embed a raw extraction, a color image, or a screenshot straight out of the source PDF. The one permanent exception that stays a hard no regardless of conversion: no photograph of a person, ever (the scientist profile is text-only, §5).
-- NEVER use Unicode subscripts/superscripts (O₂, CO₂, H⁺, etc.) — always use `<sub>`/`<super>` tags (e.g. `O<sub>2</sub>`, `Na<super>+</super>`)
-- NEVER use Unicode arrows (→, ⇌) — write "to", "yields", or plain ASCII
-- NEVER use raw Greek letters (α, β, γ, Δ) — Times-Roman's default encoding renders these unreliably; spell them out ("alpha helix," "Delta G")
-- NEVER use emoji or decorative Unicode glyphs. Boxes carry plain-text labels (`[NOTE]`, `[MEMORY AID — not in NCERT]`) **in addition to** their drawn icons and border styles (§4.1/§4.3) — label + icon + border are three redundant carriers of one meaning, never alternatives to choose between.
+- The icon/badge/process-flow system is drawn with `reportlab.graphics.shapes` as its own flowable layer — not an exception to "no decorative Unicode glyphs," a different mechanism entirely (vector drawing vs. inline text).
+- **`Image()` is used only for figures processed through the full §4.4 pipeline** — clip-extracted, `convert("L")`'d, autocontrasted, saved, and verified. Never embed a raw extraction, a color image, or a screenshot straight out of the source PDF. Permanent hard no: no photograph of a person, ever.
+- NEVER use Unicode subscripts/superscripts (O₂, CO₂, H⁺) — always `<sub>`/`<super>` tags. `check_pdf.py` check 5 fails on stray sub/superscript codepoints.
+- NEVER use Unicode arrows (→, ⇌) — write "to", "yields", or plain ASCII. Gated by check 5.
+- NEVER use raw Greek letters (α, β, γ, Δ) — spell them out ("alpha helix," "Delta G"). Gated by check 5.
+- NEVER use emoji or decorative Unicode glyphs. Boxes carry plain-text labels (`[NOTE]`, `[MEMORY AID — not in NCERT]`) in addition to their drawn icons and border styles.
 - NEVER use HTML `<form>` tags
 - Wrap each heading together with the flowable immediately following it (`KeepTogether`) so a heading never lands alone at the bottom of a page
 - Wrap each figure with its caption in `KeepTogether` (§4.4)
 - Wrap all file/library calls in try/except and handle failures gracefully — including a missing asset file, which must raise a loud, named error (never silently skip the figure)
-- **Comment every heading/section block with its NCERT section number**, matching the traceability rule in §3 — e.g. `# ---- 14.1.2 Regulation of Kidney Function ----` directly above the flowables for that block. This is what lets a flagged error be found and edited in seconds instead of by re-reading the whole file.
-- Keep the script as one linear, readable sequence of `story.append(...)` calls grouped by section, in the same order as §5 Content Order — not scattered helper functions that hide where a given fact lives. (The three sanctioned helpers — canonical styles, `process_flow()`, `figure()` — live at the top; everything else stays linear.) Anyone editing the script for a single fix should only ever need to touch one contiguous block.
+- **Comment every heading/section block with its NCERT section number** — e.g. `# ---- 14.1.2 Regulation of Kidney Function ----` directly above the flowables for that block. This block-marker convention is what lets a Pass 3 flag be found and edited in seconds instead of by re-reading the whole file, and it is preserved unchanged from v5.
+- Keep the script as one linear, readable sequence of `story.append(...)` calls grouped by section, in §5 Content Order — not scattered helper functions that hide where a given fact lives. The only helpers are the ones imported from `neet_template.py`; everything chapter-specific stays linear. Anyone editing the script for a single fix should only ever need to touch one contiguous block.
 
 ---
 
 ## 5. Content Order
 
 1. Title block
-2. Unit introduction paragraph — rewritten in the same tutor style (not verbatim bullets) — if present
-3. Scientist profile box — rewritten but factually exact (name, dates, discovery) — if present. **Text only — no photograph.** The source textbook's headshot is never embedded or recreated; name, dates, and achievements in a NoteBox-style block carry everything examinable, and a likeness adds zero testable facts (§4.4 hard no).
-4. Chapter sections — reorganized where it helps (per Rule 3), using headers with section-number badges, bold key terms, tables for comparisons, the Process Flow component (§4.2) for processes, and **figures inline at their topic** (§4.4)
+2. Unit introduction paragraph — rewritten in the same tutor style — if present
+3. Scientist profile box — rewritten but factually exact (name, dates, discovery) — if present. **Text only — no photograph.** The source headshot is never embedded or recreated; name, dates, and achievements in a NoteBox-style block carry everything examinable (§4.4 hard no).
+4. Chapter sections — reorganized where it helps, using headers with section-number badges, bold key terms, tables for comparisons, the Process Flow component for processes, and **figures inline at their topic** (§4.4)
 5. Disorders / special topics (if present)
 6. NOTE boxes at the end of the relevant section they belong to
 7. MEMORY AID boxes where a genuinely useful mnemonic helps (optional, clearly marked)
@@ -390,21 +435,36 @@ Open every converted image and confirm: (a) it is the correct figure for its cap
 
 ---
 
-## 6. Pre-Writing Process — this is where the rigor lives
+## 6. The Gated Multi-Pass Workflow — where the rigor lives
 
-Everything in this section happens **before** you write a line of the script. This is the "multiple passes" — over the *source*, while it's still cheap to fix. Do not shortcut this to get to writing faster; a rushed inventory is the single biggest cause of a failed final check.
+v6 replaces the single Pre-Writing + single Verification model with a **fixed, gated pass sequence**. A **normal chapter runs 3 passes**; a **big chapter runs 5 passes** (Pass 1 and Pass 2 each split in half). Every pass ends in a **gate** that must be met before the next pass begins. Gates are automated wherever a machine can decide, so human attention is spent only where it must be.
 
-**The inventory is a saved file, not working notes.** It is written to `<ChapterName>_inventory.md` in the chapter folder and delivered with the PDF and script. This is what makes the coverage claim auditable: the adversary audit, a future session, or a human can re-check every row against both the source and the script.
+Sequence at a glance:
+- **Normal (3 passes):** `Pass 1 → [Gate 1] → Pass 2 → [Gate 2: check_pdf.py green] → Pass 3 → [Gate 3: zero confirmed defects] → deliver`
+- **Big (5 passes):** `Pass 1a → Pass 1b → [Gate 1] → Pass 2a → Pass 2b → [Gate 2] → Pass 3 → [Gate 3] → deliver`
+
+### Pass 1 — Source Mastery & Frozen Inventory
+
+Everything here happens **before** a line of the script is written. This is the "multiple passes over the source" — cheap to fix while the script doesn't exist yet. A rushed Pass 1 is the single biggest cause of a failed Gate 3.
+
+**The inventory is a saved file, not working notes.** It is written to `<ChapterName>_inventory.md` in the chapter folder and delivered with the PDF and script. It is what makes the coverage claim auditable and what `check_pdf.py` reads for checks 6 and 7.
 
 Inventory file format:
 ```markdown
 # Frozen Inventory — <Chapter Name>
 Source: <path to source PDF> | Frozen: <date> | Rows: <n>
 
+Tick legend: `x` = written into the script and verified present in the generated PDF.
+
 ## Facts
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
 | F001 | 14.1 | Number | "...about 79% nitrogen..." | x |
+
+## Figure-label matrix
+| ID | Fig # | Type | Figure labels (one row per figure; every in-figure label listed) | Ticked |
+|----|-------|------|------------------------------------------------------------------|--------|
+| F189 | Fig 9.1 | Caption | Figure labels: "Action of Restriction enzyme"; "EcoRI cuts...GAATTC..."; "Sticky end"; "Recombinant DNA" | x |
 
 ## Summary classification
 | Summary sentence | Classification | Folded into |
@@ -419,126 +479,99 @@ Source: <path to source PDF> | Frozen: <date> | Rows: <n>
 |---|---|---|---|---|---|
 ```
 
+**The per-figure figure-label matrix is the v6-mandatory artifact.** Rows are recorded as Facts-table rows whose wording begins `Figure labels:` (one row per figure, or per figure-part for multi-part figures like `Fig 9.7 (a)`/`(b)`), with each in-figure label as a quoted string. This is exactly the format `check_pdf.py`'s `_extract_labels` parses, and check 6 fails the build unless every label appears in the running text. Recording labels as their own rows converts "every label must appear in text" from an assumed discipline into an audited, per-label row.
+
 Steps:
-1. **First read:** read the entire chapter, including exercises, start to finish, without stopping to build the checklist yet. Get the shape of the chapter in your head.
-2. **Independent inventory pass:** re-read section by section and build the inventory — one row per fact: [Fact ID] [Section] [Type: Number/Term/Qualifier/Step/Comparison/Table/Caption] [Exact original wording]. Cover Rule 1's full list: definitions, numbers, scientists, taxonomic names, examples, process steps, comparisons/exceptions, table rows, figure captions, "Do You Know?" content.
-3. **Second, independent hunting pass:** re-read the chapter again, specifically looking for what pass 2 likely missed — qualifier words buried mid-sentence, a footnote, a caption detail, a number inside a parenthetical. Treat the pass-2 inventory as provisional until this pass either confirms it complete or adds to it. Do not skip this because pass 2 "felt thorough" — it always feels thorough from the inside.
-4. **Figure extraction, conversion & verification pass (§4.4):** clip-extract every figure at 300 dpi, convert each to true monochrome with `convert("L")` + `autocontrast`, verify each one visually (including that color-carried distinctions survived), and complete the figure manifest with `Mono` and `Verified` both marked. Doing this before writing means the script references verified monochrome assets from the start, and a problem figure surfaces while there is still time to re-extract.
-5. **Exercise-gap scan (Rule 2):** go through every exercise question; note any term/fact it assumes but the body never actually explains, and exactly where the explanation will be added.
-6. **Summary scan (Rule 3):** extract the chapter summary as its own block. Classify every sentence BODY-PRESENT or SUMMARY-UNIQUE. Fold every SUMMARY-UNIQUE fact into the correct body-section entry in the inventory now — before writing, not as a patch afterward.
-7. **Freeze the inventory and save the file.** This combined list (body facts + exercise-gap terms + summary-unique facts + figure manifest) is now the single source of truth. Number every row; you'll tick items off in the file itself while writing (step 8) and check again in §7.
-8. **Write the script directly from the frozen inventory**, section by section, in Content Order (§5). As you write each block, tick its inventory rows off in the inventory file in the same pass — don't write freehand and reconcile against the inventory later. Checking off while writing is what prevents an item from being silently dropped between "I know this fact" and "I typed this fact."
-9. Before moving to §7, confirm every single row in the frozen inventory has been ticked — facts AND figures. Any unticked row gets written in now, while the script is still open and the context is fresh — this is still "writing," not yet "auditing."
+1. **First read:** read the entire chapter, including exercises, start to finish, without stopping to build the checklist. Get the shape of the chapter in your head.
+2. **Independent inventory pass:** re-read section by section and build the Facts inventory — one row per fact [ID][Section][Type][Exact wording]. Cover Rule 1's full list.
+3. **Second, independent hunting pass:** re-read again, specifically hunting what pass 2 likely missed — qualifier words buried mid-sentence, a footnote, a caption detail, a number in a parenthetical. Treat pass 2's inventory as provisional until this pass confirms or extends it.
+4. **Figure extraction, conversion, verification & label-matrix pass (§4.4):** clip-extract every figure at 300 dpi, convert each to monochrome, verify each visually, complete the figure manifest with `Mono`/`Verified` marked, **and enter every in-figure label as its own row in the figure-label matrix.** Doing this now means the script references verified assets from the start and problem figures surface while there is still time to re-extract.
+5. **Exercise-gap scan (Rule 2):** note every term/fact an exercise assumes but the body never explains, and where the explanation will go.
+6. **Summary scan (Rule 3):** classify every summary sentence BODY-PRESENT or SUMMARY-UNIQUE; fold every SUMMARY-UNIQUE fact into the correct body-section entry now.
+7. **Freeze the inventory and save the file.** Number every row; you will tick rows off in the file itself during Pass 2.
 
-### Split-chapter protocol (large chapters only)
-If the chapter genuinely cannot be completed at full quality in one session:
-1. Session 1 completes §6 in full for the ENTIRE chapter (the inventory file covers everything, including all figure extraction), then writes the script through a clean section boundary, ticks those rows, and saves script + inventory + assets in the chapter folder. It does NOT deliver a PDF.
-2. Session 2 opens the saved inventory and script, confirms which rows are ticked, writes the remaining sections into the SAME script, ticks the remaining rows, then runs §7 over the whole chapter and delivers the single merged PDF.
-3. The frozen inventory is the seam-guard: because it was completed for the whole chapter in session 1, nothing at the boundary can be double-covered or dropped.
+**Gate 1 (must be green before Pass 2 begins):**
+- Every fact has a Facts row and every in-figure label has a figure-label-matrix row.
+- Every figure in the manifest is marked `Mono: yes` and `Verified: yes`.
+- Every exercise-gap term has a planned home; every SUMMARY-UNIQUE fact has been folded into a body row.
+- The inventory file is saved to the chapter folder.
 
----
+### Pass 2 — Build on the hardened template + auto-lint
 
-## 7. Final Verification Pass (single pass, not a repair loop)
+Write the script **linearly from the frozen inventory**, in Content Order (§5), **importing `neet_template.py`** (§0.6) so no style is re-declared. As you write each block, tick its inventory rows off in the inventory file in the same pass — do not write freehand and reconcile later. Checking off while writing is what prevents an item being silently dropped between "I know this fact" and "I typed this fact." Comment every block with its `# ---- N.N ----` marker.
 
-If §6 was done properly, this pass exists to catch the rare slip — a fact ticked off but subtly mis-transcribed, a qualifier that drifted during the rewrite, a table cell typo — not to discover large gaps. Run it once, thoroughly, and expect it to come back clean.
-
-### Step 1 — Visual render check (do this before extracting text)
-Render **every page** — not page 1, not only the obviously heavy ones — to an image with `fitz` and look at each directly. Layout bugs (overflow, clipping, a table running off the page, a heading orphaned at the bottom, a process-flow rule that doesn't line up with its badges, a figure separated from its caption or squashed to the wrong aspect ratio) do not show up in extracted text, only in the rendered page. Confirm colors, banners, table shading, section-number badges, icons, box border styles, and figure rendering all match §4 while you're looking.
-
-Two checks specifically target the failure modes that slip past a page-1-only glance:
-1. **Cross-page style consistency.** Pull one rendered instance of each element type (H1, H2, H3, table, NOTE box, MEMORY AID box, process flow, figure box) from at least three different points in the chapter and compare them side by side. They must be visually *identical* — same grey, same padding, same font size, same border weight — not just "close." A style that was right on page 1 and drifted by page 8 is exactly what this check exists to catch, and it is invisible if you only ever render the first page.
-2. **Grayscale-only images, and no photographs.** For every embedded image, open it with `PIL` and confirm either `img.mode == "L"` or, if saved as RGB, that every sampled pixel has R==G==B. Any image carrying real color channels is an automatic fail — go back to §4.4 and re-run the conversion; do not eyeball it as "looks grey enough." Separately confirm no image anywhere in the PDF is a photograph of a person (§5 item 3) — conversion does not make a banned photo allowed.
-
-### Step 2 — Extract text
-```python
-import pdfplumber
-with pdfplumber.open("Output.pdf") as pdf:
-    text = "\n".join(p.extract_text() or "" for p in pdf.pages)
+Then **loop `render → lint` until the linter is green**:
+```bash
+python3 check_pdf.py "notes/class 12/Ch9_BiotechnologyPrinciplesAndProcesses"
+# or explicitly:
+python3 check_pdf.py --pdf <ChapterName>.pdf --inventory <ChapterName>_inventory.md --script <ChapterName>.py
 ```
+`check_pdf.py` auto-discovers the sibling PDF, inventory, and script by the §0.5 naming convention, and runs these checks (exit 0 = clean, 1 = at least one FAIL, 2 = setup error; `--strict` treats WARN as failure, `--json` emits a machine-readable report):
 
-### Step 3 — One thorough parallel cross-check against the frozen inventory
-Divide the chapter's sections into adjacent pairs and dispatch one subagent per pair, all in parallel via `Promise.all`. Each subagent does **one complete, full read** — not a keyword search — of its two assigned source sections and the matching script blocks, and checks every row of the frozen §6 inventory (loaded from the saved inventory FILE, not from memory) against what was actually written. Figure-manifest rows are checked too: correct asset referenced, caption number/text correct, placed at the right topic.
+1. **Footer/header band** — no text span inside the top/bottom 1.4 cm margin band. *[defect 1]*
+2. **Legibility floor** — no rendered text glyph below 5.0pt (FAIL); the 5.0–6.0pt band is WARN and reserved for legitimate subscripts. Because badge and step digits are real text spans, a badge that collapsed to ~3.4pt is caught here. *[defects 2, 3]*
+3. **Grayscale-only images** — every embedded image is single-channel GRAY, or sampled pixels are all R==G==B; any real color fails. *[§4.4]*
+4. **No person photograph** — a manifest row that looks like a portrait/photo must not be embedded (WARN + human confirmation). *[§5 item 3]*
+5. **Banned glyphs** — no Unicode arrows, sub/superscripts, Greek letters, or emoji in the text stream. *[§4 technical rules]*
+6. **Figure-label coverage** — every figure-label-matrix row is found in the PDF's extracted running text. *[defects 5, 6]*
+7. **Inventory ticked** — every Facts row is ticked. *[Pass 1 completion]*
+8. **Page geometry** — every page is A4 portrait.
 
-**If parallel subagents are unavailable in the current environment, perform the identical section-pair cross-check yourself, sequentially, one pair at a time, using the exact same classification rubric below. The rigor is in the rubric and the full-read discipline, not in the parallelism.**
+**Gate 2 (must be green before Pass 3 begins):** `check_pdf.py` exits 0 — no FAILs. A WARN (e.g. check 4's portrait row, or a subscript in the 5–6pt band) is allowed to advance only after you have eyeballed it and confirmed it is legitimate; treat `--strict` green as the ideal. Do not begin the human verification pass while the linter is red — the whole point of v6 is that Pass 3's budget is not spent rediscovering mechanical defects a script already gates.
 
-```js
-const sharedPreamble = `
-You are doing a single, decisive verification pass for a NEET Biology rewrite PDF —
-not the first of several. Read fully; do not rely on keyword search to decide FOUND vs MISSING.
+### Pass 3 — Dual verification & deliver
 
-FILES:
-- NCERT source: <path/to/source.pdf>
-  Extract: python3.11 -c "import pdfplumber; pdf=pdfplumber.open('<path>'); print('\\n'.join(p.extract_text() or '' for p in pdf.pages))"
-- Rewrite script: <ChapterName.py>
-- Frozen inventory file: <ChapterName_inventory.md> — use the rows for your assigned sections
+With mechanical defects gated out by Pass 2, Pass 3 is two focused checks a machine cannot make: cross-page visual consistency, and genuine content drift against the frozen inventory.
 
-YOUR JOB for your 2 assigned sections:
-1. Read the full source text for these sections, start to finish — not a search for isolated terms.
+**(a) Visual render check.** Render **every page** with `pymupdf` and look at each directly. Layout bugs (overflow, clipping, a table running off the page, an orphaned heading, a process-flow rule misaligned with its badges, a figure squashed to the wrong aspect ratio) show up only in the rendered page, not in extracted text. Additionally render each page at true print DPI + a B&W 1-bit threshold and confirm cross-page **style consistency**: pull one rendered instance of each element type (H1, H2, H3, table, NOTE, MEMORY AID, process flow, figure box) from at least three different points in the chapter and confirm they are visually *identical*. (Because styles are imported from `neet_template.py`, drift here should be rare — this check now confirms the template held, rather than hunting hand-typed drift.)
+
+**(b) Content cross-check against the frozen inventory.** Do one complete, full read — not a keyword search — of the source sections and the matching script blocks, checking every inventory row (loaded from the saved FILE, not memory). Classify each item:
+- **COVERED** — present and accurate in the script
+- **MISSING** — in the inventory/NCERT but absent from the script
+- **FABRICATED** — in the script but not in NCERT or the inventory
+- **DRIFTED** — present but the value/qualifier/direction/term is wrong (defect 4 was this class)
+
+Divide the chapter's sections into adjacent pairs and run one subagent per pair in parallel (`config: { $kind: "explore" }`) with the shared rubric below; **if parallel subagents are unavailable, do the identical section-pair cross-check yourself, sequentially — the rigor is in the rubric and the full-read discipline, not the parallelism.** Figure-label-matrix rows are cross-checked here too (correct asset, caption number/text correct, placed at the right topic), as a human backstop to `check_pdf.py` check 6.
+
+```
+For each of your 2 assigned sections:
+1. Read the full source text for these sections, start to finish — not a term search.
 2. Read the full corresponding script block(s), start to finish.
-3. For each inventory row, classify:
-   COVERED    — present and accurate in the script
-   MISSING    — in the inventory/NCERT but absent from the script
-   FABRICATED — in script but not in NCERT or the inventory
-   DRIFTED    — present but the value/qualifier/direction/term is wrong
-4. For each figure-manifest row in your sections: confirm the script references the
-   correct asset file, the asset is the converted monochrome file (not a raw extraction),
-   the caption keeps the NCERT figure number, every label on the figure also appears in
-   the text/tables, and the figure sits at the topic it illustrates. Classify the same way.
-5. Return:
-   SECTION: <n>
-   STATUS: CLEAN | ISSUES FOUND
-   COVERED: <count>
-   MISSING: <list>
-   FABRICATED: <list>
-   DRIFTED: <item — NCERT says X, script says Y>
-`;
-
-const [r1, r2, r3, r4, r5] = await Promise.all([
-  subagent({ name: "verify-s1-s2", task: sharedPreamble + "SECTIONS: 5.1 + 5.2 ...", config: { $kind: "explore" } }),
-  subagent({ name: "verify-s3-s4", task: sharedPreamble + "SECTIONS: 5.3 + 5.4 ...", config: { $kind: "explore" } }),
-  subagent({ name: "verify-s5-s6", task: sharedPreamble + "SECTIONS: 5.5 + 5.6 ...", config: { $kind: "explore" } }),
-  subagent({ name: "verify-s7-s8", task: sharedPreamble + "SECTIONS: 5.7 + 5.8 ...", config: { $kind: "explore" } }),
-  subagent({ name: "verify-s9-s10", task: sharedPreamble + "SECTIONS: 5.9 + 5.10 ...", config: { $kind: "explore" } }),
-]);
+3. Classify each inventory row COVERED / MISSING / FABRICATED / DRIFTED.
+4. For each figure-label row: confirm the label appears in the running text and the figure sits at its topic.
+5. Return: SECTION | STATUS (CLEAN | ISSUES FOUND) | COVERED count | MISSING list | FABRICATED list | DRIFTED (NCERT says X, script says Y)
 ```
-Adjust subagent count to the chapter's section count.
 
-### Step 4 — Confirm flags by full read, never by grep
-Keyword search is not a verdict — it's only a way to jump to a line number faster. A grep miss does not mean a fact is missing (it may be paraphrased, split across sentences, or reflowed oddly by `pdfplumber`'s table extraction), and a grep hit does not mean it's correctly stated. For every item a subagent flags:
-1. Open the exact source page/section and read the full surrounding paragraph yourself, not just the matched line.
-2. Open the exact script block and read the full surrounding block yourself.
-3. Only then decide CONFIRMED or FALSE POSITIVE. Never dismiss a flag on the strength of a search miss alone.
+**Confirm every flag by full read, never by grep.** A grep miss does not mean a fact is missing (it may be paraphrased or reflowed by `pdfplumber`); a grep hit does not mean it's correct. Open the source paragraph and the script block and read both before deciding CONFIRMED vs FALSE POSITIVE.
 
-### Step 5 — Fix and spot-verify (not a full restart)
-For each CONFIRMED item:
-1. Open the `.py` script; locate the block via its `# ---- N.N ----` comment.
-2. Edit only that block. Tag the change `# [VERIFICATION FIX]`.
-3. Regenerate the PDF.
-4. Re-verify **only the fixed block** — re-extract and re-read that section's text, and if it's a table/heading/figure page, re-render and re-check that one page visually. The rest of the chapter was already fully verified in Step 3 and nothing else changed, so a full re-run is not needed.
+**Fix confirmed items via their block markers.** Open the `.py`, locate the block via its `# ---- N.N ----` comment, edit only that block (tag `# [VERIFICATION FIX]`), regenerate the PDF, **re-run `check_pdf.py` (it must stay green)**, and re-verify only the fixed block. The rest was already verified and nothing else changed.
 
-If Step 3 comes back with more than a handful of small, scattered issues (rather than none, or one or two isolated slips), treat that as a signal the §6 inventory itself was incomplete — go back and redo the relevant part of §6 properly, rather than patching the script piecemeal against a shaky checklist.
-
-### Step 6 — Deliver
-Once every confirmed item from Step 5 is fixed and spot-verified, deliver the full chapter folder (§0.5):
-- The PDF.
-- The `.py` script that generated it, saved as an actual file (not just shown as a code block).
-- The frozen inventory file, with every row ticked.
-- The `assets/` folder with every verified monochrome figure.
+**Gate 3 (deliver):** zero confirmed defects remain AND `check_pdf.py` is still green. Then deliver the full chapter folder (§0.5): the PDF, the `.py` script (saved as a file, not pasted in chat), the inventory with every row ticked, and `assets/` with every verified monochrome figure. If Pass 3 surfaces more than a handful of small scattered issues, treat that as a signal Pass 1 was incomplete — redo the relevant part of Pass 1 rather than patching piecemeal against a shaky checklist.
 
 Along with the files, include:
-- A **section-wise coverage confirmation** (e.g. "14.1 Breathing Mechanism — 12/12 body facts covered, 2/2 summary-unique facts covered, 3/3 figures embedded, 3/3 verified monochrome")
-- A short **Coverage note** with these fixed headings so the audit prompt can consume it mechanically:
+- A **section-wise coverage confirmation** (e.g. "14.1 — 12/12 body facts, 2/2 summary-unique, 3/3 figures embedded + verified mono, all figure labels in text").
+- A short **Coverage note** with these fixed headings so an audit prompt can consume it mechanically:
   - **Compression decisions** — what was merged/reformatted and why it's safe
   - **Exercise-gap terms** — confirmation every exercise-assumed term is covered
-  - **Drift caught and fixed** — anything §7 found
-  - **Figures requiring manual attention** — figures that failed extraction, monochrome conversion, or verification, with reasons (write "None" if empty)
+  - **Drift caught and fixed** — anything Pass 3 found
+  - **Figures requiring manual attention** — figures that failed extraction/conversion/verification (write "None" if empty)
   - **Color-dependent figures** — figures whose meaning relied on color, and where that distinction is now stated in words (write "None" if empty)
-  - **Source problems** — any part of the source flagged as garbled or unrecoverable (write "None" if empty)
+  - **Source problems** — any part of the source flagged as garbled/unrecoverable (write "None" if empty)
+  - **Linter verdict** — the final `check_pdf.py` summary (fail/warn counts), with any accepted WARN justified
+
+### Big-chapter protocol — 5 passes
+
+If the chapter genuinely cannot be completed at full quality in one session, split into 5 passes matching the halves, `1a → 1b → 2a → 2b → 3`:
+1. **Pass 1a / 1b** — inventory the first half, then the second half, into the SAME inventory file. Gate 1 is evaluated over the whole chapter only after 1b, so the frozen inventory is complete and nothing at the seam is double-covered or dropped. All figure extraction/conversion/verification and the full figure-label matrix are completed across 1a+1b before Gate 1.
+2. **Pass 2a / 2b** — build the first half into the script, then the second half into the SAME script, ticking rows as you go. Run `check_pdf.py` after 2b (a mid-build run after 2a is useful but Gate 2 is judged on the whole PDF after 2b).
+3. **Pass 3** — a single whole-chapter verification, exactly as the normal Pass 3, over the merged PDF.
+
+The deliverable is still **one merged PDF, one script, one inventory** — never two part-PDFs. The frozen whole-chapter inventory is the seam-guard.
 
 ---
 
 ## What I'll send you
-One NCERT Biology chapter PDF at a time. If a chapter is long, completeness beats brevity — use the split-chapter protocol (§6) and deliver one merged PDF, rather than quietly cutting content to fit. Don't ask permission to apply the rules above; just apply them.
+One NCERT Biology chapter PDF at a time. If a chapter is long, completeness beats brevity — use the 5-pass big-chapter protocol and deliver one merged PDF, rather than quietly cutting content to fit. Don't ask permission to apply the rules above; just apply them.
 
 ## What you'll send back
-Always the full chapter folder per §0.5: `<ChapterName>.pdf`, `<ChapterName>.py`, `<ChapterName>_inventory.md`, and `assets/` — all actually saved and delivered, never the PDF alone, and never the script only pasted inline in chat. If I come back later with an adversary-audit error list, the expected fix is: open that same `.py` file, edit the flagged block (found via its section-number comment), rerun it, and hand back the regenerated PDF + the updated script — not a rewrite from scratch.
+Always the full chapter folder per §0.5: `<ChapterName>.pdf`, `<ChapterName>.py`, `<ChapterName>_inventory.md` (with the figure-label matrix), and `assets/` — all actually saved and delivered, never the PDF alone, and never the script only pasted inline in chat. The chapter script imports the repo-level `neet_template.py`, and Gate 2 was cleared by the repo-level `check_pdf.py`. If I come back later with an adversary-audit error list, the expected fix is: open that same `.py` file, edit the flagged block (found via its `# ---- N.N ----` comment), rerun it, re-run `check_pdf.py` to confirm the gate is still green, and hand back the regenerated PDF + updated script — not a rewrite from scratch.
