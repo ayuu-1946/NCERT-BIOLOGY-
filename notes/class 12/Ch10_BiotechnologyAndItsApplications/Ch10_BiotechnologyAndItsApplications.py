@@ -247,12 +247,20 @@ story.append(note(
     "The toxins are coded by a <b>gene family called <i>cry</i></b>; there are a number of them, "
     "and <b>cryIAc</b> is one member. (The NCERT line 'the toxin is coded by a gene cryIAc named "
     "cry' compresses this family / member relationship.)"))
+# [VERIFICATION FIX - Pass 3(b)] The caption credited colour with separating (a) from (b),
+# but dark-vs-white is tonal and survives the mono conversion untouched. The one feature in
+# this figure that genuinely relied on colour -- the green, still-closed centre boll, which
+# NCERT leaves unlabelled -- was not named at all, so in monochrome a reader sees three
+# bolls and has words for only two. Both corrected here (inventory "Colour-dependent
+# figures", Fig 10.1 row).
 story.append(figure(
     "fig_10_1.png",
     "Fig. 10.1 -- Cotton boll: (a) a <b>cotton boll destroyed by bollworms</b> (dark, dried and "
     "shrivelled on the left); (b) a <b>fully mature cotton boll</b> (the open white boll on the "
-    "right). In the source photograph colour separated the two: the destroyed boll is dark, the "
-    "mature boll white."))
+    "right). The (a) / (b) contrast is one of <b>tone, not colour</b> -- dark versus white -- so "
+    "it survives this monochrome reproduction exactly as printed. The <b>centre boll</b>, green "
+    "and still closed in the source photograph and mid-grey here, is an unopened boll that NCERT "
+    "does not label."))
 story.append(Spacer(1, 4))
 
 # ---- 10.1 Pest-resistant plants via RNAi (F055-F065) + Figure 10.2 ----
@@ -282,13 +290,19 @@ story.append(process_flow([
     "The parasite <b>could not survive</b> in a transgenic host expressing specific interfering "
     "RNA, so the <b>transgenic plant protected itself</b> from the parasite.",
 ]))
+# [VERIFICATION FIX - Pass 3(b)] The caption called the galls "the colour-highlighted
+# feature". They are not: both root systems are the same yellow-tan in the source, and the
+# galls are picked out by white arrows and by their swollen shape -- cues that survive
+# monochrome intact. Restated per the inventory "Colour-dependent figures" Fig 10.2 row.
 story.append(figure(
     "fig_10_2.png",
     "Fig. 10.2 -- Host plant-generated dsRNA triggers protection against nematode infestation: "
-    "(a) <b>Roots of a typical control plant</b>, where the arrows mark nematode-induced galls; "
-    "(b) <b>transgenic plant roots 5 days after deliberate infection of nematode but protected "
-    "through the novel mechanism</b> -- the galls are absent. In the source, the galls on the "
-    "control roots were the colour-highlighted feature."))
+    "(a) <b>Roots of a typical control plant</b>, where the <b>white arrows</b> mark the swollen "
+    "nematode-induced galls; (b) <b>transgenic plant roots 5 days after deliberate infection of "
+    "nematode but protected through the novel mechanism</b> -- the arrows here point to thin, "
+    "healthy roots and no galls have formed. Both root systems are the same colour in the "
+    "source: the galls are identified by the <b>arrows and their swelling</b>, so nothing is lost "
+    "in monochrome."))
 story.append(Spacer(1, 4))
 
 # =============================== 10.2 MEDICINE ======================================
@@ -342,12 +356,22 @@ story.append(process_flow([
     "<b>human insulin</b> -- whose structure is <b>absolutely identical</b> to that of the "
     "natural molecule.",
 ]))
+# [VERIFICATION FIX - Pass 3(b)] This is the chapter's one truly colour-dependent figure:
+# the source draws the A chain in blue and the B chain in green, and those two hues convert
+# to near-identical greys, while the floating "A peptide" / "B peptide" labels do not touch
+# their chains. The caption named both peptides but never said which drawn chain is which,
+# so in monochrome A and B were indistinguishable. Position and shape now carry it in words
+# (inventory "Colour-dependent figures", Fig 10.3 row).
 story.append(figure(
     "fig_10_3.png",
     "Fig. 10.3 -- Maturation of pro-insulin into insulin (simplified). <b>Proinsulin</b> (the "
     "looped precursor at the top, held by <b>S-S disulphide bridges</b>) is processed by "
     "removing the connecting arc, yielding mature <b>Insulin</b> -- the joined <b>A peptide</b> "
-    "and <b>B peptide</b> -- plus the discarded <b>Free C peptide</b>.",
+    "and <b>B peptide</b> -- plus the discarded <b>Free C peptide</b>. Reading the lower half: "
+    "the <b>upper wavy chain is the A peptide</b>, the <b>lower straight chain is the B "
+    "peptide</b>, and the <b>free arc below is the C peptide</b> removed on maturation. (The "
+    "source distinguished the A and B chains by colour alone, which is why they are named here "
+    "by position and shape.)",
     max_width_cm=9.5))
 story.append(Spacer(1, 4))
 
@@ -570,6 +594,19 @@ story.append(Paragraph(
     "is closed below <b>using only facts from this chapter</b>.", STYLES["Body"]))
 story.append(data_table([
     ["Exercise term / task", "Explanation from this chapter"],
+    # [VERIFICATION FIX - Pass 3(b)] The frozen inventory's exercise-gap table promised the
+    # appendix would "cross-link" the advantages and disadvantages of GM crops for Q6, but no
+    # such row was ever written. The facts are all in the body, just never assembled as the
+    # two-sided comparison the question asks for; gathered here, chapter facts only.
+    ["<b>Advantages vs disadvantages of GM crops</b> (Q6)",
+     "<b>Advantages</b> (10.1): tolerance to <b>cold, drought, salt and heat</b>; reduced "
+     "reliance on <b>chemical pesticides</b>; less <b>post-harvest loss</b>; more efficient "
+     "<b>mineral use</b>, sparing soil fertility; better <b>nutrition</b> (golden rice); plus "
+     "tailor-made <b>starches, fuels and pharmaceuticals</b>. <b>Disadvantages</b> (10.4): "
+     "genetic modification can have <b>unpredictable results when such organisms are introduced "
+     "into the ecosystem</b>, which is why <b>GEAC</b> clearance is required; and the "
+     "<b>patenting</b> of GM and bio-resource material raises <b>biopiracy</b> problems, since a "
+     "patent extending to <b>functional equivalents</b> can restrict others (the Basmati case)."],
     ["<b>Transgenic bacteria</b> (Q5)",
      "The chapter defines transgenic <i>animals</i>; by the same idea, a <b>transgenic "
      "bacterium</b> is a bacterium carrying an introduced <b>foreign gene</b>. Example: the "
