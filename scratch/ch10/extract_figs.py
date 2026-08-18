@@ -4,6 +4,15 @@ true monochrome (convert("L") + autocontrast). Only converted files reach assets
 Fig 10.1 note: the source photograph includes the fingers of a hand holding the cotton
 bolls. §4.4's hard no ("no photograph of a person, ever") is honoured by clipping the
 frame above the fingers, keeping both bolls and the (a)/(b) labels intact.
+
+[VERIFICATION FIX - Pass 3(a)] The NCERT source pages carry two full-bleed overlay
+rasters: a 2480x3508 page background and a 1894x1894 diagonal "Reprinted" watermark.
+Clip-rendering the COMPOSITED page baked that watermark into every extracted figure --
+in Fig 10.1 it ran straight across the mature white boll, i.e. across the very feature
+the (b) label points at. Both overlays are now deleted from an in-memory copy of the
+page before the clip is rendered, so the figure is clean while the vector (a)/(b)
+labels, which are page text and not part of the photo, still survive. The source PDF on
+disk is never modified (§0.5).
 """
 import os
 import pymupdf
@@ -29,6 +38,26 @@ JOBS = [
 # trim fraction taken off the bottom of the rendered clip (removes the hand in 10.1)
 BOTTOM_TRIM = {"fig_10_1.png": 0.26}
 
+# [VERIFICATION FIX] native pixel dims of the two full-bleed overlays that must be
+# suppressed before rendering: the page background and the diagonal "Reprinted" mark.
+OVERLAY_DIMS = {(2480, 3508), (1894, 1894)}
+
+
+def strip_overlays(page):
+    """Delete the page-background and watermark rasters so a clip render is clean.
+
+    Matched on native pixel dimensions rather than placed rectangle: the watermark is
+    placed at only 462pt tall, so a "taller than 600pt" geometric guard silently misses
+    it -- which is exactly how the watermark reached the delivered figures.
+    """
+    removed = []
+    for img in page.get_images(full=True):
+        xref, width, height = img[0], img[2], img[3]
+        if (width, height) in OVERLAY_DIMS:
+            page.delete_image(xref)
+            removed.append((xref, width, height))
+    return removed
+
 
 def image_bbox(page):
     """Largest content image block on the page (excludes the tiny decorative bands)."""
@@ -51,6 +80,12 @@ for pno, name, clip, anchor in JOBS:
     rect = pymupdf.Rect(clip) if clip else image_bbox(page)
     if rect is None:
         raise RuntimeError(f"NO FIGURE REGION FOUND for {name} on page {pno}")
+    stripped = strip_overlays(page)          # [VERIFICATION FIX] before any render
+    if not stripped:
+        raise RuntimeError(
+            f"{name}: expected to strip the page background + watermark overlays on "
+            f"page {pno} but found none -- refusing to render a possibly watermarked clip"
+        )
     pix = page.get_pixmap(clip=rect, dpi=300)
     raw_path = os.path.join(RAW, name)
     pix.save(raw_path)
@@ -69,4 +104,5 @@ for pno, name, clip, anchor in JOBS:
     mono.save(os.path.join(OUT, name))
     print(f"{name}: page {pno} clip {tuple(round(v,1) for v in rect)} "
           f"raw {rgb.size} -> mono {mono.size} mode {mono.mode} "
-          f"| source colour pixels: {colourful}")
+          f"| source colour pixels: {colourful} "
+          f"| overlays stripped: {[x for x, _, _ in stripped]}")

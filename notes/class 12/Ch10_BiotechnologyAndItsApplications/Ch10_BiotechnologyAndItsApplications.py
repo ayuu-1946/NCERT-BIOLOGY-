@@ -235,11 +235,14 @@ story.append(Paragraph(
     "into several crop plants such as <b>cotton</b> (Figure 10.1). The <b>choice of genes "
     "depends upon the crop and the targeted pest</b>, as most Bt toxins are "
     "<b>insect-group specific</b>.", STYLES["Body"]))
-story.append(data_table([
+# [VERIFICATION FIX - Pass 3(a)] This two-row table straddled the page 2 / page 3 break,
+# so one cry gene sat under a repeated header on a page of its own. A table this short
+# must never split: KeepTogether holds the header and both data rows on one page.
+story.append(KeepTogether(data_table([
     ["<b>cry</b> gene", "Pest it controls"],
     ["<b>cryIAc</b> and <b>cryIIAb</b>", "Control the <b>cotton bollworms</b>."],
     ["<b>cryIAb</b>", "Controls the <b>corn borer</b>."],
-], col_widths=[1.6, 4.0]))
+], col_widths=[1.6, 4.0])))
 story.append(note(
     "The toxins are coded by a <b>gene family called <i>cry</i></b>; there are a number of them, "
     "and <b>cryIAc</b> is one member. (The NCERT line 'the toxin is coded by a gene cryIAc named "
