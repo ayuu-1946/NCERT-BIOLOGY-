@@ -8,6 +8,17 @@ ever allowed near the PDF.
 Bounding boxes are in PDF points on the source page (page rect 576 x 784.8) and
 were derived from the rendered pages plus the "Figure 8.N" caption anchors, so
 each clip stops above its caption and never grabs a neighbouring figure/table.
+
+OVERLAY RULE (Pass 1b defect fix — same defect class as Ch10 Pass 3(a)): every
+source page carries two full-page raster overlays, a 2480x3508 page background
+and a 1894x1894 diagonal "(c) NCERT / to be republished" watermark. Because this
+extractor clip-renders the *composited* page, both were being baked into every
+asset — on Fig 8.4 the watermark ran straight across the bilayer the figure
+exists to show. They are matched on NATIVE PIXEL DIMENSIONS (not on the placed
+rectangle, which is what let a 466pt-tall watermark slip past a ">600pt tall"
+guard in Ch10) and deleted from an in-memory copy of the page before rendering.
+If a page does not yield both overlays the run RAISES rather than silently
+shipping a watermarked figure. The source PDF is never modified.
 """
 
 import os
@@ -38,12 +49,44 @@ FIGS = {
 }
 
 
+# Native pixel dimensions of the two full-page overlays present on every page.
+OVERLAY_DIMS = {
+    (2480, 3508),   # page background / decorative bands
+    (1894, 1894),   # diagonal "(c) NCERT ... to be republished" watermark
+}
+
+
+def strip_overlays(doc: pymupdf.Document, pno: int) -> pymupdf.Document:
+    """Return a 1-page in-memory document holding page `pno` with both full-page
+    overlays deleted. Raises if the expected overlays are not all found, so a
+    watermarked figure can never reach the assets folder unnoticed."""
+    work = pymupdf.open()
+    work.insert_pdf(doc, from_page=pno, to_page=pno)
+    page = work[0]
+    removed = set()
+    for info in page.get_images(full=True):
+        xref = info[0]
+        meta = work.extract_image(xref)
+        dim = (meta["width"], meta["height"])
+        if dim in OVERLAY_DIMS:
+            page.delete_image(xref)
+            removed.add(dim)
+    missing = OVERLAY_DIMS - removed
+    if missing:
+        raise RuntimeError(
+            f"page {pno}: expected full-page overlays {sorted(missing)} were not found — "
+            f"the overlay signature changed, so figures may carry the NCERT watermark. "
+            f"Re-derive OVERLAY_DIMS before trusting any asset.")
+    return work
+
+
 def main() -> int:
     os.makedirs(OUT, exist_ok=True)
     os.makedirs(RAW, exist_ok=True)
     doc = pymupdf.open(SRC)
     for name, (pno, x0, y0, x1, y1) in FIGS.items():
-        page = doc[pno]
+        work = strip_overlays(doc, pno)
+        page = work[0]
         clip = pymupdf.Rect(x0, y0, x1, y1)
         pix = page.get_pixmap(clip=clip, dpi=300)
         raw_path = os.path.join(RAW, name + ".png")
@@ -58,6 +101,7 @@ def main() -> int:
 
         with PILImage.open(out_path) as chk:
             print(f"{name}: page {pno} {pix.width}x{pix.height} mode={chk.mode}")
+        work.close()
     return 0
 
 
