@@ -186,3 +186,27 @@ Non-figure source images, deliberately NOT embedded:
 - 3 SUMMARY-UNIQUE facts (F115, F116, F117) folded into named body sections before the Quick Recap was written.
 - 3 exercise-gap items (Q2, Q4, Q8) have a planned home in the "Terms used in the exercises" appendix.
 - Inventory file saved to the chapter folder. **Gate 1: GREEN.**
+
+## Gate 3 record (Pass 3 — dual verification, 2026-08-19)
+
+**Pass 3(a) — Visual render check.** All 7 pages rendered at 150 dpi and inspected directly. Cross-page style identity confirmed — every H1/H2/H3 banner, `data_table` (Ernst Mayr, ICBN/ICZN codes, nomenclature rules, Family, rank hierarchy, Table 1.1), `process_flow` (two-question flow p.1; four-processes flow p.3), NOTE boxes (solid double-rule + `!`), MEMORY AID box (dashed border + star), and the Fig 1.1 bordered figure box render identically wherever they appear (the frozen `neet_template.py` held). **One layout defect found and fixed:** the `Table 1.1` banner heading was appended outside its table's `KeepTogether`, so it stranded alone at the bottom of page 5 while the table flowed to page 6. Fixed by moving `heading("Table 1.1", ...)` inside the same `KeepTogether` (marked `# [VERIFICATION FIX]`); banner + intro + 4 rows + reading NOTE now travel together to page 6.
+
+**Pass 3(b) — Content cross-check against the frozen inventory.** Full read of the source (9 pages) against the matching script blocks, all 121 rows, loaded from the saved inventory file (not memory):
+- **121/121 COVERED · 0 MISSING · 0 FABRICATED · 0 DRIFTED.**
+- Every number/date verified verbatim: 1.7-1.8 million species (F033); insects' three pairs of jointed legs (F069); Mayr born 5 July 1904 Kempten (F013), joined Harvard 1953 / retired 1975 (F016), Balzan 1983 / Int'l Prize for Biology 1994 / Crafoord 1999 (F021), died age 100 in 2004 (F022).
+- Figure-label matrix: Fig 1.1's 7 labels (Kingdom, Phylum or Division, Class, Order, Family, Genus, Species) all present in the rank table + running text; `check_pdf.py` check 6 reports 14/14. Figure sits inline at its topic (1.2.7) with the exact NCERT caption (spelling "hierarchial" preserved, F108).
+- No fabricated facts: the rank-table "Chapter example" column draws only on chapter-named taxa (Insecta, Angiospermae from Table 1.1; Primata/Carnivora/Polymoniales/Felidae/Canidae/Solanaceae/Panthera/Solanum from 1.2.x). The mnemonic is explicitly `[MEMORY AID - not in NCERT]`; the appendix answers are assembled only from stated chapter facts.
+- Exercise answer keys re-verified against source options: Q5 -> *Mangifera indica*; Q7 -> option (c) Species-Genus-Order-Phylum; Q6 taxon definition + examples.
+
+**Section-wise coverage:** Unit intro 12/12 · Profile 10/10 (text-only, no photo) · 1.0 5/5 · 1.1 38/38 · 1.2 9/9 · 1.2.1-1.2.7 32/32 · Fig 1.1 embedded + verified mono, 7/7 labels in text · Table 1.1 5/5 rows/title · Summary 7/7 (3 SUMMARY-UNIQUE folded).
+
+**Coverage note.**
+- **Compression decisions** — NCERT prose merged/reordered into keyterm bullets, code/rule/hierarchy tables and two process flows; no fact dropped. The taxonomic hierarchy is a rank `data_table` (nested ranks), not a `process_flow` (which would falsely imply a step-by-step procedure).
+- **Exercise-gap terms** — Q2, Q4, Q8 covered in the appendix strictly from chapter facts; Q8's bacterial-species criterion is stated as out-of-scope (not invented), per Rule 5.
+- **Drift caught and fixed** — content: none this pass (0 DRIFTED). Layout: the Table 1.1 orphan-banner split, fixed as above.
+- **Figures requiring manual attention** — None.
+- **Color-dependent figures** — None. Fig 1.1 is a monochrome hierarchy diagram; no color-encoded meaning; legible at 1-bit B&W.
+- **Source problems** — None unrecoverable.
+- **Linter verdict** — `check_pdf.py` VERDICT WARN, **0 fail / 1 warn, exit 0**. Checks 1,2,3,5,6,7,8 PASS. The single WARN is check 4's photo-keyword heuristic firing on the 10 Ernst Mayr rows whose `Type` column literally reads "Profile"; independently confirmed only 1 image is embedded (Fig 1.1, gray) and the Mayr block is text-only. Accepted, not suppressed.
+
+**Gate 3: GREEN — zero confirmed defects, `check_pdf.py` green. Chapter delivered.**

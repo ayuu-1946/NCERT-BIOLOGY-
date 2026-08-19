@@ -19,16 +19,16 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 
 | # | Chapter | Class | Gate 1 (inventory) | Gate 2 (`check_pdf.py`) | Gate 3 (defects) | Deliverables | Overall |
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
-| 1 | The Living World | 11 | ✅ 121 facts frozen · 14/14 labels · 3 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 7 pp · 1 mono img | ⬜ not started | ✅ pdf · py · inventory · assets | **▶️ PASS 2 COMPLETE — Gate 2 green, Pass 3 pending** |
+| 1 | The Living World | 11 | ✅ 121 facts frozen · 14/14 labels · 3 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 7 pp · 1 mono img | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 
 ---
 
-## Chapter 1 — The Living World — ▶️ PASS 2 COMPLETE (Gate 3 pending)
+## Chapter 1 — The Living World — ✅ FULLY COMPLETE (CLOSED)
 
-Verified through Gate 2 under the supreme command prompt v6 on 2026-08-19. Resumed mid-workflow after a prior run stopped on credit limit immediately after "Task 0 of 5 complete"; Gate 1 was independently re-verified against current files (not trusted from prior-run prose) before Pass 2 began.
+Verified closed under the supreme command prompt v6 on 2026-08-19. Resumed mid-workflow after a prior run stopped on credit limit immediately after "Task 0 of 5 complete"; Gate 1 was independently re-verified against current files (not trusted from prior-run prose) before Pass 2 began. Pass 3 (dual verification) run to Gate 3 closure in this cycle.
 
 | Workflow stage | Evidence |
 |----------------|----------|
@@ -40,7 +40,7 @@ Verified through Gate 2 under the supreme command prompt v6 on 2026-08-19. Resum
 | **False positives correctly rejected** | Check 6's apparent "2 missing labels" traced to `_extract_labels` mis-parsing the Figure-label matrix's own markdown header row as data; fixed by rewording only the column caption (no fact/label/tick touched). The "two implicit questions" `process_flow` at 1.1 was left as-is — the source itself says "the first… the second", so numbering is source-grounded. |
 | **Colour-dependent figures** | Fig 1.1 is a monochrome hierarchy diagram with no colour-encoded meaning; verified legible at 1-bit B&W threshold render. |
 | **Deliverables** | `Ch1_TheLivingWorld.pdf` · `.py` · `_inventory.md` (with figure-label matrix) · `assets/fig_1_1.png`. |
-| **Next gate** | Pass 3(a) cross-page style/visual defect sweep + Pass 3(b) fresh full-read source cross-check of all 121 rows → Gate 3 closure. |
+| **Pass 3 / Gate 3** | **Zero confirmed defects.** Pass 3(a): all 7 pages rendered + inspected; cross-page style identity confirmed (template held). **One layout defect found and fixed** — the `Table 1.1` banner was orphaned at the bottom of page 5, split from its table; fixed by folding `heading("Table 1.1", …)` into the table's `KeepTogether` (`# [VERIFICATION FIX]`). Pass 3(b): full-read cross-check of all 121 rows against source → **121/121 COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED**; every number/date verbatim; Fig 1.1's 7 labels all in text. `check_pdf.py` re-run after the fix: still **0 fail / 1 benign warn, exit 0**, 7 pp. |
 
 ---
 
@@ -56,7 +56,7 @@ Big-chapter 5-pass protocol (`1a → 1b → [Gate 1] → 2a → 2b → [Gate 2] 
 | **Pass 3 / Gate 3** | **Zero confirmed defects.** Pass 3(a): all 18 pages rendered actual-size + print-DPI B&W 1-bit, zero layout defects, cross-page style identity confirmed (template held). Pass 3(b): fresh source re-extraction full-read against all 325 rows → **325/325 COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED**; every qualifier, number and µm value preserved verbatim. Historical page-16 Fig 8.13 "overlap" re-confirmed as a false positive on the fresh render. No `# [VERIFICATION FIX]` edit needed. |
 | **Colour-dependent figures** | Fig 8.4 (fluid mosaic) and Fig 8.10(b) (cilia/flagella): each caption restates every part by position/shape/geometry so the distinction survives monochrome. |
 | **Source problems** | Micron glyph rendered `mm` by pdfplumber (re-read from render as µm); "endoplasmic reticulun" typo; body-vs-summary plastid-location contradiction (body kept, flagged); "Central microtuble" label typo (preserved verbatim). All handled, none unrecoverable. |
-| **Deliverables** | `Ch8_CellTheUnitOfLife.pdf` · `.py` · `_inventory.md` (with figure-label matrix + Gate 3 closure + Coverage note) · `assets/` (14 mono PNGs). |
+| **Deliverables** | `Ch8_CellTheUnitOfLife.pdf` �� `.py` · `_inventory.md` (with figure-label matrix + Gate 3 closure + Coverage note) · `assets/` (14 mono PNGs). |
 
 ---
 
