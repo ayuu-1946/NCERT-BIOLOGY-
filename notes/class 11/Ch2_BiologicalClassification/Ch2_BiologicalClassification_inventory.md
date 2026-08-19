@@ -1,9 +1,12 @@
 # Frozen Inventory — Biological Classification (Class 11, Chapter 2)
-Source: Chapter/class 11/Chapter 02 - Biological Classification.pdf | Frozen: 2026-08-19 | Rows: 176
+Source: `Chapter/class 11/Chapter 02 - Biological Classification.pdf` (13 pages) | Frozen: 2026-08-19 | Rows: 184 facts + 6 figure-label rows
+
+Workflow: v6 normal chapter, 3 gated passes (`Pass 1 → [Gate 1] → Pass 2 → [Gate 2] → Pass 3 → [Gate 3]`).
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 
 ## Facts
+
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
 | F001 | 2.0 | Fact | "Since the dawn of civilisation, there have been many attempts to classify living organisms." | x |
@@ -188,9 +191,12 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F180 | 2.6 | Fact | "Algae prepare food for fungi and fungi provide shelter and absorb mineral nutrients and water for its partner." | x |
 | F181 | 2.6 | Fact | "So close is their association that if one saw a lichen in nature one would never imagine that they had two different organisms within them." | x |
 | F182 | 2.6 | Fact | "Lichens are very good pollution indicators - they do not grow in polluted areas." | x |
+| F183 | 2.1 (summary-unique) | Fact + qualifier | "Bacteria are cosmopolitan in distribution." (Summary only. The body states "Bacteria occur almost everywhere" and applies the word "cosmopolitan" to fungi, never to bacteria - so this exact term is SUMMARY-UNIQUE and is folded into the Monera body section.) | x |
+| F184 | 2.3 (summary-unique) | Fact + qualifier | "Most fungi are saprophytic in their mode of nutrition." (Summary only. The body states "Most fungi are heterotrophic and absorb soluble organic matter from dead substrates and hence are called saprophytes" - the summary's direct "most fungi are saprophytic" claim is folded into the Fungi body section.) | x |
 
 ## Figure-label matrix
-| ID | Fig # | Type | Figure labels (one row per figure; every in-figure label listed) | Ticked |
+
+| ID | Fig # | Type | In-figure labels, one row per figure, every label listed | Ticked |
 |----|-------|------|------------------------------------------------------------------|--------|
 | L01 | Fig 2.1 | Labels | Figure labels: "Cocci"; "Bacilli"; "Spirilla"; "Vibrio"; "Spore"; "Flagellum" | x |
 | L02 | Fig 2.2 | Labels | Figure labels: "Heterocyst"; "Mucilagenous sheath"; "Nostoc" | x |
@@ -206,15 +212,17 @@ Tick legend: `x` = written into the script and verified present in the generated
 | Linnaeus classified all living organisms into two kingdoms - Plantae and Animalia. | BODY-PRESENT | F006 |
 | Whittaker proposed a five kingdom classification - Monera, Protista, Fungi, Plantae and Animalia. | BODY-PRESENT | F013-F014 |
 | Main criteria: cell structure, body organisation, mode of nutrition and reproduction, phylogenetic relationships. | BODY-PRESENT | F015 |
-| Bacteria included in Kingdom Monera; cosmopolitan in distribution. | BODY-PRESENT | F033, F035 |
+| Bacteria included in Kingdom Monera. | BODY-PRESENT | F033 |
+| "Bacteria are cosmopolitan in distribution." | SUMMARY-UNIQUE | 2.1 body as F183 (body says only "occur almost everywhere"; "cosmopolitan" is used for fungi, not bacteria) |
 | Bacteria show the most extensive metabolic diversity; may be autotrophic or heterotrophic. | BODY-PRESENT | F040-F042 |
 | Kingdom Protista includes single-celled eukaryotes: Chrysophytes, Dinoflagellates, Euglenoids, Slime-moulds, Protozoans. | BODY-PRESENT | F063, F065 |
 | Protists have defined nucleus and membrane-bound organelles; reproduce asexually and sexually. | BODY-PRESENT | F067-F068 |
-| Fungi show great diversity; most saprophytic; asexual and sexual reproduction; four classes Phycomycetes, Ascomycetes, Basidiomycetes, Deuteromycetes. | BODY-PRESENT | F099, F111, F114-F115, F125/130/136/143 |
+| Fungi show great diversity in structures and habitat; asexual and sexual reproduction; four classes Phycomycetes, Ascomycetes, Basidiomycetes, Deuteromycetes. | BODY-PRESENT | F099, F114-F115, F125/130/136/143 |
+| "Most fungi are saprophytic in their mode of nutrition." | SUMMARY-UNIQUE | 2.3 body as F184 (body says "Most fungi are heterotrophic ... hence are called saprophytes"; the direct claim is stated only in the summary) |
 | Plantae includes all eukaryotic chlorophyll-containing organisms; algae, bryophytes, pteridophytes, gymnosperms, angiosperms; alternation of generations. | BODY-PRESENT | F150, F154-F157 |
 | Animalia: heterotrophic eukaryotic multicellular lacking cell wall; mode of nutrition holozoic. | BODY-PRESENT | F158, F160 |
 
-No SUMMARY-UNIQUE facts: every summary statement is explicitly present in the chapter body.
+2 SUMMARY-UNIQUE facts found by the mandatory two-pass check (Rule 3) and folded into body rows before the Quick Recap was written: F183 ("Bacteria are cosmopolitan in distribution", 2.1) and F184 ("Most fungi are saprophytic in their mode of nutrition", 2.3). All other summary statements are explicitly present in the chapter body.
 
 ## Exercise-gap terms
 | Term/fact assumed by exercises | Explained where |
