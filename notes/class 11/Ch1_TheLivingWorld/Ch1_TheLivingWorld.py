@@ -412,11 +412,12 @@ story.append(memory_aid("Ascending order <b>Species to Kingdom</b>: <b>S</b>ome 
                         "<b>P</b>hylum, <b>K</b>ingdom. Read it backwards for descending order."))
 
 # ---- Table 1.1 ----
-story.append(heading("Table 1.1", "Organisms with their Taxonomic Categories", level=2))
-# [VERIFICATION FIX] Intro line, all four data rows and the reading NOTE are
-# wrapped in KeepTogether so Table 1.1 is never split with a single orphan row
-# stranded at a page break (F107, F110-F114).
+# [VERIFICATION FIX] The banner heading is now inside the same KeepTogether as its
+# intro line, four data rows and reading NOTE, so the banner can never be stranded
+# alone at the bottom of a page while the table flows to the next (Pass 3 layout fix;
+# F107, F110-F114).
 story.append(KeepTogether([
+    heading("Table 1.1", "Organisms with their Taxonomic Categories", level=2),
     body("Table 1.1 indicates the taxonomic categories to which some common organisms "
          "like <b>housefly, man, mango and wheat</b> belong."),
     data_table([
