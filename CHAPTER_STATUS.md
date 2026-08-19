@@ -20,7 +20,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | # | Chapter | Class | Gate 1 (inventory) | Gate 2 (`check_pdf.py`) | Gate 3 (defects) | Deliverables | Overall |
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
-| 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ PASS (0 fail, 0 warn) · 13 pp · 7 mono imgs | ⚠️ Gate 2 green, no v6 Gate 3 closure record | ✅ pdf · py · inventory · assets | ⚠️ Gate 2 clean; Gate 3 not re-verified |
+| 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 
 ---
@@ -57,12 +57,16 @@ Verified closed under the supreme command prompt.
 
 ---
 
-## Chapter 9 — Biotechnology: Principles and Processes — ⚠️ Gate 2 clean, Gate 3 not re-verified
+## Chapter 9 — Biotechnology: Principles and Processes — ✅ FULLY COMPLETE (CLOSED)
+
+Verified closed under the supreme command prompt on 2026-08-19.
 
 | Workflow stage | Evidence |
 |----------------|----------|
 | **Pass 1 / Gate 1** | Frozen inventory of **200 Facts rows**; figure manifest + figure-label matrix (**38/38** labels present in running text). |
-| **Pass 2 / Gate 2** | `check_pdf.py` → **VERDICT PASS, 0 fail / 0 warn, exit 0**. All 8 checks PASS. 13 × A4-portrait pages, 7 monochrome images, all 200 rows ticked. |
-| **Pass 3 / Gate 3** | **Not independently re-verified in the current cycle** — no v6 Gate 3 closure note on record. The supreme prompt notes this chapter originally shipped through the pre-v6 one-pass process (the six historical defects that motivated v6). |
-| **Deliverables** | `Ch9_BiotechnologyPrinciplesAndProcesses.pdf` · `.py` (+ `convert_figures_mono.py` helper) · `_inventory.md` · `assets/`. |
-| **To close** | Run the v6 Pass 3 dual verification (visual + grounding) over the merged PDF and record an explicit Gate 3 closure note. |
+| **Pass 2 / Gate 2** | `check_pdf.py` → **VERDICT WARN, 0 fail / 1 warn, exit 0**. Checks 1,2,3,5,6,7,8 PASS. 13 × A4-portrait pages, **7 monochrome images** (the 7 numbered figures Fig 9.1–9.7), all 200 rows ticked. |
+| **The 1 warning** | Check 4 photo-keyword heuristic — a **confirmed benign false positive**. Fires on the Section-wise coverage row `Boyer profile … text-only by design (no person photo)`; the heuristic matches the word "photo" inside the phrase *"no person photo"* — a sentence **denying** a photo. No Boyer portrait is embedded (Check 3 confirms all 7 images monochrome and are the numbered figures); the Herbert Boyer profile is text-only by design. **Accepted, not suppressed** — the "no person photo" phrasing is deliberately not reworded to silence the linter, exactly as Ch8's `photosynthetic` WARN was handled. |
+| **Pass 3 / Gate 3** | **Zero confirmed defects.** Pass 3(a): all 13 pages inspected, zero layout defects, cross-page style identity confirmed (template held). Pass 3(b): fresh source re-extraction full-read against all 200 rows → **200/200 COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED**; historical defects 4/5/6 re-tested at their exact original sites and re-confirmed correct against source. No `# [VERIFICATION FIX]` edit to the `.py` needed (the one documentary fix was the inventory header row-count line). |
+| **Colour-dependent figures** | Fig 9.1 (vector vs foreign DNA), Fig 9.4 (pBR322 `ampR`/`tetR`/`ori`/`rop` arcs) and Fig 9.6 (PCR amplified region): each caption restates the distinction by outline/solid/label/boundary so meaning survives monochrome. |
+| **Source problems** | Page-number digits bleeding into text (`168 15-100`, `117722`); unit-opening page interleaving intro with the chapter-list sidebar; degree glyph lost as `420C`; `β` lost from beta-galactosidase; "two sets of primers" split across a page break. All recovered by reading the rendered source page; none unrecoverable. The Herbert Boyer photograph is a deliberate exclusion, not a problem. |
+| **Deliverables** | `Ch9_BiotechnologyPrinciplesAndProcesses.pdf` · `.py` (+ `convert_figures_mono.py` helper) · `_inventory.md` (with figure-label matrix + Gate 3 closure + Coverage note) · `assets/` (7 mono PNGs). |
