@@ -173,7 +173,11 @@ story.append(b1("They also ensure that such a name <b>has not been used for any 
                 "organism</b>."))
 
 # ---- 1.1 (b) Binomial nomenclature ----
-story.append(heading("1.1", "Binomial Nomenclature", level=2, has_table=True))
+# [VERIFICATION FIX] has_table dropped: the frozen template's table-icon cell
+# renders outside the banner fill, leaving a stray glyph in the right margin.
+# The flag is decorative only, so the chapter omits it rather than patching the
+# frozen module (§0.6).
+story.append(heading("1.1", "Binomial Nomenclature", level=2))
 story.append(body("Biologists follow universally accepted principles to provide scientific names. "
                   "Each name has <b>two components</b> - the <b>Generic name</b> and the "
                   "<b>specific epithet</b>. This system of providing a name with two components is "
@@ -370,19 +374,29 @@ story.append(body("The taxonomic categories from <b>species to kingdom</b> in <b
                   "<b>Kingdom</b>. These are <b>broad categories</b>; taxonomists have also "
                   "developed <b>sub-categories</b> in this hierarchy to facilitate more sound and "
                   "scientific placement of various taxa."))
-story.append(process_flow([
-    "<b>Species</b> - lowest category; a group of individual organisms with fundamental similarities.",
-    "<b>Genus</b> - aggregate of closely related species.",
-    "<b>Family</b> - group of related genera.",
-    "<b>Order</b> - assemblage of families with a few similar characters.",
-    "<b>Class</b> - group of related orders.",
-    "<b>Phylum or Division</b> - group of related classes (Phylum in animals, Division in plants).",
-    "<b>Kingdom</b> - the highest category (Kingdom Animalia, Kingdom Plantae).",
-]))
+# [VERIFICATION FIX] The taxonomic hierarchy is a set of nested ranks, not a
+# sequential procedure, so it is presented as a rank table rather than a
+# numbered process_flow. Rank column reads bottom-up to match Fig 1.1's
+# ascending order; every entry is the chapter's own definition (F073-F101).
+story.append(data_table([
+    ["Rank (ascending)", "What it groups", "Chapter example"],
+    ["<b>Kingdom</b>", "The <b>highest category</b>; all phyla of animals, all divisions of plants",
+     "Kingdom Animalia; Kingdom Plantae"],
+    ["<b>Phylum or Division</b>", "<b>Phylum</b> - classes of animals with common features; "
+                                  "<b>Division</b> - plant classes with a few similar characters",
+     "Chordata (notochord, dorsal hollow neural system); Angiospermae"],
+    ["<b>Class</b>", "Related <b>orders</b>", "Mammalia (has other orders also); Insecta"],
+    ["<b>Order</b>", "<b>Assemblage of families</b> exhibiting a few similar characters",
+     "Carnivora; Polymoniales; Primata"],
+    ["<b>Family</b>", "Related <b>genera</b>, with still less number of similarities",
+     "Felidae; Canidae; Solanaceae"],
+    ["<b>Genus</b>", "<b>Aggregate of closely related species</b>", "<i>Panthera</i>; <i>Solanum</i>"],
+    ["<b>Species</b>", "The <b>lowest category</b>; individuals with <b>fundamental similarities</b>",
+     "<i>Panthera leo</i>; <i>Homo sapiens</i>"],
+], col_widths=[1.15, 2.35, 2.0]))
 story.append(figure("fig_1_1.png",
                     "Fig. 1.1 - Taxonomic categories showing hierarchial arrangement in ascending "
-                    "order. Reading the arrows upward: Species to Genus to Family to Order to "
-                    "Class to Phylum or Division to Kingdom.",
+                    "order.",
                     max_width_cm=7.0))
 story.append(body("Reading the hierarchy tells you the <b>basis of arrangement</b>:"))
 story.append(b1("As we go <b>higher</b> from species to kingdom, the <b>number of common "
@@ -398,23 +412,28 @@ story.append(memory_aid("Ascending order <b>Species to Kingdom</b>: <b>S</b>ome 
                         "<b>P</b>hylum, <b>K</b>ingdom. Read it backwards for descending order."))
 
 # ---- Table 1.1 ----
-story.append(heading("Table 1.1", "Organisms with their Taxonomic Categories", level=2,
-                     has_table=True))
-story.append(body("Table 1.1 indicates the taxonomic categories to which some common organisms "
-                  "like <b>housefly, man, mango and wheat</b> belong."))
-story.append(data_table([
-    ["Common Name", "Biological Name", "Genus", "Family", "Order", "Class", "Phylum/Division"],
-    ["Man", "<i>Homo sapiens</i>", "<i>Homo</i>", "Hominidae", "Primata", "Mammalia", "Chordata"],
-    ["Housefly", "<i>Musca domestica</i>", "<i>Musca</i>", "Muscidae", "Diptera", "Insecta",
-     "Arthropoda"],
-    ["Mango", "<i>Mangifera indica</i>", "<i>Mangifera</i>", "Anacardiaceae", "Sapindales",
-     "Dicotyledonae", "Angiospermae"],
-    ["Wheat", "<i>Triticum aestivum</i>", "<i>Triticum</i>", "Poaceae", "Poales",
-     "Monocotyledonae", "Angiospermae"],
-], col_widths=[1.05, 1.5, 1.1, 1.5, 1.15, 1.5, 1.5], font_size=9.0))
-story.append(note("Read Table 1.1 column-wise for the two plant entries: mango is "
-                  "<b>Dicotyledonae</b> and wheat is <b>Monocotyledonae</b>, yet both are "
-                  "<b>Angiospermae</b> - the class differs while the division is the same."))
+story.append(heading("Table 1.1", "Organisms with their Taxonomic Categories", level=2))
+# [VERIFICATION FIX] Intro line, all four data rows and the reading NOTE are
+# wrapped in KeepTogether so Table 1.1 is never split with a single orphan row
+# stranded at a page break (F107, F110-F114).
+story.append(KeepTogether([
+    body("Table 1.1 indicates the taxonomic categories to which some common organisms "
+         "like <b>housefly, man, mango and wheat</b> belong."),
+    data_table([
+        ["Common Name", "Biological Name", "Genus", "Family", "Order", "Class", "Phylum/Division"],
+        ["Man", "<i>Homo sapiens</i>", "<i>Homo</i>", "Hominidae", "Primata", "Mammalia",
+         "Chordata"],
+        ["Housefly", "<i>Musca domestica</i>", "<i>Musca</i>", "Muscidae", "Diptera", "Insecta",
+         "Arthropoda"],
+        ["Mango", "<i>Mangifera indica</i>", "<i>Mangifera</i>", "Anacardiaceae", "Sapindales",
+         "Dicotyledonae", "Angiospermae"],
+        ["Wheat", "<i>Triticum aestivum</i>", "<i>Triticum</i>", "Poaceae", "Poales",
+         "Monocotyledonae", "Angiospermae"],
+    ], col_widths=[1.05, 1.5, 1.1, 1.5, 1.15, 1.5, 1.5], font_size=9.0),
+    note("Read Table 1.1 column-wise for the two plant entries: mango is "
+         "<b>Dicotyledonae</b> and wheat is <b>Monocotyledonae</b>, yet both are "
+         "<b>Angiospermae</b> - the class differs while the division is the same."),
+]))
 
 # ---- Quick Recap ----
 story.append(heading("Recap", "Quick Recap", level=1))
