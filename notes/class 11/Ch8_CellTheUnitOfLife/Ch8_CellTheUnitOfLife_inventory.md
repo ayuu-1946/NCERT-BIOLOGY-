@@ -477,3 +477,56 @@ sole WARN eyeballed and confirmed benign).
 | 8.5.5 vs Summary | Body F209: plastids are found "in all plant cells and in euglenoides". Summary F316: plastids are "found in plant cells only". The source contradicts itself | The body qualifier wins because it is the more specific statement and it names the exception. The script states plastids occur in all plant cells **and in euglenoides**; the summary's narrower "plant cells only" is not reproduced. Flagged rather than silently reconciled |
 | Fig 8.10 label | Source prints the in-figure label as "Central microtuble" (missing the second `u`), recorded verbatim in F258 | Rule 4 — the NCERT spelling is preserved in the figure-label inventory. The running text uses "central microtubule"; check_pdf's label matcher resolves the variant by close-match, so the typo is neither propagated nor hidden |
 | Fig 8.4, all assets | **[Pass 1b defect - FIXED]** Every one of the 14 assets had the NCERT diagonal "(c) NCERT / to be republished" watermark and the page-background band baked in. On Fig 8.4 the watermark ran straight across the phospholipid bilayer — the exact structure the figure exists to show | Root cause: `scratch/ch8/extract_figs.py` clip-rendered the *composited* source page. It now deletes both full-page overlays, matched on native pixel dimensions (2480x3508 background, 1894x1894 watermark), from an in-memory copy of the page before rendering, and **raises** if a page does not yield both. All 14 assets re-extracted clean and re-verified; the source PDF is untouched |
+
+## Pass 3 / Gate 3 — closure record (2026-08-19)
+
+Pass 3 was run over the freshly rebuilt merged PDF (18 pp) with Gate 2 already confirmed green.
+
+**Pass 3(a) — visual render sweep (one systematic pass).** All 18 pages rendered at actual size AND at print DPI + a B&W 1-bit threshold, and each viewed once. **Zero layout defects:** no overflow, no clipping, no table running off-page, no orphaned heading, no misaligned process-flow rule, no wrong figure aspect ratio on any page. Cross-page style-identity spot check pulled H1 (U3 / 8.1 / 8.5 / R / E), H2 (8.4.1 / 8.5.1 / 8.5.6), H3 (size-shape / transport / chloroplast structure), a `data_table`, a NOTE box, a MEMORY AID box, a `process_flow` (8.2 cell theory and 8.5.3.2 golgi), and a `figure` box from >=3 points each — every instance is visually identical, confirming the imported `neet_template.py` held. The B&W 1-bit pass confirms NOTE (solid double-rule + `!` icon) vs MEMORY AID (dashed border + star) stay tell-apart-able with the `NOTE_BG` fill washed out, and every section-number badge and step-flow digit stays legible (linter floor 6.0pt).
+
+**Closed item re-confirmed on the fresh render:** the historical page-16 "Fig 8.13 overlaps 'telocentric ... terminal centromere'" flag remains a false positive — on this newly generated render Fig 8.13 sits cleanly in its bordered box below the satellite paragraph with no text collision.
+
+**Pass 3(b) — content cross-check against the frozen inventory.** Source re-extracted fresh from `Chapter/class 11/Chapter 08 - Cell The Unit of Life.pdf` (19 source pp) and full-read against all **325** Facts rows and the script's `# ---- N.N ----` blocks, section by section, start to finish (not by grep). Result: **325/325 COVERED — 0 MISSING, 0 FABRICATED, 0 DRIFTED.** Every marks-critical qualifier is preserved verbatim (`may`, `many`, `a few`, `usually`, `majority`, `most`, `almost all`, `generally`, `relatively`, `indirectly`, `frequently`, `varied`, `optimally`), as are every exam number (15 nm by 20 nm; 50S/30S->70S; 60S/40S->80S; 10-50 nm perinuclear space; 2 m DNA / 46 (23 pairs) chromosomes; 52% protein / 40% lipids; every um value) and all 14 figure-label rows at their correct topic. The three clearly-labelled MEMORY AID / Q9 explanations were confirmed to be built only from in-chapter facts (no outside biology).
+
+**Gate 3: CLOSED.** Zero confirmed defects remain AND `check_pdf.py` is green (exit 0). No `# [VERIFICATION FIX]` edit was required because Pass 3 surfaced no confirmed defect.
+
+### Section-wise coverage confirmation
+
+| Section | Body facts | Summary-unique folded | Figures embedded + verified mono | Labels in running text |
+|---|---|---|---|---|
+| Unit 3 intro + Scientist | F001-F019 (19/19) | — | 0 (portrait deliberately text-only) | — |
+| 8.1 What is a Cell? | F020-F028 (9/9) | — | — | — |
+| 8.2 Cell Theory | F029-F037 (9/9) | — | — | — |
+| 8.3 Overview of Cell | F038-F060 (23/23) | — | Fig 8.1 (1/1) | 6/6 |
+| 8.4 Prokaryotic Cells | F061-F080 (20/20) | — | Fig 8.2 (1/1) | 4/4 |
+| 8.4.1 Cell Envelope | F081-F103 (23/23) | — | — | — |
+| 8.4.2 Ribosomes & Inclusions | F104-F112 (9/9) | — | — | — |
+| 8.5 Eukaryotic Cells | F113-F123 (11/11) | — | Fig 8.3a + 8.3b (2/2) | 18/18 + 14/14 |
+| 8.5.1 Cell Membrane | F124-F149 (26/26) | F310 (ER — folded at 8.5.3.1) | Fig 8.4 (1/1) | 5/5 |
+| 8.5.2 Cell Wall | F150-F155 (6/6) | — | — | — |
+| 8.5.3 Endomembrane | F156-F158 (3/3) | — | — | — |
+| 8.5.3.1 ER | F159-F169 (11/11) | F310 (transport/lipoproteins/glycogen) | Fig 8.5 (1/1) | 5/5 |
+| 8.5.3.2 Golgi | F170-F182 (13/13) | — | Fig 8.6 (1/1) | 1/1 |
+| 8.5.3.3 Lysosomes | F183-F185 (3/3) | F312 (single membrane / all macromolecules) | — | — |
+| 8.5.3.4 Vacuoles | F186-F192 (7/7) | — | — | — |
+| 8.5.4 Mitochondria | F193-F208 (16/16) | F314 (oxidative phosphorylation / ATP) | Fig 8.7 (1/1) | 5/5 |
+| 8.5.5 Plastids | F209-F233 (25/25) | F317 (grana light / stroma dark) | Fig 8.8 (1/1) | 6/6 |
+| 8.5.6 Ribosomes | F234-F242 (9/9) | — | Fig 8.9 (1/1) | 2/2 |
+| 8.5.7 Cytoskeleton | F243-F244 (2/2) | — | — | — |
+| 8.5.8 Cilia & Flagella | F245-F258 (14/14) | — | Fig 8.10 (1/1) | 6/6 |
+| 8.5.9 Centrosome | F259-F266 (8/8) | — | — (NCERT prints none) | — |
+| 8.5.10 Nucleus | F267-F302 (36/36) | F308 (controls organelles / heredity), F319 (inner membrane encloses nucleoplasm) | Fig 8.11, 8.12, 8.13 (3/3) | 4/4 + 1/1 + 5/5 |
+| 8.5.11 Microbodies | F303 (1/1) | — | — | — |
+| Quick Recap / Summary | F304-F320 (17/17) | (all folds placed above) | — | — |
+| Terms Used in Exercises | F321-F325 (5/5) | — | — | — |
+| **Total** | **325/325** | **6/6 summary-unique** | **14/14 assets, all mono + verified** | **82/82** |
+
+### Coverage note
+
+- **Compression decisions** — Comparative/enumerable prose was reformatted into `data_table`s (bacterial shapes; cell-envelope layers; membrane-protein types; transport modes; cell-wall composition; RER/SER; plastid types; ribosome subunit sizes; cilia/flagella; chromosome types; plant vs animal cell) and multi-step processes into `process_flow`s (cell-theory history 8.2; golgi vesicle packaging 8.5.3.2). Every fact carried by the original sentence survives the merge — verified row-by-row in Pass 3(b). No fact was dropped to save space; page count (18) tracks the source (19).
+- **Exercise-gap terms** — All 14 exercises covered. Two needed material the body never states, both closed from chapter facts only: Q9 "division of labour" (from F022/F023/F058) and the Q13 centrosome half (from F259-F266, with an explicit note that NCERT prints no centrosome figure and none was invented). Q1/Q3/Q4/Q7/Q14 are body-present and additionally surfaced in the Terms appendix (F321-F325).
+- **Drift caught and fixed** — None. Pass 3(b) found 0 DRIFTED, 0 MISSING, 0 FABRICATED across all 325 rows, so no `# [VERIFICATION FIX]` block edit was required this cycle. (The watermark/background baked-in-asset defect and the stale row-count header were caught and fixed earlier, in Pass 1b — see Source problems.)
+- **Figures requiring manual attention** — None. All 14 assets (13 numbered figures, Fig 8.3 split a/b) extracted clean, converted to true monochrome (mode `L`, confirmed by check 3), and verified; no crop, no neighbouring-figure grab, no clipped label.
+- **Color-dependent figures** — Fig 8.4 (fluid mosaic) and Fig 8.10(b) (cilia/flagella cross-section). In both, the source used hue to separate parts that collapse to similar greys in B&W; each caption now names every part by **position and shape/geometry** instead of colour (bilayer = double row of spherical heads with zig-zag tails; integral protein = large mass spanning the bilayer; peripheral proteins = strands on the surface; sugars = branched chains projecting out; cholesterol = short rod among the tails / plasma membrane = outermost ring; central sheath = broken arc around the two central tubules; radial spokes = nine thin lines; interdoublet bridge = short bar; peripheral doublets = nine paired rings). Full detail in the Colour-dependent figures table above.
+- **Source problems** — Four, all handled and documented in the Source problems table above: (1) pdfplumber renders the micron glyph as `mm` — every value re-read from the 300 dpi render and written as `um`; (2) source misspells "endoplasmic reticulun" (F162) — corrected spelling used, same word; (3) body vs summary contradiction on plastid location ("all plant cells and in euglenoides" vs "plant cells only") — body qualifier kept, contradiction flagged in-document, not silently reconciled; (4) source figure-label typo "Central microtuble" (F258) — preserved verbatim in the label line, correct spelling in running text.
+- **Linter verdict** — `check_pdf.py` on the rebuilt PDF: **18 pages, VERDICT WARN, 0 fail / 1 warn, exit 0.** Checks 1, 2, 3, 5, 6, 7, 8 PASS (incl. 82/82 figure labels in text and all 325 Facts rows ticked). The single WARN is check 4's portrait-keyword heuristic, an **accepted, confirmed-benign false positive**: it fires only on the `phot`+`o` substring inside **photosynthetic** (F112) and **photosynthesis** (F213) — ordinary running-text biology rows, neither a figure-manifest row nor a person image. All 14 embedded images are `DeviceGray`; the G.N. Ramachandran biography is text-only with 0 embedded images. The inventory wording is source-verbatim and is deliberately not altered to silence the linter.

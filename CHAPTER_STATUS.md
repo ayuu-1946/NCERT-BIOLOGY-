@@ -19,8 +19,25 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 
 | # | Chapter | Class | Gate 1 (inventory) | Gate 2 (`check_pdf.py`) | Gate 3 (defects) | Deliverables | Overall |
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
+| 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ PASS (0 fail, 0 warn) · 13 pp · 7 mono imgs | ⚠️ Gate 2 green, no v6 Gate 3 closure record | ✅ pdf · py · inventory · assets | ⚠️ Gate 2 clean; Gate 3 not re-verified |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
+
+---
+
+## Chapter 8 — Cell: The Unit of Life — ✅ FULLY COMPLETE (CLOSED)
+
+Big-chapter 5-pass protocol (`1a → 1b → [Gate 1] → 2a → 2b → [Gate 2] → 3 → [Gate 3]`). Verified closed under the supreme command prompt on 2026-08-19.
+
+| Workflow stage | Evidence |
+|----------------|----------|
+| **Pass 1 / Gate 1** | Frozen inventory of **325 Facts rows** (F001-F325) inventoried in two halves into one file; figure manifest + figure-label matrix (**82/82** in-figure labels present in running text); **6 summary-unique** facts folded into their named body sections (F308, F310, F312, F314, F317, F319); 2 exercise gaps closed from chapter facts (Q9 division of labour, Q13 centrosome). |
+| **Pass 2 / Gate 2** | `check_pdf.py` → **VERDICT WARN, 0 fail / 1 warn, exit 0**. Checks 1,2,3,5,6,7,8 PASS. 18 × A4-portrait pages, **14 monochrome images** (13 figures, Fig 8.3 split a/b), all 325 rows ticked. |
+| **The 1 warning** | Check 4 photo-keyword heuristic — a **confirmed benign false positive**. Fires only on the `phot`+`o` substring inside **photosynthetic** (F112) and **photosynthesis** (F213); both are running-text biology rows, neither a figure-manifest row nor a person image. No person photograph embedded; the G.N. Ramachandran biography is a text-only `[NOTE]` box. |
+| **Pass 3 / Gate 3** | **Zero confirmed defects.** Pass 3(a): all 18 pages rendered actual-size + print-DPI B&W 1-bit, zero layout defects, cross-page style identity confirmed (template held). Pass 3(b): fresh source re-extraction full-read against all 325 rows → **325/325 COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED**; every qualifier, number and µm value preserved verbatim. Historical page-16 Fig 8.13 "overlap" re-confirmed as a false positive on the fresh render. No `# [VERIFICATION FIX]` edit needed. |
+| **Colour-dependent figures** | Fig 8.4 (fluid mosaic) and Fig 8.10(b) (cilia/flagella): each caption restates every part by position/shape/geometry so the distinction survives monochrome. |
+| **Source problems** | Micron glyph rendered `mm` by pdfplumber (re-read from render as µm); "endoplasmic reticulun" typo; body-vs-summary plastid-location contradiction (body kept, flagged); "Central microtuble" label typo (preserved verbatim). All handled, none unrecoverable. |
+| **Deliverables** | `Ch8_CellTheUnitOfLife.pdf` · `.py` · `_inventory.md` (with figure-label matrix + Gate 3 closure + Coverage note) · `assets/` (14 mono PNGs). |
 
 ---
 
