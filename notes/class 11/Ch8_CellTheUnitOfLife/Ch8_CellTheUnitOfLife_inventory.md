@@ -1,6 +1,10 @@
 # Frozen Inventory — Cell: The Unit of Life (Class 11, Chapter 8)
 
-Source: `Chapter/class 11/Chapter 08 - Cell The Unit of Life.pdf` (19 pp, Reprint 2026-27) | Frozen: 2026-08-19 | Rows: 236
+Source: `Chapter/class 11/Chapter 08 - Cell The Unit of Life.pdf` (19 pp, Reprint 2026-27) | Frozen: 2026-08-19 | Rows: 325
+
+Row count corrected during Pass 1b: the Pass 1a header recorded `Rows: 236`, which was the count at the moment the
+first half was frozen. The completed table runs F001-F325 (325 rows) — verified by counting the table rows, not by
+trusting the header. No fact row was added, removed or reworded to reach this number; only the stale count was fixed.
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 
@@ -341,3 +345,98 @@ raw Greek/Unicode mu — §4 technical rules ban raw Greek letters).
 | F323 | Exercises | Exam fact | Q4 correct option (c) "In prokaryotes, there are no membrane bound organelles." | x |
 | F324 | Exercises | Exam term | Q9 "Multicellular organisms have division of labour." - division of labour among cells/tissues | x |
 | F325 | Exercises | Exam fact | Q7 asks the two double-membrane-bound organelles: mitochondria and chloroplast (plastids) | x |
+
+## Summary classification
+
+Every sentence frozen from the printed SUMMARY (F304-F320) is classified against the body facts. BODY-PRESENT
+sentences are NOT re-stated as new content — they are allowed only into the Quick Recap. SUMMARY-UNIQUE sentences
+carry something the body never says and are therefore folded into the named body section, because dropping them
+would lose a fact the source states.
+
+| Summary sentence | Classification | Folded into |
+|---|---|---|
+| "All organisms are made of cells or aggregates of cells." (F304) | BODY-PRESENT | Quick Recap only (F021, F022) |
+| "Based on the presence or absence of a membrane bound nucleus and other organelles, cells and hence organisms can be named as eukaryotic or prokaryotic." (F305) | BODY-PRESENT | Quick Recap only (F042, F047) |
+| "A typical eukaryotic cell consists of a cell membrane, nucleus and cytoplasm." (F306) | BODY-PRESENT | Quick Recap only (F038-F043) |
+| "Centrosome and centriole form the basal body of cilia and flagella that facilitate locomotion." (F307) | BODY-PRESENT | Quick Recap only (F256, F266) |
+| "Nucleus contains nucleoli and chromatin network. It not only controls the activities of organelles but also plays a major role in heredity." (F308) | SUMMARY-UNIQUE | 8.5.10 — the body names nucleoli and chromatin (F269, F278) but never states the nucleus *controls organelle activity* or *plays a major role in heredity*; that clause is folded into 8.5.10 |
+| "Endoplasmic reticulum contains tubules or cisternae. They are of two types: rough and smooth." (F309) | BODY-PRESENT | Quick Recap only (F159, F162, F163) |
+| "ER helps in the transport of substances, synthesis of proteins, lipoproteins and glycogen." (F310) | SUMMARY-UNIQUE | 8.5.3.1 — the body gives only RER protein synthesis/secretion (F164) and SER lipid synthesis (F166); "transport of substances", "lipoproteins" and "glycogen" appear nowhere in the body and are folded into 8.5.3.1 |
+| "The golgi body is a membranous organelle composed of flattened sacs. The secretions of cells are packed in them and transported from the cell." (F311) | BODY-PRESENT | Quick Recap only (F171, F176) |
+| "Lysosomes are single membrane structures containing enzymes for digestion of all types of macromolecules." (F312) | SUMMARY-UNIQUE | 8.5.3.3 — the body says only "membrane bound vesicular structures" (F183); the summary is what pins the count to a **single** membrane, the exact contrast Q12 turns on, so "single membrane" is folded into 8.5.3.3 |
+| "Ribosomes are involved in protein synthesis. These occur freely in the cytoplasm or are associated with ER." (F313) | BODY-PRESENT | Quick Recap only (F049, F107) |
+| "Mitochondria help in oxidative phosphorylation and generation of adenosine triphosphate." (F314) | SUMMARY-UNIQUE | 8.5.4 — the body says "sites of aerobic respiration" (F203) and "energy in the form of ATP" (F204); the terms *oxidative phosphorylation* and *adenosine triphosphate* spelled out are summary-only and are folded into 8.5.4 |
+| "They are bound by double membrane; the outer membrane is smooth and inner one folds into several cristae." (F315) | BODY-PRESENT | Quick Recap only (F197, F200) — "outer membrane is smooth" restates F199's continuous limiting boundary |
+| "Plastids are pigment containing organelles found in plant cells only." (F316) | SUMMARY-UNIQUE but CONFLICTS with body | NOT folded as written. Body F209 says plastids are found "in all plant cells and in euglenoides". The body qualifier is kept and the summary's narrower "plant cells only" is not reproduced; logged under Source problems |
+| "The grana, in the plastid, is the site of light reactions and the stroma of dark reactions." (F317) | SUMMARY-UNIQUE | 8.5.5 — the body describes grana (F225) and stroma (F223, F228) structurally but never assigns light/dark reactions to them; folded into 8.5.5 |
+| "The green coloured plastids are chloroplasts, which contain chlorophyll, whereas the other coloured plastids are chromoplasts, which may contain pigments like carotene and xanthophyll." (F318) | BODY-PRESENT | Quick Recap only (F213, F214) |
+| "The inner membrane encloses the nucleoplasm and the chromatin material." (F319) | SUMMARY-UNIQUE | 8.5.10 — the body gives the two-membrane envelope and perinuclear space (F270) but never says which membrane bounds the nucleoplasm; folded into 8.5.10 |
+| "Thus, cell is the structural and functional unit of life." (F320) | BODY-PRESENT | Quick Recap only (F025) |
+
+## Exercise-gap terms
+
+All 14 printed exercises were read. A row is a GAP only where the exercise assumes a term or a diagram the chapter
+body never supplies; every GAP is closed using chapter facts alone, with no outside biology.
+
+| Term/fact assumed by exercises | Explained where |
+|---|---|
+| Q1 - "Robert Brown discovered the cell" is the not-correct option | Body-present (F026 Leeuwenhoek first saw a live cell; F027 Brown discovered the nucleus). F321 |
+| Q2 - new cells generate from pre-existing cells | Body-present (F035, F037) |
+| Q3 - match Cristae / Cisternae / Thylakoids | Body-present (F200 cristae, F171 cisternae, F224 thylakoids). F322 |
+| Q4 - "In prokaryotes, there are no membrane bound organelles" is the correct option | Body-present (F047, F076). F323 |
+| Q5 - what a mesosome is and its functions | Body-present (F078, F090-F093) |
+| Q6 - how neutral solutes cross the membrane; how polar molecules are transported | Body-present (F143 simple diffusion, F146 carrier protein, F147 active transport) |
+| Q7 - name two double-membrane-bound organelles, characteristics, functions, labelled diagrams | Body-present (F197 mitochondrion, F221 chloroplast) with Fig 8.7 and Fig 8.8 supplying both labelled diagrams. F325 |
+| Q8 - characteristics of prokaryotic cells | Body-present (F061-F080, F104-F112) |
+| Q9 - "Multicellular organisms have division of labour. Explain." | **GAP** - the phrase "division of labour" appears nowhere in the chapter body. Closed in the appendix "Terms used in the exercises" from chapter facts only: F022 (multicellular organisms are composed of many cells), F023 (a unicellular organism must perform *all* the essential functions of life within its single cell), F058 (the shape of the cell may vary with the function they perform). F324 |
+| Q10 - cell is the basic unit of life | Body-present (F020, F025) |
+| Q11 - what nuclear pores are and their function | Body-present (F272, F273) |
+| Q12 - lysosomes vs vacuoles: both endomembrane, different functions | Body-present (F183-F185 hydrolytic digestion vs F186-F192 storage/osmoregulation); the "single membrane" of F312 and the "single membrane called tonoplast" of F188 are what make the contrast statable |
+| Q13 - describe nucleus and centrosome "with the help of labelled diagrams" | **PARTIAL GAP** - the nucleus has Fig 8.11, but the chapter prints **no centrosome figure at all**. The appendix answers the centrosome half in words from F259-F266 (two cylindrical centrioles perpendicular to each other, cartwheel organisation, nine peripheral triplet fibrils of tubulin, hub, radial spokes) and says plainly that NCERT supplies no diagram for it. No diagram is invented |
+| Q14 - centromere and the classification of chromosomes, with a diagram | Body-present (F290, F291, F292-F296) with Fig 8.13 supplying the required diagram |
+
+## Figure manifest
+
+13 numbered NCERT figures, 14 assets (Fig 8.3 is split into its (a) plant-cell and (b) animal-cell halves so each
+is legible at column width). Printed folio = PDF page index + 85.
+
+| Fig # | Caption (verbatim) | Asset file | Source page | Mono | Verified |
+|---|---|---|---|---|---|
+| Fig 8.1 | "Figure 8.1 Diagram showing different shapes of the cells" | assets/fig_8_1.png | p. 89 (PDF page 4) | yes | yes |
+| Fig 8.2 | "Figure 8.2 Diagram showing comparison of eukaryotic cell with other organisms" | assets/fig_8_2.png | p. 90 (PDF page 5) | yes | yes |
+| Fig 8.3 (a) | "Figure 8.3 Diagram showing : (a) Plant cell (b) Animal cell" | assets/fig_8_3a.png | p. 92 (PDF page 7) | yes | yes |
+| Fig 8.3 (b) | "Figure 8.3 Diagram showing : (a) Plant cell (b) Animal cell" | assets/fig_8_3b.png | p. 92 (PDF page 7) | yes | yes |
+| Fig 8.4 | "Figure 8.4 Fluid mosaic model of plasma membrane" | assets/fig_8_4.png | p. 93 (PDF page 8) | yes | yes |
+| Fig 8.5 | "Figure 8.5 Endoplasmic reticulum" | assets/fig_8_5.png | p. 95 (PDF page 10) | yes | yes |
+| Fig 8.6 | "Figure 8.6 Golgi apparatus" | assets/fig_8_6.png | p. 95 (PDF page 10) | yes | yes |
+| Fig 8.7 | "Figure 8.7 Structure of mitochondrion (Longitudinal section)" | assets/fig_8_7.png | p. 97 (PDF page 12) | yes | yes |
+| Fig 8.8 | "Figure 8.8 Sectional view of chloroplast" | assets/fig_8_8.png | p. 98 (PDF page 13) | yes | yes |
+| Fig 8.9 | "Figure 8.9 Ribosome" | assets/fig_8_9.png | p. 98 (PDF page 13) | yes | yes |
+| Fig 8.10 | "Figure 8.10 Section of cilia/flagella showing different parts : (a) Electron micrograph (b) Diagrammatic representation of internal structure" | assets/fig_8_10.png | p. 99 (PDF page 14) | yes | yes |
+| Fig 8.11 | "Figure 8.11 Structure of nucleus" | assets/fig_8_11.png | p. 100 (PDF page 15) | yes | yes |
+| Fig 8.12 | "Figure 8.12 Chromosome with kinetochore" | assets/fig_8_12.png | p. 101 (PDF page 16) | yes | yes |
+| Fig 8.13 | "Figure 8.13 Types of chromosomes based on the position of centromere" | assets/fig_8_13.png | p. 101 (PDF page 16) | yes | yes |
+
+Not figures, deliberately not extracted: the unit-opener plate, the G.N. Ramachandran scientist portrait
+(§4.4 hard no — a photograph of a person is never embedded; the profile is text-only, F012-F019), the opener QR
+code, and the repeating decorative page bands/watermark. None carries a fact.
+
+Fig 8.10(a) is an electron micrograph of a cilium cross-section — a micrograph of a subcellular structure, not of a
+person, so it is embedded normally.
+
+## Colour-dependent figures
+
+| Fig # | What colour carried in the source | How the distinction is stated in words |
+|---|---|---|
+| Fig 8.4 | Proteins are drawn **red/orange** (the large integral blob spanning the membrane and the long peripheral strands lying on its surface), the phospholipid bilayer **blue** (pale blue spherical heads, dark blue zig-zag tails), sugar chains **orange**, and cholesterol a short **yellow** rod inside the bilayer | Verified on the raw colour crop at 150 dpi. In monochrome the red protein masses and the dark blue tail zone collapse to the same mid-grey, and the orange sugar chains and yellow cholesterol rods become indistinguishable pale beads. The caption therefore names each part by **position and shape** instead of colour: the phospholipid bilayer is the double row of small spherical heads with zig-zag tails between them; the integral protein is the large solid mass embedded in and spanning that bilayer; the peripheral proteins are the long smooth strands lying on the membrane surface; the sugar chains are the small branched chains projecting outward from the outer surface; cholesterol is the short rod lying inside the bilayer among the tails. All five in-figure labels (F149) stay verifiable without colour |
+| Fig 8.10 | In (b) the plasma membrane is a **green** complete outer ring, the central sheath a **red** broken arc around the two central tubules, the radial spokes thin **pale green** lines, and the peripheral doublets **dark blue** rings on a cream field | Verified on the raw colour crop at 170 dpi. In monochrome the green outer ring and the red inner arc reduce to nearly the same grey and the pale green spokes almost vanish, so "the green one" / "the red one" is unusable. The caption names them by **position and geometry**: the plasma membrane is the complete outermost ring; the central sheath is the broken arc immediately surrounding the two central microtubules; the radial spokes are the nine thin lines running from that sheath out to each peripheral doublet; the interdoublet bridge is the short bar joining the two central tubules; the peripheral microtubules are the nine paired rings arranged around the inside of the membrane. This keeps the 9+2 array (F252) and the nine radial spokes (F254) readable in grey |
+
+## Source problems noted during extraction
+
+| Where | Problem | Handling |
+|---|---|---|
+| Whole chapter | pdfplumber renders the source's micron glyph as `mm`, so raw text extraction reports e.g. "0.3 mm" for mycoplasma | Every such value was re-read from the 300 dpi page render and recorded as the true **micrometre**. Written as `um`/`micrometre` in the script, never a raw Greek mu (§4 technical rules ban raw Greek letters) |
+| 8.5.3.1 | Source misspells the organelle as "endoplasmic reticulun" (F162) | Rule 4 — the wording is reproduced from the source in the inventory; the script uses the correct "reticulum", which is the same word, not a new fact |
+| 8.5.5 vs Summary | Body F209: plastids are found "in all plant cells and in euglenoides". Summary F316: plastids are "found in plant cells only". The source contradicts itself | The body qualifier wins because it is the more specific statement and it names the exception. The script states plastids occur in all plant cells **and in euglenoides**; the summary's narrower "plant cells only" is not reproduced. Flagged rather than silently reconciled |
+| Fig 8.10 label | Source prints the in-figure label as "Central microtuble" (missing the second `u`), recorded verbatim in F258 | Rule 4 — the NCERT spelling is preserved in the figure-label inventory. The running text uses "central microtubule"; check_pdf's label matcher resolves the variant by close-match, so the typo is neither propagated nor hidden |
+| Fig 8.4, all assets | **[Pass 1b defect - FIXED]** Every one of the 14 assets had the NCERT diagonal "(c) NCERT / to be republished" watermark and the page-background band baked in. On Fig 8.4 the watermark ran straight across the phospholipid bilayer — the exact structure the figure exists to show | Root cause: `scratch/ch8/extract_figs.py` clip-rendered the *composited* source page. It now deletes both full-page overlays, matched on native pixel dimensions (2480x3508 background, 1894x1894 watermark), from an in-memory copy of the page before rendering, and **raises** if a page does not yield both. All 14 assets re-extracted clean and re-verified; the source PDF is untouched |
