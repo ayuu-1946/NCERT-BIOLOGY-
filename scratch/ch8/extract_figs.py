@@ -45,7 +45,13 @@ FIGS = {
     "fig_8_10": (14,  45, 100, 500, 305),  # cilia/flagella section (a)+(b)
     "fig_8_11": (15,  55, 290, 320, 462),  # nucleus
     "fig_8_12": (16, 370,  95, 520, 372),  # chromosome with kinetochore
-    "fig_8_13": (16,  40, 448, 520, 690),  # types of chromosomes
+    # [VERIFICATION FIX - Pass 3(a)] y0 448 -> 455. At 448 the crop sliced the
+    # bottom half of the body line that ends "...telocentric chromosome has a
+    # terminal centromere." (span bbox y 442.4-452.9) into the top of the asset,
+    # so a clipped strip of NCERT running text was embedded above the diagram.
+    # The figure's own first graphic starts at y=459.4, so 455 drops the text
+    # strip without touching any figure content.
+    "fig_8_13": (16,  40, 455, 520, 690),  # types of chromosomes
 }
 
 
