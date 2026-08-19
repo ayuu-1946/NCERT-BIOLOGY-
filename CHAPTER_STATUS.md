@@ -19,9 +19,28 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 
 | # | Chapter | Class | Gate 1 (inventory) | Gate 2 (`check_pdf.py`) | Gate 3 (defects) | Deliverables | Overall |
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
+| 1 | The Living World | 11 | ✅ 121 facts frozen · 14/14 labels · 3 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 7 pp · 1 mono img | ⬜ not started | ✅ pdf · py · inventory · assets | **▶️ PASS 2 COMPLETE — Gate 2 green, Pass 3 pending** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
+
+---
+
+## Chapter 1 — The Living World — ▶️ PASS 2 COMPLETE (Gate 3 pending)
+
+Verified through Gate 2 under the supreme command prompt v6 on 2026-08-19. Resumed mid-workflow after a prior run stopped on credit limit immediately after "Task 0 of 5 complete"; Gate 1 was independently re-verified against current files (not trusted from prior-run prose) before Pass 2 began.
+
+| Workflow stage | Evidence |
+|----------------|----------|
+| **Environment resume** | Sandbox was fresh (venv not persisted by git); rebuilt `.venv` with `reportlab 5.0.0` / `pymupdf 1.28.2` / `Pillow 12.3.0`. Not a §0 restart — no re-extraction, no re-render of source, no Fig 1.1 re-extraction; all reused as-is. |
+| **Gate 1 (independently confirmed)** | 121 Facts rows (F001-F121) contiguous, all ticked, header `Rows: 121` matches; all 6 required inventory sections present; figure-label matrix present and parses to 7/7 real labels incl. exact phrase "Phylum or Division"; summary classification (10 rows, 3 SUMMARY-UNIQUE); exercise-gap terms (10 rows, Q1-Q10); figure manifest (1 row, `Mono: yes`, `Verified: yes`); `assets/fig_1_1.png` on disk, `mode=L`, 0 colored px; `git status`/`git diff HEAD` clean on the Ch1 folder — no corruption since prior run. |
+| **Pass 2 / Gate 2** | `check_pdf.py` → **VERDICT WARN, 0 fail / 1 warn, exit 0**. Checks 1,2,3,5,6,7,8 PASS. 7 × A4-portrait pages, **1 monochrome image** (Fig 1.1), all 121 rows ticked, 14/14 figure labels covered in running text. |
+| **The 1 warning** | Check 4 photo-keyword heuristic — a **confirmed benign false positive**. Fires on the 10 Ernst Mayr biography rows (F013-F022) because their inventory `Type` column is literally "Profile", and `"profile"` is one of the checker's `PORTRAIT_HINTS` substrings. Independently confirmed only 1 image is embedded in the whole PDF (Fig 1.1, colorspace=1/gray) — the Mayr content is a text-only block, no photograph. |
+| **Fixes applied** | (1) Removed an invented figure-caption sentence ("Reading the arrows upward…") not present in NCERT; restored exact frozen F108 wording. (2) Replaced a `process_flow` misuse for the taxonomic hierarchy (falsely implying species→kingdom is a sequential procedure) with a rank `data_table`, ascending order matching Fig 1.1, no new facts introduced. (3) Dropped the decorative `has_table=True` flag on two headings — the frozen template renders its table-icon cell outside the banner fill, leaving a stray glyph; omitted at chapter level rather than patching the frozen module. (4) Wrapped Table 1.1's intro line + 4 rows + reading NOTE in `KeepTogether` to fix an orphan-row page split. |
+| **False positives correctly rejected** | Check 6's apparent "2 missing labels" traced to `_extract_labels` mis-parsing the Figure-label matrix's own markdown header row as data; fixed by rewording only the column caption (no fact/label/tick touched). The "two implicit questions" `process_flow` at 1.1 was left as-is — the source itself says "the first… the second", so numbering is source-grounded. |
+| **Colour-dependent figures** | Fig 1.1 is a monochrome hierarchy diagram with no colour-encoded meaning; verified legible at 1-bit B&W threshold render. |
+| **Deliverables** | `Ch1_TheLivingWorld.pdf` · `.py` · `_inventory.md` (with figure-label matrix) · `assets/fig_1_1.png`. |
+| **Next gate** | Pass 3(a) cross-page style/visual defect sweep + Pass 3(b) fresh full-read source cross-check of all 121 rows → Gate 3 closure. |
 
 ---
 
