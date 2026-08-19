@@ -133,7 +133,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 
 ## Figure-label matrix
 
-| ID | Fig # | Type | Figure labels (one row per figure; every in-figure label listed) | Ticked |
+| ID | Fig # | Type | In-figure labels, one row per figure, every label listed | Ticked |
 |----|-------|------|------------------------------------------------------------------|--------|
 | F109 | Fig 1.1 | Figure labels | Figure labels: "Kingdom"; "Phylum or Division"; "Class"; "Order"; "Family"; "Genus"; "Species" | x |
 
