@@ -1,5 +1,13 @@
 # Frozen Inventory — Biotechnology : Principles and Processes (Class 12, Chapter 9)
-Source: Chapter/class 12/Chapter 9 - Biotechnology Principles and Processes.pdf | Frozen: 2026-08-12 | Rows: 168 facts + 12 summary + 9 exercise-gap + 8 figures
+Source: Chapter/class 12/Chapter 9 - Biotechnology Principles and Processes.pdf | Frozen: 2026-08-12 | Rows: 200 Facts rows (F001-F187 body + F188-F200 figure caption/label rows) + 6 summary classification + 10 exercise-gap + 7 figures
+
+<!-- [VERIFICATION FIX] Pass 3 (2026-08-19): the frozen header previously read
+     "168 facts + 12 summary + 9 exercise-gap + 8 figures", which contradicted its own
+     tables (F001-F200 = 200 Facts rows, 7 figures in the manifest, 6 summary-clause rows,
+     10 exercise-gap rows). Counts corrected to match the tables; no row content changed.
+     check_pdf.py check 7 counts the table rows (200/200 ticked), so the gate was always
+     reading the true figure. -->
+
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 
@@ -253,3 +261,70 @@ Note: the summary is a single short paragraph; each clause is treated as a sente
 - Page-number artifacts bleed into the pdfplumber text stream (e.g. "others may have 168 15-100 copies per cell" on page 8, "117722" on page 12). Verified against the rendered page images: the true values are **15-100 copies per cell** and page number 172. No content is missing from the source.
 - The unit-opening page interleaves the Unit 9 introduction with the chapter-list sidebar ("Chapter 9 / Chapter 10 Biotechnology and Its Applications"), so extracted text is out of order there. Reconstructed from the rendered page image.
 - The source page 2 sidebar carries a **photograph of Herbert Boyer** ("HERBERT BOYER (1936 )"). Per §0.2/§4 (no person photographs), this was intentionally **not extracted or embedded** — the biographical text was retained and rendered as a text-only profile box (F008-F020) with a definition-icon marker instead of an image. No asset file exists for it; it is correctly excluded from the figure manifest above.
+- Pass 3 re-extraction found two further glyph-loss artifacts, both recovered: the heat-shock temperature extracts as `420C` on source p11 (true value **42°C**, written as "42 degrees C" to avoid banned Unicode, F135), and beta-galactosidase extracts as the Greek `β-galactosidase` on source p10 (written out as "beta-galactosidase", F123/F124/F126, keeping check 5 green).
+- "two sets of primers" (F156/F157) is split across the source p12/p13 page break ("...in vitro using two" / "sets of primers"), so it never appears as one string in the extracted text. Confirmed verbatim by reading both pages. Similarly "30 cycles" (F197) exists **only** as an in-figure label of Fig 9.6, not as body prose — correctly recorded as a figure-label row.
+
+## Pass 3 / Gate 3 — closure record (2026-08-19)
+
+Pass 3 was run over the freshly rebuilt 13-page PDF with Gate 2 re-confirmed green on the real repo files first (`check_pdf.py` → **VERDICT PASS, 0 fail / 0 warn, exit 0**; all 8 checks PASS; 13 A4-portrait pages; 7 monochrome images; 38/38 figure labels in text; 200/200 Facts rows ticked). Environment rebuilt and verified per §0.3 (reportlab 5.0.0, pdfplumber, pymupdf 1.28.2, Pillow 12.3.0).
+
+**Pass 3(a) — visual render sweep (one systematic pass).** All 13 pages rendered at actual size AND at print DPI (300) + a B&W 1-bit threshold, and each viewed once. **Zero layout defects:** no overflow, no clipping, no table running off-page, no orphaned heading, no misaligned process-flow rule, no wrong figure aspect ratio on any page. Cross-page style identity was additionally confirmed *mechanically* by grouping every text span by `(font, size, colour)`: **19 distinct signatures for the whole chapter**, each element type resolving to exactly one signature reused across many pages — H1 `Times-Bold 10.5 white` (pp 1, 3, 7, 12), H2/H3 `Times-Bold 9.0 white` (pp 2-11), section badges `Times-Bold 6.0/6.2 white` (pp 1-12), step digits `Times-Bold 8.0 white` (pp 2-12), table header `Times-Bold 9.5 white` + body `Times-Roman 9.5` (pp 1-13), figure captions `Times-BoldItalic 9.5` (pp 4-12), NOTE / MEMORY AID `Times-Italic|BoldItalic 10.2` (pp 3-13). Zero hand-typed drift — the imported `neet_template.py` held. The 1-bit pass confirms NOTE (solid border + `!` icon) vs MEMORY AID (dashed border + star) stay tell-apart-able with the fill washed out, and every badge and step digit stays legible (linter floor 6.0pt).
+
+**Pass 3(b) — content cross-check against the frozen inventory.** Source re-extracted fresh from `Chapter/class 12/Chapter 9 - Biotechnology Principles and Processes.pdf` (16 source pp) and full-read against all **200** rows loaded from this file (not memory) and the script's `# ---- N.N ----` blocks, section by section, start to finish — not by grep. Result: **200/200 COVERED — 0 MISSING, 0 FABRICATED, 0 DRIFTED.** Every marks-critical qualifier is preserved verbatim (`Most likely`, `may`, `very often`, `only one or a set`, `some of which may be beneficial`, `normally`, `preferably single`, `almost all`, `approximately`, `Nowadays`, `only after staining`), as is every exam number (1936/1963/1966/1969/1972; >900 enzymes from >230 strains; six base pairs; 15-100 copies per cell; 100-1000 litres; 42°C; ~1 billion copies; three basic steps; two sets of primers; two kinds of nuclease).
+
+**The two label flags raised by the automated placement sweep were both confirmed FALSE POSITIVES by full read**, not by grep: (1) `"Same restriction enzyme cutting both foreign DNA and vector DNA at specific point"` (Fig 9.2) — present as body text on p4 ("When cut by the **same restriction enzyme**...") and restated in the Fig 9.2 caption; the matcher only failed because it demanded the token `cutting` where the prose inflects `cut`/`cuts`. (2) `"Foam braker"` (Fig 9.7) — that is the **source's own typo**; the chapter correctly renders "**foam breaker**" in the bioreactor systems table (p11) and the Fig 9.7 caption (p12). Both labels are present AND at their correct topic.
+
+**Gate 3: CLOSED.** Zero confirmed defects remain AND `check_pdf.py` is still green (exit 0). No `# [VERIFICATION FIX]` edit to the `.py` was required, because Pass 3 surfaced no confirmed defect in the chapter itself. The only `[VERIFICATION FIX]` this cycle is to *this inventory file's* header row-count line (see top), which contradicted its own tables.
+
+### The six historical defects — re-verified against this specific chapter
+
+This is the chapter that shipped the six pre-v6 defects which motivated the gated-pass redesign. Each was re-checked directly rather than assumed closed:
+
+| # | Historical defect | Class | Status on the current build |
+|---|---|---|---|
+| 1 | Banned footer / page-number strip | mechanical | **CLOSED** — check 1 PASS: no text in either margin band on any of the 13 pages; confirmed on the rendered pages. Permanently prevented by `neet_template.py`. |
+| 2 | Badge text ("9.2.1") illegible at print size | mechanical | **CLOSED** — check 2 PASS, smallest rendered text 6.0pt; the `9.2.1` badges read cleanly in the 300-dpi 1-bit render. `stringWidth`-sized box held. |
+| 3 | Step-badge digits too small | mechanical | **CLOSED** — step digits render at 8.0pt (above the 6.0 floor), legible in the 1-bit print render on every process-flow block. |
+| 4 | EcoRI "next two letters" instead of "second two letters" | content drift | **CLOSED — verified against the source PDF directly, not assumed.** Source p5 reads "the first letter of the name comes from the genus and the **second two letters** come from the species". The script's naming table (block `9.2.1`) reads **"Second two letters" → "The species" → "co = coli"**. Inventory F068 matches. No positional term was guessed. |
+| 5 | Bioreactor figure labels missing from running text | content drift | **CLOSED** — all 10 Fig 9.7 labels appear at the bioreactor topic *before* the figure: motor, foam breaker, flat bladed impeller, culture broth, sterile air, acid/base for pH control, steam for sterilisation in the "What a stirred-tank bioreactor must have" table (p11), and increased surface area for oxygen transfer, gas entrainment, bubbles dramatically increase the oxygen transfer area in the sparged-variant paragraph (p11) + caption (p12). |
+| 6 | PCR figure labels missing from running text | content drift | **CLOSED** — all 10 Fig 9.6 labels appear at the PCR topic: ds DNA, region to be amplified, 5'/3' polarity, Heat, Denaturation, Primers, Annealing, DNA polymerase (Taq polymerase) + deoxynucleotides, Extension in the antiparallel-template paragraph and the "Reading one PCR cycle" table (pp 9-10), and 30 cycles / Amplified (~1 billion times) in the same table + caption. |
+
+Check 6 passing 38/38 proves each label *string* exists somewhere in the running text; rows 5 and 6 above additionally confirm by human read that each label sits **at its own topic** and that no bioreactor or PCR label was silently dropped from the manifest itself.
+
+### Section-wise coverage confirmation
+
+| Section | Body facts | Figures | Labels in text |
+|---|---|---|---|
+| Unit 9 intro | 7/7 (F001-F007) | — | — |
+| Boyer profile | 13/13 (F008-F020) | text-only by design (no person photo) | — |
+| Ch intro / what biotechnology means | 6/6 (F021-F026) + 1/1 summary-unique folded (F026a) | — | — |
+| 9.1 Principles of Biotechnology | 32/32 (F027-F058) | — | — |
+| 9.2 Tools (opener) | 1/1 (F059) | — | — |
+| 9.2.1 Restriction Enzymes | 40/40 (F060-F099) | Fig 9.1, Fig 9.3 embedded + verified mono | 8/8 + 4/4 |
+| 9.2.2 Cloning Vectors | 32/32 (F100-F131) | Fig 9.4 embedded + verified mono | caption-only figure |
+| 9.2.3 Competent Host | 8/8 (F132-F139) | — | — |
+| 9.3 Processes (opener) | 1/1 (F140) | Fig 9.2 embedded + verified mono | 6/6 |
+| 9.3.1 Isolation of DNA | 9/9 (F141-F149) | Fig 9.5 embedded + verified mono | caption-only figure |
+| 9.3.2 Cutting DNA | 5/5 (F150-F154) | — | — |
+| 9.3.3 PCR | 7/7 (F155-F161) | Fig 9.6 embedded + verified mono | 10/10 |
+| 9.3.4 Insertion into host | 4/4 (F162-F165) | — | — |
+| 9.3.5 Foreign gene product | 16/16 (F166-F181) | Fig 9.7 embedded + verified mono | 10/10 |
+| 9.3.6 Downstream processing | 6/6 (F182-F187) | — | — |
+| Figure caption/label rows | 13/13 (F188-F200) | 7/7 figures | **38/38** |
+| **Total** | **200/200 rows ticked** | **7/7 mono** | **38/38** |
+
+### Coverage note
+
+- **Compression decisions** — Comparative/enumerable prose was reformatted into `data_table`s (the two core techniques; asexual vs sexual reproduction; the discovery timeline 1963/five-years-later/today; the EcoRI name parts; exonuclease vs endonuclease; bacteriophage vs plasmid copy number; natural agent → what it does → how it became a vector; the three other ways into a cell; one PCR cycle; small scale → continuous culture → bioreactor; the six bioreactor systems) and multi-step processes into `process_flow`s (the first recombinant DNA 1972; the three basic steps; how a restriction endonuclease works; gel electrophoresis; antibiotic-inactivation selection; insertional inactivation; competent-host heat shock; the seven 9.3 steps; DNA isolation; DNA cutting; the PCR cycle marked `cyclic=True`; host insertion; downstream processing). Every fact carried by the original sentence survives the merge — verified row-by-row in Pass 3(b). No fact was dropped to save space; 13 pages against 16 source pages, the difference being the source's figure whitespace and the sidebar/photograph that is deliberately not reproduced.
+
+- **Exercise-gap terms** — 10 rows recorded and rendered as an explicit appendix table (p13). Four are stated plainly as **beyond this chapter** rather than papered over with invented facts (Q1 the list of 10 recombinant therapeutics — the exercise itself directs an internet search; Q3 relative molecular size of enzymes vs DNA; Q4 molar concentration of human DNA — the exercise itself says "Consult your teacher"; Q8 the meiosis stage, which belongs to the inheritance chapters). One is answerable only by **reasoning from chapter facts** (Q5 eukaryotic restriction endonucleases → isolated from bacteria, role is restricting bacteriophage growth). The rest point at the body sections that already carry the answer. Rule 5 held: no outside content was introduced anywhere.
+
+- **Drift caught and fixed** — None in the chapter. Pass 3(b) found 0 DRIFTED / 0 MISSING / 0 FABRICATED across all 200 rows, so no `# [VERIFICATION FIX]` block edit to the `.py` was required. Notably **defect 4's class (a wrong positional qualifier) was re-tested at its exact original site and is correct** — "second two letters", read off source p5 rather than assumed. The one fix this cycle is documentary: this file's header row-count line was stale (claimed 168 facts / 8 figures against tables holding 200 rows / 7 figures) and has been corrected under a `[VERIFICATION FIX]` comment.
+
+- **Figures requiring manual attention** — Fig 9.7 is a two-part figure `(a)`/`(b)` embedded as a single wide asset at `max_width_cm=15.5`; the `(a)`/`(b)` sub-labels are part of the source raster, so the caption names each part explicitly in order. Fig 9.5 is the only **photograph** among the assets (test tubes of spooled DNA, not a person) and needed the widest tonal range to survive 1-bit thresholding — checked and legible. Fig 9.2 is deliberately placed at the head of **9.3**, immediately after the seven-step overview, rather than at the source's 9.2.1 position: it *is* the whole-process overview diagram, so it sits at its true topic there; all 6 labels are in the adjacent text. Fig 9.1 is referenced from two source topics (recognition-site cutting and sticky ends) and is placed at the sticky-ends discussion where both are in view.
+
+- **Colour-dependent figures** — Three, all handled so meaning survives monochrome. **Fig 9.1**: the original colour-codes vector DNA vs foreign DNA; the caption restates it by rendering — "the vector DNA is the outline strand and the foreign DNA the solid black strand". **Fig 9.4** (pBR322): the original distinguishes the `ampR`, `tetR`, `ori` and `rop` arcs by colour; the caption states that in monochrome each region is identified by its printed label and the arcs are separated by the boundary lines at the restriction sites. **Fig 9.6** (PCR): the original shades the amplified region; the caption states that the shaded blocks mark the region being amplified and the outline blocks are the flanking DNA that is not. Additionally F097's "bright **orange** coloured bands" is a stated property of an ethidium-bromide gel under UV, not a feature the reader must see in Fig 9.3 — it is kept as text.
+
+- **Source problems** — Five, all recovered and none unrecoverable: page-number digits bleeding into the text stream (`168 15-100`, `117722`); the unit-opening page interleaving the intro with the chapter-list sidebar; the degree glyph lost as `420C`; `β` lost from beta-galactosidase; and "two sets of primers" split across a page break. Each was resolved by reading the rendered source page rather than trusting the extraction. The Herbert Boyer photograph is a deliberate exclusion, not a problem. The source's own typos are preserved where they are labels (`Foam braker` in Fig 9.7's raster) and corrected in prose (`foam breaker`), and `interwined` (source p11) is kept verbatim in F146.
+
+- **Linter verdict** — `check_pdf.py` → **VERDICT PASS, 0 fail / 0 warn, exit 0**. All 8 checks PASS, with no accepted-WARN carve-out needed for this chapter: 1 footer/header band, 2 legibility floor (6.0pt smallest), 3 grayscale-only images (7/7 mono, independently re-confirmed as `mode="L"` with zero colour pixels on sampling), 4 no person photograph, 5 no banned Unicode glyphs, 6 figure-label coverage 38/38 with 0 partial and 0 missing, 7 inventory fully ticked 200/200, 8 page geometry 13/13 A4 portrait (595x842pt).
