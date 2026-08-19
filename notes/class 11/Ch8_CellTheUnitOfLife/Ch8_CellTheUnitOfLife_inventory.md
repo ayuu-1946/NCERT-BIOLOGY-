@@ -424,6 +424,43 @@ code, and the repeating decorative page bands/watermark. None carries a fact.
 Fig 8.10(a) is an electron micrograph of a cilium cross-section — a micrograph of a subcellular structure, not of a
 person, so it is embedded normally.
 
+## Gate 2 — accepted WARN (check 4), confirmed legitimate
+
+`check_pdf.py` final run: **18 pages, VERDICT WARN, 0 fail / 1 warn, exit 0**. Checks 1, 2, 3, 5, 6, 7 and 8 all PASS.
+The single WARN is check 4 ("No person photograph embedded") and is a **confirmed benign false positive** of the
+keyword heuristic, not a defect.
+
+**Trigger mechanism.** Check 4 scans *every* inventory table row for a small set of person-image keywords
+(`PORTRAIT_HINTS`, check_pdf.py L296) and warns on any substring match, regardless of which table the row belongs to.
+The scan is not restricted to the figure manifest, and it does not require the match to fall on a word boundary.
+
+**The two rows it fires on.** F112 (8.4.2) — "Gas vacuoles are found in blue green and purple and green
+photosynthetic bacteria." F213 (8.5.5) — "The chloroplasts contain chlorophyll and carotenoid pigments which are
+responsible for trapping light energy essential for photosynthesis." In both cases the matched substring is the
+`phot`+`o` prefix inside the words **photosynthetic** and **photosynthesis**. These are ordinary biological terms in
+Facts/Function rows of the running-text inventory. Neither row is a figure-manifest row, neither describes an image,
+and neither refers to a person-image of any kind.
+
+**Manifest cross-check.** The figure manifest holds exactly 14 rows (Fig 8.1–8.13, with 8.3 split a/b). Zero manifest
+rows contain any person-image keyword, and no such asset is listed for embedding.
+
+**Embedded-object audit.** The PDF contains exactly 14 embedded image XObjects, all `DeviceGray`, whose pixel
+dimensions match the 14 `assets/fig_8_*.png` diagram files 1:1. There is no fifteenth image object, so nothing beyond
+the 13 NCERT diagrams is embedded.
+
+**Scientist-profile audit.** The G.N. Ramachandran biography (F012–F019) renders on PDF page 1 with **0 embedded
+images** — a text-only `[NOTE]` box. The rendered page states in-document that the source's person-image printed
+beside the biography is deliberately not reproduced and that the biography is text-only.
+
+**Visual confirmation.** Pages 1 and 13 were rendered at 100 dpi and eyeballed. Page 1 shows the biography as pure
+text with no image frame; page 13 shows only the Fig 8.9 ribosome diagram.
+
+**Verdict: LEGITIMATE.** The §4.4 / §5-item-3 rule (no person-image is ever embedded; the scientist biography is
+text-only) is satisfied. The WARN is a word-substring collision with photosynthetic/photosynthesis and requires no
+change to the script, the PDF or the assets. It is **accepted, not suppressed** — the inventory wording is
+source-verbatim and must not be altered to silence a linter. Gate 2 is therefore **GREEN** (exit 0, no FAILs, the
+sole WARN eyeballed and confirmed benign).
+
 ## Colour-dependent figures
 
 | Fig # | What colour carried in the source | How the distinction is stated in words |
