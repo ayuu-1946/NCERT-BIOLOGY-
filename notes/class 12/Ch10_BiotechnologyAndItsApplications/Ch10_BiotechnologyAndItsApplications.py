@@ -521,6 +521,13 @@ story.append(Paragraph(
     "world. <b>Basmati rice</b> is distinct for its unique aroma and flavour, and <b>27 "
     "documented varieties of Basmati</b> are grown in India, with references in <b>ancient "
     "texts, folklore and poetry</b>.", STYLES["Body"]))
+# [VERIFICATION FIX - Pass 3(b)] F129 (10.4 vigilance qualifier) was ticked in the frozen
+# inventory but never written: the shipped paragraph jumped straight from "turmeric and neem"
+# (F128) to the Biopiracy definition (F130), dropping NCERT's closing warning that India must
+# counter these patent applications or others may "encash on our rich legacy". Full-read
+# confirmed genuinely MISSING (source/script/PDF), not a paraphrase; the automated grounding
+# check's ~62% on F129 was measuring real absence. Restored verbatim in fact, at its NCERT
+# position, closing this paragraph.
 story.append(Paragraph(
     "In <b>1997</b>, an <b>American company got patent rights on Basmati rice</b> through the "
     "<b>US Patent and Trademark Office</b>, allowing it to sell a 'new' variety of Basmati in "
@@ -529,7 +536,10 @@ story.append(Paragraph(
     "an invention or novelty. The patent <b>extends to functional equivalents</b>, implying that "
     "other people selling Basmati rice could be <b>restricted</b> by the patent. Several attempts "
     "have also been made to patent uses, products and processes based on <b>Indian traditional "
-    "herbal medicines</b>, e.g., <b>turmeric</b> and <b>neem</b>.", STYLES["Body"]))
+    "herbal medicines</b>, e.g., <b>turmeric</b> and <b>neem</b>. If we are <b>not vigilant</b> "
+    "and do not <b>immediately counter these patent applications</b>, other countries / "
+    "individuals may <b>encash on our rich legacy</b> and we may not be able to do anything "
+    "about it.", STYLES["Body"]))
 story.append(keyterm(
     "<b>Biopiracy</b> is the term used to refer to the <b>use of bio-resources by multinational "
     "companies and other organisations without proper authorisation</b> from the countries and "
