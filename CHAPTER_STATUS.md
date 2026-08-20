@@ -20,7 +20,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | # | Chapter | Class | Gate 1 (inventory) | Gate 2 (`check_pdf.py`) | Gate 3 (defects) | Deliverables | Overall |
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
 | 1 | The Living World | 11 | ✅ 121 facts frozen · 14/14 labels · 3 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 7 pp · 1 mono img | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
-| 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ⏳ Pass 3 pending | ✅ pdf · py · inventory · assets | **🟡 PASS 2 COMPLETE — PASS 3 PENDING** |
+| 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ▶️ Pass 3(a) done · 3(b) pending | ✅ pdf · py · inventory · assets | **🟡 PASS 3(a) DONE — PASS 3(b) PENDING** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
@@ -45,18 +45,20 @@ Verified closed under the supreme command prompt v6 on 2026-08-19. Resumed mid-w
 
 ---
 
-## Chapter 2 — Biological Classification — 🟡 PASS 2 COMPLETE (PASS 3 PENDING)
+## Chapter 2 — Biological Classification — 🟡 PASS 3(a) DONE (PASS 3(b) PENDING)
 
-Pass 2 verification completed under the supreme command prompt v6 on 2026-08-19. Pass 2 resumed from the existing successful build; Gate 1, source extraction, figure regeneration, and Pass 2 script generation were not repeated. Chapter 2 is not closed until Pass 3 / Gate 3 is completed.
+Pass 2 verification completed under the supreme command prompt v6 on 2026-08-19. Pass 3(a) — the visual render check — completed on 2026-08-20. Pass 3(b) — the full-read content cross-check against the frozen inventory — is still pending; Chapter 2 is not closed until Pass 3(b) / Gate 3 is completed.
 
 | Workflow stage | Evidence |
 |----------------|----------|
-| **Pass 2 / Gate 2** | `check_pdf.py` → **VERDICT WARN, 0 fail / 1 warn, exit 0**. Checks 1, 2, 3, 5, 6, 7, 8 PASS. 15 × A4-portrait pages, **6 monochrome images**, all 192 Facts rows ticked. |
-| **The 1 warning** | Check 4 photo-keyword heuristic — a **confirmed benign false positive**. It matches “photo” inside textual mentions of photosynthetic biology terms/profile hints; no scientist portrait is embedded. Check 3 independently confirms the 6 embedded images are the required monochrome biology figures. |
-| **Pass 2 visual QA** | **PASS.** All 15 pages rendered and inspected: figures, tables, captions, page breaks, typography, clipping/overflow, collisions, blank pages, banned glyphs, and monochrome print safety were checked. No genuine visual defects found. |
-| **Genuine defects** | **None.** The initial Gate 2 check-7 failure was bookkeeping only: all 192 facts were present in the PDF but the inventory tick column was not updated. After verifying coverage, all 192 rows were ticked and the linter re-run successfully. |
+| **Pass 2 / Gate 2** | `check_pdf.py` → **VERDICT WARN, 0 fail / 1 warn, exit 0**. Checks 1, 2, 3, 5, 6, 7, 8 PASS. 15 × A4-portrait pages, **6 monochrome images**, all 192 Facts rows ticked. Gate 2 re-confirmed green on 2026-08-20 before Pass 3 began (smallest text 6.0pt; 26/26 labels in text; all pages A4 portrait). |
+| **The 1 warning** | Check 4 photo-keyword heuristic — a **confirmed benign false positive**. It matches “photo” inside textual mentions of photosynthetic biology terms/profile hints (F007, F032, F041, F048, F064, F070, F076, F085); no scientist portrait is embedded. Check 3 independently confirms the 6 embedded images are the required monochrome biology figures. |
+| **Pass 3(a) — visual render check** | **PASS — zero layout defects.** All 15 pages rendered with pymupdf at actual size (150 dpi) and at a 1-bit B&W print-safety threshold, each inspected directly. Verified: no overflow/clipping, no orphaned headings, no squashed figures, no table running off the page, process-flow rules aligned with their triangle badges (fungal sexual cycle p8; virus discovery p12), figures boxed with captions, NOTE (solid rule + `!`) vs MEMORY AID (dashed border + star) tell-apart-able in B&W. Cross-page style identity confirmed by comparing H1/H2/H3 banners, tables, boxes and figure boxes from ≥3 points in the chapter — **template held, no drift**. |
+| **Badge micro-text reviewed, not a defect** | The `Quick Recap` and `Terms Used in the Exercises` headings feed text labels (`"Recap"`, `"Appendix"`) into the section-number badge. `neet_template._badge_section` grows the plate sideways to fit at a ≥6pt floor (never clips), and the closed, Gate-3-passed Ch1 uses the identical `heading("Recap", …)` / `heading("Appendix", …)` calls. Kept as-is for cross-chapter consistency (check 2 passed at 6.0pt smallest). |
+| **Source watermark** | Faint NCERT "not to be republished" watermark is visible on some extracted figures (Fig 2.1, 2.2, 2.4, 2.6). It originates in the source PDF, not the layout. Flagged for optional cleanup during Pass 3(b); not a layout defect. |
+| **Genuine layout defects** | **None.** No `# [VERIFICATION FIX]` edit to the `.py` was required by Pass 3(a). |
 | **Deliverables** | `Ch2_BiologicalClassification.pdf` · `.py` · `_inventory.md` (with figure-label matrix) · `assets/` (6 mono PNGs). |
-| **Next required step** | Pass 3 — Gate 3 dual verification: cross-page visual style consistency and full-read content cross-check against the frozen inventory. |
+| **Next required step** | Pass 3(b) — full-read content cross-check of all 192 inventory rows + 26 figure labels against the source (COVERED / MISSING / FABRICATED / DRIFTED), then Gate 3 closure. |
 
 ---
 
