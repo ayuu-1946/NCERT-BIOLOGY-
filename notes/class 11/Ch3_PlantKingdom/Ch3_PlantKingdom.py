@@ -201,6 +201,8 @@ story.append(figure("fig_3_4c.png", "<b>Fig. 3.4(c)</b> - Gymnosperms: panel (c)
 story.append(heading("3.5", "Angiosperms - Flowering Plants", level=1))
 story.append(b1("Unlike gymnosperms with naked ovules, angiosperms develop pollen grains and ovules in specialised <b>flowers</b>; their seeds are enclosed in <b>fruits</b>. This exceptionally large group occupies a wide range of habitats."))
 story.append(b1("Size ranges from tiny <i>Wolffia</i> to <i>Eucalyptus</i> trees over <b>100 metres</b>. Angiosperms supply food, fodder, fuel, medicines and many commercial products. They divide into dicotyledons and monocotyledons."))
+# [VERIFICATION FIX] Place this exercise-gap definition with the angiosperm topic so it does not orphan on an otherwise blank final page.
+story.append(b1("<b>Diplontic life cycle:</b> the diploid sporophyte is dominant and the gametophyte is reduced to a few cells, as in gymnosperms and angiosperms. By contrast, haplontic algae have a dominant haploid phase, while bryophytes and pteridophytes show both multicellular generations."))
 story.append(figure("fig_3_5ab.png", "<b>Fig. 3.5</b> - Angiosperms: panel (a), a dicotyledon; panel (b), a monocotyledon."))
 
 # ---- Recap ----
@@ -228,7 +230,6 @@ story.append(b1("<b>Angiosperm meiosis:</b> microspore mother cells undergo meio
 story.append(b1("<b>Primary endosperm nucleus:</b> in a typical angiosperm it is triploid (3n), formed when one male gamete fuses with two polar nuclei."))
 story.append(b1("<b>Monocot meristem:</b> it belongs to the diploid sporophyte, so its cells are 2n. Ploidy answers for Q4 are: moss protonema n; primary endosperm nucleus 3n; moss leaf n; fern prothallus n; <i>Marchantia</i> gemma n; monocot meristem 2n; liverwort ovum n; fern zygote 2n."))
 story.append(b1("<b>Gymnosperm economic importance:</b> gymnosperms provide timber and softwood, paper pulp, resins and turpentine, edible pine nuts, ornamentals, and medicinal products from plants such as <i>Ephedra</i> and <i>Taxus</i>."))
-story.append(b1("<b>Diplontic life cycle:</b> the diploid sporophyte is dominant and the gametophyte is reduced to a few cells, as in gymnosperms and angiosperms. By contrast, haplontic algae have a dominant haploid phase, while bryophytes and pteridophytes show both multicellular generations."))
 
 
 def main():
