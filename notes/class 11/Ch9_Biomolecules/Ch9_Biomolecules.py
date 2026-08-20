@@ -206,7 +206,7 @@ story.append(figure("fig_9_1a.png",
                     max_width_cm=9.0))
 story.append(labels_line(["Sugars (Carbohydrates)", "Glucose", "Ribose"]))
 
-# ---- 9.1 Lipids ---- (F045-F063) + Fig 9.1 (c)
+# ---- 9.1 Lipids ---- (F045-F063, summary-unique F271) + Fig 9.1 (c)
 story.append(H("9.1", "Lipids", 2,
                P("<b>Lipids</b> are generally water insoluble. They could be simple fatty acids. A "
                  "<b>fatty acid</b> has a carboxyl group attached to an R group.")))
@@ -225,6 +225,9 @@ story.append(P("Some lipids have phosphorous and a phosphorylated organic compou
                "are <b>phospholipids</b>. They are found in cell membrane; <b>lecithin</b> is one "
                "example. Some tissues, especially the neural tissues, have lipids with more complex "
                "structures."))
+# [VERIFICATION FIX] summary-unique F271 was ticked but never written into the body; folded in here.
+story.append(P("As the summary states it, <b>phospholipids</b> contain, in addition, a "
+               "<b>phosphorylated nitrogenous compound</b>."))
 story.append(figure("fig_9_1c.png",
                     "Fig. 9.1 (c) - Fats and oils (lipids): a fatty acid (palmitic acid), "
                     "glycerol, a triglyceride (R1, R2, R3 are fatty acids), a phospholipid "
@@ -259,6 +262,10 @@ story.append(figure("fig_9_1f.png",
 story.append(labels_line(["Nucleotide", "Adenine", "Adenylic acid"]))
 story.append(P("<i>Figure 9.1 - Diagrammatic representation of small molecular weight organic "
                "compounds in living tissues.</i>"))
+# [VERIFICATION FIX] summary-unique F269 was ticked but never written into the body; folded in here.
+story.append(P("As the summary catalogues them, <b>amino acids, monosaccharide and disaccharide "
+               "sugars, fatty acids, glycerol, nucleotides, nucleosides and nitrogen bases</b> are "
+               "some of the organic compounds seen in living organisms."))
 
 # ---- 9.2 Primary and Secondary Metabolites ---- (F072-F078)
 story.append(H("9.2", "Primary and Secondary Metabolites", 1,
@@ -405,7 +412,7 @@ story.append(note("The summary generalises this section: polysaccharides are com
                   "glycogen). The body names plant cell walls and arthropod exoskeletons directly; "
                   "the mention of <b>fungi</b> comes from the summary."))
 
-# ---- 9.6 Nucleic Acids ---- (F126-F135, summary-unique F277)
+# ---- 9.6 Nucleic Acids ---- (F126-F135, summary-unique F270, F277)
 story.append(H("9.6", "Nucleic Acids", 1,
                P("The other type of macromolecule that one would find in the acid-insoluble "
                  "fraction of any living tissue is the <b>nucleic acid</b>. These are "
@@ -424,6 +431,9 @@ story.append(P("The sugar found in polynucleotides is either <b>ribose</b> (a mo
                "pentose) or <b>2' deoxyribose</b>. A nucleic acid containing deoxyribose is called "
                "<b>deoxyribonucleic acid (DNA)</b> while that which contains ribose is called "
                "<b>ribonucleic acid (RNA)</b>."))
+# [VERIFICATION FIX] summary-unique F270 was ticked but never written into the body; folded in here.
+story.append(P("The summary fixes the counts: there are <b>20 types of amino acids</b> and "
+               "<b>5 types of nucleotides</b>."))
 story.append(note("Nucleic acids serve as genetic material: DNA and RNA carry <b>hereditary "
                   "information</b> and are passed on from the parental generation to the progeny "
                   "(the parent-to-progeny transmission clause is stated in the summary; the body "
