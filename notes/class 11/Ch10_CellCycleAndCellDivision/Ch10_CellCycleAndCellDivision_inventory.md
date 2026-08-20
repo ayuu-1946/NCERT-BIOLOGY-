@@ -254,6 +254,61 @@ No person photograph exists anywhere in this source chapter, so none was extract
 
 Verification per asset (§4.4 Step 3): every file opened and inspected at full size — correct figure for its caption, no clipped label or leader line, legible at print size, no neighbouring-figure intrusion, `mode == "L"` with extrema `(0, 255)`. Two seam defects were found and fixed during this pass: the first (a)/(b) split at y=392 left the "Transition to Metaphase" circle's crown sliced between the two crops, and the first (d)/(e) split at y=470 cut the "(d)" part label in half; both splits were re-measured and re-rendered, and the seams were re-inspected as stitched review sheets before being marked `Verified: yes`.
 
+## Pass 2 / Pass 3 verification record
+
+Pass 1 froze this file with every row pre-ticked before the script existed, so the ticks did
+not yet mean what the tick legend says. They are re-earned as of the Pass 2 build below and
+are now accurate; anyone auditing this chapter should read the ticks as verified from here on.
+
+- **Pass 2 build.** `Ch10_CellCycleAndCellDivision.py` written linearly from this inventory in
+  Content Order (§5), importing the frozen `neet_template.py` only - no style, colour, font or
+  geometry re-declared. Every block carries its `# ---- N.N ----` marker. Output:
+  `Ch10_CellCycleAndCellDivision.pdf`, 11 pages against an 11-page source (no compression).
+- **Gate 2.** `python3 check_pdf.py "notes/class 11/Ch10_CellCycleAndCellDivision"` exits 0 with
+  **0 FAIL, 0 WARN**, and is also green under `--strict`. Checks 1-8: no text in the 1.4 cm
+  top/bottom bands; smallest rendered glyph 6.0pt (above the 5.0pt floor and outside the
+  5.0-6.0pt review band); all 8 embedded images monochrome; no portrait row; no banned Unicode
+  arrows/sub-superscripts/Greek/emoji; 25/25 figure labels found in running text; all 175 Facts
+  rows ticked; all 11 pages A4 portrait.
+- **Phase notation.** "G1", "S", "G2", "G0", "2C", "4C", "2n" are written as plain ASCII rather
+  than with `<sub>` tags: Unicode sub/superscript codepoints are banned by §4, and a Times
+  subscript inside a 9.5pt table cell renders at about 5.5pt, inside the linter's WARN band.
+- **Pass 3 (a) visual render.** All 11 pages rendered and inspected individually. No overflow,
+  no clipped table, no orphaned heading, no squashed figure, no process-flow rule misaligned
+  with its badges. H1/H2/H3 banners, `data_table`, NOTE, MEMORY AID, process flow and figure
+  boxes were each compared across three separate points in the chapter and are identical - the
+  imported template held.
+- **Pass 3 (b) content cross-check.** All 175 rows (F001-F167, L01-L08) screened token-by-token
+  against the generated PDF's extracted text: **0 rows below 85% token coverage**, then each
+  section's block was read against its inventory rows. Result: 175 COVERED, 0 MISSING,
+  0 FABRICATED, 0 DRIFTED. Qualifiers verified surviving verbatim include "only" (F011, F041,
+  F090, F106), "usually" (F024, F090, F093, F144), "few exceptions" (F042), "some" (F091, F089),
+  "except" (F128), "cannot" (F049), "more than 95%" (F022), "about an hour" (F021),
+  "approximately every 24 hours" (F015), "only about 90 minutes" (F017), "no increase in the
+  chromosome number" (F032), "paradoxically" (F154).
+
+### Coverage note
+
+- **Compression decisions** - the three interphase phases (F027-F035 plus summary-unique
+  F160-F162) are delivered as one 3-row table instead of three paragraphs; cytokinesis in animal
+  vs plant cells (F083-F087) as one 2-row table; the mitosis/meiosis contrast (Q11) and the
+  N/C-through-the-cycle figures (Q16) as tables that add no fact. Every merged sentence's facts
+  and qualifiers survive the merge; nothing was dropped for space.
+- **Exercise-gap terms** - all 7 rows covered: Q16 and Q11 in the body tables (10.1.1, 10.4);
+  Q1, Q9, Q13(ii), Q14, Q15 in the "Terms Used in the Exercises" appendix. Q9's size comparison
+  and Q13(ii)'s named example are stated plainly as beyond what this chapter supplies rather
+  than filled in from outside (Rule 5).
+- **Drift caught and fixed** - none. Gate 2 was green on the first render and the content
+  cross-check raised no confirmed defect, so no `# [VERIFICATION FIX]` block exists.
+- **Figures requiring manual attention** - None. All 8 assets re-verified this session as
+  `mode == "L"` with extrema `(0, 255)`.
+- **Color-dependent figures** - None. Figure 10.1's phase wedges are separated by greyscale
+  tone and by their printed labels ("M Phase", "Cytokinesis", "Telophase", "Anaphase",
+  "Metaphase", "Prophase", "G1", "S", "G2", "G0"), all of which are also in the running text.
+- **Source problems** - see the section below (NCERT's "thererfore" typo, Figure 10.3's "1" vs
+  roman "I" panel labels, the "not to be republished" watermark).
+- **Linter verdict** - PASS, 0 fail / 0 warn, green under `--strict`. No accepted WARN.
+
 ## Source problems
 
 - F085 carries NCERT's own typo "thererfore" (for "therefore"); normalised in the rewritten body text only.
