@@ -47,16 +47,26 @@ FIGURES = [
     # itself cites "(Figure 3.1a)", "(Figure 3.1b)" and "(Figure 3.1c)" separately at
     # the end of 3.1.1, 3.1.2 and 3.1.3 respectively.
     ("fig_3_1a", 3, (111.0, 104.0, 406.0, 288.0), []),
+    # Row (b) ends at y=478 (the "(b-i)"/"(b-ii)"/"(b-iii)" part labels bottom out at
+    # ~y=470); row (c)'s artwork does not begin until y=490. Measured off a 150 dpi
+    # gridded render of the plate: the ONLY clean full-width whitespace band on this
+    # page is y=270.2-274.5 (between rows a and b), so the b/c boundary is placed in
+    # the per-part vertical gap instead. A previous crop ran row (b) to y=491, which
+    # dragged the top of (c-i) Porphyra into the (b) asset.
+    # Right edge pushed to 496 so (b-iii)'s "Frond" leader + label are not clipped.
+    # The single scrub rect removes row (a)'s "(a-ii)" part label, which sits at
+    # y=274-286 directly above (b-iii); (b-iii)'s own artwork does not start until
+    # y~300, so nothing belonging to row (b) is painted over.
     (
         "fig_3_1b",
         3,
-        (68.0, 276.0, 492.0, 491.0),
-        [
-            (340.0, 276.0, 398.0, 297.0),  # row (a)'s "(a-ii)" label, which sits
-            # above b-iii (b-iii's own artwork does not begin until y=315)
-        ],
+        (66.0, 274.0, 496.0, 478.0),
+        [(330.0, 274.0, 400.0, 292.0)],
     ),
-    ("fig_3_1c", 3, (200.0, 488.0, 470.0, 673.0), []),
+    # Row (c): (c-i) Porphyra occupies x=124-210 and (c-ii) Polysiphonia x=282-462.
+    # A previous crop started at x=200, which sliced (c-i) Porphyra vertically down
+    # the middle and cut its "Frond" label in half -- 4.4 Step 3 defects (b) and (d).
+    ("fig_3_1c", 3, (118.0, 486.0, 470.0, 666.0), []),
     # Figure 3.2 Bryophytes -- grouped as NCERT's caption groups them:
     # (a)+(b) the liverwort Marchantia, (c)+(d) the mosses.
     ("fig_3_2ab", 6, (114.0, 227.0, 534.0, 425.0), []),
