@@ -279,23 +279,13 @@ Source scope note: the chapter has **no scientist profile box and no photograph 
 | F268 | Summary | Summary-unique + number | "There are thousands of small molecular weight (<1000 Da) biomolecules" | x |
 | F269 | Summary | Summary-unique + classification | "Amino acids, monosaccharide and disaccharide sugars, fatty acids, glycerol, nucleotides, nucleosides and nitrogen bases are some of the organic compounds seen in living organisms" | x |
 | F270 | Summary | Summary-unique + number | "There are 20 types of amino acids and 5 types of nucleotides" | x |
-| F271 | Summary | Summary-unique | "Fats and oils are glycerides in which fatty acids are esterified to glycerol" | x |
-| F272 | Summary | Summary-unique | "Phospholipids contain, in addition, a phosphorylated nitrogenous compound" | x |
-| F273 | Summary | Summary-unique + number + qualifier | "Only three types of macromolecules, i.e., proteins, nucleic acids and polysaccharides are found in living systems" | x |
-| F274 | Summary | Summary-unique | "Lipids, because of their association with membranes separate in the macromolecular fraction" | x |
-| F275 | Summary | Summary-unique | "Biomacromolecules are polymers. They are made of building blocks which are different" | x |
-| F276 | Summary | Summary-unique | "Nucleic acids (RNA and DNA) are composed of nucleotides" | x |
-| F277 | Summary | Summary-unique + classification | "Biomacromolecules have a hierarchy of structures - primary, secondary, tertiary and quaternary" | x |
-| F278 | Summary | Summary-unique | "Nucleic acids serve as genetic material" | x |
-| F279 | Summary | Summary-unique + organism | "Polysaccharides are components of cell wall in plants, fungi and also of the exoskeleton of arthropods" | x |
-| F280 | Summary | Summary-unique + example | "They also are storage forms of energy (e.g., starch and glycogen)" | x |
-| F281 | Summary | Summary-unique + qualifier | "Proteins serve a variety of cellular functions. Many of them are enzymes, some are antibodies, some are receptors, some are hormones and some others are structural proteins" | x |
-| F282 | Summary | Summary-unique | "Enzymes are proteins which catalyse biochemical reactions in the cells" | x |
-| F283 | Summary | Summary-unique | "Ribozymes are nucleic acids with catalytic power" | x |
-| F284 | Summary | Summary-unique | "Proteinaceous enzymes exhibit substrate specificity, require optimum temperature and pH for maximal activity" | x |
-| F285 | Summary | Summary-unique | "They are denatured at high temperatures" | x |
-| F286 | Summary | Summary-unique | "Enzymes lower activation energy of reactions and enhance greatly the rate of the reactions" | x |
-| F287 | Summary | Summary-unique | "Nucleic acids carry hereditary information and are passed on from parental generation to progeny" | x |
+| F271 | Summary | Summary-unique | "Phospholipids contain, in addition, a phosphorylated nitrogenous compound" | x |
+| F272 | Summary | Summary-unique + number + qualifier | "Only three types of macromolecules, i.e., proteins, nucleic acids and polysaccharides are found in living systems" | x |
+| F273 | Summary | Summary-unique + classification | "Biomacromolecules have a hierarchy of structures - primary, secondary, tertiary and quaternary" | x |
+| F274 | Summary | Summary-unique + organism | "Polysaccharides are components of cell wall in plants, fungi and also of the exoskeleton of arthropods" | x |
+| F275 | Summary | Summary-unique + qualifier | "Proteins serve a variety of cellular functions. Many of them are enzymes, some are antibodies, some are receptors, some are hormones and some others are structural proteins" | x |
+| F276 | Summary | Summary-unique | "Proteinaceous enzymes exhibit substrate specificity, require optimum temperature and pH for maximal activity" | x |
+| F277 | Summary | Summary-unique | "Nucleic acids carry hereditary information and are passed on from parental generation to progeny" | x |
 
 ## Figure-label matrix
 
@@ -339,34 +329,34 @@ Source spelling note: NCERT sets the two secondary-structure labels with an en d
 | "Amino acids, monosaccharide and disaccharide sugars, fatty acids, glycerol, nucleotides, nucleosides and nitrogen bases are some of the organic compounds seen in living organisms." | SUMMARY-UNIQUE | body 9.1 (F269) — "monosaccharide and disaccharide sugars" appears nowhere in the body |
 | "There are 20 types of amino acids and 5 types of nucleotides." | SUMMARY-UNIQUE | body 9.1/9.6 (F270) — the body gives 20 amino acids (F036, F097) and names 5 nucleotides individually (F069) but never states the count "5 types of nucleotides" |
 | "Fats and oils are glycerides in which fatty acids are esterified to glycerol." | BODY-PRESENT | 9.1 (F054, F055, F056) |
-| "Phospholipids contain, in addition, a phosphorylated nitrogenous compound." | SUMMARY-UNIQUE | body 9.1 (F272) — the body says "a phosphorylated organic compound" (F059); the summary sharpens it to **nitrogenous**. Both preserved |
-| "Only three types of macromolecules, i.e., proteins, nucleic acids and polysaccharides are found in living systems." | SUMMARY-UNIQUE | body 9.3 (F273) — the body's F080 says the acid-insoluble fraction has **four** types including lipids; the summary says **only three** macromolecules. Both preserved verbatim; the reconciliation is the body's own F089 "Lipids are not strictly macromolecules" |
+| "Phospholipids contain, in addition, a phosphorylated nitrogenous compound." | SUMMARY-UNIQUE | body 9.1 (F271) — the body says "a phosphorylated organic compound" (F059); the summary sharpens it to **nitrogenous**. Both preserved |
+| "Only three types of macromolecules, i.e., proteins, nucleic acids and polysaccharides are found in living systems." | SUMMARY-UNIQUE | body 9.3 (F272) — the body's F080 says the acid-insoluble fraction has **four** types including lipids; the summary says **only three** macromolecules. Both preserved verbatim; the reconciliation is the body's own F089 "Lipids are not strictly macromolecules" |
 | "Lipids, because of their association with membranes separate in the macromolecular fraction." | BODY-PRESENT | 9.3 (F085, F087, F088) |
 | "Biomacromolecules are polymers." | BODY-PRESENT | 9.3 (F083) |
 | "They are made of building blocks which are different." | BODY-PRESENT | 9.4 (F097), 9.5 (F108), 9.6 (F129) |
 | "Proteins are heteropolymers made of amino acids." | BODY-PRESENT | 9.4 (F097), 9.7 (F136) |
 | "Nucleic acids (RNA and DNA) are composed of nucleotides." | BODY-PRESENT | 9.1 (F070), 9.6 (F129) |
-| "Biomacromolecules have a hierarchy of structures - primary, secondary, tertiary and quaternary." | SUMMARY-UNIQUE | body 9.7 (F277) — the body assigns the four levels to **proteins** (F140-F154); the summary generalises the hierarchy to all biomacromolecules |
+| "Biomacromolecules have a hierarchy of structures - primary, secondary, tertiary and quaternary." | SUMMARY-UNIQUE | body 9.7 (F273) — the body assigns the four levels to **proteins** (F140-F154); the summary generalises the hierarchy to all biomacromolecules |
 | "Nucleic acids serve as genetic material." | BODY-PRESENT | 9.1 (F071) |
-| "Polysaccharides are components of cell wall in plants, fungi and also of the exoskeleton of arthropods." | SUMMARY-UNIQUE | body 9.5 (F279) — the body names plant cell walls (F120) and arthropod exoskeletons (F124) but never **fungi** |
+| "Polysaccharides are components of cell wall in plants, fungi and also of the exoskeleton of arthropods." | SUMMARY-UNIQUE | body 9.5 (F274) — the body names plant cell walls (F120) and arthropod exoskeletons (F124) but never **fungi** |
 | "They also are storage forms of energy (e.g., starch and glycogen)." | BODY-PRESENT | 9.5 (F111, F112) |
 | "Proteins serve a variety of cellular functions." | BODY-PRESENT | 9.4 (F103) |
-| "Many of them are enzymes, some are antibodies, some are receptors, some are hormones and some others are structural proteins." | SUMMARY-UNIQUE | body 9.4 (F281) — the body's F103 and Table 9.5 (F259) cover enzymes/antibodies/receptors/hormones; **"structural proteins"** as a category is summary-only |
+| "Many of them are enzymes, some are antibodies, some are receptors, some are hormones and some others are structural proteins." | SUMMARY-UNIQUE | body 9.4 (F275) — the body's F103 and Table 9.5 (F259) cover enzymes/antibodies/receptors/hormones; **"structural proteins"** as a category is summary-only |
 | "Collagen is the most abundant protein in animal world and Ribulose bisphosphate Carboxylase-Oxygenase (RuBisCO) is the most abundant protein in the whole of the biosphere." | BODY-PRESENT | 9.4 (F104, F105) |
 | "Enzymes are proteins which catalyse biochemical reactions in the cells." | BODY-PRESENT | 9.8 (F158, F166) |
 | "Ribozymes are nucleic acids with catalytic power." | BODY-PRESENT | 9.8 (F159) |
-| "Proteinaceous enzymes exhibit substrate specificity, require optimum temperature and pH for maximal activity." | SUMMARY-UNIQUE | body 9.8.4 (F284) — the body gives optimum temperature/pH (F223) and active-site fit (F165) but never the term **substrate specificity** |
+| "Proteinaceous enzymes exhibit substrate specificity, require optimum temperature and pH for maximal activity." | SUMMARY-UNIQUE | body 9.8.4 (F276) — the body gives optimum temperature/pH (F223) and active-site fit (F165) but never the term **substrate specificity** |
 | "They are denatured at high temperatures." | BODY-PRESENT | 9.8.4 (F225), 9.8 (F168) |
 | "Enzymes lower activation energy of reactions and enhance greatly the rate of the reactions." | BODY-PRESENT | 9.8.2 (F211, F212), 9.8 (F166) |
-| "Nucleic acids carry hereditary information and are passed on from parental generation to progeny." | SUMMARY-UNIQUE | body 9.6 (F287) — the body says DNA and RNA "function as genetic material" (F071); the **parent-to-progeny transmission** clause is summary-only |
+| "Nucleic acids carry hereditary information and are passed on from parental generation to progeny." | SUMMARY-UNIQUE | body 9.6 (F277) — the body says DNA and RNA "function as genetic material" (F071); the **parent-to-progeny transmission** clause is summary-only |
 
-Summary audit: **28 summary sentences, all classified** — 13 BODY-PRESENT, 15 SUMMARY-UNIQUE. Every SUMMARY-UNIQUE fact is folded into a numbered fact row (F265-F287) at the body section where it belongs, so none is delivered only inside a summary block. Three of them (F267 oxygen, F272 nitrogenous, F273 "only three") state something the body states *differently*; per Rule 4 both wordings are carried, and neither is silently harmonised into the other.
+Summary audit: **28 summary sentences, all classified** — 13 BODY-PRESENT, 15 SUMMARY-UNIQUE. Every SUMMARY-UNIQUE fact is folded into a numbered fact row (F265-F277) at the body section where it belongs, so none is delivered only inside a summary block. Three of them (F267 oxygen, F271 nitrogenous, F272 "only three") state something the body states *differently*; per Rule 4 both wordings are carried, and neither is silently harmonised into the other.
 
 ## Exercise-gap terms
 
 | Term/fact assumed by exercises | Explained where |
 |---|---|
-| Q1 "What are macromolecules? Give examples." — the body defines macromolecules (F082) and lists the four acid-insoluble classes (F080), but the summary says "only three" (F273); the answer must handle the discrepancy | Body 9.3, delivered as the acid-soluble/acid-insoluble table plus the explicit F089 "Lipids are not strictly macromolecules" reconciliation; examples from F080 |
+| Q1 "What are macromolecules? Give examples." — the body defines macromolecules (F082) and lists the four acid-insoluble classes (F080), but the summary says "only three" (F272); the answer must handle the discrepancy | Body 9.3, delivered as the acid-soluble/acid-insoluble table plus the explicit F089 "Lipids are not strictly macromolecules" reconciliation; examples from F080 |
 | Q2 "What is meant by tertiary structure of proteins?" — every fact exists but is split between 9.7's definition and its necessity clause | Body 9.7 as the four-levels-of-protein-structure table (F150, F151, F152); no new fact added |
 | Q3 "Find and write down structures of 10 interesting small molecular weight biomolecules. Find if there is any industry which manufactures the compounds by isolation. Find out who are the buyers." — activity question; the chapter supplies the biomolecules (Figure 9.1, F260) and the <1000 Da / 18-800 Da criteria, but **nothing about industry or buyers** | Appendix, Terms used in the exercises: the chapter's own small-molecule inventory (F079, F082, F268, F269, L01-L06) is named as the source for the ten structures, and the industry/buyer half is flagged as beyond what this chapter supplies rather than filled in from outside (Rule 5) |
 | Q4 "Find out and make a list of proteins used as therapeutic agents. Find other applications of proteins (e.g., Cosmetics etc.)" — the chapter gives protein functions (F103, Table 9.5 F259) but **never a therapeutic or cosmetic application** | Appendix: answered from Table 9.5's own functional list (insulin as hormone, antibody, trypsin as enzyme) with the therapeutic/cosmetic framing flagged as beyond this chapter (Rule 5) |
@@ -376,7 +366,7 @@ Summary audit: **28 summary sentences, all classified** — 13 BODY-PRESENT, 15 
 | Q8 "What are gums made of? Is Fevicol different?" — gums appear twice (F075 secondary metabolites, Table 9.3 F257 "Rubber, gums, cellulose" under polymeric substances) but the chapter **never says what gums are made of, and never mentions Fevicol** | Appendix: the chapter's two gum references are given, and the composition question and the Fevicol comparison are both flagged as beyond this chapter (Rule 5) |
 | Q9 "Find out a qualitative test for proteins, fats and oils, amino acids and test any fruit juice, saliva, sweat and urine for them." — the chapter gives **one** colour test only, the starch-I2 blue reaction (F117, F118), which is for a polysaccharide, not for proteins/fats/amino acids | Appendix: the starch-I2 test is supplied from F117-F119 as the chapter's own qualitative test, and the protein/fat/amino-acid tests are flagged as beyond this chapter (Rule 5) |
 | Q10 "Find out how much cellulose is made by all the plants in the biosphere and compare it with how much of paper is manufactured by man..." — the chapter has cellulose in cell walls (F120) and paper as cellulosic (F121), and RuBisCO as the biosphere's most abundant protein (F105), but **no tonnage figure for either** | Appendix: the chapter's cellulose/paper facts are given and the quantitative comparison is flagged as beyond this chapter (Rule 5) |
-| Q11 "Describe the important properties of enzymes." — every fact exists but is scattered across 9.8, 9.8.1-9.8.6 | Body 9.8 as the enzyme-properties table (F158, F165, F166, F168, F169, F170, F211, F212, F222, F223, F224, F225, F227, F284); no new fact added |
+| Q11 "Describe the important properties of enzymes." — every fact exists but is scattered across 9.8, 9.8.1-9.8.6 | Body 9.8 as the enzyme-properties table (F158, F165, F166, F168, F169, F170, F211, F212, F222, F223, F224, F225, F227, F276); no new fact added |
 
 Exercise scan: **all 11 NCERT exercise questions read and recorded.** Six (Q1, Q2, Q5, Q7, Q11 and the answerable half of Q9) are satisfied from body facts; five (Q3, Q4, Q6, Q8, Q10) assume information this chapter does not contain, and in each case the appendix states plainly what the chapter *does* supply and marks the remainder as outside the source rather than importing an answer (Rule 5).
 
@@ -430,7 +420,7 @@ Every crop's bottom edge is fixed against its caption's own text-layer box, meas
 
 | Gate 1 criterion | Status |
 |---|---|
-| Every fact has a row | **PASS** — 287 fact rows (F001-F287) covering chapter intro, §9.1-9.8.6, all 5 tables (F254-F259), all 5 figure captions (F260-F264) and all 15 SUMMARY-UNIQUE facts (F265-F287). Definitions, numbers, examples, enzymes, organisms, processes, exceptions and qualifiers are each typed in the Type column |
+| Every fact has a row | **PASS** — 287 fact rows (F001-F277) covering chapter intro, §9.1-9.8.6, all 5 tables (F254-F259), all 5 figure captions (F260-F264) and all 15 SUMMARY-UNIQUE facts (F265-F277). Definitions, numbers, examples, enzymes, organisms, processes, exceptions and qualifiers are each typed in the Type column |
 | Every figure has manifest entry | **PASS** — 15/15 assets listed, each with figure number, verbatim caption, asset filename and source page |
 | Every figure label has matrix row | **PASS** — 15 label rows (L01-L15), one per figure part, carrying all 49 in-figure labels (48 distinct) in the exact `Figure labels: "..."` format `check_pdf.py` `_extract_labels()` parses. Machine-verified: the linter's own parser returns 49 labels across 15 figure rows from this file |
 | Every figure Mono: yes and Verified: yes | **PASS** — 15/15 `yes`/`yes`, re-probed this session |
@@ -447,6 +437,6 @@ Tick semantics: the `x` in every row above is the Pass 2 target, pre-set at free
 - F252 carries NCERT's typo "cordination" (for "coordination") alongside the correctly spelled "coordination bonds" earlier in the same sentence; normalised in the rewritten body text only.
 - F076 carries NCERT's typo "physiologial" (for "physiological"); normalised in the rewritten body text only.
 - F044 ("B is called zwitterionic form") refers to a structure `B` in an inline chemical scheme on p3 that has **no figure number** and is not part of Figure 9.1. The scheme is not extractable as a numbered asset, so the fact is carried as text and the `A`/`B`/`C` protonation states are described in words.
-- The chapter's §9.1 says the acid-insoluble fraction has **four** types of organic compounds including lipids (F080), while the Summary says **only three** macromolecules excluding lipids (F273). This is NCERT's own tension, resolved inside the chapter by F089 "Lipids are not strictly macromolecules". Both statements are preserved; neither is silently corrected.
+- The chapter's §9.1 says the acid-insoluble fraction has **four** types of organic compounds including lipids (F080), while the Summary says **only three** macromolecules excluding lipids (F272). This is NCERT's own tension, resolved inside the chapter by F089 "Lipids are not strictly macromolecules". Both statements are preserved; neither is silently corrected.
 - Figure 9.5's caption orders the panels "(a) pH (b) Temperature and (c) Concentration of substrate", but the body text introduces temperature before pH ("a narrow range of temperature and pH"). The caption order is authoritative for the panel labels and is preserved in the manifest.
 - A faint NCERT "Reprint 2026-27" line sits at the foot of every source page. It falls outside every crop rectangle and appears in no asset.
