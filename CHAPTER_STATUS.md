@@ -20,7 +20,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | # | Chapter | Class | Gate 1 (inventory) | Gate 2 (`check_pdf.py`) | Gate 3 (defects) | Deliverables | Overall |
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
 | 1 | The Living World | 11 | ✅ 121 facts frozen · 14/14 labels · 3 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 7 pp · 1 mono img | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
-| 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
+| 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ⏳ Pass 3 pending | ✅ pdf · py · inventory · assets | **🟡 PASS 2 COMPLETE — PASS 3 PENDING** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
@@ -45,9 +45,9 @@ Verified closed under the supreme command prompt v6 on 2026-08-19. Resumed mid-w
 
 ---
 
-## Chapter 2 — Biological Classification — ✅ FULLY COMPLETE (CLOSED)
+## Chapter 2 — Biological Classification — 🟡 PASS 2 COMPLETE (PASS 3 PENDING)
 
-Verified closed under the supreme command prompt v6 on 2026-08-19. Pass 2 resumed from the existing successful build; Gate 1, source extraction, figure regeneration, and Pass 2 script generation were not repeated.
+Pass 2 verification completed under the supreme command prompt v6 on 2026-08-19. Pass 2 resumed from the existing successful build; Gate 1, source extraction, figure regeneration, and Pass 2 script generation were not repeated. Chapter 2 is not closed until Pass 3 / Gate 3 is completed.
 
 | Workflow stage | Evidence |
 |----------------|----------|
