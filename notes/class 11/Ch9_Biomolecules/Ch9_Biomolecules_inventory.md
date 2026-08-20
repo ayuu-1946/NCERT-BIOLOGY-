@@ -1,5 +1,5 @@
 # Frozen Inventory — Biomolecules (Class 11, Chapter 9)
-Source: `Chapter/class 11/Chapter 09 - Biomolecules.pdf` (16 pages) | Frozen: 2026-08-20 | Rows: 226 (F001-F211 facts + L01-L15 figure-label rows)
+Source: `Chapter/class 11/Chapter 09 - Biomolecules.pdf` (16 pages) | Frozen: 2026-08-20 | Rows: 292 (F001-F277 facts + L01-L15 figure-label rows). Of the 277 Facts rows, F265-F277 are the 13 SUMMARY-UNIQUE facts folded in from the summary; the 15 BODY-PRESENT summary sentences are catalogued only in the Summary classification table, not as Facts rows.
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 
@@ -350,7 +350,7 @@ Source spelling note: NCERT sets the two secondary-structure labels with an en d
 | "Enzymes lower activation energy of reactions and enhance greatly the rate of the reactions." | BODY-PRESENT | 9.8.2 (F211, F212), 9.8 (F166) |
 | "Nucleic acids carry hereditary information and are passed on from parental generation to progeny." | SUMMARY-UNIQUE | body 9.6 (F277) — the body says DNA and RNA "function as genetic material" (F071); the **parent-to-progeny transmission** clause is summary-only |
 
-Summary audit: **28 summary sentences, all classified** — 13 BODY-PRESENT, 15 SUMMARY-UNIQUE. Every SUMMARY-UNIQUE fact is folded into a numbered fact row (F265-F277) at the body section where it belongs, so none is delivered only inside a summary block. Three of them (F267 oxygen, F271 nitrogenous, F272 "only three") state something the body states *differently*; per Rule 4 both wordings are carried, and neither is silently harmonised into the other.
+Summary audit: **28 summary sentences, all classified** — 15 BODY-PRESENT, 13 SUMMARY-UNIQUE. (Counts corrected during Gate 1 cleanup: an earlier tally had the two figures transposed as 13/15. The classification rows above are the source of truth — 15 rows read BODY-PRESENT and 13 read SUMMARY-UNIQUE — and the 13 SUMMARY-UNIQUE map exactly one-to-one onto the 13 Summary fact rows F265-F277.) Every SUMMARY-UNIQUE fact is folded into a numbered fact row (F265-F277) at the body section where it belongs, so none is delivered only inside a summary block. The 15 BODY-PRESENT summary sentences are deliberately **not** given their own fact rows — each points to the existing body fact(s) that already carry it, so no duplicate Summary fact row is created. Three of them (F267 oxygen, F271 nitrogenous, F272 "only three") state something the body states *differently*; per Rule 4 both wordings are carried, and neither is silently harmonised into the other.
 
 ## Exercise-gap terms
 
@@ -420,12 +420,12 @@ Every crop's bottom edge is fixed against its caption's own text-layer box, meas
 
 | Gate 1 criterion | Status |
 |---|---|
-| Every fact has a row | **PASS** — 287 fact rows (F001-F277) covering chapter intro, §9.1-9.8.6, all 5 tables (F254-F259), all 5 figure captions (F260-F264) and all 15 SUMMARY-UNIQUE facts (F265-F277). Definitions, numbers, examples, enzymes, organisms, processes, exceptions and qualifiers are each typed in the Type column |
+| Every fact has a row | **PASS** — 277 fact rows (F001-F277) covering chapter intro, §9.1-9.8.6, all 5 tables (F254-F259), all 5 figure captions (F260-F264) and all 13 SUMMARY-UNIQUE facts (F265-F277). Definitions, numbers, examples, enzymes, organisms, processes, exceptions and qualifiers are each typed in the Type column |
 | Every figure has manifest entry | **PASS** — 15/15 assets listed, each with figure number, verbatim caption, asset filename and source page |
 | Every figure label has matrix row | **PASS** — 15 label rows (L01-L15), one per figure part, carrying all 49 in-figure labels (48 distinct) in the exact `Figure labels: "..."` format `check_pdf.py` `_extract_labels()` parses. Machine-verified: the linter's own parser returns 49 labels across 15 figure rows from this file |
 | Every figure Mono: yes and Verified: yes | **PASS** — 15/15 `yes`/`yes`, re-probed this session |
 | Exercise-gap scan complete | **PASS** — all 11 exercise questions scanned; 11 gap rows recorded; 5 questions flagged as assuming information outside this chapter |
-| Summary classification complete | **PASS** — 28/28 summary sentences classified (13 BODY-PRESENT, 15 SUMMARY-UNIQUE); every SUMMARY-UNIQUE fact folded into a numbered fact row |
+| Summary classification complete | **PASS** — 28/28 summary sentences classified (15 BODY-PRESENT, 13 SUMMARY-UNIQUE); every SUMMARY-UNIQUE fact folded into a numbered fact row |
 | Inventory saved in correct chapter folder | **PASS** — `notes/class 11/Ch9_Biomolecules/Ch9_Biomolecules_inventory.md`, sibling to `assets/` and `extract_figures.py`, matching the §0.5 naming convention `check_pdf.py discover()` expects |
 
 Tick semantics: the `x` in every row above is the Pass 2 target, pre-set at freeze time exactly as Ch10's Pass 1 did. They do **not** yet mean "verified present in the generated PDF" — there is no PDF yet. They are re-earned at Gate 2, and this note is to be replaced by the Pass 2/Pass 3 verification record at that point.
