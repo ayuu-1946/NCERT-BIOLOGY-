@@ -515,10 +515,11 @@ text order; all 11 assets were re-opened and re-inspected by eye.
 
 ## Gate 2 status
 
-**Gate 2 PASSED on 2026-08-20.** `Ch3_PlantKingdom.py` was written linearly from this
-frozen inventory using the repo-level `neet_template.py`, and all 215 Facts rows plus all
-11 figure-label rows are ticked. The script generated `Ch3_PlantKingdom.pdf` as 11 A4
-portrait pages with all 11 verified monochrome assets embedded inline.
+**Gate 2 PASSED on 2026-08-20 and was independently re-run on 2026-08-20.**
+`Ch3_PlantKingdom.py` was written linearly from this frozen inventory using the repo-level
+`neet_template.py`, and all 215 Facts rows plus all 11 figure-label rows are ticked. The
+second run regenerated `Ch3_PlantKingdom.pdf` as 11 A4 portrait pages with all 11 verified
+monochrome assets embedded inline and reproduced the same green gate result.
 
 `/vercel/share/venv/bin/python check_pdf.py "notes/class 11/Ch3_PlantKingdom"` returned
 **VERDICT WARN, 0 fail / 1 warn, exit 0**:

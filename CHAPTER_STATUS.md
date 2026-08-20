@@ -21,7 +21,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
 | 1 | The Living World | 11 | ✅ 121 facts frozen · 14/14 labels · 3 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 7 pp · 1 mono img | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels · 2 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ✅ zero confirmed defects (2 found + fixed) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
-| 3 | Plant Kingdom | 11 | ✅ **PASSED** — 215 facts frozen · 55/55 labels (11 rows) · 6 summary-unique folded · 11/11 mono assets | ⬜ not started | ⬜ not started | ⬜ inventory · assets (no py/pdf yet — Pass 2 not begun) | **▶️ IN PROGRESS — Gate 1 PASSED, Pass 2 not begun** |
+| 3 | Plant Kingdom | 11 | ✅ **PASSED** — 215 facts frozen · 55/55 labels (11 rows) · 6 summary-unique folded · 11/11 mono assets | ✅ WARN (0 fail, **1 benign warn**) · 11 pp · 11 mono imgs · re-run confirmed | ⬜ not started | ✅ pdf · py · inventory · assets | **▶️ IN PROGRESS — Gate 2 PASSED, Pass 3 not begun** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
@@ -71,7 +71,7 @@ Pass 2 verification completed under the supreme command prompt v6 on 2026-08-19.
 
 ## Chapter 3 — Plant Kingdom — ▶️ IN PROGRESS (Gate 2 PASSED; Pass 3 not begun)
 
-**Gate 2 PASSED on 2026-08-20.** Pass 2 is complete and stops here as requested. `Ch3_PlantKingdom.py` was written linearly from the frozen inventory using the shared `neet_template.py`, all 215 Facts rows and 11 label rows were ticked, and the generated 11-page A4 PDF passed the automated gate with exit code 0.
+**Gate 2 PASSED on 2026-08-20 and was independently re-run on 2026-08-20.** Pass 2 is complete and stops here as requested. The repeated run regenerated the 11-page A4 PDF from `Ch3_PlantKingdom.py` and reproduced the automated result: 0 failures, 1 accepted benign warning, exit code 0. All 215 Facts rows and 11 label rows remain ticked.
 
 | Workflow stage | Evidence |
 |----------------|----------|
