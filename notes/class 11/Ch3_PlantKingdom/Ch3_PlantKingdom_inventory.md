@@ -1,5 +1,5 @@
 # Frozen Inventory — Plant Kingdom (Class 11, Chapter 3)
-Source: `Chapter/class 11/Chapter 03 - Plant Kingdom.pdf` (14 pages) | Frozen: 2026-08-20 | Rows: 214 facts (F001-F214) + 11 figure-label rows (L01-L11)
+Source: `Chapter/class 11/Chapter 03 - Plant Kingdom.pdf` (14 pages) | Frozen: 2026-08-20 | Rows: 215 facts (F001-F215) + 11 figure-label rows (L01-L11)
 
 Workflow: v6 normal chapter, 3 gated passes (`Pass 1 → [Gate 1] → Pass 2 → [Gate 2] → Pass 3 → [Gate 3]`).
 
@@ -238,6 +238,7 @@ are captured as ordinary Facts rows.
 | F212 | Exercises | Exercise | Q8 term list requiring explanation with suitable examples: "(i) protonema (ii) antheridium (iii) archegonium (iv) diplontic (v) sporophyll (vi) isogamy" | |
 | F213 | Exercises | Exercise | Q9 differentiation pairs: "(i) red algae and brown algae (ii) liverworts and moss (iii) homosporous and heterosporous pteridophyte" | |
 | F214 | Exercises | Exercise | Q4 ploidy list, verbatim: "protonemal cell of a moss; primary endosperm nucleus in dicot, leaf cell of a moss; prothallus cell of a ferm; gemma cell in Marchantia; meristem cell of monocot, ovum of a liverwort, and zygote of a fern." ("ferm" is an NCERT typo for "fern".) | |
+| F215 | 3.0 | Structure | Chapter-opening sidebar contents list printed in the left margin of page 1, verbatim in printed order: "3.1 Algae"; "3.2 Bryophytes"; "3.3 Pteridophytes"; "3.4 Gymnosperms"; "3.5 Angiosperms". Confirmed by page-1 geometry (all five entries at x0=60/79.9, y=372.8-456.8, left of the 130 pt body margin) — printed page furniture, not body prose. Matches the precedent set by the closed Chapter 1 inventory, which records its printed contents list as a `Structure` row (F011). | |
 
 ## Figure-label matrix
 
@@ -477,14 +478,42 @@ Requirements from §6 Gate 1 (lines 511-515):
 
 | Requirement | Status |
 |---|---|
-| Every fact has a Facts row | **Met** — 214 rows F001-F214, unique and consecutive, covering all 14 pages: intro, 3.1-3.5, all 3 sub-sections of 3.1, both of 3.2, Table 3.1 (title + headers + all 3 data rows), all 5 figure captions, the 6 folded summary-unique facts, and the exercise-structure rows. |
-| Every in-figure label has a figure-label-matrix row | **Met** — 11 rows L01-L11, one per independently extracted figure part, 55 labels total, every one read by eye from the regenerated asset. |
-| Every figure in the manifest is `Mono: yes` and `Verified: yes` | **Met** — 11/11, all `mode=L`, all freshly re-inspected this session. |
-| Every exercise-gap term has a planned home | **Met** — all 11 questions scanned; 5 genuine gaps each assigned to the "Terms used in the exercises" appendix, the rest mapped to numbered body rows. |
-| Every SUMMARY-UNIQUE fact folded into a body row | **Met** — 28 summary sentences classified, 6 SUMMARY-UNIQUE folded into F205-F210. |
+| Every fact has a Facts row | **Met** — 215 rows F001-F215, unique and consecutive, covering all 14 pages: the page-1 sidebar contents list (F215), intro, 3.1-3.5, all 3 sub-sections of 3.1, both of 3.2, Table 3.1 (title + headers + all 3 data rows), all 5 figure captions, the 6 folded summary-unique facts, and the exercise-structure rows. |
+| Every in-figure label has a figure-label-matrix row | **Met** — 11 rows L01-L11, one per independently extracted figure part, 55 labels total, every one re-read by eye from the regenerated asset in the closing audit. |
+| Every figure in the manifest is `Mono: yes` and `Verified: yes` | **Met** — 11/11, all re-opened and confirmed `mode=L` with `extrema=(0,255)`, claimed dimensions matching the files on disk exactly, and all 11 re-inspected visually in the closing audit. |
+| Every exercise-gap term has a planned home | **Met** — all 11 questions scanned; 5 genuine gaps each assigned to the "Terms used in the exercises" appendix, the rest mapped to numbered body rows. All 5 gap claims re-confirmed by exhaustive term search over a fresh extraction. |
+| Every SUMMARY-UNIQUE fact folded into a body row | **Met** — 28 summary sentences classified (22 BODY-PRESENT + 6 SUMMARY-UNIQUE), 6 SUMMARY-UNIQUE folded into F205-F210. |
 | Inventory file saved to the chapter folder | **Met** — this file. |
 
-**Pass 2 has not begun.** No `Ch3_PlantKingdom.py` and no `Ch3_PlantKingdom.pdf` exist.
-All 214 Facts rows and all 11 label rows are intentionally unticked; they will be ticked
+### Closing audit (2026-08-20) — the evidence behind the table above
+
+The previous session's "12 checks GREEN" claim was **re-checked from scratch, not trusted**.
+A fresh `pdfplumber` extraction of all 14 source pages was made and read start to finish
+against every row; Table 3.1 was re-derived from page-5 word geometry rather than extracted
+text order; all 11 assets were re-opened and re-inspected by eye.
+
+- **Confirmed correct:** all 214 pre-existing Facts rows; every quoted string, qualifier,
+  number and date (70 species, 100 metres kelps, over 100 metres *Eucalyptus*, Whittaker
+  1969, four megaspores); all 5 figure captions; all 21 Table 3.1 cells; all 55 in-figure
+  labels and their per-part assignment; all 28 summary classifications and their folded
+  destinations; all exercise-gap entries; the 5 genuine gaps; and all 10 Source problems.
+- **Table 3.1 column-order trap re-verified independently.** Reading page 5 at the 7 column
+  x-anchors confirms Phaeophyceae Stored Food = "Mannitol, laminarin" and Cell Wall =
+  "Cellulose and algin" (F086), i.e. the flat-text reading really is wrong and F086 is right.
+- **The 5 genuine gaps re-verified by exhaustive count** over the fresh extraction:
+  `diplontic` 1 occurrence (inside Q8(iv) only), `haplontic` 0, `alternation of generations`
+  0, `diploid` 0, `endosperm` 1 (inside Q4 only), `meristem` 1 (inside Q4 only), and no
+  gymnosperm economic-importance passage anywhere.
+- **One genuine defect found and fixed:** the inventory had no Facts row for the
+  chapter-opening sidebar contents list printed in the left margin of page 1. Added as
+  **F215** and the header count corrected from 214 to 215. This is the one item the earlier
+  "12 checks GREEN" claim had missed.
+- **No figure re-extraction was performed** — the audit found no asset defect, so the
+  already-verified extraction work stands untouched.
+
+**Gate 1 PASSED** — all six §6 Gate 1 requirements are met on the evidence above.
+
+**Pass 2 has NOT begun.** No `Ch3_PlantKingdom.py` and no `Ch3_PlantKingdom.pdf` exist.
+All 215 Facts rows and all 11 label rows are intentionally unticked; they will be ticked
 block by block as the script is written in Pass 2, and `check_pdf.py` check 7 gates them
 at Gate 2.
