@@ -31,7 +31,7 @@ line's own text-layer box:
   p7  "Figure 9.2" caption starts y=692.3 -> fig_9_2  bottom 684
   p9  "Figure 9.3" caption starts y=418.7 -> fig_9_3d bottom 412
   p12 "Figure 9.4" caption starts y=320.0 -> fig_9_4  bottom 314
-  p13 "Figure 9.5" caption starts y=683.4 -> the 9.5 crops bottom 677
+  p13 "Figure 9.5" caption starts y=683.4 -> the 9.5 crops bottom 682
 
 Run from anywhere:  python extract_figures.py
 """
