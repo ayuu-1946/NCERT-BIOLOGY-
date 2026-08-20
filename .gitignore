@@ -9,6 +9,12 @@ __v0_jsx-dev-runtime.ts
 # Environment variables
 .env*.local
 
+# Python build artifacts (never deliverables — see SUPREME COMMAND PROMPT §0.5)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
 # Common ignores
 node_modules
 .next/
