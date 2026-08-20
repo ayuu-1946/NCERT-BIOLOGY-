@@ -278,14 +278,44 @@ are now accurate; anyone auditing this chapter should read the ticks as verified
   with its badges. H1/H2/H3 banners, `data_table`, NOTE, MEMORY AID, process flow and figure
   boxes were each compared across three separate points in the chapter and are identical - the
   imported template held.
-- **Pass 3 (b) content cross-check.** All 175 rows (F001-F167, L01-L08) screened token-by-token
-  against the generated PDF's extracted text: **0 rows below 85% token coverage**, then each
-  section's block was read against its inventory rows. Result: 175 COVERED, 0 MISSING,
-  0 FABRICATED, 0 DRIFTED. Qualifiers verified surviving verbatim include "only" (F011, F041,
-  F090, F106), "usually" (F024, F090, F093, F144), "few exceptions" (F042), "some" (F091, F089),
-  "except" (F128), "cannot" (F049), "more than 95%" (F022), "about an hour" (F021),
-  "approximately every 24 hours" (F015), "only about 90 minutes" (F017), "no increase in the
-  chromosome number" (F032), "paradoxically" (F154).
+- **Pass 3 (b) content cross-check — FIRST ATTEMPT (superseded, claim was premature).** An
+  earlier session recorded "175 COVERED, 0 MISSING, 0 FABRICATED, 0 DRIFTED" here. That claim
+  was **not** sound: it rested on a token-coverage screen (0 rows below 85%) plus a partial
+  block read, and the session ended on credit limit at the documentation step. A token screen
+  cannot see a dropped clause inside an otherwise-covered row, nor a hedge smoothed into an
+  absolute, because both keep the row's token overlap above threshold. The verdict below
+  replaces it.
+- **Pass 3 (b) content cross-check — RE-RUN, full read (authoritative).** Source re-extracted
+  from the chapter PDF and read start to finish (11 pages); the whole script read start to
+  finish; all 175 rows re-checked against both. Token screen again returned 0 rows below 85%
+  coverage — and **3 genuine defects were nevertheless found by the full read**, confirming why
+  v6 §Pass 3 forbids settling for grep. Final: **172 COVERED, 1 MISSING, 2 DRIFTED, 0
+  FABRICATED → all 3 fixed, then 175/175 COVERED.**
+  1. **DRIFTED (F055/F058, 10.2.1).** NCERT's prophase key-event bullet reads "Centrosome which
+     had undergone duplication **during interphase**, begins to move towards opposite poles of
+     the cell." The bullet list carried only the asters half; the duplication-and-migration
+     clause survived solely in the narrative paragraph. Restored in the bullet.
+  2. **DRIFTED (F093, 10.4 comparison table).** The "Products" cell asserted "**Two** diploid
+     daughter cells with identical genetic complement". NCERT hedges — "Mitosis **usually**
+     results in the production of diploid daughter cells with identical genetic complement" —
+     and never writes "Two" here. An absolute had replaced a hedge: exactly the qualifier-drift
+     class v6 §Rule 4 names. Restored to "**Usually** diploid daughter cells...".
+  3. **MISSING (10.3).** NCERT's sentence "It is very essential to understand the significance
+     of this division in the life of an organism." was absent from the 10.3 block. Restored
+     between F091 and F093, where NCERT places it.
+- **Qualifiers re-verified surviving verbatim** after the fix: "only" (F011, F041, F090, F106),
+  "usually" (F024, F090, F093, F144), "few exceptions" (F042), "some" (F089, F091), "except"
+  (F128), "cannot" (F049), "more than 95%" (F022), "about an hour" (F021), "approximately every
+  24 hours" (F015), "only about 90 minutes" (F017), "no increase in the chromosome number"
+  (F032), "paradoxically" (F154), "generally short lived" (F141), "months or years" (F130).
+- **Fabrication probe.** The PDF was searched for cell-cycle vocabulary that is *not* in this
+  NCERT chapter (cyclin, CDK, checkpoint, p53, apoptosis, cancer, cohesin, separase,
+  anaphase-promoting complex, telomere). **Zero hits** — nothing was imported from outside the
+  source.
+- **Post-fix Gate 2 re-run.** `check_pdf.py` re-run after the rebuild: **PASS, 0 fail / 0 warn,
+  exit 0, and still green under `--strict`**. Still 11 pages; all 8 images still monochrome;
+  25/25 labels still in running text. All 11 pages re-rendered and re-inspected after the fix —
+  no reflow damage, no orphaned heading, no table split.
 
 ### Coverage note
 
@@ -298,8 +328,16 @@ are now accurate; anyone auditing this chapter should read the ticks as verified
   Q1, Q9, Q13(ii), Q14, Q15 in the "Terms Used in the Exercises" appendix. Q9's size comparison
   and Q13(ii)'s named example are stated plainly as beyond what this chapter supplies rather
   than filled in from outside (Rule 5).
-- **Drift caught and fixed** - none. Gate 2 was green on the first render and the content
-  cross-check raised no confirmed defect, so no `# [VERIFICATION FIX]` block exists.
+- **Drift caught and fixed** - **3 defects, all caught by the Pass 3(b) re-run's full read after
+  a token screen had passed the chapter clean.** (1) F055/F058 10.2.1 DRIFTED - NCERT's
+  "Centrosome which had undergone duplication during interphase, begins to move towards opposite
+  poles" clause was missing from the prophase key-event bullet list; restored. (2) F093 10.4
+  DRIFTED - the comparison table's "Products" cell had hardened NCERT's hedge into "Two diploid
+  daughter cells"; NCERT's "usually" restored and the invented "Two" removed. (3) 10.3 MISSING -
+  "It is very essential to understand the significance of this division in the life of an
+  organism." was absent; restored. Each fix is tagged `# [VERIFICATION FIX]` in the script at
+  its `# ---- N.N ----` block. PDF regenerated; Gate 2 re-run green (0 fail / 0 warn, `--strict`
+  green).
 - **Figures requiring manual attention** - None. All 8 assets re-verified this session as
   `mode == "L"` with extrema `(0, 255)`.
 - **Color-dependent figures** - None. Figure 10.1's phase wedges are separated by greyscale
