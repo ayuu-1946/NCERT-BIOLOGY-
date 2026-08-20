@@ -165,7 +165,17 @@ FIGURES = [
     # sub-part is cropped separately to stay legible at print size.
     ("fig_3_4a", 11, (314.0, 102.0, 520.0, 269.0), []),
     ("fig_3_4b", 11, (332.0, 269.0, 502.0, 500.0), []),
-    ("fig_3_4c", 11, (315.0, 500.0, 520.0, 667.0), []),
+    # Fig 3.4(c) Ginkgo is printed on a flat mid-grey rectangular plate that covers the
+    # whole crop except a white outer margin and the "(c)" marker strip. Because pure
+    # white IS already present in the crop, autocontrast sees a full-range histogram and
+    # leaves the plate essentially untouched (measured: modal grey 197 -> 188, 65% of all
+    # pixels, against only 5.7% true dark ink). That is precisely the failure mode §4
+    # forbids: after 2-3 photocopy generations a #BC-ish flood either dirties to near-black
+    # and swallows the hatched leaf detail, or washes out and takes the leaf tone with it.
+    # `white_point` lifts every level at/above the plate value to paper white BEFORE the
+    # ink range is rescaled, so the drawing keeps its own tonal separation on clean white.
+    # 180 sits below the 188 plate and above the darkest leaf hatching (sampled ~150).
+    ("fig_3_4c", 11, (315.0, 500.0, 520.0, 667.0), [], 180),
     # Figure 3.5 Angiosperms -- (a) dicotyledon + (b) monocotyledon side by side.
     # Bottom edge y=469 keeps both part labels while excluding the caption, whose
     # first ink begins below y=470; the earlier y=488 crop included caption text.
@@ -178,7 +188,10 @@ def main():
     doc = pymupdf.open(SRC)
     print(f"source: {SRC}\npages: {doc.page_count}\n")
 
-    for name, page_no, box, scrub in FIGURES:
+    for entry in FIGURES:
+        # 5th element (optional) = white_point for a flat background plate; see fig_3_4c.
+        name, page_no, box, scrub = entry[:4]
+        white_point = entry[4] if len(entry) > 4 else None
         page = doc[page_no - 1]
         rect = pymupdf.Rect(*box)
         out = os.path.join(ASSETS, f"{name}.png")
@@ -188,6 +201,17 @@ def main():
 
         # Steps 2-3 -- true monochrome + contrast recovery.
         img = Image.open(out).convert("L")
+
+        # Step 2a -- flat-plate white-point correction, only where declared.
+        # autocontrast cannot rescue a figure whose background is a solid mid-grey
+        # rectangle while pure white also exists in the crop: the histogram already
+        # spans 0-255, so there is nothing for it to stretch. Mapping everything at or
+        # above the plate level to 255 first turns the plate into paper white and lets
+        # the following autocontrast redistribute the ACTUAL ink range across the full
+        # scale. Applied before autocontrast so the ink, not the plate, sets the range.
+        if white_point is not None:
+            img = img.point(lambda v, wp=white_point: 255 if v >= wp else int(v * 255 / wp))
+
         img = ImageOps.autocontrast(img, cutoff=1)
 
         # Remove neighbouring-figure intrusions (see note on FIGURES above).

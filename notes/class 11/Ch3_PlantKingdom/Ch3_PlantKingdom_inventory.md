@@ -3,10 +3,14 @@ Source: `Chapter/class 11/Chapter 03 - Plant Kingdom.pdf` (14 pages) | Frozen: 2
 
 Workflow: v6 normal chapter, 3 gated passes (`Pass 1 → [Gate 1] → Pass 2 → [Gate 2] → Pass 3 → [Gate 3]`).
 
-**Gate 2 PASSED on 2026-08-20; Pass 3 has not begun.** The notes script and generated
-PDF now exist, and every `Ticked` cell below is marked `x` after its material was written
-and verified present for the automated gate. `check_pdf.py` returned exit 0 with 0 failures
-and one accepted benign photo-keyword warning.
+**Gate 2 re-done from scratch and PASSED on 2026-08-20; Pass 3 has not begun.** The notes
+script and generated PDF exist, and every `Ticked` cell below is marked `x` after its
+material was written and verified present for the automated gate. `check_pdf.py` returned
+exit 0 with 0 failures and one inspected-and-accepted photo-keyword warning. The re-audit
+distrusted the earlier green result and re-derived every check; it found and fixed three
+defects the earlier gate had hidden (padded figure-label matrix, a photocopier-fatal grey
+plate on `fig_3_4c`, and a false page-count claim). See "Gate 2 status" at the end for the
+full record. Figure-label rows are now L01-L11 auditing 35 genuine label occurrences.
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 
@@ -255,22 +259,42 @@ labels and Figure 3.3(a)'s labels are **baked into the raster artwork** and appe
 PDF text layer, so a text-extraction-based label list would have silently missed
 "Daughter colony", "Parent colony", "Air bladder", "Midrib", "Leaves", "Stem" and "Roots".
 
-| ID | Fig # | Type | In-figure labels, one row per figure part; every visible label listed | Ticked |
-|----|-------|------|------------------------------------------------------------------|--------|
-| L01 | Fig 3.1 (a) | Labels | Figure labels: "Daughter colony"; "Parent colony"; "part (a-i)"; "part (a-ii)" | x |
-| L02 | Fig 3.1 (b) | Labels | Figure labels: "Frond"; "Stipe"; "Holdfast"; "Air bladder"; "Midrib"; "part (b-i)"; "part (b-ii)"; "part (b-iii)" | x |
-| L03 | Fig 3.1 (c) | Labels | Figure labels: "Frond"; "Main axis"; "Branches"; "part (c-i)"; "part (c-ii)" | x |
-| L04 | Fig 3.2 (a)(b) | Labels | Figure labels: "Archegoniophore"; "Antheridiophore"; "Gemma cup"; "Rhizoids"; "panel (a)"; "panel (b)" | x |
-| L05 | Fig 3.2 (c)(d) | Labels | Figure labels: "Sporophyte"; "Gametophyte"; "Capsule"; "Seta"; "Leaves"; "Main axis"; "Rhizoids"; "Antheridial branch"; "Archegonial branch"; "Branches"; "panel (c)"; "panel (d)" | x |
-| L06 | Fig 3.3 (a)(b) | Labels | Figure labels: "Leaves"; "Stem"; "Roots"; "Strobilus"; "Node"; "Internode"; "Branch"; "Rhizome"; "panel (a)"; "panel (b)" | x |
-| L07 | Fig 3.3 (c)(d) | Labels | Figure labels: "panel (c)"; "panel (d)" | x |
-| L08 | Fig 3.4 (a) | Labels | Figure labels: "panel (a)" | x |
-| L09 | Fig 3.4 (b) | Labels | Figure labels: "panel (b)" | x |
-| L10 | Fig 3.4 (c) | Labels | Figure labels: "Dwarf Shoot"; "Long Shoot"; "Seeds"; "panel (c)" | x |
-| L11 | Fig 3.5 (a)(b) | Labels | Figure labels: "panel (a)"; "panel (b)" | x |
+**Counting rule (corrected at the Gate 2 re-audit).** Only a *label printed on the artwork
+itself* — a word joined to the drawing by a leader line — is an in-figure label and gets
+counted here. The sub-part markers NCERT prints under each panel ("(a)", "(b)", "(c)",
+"(b-i)" ...) are **layout markers, not labels**: they name which panel you are looking at,
+they carry no anatomical fact, and they are reproduced by the caption itself. The earlier
+version of this matrix listed them as quoted labels ("panel (c)", "part (b-i)", ...), which
+inflated the audited label count from 35 to 55 and let 20 padding tokens ride along on the
+`check_pdf.py` check-6 pass. They are moved to their own unaudited column below, so the
+label count now equals the number of real anatomical labels and check 6 audits only those.
 
-**Label count: 55 in-figure labels across 11 parts** (L01 4, L02 8, L03 5, L04 6, L05 12,
-L06 10, L07 2, L08 1, L09 1, L10 4, L11 2). All 55 must appear in the running text of the
+Note on how the 35 is counted: it is the count of label *occurrences per figure part*, which
+is what check 6 audits. Several labels legitimately recur on different figures ("Frond" on
+Fig 3.1(b) and 3.1(c); "Leaves" on Fig 3.2(c) and 3.3(a); "Main axis", "Rhizoids" and
+"Branches" likewise), so the 35 occurrences resolve to 30 distinct label strings. Both
+numbers are correct for their own question; neither is padded.
+
+| ID | Fig # | Type | In-figure labels, one row per figure part; every visible label listed | Panel markers (not labels) | Ticked |
+|----|-------|------|------------------------------------------------------------------|------------------|--------|
+| L01 | Fig 3.1 (a) | Labels | Figure labels: "Daughter colony"; "Parent colony" | (a-i), (a-ii) | x |
+| L02 | Fig 3.1 (b) | Labels | Figure labels: "Frond"; "Stipe"; "Holdfast"; "Air bladder"; "Midrib" | (b-i), (b-ii), (b-iii) | x |
+| L03 | Fig 3.1 (c) | Labels | Figure labels: "Frond"; "Main axis"; "Branches" | (c-i), (c-ii) | x |
+| L04 | Fig 3.2 (a)(b) | Labels | Figure labels: "Archegoniophore"; "Antheridiophore"; "Gemma cup"; "Rhizoids" | (a), (b) | x |
+| L05 | Fig 3.2 (c)(d) | Labels | Figure labels: "Sporophyte"; "Gametophyte"; "Capsule"; "Seta"; "Leaves"; "Main axis"; "Rhizoids"; "Antheridial branch"; "Archegonial branch"; "Branches" | (c), (d) | x |
+| L06 | Fig 3.3 (a)(b) | Labels | Figure labels: "Leaves"; "Stem"; "Roots"; "Strobilus"; "Node"; "Internode"; "Branch"; "Rhizome" | (a), (b) | x |
+| L07 | Fig 3.3 (c)(d) | Labels | No anatomical labels on the artwork — habit photograph (c) and habit drawing (d), panel markers only | (c), (d) | x |
+| L08 | Fig 3.4 (a) | Labels | No anatomical labels on the artwork — habit photograph, panel marker only | (a) | x |
+| L09 | Fig 3.4 (b) | Labels | No anatomical labels on the artwork — habit photograph, panel marker only | (b) | x |
+| L10 | Fig 3.4 (c) | Labels | Figure labels: "Dwarf Shoot"; "Long Shoot"; "Seeds" | (c) | x |
+| L11 | Fig 3.5 (a)(b) | Labels | No anatomical labels on the artwork — habit photographs, panel markers only | (a), (b) | x |
+
+**Label count: 35 genuine in-figure label occurrences across 11 parts** (L01 2, L02 5,
+L03 3, L04 4, L05 10, L06 8, L07 0, L08 0, L09 0, L10 3, L11 0 = 35; 30 distinct strings
+after the recurrences listed above). Four parts (L07-L09, L11) carry no
+anatomical label at all — they are habit photographs/drawings whose only overprinted text
+is the panel marker — and their rows say so in words rather than manufacturing a token to
+be "covered". All 35 must appear in the running text of the
 generated PDF — `check_pdf.py` check 6 gates this at Gate 2.
 
 Labels that are **not** used anywhere in the NCERT body prose and will therefore need to be
@@ -425,7 +449,7 @@ Asset provenance / verification record (all checks re-run in this Gate 1 session
 - **Source watermark retained**: a faint NCERT "not to be republished" / "© NCERT"
   watermark is present in the source artwork of several figures (3.1b, 3.1c, 3.2ab, 3.2cd,
   3.3ab, 3.3cd, 3.5ab). It originates in the source PDF, carries no factual meaning, and
-  obscures no label — all 55 labels read cleanly. Retained rather than retouched, matching
+  obscures no label — all 35 labels read cleanly. Retained rather than retouched, matching
   the decision closed for Chapter 2.
 
 ## Source problems
@@ -479,7 +503,7 @@ Requirements from §6 Gate 1 (lines 511-515):
 | Requirement | Status |
 |---|---|
 | Every fact has a Facts row | **Met** — 215 rows F001-F215, unique and consecutive, covering all 14 pages: the page-1 sidebar contents list (F215), intro, 3.1-3.5, all 3 sub-sections of 3.1, both of 3.2, Table 3.1 (title + headers + all 3 data rows), all 5 figure captions, the 6 folded summary-unique facts, and the exercise-structure rows. |
-| Every in-figure label has a figure-label-matrix row | **Met** — 11 rows L01-L11, one per independently extracted figure part, 55 labels total, every one re-read by eye from the regenerated asset in the closing audit. |
+| Every in-figure label has a figure-label-matrix row | **Met** — 11 rows L01-L11, one per independently extracted figure part, **35 genuine label occurrences** (30 distinct), every one re-read by eye from the regenerated asset. Corrected at the Gate 2 re-audit: the earlier "55 labels" figure included 20 synthetic panel/part markers, now demoted to an unaudited column. |
 | Every figure in the manifest is `Mono: yes` and `Verified: yes` | **Met** — 11/11, all re-opened and confirmed `mode=L` with `extrema=(0,255)`, claimed dimensions matching the files on disk exactly, and all 11 re-inspected visually in the closing audit. |
 | Every exercise-gap term has a planned home | **Met** — all 11 questions scanned; 5 genuine gaps each assigned to the "Terms used in the exercises" appendix, the rest mapped to numbered body rows. All 5 gap claims re-confirmed by exhaustive term search over a fresh extraction. |
 | Every SUMMARY-UNIQUE fact folded into a body row | **Met** — 28 summary sentences classified (22 BODY-PRESENT + 6 SUMMARY-UNIQUE), 6 SUMMARY-UNIQUE folded into F205-F210. |
@@ -494,8 +518,8 @@ text order; all 11 assets were re-opened and re-inspected by eye.
 
 - **Confirmed correct:** all 214 pre-existing Facts rows; every quoted string, qualifier,
   number and date (70 species, 100 metres kelps, over 100 metres *Eucalyptus*, Whittaker
-  1969, four megaspores); all 5 figure captions; all 21 Table 3.1 cells; all 55 in-figure
-  labels and their per-part assignment; all 28 summary classifications and their folded
+  1969, four megaspores); all 5 figure captions; all 21 Table 3.1 cells; all 35 genuine
+  in-figure labels and their per-part assignment; all 28 summary classifications and their folded
   destinations; all exercise-gap entries; the 5 genuine gaps; and all 10 Source problems.
 - **Table 3.1 column-order trap re-verified independently.** Reading page 5 at the 7 column
   x-anchors confirms Phaeophyceae Stored Food = "Mannitol, laminarin" and Cell Wall =
@@ -515,22 +539,55 @@ text order; all 11 assets were re-opened and re-inspected by eye.
 
 ## Gate 2 status
 
-**Gate 2 PASSED on 2026-08-20 and was independently re-run on 2026-08-20.**
-`Ch3_PlantKingdom.py` was written linearly from this frozen inventory using the repo-level
-`neet_template.py`, and all 215 Facts rows plus all 11 figure-label rows are ticked. The
-second run regenerated `Ch3_PlantKingdom.pdf` as 11 A4 portrait pages with all 11 verified
-monochrome assets embedded inline and reproduced the same green gate result.
+**Gate 2 re-done from scratch on 2026-08-20 (third run), because the previous green
+result was not trusted.** The re-audit did not take the earlier PASS on faith: it re-derived
+each check from the artefacts. It found **three real defects that the earlier green gate had
+hidden**, fixed all three, and only then re-ran the gate. Details:
 
-`/vercel/share/venv/bin/python check_pdf.py "notes/class 11/Ch3_PlantKingdom"` returned
-**VERDICT WARN, 0 fail / 1 warn, exit 0**:
+**Defect A — padded figure-label matrix (the material find).** 20 of the 55 audited "labels"
+were synthetic panel/part tokens (`"panel (c)"`, `"part (b-i)"`, ...) that are layout markers,
+not in-figure labels. They passed check 6 only because words like "panel" and "(a)" occur
+incidentally in the text, so 36% of the audited label set was self-fulfilling padding. The
+matrix now audits only labels actually printed on the artwork (35 occurrences / 30 distinct),
+and the four label-free habit-photo parts state that in words instead of inventing a token.
+Re-tested independently: **all 30 distinct genuine labels resolve at 100% token coverage**,
+so the substance behind defects 5-6 was genuinely satisfied — but it is now honestly audited
+rather than accidentally satisfied.
+
+**Defect B — `fig_3_4c` (Ginkgo) would be destroyed by a photocopier.** The source prints
+this figure on a flat mid-grey rectangular plate. Because pure white also exists in the crop,
+`autocontrast` saw a full-range histogram and left the plate at grey 188 covering 65% of the
+image against only 5.7% true ink. Measured threshold sweep on the OLD asset: at a copier
+threshold of 190 the background floods to **81.7% solid black** and the figure is unreadable.
+Fixed by a declared per-figure `white_point=180` in `extract_figures.py`, applied *before*
+autocontrast so the real ink sets the range. Same sweep on the NEW asset: **10.3% black at
+threshold 190** (and 7.7-8.9% at 150-170), with all three labels, both leader lines and the
+leaf/seed hatching intact and better separated than before. Verified by eye at full
+resolution and via a side-by-side 1-bit render. The other **10 assets re-extracted
+byte-identical** (sha256), so this was a surgical, fully-contained fix.
+
+**Defect C — false page-count claim in this very section.** The previous Gate 2 record
+asserted "11 A4 portrait pages" and "11/11 A4 portrait". The PDF has **10 pages**; 11 is the
+asset count, not the page count. Corrected below from the actual linter output.
+
+`.venv/bin/python check_pdf.py "notes/class 11/Ch3_PlantKingdom"` returned
+**VERDICT WARN, 0 fail / 1 warn, exit 0** on the regenerated PDF:
 
 - Checks 1, 2, 3, 5, 6, 7 and 8: **PASS**.
-- Figure labels: **55/55 fully present**, 0 partial, 0 missing.
+- Check 1: no text in the top/bottom 1.4 cm bands. Check 2: smallest rendered text 6.0pt,
+  clear of the 5.0pt FAIL floor and at the 6.0pt WARN boundary.
+- Figure labels: **35/35 fully present**, 0 partial, 0 missing (the honest matrix).
 - Inventory: **215/215 Facts rows ticked**.
-- Images: **11/11 monochrome**; page geometry: **11/11 A4 portrait**.
-- Check 4 warning: benign keyword false positives from textual `photosynthesis` /
-  `photosynthetic` occurrences. No person photograph exists or is embedded; the 11 assets
-  are plant diagrams and plant habit photographs already verified at Gate 1.
+- Images: **11/11 monochrome**; page geometry: **10/10 pages A4 portrait (595x842pt)**.
+- Check 4 warning — **inspected and accepted.** It is a keyword false positive: the linter
+  flags inventory rows containing "photo"/"photograph", which here match ordinary biology
+  prose (`photosynthesis`, `photosynthetic`, and the new rows that describe a part as a
+  "habit photograph"). Positively verified rather than assumed: every embedded image in the
+  PDF was extracted and pixel-hash-matched back to its asset file — **11 distinct embedded
+  images, 11/11 matched to a verified plant figure, 0 unmatched** — and all 11 assets were
+  viewed directly at full resolution this session. They are plant diagrams and plant habit
+  photographs; **no photograph of a person exists in the source chapter or the output.**
+  This chapter has no scientist profile box, so §5 item 3 does not apply.
 
 **Stop boundary:** Pass 3 has not begun. No visual-render audit, fresh source-to-output
 content-drift audit, Gate 3 claim, or chapter-closure claim has been made.
