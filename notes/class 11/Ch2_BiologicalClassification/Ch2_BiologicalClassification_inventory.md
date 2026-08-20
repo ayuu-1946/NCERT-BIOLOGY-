@@ -213,12 +213,17 @@ Panel markers `(a)`-`(d)` are in-figure text and are listed as `panel (a)` etc.
 
 | ID | Fig # | Type | In-figure labels, one row per figure, every label listed | Ticked |
 |----|-------|------|------------------------------------------------------------------|--------|
-| L01 | Fig 2.1 | Labels | Figure labels: "Cocci"; "Bacilli"; "Spirilla"; "Vibrio"; "Spore"; "Flagellum" |  |
-| L02 | Fig 2.2 | Labels | Figure labels: "Heterocyst"; "Mucilagenous sheath" |  |
-| L03 | Fig 2.3 | Labels | Figure labels: "Cell wall"; "Cell membrane"; "DNA" |  |
-| L04 | Fig 2.4 | Labels | Figure labels: "panel (a)"; "panel (b)"; "panel (c)"; "panel (d)" |  |
-| L05 | Fig 2.5 | Labels | Figure labels: "panel (a)"; "panel (b)"; "panel (c)" |  |
-| L06 | Fig 2.6 | Labels | Figure labels: "RNA"; "Capsid"; "Head"; "Collar"; "Sheath"; "Tail fibres"; "panel (a)"; "panel (b)" |  |
+| L01 | Fig 2.1 | Labels | Figure labels: "Cocci"; "Bacilli"; "Spirilla"; "Vibrio"; "Spore"; "Flagellum" | x |
+| L02 | Fig 2.2 | Labels | Figure labels: "Heterocyst"; "Mucilagenous sheath" | x |
+| L03 | Fig 2.3 | Labels | Figure labels: "Cell wall"; "Cell membrane"; "DNA" | x |
+| L04 | Fig 2.4 | Labels | Figure labels: "panel (a)"; "panel (b)"; "panel (c)"; "panel (d)" | x |
+| L05 | Fig 2.5 | Labels | Figure labels: "panel (a)"; "panel (b)"; "panel (c)" | x |
+| L06 | Fig 2.6 | Labels | Figure labels: "RNA"; "Capsid"; "Head"; "Collar"; "Sheath"; "Tail fibres"; "panel (a)"; "panel (b)" | x |
+
+L01-L06 ticked during Pass 3(b) (2026-08-20): each of the 26 in-figure labels was read in the
+rendered running text at its own topic, and each figure confirmed sitting at that topic with the
+correct asset and caption number. `check_pdf.py` check 6 independently reports 26/26 fully in
+text, 0 partial, 0 missing.
 
 Caption-only names (verified NOT printed inside the artwork; carried by the caption and
 by the running text, not by these label rows): Fig 2.2 "Nostoc"; Fig 2.4 "Dinoflagellates",
@@ -293,8 +298,37 @@ Asset provenance / re-extraction record:
 ## Coverage note
 - **Compression decisions** — NCERT prose merged into tables (Table 2.1 five-kingdom comparison reproduced verbatim; fungal-classes comparison table added for Q9; bacterial shapes as table) and Process Flow (fungal sexual cycle: plasmogamy -> karyogamy -> meiosis). No fact dropped.
 - **Exercise-gap terms** — all 12 exercise questions traceable to body facts; only the exact phrase "algal bloom" is not used verbatim in NCERT body, closed via a NOTE + the "Terms used in the exercises" appendix.
-- **Drift caught and fixed** — (Pass 3, to be completed)
+- **Drift caught and fixed** — Pass 3(a) (visual): none — zero layout defects, no `.py` edit required. Pass 3(b) (content full-read): **2 confirmed defects, both fixed**.
+  1. **F169 — MISSING half-fact (2.6a virus-discovery process flow).** The Beijerinck step said only that he "called the fluid as *Contagium vivum fluidum*", dropping NCERT's "**named the new pathogen 'virus'**". Restored verbatim ahead of the fluid name (`# [VERIFICATION FIX]`).
+  2. **F163 — DRIFTED (2.6 section opening).** The script had reflowed NCERT's sentence into "no mention of some acellular organisms like viruses and viroids, prions and lichens", which reads lichens as an acellular organism. NCERT's actual grouping is "no mention of **lichens** *and* some acellular organisms like viruses, viroids and prions" — lichens are a cellular alga+fungus association excluded for a different reason. Original grouping restored, plus one explicit clarifying clause (`# [VERIFICATION FIX]`).
+  Both fixes land on rendered page 12, which was re-rendered and re-inspected after the fix: text correct, process-flow badges 1/2/3 still aligned to their rules, no orphan/overflow introduced, page count unchanged at 15.
 - **Figures requiring manual attention** — None.
 - **Color-dependent figures** — Fig 2.4 (dinoflagellates appear yellow/green/brown/blue/red; red dinoflagellates -> red tides): distinction stated in words in text/caption. Fig 2.6 (bacteriophage head green vs tail/sheath purple in source): parts distinguished by label + position, not color, in caption.
-- **Source problems** — Table 2.1 rendered by pdfplumber with repeated-letter artifacts (e.g. "MMMMMooooonnnnneeeeerrrrraaaaa"); re-read from the page render. NCERT spelling kept verbatim where it is the source's own (e.g. "Vibrium (pl.: vibrio)", "Mucilagenous sheath", "diaseases", "dueteromycetes").
-- **Linter verdict** — (Pass 2, to be completed)
+- **Source problems** — Table 2.1 rendered by pdfplumber with repeated-letter artifacts (e.g. "MMMMMooooonnnnneeeeerrrrraaaaa"); re-read from the page render. Three plain typos in the source, each recorded in the script's source-spelling policy header and normalised only in prose/table text, never in a fact: "diaseases" (2.2.5), "dueteromycetes" (2.3.4) and "Multiceullar" (Table 2.1 body-organisation row for Fungi). NCERT spellings that ARE the testable term are kept verbatim: "Vibrium (pl.: vibrio)", "Paramoecium", "Mucilagenous sheath". Faint NCERT "not to be republished" watermark is visible in the source artwork of Fig 2.1, 2.2, 2.4 and 2.6; it originates in the source PDF, carries no meaning, obscures no label, and was left as-is rather than retouched (retouching an original NCERT figure is a larger risk than the watermark). None unrecoverable.
+- **Linter verdict** — `check_pdf.py` → **VERDICT WARN, 0 fail / 1 warn, exit 0**, re-run after the Pass 3(b) fixes. Checks 1, 2, 3, 5, 6, 7, 8 PASS: 15 A4-portrait pages, 6 monochrome images, smallest text 6.0pt, 26/26 figure labels in text, all 192 Facts rows ticked. The single WARN is check 4's photo-keyword heuristic — an accepted false positive: it matches the substring "photo" inside *photosynthetic/photosynthesis* text rows (F007, F032, F041, F048, F064, F070, F076, F085). No person photograph exists in the chapter; check 3 confirms the 6 embedded images are the numbered monochrome biology figures. Not suppressed by rewording, exactly as the Ch8/Ch9 WARNs were handled.
+
+## Section-wise coverage confirmation (Gate 3)
+
+| Section | Body facts | Figures | Labels in text |
+|---|---|---|---|
+| 2.0 intro | 12/12 (F001-F012) | — | — |
+| 2.1(intro) + Table 2.1 | 20/20 (F013-F027, F185-F187 + T2.1 rows F028-F032) | — | — |
+| 2.1 Monera | 10/10 (F033-F042) + F183 summary-unique folded | Fig 2.1 embedded, mono verified | 6/6 |
+| 2.1.1 Archaebacteria | 3/3 (F043-F045) | — | — |
+| 2.1.2 Eubacteria | 17/17 (F046-F062) | Fig 2.2, Fig 2.3 embedded, mono verified | 2/2 + 3/3 |
+| 2.2 Protista | 6/6 (F063-F068) | — | — |
+| 2.2.1-2.2.5 | 30/30 (F069-F098) | Fig 2.4 embedded, mono verified | 4/4 panels |
+| 2.3 Fungi | 26/26 (F099-F124) + F184 summary-unique folded | — | — |
+| 2.3.1-2.3.4 | 25/25 (F125-F149) | Fig 2.5 embedded, mono verified | 3/3 panels |
+| 2.4 Plantae | 8/8 (F150-F157) | — | — |
+| 2.5 Animalia | 5/5 (F158-F162) | — | — |
+| 2.6 Viruses/Viroids/Prions/Lichens | 20/20 (F163-F182) + F188-F192 | Fig 2.6 embedded, mono verified | 8/8 |
+
+**Totals: 192/192 COVERED · 0 MISSING · 0 FABRICATED · 0 DRIFTED (after the 2 fixes above) · 6/6 figures embedded and verified monochrome · 26/26 in-figure labels present in running text.**
+
+## Gate 3 closure — 2026-08-20
+
+- **Pass 3(a) visual render check** — PASS (2026-08-20). All 15 pages rendered at actual size and at a 1-bit B&W print threshold and inspected; zero layout defects; cross-page style identity confirmed from ≥3 points per element type (template held, no drift). No `.py` edit required.
+- **Pass 3(b) content cross-check** — complete (2026-08-20). Fresh `pdfplumber` re-extraction of all 13 source pages, read start-to-finish against all 192 Facts rows and all 6 figure-label rows, section pair by section pair (not by grep). 2 defects confirmed by full read and fixed at their block markers; both re-verified on the regenerated PDF.
+- **Gate 3** — zero confirmed defects remain AND `check_pdf.py` is green (0 fail / 1 accepted benign warn, exit 0). Chapter 2 is **CLOSED**.
+- **Deliverables** — `Ch2_BiologicalClassification.pdf` (15 pp) · `Ch2_BiologicalClassification.py` · this inventory · `assets/` (6 monochrome PNGs).

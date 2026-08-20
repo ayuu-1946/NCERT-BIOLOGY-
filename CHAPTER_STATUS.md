@@ -20,7 +20,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | # | Chapter | Class | Gate 1 (inventory) | Gate 2 (`check_pdf.py`) | Gate 3 (defects) | Deliverables | Overall |
 |---|---------|-------|--------------------|-------------------------|------------------|--------------|---------|
 | 1 | The Living World | 11 | ✅ 121 facts frozen · 14/14 labels · 3 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 7 pp · 1 mono img | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
-| 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ▶️ Pass 3(a) done · 3(b) pending | ✅ pdf · py · inventory · assets | **🟡 PASS 3(a) DONE — PASS 3(b) PENDING** |
+| 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels · 2 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ✅ zero confirmed defects (2 found + fixed) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
@@ -45,9 +45,9 @@ Verified closed under the supreme command prompt v6 on 2026-08-19. Resumed mid-w
 
 ---
 
-## Chapter 2 — Biological Classification — 🟡 PASS 3(a) DONE (PASS 3(b) PENDING)
+## Chapter 2 — Biological Classification — ✅ FULLY COMPLETE (CLOSED)
 
-Pass 2 verification completed under the supreme command prompt v6 on 2026-08-19. Pass 3(a) — the visual render check — completed on 2026-08-20. Pass 3(b) — the full-read content cross-check against the frozen inventory — is still pending; Chapter 2 is not closed until Pass 3(b) / Gate 3 is completed.
+Pass 2 verification completed under the supreme command prompt v6 on 2026-08-19. Pass 3(a) — the visual render check — completed on 2026-08-20. **Pass 3(b) — the full-read content cross-check — completed 2026-08-20, Gate 3 closed the same day.** The sandbox was fresh at the start of the Pass 3(b) session (venv is not persisted by git); `.venv` was rebuilt with `reportlab 5.0.0` / `pymupdf 1.28.2` / `Pillow 12.3.0`. Not a §0 restart — no re-extraction of figures, no re-render of source assets; Gate 2 was re-confirmed green on the existing PDF before Pass 3(b) began.
 
 | Workflow stage | Evidence |
 |----------------|----------|
@@ -57,8 +57,14 @@ Pass 2 verification completed under the supreme command prompt v6 on 2026-08-19.
 | **Badge micro-text reviewed, not a defect** | The `Quick Recap` and `Terms Used in the Exercises` headings feed text labels (`"Recap"`, `"Appendix"`) into the section-number badge. `neet_template._badge_section` grows the plate sideways to fit at a ≥6pt floor (never clips), and the closed, Gate-3-passed Ch1 uses the identical `heading("Recap", …)` / `heading("Appendix", …)` calls. Kept as-is for cross-chapter consistency (check 2 passed at 6.0pt smallest). |
 | **Source watermark** | Faint NCERT "not to be republished" watermark is visible on some extracted figures (Fig 2.1, 2.2, 2.4, 2.6). It originates in the source PDF, not the layout. Flagged for optional cleanup during Pass 3(b); not a layout defect. |
 | **Genuine layout defects** | **None.** No `# [VERIFICATION FIX]` edit to the `.py` was required by Pass 3(a). |
-| **Deliverables** | `Ch2_BiologicalClassification.pdf` · `.py` · `_inventory.md` (with figure-label matrix) · `assets/` (6 mono PNGs). |
-| **Next required step** | Pass 3(b) — full-read content cross-check of all 192 inventory rows + 26 figure labels against the source (COVERED / MISSING / FABRICATED / DRIFTED), then Gate 3 closure. |
+| **Pass 3(b) — content cross-check** | **Complete.** Fresh `pdfplumber` re-extraction of all 13 source pages, read start-to-finish (not grepped) against all **192 Facts rows** and all **6 figure-label rows**, section pair by section pair. Result after fixes: **192/192 COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED**; every scientist, date, taxon name, qualifier and Table 2.1 cell verbatim; 26/26 in-figure labels found in running text at their own topic. Figure-label rows L01-L06, previously unticked, are now ticked in the inventory (Gate 2's check 7 only gates Facts rows, so they had never been machine-gated). |
+| **Defect 1 found + fixed (F169, MISSING)** | The 2.6a virus-discovery process flow gave Beijerinck only "called the fluid as *Contagium vivum fluidum*" and had dropped NCERT's "**named the new pathogen 'virus'**" — the naming of the virus itself, a directly examinable fact. Restored verbatim ahead of the fluid name (`# [VERIFICATION FIX]`). |
+| **Defect 2 found + fixed (F163, DRIFTED)** | The 2.6 opening had been reflowed to "no mention of some acellular organisms like viruses and viroids, prions and lichens", which reads **lichens as acellular**. NCERT groups them differently: "no mention of **lichens** *and* some acellular organisms like viruses, viroids and prions" — a lichen is a *cellular* alga+fungus association, excluded from the five kingdoms for a different reason. Original grouping restored plus one explicit clarifying clause (`# [VERIFICATION FIX]`). |
+| **Re-verification after the fixes** | PDF regenerated; both fixes land on rendered page 12, which was re-rendered and inspected: text correct, process-flow badges 1/2/3 still aligned to their rules, no orphan/overflow introduced, page count unchanged at 15. `check_pdf.py` re-run: still **0 fail / 1 benign warn, exit 0**. Only the fixed block was re-verified — nothing else changed. |
+| **Documentary fix** | The script's source-spelling policy header listed 2 normalised source typos; the full read turned up a third — "Multiceullar" in the Table 2.1 body-organisation row for Fungi (normalised to "Multicellular" in the table). Added to the policy header and to the inventory's Source problems, so all three normalisations are recorded rather than silent. |
+| **Source watermark — accepted, not a defect** | Faint NCERT "not to be republished" watermark in the source artwork of Fig 2.1, 2.2, 2.4, 2.6. Re-examined during Pass 3(b) as flagged: it carries no meaning and obscures no in-figure label (all 26 read cleanly), so it was left as-is — retouching an original NCERT figure is a larger risk than the watermark. |
+| **Deliverables** | `Ch2_BiologicalClassification.pdf` (15 pp) · `.py` · `_inventory.md` (figure-label matrix ticked + section-wise coverage + Gate 3 closure + Coverage note) · `assets/` (6 mono PNGs). |
+| **Pass 3 / Gate 3** | **Zero confirmed defects remain AND `check_pdf.py` green.** Gate 3 closed 2026-08-20 — chapter delivered. |
 
 ---
 

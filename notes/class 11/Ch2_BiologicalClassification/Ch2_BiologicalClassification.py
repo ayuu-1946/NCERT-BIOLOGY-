@@ -18,8 +18,11 @@ first time it appears. Treated this way in this chapter:
   "Mucilagenous sheath"     - as printed inside Figure 2.2
   "diaseases"               - NCERT typo, normalised to "diseases" in running prose
   "dueteromycetes"          - NCERT typo in 2.3.4, normalised to "deuteromycetes"
-No source FACT is altered by this policy - only the two obvious typos are
-normalised in running prose, and both are recorded here and in the inventory.
+  "Multiceullar"            - NCERT typo in the Table 2.1 body-organisation row for
+                              Fungi, normalised to "Multicellular" in the table
+No source FACT is altered by this policy - only the three obvious typos are
+normalised in running prose/table text, and all are recorded here and in the
+inventory.
 
 Every block below carries its NCERT section number as a `# ---- N.N ----`
 marker so a verification fix can be located and edited in seconds.
@@ -692,9 +695,17 @@ story.append(memory_aid("The four defining words for Animalia: <b>heterotrophic,
 
 # ---- 2.6 VIRUSES, VIROIDS, PRIONS AND LICHENS ----
 story.append(heading("2.6", "Viruses, Viroids, Prions and Lichens", level=1))
-story.append(b1("<b>In the five kingdom classification of Whittaker there is no mention of some "
-                "acellular organisms like viruses and viroids, prions and lichens.</b> All four "
-                "are <b>briefly introduced here</b>."))
+# [VERIFICATION FIX] Pass 3(b): restored NCERT's exact grouping. The source reads
+# "no mention of lichens and some acellular organisms like viruses, viroids and prions" -
+# lichens sit OUTSIDE the acellular list (a lichen is a cellular alga + fungus association).
+# The earlier phrasing implied lichens were acellular. F163.
+story.append(b1("<b>In the five kingdom classification of Whittaker there is no mention of "
+                "lichens and some acellular organisms like viruses, viroids and prions.</b> "
+                "All four are <b>briefly introduced here</b>. Note NCERT's own grouping: the "
+                "<b>acellular</b> agents are the <b>viruses, viroids and prions</b>; a "
+                "<b>lichen</b> is not acellular - it is a <b>cellular association of an alga "
+                "and a fungus</b> (section 2.6d), left out of the five kingdoms for a "
+                "different reason."))
 story.append(b1("<b>Viruses did not find a place in classification since they are not considered "
                 "truly 'living', if we understand living as those organisms that have a cell "
                 "structure.</b>"))
@@ -713,9 +724,12 @@ story.append(process_flow([
     "<b>Dmitri Ivanowsky (1892)</b> <b>recognised certain microbes as causal organism of the "
     "mosaic disease of tobacco</b> (Figure 2.6a). These <b>were found to be smaller than bacteria "
     "because they passed through bacteria-proof filters</b>.",
+    # [VERIFICATION FIX] Pass 3(b): F169 was missing its first half - Beijerinck
+    # "named the new pathogen 'virus'". Restored verbatim before the fluid name.
     "<b>M.W. Beijerinck (1898)</b> <b>demonstrated that the extract of the infected plants of "
-    "tobacco could cause infection in healthy plants</b> and <b>called the fluid as <i>Contagium "
-    "vivum fluidum</i> (infectious living fluid)</b>.",
+    "tobacco could cause infection in healthy plants</b> and <b>named the new pathogen "
+    "'virus'</b> and <b>called the fluid as <i>Contagium vivum fluidum</i> (infectious living "
+    "fluid)</b>.",
     "<b>W.M. Stanley (1935)</b> <b>showed that viruses could be crystallised and crystals consist "
     "largely of proteins</b>. They <b>are inert outside their specific host cell</b>. "
     "<b>Viruses are obligate parasites.</b>",
