@@ -34,39 +34,61 @@ DPI = 300
 # (asset_name, 1-based source page, clip rect, scrub rects) -- all rects are in PDF
 # points as (x0, y0, x1, y1) in *page* coordinates.
 #
-# `scrub` exists only because Figure 3.1's three caption sub-parts are NOT separated
-# by clean horizontal whitespace in the source plate: (b-i) Laminaria starts at
-# y=274.6 while row (a)'s "(a-ii)" label still runs to y=281.3, and (c-i) Porphyra
-# starts at y=490.6 while (b-iii) Dictyota runs down to y=540.5. Any rectangle that
-# captures all of row (b) therefore also catches a corner of row (a) or row (c).
-# Each scrub rect whites out ONLY a neighbouring figure's intrusion -- measured from
-# an ink-profile scan, never overlapping the target sub-part's own artwork or labels.
-# Nothing belonging to the figure being extracted is ever painted over.
+# `scrub` exists only because Figure 3.1's sub-parts are laid out as INTERLEAVED
+# COLUMNS, not clean rows. All part artwork + labels are baked into one raster
+# (page-3 image bbox x 68.8-494.7, y 102.0-672.3) with no text layer, so every
+# boundary below was measured from a thresholded ink-profile/bbox scan of that
+# raster at 200 dpi, then confirmed against a coordinate-gridded 150 dpi render.
+#
+# Measured extents (PDF points, page coords):
+#   (a-i)  artwork  x  95-235  y 112-245   + "(a-i)"  label below it
+#   (a-ii) artwork  x 330-390  y 112-266   + "(a-ii)" label x 353-390 y 270-287
+#   row (b) artwork            y 296-479.5, full x 69-486
+#     (b-i)   x  69-159   (b-ii)  x 186-337   (b-iii) x 353-486
+#   row (c) artwork x  91-443  y 487.8-671.4
+#     (c-i)   x 104-234   (c-ii)  x 295-443
+#
+# The single genuine collision: row (a)'s "(a-ii)" part label sits at
+# x 353-390 / y 270-287, i.e. BELOW the full-width whitespace band at y=270-275
+# and therefore inside any crop that starts at y=274. (b-iii) Dictyota's own
+# artwork does not begin until y=309.6 and (b-i)/(b-ii) not until y=296, so
+# starting row (b) at y=290 clears the "(a-ii)" label completely without
+# touching a single pixel of row (b) -- no scrub rect is needed at all.
+# Right edge 490 keeps (b-iii)'s "Frond" leader + label (ends x=486.2) intact.
+# Row (c) is cleanly separated: nothing of row (b) reaches below y=479.5.
 FIGURES = [
     # Figure 3.1 Algae -- one crop per NCERT caption sub-part, because the body text
     # itself cites "(Figure 3.1a)", "(Figure 3.1b)" and "(Figure 3.1c)" separately at
     # the end of 3.1.1, 3.1.2 and 3.1.3 respectively.
-    ("fig_3_1a", 3, (111.0, 104.0, 406.0, 288.0), []),
-    # Row (b) ends at y=478 (the "(b-i)"/"(b-ii)"/"(b-iii)" part labels bottom out at
-    # ~y=470); row (c)'s artwork does not begin until y=490. Measured off a 150 dpi
-    # gridded render of the plate: the ONLY clean full-width whitespace band on this
-    # page is y=270.2-274.5 (between rows a and b), so the b/c boundary is placed in
-    # the per-part vertical gap instead. A previous crop ran row (b) to y=491, which
-    # dragged the top of (c-i) Porphyra into the (b) asset.
-    # Right edge pushed to 496 so (b-iii)'s "Frond" leader + label are not clipped.
-    # The single scrub rect removes row (a)'s "(a-ii)" part label, which sits at
-    # y=274-286 directly above (b-iii); (b-iii)'s own artwork does not start until
-    # y~300, so nothing belonging to row (b) is painted over.
+    # Row (a): measured ink x 93.5-385.1, y 112.6-289.4 (the left bound is the
+    # "Daughter colony"/"Parent colony" leader text, not the Volvox artwork, and the
+    # lower bound is the "(a-i)"/"(a-ii)" part labels). Padded to clear both.
+    ("fig_3_1a", 3, (88.0, 106.0, 392.0, 293.0), []),
+    # Row (b): starts at y=290 -- below row (a)'s "(a-ii)" label (ends y=287) and
+    # above row (b)'s own topmost ink (y=296), so the neighbouring label is excluded
+    # by the crop itself rather than painted out (an earlier y=274 top dragged the
+    # "(a-ii)" label in). Ends at y=491, because the "(b-i)"/"(b-ii)"/"(b-iii)" part
+    # labels themselves run to y=489 -- an earlier y=478/482 cut sliced them in half.
+    # Right edge 490 keeps (b-iii)'s "Frond" leader + label (ends x=486.2) intact;
+    # an earlier 470 edge clipped it.
+    # The one scrub: (c-ii) Polysiphonia's topmost fronds reach up to y=468 in the
+    # x 385-465 strip (it is a tall figure in the right-hand column), which is inside
+    # row (b)'s y-band. (b-iii)'s own ink in that strip is its "Stipe" label, which
+    # ends at y=466, and its artwork column ends at x=460 above y=466 -- so scrubbing
+    # x 383-468 / y 469-491 removes only the (c-ii) intrusion. Verified against a
+    # 400 dpi gridded render of the y 462-512 boundary strip.
     (
         "fig_3_1b",
         3,
-        (66.0, 274.0, 496.0, 478.0),
-        [(330.0, 274.0, 400.0, 292.0)],
+        (64.0, 290.0, 490.0, 491.0),
+        [(383.0, 469.0, 468.0, 491.0)],
     ),
-    # Row (c): (c-i) Porphyra occupies x=124-210 and (c-ii) Polysiphonia x=282-462.
-    # A previous crop started at x=200, which sliced (c-i) Porphyra vertically down
-    # the middle and cut its "Frond" label in half -- 4.4 Step 3 defects (b) and (d).
-    ("fig_3_1c", 3, (118.0, 486.0, 470.0, 666.0), []),
+    # Row (c): (c-i) Porphyra x=104-234 (incl. its "Frond" label), (c-ii)
+    # Polysiphonia x=295-443 (incl. "Main axis"/"Branches"). An earlier crop started
+    # at x=200, slicing (c-i) vertically and halving its "Frond" label (Step 3
+    # defects (b)+(d)); another ended at y=666, clipping the "(c-ii)" part label
+    # which runs to y=671.4.
+    ("fig_3_1c", 3, (98.0, 484.0, 452.0, 675.0), []),
     # Figure 3.2 Bryophytes -- grouped as NCERT's caption groups them:
     # (a)+(b) the liverwort Marchantia, (c)+(d) the mosses.
     ("fig_3_2ab", 6, (114.0, 227.0, 534.0, 425.0), []),
