@@ -146,7 +146,9 @@ FIGURES = [
     ("fig_3_4b", 11, (332.0, 269.0, 502.0, 500.0), []),
     ("fig_3_4c", 11, (315.0, 500.0, 520.0, 667.0), []),
     # Figure 3.5 Angiosperms -- (a) dicotyledon + (b) monocotyledon side by side.
-    ("fig_3_5ab", 12, (219.0, 271.0, 501.0, 488.0), []),
+    # Bottom edge y=469 keeps both part labels while excluding the caption, whose
+    # first ink begins below y=470; the earlier y=488 crop included caption text.
+    ("fig_3_5ab", 12, (219.0, 271.0, 501.0, 469.0), []),
 ]
 
 
