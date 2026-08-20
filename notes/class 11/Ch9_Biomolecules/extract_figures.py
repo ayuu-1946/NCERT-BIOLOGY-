@@ -5,9 +5,11 @@ Ch9 Biomolecules — figure extraction + monochrome conversion
 Pipeline per asset:
   1. Clip-render the figure's bounding box from the source chapter PDF at 300 dpi
      (page.get_pixmap(clip=rect, dpi=300)). Every figure in this chapter is vector
-     artwork whose in-figure labels ("Glycine", "Alpha-Helix", "Transition state",
+     artwork whose in-figure labels ("Glycine", "Alpha- Helix", "Transition state",
      "Km", ...) are drawn as part of the plate, so a clip render is the only way to
-     keep the labels attached to the drawing.
+     keep the labels attached to the drawing. (NCERT sets the secondary-structure
+     labels with an en dash and a space -- "Alpha- Helix", "Beta-pleated sheet";
+     the inventory's label matrix records them verbatim.)
   2. Image.convert("L")              -> true single-channel greyscale
   3. ImageOps.autocontrast(cutoff=1) -> recover contrast lost when hue disappears
      (NCERT prints Figure 9.1 in pink and Figure 9.4 in magenta/red; both go grey)
@@ -15,10 +17,14 @@ Pipeline per asset:
 
 Sub-part splitting (§4.4 placement rule — each part is placed inline at its own topic):
   * Figure 9.1 is one full-page plate covering six unrelated topics (sugars, amino
-    acids, lipids, nitrogen bases, nucleosides, nucleotide). The chapter cites it from
-    §9.1 (amino acids, lipids, nucleotides) and again from §9.6 (purine/pyrimidine), so
-    it is cropped into its six labelled groups.
-  * Figure 9.3 is cited part-by-part in §9.7 — "(Figure 9.3 a)", "(Fig. 9.3 b)",
+    acids, lipids, nitrogen bases, nucleosides, nucleotide). The chapter cites it four
+    times from three different sections — twice in §9.1 ("the kind of organic
+    (Figure 9.1) ... constituents", and "Three of the twenty are shown in Figure 9.1"),
+    once in §9.2 ("categories of compounds shown in Figure 9.1"), and once in §9.6
+    ("As you notice in Figure 9.1, the heterocyclic compounds ... purines ...
+    pyrimidines") — so it is cropped into its six labelled groups.
+  * Figure 9.3 is cited whole in §9.4 ("linked by peptide bonds as shown in
+    Figure 9.3") and then part-by-part in §9.7 — "(Figure 9.3 a)", "(Fig. 9.3 b)",
     "(Fig. 9.3 c)", "(Fig. 9.3 d)" — so it is cropped into four panels.
   * Figure 9.5 is cited twice in §9.8.4 — once for pH/temperature (a, b) and once for
     substrate concentration (c) — so its three panels are cropped separately.
