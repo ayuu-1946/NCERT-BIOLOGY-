@@ -246,7 +246,13 @@ story.append(P("<b>Key events of prophase:</b>"))
 story.append(B("&bull; Chromosomal material condenses to form compact mitotic chromosomes."))
 story.append(B("&bull; Chromosomes are seen to be composed of two chromatids attached together at "
                "the <b>centromere</b>."))
-story.append(B("&bull; Each centrosome radiates out microtubules called <b>asters</b>."))
+# [VERIFICATION FIX] Pass 3(b) DRIFTED -> F055/F058: NCERT's own key-event bullet opens
+# "Centrosome which had undergone duplication during interphase, begins to move towards
+# opposite poles of the cell." That clause was present only in the narrative paragraph
+# above, not in this examinable bullet list. Restored verbatim in the bullet.
+story.append(B("&bull; Centrosome which had undergone duplication <b>during interphase</b>, begins "
+               "to move towards opposite poles of the cell. Each centrosome radiates out "
+               "microtubules called <b>asters</b>."))
 story.append(B("&bull; The two asters together with spindle fibres forms the <b>mitotic "
                "apparatus</b>."))
 story.append(B("&bull; The nuclear envelope and the nucleolus disappear and the spindle fibres "
@@ -354,8 +360,13 @@ story.append(labels_line(["Interphase"]))
 story.append(H("10.3", "Significance of Mitosis", 1,
                P("Mitosis or the equational division is <b>usually</b> restricted to the diploid "
                  "cells <b>only</b>. However, in <b>some</b> lower plants and in <b>some</b> social "
-                 "insects haploid cells also divide by mitosis. Mitosis <b>usually</b> results in "
-                 "the production of diploid daughter cells with identical genetic complement.")))
+                 "insects haploid cells also divide by mitosis. It is very essential to understand "
+                 "the significance of this division in the life of an organism. Mitosis "
+                 "<b>usually</b> results in the production of diploid daughter cells with "
+                 "identical genetic complement.")))
+# [VERIFICATION FIX] Pass 3(b) MISSING -> 10.3: NCERT's linking sentence "It is very essential
+# to understand the significance of this division in the life of an organism." was absent from
+# this block; restored above, between F091 and F093, where NCERT places it.
 story.append(P("NCERT asks here: are you aware of some examples where you have studied about "
                "haploid and diploid insects? The chapter's own example of a haploid animal cell "
                "dividing by mitosis is the <b>male honey bee</b> (10.1.1)."))
@@ -415,7 +426,11 @@ story.append(data_table([
     ["What separates at anaphase", "Centromeres split and sister chromatids separate",
      "Anaphase I: homologous chromosomes separate while sister chromatids remain associated at "
      "their centromeres. Anaphase II: centromeres split and sister chromatids separate"],
-    ["Products", "Two diploid daughter cells with identical genetic complement",
+    # [VERIFICATION FIX] Pass 3(b) DRIFTED -> F093: NCERT hedges this, "Mitosis <i>usually</i>
+    # results in the production of diploid daughter cells with identical genetic complement",
+    # and never prefixes it with the absolute "Two". The cell had smoothed the hedge into an
+    # absolute - the exact qualifier-drift class v6 warns about. NCERT's "usually" restored.
+    ["Products", "<b>Usually</b> diploid daughter cells with identical genetic complement",
      "Four haploid cells (a tetrad of cells)"],
     ["Chromosome number in products", "Same as the parent (2n from 2n)", "Half that of the parent "
      "(n from 2n)"],
