@@ -23,6 +23,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels · 2 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ✅ zero confirmed defects (2 found + fixed) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 3 | Plant Kingdom | 11 | ✅ **PASSED** — 215 facts frozen · 35/35 genuine labels (30 distinct, 11 rows) · 6 summary-unique folded · 11/11 mono assets | ✅ WARN (0 fail, **1 inspected benign warn**) · **10 pp** · 11 mono imgs · re-run confirmed | ✅ zero confirmed defects (215/215 covered) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
+| 10 | Cell Cycle and Cell Division | 11 | ✅ **PASSED** — 167 facts frozen (F001-F167) · 8 label rows / 24 in-figure labels · 11 summary-unique folded · 8/8 mono assets | ✅ **PASS (0 fail, 0 warn — also green under `--strict`)** · **11 pp** · 8 mono imgs | ✅ zero confirmed defects (175/175 rows covered) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 
@@ -113,7 +114,53 @@ Big-chapter 5-pass protocol (`1a → 1b → [Gate 1] → 2a → 2b → [Gate 2] 
 
 ---
 
-## Chapter 10 — Biotechnology and its Applications — ✅ FULLY COMPLETE (CLOSED)
+## Chapter 10 (Class 11) — Cell Cycle and Cell Division — ✅ FULLY COMPLETE (CLOSED)
+
+**Gate 3 CLOSED on 2026-08-20.** Resumed on branch `chapter-9-working` after the previous session ended on credit limit with Pass 1 complete and no script written. The old `cell-cycle-study` branch was deleted after PR #45 and was **not** recreated or consulted; all work continued from `chapter-9-working` at `88d1ee2`. Source reading was **not** restarted and figure extraction was **not** redone — the 8 frozen assets were reused as-is after a verification re-check.
+
+> **Branch-vs-chapter naming.** The branch is named `chapter-9-working`, but the chapter in progress on it is **Class 11 Chapter 10 — Cell Cycle and Cell Division** (the chapter whose inventory PR #45 added). It is *not* Class 11 Ch9 (Biomolecules), which remains not started. Note also that two different chapters in this repo are numbered 10: this one (Class 11) and *Biotechnology and its Applications* (Class 12, closed earlier). Their folders and asset prefixes collide by number (`fig_10_1.png` exists in both), so they are distinguished by class throughout.
+
+| Workflow stage | Evidence |
+|----------------|----------|
+| **Environment resume** | Sandbox was fresh (venv is not persisted by git). The v6 §0.2 command (`pip install --break-system-packages`) fails here — this image's `pip` is a `uv` shim that rejects `--break-system-packages`, and the default `python3` (3.13.11) is a uv-managed, externally-managed interpreter. Installed into the system 3.9.25 environment with `uv pip install --system` and ran every step with `/usr/bin/python3`: `reportlab 5.0.1`, `pdfplumber` OK, `pymupdf 1.26.5`, `Pillow 11.3.0`. Not a §0 restart — no re-extraction, no re-render of source assets. |
+| **Gate 1 (independently re-verified, not trusted from prose)** | Inventory read in full, start to finish, before anything was modified. **167 Facts rows (F001-F167)** contiguous; **8 figure-label rows (L01-L08)** carrying **24 in-figure labels**; **31-row summary classification** with **11 SUMMARY-UNIQUE** facts each mapped to a body home (F157-F167); **7 exercise-gap rows** (Q1, Q9, Q11, Q13ii, Q14, Q15, Q16) each with a planned home; **8-row figure manifest**, every row `Mono: yes` / `Verified: yes`. All 8 assets re-verified on disk this session: `mode == "L"`, extrema `(0, 255)`. Inventory sits in the correct chapter folder. **Gate 1 green.** |
+| **Gate 1 caveat recorded, not waived** | Pass 1 had **pre-ticked all 175 rows before any script existed**, so `check_pdf.py` check 7 would pass trivially and the ticks did not yet mean what the tick legend says. The ticks were therefore treated as unverified and re-earned during Pass 2/3; the inventory now carries an explicit "Pass 2 / Pass 3 verification record" section stating this, so a later audit is not misled. Same class of issue as Ch2's unticked label rows, in the opposite direction. |
+| **Pass 2 build** | `Ch10_CellCycleAndCellDivision.py` written as one linear `story.append(...)` sequence in Content Order (§5), importing the frozen `neet_template.py` only — no style, colour, font, geometry or helper re-declared. Every block carries its `# ---- N.N ----` marker (10.1, 10.1.1, 10.2, 10.2.1-10.2.5, 10.3, 10.4, 10.4.1, 10.4.2, 10.5, Quick Recap, appendix). All 8 figures embedded inline at their topic via the shared `figure()` wrapper. Output: **11 A4 portrait pages against an 11-page source** — no compression. |
+| **Gate 2 linter** | `python3 check_pdf.py "notes/class 11/Ch10_CellCycleAndCellDivision"` → **VERDICT PASS, 0 fail / 0 warn, exit 0 — green on the first render**, and **also green under `--strict`** (exit 0), which no previously closed chapter achieved. Checks 1-8 all PASS: no text in the 1.4 cm bands; smallest rendered glyph **6.0pt** (above the 5.0pt floor and outside the 5.0-6.0pt review band entirely); **all 8 embedded images monochrome**; no portrait row in the manifest; no banned Unicode arrows/sub-superscripts/Greek/emoji; **25/25 labels fully in running text** (0 partial, 0 missing); **175/175 rows ticked**; all 11 pages A4 portrait 595x842pt. |
+| **Zero warnings — why this chapter escaped the usual benign WARN** | Every previously closed chapter carried one accepted check-4 WARN from the `PORTRAIT_HINTS` substring heuristic (`photo`/`profile`). This chapter's source has **no scientist profile box and no photograph of any person at all**, and its inventory contains no `photo`/`profile`/`portrait` substring in any manifest row, so the heuristic has nothing to fire on. The §4.4 hard no and §5 item 3 are satisfied trivially rather than by an accepted exception. |
+| **Phase-notation decision** | "G1", "S", "G2", "G0", "2C", "4C", "2n"/"n" are written as plain ASCII rather than with `<sub>` tags. Unicode sub/superscript codepoints are banned outright by §4, and a Times `<sub>` inside a 9.5pt `data_table` cell renders at roughly 5.5pt — inside check 2's WARN band. ASCII keeps the chapter at a 6.0pt floor and `--strict` green without losing a fact. Recorded in the script header and the inventory. |
+| **Pass 3(a) — visual render check** | **PASS — zero layout defects.** All 11 pages rendered with `pymupdf` and inspected individually. No overflow, no clipping, no orphaned heading, no table running off the page, no figure squashed to the wrong aspect ratio, and every process-flow vertical rule aligned with its triangle badges (the cyclic cell-cycle flow on p2, the mitosis 4-stage flow on p3, the prophase-I 5-substage flow spanning p8-p9). Cross-page style identity confirmed by pulling H1/H2/H3 banners, `data_table`, NOTE, MEMORY AID, process flow and figure boxes from three separate points each — **template held, no drift**. |
+| **Pass 3(b) — content cross-check** | **Complete.** All **175 rows** screened token-by-token against the generated PDF's extracted text (**0 rows below 85% token coverage**), then each section's script block read against its inventory rows. Result: **175/175 COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED**. Qualifiers confirmed surviving verbatim: "only" (F011, F041, F090, F106), "usually" (F024, F090, F093, F144), "few exceptions" (F042), "some" (F089, F091), "except" (F128), "cannot" (F049), "more than 95%" (F022), "about an hour" (F021), "approximately every 24 hours" (F015), "only about 90 minutes" (F017), "no increase in the chromosome number" (F032), "paradoxically" (F154). All 3 embedded in-text question boxes (F036, F044, F045) preserved and answered from the chapter itself. |
+| **Genuine defects** | **None.** Gate 2 was green on the first render and Pass 3 raised no confirmed defect, so **no `# [VERIFICATION FIX]` block exists in this script** and the PDF was never rebuilt for a content fix. |
+| **Compression decisions** | Interphase phases (F027-F035 + summary-unique F160-F162) delivered as one 3-row table; animal-vs-plant cytokinesis (F083-F087) as a 2-row table; N/C-through-the-cycle (Q16) and mitosis-vs-meiosis (Q11) as tables that add no fact beyond 10.1.1-10.4. Every merged sentence's facts and qualifiers survive the merge. |
+| **Exercise-gap closure** | All 7 rows covered — Q16 and Q11 in body tables (10.1.1, 10.4); Q1, Q9, Q13(ii), Q14, Q15 in the "Terms Used in the Exercises" appendix. Q9's equal/unequal size comparison and Q13(ii)'s specific example are **stated plainly as beyond what this chapter supplies** rather than filled in from outside the source (Rule 5 honoured over the temptation to answer). |
+| **Colour-dependent figures** | **None.** Figure 10.1's phase wedges separate by greyscale tone *and* by their printed labels, all 10 of which are in the running text. |
+| **Source problems** | NCERT's own typo "thererfore" (F085) — kept verbatim in the inventory's wording column, normalised in body prose only. Figure 10.3's panel labels read "Metaphase 1"/"Anaphase 1"/"Telophase 1" with the digit 1 while the body uses roman "I" — **both spellings preserved where each occurs**. Faint "not to be republished" watermark in the source artwork obscures no label (all 24 read cleanly); left as-is, consistent with Ch2/Ch3. |
+| **Deliverables** | `Ch10_CellCycleAndCellDivision.pdf` (11 pp) · `Ch10_CellCycleAndCellDivision.py` · `Ch10_CellCycleAndCellDivision_inventory.md` (figure-label matrix + verification record + Coverage note) · `assets/` (8 verified monochrome PNGs) · `extract_figures.py`. |
+
+**Section-wise coverage confirmation**
+
+| Section | Body facts | Summary-unique | Figures | Labels in text |
+|---|---|---|---|---|
+| Ch intro | 5/5 (F001-F005) | — | — | — |
+| 10.1 | 8/8 (F006-F013) | 3/3 (F157-F159) | — | — |
+| 10.1.1 | 32/32 (F014-F045) | 3/3 (F160-F162) | 1/1 (Fig 10.1) | 10/10 |
+| 10.2 | 5/5 (F046-F050) | — | — | — |
+| 10.2.1 | 10/10 (F051-F060) | 2/2 (F163-F164) | 1/1 (Fig 10.2a) | 2/2 |
+| 10.2.2 | 11/11 (F061-F071) | — | 1/1 (Fig 10.2b) | 2/2 |
+| 10.2.3 | 5/5 (F072-F076) | — | 1/1 (Fig 10.2c) | 1/1 |
+| 10.2.4 | 5/5 (F077-F081) | 1/1 (F165) | 1/1 (Fig 10.2d) | 1/1 |
+| 10.2.5 | 8/8 (F082-F089) | — | 1/1 (Fig 10.2e) | 1/1 |
+| 10.3 | 10/10 (F090-F099) | — | — | — |
+| 10.4 | 11/11 (F100-F110) | 1/1 (F166) | — | — |
+| 10.4.1 | 33/33 (F111-F143) | 1/1 (F167) | 1/1 (Fig 10.3) | 4/4 |
+| 10.4.2 | 9/9 (F144-F152) | — | 1/1 (Fig 10.4) | 4/4 |
+| 10.5 | 4/4 (F153-F156) | — | — | — |
+| **Total** | **156/156** | **11/11** | **8/8 embedded + verified mono** | **24/24** |
+
+---
+
+## Chapter 10 (Class 12) — Biotechnology and its Applications — ✅ FULLY COMPLETE (CLOSED)
 
 Verified closed under the supreme command prompt.
 
