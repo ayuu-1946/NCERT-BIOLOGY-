@@ -132,7 +132,28 @@ FIGURES = [
     # at x=200, slicing (c-i) vertically and halving its "Frond" label (Step 3
     # defects (b)+(d)); another ended at y=666, clipping the "(c-ii)" part label
     # which runs to y=671.4.
-    ("fig_3_1c", 3, (98.0, 484.0, 452.0, 675.0), []),
+    # Top edge y=484 is forced down onto row (b)'s baseline: (c-i)'s frond tip and
+    # (c-ii)'s main-axis tip both begin at y=484, so the crop cannot rise further
+    # without clipping row (c)'s own artwork. That same y=484 line catches the
+    # BOTTOM sliver of three row-(b) labels sitting just above it. A 400 dpi ink
+    # scan (threshold<150) of the y484-491 strip locates them exactly:
+    #   - "(b-iii)" part label  x 401.3-422.9  y 484.0-490.1   (fully legible tail)
+    #   - "(b-ii)"  label base  x 255.1-255.7  y 484.0-484.4   (0.4 pt hairline)
+    #   - a second label base   x 271.7-272.4  y 484.0-484.4   (0.4 pt hairline)
+    # Row (c)'s own ink in this strip is (c-i) at x 98-108, (c-i) body at x 152-181,
+    # and (c-ii) at x 313-376 -- all clear of the two scrub x-bands below, which sit
+    # in the (c-i)/(c-ii) gutter (x 250-276) and to the right of (c-ii) (x 399-425).
+    # Both scrubs are only 2-7 pt tall at the very top edge, so nothing of row (c)
+    # (whose "Branches"/"Main axis" leaders sit far lower) is touched.
+    (
+        "fig_3_1c",
+        3,
+        (98.0, 484.0, 452.0, 675.0),
+        [
+            (399.0, 484.0, 425.0, 491.0),
+            (250.0, 484.0, 276.0, 486.0),
+        ],
+    ),
     # Figure 3.2 Bryophytes -- grouped as NCERT's caption groups them:
     # (a)+(b) the liverwort Marchantia, (c)+(d) the mosses.
     ("fig_3_2ab", 6, (114.0, 227.0, 534.0, 425.0), []),
