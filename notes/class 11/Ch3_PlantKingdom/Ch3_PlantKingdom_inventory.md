@@ -3,14 +3,18 @@ Source: `Chapter/class 11/Chapter 03 - Plant Kingdom.pdf` (14 pages) | Frozen: 2
 
 Workflow: v6 normal chapter, 3 gated passes (`Pass 1 → [Gate 1] → Pass 2 → [Gate 2] → Pass 3 → [Gate 3]`).
 
-**Gate 2 re-done from scratch and PASSED on 2026-08-20; Pass 3 has not begun.** The notes
+**FULLY COMPLETE — CLOSED. Gate 1, Gate 2 and Gate 3 all passed on 2026-08-20.** The notes
 script and generated PDF exist, and every `Ticked` cell below is marked `x` after its
 material was written and verified present for the automated gate. `check_pdf.py` returned
-exit 0 with 0 failures and one inspected-and-accepted photo-keyword warning. The re-audit
-distrusted the earlier green result and re-derived every check; it found and fixed three
-defects the earlier gate had hidden (padded figure-label matrix, a photocopier-fatal grey
-plate on `fig_3_4c`, and a false page-count claim). See "Gate 2 status" at the end for the
-full record. Figure-label rows are now L01-L11 auditing 35 genuine label occurrences.
+exit 0 with 0 failures and one inspected-and-accepted photo-keyword warning. The Gate 2
+re-audit distrusted the earlier green result and re-derived every check; it found and fixed
+three defects the earlier gate had hidden (padded figure-label matrix, a photocopier-fatal
+grey plate on `fig_3_4c`, and a false page-count claim). Pass 3 then ran to Gate 3 closure:
+all 10 pages visually inspected (zero layout defects) and a full-read source-to-output
+content cross-check of all 215 Facts rows returned 215/215 COVERED, 0 MISSING / 0 FABRICATED
+/ 0 DRIFTED — no `# [VERIFICATION FIX]` edit was needed. See "Gate 2 status", "Pass 3 status"
+and "Gate 3 status" at the end for the full record. Figure-label rows are L01-L11 auditing 35
+genuine label occurrences.
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 
@@ -591,3 +595,73 @@ asset count, not the page count. Corrected below from the actual linter output.
 
 **Stop boundary:** Pass 3 has not begun. No visual-render audit, fresh source-to-output
 content-drift audit, Gate 3 claim, or chapter-closure claim has been made.
+
+## Pass 3 status
+
+**Pass 3 completed on 2026-08-20 in a fresh sandbox.** The venv is not persisted by git, so
+`/vercel/share/venv` was rebuilt at the pinned versions (`reportlab 5.0.0`, `pdfplumber 0.11.10`,
+`pymupdf 1.28.2`, `Pillow 12.3.0`). This was not a §0 restart — no figure was re-extracted and
+the PDF was not rebuilt. Gate 2 was re-confirmed green on the existing 10-page PDF before Pass 3
+began (`check_pdf.py` → **0 fail / 1 benign warn, exit 0**).
+
+**Pass 3(a) — visual render check.** All **10 pages** rendered with `pymupdf` at 150 dpi and
+inspected directly. **Zero layout defects.** Verified: no overflow, clipping, orphaned headings,
+or squashed figures; Table 3.1 splits pages 3→4 with its header repeated; every process-flow
+triangle badge (algae reproduction p1, bryophyte life cycle p4, pteridophyte life cycle p6,
+gymnosperm fertilisation p8) is aligned to its vertical rule; all 11 figures are boxed with
+italic captions. Cross-page **style identity confirmed** by comparing H1/H2 banners, tables,
+NOTE/MEMORY-AID boxes and figure boxes from ≥3 points in the chapter — the imported
+`neet_template.py` held, no drift. In B&W the NOTE box (solid rule + `!`) and MEMORY AID box
+(dashed border + star) remain tell-apart-able by border style, not fill alone. The faint NCERT
+"not to be republished" source watermark on some Fig 3.1–3.5 artwork was re-examined: it carries
+no meaning and obscures no in-figure label (all 35 read cleanly), so it is left as-is.
+
+**Pass 3(b) — content cross-check against the frozen inventory.** Parallel subagents were
+unavailable, so the section-pair cross-check was done sequentially by full read (not grep):
+fresh `pdfplumber` re-extraction of all 14 source pages, read start-to-finish against all
+**215 Facts rows** and all **11 figure-label rows**, section pair by section pair. Result:
+**215/215 COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED.** Every scientist (Whittaker, Linnaeus,
+Bentham, Hooker), date (1969), number (70 species, 100 metres, "at least half"), taxon name and
+qualifier ("majority", "usually", "may") is verbatim; Table 3.1's 21 cells match the printed
+NCERT wording; the gymnosperm 5-step fertilisation sequence preserves NCERT order; and 35/35
+in-figure labels appear in running text at their own topic. The Recap Q4 ploidy answers (8/8),
+Q10 match pairs (4/4) and the Q5/Q8 exercise-gap additions were re-verified correct and are
+correctly flagged in the Appendix as background not stated in the NCERT body.
+
+**Drift caught and fixed:** none. No `# [VERIFICATION FIX]` edit was required by Pass 3 — a clean
+foundation from a thorough Pass 1. (The single pre-existing `# [VERIFICATION FIX]` at
+`Ch3_PlantKingdom.py:204` is a Pass-2 orphan fix, documented in the Gate-2 section above; Pass 3
+did not touch it.) Because nothing changed, the PDF was not rebuilt and `check_pdf.py` remains
+green.
+
+### Coverage note
+
+- **Compression decisions** — NCERT prose was merged/reordered into tables (sexual patterns,
+  Table 3.1, spore condition, Recap) and process flows (algae reproduction, bryophyte and
+  pteridophyte life cycles, gymnosperm fertilisation). No fact was dropped in the reflow; each
+  merged sentence maps to a ticked Facts row.
+- **Exercise-gap terms** — all five gaps closed: diplontic (Q8 iv), sporophyll/protonema/
+  antheridium/archegonium/isogamy (Q8), ploidies for Q4, Q10 match pairs, and gymnosperm
+  economic importance (Q5). Each lives in the Appendix under a NOTE marking it as background not
+  in the NCERT body.
+- **Drift caught and fixed** — None.
+- **Figures requiring manual attention** — None. All 11 assets are verified monochrome (`mode=L`);
+  `fig_3_4c` was corrected at Gate 2 with `white_point=180` and holds up in the B&W render.
+- **Color-dependent figures** — None. Every NCERT figure in this chapter is line art or a
+  greyscale habit photograph; none encodes meaning by colour, so nothing had to be restated in words.
+- **Source problems** — Source typos are documented in the Source problems section above and
+  normalised in prose only; Table 3.1 preserves the printed NCERT wording. No garbled or
+  unrecoverable source region.
+- **Linter verdict** — `check_pdf.py` → **VERDICT WARN, 0 fail / 1 warn, exit 0** on the 10-page
+  PDF. The 1 warning is check 4's keyword false positive (rows containing `photosynthesis` /
+  `photosynthetic` and the "habit photograph" label rows); positively confirmed benign — 11/11
+  embedded images are plant figures, no person photograph exists in the chapter. Accepted, same
+  class already accepted at Gate 3 on Ch1, Ch2 and Ch8.
+
+## Gate 3 status
+
+**Gate 3 CLOSED on 2026-08-20.** Zero confirmed defects remain AND `check_pdf.py` is still green
+(0 fail / 1 benign warn, exit 0). The full chapter folder is delivered per §0.5:
+`Ch3_PlantKingdom.pdf` (10 pp) · `Ch3_PlantKingdom.py` · `Ch3_PlantKingdom_inventory.md`
+(figure-label matrix + Pass 3 closure + Coverage note) · `assets/` (11 verified monochrome PNGs).
+Chapter 3 — Plant Kingdom is **FULLY COMPLETE — CLOSED**.
