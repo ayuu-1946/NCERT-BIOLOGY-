@@ -28,6 +28,10 @@ Checks (each independently pass/fail, collected into one verdict):
                             also appears in the PDF running text.              [defects 5,6]
   7. INVENTORY TICKED     — every Facts row in the inventory is ticked.        [§6 step 9]
   8. PAGE GEOMETRY        — pages are A4 portrait.                             [§4]
+  9. ORPHANED HEADINGS    — no banner heading is left stranded as the last thing
+                            on its page with its section body starting overleaf.
+                            Found by eye on Ch11 *after* Gate 3 was declared PASS,
+                            so it is now gated instead of re-hunted every chapter.
 
 Usage:
     python3 check_pdf.py "notes/class 12/Ch9_BiotechnologyPrinciplesAndProcesses"
@@ -180,7 +184,8 @@ def harvest(doc) -> tuple[list[dict], str]:
                         continue
                     x0, y0, x1, y1 = sp.get("bbox", (0, 0, 0, 0))
                     spans.append({"page": pno, "text": t, "size": round(sp.get("size", 0), 2),
-                                  "x0": x0, "y0": y0, "x1": x1, "y1": y1})
+                                  "x0": x0, "y0": y0, "x1": x1, "y1": y1,
+                                  "color": sp.get("color", 0)})
     return spans, "\n".join(chunks)
 
 
@@ -485,6 +490,77 @@ def check_geometry(doc) -> Check:
 
 
 # =====================================================================================
+# CHECK 9 — orphaned heading (a banner heading is the last thing on its page)
+# =====================================================================================
+
+# Banner headings are white bold text on a dark/mid-grey banner; body text, captions
+# and table cells are all INK/black. White is therefore a reliable, style-independent
+# marker for "drawn on a filled badge or banner". Two things are white: banner
+# headings, and process_flow() step digits. A step digit always has its step text
+# sitting to the RIGHT on the same visual line, whereas a banner heading's row spans
+# the frame and has nothing beside it - that is what _is_banner() below separates.
+WHITE = 0xFFFFFF
+
+
+def _is_banner(sp: dict, page_spans: list[dict]) -> bool:
+    """True for a banner-heading span, False for a process_flow step-badge digit."""
+    for other in page_spans:
+        if other is sp or other.get("color") == WHITE:
+            continue
+        # vertically overlapping (same visual line) and starting to the right
+        if other["x0"] >= sp["x1"] - 0.5 and other["y0"] < sp["y1"] and other["y1"] > sp["y0"]:
+            return False
+    return True
+
+
+def check_orphan_headings(doc, spans) -> Check:
+    """A heading must be followed by content on the SAME page.
+
+    This is the "orphaned heading" layout bug §6 Pass 3(a) lists but nothing
+    enforced: a heading that lands near a page break is left stranded at the foot
+    of the page while its own section text starts overleaf. It was rediscovered by
+    eye on Ch11 (Organisms and Populations) *after* a Pass 3(a) record had claimed
+    every page inspected and Gate 3 had been declared PASS - exactly the "human
+    pass wasted its budget on a mechanical defect" failure v6 exists to prevent.
+    `neet_template.heading()` now guards against it structurally with a
+    CondPageBreak; this check is the gate that keeps it from silently regressing.
+    """
+    c = Check("9. Orphaned headings (heading not left stranded at page foot)")
+    by_page: dict[int, list[dict]] = {}
+    for sp in spans:
+        by_page.setdefault(sp["page"], []).append(sp)
+
+    bad = []
+    heading_total = 0
+    for pno in sorted(by_page):
+        page_spans = by_page[pno]
+        headings = [s for s in page_spans
+                    if s.get("color") == WHITE and _is_banner(s, page_spans)]
+        heading_total += len({round(s["y1"], 1) for s in headings})
+        if not headings:
+            continue
+        # the lowest heading baseline on this page
+        low_head = max(s["y1"] for s in headings)
+        # is there any non-heading (body) text below it on the same page?
+        below = [s for s in page_spans
+                 if s.get("color") != WHITE and s["y0"] > low_head - 1.0]
+        if not below:
+            label = " / ".join(dict.fromkeys(
+                s["text"].strip() for s in headings if abs(s["y1"] - low_head) < 6.0))
+            bad.append(f"p{pno}: {label!r} is the last content on the page")
+
+    if bad:
+        c.fail(f"{len(bad)} orphaned heading(s) - the section body starts on the next page: "
+               + "; ".join(bad[:8]))
+        c.note("Fix: heading() reserves ORPHAN_GUARD_PT via CondPageBreak; if this fires, "
+               "that guard was bypassed or is too small for the following flowable.")
+    else:
+        c.note(f"No orphaned headings; {heading_total} banner heading(s) all followed by "
+               f"content on their own page.")
+    return c
+
+
+# =====================================================================================
 # main
 # =====================================================================================
 
@@ -525,6 +601,7 @@ def main() -> int:
     checks.append(check_glyphs(full_text))
     checks.append(check_labels(inv_text, full_text))
     checks.append(check_ticked(inv_text))
+    checks.append(check_orphan_headings(doc, spans))
 
     # order the report by check number embedded in the name
     checks.sort(key=lambda c: c.name)
