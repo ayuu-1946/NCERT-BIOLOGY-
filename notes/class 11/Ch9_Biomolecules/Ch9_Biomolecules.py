@@ -96,16 +96,13 @@ story.append(P("There is a wide diversity in living organisms in our biosphere. 
                "organisms made of the same chemicals, i.e., elements and compounds? "
                "<b>Although there is a bewildering diversity of living organisms, their chemical "
                "composition and metabolic reactions appear to be remarkably similar.</b>"))
-# [VERIFICATION FIX] D1: NCERT's "You have learnt in chemistry how elemental analysis is
-# performed" was dropped in the rewrite; restored here.
-story.append(P("You have learnt in chemistry how <b>elemental analysis</b> is performed. If we "
-               "perform such an analysis on a plant tissue, animal tissue or a microbial paste, we "
-               "obtain a list of elements like carbon, hydrogen, oxygen and several others, and "
-               "their respective content per unit mass of a living tissue. If the same analysis is "
-               "performed on a piece of earth's crust as an example of non-living matter, we obtain "
-               "a similar list. In absolute terms, no such differences could be made out; <b>the "
-               "elemental composition of living tissues and non-living matter appear also to be "
-               "similar when analysed qualitatively.</b>"))
+story.append(P("If we perform a chemical analysis on a plant tissue, animal tissue or a microbial "
+               "paste, we obtain a list of elements like carbon, hydrogen, oxygen and several "
+               "others, and their respective content per unit mass of a living tissue. If the same "
+               "analysis is performed on a piece of earth's crust as an example of non-living "
+               "matter, we obtain a similar list. In absolute terms, no such differences could be "
+               "made out; <b>the elemental composition of living tissues and non-living matter "
+               "appear also to be similar when analysed qualitatively.</b>"))
 # [VERIFICATION FIX] D5: summary-unique oxygen fact was narrated as commentary about the summary
 # ("taking the summary's fuller list"); now folded in as plain content per s3.
 story.append(P("All the elements present in a sample of earth's crust are also present in a sample "
@@ -270,9 +267,9 @@ story.append(labels_line(["Nucleotide", "Adenine", "Adenylic acid"]))
 story.append(P("<i>Figure 9.1 - Diagrammatic representation of small molecular weight organic "
                "compounds in living tissues.</i>"))
 # [VERIFICATION FIX] summary-unique F269 was ticked but never written into the body; folded in here.
-story.append(P("As the summary catalogues them, <b>amino acids, monosaccharide and disaccharide "
-               "sugars, fatty acids, glycerol, nucleotides, nucleosides and nitrogen bases</b> are "
-               "some of the organic compounds seen in living organisms."))
+story.append(P("<b>Amino acids, monosaccharide and disaccharide sugars, fatty acids, glycerol, "
+               "nucleotides, nucleosides and nitrogen bases</b> are some of the organic compounds "
+               "seen in living organisms."))
 
 # ---- 9.2 Primary and Secondary Metabolites ---- (F072-F078)
 story.append(H("9.2", "Primary and Secondary Metabolites", 1,
@@ -319,8 +316,8 @@ story.append(P("These classes of compounds - with the exception of lipids - have
 story.append(keyterm("Those which have molecular weights <b>less than one thousand daltons</b> are "
                      "usually referred to as <b>micromolecules</b> or simply biomolecules, while "
                      "those found in the acid-insoluble fraction are called <b>macromolecules</b> "
-                     "or biomacromolecules. (The summary notes there are thousands of such small "
-                     "molecular weight, under 1000 Da, biomolecules.)"))
+                     "or biomacromolecules. There are <b>thousands</b> of such small molecular "
+                     "weight biomolecules, all under <b>1000 Da</b>."))
 story.append(P("The molecules in the insoluble fraction, with the exception of lipids, are "
                "<b>polymeric substances</b>. Then why do lipids, whose molecular weights do not "
                "exceed 800 Da, come under the acid-insoluble (macromolecular) fraction?"))
@@ -367,9 +364,8 @@ story.append(keyterm("Certain amino acids are <b>essential</b> for our health an
                      "<b>essential</b> amino acids through our diet/food."))
 story.append(P("Proteins carry out many functions in living organisms: some transport nutrients "
                "across the cell membrane, some fight infectious organisms, some are hormones, some "
-               "are enzymes, etc. As the summary puts it, many of them are enzymes, some are "
-               "antibodies, some are receptors, some are hormones and some others are "
-               "<b>structural proteins</b>."))
+               "are enzymes, etc. Many of them are enzymes, some are antibodies, some are "
+               "receptors, some are hormones and some others are <b>structural proteins</b>."))
 story.append(P("<b>Collagen</b> is the most abundant protein in the animal world, and <b>Ribulose "
                "bisphosphate Carboxylase-Oxygenase (RuBisCO)</b> is the most abundant protein in "
                "the whole of the biosphere."))
@@ -413,11 +409,9 @@ story.append(P("Plant cell walls are made of cellulose. Paper made from plant pu
                "N-acetyl galactosamine, etc.). Exoskeletons of arthropods, for example, have a "
                "complex polysaccharide called <b>chitin</b>. These complex polysaccharides are "
                "mostly homopolymers."))
-story.append(note("The summary generalises this section: polysaccharides are components of the "
-                  "<b>cell wall in plants, fungi</b> and also of the <b>exoskeleton of "
-                  "arthropods</b>, and they are storage forms of energy (e.g., starch and "
-                  "glycogen). The body names plant cell walls and arthropod exoskeletons directly; "
-                  "the mention of <b>fungi</b> comes from the summary."))
+story.append(note("Taken together: polysaccharides are components of the <b>cell wall in plants "
+                  "and fungi</b> and also of the <b>exoskeleton of arthropods</b>, and they are "
+                  "storage forms of energy (e.g., starch and glycogen)."))
 
 # ---- 9.6 Nucleic Acids ---- (F126-F135, summary-unique F270, F277)
 story.append(H("9.6", "Nucleic Acids", 1,
@@ -439,12 +433,11 @@ story.append(P("The sugar found in polynucleotides is either <b>ribose</b> (a mo
                "<b>deoxyribonucleic acid (DNA)</b> while that which contains ribose is called "
                "<b>ribonucleic acid (RNA)</b>."))
 # [VERIFICATION FIX] summary-unique F270 was ticked but never written into the body; folded in here.
-story.append(P("The summary fixes the counts: there are <b>20 types of amino acids</b> and "
+story.append(P("Across all living organisms there are <b>20 types of amino acids</b> and "
                "<b>5 types of nucleotides</b>."))
 story.append(note("Nucleic acids serve as genetic material: DNA and RNA carry <b>hereditary "
-                  "information</b> and are passed on from the parental generation to the progeny "
-                  "(the parent-to-progeny transmission clause is stated in the summary; the body "
-                  "states that DNA and RNA function as genetic material)."))
+                  "information</b> and are passed on from the parental generation to the "
+                  "<b>progeny</b>."))
 
 # ---- 9.7 Structure of Proteins ---- (F136-F157, summary-unique F273) + Fig 9.3
 story.append(H("9.7", "Structure of Proteins", 1,
@@ -502,8 +495,8 @@ story.append(memory_aid("Four levels of protein structure - <b>Primary</b> = seq
                         "and beta-pleated sheet; <b>Tertiary</b> = whole chain folded like a "
                         "woollen ball (needed for biological activity); <b>Quaternary</b> = "
                         "several subunits assembled together (e.g. haemoglobin's 2 alpha + 2 "
-                        "beta). The summary generalises this hierarchy - primary, secondary, "
-                        "tertiary and quaternary - to all biomacromolecules."))
+                        "beta). This same hierarchy - primary, secondary, tertiary and quaternary - "
+                        "is described for biomacromolecules generally."))
 
 # ---- 9.8 Enzymes ---- (F158-F170)
 story.append(H("9.8", "Enzymes", 1,
@@ -566,8 +559,10 @@ story.append(P("In our skeletal muscle, under anaerobic conditions, <b>lactic ac
                "fermentation, the same pathway leads to the production of <b>ethanol</b> "
                "(alcohol). Hence, in different conditions different products are possible."))
 
-# ---- 9.8.2 How do Enzymes bring about High Rates of Catalysis? ---- (F195-F212) + Fig 9.4
-story.append(H("9.8.2", "How do Enzymes bring about such High Rates of Catalysis?", 2,
+# ---- 9.8.2 How do Enzymes bring about such High Rates of Chemical Conversions? ---- (F195-F212) + Fig 9.4
+# [VERIFICATION FIX] D6: heading read "...High Rates of Catalysis?"; NCERT's own heading is
+# "...High Rates of Chemical Conversions?" - restored verbatim.
+story.append(H("9.8.2", "How do Enzymes bring about such High Rates of Chemical Conversions?", 2,
                keyterm("The chemical which is converted into a product is called a "
                        "<b>'substrate'</b>. Enzymes - i.e. proteins with three-dimensional "
                        "structures including an active site - convert a substrate (S) into a "
