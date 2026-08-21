@@ -4,9 +4,11 @@ Chapter name and done / not done only, arranged unit-wise. A chapter counts as *
 
 For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 
-**Legend:** ✅ Done · ⬜ Not done
+**Legend:** ✅ Done · ▶️ In progress · ⬜ Not done
 
-**Progress: 8 / 32 chapters done** — Class 11: 6/19 · Class 12: 2/13
+**Progress: 9 / 32 chapters done** — Class 11: 6/19 · Class 12: 3/13
+
+**Current work:** Class 12, Chapter 12 — Ecosystem is in progress at **Gate 2**; Pass 3 / Gate 3 remain.
 
 ---
 
@@ -96,8 +98,8 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 
 | Chapter | Status |
 |---|---|
-| 11. Organisms and Populations | ⬜ Not done |
-| 12. Ecosystem | ⬜ Not done |
+| 11. Organisms and Populations | ✅ Done |
+| 12. Ecosystem | ▶️ In progress — Gate 2 green |
 | 13. Biodiversity and Conservation | ⬜ Not done |
 
 **Class 12 total: 2 / 13 done**
