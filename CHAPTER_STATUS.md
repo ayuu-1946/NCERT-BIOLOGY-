@@ -28,20 +28,30 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 11 | Organisms and Populations | 12 | ✅ **COMPLETE — third full re-audit of all 268 rows (2026-08-21)** — **268 facts** (F001-F265 + F030a/F189a/F252a) · 5 label rows / 22 in-figure labels re-read off the images · 18/18 headings · 16 opener rows · 17/17 summary sentences classified, 5 summary-unique folded · 10/10 exercises · 6/6 mono assets re-verified · **direction 2 clean — 0 UNINVENTORIED content** · 3 mechanical defects found + fixed (F146 unescaped pipes, F001 half-frozen heading, F252a markdown inside quote) | ✅ **PASS (0 fail, 1 inspected benign warn)** · **14 pp** · 6 mono imgs · 268/268 rows ticked · 22/22 labels in text · **checks 9 + 10 (orphaned headings, badge/banner collision) added and green** | ✅ **PASS — re-audited: 4 confirmed defects (D1 orphaned caption, **D2 + D3 orphaned headings**, **D4 badge plate clipped by banner**) → all fixed** · 14/14 pages inspected (4 D4 sites re-rendered at 700 dpi) · full read both directions, 0 UNINVENTORIED · rebuild reproducible (text-identical, only timestamps differ) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 re-earned at session 6 after D4 was found by pixel inspection and fixed at template level)** |
-| 12 | Ecosystem | 12 | ✅ 196 facts frozen (F001-F196) · 7 label rows / 61 in-figure labels (67 quoted strings) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 mono assets | ✅ **PASS (0 fail, 1 benign warn) · exit 0 — GATE 2 GREEN** · **10 pp** · 7 mono imgs · 196/196 rows ticked · **67/67 figure labels in text** · checks 1,2,3,5,6,7,8,9,10 all green | ▶️ **3(a) VISUAL PASS CLOSED** — 10/10 pages inspected at 110 dpi + 300 dpi 1-bit B&W · **1 confirmed defect (D1: 6 inventory row IDs leaked into reader-facing text) → fixed** · style consistency verified mechanically · Gate 2 re-run green after rebuild. **3(b) content cross-check pending** | ✅ pdf · py · inventory · assets | **▶️ Gate 3(a) closed — Gate 3(b) in progress** |
+| 12 | Ecosystem | 12 | ✅ 196 facts frozen (F001-F196, contiguous, 0 unticked — re-parsed) · 7 label rows / 67 label strings (67 unique, no doubling, no phantom row) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 mono assets re-viewed | ✅ **PASS (0 fail, 1 benign warn) · exit 0 — GATE 2 GREEN**, re-run on the **post-D4 rebuild** · **10 pp** · 7 mono imgs · 196/196 rows ticked · **67/67 figure labels in text** · checks 1,2,3,5,6,7,8,9,10 all green | ✅ **PASS — Gate 3 CLOSED.** 3(a): 10/10 pages inspected (110 + 300 dpi 1-bit); 3(b): **bidirectional full read re-run three times**, most recently under an explicit **grep prohibition**, 11/11 source pages read start to finish, **0 UNINVENTORIED** (×3). **4 confirmed defects (D1 row-ID leak · D2 F114 drift · D3 contradictory Ex 1(e) answers · D4 mislabelled fix comments) → all fixed.** Reproducibility: 3 builds identical (10 pp / 25,683 chars / 7 imgs / same text SHA-256) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 earned on the third full-read audit; two earlier PASSes withdrawn as premature)** |
 
 ---
 
-## Chapter 12 (Class 12) — Ecosystem — ▶️ GATE 3(a) CLOSED · GATE 3(b) IN PROGRESS
+## Chapter 12 (Class 12) — Ecosystem — ✅ FULLY COMPLETE — GATE 3 CLOSED
 
-**Current state (2026-08-21):** Gates 1 and 2 green; **Pass 3(a) complete with one confirmed defect found and fixed**; Pass 3(b) bidirectional content read is the only remaining work before Gate 3 can be judged. 10 pp · 7 mono figures · 196/196 rows ticked.
+**Current state (session 2026-08-21b): all three gates green, chapter delivered and recorded.** 10 pp · 7 mono figures · 196/196 rows ticked · `check_pdf.py` 0 fail / 1 accepted benign warn across all 10 checks. Gate 3 was earned on the **third** independent bidirectional full read; the two earlier PASS claims are withdrawn in the record as premature (see below).
 
 | Gate | Status | Evidence |
 |---|---|---|
-| Gate 1 | ✅ GREEN | 196 facts (F001-F196) · 7 label rows / 61 in-figure labels (67 quoted strings) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 assets mono+verified |
-| Gate 2 | ✅ GREEN — re-run on the **final rebuilt** PDF, 0 fail / 1 benign warn, exit 0 | all of checks 1,2,3,5,6,7,8,9,10 PASS · 67/67 labels in text · 196/196 rows ticked |
-| Gate 3(a) | ✅ **CLOSED** — 10/10 pages inspected, 1 confirmed defect fixed | this section |
-| Gate 3(b) | ▶️ **IN PROGRESS** — bidirectional full read not yet done | — |
+| Gate 1 | ✅ GREEN | 196 facts (F001-F196, contiguous, 0 unticked — machine re-parsed) · 7 label rows / 67 label strings (67 unique, no doubling, no phantom `Fig #` row) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 assets mono+verified |
+| Gate 2 | ✅ GREEN — re-run on the **post-D4 rebuilt** PDF, 0 fail / 1 benign warn, exit 0 | all of checks 1,2,3,5,6,7,8,9,10 PASS · 67/67 labels in text · 196/196 rows ticked |
+| Gate 3(a) | ✅ **CLOSED** — 10/10 pages inspected; pages 3 and 10 re-inspected after the D4 fix | this section |
+| Gate 3(b) | ✅ **CLOSED** — bidirectional full read completed and independently re-run **three times**, the last under an explicit grep prohibition. 11/11 source pages read start to finish; **0 UNINVENTORIED** every time | inventory `## Gate 3 record` → *Third independent re-verification* |
+
+### Why this chapter took three audits to close
+
+Ch12 is the project's clearest case of the failure mode §6 warns about. It was declared closed **twice** while still defective, and each time the next session found a defect **inside material the previous session had explicitly marked clean**:
+
+1. **First closure claim** — inventory said "GATE 3: PASS", with the Exercises block marked *clean in both directions* and 0 remaining defects. But `CHAPTER_STATUS.md`/`CHAPTER_TRACKER.md` were never updated, so the claim was unrecorded — and the mismatch was the tell.
+2. **Second session** — re-read that same "clean" Exercises block and found **D3**: two different answers to the same exercise blank (Ex 1(e)), one of them using non-NCERT wording ("oceans"). It fixed D3 and again wrote "PASS — chapter closed" in the inventory, but **again left both tracking files saying "3(b) pending"**.
+3. **Third session (this one)** — instructed to trust neither verdict and forbidden from using grep for any content claim. Re-ran both directions from the source PDF in a rebuilt environment and found **D4** in that *same* Exercises block: the script's `[VERIFICATION FIX]` comments contradicted the inventory's defect register (the D3 fix was labelled "D2", and D1/D2 sites carried no ID at all), which would send a future session to the wrong block. Fixed it, then **updated both tracking files in the same session** — the step both prior sessions skipped.
+
+**The lesson recorded for future chapters:** a prior session's "clean" verdict on a block is not evidence about that block, and an inventory that says PASS while the tracker says pending should be read as *not closed*. Three of Ch12's four defects were found by re-reading already-cleared text; none of the four was catchable by any `check_pdf.py` check, and **D3 in particular could not have been found by any grep** — both of its contradictory answers were legitimate chapter vocabulary.
 
 ### Environment (re-established this session, §0.2–0.3)
 
@@ -96,9 +106,34 @@ Every page rendered twice and viewed directly: at 110 dpi for layout, and at **3
 
 **Check 4 (no person photograph)** fires on this chapter as a **benign false positive** and is accepted. The heuristic matches the substring `photo` inside ordinary biological vocabulary — `photosynthesis`, `photosynthetically`, `photosynthetic` — in rows F036, F041, F048, F075, F076, F193. NCERT Class 12 Chapter 12 contains **no scientist profile and no portrait at all**, so there is nothing that could have been embedded; the manifest lists 7 diagram figures and zero photographs. Recorded here so a later session does not mistake this true negative for a real finding.
 
-### Remaining work — Pass 3(b)
+### Pass 3(b) — bidirectional full read: COMPLETE (third independent run, 2026-08-21b)
 
-Bidirectional full read against the frozen inventory, per §6 Pass 3(b): direction 1 (inventory → script) and the **mandatory** direction 2 (source → inventory, hunting UNINVENTORIED content — sub-headings and section-opening sentences especially). No coverage percentage or token screen may close it.
+Both directions re-run from the source PDF in a freshly rebuilt §0 environment (venv `/vercel/share/neetenv`, CPython 3.13.11, reportlab 5.0.1 · pymupdf 1.28.2 · Pillow 12.3.0 — matching the §0.3 reference set). Source re-extracted independently with `pdfplumber` (11 pp / 20,457 chars) and **read start to finish**; the entire 680-line script read start to finish. **Grep/ripgrep/regex was prohibited as evidence for any content claim** this session — machine parsing was confined to structural facts (ID contiguity, tick state, `_extract_labels` counts, hashes, page/char/image counts) and to locating line numbers to read from.
+
+Per-section reading claims (what was read against what):
+
+| Source read | Script block read | Direction 1 | Direction 2 |
+|---|---|---|---|
+| p1 opener + p2 §12.1 | `# ---- Chapter opener ----`, `# ---- 12.1 ... ----` (L60-172) | F001-F033 + F173/F175 COVERED | clean |
+| pp2-3 §12.2 | `# ---- 12.2 PRODUCTIVITY ----` (L175-226) | F034-F053 + F177-F181 COVERED | clean |
+| pp3-4 §12.3 | `# ---- 12.3 DECOMPOSITION ----` (L228-313) | F054-F072 + F182-F183 COVERED | clean |
+| pp5-7 §12.4 | `# ---- 12.4 ENERGY FLOW ----` (L315-461) | F073-F127 + F184-F186 COVERED; D2's restored phrase re-read in place at L406 | clean |
+| pp7-10 §12.5 | `# ---- 12.5 ECOLOGICAL PYRAMIDS ----` (L463-554) | F128-F153 + F196 COVERED | clean |
+| p10 Summary (20 sentences) | `# ---- Nutrient cycling ... ----`, `# ---- Quick Recap ----` (L556-607) | F171-F190 COVERED | clean — 8 SUMMARY-UNIQUE folded, nothing summary-only |
+| pp10-11 Exercises 1-11 | `# ---- Terms used in the exercises ... ----` (L609-662) | F191-F196 COVERED; D3's fix re-read side by side and confirmed consistent; **D4 FOUND** | clean on content |
+
+- **Direction 2: 0 UNINVENTORIED items** — third independent confirmation. 10/10 heading rows and 6/6 opener rows (F003, F012, F035, F055, F074, F129) re-walked as their own lists; Ch12 is structurally flat with **zero unnumbered sub-headings**, so the Ch9 "D4" failure mode is structurally impossible here.
+- **D3 class re-checked by the method that found it.** Every exercise answer read side by side against its appendix row and its frozen row. Ex 1(e) now reads "the atmosphere or hydrosphere (the gaseous-cycle reservoir)" in the exercises list and "atmosphere or hydrosphere" in the appendix table nine lines above — the two agree and both match F189 verbatim; "oceans" is gone. Confirmed by reading the script **and** by viewing rendered page 10.
+- **All 7 figures re-opened and viewed directly**, not mode-checked: fig_12_1 (7 labels), fig_12_2 (17, incl. NCERT's uncommaed "Birds, fishes wolf"), fig_12_3 (Sun + 4 trophic captions + every Heat marker), fig_12_4a (3 / 3,54,000 / 708, 000 / 5,842,000), fig_12_4b (1.5 / 11 / 37 / 809), fig_12_4c (PC 21 above P 4, correctly inverted), fig_12_4d (10 / 100 / 1000 / 10,000 J over 1,000,000 J). Every numeric label matches the script's Figure 12.4 table exactly.
+- **Reproducibility:** committed PDF + two fresh builds all **10 pp / 25,683 chars / 7 images**, identical text SHA-256 `558e0346fbb82bdf7cfb915f2a75c809a0beca09c6b35921def219d009c48ec5`; two further post-D4 builds reproduce the same hash, proving the D4 fix moved no reader-facing text.
+
+### Confirmed defect (Pass 3(b), this session)
+
+| ID | Defect | Class | Where | Fix |
+|---|---|---|---|---|
+| **D4** | **The script's `[VERIFICATION FIX]` comments disagreed with the inventory's defect register.** The Ex 1(e) fix was labelled `D2`, but D2 is the separate F114 fix in §12.4; the Ex 1(e) fix is **D3**. The two D1 sites and the D2 site carried no defect ID at all. Per §1 the `.py` is a deliverable whose block markers exist so a later session can jump to a flagged fix — a comment naming the wrong defect sends it to the wrong block. | Deliverable-integrity / audit-trail (script-internal; **never reached the student**) | `# ---- 12.3 DECOMPOSITION ----`, `# ---- 12.4 ENERGY FLOW ----`, `# ---- Terms used in the exercises ... ----` | All four sites now name their defect ID and match the register, with an inline note that the D3 comment previously mislabelled itself as D2. Comment-only: rebuilt text layer is **byte-identical** (same 25,683 chars, same SHA-256), linter green, pages 3 and 10 re-inspected. |
+
+**Why no linter caught it:** comments never enter the PDF text layer, so no `check_pdf.py` check can see them — and no grep for content would flag it either. It was found only by reading the exercises block start to finish, which is also how D3 was found one session earlier in that same block.
 
 ---
 

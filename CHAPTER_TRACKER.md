@@ -99,7 +99,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | Chapter | Status |
 |---|---|
 | 11. Organisms and Populations | ✅ Done |
-| 12. Ecosystem | ▶️ In progress — Gate 3(a) closed, 3(b) pending |
+| 12. Ecosystem | ✅ Done |
 | 13. Biodiversity and Conservation | ⬜ Not done |
 
-**Class 12 total: 2 / 13 done**
+**Class 12 total: 4 / 13 done**
