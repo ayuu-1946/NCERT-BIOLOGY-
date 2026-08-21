@@ -561,6 +561,64 @@ def check_orphan_headings(doc, spans) -> Check:
 
 
 # =====================================================================================
+# CHECK 10 — badge plate colliding with its heading banner (clipped badge label)
+# =====================================================================================
+
+# Every filled plate behind white type is one of the template's four greys:
+# INK #1A1A1A (badges), DARK_GREY #2C2C2C (H1), MED_GREY #4A4A4A (H2),
+# SOFT_GREY #6B6B6B (H3, the lightest at 0.42). Row shading is far lighter
+# (ROW_ALT #F0F0F0 = 0.94, NOTE_BG #E8E8E8 = 0.91), so 0.60 cleanly separates
+# "plate that carries white text" from "table/callout shading" without tuning.
+PLATE_MAX_CHANNEL = 0.60
+# Sub-point touching is just rasteriser/rounding slop, not a real collision.
+PLATE_OVERLAP_TOL = 0.5
+
+
+def check_badge_collisions(doc) -> Check:
+    """No filled plate may overlap another filled plate.
+
+    A badge plate and its heading banner are separate fills that must sit side by
+    side. When the badge plate is wider than its table column it overruns into the
+    banner, and the banner - painted after it - covers the plate's final glyph, so
+    "Appendix" prints as "Appendi" and "Table 11.1" loses its last digit. The text
+    layer still contains the full word, so no text-based check (not even the
+    legibility floor, which saw a legal 6.0pt) could ever see it; only the fill
+    geometry shows it. Found by eye on Ch11 p13 *after* a Pass 3(a) record had
+    claimed every page inspected - the same class of miss as check 9.
+    `neet_template.heading()` now sizes the badge column from the plate's real
+    width; this check is the gate that keeps it from silently regressing.
+    """
+    c = Check("10. Badge plate not colliding with its heading banner")
+    bad = []
+    plates_total = 0
+    for pno, page in enumerate(doc, 1):
+        plates = []
+        for dr in page.get_drawings():
+            fill = dr.get("fill")
+            if fill and max(fill) < PLATE_MAX_CHANNEL:
+                plates.append(dr["rect"])
+        plates_total += len(plates)
+        for i in range(len(plates)):
+            for j in range(i + 1, len(plates)):
+                a, b = plates[i], plates[j]
+                ox = min(a.x1, b.x1) - max(a.x0, b.x0)
+                oy = min(a.y1, b.y1) - max(a.y0, b.y0)
+                if ox > PLATE_OVERLAP_TOL and oy > PLATE_OVERLAP_TOL:
+                    bad.append(f"p{pno}: plates overlap {ox:.1f}x{oy:.1f}pt "
+                               f"(x{a.x0:.0f}-{a.x1:.0f} vs x{b.x0:.0f}-{b.x1:.0f})")
+
+    if bad:
+        c.fail(f"{len(bad)} badge/banner collision(s) - the banner is painted over the "
+               f"badge's last glyph: " + "; ".join(bad[:8]))
+        c.note("Fix: heading() sets the badge column to max(1.02cm, badge.width + "
+               "gutter); if this fires, a plate is again wider than its column.")
+    else:
+        c.note(f"No plate collisions; {plates_total} filled plate(s) all clear of "
+               f"their neighbours.")
+    return c
+
+
+# =====================================================================================
 # main
 # =====================================================================================
 
@@ -602,6 +660,7 @@ def main() -> int:
     checks.append(check_labels(inv_text, full_text))
     checks.append(check_ticked(inv_text))
     checks.append(check_orphan_headings(doc, spans))
+    checks.append(check_badge_collisions(doc))
 
     # order the report by check number embedded in the name
     checks.sort(key=lambda c: c.name)
