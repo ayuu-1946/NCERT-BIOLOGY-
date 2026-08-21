@@ -2,7 +2,7 @@
 
 > The `# Frozen Inventory` title used by completed chapters is deliberately **withheld** until `1-Z` actually freezes this file. A naive `grep -i frozen` on the old title would have reported this chapter as frozen while six sweeps were still outstanding.
 
-Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — Pass 1a complete, 1b not started** | Rows so far: **264** (`F001`..`F264`)
+Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — all six text sweeps (1a-S/H/O, 1b-S/H/O) complete; `1-F` and `1-Z` outstanding** | Rows so far: **506** (`F001`..`F506`)
 
 **Big-chapter protocol (§6, 5 passes).** 31 source pages, 10 numbered sections plus summary and exercises, so this chapter runs `1a → 1b → 2a → 2b → 3`. The source seam is:
 
@@ -20,11 +20,15 @@ Tick legend: `x` = written into the script and verified present in the generated
 | **1a-S** — source read & prose inventory, first half | intro + §5.1–§5.5 | **done** | **231** (`F001`..`F231`) |
 | **1a-H** — heading sweep, first half | intro + §5.1–§5.5 | **done** | **17** (`F232`..`F248`) — 16 in-body + the p1 chapter title |
 | **1a-O** — opener sweep, first half | intro + §5.1–§5.5 | **done** | **16** (`F249`..`F264`) — one per heading-bearing section |
-| **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Summary + Exercises | not started | — |
-| **1b-H** — heading sweep, second half | §5.6–§5.10 | not started | — |
-| **1b-O** — opener sweep, second half | §5.6–§5.10 | not started | — |
+| **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Exercises | **done** | **218** (`F265`..`F482`) — §5.6 onward from the mid-p17 seam, incl. the 14 Exercises questions |
+| **1b-H** — heading sweep, second half | §5.6–§5.10 + Summary + Exercises | **done** | **13** (`F483`..`F495`) — 10 numbered + `Goals of HGP` + `SUMMARY` + `EXERCISES` |
+| **1b-O** — opener sweep, second half | §5.6–§5.10 | **done** | **11** (`F496`..`F506`) — one per heading-bearing section; `SUMMARY`/`EXERCISES` deliberately excluded (see note) |
 | **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | not started | — |
 | **1-Z** — gaps, summary & freeze, whole chapter | steps 7–10 | not started | — |
+
+**Why `1b-H` wrote 13 rows but `1b-O` wrote 11.** Three of the 13 headings do not take an opener row: `EXERCISES` runs straight into question 1 with no prose, and `SUMMARY`'s sentences are owned by **`1-Z` step 8** (BODY-PRESENT / SUMMARY-UNIQUE classification) — giving the Summary an opener row here would put the same sentence under two owners, which is how a sentence gets written twice into the script. `Goals of HGP` *does* take one (`F503`) because it has a genuine stem sentence. So 13 headings − `SUMMARY` − `EXERCISES` = 11 openers.
+
+**Prose/opener boundary was checked, not assumed.** All 11 openers were confirmed *absent* from the 218 `1b-S` prose rows before `1b-O` ran: each section's `1b-S` block starts at sentence 2 (e.g. §5.7's prose starts `F314` "The order and sequence of amino acids…", with the defining opener "Translation refers to…" left to `F499`). Zero overlap, so no sentence is inventoried twice.
 
 Environment re-established this session per §0.2–§0.3: `/vercel/share/neetenv` was **absent** (expected — it does not survive a session boundary) and was rebuilt. CPython 3.13.11 @ `/vercel/share/neetenv`, reportlab 5.0.1, pdfplumber OK, pymupdf 1.28.2, Pillow 12.3.0.
 
@@ -32,30 +36,35 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 
 | Count | Value |
 |---|---|
-| Facts rows so far | **248** (`F001`..`F248`) — first half only |
-| ID range / contiguity | F001..F248 — 0 gaps, 0 duplicates (re-parsed from the table below) |
-| `Type: heading` rows | **17** (`F232`..`F248`) — first half done by `1a-H`: **16 in-body headings + the p1 chapter title = 17**. Second half owned by `1b-H`. |
-| `Type: opener` rows | **0** — owned by sessions 1a-O / 1b-O, deliberately absent here |
+| Facts rows so far | **506** (`F001`..`F506`) — **whole chapter, all text swept** |
+| ID range / contiguity | F001..F506 — 0 gaps, 0 duplicates, IDs monotonically increasing (re-parsed from the table below) |
+| `Type: heading` rows | **30** = `1a-H` 17 (`F232`..`F248`) + `1b-H` 13 (`F483`..`F495`). Chapter title is 1 of the 30, so **in-body headings = 29**. |
+| `Type: opener` rows | **27** = `1a-O` 16 (`F249`..`F264`) + `1b-O` 11 (`F496`..`F506`) |
 | Figure-label rows | **0** — owned by session 1-F |
-| Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **0 labels, 0 figures, no phantom `Fig #` row** — re-run against this file this session; the empty-matrix state is the expected pre-1-F result |
-| `Type` values used (normalized, lower-case) | `concept` 149 · `definition` 28 · `heading` 17 · `number` 16 · `list` 15 · `question` 11 · `name` 9 · `example` 3 = 248; no other value present |
+| Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **0 labels, 0 figures, no phantom `Fig #` row** — re-run against this file this session under the rebuilt venv; the empty-matrix state is the expected pre-1-F result |
+| `Type` values used (normalized, lower-case) | `concept` 260 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 = 506; no other value present |
 | Rows ticked | **0** — Pass 2 not started |
 | Summary sentences classified | not started (1-Z) |
 | Exercise-gap terms | not started (1-Z) |
 | Figures in manifest | not started (1-F) |
 
-Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 248 rows, `F001..F248`, **0 gaps, 0 duplicates**, and the `Type` column asserted to contain only the eight values listed. The census is derivable from its own list — `149 + 28 + 17 + 16 + 15 + 11 + 9 + 3 = 248`, matching the row total.
+Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 506 rows, `F001..F506`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `260 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 506`, matching the row total.
 
-**Heading census, derivable from its own list (§6 step 10).** The 17 `Type: heading` rows are `F232`..`F248`, and each group's size is the **length of the ID list beside it**, machine-counted, not asserted:
+`table` (1 row, `F280`) is a **new `Type` value introduced by `1b-S`**, for the `Table 5.1` codon checker-board caption. It is neither prose nor a figure; see carry-over 9, which records that the table's 64 cells are not text-extractable and that **no session currently owns rebuilding them**.
+
+**Heading census, derivable from its own list (§6 step 10).** The 30 `Type: heading` rows are `F232`..`F248` and `F483`..`F495`; each group's size is the **length of the ID list beside it**, machine-counted, not asserted:
 
 | Group | IDs | Count |
 |---|---|---|
 | Chapter title (p1) | `F232` | 1 |
-| Numbered section banners | `F233` 5.1 · `F236` 5.2 · `F241` 5.3 · `F242` 5.4 · `F245` 5.5 | 5 |
-| Numbered sub-headings | `F234` · `F235` · `F239` · `F240` · `F243` · `F244` · `F246` · `F247` · `F248` | 9 |
-| Unnumbered sub-headings | `F237` · `F238` | 2 |
+| Numbered section banners — first half | `F233` 5.1 · `F236` 5.2 · `F241` 5.3 · `F242` 5.4 · `F245` 5.5 | 5 |
+| Numbered section banners — second half | `F483` 5.6 · `F486` 5.7 · `F487` 5.8 · `F489` 5.9 · `F493` 5.10 | 5 |
+| Numbered sub-headings — first half | `F234` · `F235` · `F239` · `F240` · `F243` · `F244` · `F246` · `F247` · `F248` | 9 |
+| Numbered sub-headings — second half | `F484` · `F485` · `F488` · `F491` · `F492` | 5 |
+| Unnumbered sub-headings | `F237` · `F238` (first half) · `F490` `Goals of HGP` (second half) | 3 |
+| Back-matter headings | `F494` SUMMARY · `F495` EXERCISES | 2 |
 
-`1 + 5 + 9 + 2 = 17` ✓ equals the machine `Type: heading` count. In-body headings excluding the chapter title = **16**. `5.6 GENETIC CODE` (p17) is the seam banner and belongs to `1b-H`.
+`1 + 5 + 5 + 9 + 5 + 3 + 2 = 30` ✓ equals the machine `Type: heading` count. **10 numbered section banners (5 + 5) matches the 10 sections the protocol choice was based on** — an independent cross-check that no banner was missed. In-body headings excluding the chapter title = **29**.
 
 > ## GATE 1 STATUS: **OPEN — blocked. Pass 2 may not begin.**
 >
@@ -343,6 +352,248 @@ Scope of this table after session 1a-S: **prose facts of the first half only**. 
 | F262 | 5.5.1 | opener | "A transcription unit in DNA is defined primarily by the three regions in the DNA: (i) A Promoter (ii) The Structural gene (iii) A Terminator" (p13 — the sentence ends at the three-item list; the "convention in defining the two strands" sentence that follows is a separate sentence, not part of the opener) | |
 | F263 | 5.5.2 | opener | "A gene is defined as the functional unit of inheritance." (p14 — **the only place gene is defined**; §6 step 5's second load-bearing case, and the word sits in the heading `F247` directly above it) | |
 | F264 | 5.5.3 | opener | "In bacteria, there are three major types of RNAs: mRNA (messenger RNA), tRNA (transfer RNA), and rRNA (ribosomal RNA)." (p15) | |
+| F265 | 5.6 | concept | "Hence, these processes are easy to conceptualise on the basis of complementarity." | |
+| F266 | 5.6 | concept | "The process of translation requires transfer of genetic information from a polymer of nucleotides to synthesise a polymer of amino acids." | |
+| F267 | 5.6 | concept | "Neither does any complementarity exist between nucleotides and amino acids, nor could any be drawn theoretically." | |
+| F268 | 5.6 | concept | "There existed ample evidences, though, to support the notion that change in nucleic acids (genetic material) were responsible for change in amino acids in proteins." | |
+| F269 | 5.6 | concept | "This led to the proposition of a genetic code that could direct the sequence of amino acids during synthesis of proteins." | |
+| F270 | 5.6 | concept | "If determining the biochemical nature of genetic material and the structure of DNA was very exciting, the proposition and deciphering of genetic code were most challenging." | |
+| F271 | 5.6 | concept | "In a very true sense, it required involvement of scientists from several disciplines - physicists, organic chemists, biochemists and geneticists." | |
+| F272 | 5.6 | name | "It was George Gamow, a physicist, who argued that since there are only 4 bases and if they have to code for 20 amino acids, the code should constitute a combination of bases." | |
+| F273 | 5.6 | concept | "He suggested that in order to code for all the 20 amino acids, the code should be made up of three nucleotides." | |
+| F274 | 5.6 | number | "This was a very bold proposition, because a permutation combination of 4^3 (4 x 4 x 4) would generate 64 codons; generating many more codons than required." | |
+| F275 | 5.6 | concept | "Providing proof that the codon was a triplet, was a more daunting task." | |
+| F276 | 5.6 | name | "The chemical method developed by Har Gobind Khorana was instrumental in synthesising RNA molecules with defined combinations of bases (homopolymers and copolymers)." | |
+| F277 | 5.6 | name | "Marshall Nirenberg's cell-free system for protein synthesis finally helped the code to be deciphered." | |
+| F278 | 5.6 | name | "Severo Ochoa enzyme (polynucleotide phosphorylase) was also helpful in polymerising RNA with defined sequences in a template independent manner (enzymatic synthesis of RNA)." | |
+| F279 | 5.6 | concept | "Finally a checker-board for genetic code was prepared which is given in Table 5.1." | |
+| F280 | 5.6 | table | "Table 5.1: The Codons for the Various Amino Acids" (p18, 10.0pt Bookman-Demi table caption; the 64-cell codon checker-board itself is **not text-extractable** - see carry-over 9) | |
+| F281 | 5.6 | concept | "The salient features of genetic code are as follows:" | |
+| F282 | 5.6 | list | "(i) The codon is triplet. 61 codons code for amino acids and 3 codons do not code for any amino acids, hence they function as stop codons." | |
+| F283 | 5.6 | list | "(ii) Some amino acids are coded by more than one codon, hence the code is degenerate." | |
+| F284 | 5.6 | list | "(iii) The codon is read in mRNA in a contiguous fashion. There are no punctuations." | |
+| F285 | 5.6 | list | "(iv) The code is nearly universal: for example, from bacteria to human UUU would code for Phenylalanine (phe). Some exceptions to this rule have been found in mitochondrial codons, and in some protozoans." | |
+| F286 | 5.6 | list | "(v) AUG has dual functions. It codes for Methionine (met) , and it also act as initiator codon." | |
+| F287 | 5.6 | list | "(vi) UAA, UAG, UGA are stop terminator codons." | |
+| F288 | 5.6 | question | "If following is the sequence of nucleotides in mRNA, predict the sequence of amino acid coded by it (take help of the checkerboard): -AUG UUU UUC UUC UUU UUU UUC-" | |
+| F289 | 5.6 | question | "Now try the opposite. Following is the sequence of amino acids coded by an mRNA. Predict the nucleotide sequence in the RNA: Met-Phe-Phe-Phe-Phe-Phe-Phe" | |
+| F290 | 5.6 | question | "Do you face any difficulty in predicting the opposite?" | |
+| F291 | 5.6 | question | "Can you now correlate which two properties of genetic code you have learnt?" | |
+| F292 | 5.6.1 | concept | "You have studied about mutation and its effect in Chapter 4." | |
+| F293 | 5.6.1 | concept | "Effects of large deletions and rearrangements in a segment of DNA are easy to comprehend. It may result in loss or gain of a gene and so a function." | |
+| F294 | 5.6.1 | concept | "The effect of point mutations will be explained here." | |
+| F295 | 5.6.1 | example | "A classical example of point mutation is a change of single base pair in the gene for beta globin chain that results in the change of amino acid residue glutamate to valine." | |
+| F296 | 5.6.1 | concept | "It results into a diseased condition called as sickle cell anemia." | |
+| F297 | 5.6.1 | concept | "Effect of point mutations that inserts or deletes a base in structural gene can be better understood by following simple example." | |
+| F298 | 5.6.1 | example | "Consider a statement that is made up of the following words each having three letters like genetic code. RAM HAS RED CAP" | |
+| F299 | 5.6.1 | example | "If we insert a letter B in between HAS and RED and rearrange the statement, it would read as follows: RAM HAS BRE DCA P" | |
+| F300 | 5.6.1 | example | "Similarly, if we now insert two letters at the same place, say BI'. Now it would read, RAM HAS BIR EDC AP" | |
+| F301 | 5.6.1 | example | "Now we insert three letters together, say BIG, the statement would read RAM HAS BIG RED CAP" | |
+| F302 | 5.6.1 | example | "The same exercise can be repeated, by deleting the letters R, E and D, one by one and rearranging the statement to make a triplet word. RAM HAS EDC AP / RAM HAS DCA P / RAM HAS CAP" | |
+| F303 | 5.6.1 | concept | "The conclusion from the above exercise is very obvious. Insertion or deletion of one or two bases changes the reading frame from the point of insertion or deletion." | |
+| F304 | 5.6.1 | definition | "However, such mutations are referred to as frameshift insertion or deletion mutations." | |
+| F305 | 5.6.1 | concept | "Insertion or deletion of three or its multiple bases insert or delete in one or multiple codon hence one or multiple amino acids, and reading frame remains unaltered from that point onwards." | |
+| F306 | 5.6.2 | concept | "He postulated the presence of an adapter molecule that would on one hand read the code and on other hand would bind to specific amino acids." | |
+| F307 | 5.6.2 | concept | "The tRNA, then called sRNA (soluble RNA), was known before the genetic code was postulated. However, its role as an adapter molecule was assigned much later." | |
+| F308 | 5.6.2 | definition | "tRNA has an anticodon loop that has bases complementary to the code, and it also has an amino acid acceptor end to which it binds to amino acids." | |
+| F309 | 5.6.2 | concept | "tRNAs are specific for each amino acid (Figure 5.12)." | |
+| F310 | 5.6.2 | definition | "For initiation, there is another specific tRNA that is referred to as initiator tRNA." | |
+| F311 | 5.6.2 | concept | "There are no tRNAs for stop codons." | |
+| F312 | 5.6.2 | concept | "In figure 5.12, the secondary structure of tRNA has been depicted that looks like a clover-leaf." | |
+| F313 | 5.6.2 | concept | "In actual structure, the tRNA is a compact molecule which looks like inverted L." | |
+| F314 | 5.7 | concept | "The order and sequence of amino acids are defined by the sequence of bases in the mRNA." | |
+| F315 | 5.7 | definition | "The amino acids are joined by a bond which is known as a peptide bond." | |
+| F316 | 5.7 | concept | "Formation of a peptide bond requires energy." | |
+| F317 | 5.7 | definition | "Therefore, in the first phase itself amino acids are activated in the presence of ATP and linked to their cognate tRNA - a process commonly called as charging of tRNA or aminoacylation of tRNA to be more specific." | |
+| F318 | 5.7 | concept | "If two such charged tRNAs are brought close enough, the formation of peptide bond between them would be favoured energetically." | |
+| F319 | 5.7 | concept | "The presence of a catalyst would enhance the rate of peptide bond formation." | |
+| F320 | 5.7 | definition | "The cellular factory responsible for synthesising proteins is the ribosome." | |
+| F321 | 5.7 | number | "The ribosome consists of structural RNAs and about 80 different proteins." | |
+| F322 | 5.7 | concept | "In its inactive state, it exists as two subunits; a large subunit and a small subunit." | |
+| F323 | 5.7 | concept | "When the small subunit encounters an mRNA, the process of translation of the mRNA to protein begins." | |
+| F324 | 5.7 | number | "There are two sites in the large subunit, for subsequent amino acids to bind to and thus, be close enough to each other for the formation of a peptide bond." | |
+| F325 | 5.7 | concept | "The ribosome also acts as a catalyst (23S rRNA in bacteria is the enzyme- ribozyme) for the formation of peptide bond." | |
+| F326 | 5.7 | definition | "A translational unit in mRNA is the sequence of RNA that is flanked by the start codon (AUG) and the stop codon and codes for a polypeptide." | |
+| F327 | 5.7 | definition | "An mRNA also has some additional sequences that are not translated and are referred as untranslated regions (UTR)." | |
+| F328 | 5.7 | concept | "The UTRs are present at both 5'-end (before start codon) and at 3'-end (after stop codon)." | |
+| F329 | 5.7 | concept | "They are required for efficient translation process." | |
+| F330 | 5.7 | concept | "For initiation, the ribosome binds to the mRNA at the start codon (AUG) that is recognised only by the initiator tRNA." | |
+| F331 | 5.7 | concept | "The ribosome proceeds to the elongation phase of protein synthesis." | |
+| F332 | 5.7 | concept | "During this stage, complexes composed of an amino acid linked to tRNA, sequentially bind to the appropriate codon in mRNA by forming complementary base pairs with the tRNA anticodon." | |
+| F333 | 5.7 | concept | "The ribosome moves from codon to codon along the mRNA." | |
+| F334 | 5.7 | concept | "Amino acids are added one by one, translated into Polypeptide sequences dictated by DNA and represented by mRNA." (source capitalises "Polypeptide" mid-sentence; reproduce NCERT's own casing) | |
+| F335 | 5.7 | concept | "At the end, a release factor binds to the stop codon, terminating translation and releasing the complete polypeptide from the ribosome." | |
+| F336 | 5.8 | concept | "Considering that gene expression results in the formation of a polypeptide, it can be regulated at several levels." | |
+| F337 | 5.8 | list | "In eukaryotes, the regulation could be exerted at (i) transcriptional level (formation of primary transcript), (ii) processing level (regulation of splicing), (iii) transport of mRNA from nucleus to the cytoplasm, (iv) translational level." | |
+| F338 | 5.8 | concept | "The genes in a cell are expressed to perform a particular function or a set of functions." | |
+| F339 | 5.8 | example | "For example, if an enzyme called beta-galactosidase is synthesised by E. coli, it is used to catalyse the hydrolysis of a disaccharide, lactose into galactose and glucose; the bacteria use them as a source of energy." | |
+| F340 | 5.8 | concept | "Hence, if the bacteria do not have lactose around them to be utilised for energy source, they would no longer require the synthesis of the enzyme beta-galactosidase." | |
+| F341 | 5.8 | concept | "Therefore, in simple terms, it is the metabolic, physiological or environmental conditions that regulate the expression of genes." | |
+| F342 | 5.8 | concept | "The development and differentiation of embryo into adult organisms are also a result of the coordinated regulation of expression of several sets of genes." | |
+| F343 | 5.8 | concept | "In prokaryotes, control of the rate of transcriptional initiation is the predominant site for control of gene expression." | |
+| F344 | 5.8 | concept | "In a transcription unit, the activity of RNA polymerase at a given promoter is in turn regulated by interaction with accessory proteins, which affect its ability to recognise start sites." | |
+| F345 | 5.8 | definition | "These regulatory proteins can act both positively (activators) and negatively (repressors)." | |
+| F346 | 5.8 | definition | "The accessibility of promoter regions of prokaryotic DNA is in many cases regulated by the interaction of proteins with sequences termed operators." | |
+| F347 | 5.8 | concept | "The operator region is adjacent to the promoter elements in most operons and in most cases the sequences of the operator bind a repressor protein." | |
+| F348 | 5.8 | concept | "Each operon has its specific operator and specific repressor." | |
+| F349 | 5.8 | example | "For example, lac operator is present only in the lac operon and it interacts specifically with lac repressor only." | |
+| F350 | 5.8.1 | name | "They were the first to elucidate a transcriptionally regulated system." | |
+| F351 | 5.8.1 | definition | "In lac operon (here lac refers to lactose), a polycistronic structural gene is regulated by a common promoter and regulatory genes." | |
+| F352 | 5.8.1 | definition | "Such arrangement is very common in bacteria and is referred to as operon." | |
+| F353 | 5.8.1 | example | "To name few such examples, lac operon, trp operon, ara operon, his operon, val operon, etc." | |
+| F354 | 5.8.1 | definition | "The lac operon consists of one regulatory gene (the i gene - here the term i does not refer to inducer, rather it is derived from the word inhibitor) and three structural genes (z, y, and a)." | |
+| F355 | 5.8.1 | concept | "The i gene codes for the repressor of the lac operon." | |
+| F356 | 5.8.1 | concept | "The z gene codes for beta-galactosidase (beta-gal), which is primarily responsible for the hydrolysis of the disaccharide, lactose into its monomeric units, galactose and glucose." | |
+| F357 | 5.8.1 | concept | "The y gene codes for permease, which increases permeability of the cell to beta-galactosides." | |
+| F358 | 5.8.1 | concept | "The a gene encodes a transacetylase." | |
+| F359 | 5.8.1 | concept | "Hence, all the three gene products in lac operon are required for metabolism of lactose." | |
+| F360 | 5.8.1 | concept | "In most other operons as well, the genes present in the operon are needed together to function in the same or related metabolic pathway (Figure 5.14)." | |
+| F361 | 5.8.1 | definition | "Lactose is the substrate for the enzyme beta-galactosidase and it regulates switching on and off of the operon. Hence, it is termed as inducer." | |
+| F362 | 5.8.1 | concept | "In the absence of a preferred carbon source such as glucose, if lactose is provided in the growth medium of the bacteria, the lactose is transported into the cells through the action of permease (Remember, a very low level of expression of lac operon has to be present in the cell all the time, otherwise lactose cannot enter the cells)." | |
+| F363 | 5.8.1 | concept | "The lactose then induces the operon in the following manner." | |
+| F364 | 5.8.1 | concept | "The repressor of the operon is synthesised (all-the-time - constitutively) from the i gene." | |
+| F365 | 5.8.1 | concept | "The repressor protein binds to the operator region of the operon and prevents RNA polymerase from transcribing the operon." | |
+| F366 | 5.8.1 | concept | "In the presence of an inducer, such as lactose or allolactose, the repressor is inactivated by interaction with the inducer." | |
+| F367 | 5.8.1 | concept | "This allows RNA polymerase access to the promoter and transcription proceeds (Figure 5.14)." | |
+| F368 | 5.8.1 | concept | "Essentially, regulation of lac operon can also be visualised as regulation of enzyme synthesis by its substrate." | |
+| F369 | 5.8.1 | concept | "Remember, glucose or galactose cannot act as inducers for lac operon." | |
+| F370 | 5.8.1 | question | "Can you think for how long the lac operon would be expressed in the presence of lactose?" | |
+| F371 | 5.8.1 | definition | "Regulation of lac operon by repressor is referred to as negative regulation." | |
+| F372 | 5.8.1 | concept | "Lac operon is under control of positive regulation as well, but it is beyond the scope of discussion at this level." | |
+| F373 | 5.9 | concept | "In other words, genetic make-up of an organism or an individual lies in the DNA sequences." | |
+| F374 | 5.9 | concept | "If two individuals differ, then their DNA sequences should also be different, at least at some places." | |
+| F375 | 5.9 | concept | "These assumptions led to the quest of finding out the complete DNA sequence of human genome." | |
+| F376 | 5.9 | number | "With the establishment of genetic engineering techniques where it was possible to isolate and clone any piece of DNA and availability of simple and fast techniques for determining DNA sequences, a very ambitious project of sequencing human genome was launched in the year 1990." | |
+| F377 | 5.9 | concept | "Human Genome Project (HGP) was called a mega project." | |
+| F378 | 5.9 | concept | "You can imagine the magnitude and the requirements for the project if we simply define the aims of the project as follows:" | |
+| F379 | 5.9 | number | "Human genome is said to have approximately 3 x 10^9 bp, and if the cost of sequencing required is US $ 3 per bp (the estimated cost in the beginning), the total estimated cost of the project would be approximately 9 billion US dollars." | |
+| F380 | 5.9 | number | "Further, if the obtained sequences were to be stored in typed form in books, and if each page of the book contained 1000 letters and each book contained 1000 pages, then 3300 such books would be required to store the information of DNA sequence from a single human cell." | |
+| F381 | 5.9 | concept | "The enormous amount of data expected to be generated also necessitated the use of high speed computational devices for data storage and retrieval, and analysis." | |
+| F382 | 5.9 | definition | "HGP was closely associated with the rapid development of a new area in biology called Bioinformatics." | |
+| F383 | 5.9 (Goals of HGP) | number | "(i) Identify all the approximately 20,000-25,000 genes in human DNA;" | |
+| F384 | 5.9 (Goals of HGP) | number | "(ii) Determine the sequences of the 3 billion chemical base pairs that make up human DNA;" | |
+| F385 | 5.9 (Goals of HGP) | list | "(iiii) Store this information in databases;" (the source really prints the numeral as "(iiii)" - reproduce the item as "(iii)" in the rewrite but do not silently renumber the rest; see carry-over 12) | |
+| F386 | 5.9 (Goals of HGP) | list | "(iv) Improve tools for data analysis;" | |
+| F387 | 5.9 (Goals of HGP) | list | "(v) Transfer related technologies to other sectors, such as industries;" | |
+| F388 | 5.9 (Goals of HGP) | list | "(vi) Address the ethical, legal, and social issues (ELSI) that may arise from the project." | |
+| F389 | 5.9 | number | "The Human Genome Project was a 13-year project coordinated by the U.S. Department of Energy and the National Institute of Health." | |
+| F390 | 5.9 | name | "During the early years of the HGP, the Wellcome Trust (U.K.) became a major partner; additional contributions came from Japan, France, Germany, China and others." | |
+| F391 | 5.9 | number | "The project was completed in 2003." | |
+| F392 | 5.9 | concept | "Knowledge about the effects of DNA variations among individuals can lead to revolutionary new ways to diagnose, treat and someday prevent the thousands of disorders that affect human beings." | |
+| F393 | 5.9 | concept | "Besides providing clues to understanding human biology, learning about non-human organisms DNA sequences can lead to an understanding of their natural capabilities that can be applied toward solving challenges in health care, agriculture, energy production, environmental remediation." | |
+| F394 | 5.9 | example | "Many non-human model organisms, such as bacteria, yeast, Caenorhabditis elegans (a free living non-pathogenic nematode), Drosophila (the fruit fly), plants (rice and Arabidopsis), etc., have also been sequenced." | |
+| F395 | 5.9 | concept | "Methodologies : The methods involved two major approaches." (10.5pt bold run-in label, **not** a standalone heading - see carry-over 10) | |
+| F396 | 5.9 | definition | "One approach focused on identifying all the genes that are expressed as RNA (referred to as Expressed Sequence Tags (ESTs)." | |
+| F397 | 5.9 | definition | "The other took the blind approach of simply sequencing the whole set of genome that contained all the coding and non-coding sequence, and later assigning different regions in the sequence with functions (a term referred to as Sequence Annotation)." | |
+| F398 | 5.9 | concept | "For sequencing, the total DNA from a cell is isolated and converted into random fragments of relatively smaller sizes (recall DNA is a very long polymer, and there are technical limitations in sequencing very long pieces of DNA) and cloned in suitable host using specialised vectors." | |
+| F399 | 5.9 | concept | "The cloning resulted into amplification of each piece of DNA fragment so that it subsequently could be sequenced with ease." | |
+| F400 | 5.9 | definition | "The commonly used hosts were bacteria and yeast, and the vectors were called as BAC (bacterial artificial chromosomes), and YAC (yeast artificial chromosomes)." | |
+| F401 | 5.9 | name | "The fragments were sequenced using automated DNA sequencers that worked on the principle of a method developed by Frederick Sanger." | |
+| F402 | 5.9 | name | "(Remember, Sanger is also credited for developing method for determination of amino acid sequences in proteins)." | |
+| F403 | 5.9 | concept | "These sequences were then arranged based on some overlapping regions present in them. This required generation of overlapping fragments for sequencing." | |
+| F404 | 5.9 | concept | "Alignment of these sequences was humanly not possible. Therefore, specialised computer based programs were developed (Figure 5.15)." | |
+| F405 | 5.9 | concept | "These sequences were subsequently annotated and were assigned to each chromosome." | |
+| F406 | 5.9 | number | "The sequence of chromosome 1 was completed only in May 2006 (this was the last of the 24 human chromosomes - 22 autosomes and X and Y - to be sequenced)." | |
+| F407 | 5.9 | concept | "Another challenging task was assigning the genetic and physical maps on the genome." | |
+| F408 | 5.9 | definition | "This was generated using information on polymorphism of restriction endonuclease recognition sites, and some repetitive DNA sequences known as microsatellites (one of the applications of polymorphism in repetitive DNA sequences shall be explained in next section of DNA fingerprinting)." | |
+| F409 | 5.9.1 | number | "(i) The human genome contains 3164.7 million bp." | |
+| F410 | 5.9.1 | number | "(ii) The average gene consists of 3000 bases, but sizes vary greatly, with the largest known human gene being dystrophin at 2.4 million bases." | |
+| F411 | 5.9.1 | number | "(iii) The total number of genes is estimated at 30,000-much lower than previous estimates of 80,000 to 1,40,000 genes. Almost all (99.9 per cent) nucleotide bases are exactly the same in all humans." | |
+| F412 | 5.9.1 | number | "(iv) The functions are unknown for over 50 per cent of the discovered genes." | |
+| F413 | 5.9.1 | number | "(v) Less than 2 per cent of the genome codes for proteins." | |
+| F414 | 5.9.1 | concept | "(vi) Repeated sequences make up very large portion of the human genome." | |
+| F415 | 5.9.1 | definition | "(vii) Repetitive sequences are stretches of DNA sequences that are repeated many times, sometimes hundred to thousand times. They are thought to have no direct coding functions, but they shed light on chromosome structure, dynamics and evolution." | |
+| F416 | 5.9.1 | number | "(viii) Chromosome 1 has most genes (2968), and the Y has the fewest (231)." | |
+| F417 | 5.9.1 | number | "(ix) Scientists have identified about 1.4 million locations where single-base DNA differences (SNPs - single nucleotide polymorphism, pronounced as 'snips') occur in humans. This information promises to revolutionise the processes of finding chromosomal locations for disease-associated sequences and tracing human history." | |
+| F418 | 5.9.2 | concept | "This enormous task will require the expertise and creativity of tens of thousands of scientists from varied disciplines in both the public and private sectors worldwide." | |
+| F419 | 5.9.2 | concept | "One of the greatest impacts of having the HG sequence may well be enabling a radically new approach to biological research." | |
+| F420 | 5.9.2 | concept | "In the past, researchers studied one or a few genes at a time." | |
+| F421 | 5.9.2 | concept | "With whole-genome sequences and new high-throughput technologies, we can approach questions systematically and on a much broader scale." | |
+| F422 | 5.9.2 | concept | "They can study all the genes in a genome, for example, all the transcripts in a particular tissue or organ or tumor, or how tens of thousands of genes and proteins work together in interconnected networks to orchestrate the chemistry of life." | |
+| F423 | 5.10 | question | "Assuming human genome as 3 x 10^9 bp, in how many base sequences would there be differences?" | |
+| F424 | 5.10 | concept | "It is these differences in sequence of DNA which make every individual unique in their phenotypic appearance." | |
+| F425 | 5.10 | concept | "If one aims to find out genetic differences between two individuals or among individuals of a population, sequencing the DNA every time would be a daunting and expensive task." | |
+| F426 | 5.10 | number | "Imagine trying to compare two sets of 3 x 10^6 base pairs." (the source prints the exponent as 6 here, two sentences after printing 3 x 10^9 for the same genome - reproduce as printed; see carry-over 11) | |
+| F427 | 5.10 | definition | "DNA fingerprinting is a very quick way to compare the DNA sequences of any two individuals." | |
+| F428 | 5.10 | definition | "DNA fingerprinting involves identifying differences in some specific regions in DNA sequence called as repetitive DNA, because in these sequences, a small stretch of DNA is repeated many times." | |
+| F429 | 5.10 | concept | "These repetitive DNA are separated from bulk genomic DNA as different peaks during density gradient centrifugation." | |
+| F430 | 5.10 | definition | "The bulk DNA forms a major peak and the other small peaks are referred to as satellite DNA." | |
+| F431 | 5.10 | list | "Depending on base composition (A : T rich or G:C rich), length of segment, and number of repetitive units, the satellite DNA is classified into many categories, such as micro-satellites, mini-satellites etc." | |
+| F432 | 5.10 | concept | "These sequences normally do not code for any proteins, but they form a large portion of human genome." | |
+| F433 | 5.10 | concept | "These sequence show high degree of polymorphism and form the basis of DNA fingerprinting." | |
+| F434 | 5.10 | concept | "Since DNA from every tissue (such as blood, hair-follicle, skin, bone, saliva, sperm etc.), from an individual show the same degree of polymorphism, they become very useful identification tool in forensic applications." | |
+| F435 | 5.10 | concept | "Further, as the polymorphisms are inheritable from parents to children, DNA fingerprinting is the basis of paternity testing, in case of disputes." | |
+| F436 | 5.10 | concept | "As polymorphism in DNA sequence is the basis of genetic mapping of human genome as well as of DNA fingerprinting, it is essential that we understand what DNA polymorphism means in simple terms." | |
+| F437 | 5.10 | definition | "Polymorphism (variation at genetic level) arises due to mutations." | |
+| F438 | 5.10 | concept | "(Recall different kind of mutations and their effects that you have already studied in Chapter 4, and in the preceding sections in this chapter.)" | |
+| F439 | 5.10 | concept | "New mutations may arise in an individual either in somatic cells or in the germ cells (cells that generate gametes in sexually reproducing organisms)." | |
+| F440 | 5.10 | concept | "If a germ cell mutation does not seriously impair individual's ability to have offspring who can transmit the mutation, it can spread to the other members of population (through sexual reproduction)." | |
+| F441 | 5.10 | number | "Allelic (again recall the definition of alleles from Chapter 4) sequence variation has traditionally been described as a DNA polymorphism if more than one variant (allele) at a locus occurs in human population with a frequency greater than 0.01." | |
+| F442 | 5.10 | definition | "In simple terms, if an inheritable mutation is observed in a population at high frequency, it is referred to as DNA polymorphism." | |
+| F443 | 5.10 | concept | "The probability of such variation to be observed in non-coding DNA sequence would be higher as mutations in these sequences may not have any immediate effect/impact in an individual's reproductive ability." | |
+| F444 | 5.10 | concept | "These mutations keep on accumulating generation after generation, and form one of the basis of variability/polymorphism." | |
+| F445 | 5.10 | concept | "There is a variety of different types of polymorphisms ranging from single nucleotide change to very large scale changes." | |
+| F446 | 5.10 | concept | "For evolution and speciation, such polymorphisms play very important role, and you will study these in details at higher classes." | |
+| F447 | 5.10 | name | "The technique of DNA Fingerprinting was initially developed by Alec Jeffreys." | |
+| F448 | 5.10 | definition | "He used a satellite DNA as probe that shows very high degree of polymorphism. It was called as Variable Number of Tandem Repeats (VNTR)." | |
+| F449 | 5.10 | concept | "The technique, as used earlier, involved Southern blot hybridisation using radiolabelled VNTR as a probe." | |
+| F450 | 5.10 | list | "(i) isolation of DNA," | |
+| F451 | 5.10 | list | "(ii) digestion of DNA by restriction endonucleases," | |
+| F452 | 5.10 | list | "(iii) separation of DNA fragments by electrophoresis," | |
+| F453 | 5.10 | list | "(iv) transferring (blotting) of separated DNA fragments to synthetic membranes, such as nitrocellulose or nylon," | |
+| F454 | 5.10 | list | "(v) hybridisation using labelled VNTR probe, and" | |
+| F455 | 5.10 | list | "(vi) detection of hybridised DNA fragments by autoradiography." | |
+| F456 | 5.10 | concept | "A schematic representation of DNA fingerprinting is shown in Figure 5.16." | |
+| F457 | 5.10 | definition | "The VNTR belongs to a class of satellite DNA referred to as mini-satellite." | |
+| F458 | 5.10 | concept | "A small DNA sequence is arranged tandemly in many copy numbers." | |
+| F459 | 5.10 | concept | "The copy number varies from chromosome to chromosome in an individual." | |
+| F460 | 5.10 | concept | "The numbers of repeat show very high degree of polymorphism." | |
+| F461 | 5.10 | number | "As a result the size of VNTR varies in size from 0.1 to 20 kb." | |
+| F462 | 5.10 | concept | "Consequently, after hybridisation with VNTR probe, the autoradiogram gives many bands of differing sizes." | |
+| F463 | 5.10 | concept | "These bands give a characteristic pattern for an individual DNA (Figure 5.16)." | |
+| F464 | 5.10 | concept | "It differs from individual to individual in a population except in the case of monozygotic (identical) twins." | |
+| F465 | 5.10 | concept | "The sensitivity of the technique has been increased by use of polymerase chain reaction (PCR- you will study about it in Chapter 9)." | |
+| F466 | 5.10 | concept | "Consequently, DNA from a single cell is enough to perform DNA fingerprinting analysis." | |
+| F467 | 5.10 | concept | "In addition to application in forensic science, it has much wider application, such as in determining population and genetic diversities." | |
+| F468 | 5.10 | concept | "Currently, many different probes are used to generate DNA fingerprints." | |
+| F469 | Exercises | question | "1 Group the following as nitrogenous bases and nucleosides: Adenine, Cytidine, Thymine, Guanosine, Uracil and Cytosine." | |
+| F470 | Exercises | question | "2. If a double stranded DNA has 20 per cent of cytosine, calculate the per cent of adenine in the DNA." | |
+| F471 | Exercises | question | "3. If the sequence of one strand of DNA is written as follows: 5'-ATGCATGCATGCATGCATGCATGCATGC-3' Write down the sequence of complementary strand in 5'-to-3' direction." | |
+| F472 | Exercises | question | "4. If the sequence of the coding strand in a transcription unit is written as follows: 5'-ATGCATGCATGCATGCATGCATGCATGC-3' Write down the sequence of mRNA." | |
+| F473 | Exercises | question | "5. Which property of DNA double helix led Watson and Crick to hypothesise semi-conservative mode of DNA replication? Explain." | |
+| F474 | Exercises | question | "6. Depending upon the chemical nature of the template (DNA or RNA) and the nature of nucleic acids synthesised from it (DNA or RNA), list the types of nucleic acid polymerases." | |
+| F475 | Exercises | question | "7. How did Hershey and Chase differentiate between DNA and protein in their experiment while proving that DNA is the genetic material?" | |
+| F476 | Exercises | question | "8. Differentiate between the followings: (a) Repetitive DNA and Satellite DNA (b) mRNA and tRNA (c) Template strand and Coding strand" | |
+| F477 | Exercises | question | "9. List two essential roles of ribosome during translation." | |
+| F478 | Exercises | question | "10. In the medium where E. coli was growing, lactose was added, which induced the lac operon. Then, why does lac operon shut down some time after addition of lactose in the medium?" | |
+| F479 | Exercises | question | "11. Explain (in one or two lines) the function of the followings: (a) Promoter (b) tRNA (c) Exons" | |
+| F480 | Exercises | question | "12. Why is the Human Genome project called a mega project?" | |
+| F481 | Exercises | question | "13. What is DNA fingerprinting? Mention its application." | |
+| F482 | Exercises | question | "14. Briefly describe the following: (a) Transcription (b) Polymorphism (c) Translation (d) Bioinformatics" | |
+| F483 | 5.6 | heading | "5.6  GENETIC CODE" (p17, 13.0pt Bookman-Demi section banner; the seam banner - mid-page, with the tail of 5.5.3 above it) | |
+| F484 | 5.6.1 | heading | "5.6.1 Mutations and Genetic Code" (p19, 12.0pt Bookman-Demi) | |
+| F485 | 5.6.2 | heading | "5.6.2 tRNA– the Adapter Molecule" (p20, 12.0pt Bookman-Demi; source sets the en-dash flush against "tRNA" with no leading space - reproduce as "tRNA - the Adapter Molecule" in flat ASCII, see carry-over 3) | |
+| F486 | 5.7 | heading | "5.7  TRANSLATION" (p20, 14.0pt Bookman-Demi section banner) | |
+| F487 | 5.8 | heading | "5.8  REGULATION OF GENE EXPRESSION" (p21, 13.0pt Bookman-Demi section banner) | |
+| F488 | 5.8.1 | heading | "5.8.1 The Lac operon" (p22, 12.0pt Bookman-Demi; source casing is "The Lac operon" - capital L, lowercase o, do not normalise to "lac operon") | |
+| F489 | 5.9 | heading | "5.9 HUMAN GENOME PROJECT" (p24, 14.0pt Bookman,Bold section banner; note font family changes from Bookman-Demi to Bookman,Bold at p24 - see carry-over 15) | |
+| F490 | 5.9 (Goals of HGP) | heading | "Goals of HGP" (p24, 10.5pt Bookman,Bold, **unnumbered boxed sub-heading** inside 5.9; its six list items are rows F383-F388) | |
+| F491 | 5.9.1 | heading | "5.9.1 Salient Features of Human Genome" (p26, 12.0pt Bookman,Bold) | |
+| F492 | 5.9.2 | heading | "5.9.2 Applications and Future Challenges" (p26, 12.0pt Bookman,Bold) | |
+| F493 | 5.10 | heading | "5.10 DNA FINGERPRINTING" (p27, 14.0pt Bookman-Demi section banner) | |
+| F494 | Summary | heading | "SUMMARY" (p30, 13.0pt Bookman-Demi) | |
+| F495 | Exercises | heading | "EXERCISES" (p31, **30.0pt AvantGarde-Book - NOT bold**; an all-bold heading filter misses this heading entirely, see carry-over 14) | |
+| F496 | 5.6 | opener | "During replication and transcription a nucleic acid was copied to form another nucleic acid." (p17) | |
+| F497 | 5.6.1 | opener | "The relationships between genes and DNA are best understood by mutation studies." (p19) | |
+| F498 | 5.6.2 | opener | "From the very beginning of the proposition of code, it was clear to Francis Crick that there has to be a mechanism to read the code and also to link it to the amino acids, because amino acids have no structural specialities to read the code uniquely." (p20 - the only place the adapter-molecule rationale is stated) | |
+| F499 | 5.7 | opener | "Translation refers to the process of polymerisation of amino acids to form a polypeptide (Figure 5.13)." (p20 - **the chapter's only definition of translation**; if this opener is skipped the chapter ships without defining translation) | |
+| F500 | 5.8 | opener | "Regulation of gene expression refers to a very broad term that may occur at various levels." (p21 - **the chapter's only definition of regulation of gene expression**) | |
+| F501 | 5.8.1 | opener | "The elucidation of the lac operon was also a result of a close association between a geneticist, Francois Jacob and a biochemist, Jacque Monod." (p22 - carries both names; F350 records only "They were the first...", so this opener is the sole source of Jacob and Monod) | |
+| F502 | 5.9 | opener | "In the preceding sections you have learnt that it is the sequence of bases in DNA that determines the genetic information of a given organism." (p24) | |
+| F503 | 5.9 (Goals of HGP) | opener | "Some of the important goals of HGP were as follows:" (p24 - stem for the six list items F383-F388) | |
+| F504 | 5.9.1 | opener | "Some of the salient observations drawn from human genome project are as follows:" (p26 - stem for the nine list items F409-F417) | |
+| F505 | 5.9.2 | opener | "Deriving meaningful knowledge from the DNA sequences will define research through the coming decades leading to our understanding of biological systems." (p26) | |
+| F506 | 5.10 | opener | "As stated in the preceding section, 99.9 per cent of base sequence among humans is the same." (p27 - the 99.9 per cent premise the whole DNA-fingerprinting section rests on) | |
 
 ## Figure-label matrix
 
@@ -372,3 +623,11 @@ Numbered, added to freely; each is a defect that will not have to be rediscovere
 6. **The hypothetical transcription-unit sequence (F199) is marks-critical and must be reproduced base-for-base**, with the template strand written 3'-to-5' above the coding strand written 5'-to-3', exactly as NCERT orders them.
 7. **Two different human genome figures appear in the first half** — `3.3 x 10^9 bp` haploid (F019) and `6.6 x 10^9 bp` diploid (F057, F166). Keep the haploid/diploid qualifier attached to each; dropping it is a silent factual error.
 8. **F102 is a name row, not the §5.2.1 opener.** It records only the names and the 1952 date; the opening sentence itself is still owed by 1a-O. Do not treat F102 as satisfying that requirement.
+9. **`Table 5.1` (the 64-codon checker-board, p18) is NOT text-extractable and is not a figure either.** F280 records only its caption. The 64 codon-to-amino-acid cells do not come back from `get_text` in any usable row/column order, so the table must be **hand-built in the script from an authoritative codon table and then proof-read cell-by-cell against the rendered source page**. It must not be clipped as an image (it is a table, not a figure, so `1-F` does not own it) and it must not be silently dropped — F288/F289 are exercises that explicitly instruct the student to "take help of the checkerboard", so the chapter is unusable without it. Decide the owner explicitly before Pass 2a; today it is owned by **nobody**, which is exactly how it will go missing.
+10. **`Methodologies :` (p25) is a bold run-in label, not a heading.** 10.5pt bold, followed by light text on the *same* line ("The methods involved two major approaches."). It was deliberately **not** given a heading row by `1b-H`; its content is F395. Thirteen other bold run-in fragments on pp. 17-31 were checked and all are ordinary inline bold emphasis on defined terms mid-sentence (`frameshift insertion`, `aminoacylation of tRNA`, `Sequence Annotation`, `Polymorphism`, `heterogeneous nuclear RNA`, etc.). Do not promote any of them to headings, and do not let a "bold-at-line-start" heuristic do it either.
+11. **NCERT prints the human genome size inconsistently inside §5.10.** F423 (from the opener's following sentence) has `3 x 10^9 bp`; two sentences later F426 has `Imagine trying to compare two sets of 3 x 10^6 base pairs.` The `10^6` is the source's own error. **Reproduce both exactly as printed** and do not "fix" the exponent — but flag it in the chapter's teaching note if one exists, because a student comparing the two lines will otherwise think they misread.
+12. **NCERT mis-numbers the third Goals-of-HGP item as `(iiii)`** (p24, F385). The rewrite prints it as `(iii)` so the list reads i-ii-iii-iv-v-vi, and the remaining items are **not** renumbered. Do not treat the `(iiii)`/`(iii)` difference as a transcription error in a later verification pass.
+13. **Second-half openers carrying load-bearing definitions — delivered by `1b-O`, listed here so no later pass drops them.** `§5.7` (F499) is **the chapter's only definition of translation** and `§5.8` (F500) **the only definition of regulation of gene expression** — the same failure mode as carry-over 1's §5.5/§5.5.2. `§5.8.1` (F501) is the sole source of the names **Francois Jacob and Jacque Monod**. `§5.10` (F506) carries the **99.9 per cent** premise the entire DNA-fingerprinting argument rests on. All four must survive into the script.
+14. **`EXERCISES` (p31) is set in 30.0pt AvantGarde-**Book** — it is not bold.** Every other second-half heading is Demi/Bold, so an "all spans bold" heading filter silently drops the Exercises heading while appearing to work perfectly. The chapter-title row F232 is the same non-bold 30pt display class. Any heading re-parse must accept non-bold display type above ~13pt, or assert these two rows exist by name.
+15. **Book-page folios are 14.0pt bold and outrank every sub-heading.** The printed page numbers `95`-`109` are set 14.0pt `AvantGarde-Demi` / `CenturyGothic,Bold` — they pass a `bold and size >= 10.5` heading filter and yield ~15 phantom heading rows, a *different* trap from the 9.0pt running heads already recorded in `Ch5_TRACKER.md` §4 trap 1 (a 10.5pt floor does **not** exclude these). **Filter numeric-only lines.** Related: the body font family switches from `Bookman-Demi`/`AvantGarde-Demi` to `Bookman,Bold`/`CenturyGothic,Bold` at **p24**, so a filter keyed on the literal string `Demi` misses the §5.9, §5.9.1 and §5.9.2 headings entirely.
+16. **The `RAM HAS RED CAP` frameshift mnemonic is 10.5pt full-bold on its own line, seven times (p19).** Those seven lines are prose examples (F298-F302), **not** headings — full-bold standalone lines at exactly the unnumbered-sub-heading size and weight. `1b-H` excluded them deliberately. Also `anticodon loop` (p20, 10.5pt full-bold standalone) is an **in-figure label for Figure 5.12 owned by `1-F`** - the same class of trap as `Central dogma` in carry-over 2, and it must not become a heading row.
