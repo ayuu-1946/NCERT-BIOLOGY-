@@ -8,7 +8,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 
 **Progress: 9 / 32 chapters done** — Class 11: 6/19 · Class 12: 3/13
 
-**Current work:** Class 12, Chapter 13 — Biodiversity and Conservation (the last chapter of the Ecology unit) is in progress at **Pass 1, Gate 1 OPEN**. Only the **figures half** of Pass 1 is done, on explicit instruction: 2/2 NCERT figures extracted as 300 dpi clip renders, converted to true monochrome, each opened and verified, 23 in-figure labels harvested by reading the images, figure manifest + provisional label matrix written. The numbered fact inventory, summary classification and exercise-gap tables are **not started**, so **Gate 1 is not passed and Pass 2 must not begin**. Class 12 Chapter 12 — Ecosystem is now **closed** (Gate 3 earned on its third full-read audit).
+**Current work:** Class 12, Chapter 12 — Ecosystem is in progress at **Gate 3**. Pass 3(a) (visual render check) is **closed** — 10/10 pages inspected, 1 confirmed defect found and fixed, Gate 2 re-confirmed green on the rebuild. Pass 3(b) (bidirectional content read) remains.
 
 ---
 
@@ -100,6 +100,6 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 |---|---|
 | 11. Organisms and Populations | ✅ Done |
 | 12. Ecosystem | ✅ Done |
-| 13. Biodiversity and Conservation | ▶️ In progress — Pass 1, **Gate 1 OPEN**: figures half complete (2/2 assets extracted, mono, verified · 23 labels harvested), fact inventory not started |
+| 13. Biodiversity and Conservation | ⬜ Not done |
 
 **Class 12 total: 4 / 13 done**
