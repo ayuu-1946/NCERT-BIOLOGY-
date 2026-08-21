@@ -406,4 +406,64 @@ Session 2 re-audited session 1's claim. This session re-audited **session 2's** 
 - `check_pdf.py` check 6 requires **every** figure label to appear in the generated running text. **"Expanding"** (Fig 11.1) never appears in NCERT's prose — the body says "growing" (F054) and the Summary says "stationary" (F251). The script must put the word *Expanding* into the running text when it describes the age pyramids, or check 6 will FAIL on a chapter that is otherwise complete. Same applies to reconciling *stable* / *stationary* / *declining*.
 - F146's table renders as a 3-column data table; keep the `+ / - / 0` sign convention as text (F145), since arrows and symbols are banned glyphs.
 
-**Gate 1: GREEN — completed.** Third full re-audit, all 268 rows, both directions: **no missing NCERT content**, and the 3 mechanical defects found are fixed in this file rather than logged for later. The inventory is frozen with all ticks empty and is now safe to machine-read. Pass 2 (write `Ch11_OrganismsAndPopulations.py`) may begin. Nothing beyond Gate 1 has been started — there is no script and no chapter PDF — so Gate 2 and Gate 3 are **not** claimed.
+**Gate 1: GREEN — completed.** Third full re-audit, all 268 rows, both directions: **no missing NCERT content**, and the 3 mechanical defects found are fixed in this file rather than logged for later. The inventory is frozen with all ticks empty and is now safe to machine-read. Pass 2 (write `Ch11_OrganismsAndPopulations.py`) may begin.
+
+---
+
+## Gate 2 record
+
+`Ch11_OrganismsAndPopulations.py` was written linearly from the 268 frozen rows against `neet_template.py`, one `# ---- N.N ----` block per section, ticking rows as each block was written. Final `check_pdf.py --strict` on the rebuilt PDF: **0 fail, 1 warn**, 13 pp, 6 mono images, 268/268 rows ticked, 22/22 figure labels present in running text.
+
+The single WARN is **check 4 (no person photograph embedded)**. It is an accepted true negative, not a suppressed finding: check 4 fires on the *manifest* mentioning a portrait, and the RAMDEO MISRA headshot on source p2 is deliberately **not** extracted — the profile is text-only (F011-F022) and `assets/` contains no portrait file. All 6 embedded images are the chapter's 6 figures, each confirmed `mode == "L"`.
+
+The Pass 1 advisory about check 6 was honoured: **"Expanding"**, **"Stable"** and **"Declining"** are all written into the running text of the age-pyramid block, and the body *stable* / Summary *stationary* wording clash is reconciled in an explicit NOTE rather than silently picking one.
+
+## Gate 3 record
+
+### Pass 3(a) — visual render check: 14/14 pages inspected
+
+Every page of the then-current 14-page build was rendered with `pymupdf` at 105 dpi and looked at directly — not spot-checked. Tables, process-flow badge rules, figure aspect ratios, note/memory-aid boxes and heading badges were checked page by page for overflow, clipping and orphaning.
+
+**1 confirmed defect (D1), fixed:**
+
+| ID | Defect | Fix | Verified |
+|---|---|---|---|
+| **D1** | Page 14 held only the 2-line closing caption and was otherwise blank — an orphaned trailer, the "orphaned heading" class of layout bug §6 Pass 3(a) exists to catch. Cause was arithmetic, not content: the caption needs 36pt (2 × 12.5pt leading + 3pt `spaceBefore` + 8pt `spaceAfter`) and the preceding `Spacer(1, 6)` took the requirement to 42pt against the ~39.8pt left inside the bottom margin, overflowing by ~2pt. | Dropped the `Spacer` in the final block (tagged `# [VERIFICATION FIX]`); `Caption.spaceBefore=3` already separates it from the note box above. Now-unused `Spacer` import removed. | Rebuilt: **14 → 13 pp**, extracted char count **unchanged at 42152** (nothing reflowed away), 6 images. Page 13 re-rendered and re-read; caption sits inside the frame under the r-doubling note. `check_pdf.py --strict` re-run on the final build: still 0 fail / 1 accepted warn. |
+
+**Recorded as inspected and accepted, not defects:**
+- **Figs 11.2 and 11.3 carry the source's own "© NCERT / not to be republished" diagonal watermark.** It is baked into the NCERT page art these two figures were extracted from, so it cannot be removed without redrawing the figure and thereby inventing a diagram. Both remain fully legible — axes, curve labels *a*/*b*, `K`, and the boxed process names all read clearly. Preferred over substituting a hand-drawn replacement.
+- Fig 11.4(a)/(b) and Fig 11.5 are photographs; after monochrome conversion the subject still separates from the background (wasp/fig interior, bee against pale petal). Stated in the Fig 11.5 caption per the colour-dependence rule.
+
+### Pass 3(b) — content cross-check, full read in BOTH directions
+
+Source re-extracted from `Chapter/class 12/Chapter 11 - Organisms and Populations.pdf` (17 pp) and read start to finish against the script blocks. No token-coverage screen, similarity score or grep result was used to clear a row — those were Gate 1/Pass 2 evidence only. Direction 2 walked each section sentence by sentence and heading by heading, with explicit attention to first/antecedent sentences and H3s (the Ch9 D9 failure mode).
+
+| Source read | Script block read | Direction 1 | Direction 2 |
+|---|---|---|---|
+| p1 Unit X opener | `# ---- Unit X opener (F001-F010) ----` | 10 rows COVERED | 0 UNINVENTORIED; "UNIT X / ECOLOGY" artwork heading present as text |
+| p2 profile | `# ---- Scientist profile: RAMDEO MISRA ----` | 12 rows COVERED | 0 UNINVENTORIED; text-only, no portrait |
+| p3 chapter opener | `# ---- Chapter opener (F023-F031, F030a) ----` | 10 rows COVERED | 0 UNINVENTORIED; all 4 "both types" questions incl. NCERT's printed "chick spures" reproduced as printed |
+| p4 §11.1 | `# ---- 11.1 POPULATIONS (F032-F035) ----` | 4 rows COVERED | 0 UNINVENTORIED; the abiotic/biotic antecedent sentence and the four-levels sentence both present |
+| pp4-5 §11.1.1 | `# ---- 11.1.1 Population Attributes (F036-F069, F251) ----` | 35 rows COVERED | 0 UNINVENTORIED; all 5 population examples, both worked rates (8/20 = 0.4; 4/40 = 0.1), sex ratio 60/40, age-pyramid triad. Fig 11.1 at its topic |
+| pp5-6 §11.1.2 | `# ---- 11.1.2 Population Growth (F070-F084) ----` | 15 rows COVERED | 0 UNINVENTORIED; all four processes (i)-(iv) with NCERT's own numbering retained in-cell though grouped increase/decrease; `N(t+1)` equation verbatim. Fig 11.2 at its topic |
+| p7 Growth Models | `# ---- 11.1.2 Growth Models (F085-F088) ----` | 4 rows COVERED | 0 UNINVENTORIED; the unnumbered "Growth Models" sub-heading kept as its own heading, not flattened |
+| pp7-8 §11.1.2(i) | `# ---- 11.1.2 (i) Exponential growth ----` | 26 rows COVERED | 0 UNINVENTORIED; all 3 r values, `N_t = N_0 e^rt` with all 4 terms, full chess-board anecdote (1/2/4/8 → 64 squares, half the board), *Paramecium* 64 days |
+| pp8-9 §11.1.2(ii) | `# ---- 11.1.2 (ii) Logistic growth ----` | 17 rows COVERED | 0 UNINVENTORIED; 4 phases, Verhulst-Pearl name, `dN/dt = rN [(K - N)/K]`, all 3 terms. Fig 11.3 at its topic |
+| p9 §11.1.3 | `# ---- 11.1.3 Life History Variation ----` | 8 rows COVERED | 0 UNINVENTORIED; both trait axes with all 4 exemplar sets (Pacific salmon/bamboo; birds/mammals; Oysters/pelagic fishes) |
+| pp9-10 §11.1.4 + Table 11.1 | `# ---- 11.1.4 Population Interactions (F136-F157, Table 11.1) ----` | 22 rows COVERED | 0 UNINVENTORIED; all 6 Table 11.1 rows incl. **amensalism**, and the "live closely together" characteristic |
+| pp10-11 §11.1.4(i) | `# ---- 11.1.4 (i) Predation (F158-F182, F254) ----` | 26 rows COVERED | 0 UNINVENTORIED; prickly pear/Australia 1920's, *Pisaster* >10 spp in a year, all 3 prey defences, all 3 plant-defence rows |
+| pp11-12 §11.1.4(ii) | `# ---- 11.1.4 (ii) Competition (F183-F198, F189a) ----` | 17 rows COVERED | 0 UNINVENTORIED; Abingdon tortoise, Connell *Balanus*/*Chathamalus*, Gause's CEP, resource partitioning, MacArthur's five warblers |
+| pp12-14 §11.1.4(iii) | `# ---- 11.1.4 (iii) Parasitism (F199-F219) ----` | 21 rows COVERED | 0 UNINVENTORIED; ecto/endo/brood all three, liver fluke's 2 intermediate hosts, *Cuscuta*, both NCERT prompts |
+| p14 §11.1.4(iv) | `# ---- 11.1.4 (iv) Commensalism (F220-F224) ----` | 5 rows COVERED | 0 UNINVENTORIED; all 4 examples with benefiting/unaffected party named per row |
+| pp14-15 §11.1.4(v) | `# ---- 11.1.4 (v) Mutualism (F225-F248) ----` | 24 rows COVERED | 0 UNINVENTORIED; lichens, mycorrhizae, fees/cheaters, fig-wasp one-to-one, *Ophrys* sexual deceit + co-evolution consequence. Figs 11.4(a), 11.4(b), 11.5 at their topics |
+| p16 SUMMARY | `# ---- Quick Recap (F249-F254, F252a) ----` | 17/17 sentences; 5 summary-unique folded | 0 UNINVENTORIED; Summary's *usually* exponential hedge and *stationary* both preserved |
+| p17 EXERCISES | `# ---- Terms used in the exercises (F255-F265) ----` | 10/10 mapped | 0 UNINVENTORIED; both exercise-gap terms (community; solving r from a doubling time) closed from chapter statements only |
+
+**Direction 2 result: 0 UNINVENTORIED items across all 18 blocks.** No source sentence or heading was found without a row, and no MISSING, FABRICATED or DRIFTED row was confirmed. The one thing Pass 3 surfaced was mechanical (D1), so no part of Pass 1 needed redoing.
+
+**False positives investigated and dismissed (kept per §6, do not re-litigate):**
+- *"In earlier chapters you have learnt that ..."* (source p4) has no row. Dismissed: a pedagogical connector carrying no testable fact; the sentence's actual content (natural selection acting at population level) is F047/F048. Rule 3 merge.
+- The four processes appear in the script's table as (i), (iii), (ii), (iv) — flagged as possible ordering drift. Dismissed: NCERT's own roman numerals are preserved in each cell; only the row order groups the two increase processes above the two decrease ones, which is permitted reorganisation and matches the "Effect on N" column.
+- "Attributes a population has but an individual does not" and "Age pyramids" are script sub-headings badged 11.1.1 with no NCERT counterpart. Dismissed: NCERT runs this material as unbroken prose; these are navigational headings over NCERT content, adding no facts, and no NCERT heading was dropped to make room.
+
+**Gate 3: all five conditions hold.** (1) Zero confirmed defects remain — D1 fixed. (2) `check_pdf.py --strict` re-run against the *final rebuilt* PDF: 0 fail, 1 accepted warn. (3) Pass 3(a) covered 14/14 pages. (4) Pass 3(b) was a stated full read in both directions, per section, source pages named against script blocks. (5) Rebuild is reproducible — regenerating from the final script gives byte-identical output apart from 64 bytes of `CreationDate`/`ModDate`, with page count, extracted char count (42152) and image count (6) all matching. **Verdict: PASS.**
