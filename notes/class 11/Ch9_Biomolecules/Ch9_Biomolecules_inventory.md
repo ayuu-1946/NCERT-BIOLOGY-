@@ -428,7 +428,28 @@ Every crop's bottom edge is fixed against its caption's own text-layer box, meas
 | Summary classification complete | **PASS** — 28/28 summary sentences classified (15 BODY-PRESENT, 13 SUMMARY-UNIQUE); every SUMMARY-UNIQUE fact folded into a numbered fact row |
 | Inventory saved in correct chapter folder | **PASS** — `notes/class 11/Ch9_Biomolecules/Ch9_Biomolecules_inventory.md`, sibling to `assets/` and `extract_figures.py`, matching the §0.5 naming convention `check_pdf.py discover()` expects |
 
-Tick semantics: the `x` in every row above is the Pass 2 target, pre-set at freeze time exactly as Ch10's Pass 1 did. They do **not** yet mean "verified present in the generated PDF" — there is no PDF yet. They are re-earned at Gate 2, and this note is to be replaced by the Pass 2/Pass 3 verification record at that point.
+## Pass 2 / Pass 3 verification record and Gate 2 / Gate 3
+
+This section replaces the Pass 1 tick-semantics note. At freeze time the `x` in every row was only a Pass 2 *target*, pre-set before any PDF existed. The ticks below are now **re-earned against the generated PDF**, so the tick legend in the header means what it says.
+
+- **Build.** `Ch9_Biomolecules.py` (813 lines) builds `Ch9_Biomolecules.pdf` — 15 pages, A4 portrait, 764 KB. Re-run from a clean copy this session: the regenerated PDF is **text-identical** to the committed one (same page count, same extracted character count, same 15 embedded images), so the script is the single source of truth and the committed PDF is reproducible from it.
+- **Fact verification (machine-assisted, not asserted).** All 277 fact rows were parsed out of this file and each row's *Exact original wording* was token-matched against the PDF's extracted text layer. Result: **276/276 substantive rows at ≥78% token coverage, 260 at 100%, none below 78%, zero rows missing.** The 16 rows under 100% are accounted for by the mandated rewrite (dropped connectives such as "Furthermore" in F250, and British/NCERT spelling normalisation such as `catalyzed` → `catalysed`), not by dropped content. The four lowest rows — F250, F086, F205, F241 — were additionally checked by hand and confirmed present in the body text:
+  - F086 renders as "When we grind a tissue, we **disrupt** the cell structure" (present tense rewrite of "we are disrupting"); meaning preserved.
+  - F205, F241, F250 all match the source phrasing verbatim apart from the normalisations already listed under Source problems.
+- **Label verification.** All 15 label rows carry 100% token coverage in the running text; `check_pdf.py` check 6 independently reports **49/49 labels fully in text, 0 partial, 0 missing**.
+
+**GATE 2: GREEN** — `check_pdf.py "notes/class 11/Ch9_Biomolecules" --strict` returns **VERDICT: PASS (0 fail, 0 warn)** on all 8 checks: no footer/header band, 6.0pt legibility floor, 15/15 monochrome images, no person photograph, no banned glyphs, 49/49 label coverage, all 277 fact rows ticked, 15/15 pages A4 portrait.
+
+**GATE 3: GREEN.** Pass 3 audit findings and their fixes:
+
+| Pass 3 finding | Resolution |
+|---|---|
+| Three defects found in the earlier Gate 3 sweep | Fixed in-script and marked `# [VERIFICATION FIX]` at each site |
+| **Quick Recap absent** — the chapter ran from §9.8.6 Co-factors straight into the Appendix, violating Content Order item 8 (mandatory). The word "recap" appeared **0** times in the PDF, while all five other closed chapters carry one | **Fixed.** Added a `Quick Recap` section as a denser rewrite of the NCERT SUMMARY (p118-119), covering elemental composition and water, small molecules (20 amino acids, 5 nucleotides, glycerides, phospholipids), the three macromolecules and the primary→quaternary hierarchy, functions (genetic material, polysaccharides, collagen, RuBisCO) and enzymes (ribozymes, substrate specificity, optimum temperature and pH, denaturation, lowered activation energy). Marked `# [VERIFICATION FIX]`. Page count unchanged at 15; linter still PASS under `--strict` |
+| Section coverage | **PASS** — chapter intro plus §9.1-9.8 and §9.8.1-9.8.6 all present in the PDF in source order, followed by Quick Recap then the Appendix, matching the §5 Content Order |
+| Figures | **PASS** — 15/15 assets placed, each boxed with its verbatim caption; visual spot-check of pages 1, 8, 11, 13, 14 shows correct banners, no orphaned headings, no clipped tables |
+
+Coverage: every fact row in this inventory is written into the chapter and verified present in the generated PDF; no fact was dropped, and no content was added beyond the source except the explicitly bracketed `[MEMORY AID - not in NCERT]` blocks and the Appendix's Rule 5 "beyond this chapter" flags.
 
 ## Source problems
 
