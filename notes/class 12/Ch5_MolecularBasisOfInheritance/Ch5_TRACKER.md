@@ -1,0 +1,222 @@
+# Ch5 Molecular Basis of Inheritance — Chapter Tracker
+
+**Status: ▶️ IN PROGRESS — Pass 1 session `1a-S` done. GATE 1 OPEN. GATE 2 AND GATE 3 NEVER RUN.**
+**1 of 9 Pass-1 sessions complete. 0 of 231 inventory rows ticked. No script, no PDF, no assets.**
+
+This is a per-chapter tracker; it is the detail layer under the repo-wide `CHAPTER_TRACKER.md` and
+`CHAPTER_STATUS.md` roll-ups. Where those two disagree with this file about Ch5, **this file is the
+one that gets re-derived from disk and wins** — but any correction must be written into all three in
+the same session (§7 rule 8, atomic closure).
+
+Nothing in this file may be updated from memory. Every count below carries the command that produced
+it, and the rule is: **re-run, don't recall.**
+
+---
+
+## 1. Protocol selected, and why
+
+31 source pages, 10 numbered sections plus Summary and Exercises. That is over the big-chapter
+threshold, so Ch5 runs the **5-pass protocol**:
+
+    1a → 1b → [GATE 1] → 2a → 2b → [GATE 2] → 3 → [GATE 3] → deliver
+
+Two axes operate independently and must not be conflated:
+
+- **1a / 1b split the *source*** into halves.
+- **-S / -H / -O / -F / -Z split the *kind of work*** so that each sweep is the sole deliverable of a
+  session that closes on it. A sweep folded into another sweep is the Ch9 D9 failure mode.
+
+`-F` (figures) and `-Z` (freeze) run **whole-chapter, not per half**, because a half-chapter figure
+manifest cannot be checked for duplicate or missing `Fig #` across the seam, and a half-chapter
+freeze is not a freeze.
+
+### Verified source map
+
+| Half | Source pages | Book pages | Content | Verified how |
+|---|---|---|---|---|
+| **1a** | pp. 1–17 | 79–95 | Chapter opener + §5.1–§5.5.3, ending at the `5.6 GENETIC CODE` banner | banner located at 13.0pt Bookman-Demi, **page 17**, mid-page |
+| **1b** | pp. 17–31 | 95–109 | §5.6–§5.10 + Summary + Exercises | remainder |
+
+The seam falls **mid-page 17**: p17 carries the tail of §5.5.3 *and* the §5.6 banner. Both halves
+must read p17; `1b-S` starts at the banner, not at the top of the page.
+
+---
+
+## 2. Session ledger — 9 sessions
+
+| # | Session | Scope | State | Sole deliverable |
+|---|---|---|---|---|
+| 1 | `1a-S` | 1a prose, steps 1–3 | ✅ **done** | 231 prose rows `F001..F231` |
+| 2 | `1a-H` | 1a headings only | ⬜ **NEXT** | one row per heading, `Type: heading` |
+| 3 | `1a-O` | 1a section openers only | ⬜ not started | one row per opener, `Type: opener` |
+| 4 | `1b-S` | 1b prose, steps 1–3 | ⬜ not started | second-half prose rows |
+| 5 | `1b-H` | 1b headings only | ⬜ not started | heading rows |
+| 6 | `1b-O` | 1b openers only | ⬜ not started | opener rows |
+| 7 | `1-F` | **whole chapter** figures | ⬜ not started | assets + manifest + in-figure label rows |
+| 8 | `1-Z` | steps 7–9 whole chapter | ⬜ not started | exercise-gap scan, summary classification, **freeze** |
+| 9 | — | step 10 | ⬜ not started | machine re-parse of every count |
+
+Then Pass 2a/2b (script), Gate 2 (lint loop to exit 0 on all 8 checks), Pass 3 (dual verification),
+Gate 3.
+
+---
+
+## 3. What is actually on disk
+
+    notes/class 12/Ch5_MolecularBasisOfInheritance/
+      Ch5_MolecularBasisOfInheritance_inventory.md   48 KB, NOT FROZEN
+      Ch5_TRACKER.md                                 this file
+
+No `Ch5_MolecularBasisOfInheritance.py`. No `.pdf`. No `assets/`. **Correct for this stage** — but it
+also means the deliverable is 0% built. One sweep of one half of the source exists.
+
+### Machine-derived state of the inventory
+
+Re-parsed from the file this session, not recalled:
+
+| Metric | Value |
+|---|---|
+| Facts rows | **231** |
+| ID range | `F001..F231`, **0 gaps, 0 duplicates** |
+| `Type` census | `concept` 149 · `definition` 28 · `number` 16 · `list` 15 · `question` 11 · `name` 9 · `example` 3 |
+| Census sums to | 149+28+16+15+11+9+3 = **231** ✓ matches row count |
+| `Type: heading` | **0 — by design**, owned by `1a-H`/`1b-H` |
+| `Type: opener` | **0 — by design**, owned by `1a-O`/`1b-O` |
+| Rows ticked | **0** — Pass 2 not started |
+| `_extract_labels` (the linter's own parser) | **0 labels, 0 figures, no phantom `Fig #` row** — correct pre-`1-F` state |
+| Frozen | **No.** H1 reads `# Working Inventory (NOT FROZEN)` |
+
+Re-derive with:
+
+    /vercel/share/neetenv/bin/python - <<'EOF'
+    import re, collections, importlib.util
+    p="notes/class 12/Ch5_MolecularBasisOfInheritance/Ch5_MolecularBasisOfInheritance_inventory.md"
+    t=open(p).read(); rows=[]
+    for l in t.splitlines():
+        if not l.strip().startswith("|"): continue
+        c=[x.strip() for x in l.strip().strip("|").split("|")]
+        if len(c)>=5 and re.fullmatch(r"F\d+[a-z]?", c[0]): rows.append(c)
+    ids=[int(r[0][1:]) for r in rows]
+    print("rows",len(rows),"gaps",[i for i in range(ids[0],ids[-1]+1) if i not in set(ids)],
+          "dups",[k for k,v in collections.Counter(ids).items() if v>1])
+    print(dict(collections.Counter(r[2] for r in rows)), "ticked", sum(1 for r in rows if r[4]=="x"))
+    s=importlib.util.spec_from_file_location("cp","check_pdf.py"); m=importlib.util.module_from_spec(s); s.loader.exec_module(m)
+    print("labels", len(m._extract_labels(t)))
+    EOF
+
+### Environment
+
+`/vercel/share/neetenv` was **absent** at chapter start — the expected state per §0.2, checked before
+anything was diagnosed — and was rebuilt: CPython 3.13.11, reportlab 5.0.1, pdfplumber OK,
+pymupdf 1.28.2, Pillow 12.3.0, all imports verified under that interpreter. **Every future session
+re-checks `ls /vercel/share/neetenv/bin/python` first**; sandboxes lose it.
+
+---
+
+## 4. NEXT SESSION — `1a-H`, first-half headings
+
+**Scope: pages 1–17 only. Headings only. Prose is ignored — it was already swept by `1a-S`, and
+re-reading it is how sweeps contaminate each other.** Append `Type: heading` rows continuing from
+`F231` (so `F232…`). Touch no existing row.
+
+### Target: 16 heading rows
+
+Reconstructed from the PDF this session at line level (not span level — see trap 2):
+
+| # | Heading | Page | Level |
+|---|---|---|---|
+| 1 | `MOLECULAR BASIS OF INHERITANCE` (chapter title) | 1 | chapter |
+| 2 | `5.1 THE DNA` | 2 | section |
+| 3 | `5.1.1 Structure of Polynucleotide Chain` | 2 | sub |
+| 4 | `5.1.2 Packaging of DNA Helix` | 5 | sub |
+| 5 | `5.2 THE SEARCH FOR GENETIC MATERIAL` | 6 | section |
+| 6 | `Transforming Principle` | 6 | **unnumbered sub** |
+| 7 | `Biochemical Characterisation of Transforming Principle` | 7 | **unnumbered sub** |
+| 8 | `5.2.1 The Genetic Material is DNA` | 7 | sub |
+| 9 | `5.2.2 Properties of Genetic Material (DNA versus RNA)` | 8 | sub |
+| 10 | `5.3 RNA WORLD` | 10 | section |
+| 11 | `5.4 REPLICATION` | 10 | section |
+| 12 | `5.4.1 The Experimental Proof` | 10 | sub |
+| 13 | `5.4.2 The Machinery and the Enzymes` | 12 | sub |
+| 14 | `5.5 TRANSCRIPTION` | 13 | section |
+| 15 | `5.5.1 Transcription Unit` | 13 | sub |
+| 16 | `5.5.2 Transcription Unit and the Gene` | 14 | sub |
+| 17 | `5.5.3 Types of RNA and the process of Transcription` | 15 | sub |
+
+That table lists 17 lines because the chapter title is row 1; **16 is the in-body heading count and
+17 the total including the chapter title.** Decide which convention the row set uses, state it in the
+exit report, and make the number you report match what a re-parse of the `Type: heading` rows
+returns. Do not report "16" and write 17 rows.
+
+`5.6 GENETIC CODE` (p17) is the seam banner and belongs to **`1b-H`**, not this session.
+
+### Four traps found while scoping this session
+
+1. **Running headers are bold full lines.** `BIOLOGY` and `MOLECULAR BASIS OF INHERITANCE` appear at
+   **9.0pt Bookman-Demi on nearly every page** as running heads. A "bold full line" heuristic
+   harvests ~16 phantom heading rows from them. Filter `size >= 10.5`, and treat the 9.0pt
+   `MOLECULAR BASIS OF INHERITANCE` running head as distinct from the p1 chapter title.
+2. **Heading text is split across spans by small caps.** `5.2 THE SEARCH FOR GENETIC MATERIAL` is
+   **10 spans**; per-span reads return the truncated garbage `5.2 T`. Also seen: `5.1 T`, `5.3 RNA W`,
+   `5.4 R`, `5.5 T`. **Join spans at line level before recording any heading string.**
+3. **Figure captions are bold too**, at 9.5pt (`Figure 5.1 A Polynucleotide chain`). They are `1-F`
+   deliverables, never heading rows. The 10.5pt floor in trap 1 also excludes these.
+4. **CORRECTION to an earlier claim.** The `1a-S` carry-over list called `Central dogma` (p4) a
+   "boxed heading" for `1a-H`. Re-checked: it is plain **Bookman-Light 10.5** text acting as the label
+   on the DNA→RNA→Protein diagram, not a bold sub-heading. It is an **in-figure label owned by
+   `1-F`**, and it must **not** become a heading row. The two genuine unnumbered sub-headings in the
+   first half are rows 6 and 7 above, both 10.5pt full-bold, and nothing else.
+
+### Acceptance criteria for `1a-H`
+
+- Every heading in pp. 1–17 has exactly one row; no heading absorbed into a prose row.
+- No row sourced from a 9.0pt running head, and no row sourced from a 9.5pt figure caption.
+- Every heading string is a full joined line, no `5.2 T` truncation.
+- IDs stay contiguous from `F232`; re-parse reports 0 gaps, 0 duplicates.
+- Exit report states the machine-derived `Type: heading` count and the title-inclusion convention.
+- `CHAPTER_TRACKER.md`, `CHAPTER_STATUS.md` and this file all updated in the **same** session.
+- **Gate 1 stays OPEN.** `1a-H` closing is not Gate 1 closing.
+
+---
+
+## 5. Forward notes for later sessions
+
+**`1a-O`** — openers only, pp. 1–17. The load-bearing ones: the §5.5 opener is the only place
+*transcription* is defined, and the §5.5.2 opener is the only place *gene* is defined. If those two
+openers are skipped, the chapter ships without defining its two central terms — the exact Ch9 D9
+failure. Verify both produced a row before closing.
+
+**`1-F`** — whole chapter. Captions enumerated from source this session: **16 figure numbers but 17
+assets**, because `Figure 5.4` is split into `5.4a Nucleosome` and `5.4b EM picture — 'Beads-on-String'`.
+First half: 5.1, 5.2, 5.3, **5.4a, 5.4b**, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11 (12 assets).
+Second half: 5.12, 5.13, 5.14, 5.15, 5.16 (5 assets). Two traps: the a/b pair is what makes a
+duplicate-`Fig #` check fire falsely or hide a real dupe, and **`Figure 5.15`'s caption text sits on
+a separate line from its number** (p25), so caption capture must not assume number and text share a
+line. Each asset needs 300 dpi clip extraction, mono conversion, and **verification by actually
+opening the rendered file** — `Mono: yes` / `Verified: yes` asserted per row, plus one Facts row per
+in-figure label (including `Central dogma`, per trap 4).
+
+**`1-Z`** — exercise-gap scan, summary sentences classified BODY-PRESENT / SUMMARY-UNIQUE, then
+freeze: retitle the inventory H1 from `# Working Inventory (NOT FROZEN)` to the frozen convention.
+**Retitling before this session is a false completion signal** — the H1 was already caught reading
+`# Frozen Inventory` once while six sweeps were outstanding, where a `grep -i frozen` over `notes/`
+would have counted Ch5 as frozen.
+
+**Gate 1** is judged only after `1b` — complete inventory, `_extract_labels` clean (right figure
+count, no doubling, no phantom `Fig #` row), every count matching a re-parse, all figures
+`Mono: yes` / `Verified: yes`, and each sweep traceable to a session that closed on it.
+
+**Pass 2a/2b** — one script, `Ch5_MolecularBasisOfInheritance.py`, written linearly in Content Order
+from the frozen inventory, importing `neet_template.py` with **no style re-declared**; both halves go
+into the **same** script and rows are ticked **as each block is written**, not reconciled afterwards.
+The deliverable is one merged PDF — **never two half-PDFs**.
+
+---
+
+## 6. Corrections log
+
+| When | Correction |
+|---|---|
+| `1a-S` | Inventory H1 was `# Frozen Inventory`, copied from completed chapters, while line 3 said NOT FROZEN. Retitled `# Working Inventory (NOT FROZEN)`; frozen title now withheld until `1-Z` earns it. |
+| `1a-S` scoping | `Central dogma` (p4) was mis-scoped to `1a-H` as a heading. It is a 10.5pt Light diagram label → reassigned to `1-F` as an in-figure label. |
+| repo roll-up | Done tally re-derived by counting ✅ rows (`awk`) rather than incremented: 11 of 32 (Class 11: 6, Class 12: 5). Ch5's ▶️ row is excluded because Gate 1 is open. |
