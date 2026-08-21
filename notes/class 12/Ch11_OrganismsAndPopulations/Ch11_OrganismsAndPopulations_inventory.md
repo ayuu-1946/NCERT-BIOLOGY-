@@ -1,5 +1,5 @@
 # Frozen Inventory — Organisms and Populations (Class 12, Chapter 11)
-Source: Chapter/class 12/Chapter 11 - Organisms and Populations.pdf (17 pages: unit opener p1, scientist profile p2, chapter opener p3, body pp4-15, Summary p16, Exercises p17) | Frozen: 2026-08-21 | Re-audited and re-frozen: 2026-08-21 (Gate 1 verification session) | Rows: **268** facts, F001-F265 plus F030a, F189a, F252a (incl. 5 figure-label rows carrying 22 in-figure labels, 18 heading rows, 16 section-opener rows) + 17 summary + 2 exercise-gap + 6 figure assets
+Source: Chapter/class 12/Chapter 11 - Organisms and Populations.pdf (17 pages: unit opener p1, scientist profile p2, chapter opener p3, body pp4-15, Summary p16, Exercises p17) | Frozen: 2026-08-21 | Re-audited: 2026-08-21 (session 2) | **Third full re-audit of all 268 rows: 2026-08-21 (session 3) — Gate 1 COMPLETE** | Rows: **268** facts, F001-F265 plus F030a, F189a, F252a (incl. 5 figure-label rows carrying 22 in-figure labels, 18 heading rows, 16 section-opener rows) + 17 summary + 2 exercise-gap + 6 figure assets
 
 > **Header-count correction (this session).** The first freeze's header claimed "232 facts ... 6 figure-label rows carrying 25 in-figure labels, 21 heading rows, 14 section-opener rows". A programmatic re-count of the table itself gives **265 rows at first freeze** (contiguous F001-F265, no duplicates), **5** figure-label rows carrying **22** labels, **18** `heading` rows and **16** `Opener` rows. The header was wrong, not the table; the numbers above are the re-counted, machine-verified values. Three rows were then **added** by this session's source-to-inventory sweep (see Gate 1 record), taking the total to 268.
 
@@ -12,7 +12,7 @@ Workflow: normal chapter, 3-pass (v6 §6). This file is the Gate 1 artifact.
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
-| F001 | Unit X opener | heading | "Unit X" contents listing: "Chapter 11 Organisms and Populations"; "Chapter 12 Ecosystem"; "Chapter 13 Biodiversity and Conservation" | |
+| F001 | Unit X opener | heading | "UNIT X" / "ECOLOGY" (the unit heading as printed on source p1 — "X" is the literal Roman numeral ten set by NCERT, **not** a placeholder; do not "correct" it. The title word "ECOLOGY" was missing from this row until the session-3 re-audit) + contents listing: "Chapter 11 Organisms and Populations"; "Chapter 12 Ecosystem"; "Chapter 13 Biodiversity and Conservation" | |
 | F002 | Unit X opener | Opener | "Diversity is not only a characteristic of living organisms but also of content in biology textbooks." | |
 | F003 | Unit X opener | Comparison | "Biology is presented either as botany, zoology and microbiology or as classical and modern." | |
 | F004 | Unit X opener | Term | "The latter is a euphemism for molecular aspects of biology." | |
@@ -158,7 +158,7 @@ Workflow: normal chapter, 3-pass (v6 §6). This file is the Gate 1 artifact.
 | F143 | 11.1.4 | Definition | "Interspecific interactions arise from the interaction of populations of two different species." | |
 | F144 | 11.1.4 | Qualifier | "They could be beneficial, detrimental or neutral (neither harm nor benefit) to one of the species or both." | |
 | F145 | 11.1.4 | Definition | "Assigning a '+' sign for beneficial interaction, '-' sign for detrimental and 0 for neutral interaction, let us look at all the possible outcomes of interspecific interactions (Table 11.1)." | |
-| F146 | 11.1.4 | Table | "Table 11.1 : Population Interactions" — header "Species A | Species B | Name of Interaction" | |
+| F146 | 11.1.4 | Table | "Table 11.1 : Population Interactions" — header "Species A" / "Species B" / "Name of Interaction" (column separators written as `/` here on purpose: a literal pipe character, even backslash-escaped, still splits this markdown row into extra cells and corrupts every machine read of it) | |
 | F147 | 11.1.4 | Table | "+ + Mutualism" | |
 | F148 | 11.1.4 | Table | "- - Competition" | |
 | F149 | 11.1.4 | Table | "+ - Predation" | |
@@ -266,7 +266,7 @@ Workflow: normal chapter, 3-pass (v6 §6). This file is the Gate 1 artifact.
 | F250 | Summary | Definition | "As a branch of biology, Ecology is the study of the relationships of living organisms with the abiotic (physico-chemical factors) and biotic components (other species) of their environment." (SUMMARY-UNIQUE gloss: abiotic = physico-chemical factors; biotic = other species) | |
 | F251 | Summary | Qualifier | "its shape indicates whether a population is stationary, growing or declining" (SUMMARY-UNIQUE term "stationary" alongside body's "stable") | |
 | F252 | Summary | Concept | "In either case, growth is ultimately limited by the carrying capacity of the environment." (SUMMARY-UNIQUE: applies to exponential AND logistic) | |
-| F252a | Summary | Qualifier | "When resources are unlimited, the growth is **usually** exponential but when resources become progressively limiting, the growth pattern turns logistic." (SUMMARY-UNIQUE qualifier: the body states the exponential case flatly - "Then the population grows in an exponential or geometric fashion" (F092) - with no hedge; NCERT's "usually" appears only in the Summary and must be preserved exactly. **Added 2026-08-21 by the Gate 1 source-to-inventory sweep — a real Pass 1 gap, not back-dated**) | |
+| F252a | Summary | Qualifier | "When resources are unlimited, the growth is usually exponential but when resources become progressively limiting, the growth pattern turns logistic." (the load-bearing word is *usually* — emphasis kept outside the quoted string so the quote stays copy-safe verbatim NCERT text. SUMMARY-UNIQUE qualifier: the body states the exponential case flatly - "Then the population grows in an exponential or geometric fashion" (F092) - with no hedge; NCERT's "usually" appears only in the Summary and must be preserved exactly. **Added 2026-08-21 by the Gate 1 source-to-inventory sweep — a real Pass 1 gap, not back-dated**) | |
 | F253 | Summary | Definition | "The intrinsic rate of natural increase (r) is a measure of the inherent potential of a population to grow." (SUMMARY-UNIQUE phrasing) | |
 | F254 | Summary | Qualifier | "some predators help in controlling their prey populations" (summary qualifier "some") | |
 | F255 | Exercises | heading | "EXERCISES" | |
@@ -370,4 +370,40 @@ Gate 1 was claimed GREEN at the end of session 1. This session re-audited that c
 - Portrait rule: the RAMDEO MISRA headshot (source p2) is deliberately not extracted; the profile is text-only (F011-F022). No portrait asset exists in `assets/`.
 - Inventory file saved to the chapter folder.
 
-**Gate 1: GREEN** — re-earned on this session's evidence (source re-read + machine re-count + 3 gaps closed), not carried forward from session 1's claim. Pass 2 (write the script) may now begin. Nothing beyond Gate 1 has been started: there is no `Ch11_OrganismsAndPopulations.py` and no chapter PDF yet, so Gate 2 and Gate 3 are **not** claimed.
+### Session 3 (2026-08-21) — full third re-audit of all 268 rows
+
+Session 2 re-audited session 1's claim. This session re-audited **session 2's** claim, in full and from the source PDF again, because Gate 1 had now been declared GREEN twice without Pass 2 ever starting. Scope: every one of the 268 rows, both directions, plus the figure labels read off the images a second time. Audit scripts live in `scratch/ch11_audit/`.
+
+**Every substantive session-2 claim was independently reproduced.**
+
+| Gate 1 condition | Method | Result |
+|---|---|---|
+| Row count / ID integrity | parsed the `## Facts` table only (a loose `startswith("\| F")` parser picks up the Gate-1-record tables too and reports 275 — that trap is noted here so a later session does not "find" a phantom discrepancy) | **268** rows, F001-F265 contiguous, 0 gaps, 0 duplicates, + F030a/F189a/F252a |
+| Heading rows | walked the source's headings as their own list, independently of session 2's list | **18**, and the source has exactly these 18 — matches |
+| Section openers | walked the openers as their own list | **16** `Opener` rows; SUMMARY's and EXERCISES' first sentences are covered by F250 and F256 (typed `Definition`/`Question`, content present) |
+| Figure labels | re-read off the six extracted PNGs, not off captions | **22** labels on 5 rows, all correct: Fig 11.1 = 6, Fig 11.2 = 5, Fig 11.3 = 7; Fig 11.4(a)/(b) and Fig 11.5 carry no in-figure text |
+| Figure assets | `Pillow` on all 6 files + visual confirmation of each | all `mode == "L"`, extrema `(0, 255)`, each image is the figure its caption claims |
+| Direction 1 (inventory → source) | 296 quoted strings normalised and searched in the re-extracted text | all traceable; the 20 initial misses were page-furniture/table-interleave artifacts of my own extraction (page numbers, running heads, `Reprint 2026-27` splitting sentences across pages), individually adjudicated, plus the deliberate ASCII linearisations below |
+| Direction 2 (source → inventory) | 263 source sentences swept for content-word coverage | **0 UNINVENTORIED content.** Only 2 low-coverage flags, both framing clauses already merged under Rule 3 ("We can try to understand its complexity by ..." → F024/F025; "and is described by the following equation" → F121/F122) |
+| Summary | all 17 SUMMARY sentences matched 1:1 against the classification table | 17 source sentences, 17 rows, 5 SUMMARY-UNIQUE (F250, F251, F252, F252a, F253) each folded into a named body row |
+| Exercises | all 10 numbered exercises | F256-F265, 10/10; 2 exercise-gap terms still have planned homes |
+| Portrait rule | `assets/` listing | no portrait asset; RAMDEO MISRA remains text-only (F011-F022) |
+
+**Three mechanical defects found and fixed this session.** None of them is missing NCERT content — the chapter's coverage was already complete — but the first actively corrupted the machine-auditable artifact, which is exactly what Gate 1 exists to protect.
+
+| Fixed | Defect | Why it mattered |
+|---|---|---|
+| **F146** | The wording cell contained Table 11.1's header with **unescaped `\|` characters**, splitting the markdown row into 7 cells instead of 5 | The row rendered wrong and any fixed-index parser read the wording as the truncated `"Table 11.1 : Population Interactions" — header "Species A`. `check_pdf.py` escapes harm only by accident (check 7 reads `cells[-1]`, which still lands on the empty tick cell); a fixed-index read of column 4 gets corrupt data. Column separators are now written as `/`. |
+| **F001** | The unit-opener heading row recorded only `"Unit X"`, omitting the unit title | Source p1 prints the heading as **"UNIT X / ECOLOGY"** (rendered as artwork, so it is absent from the text layer and invisible to any text-only sweep — both earlier sessions missed it). Half a heading string was frozen. Also recorded: `X` is NCERT's literal Roman ten, not a placeholder, so it does not get "corrected" later. |
+| **F252a** | The quoted "exact original wording" contained markdown emphasis: `the growth is **usually** exponential` | The asterisks are not NCERT text. A Pass 2 writer copying the quote verbatim would emit them into the PDF. Emphasis moved outside the quoted string. |
+
+**Deliberate transliterations confirmed correct (do not "fix" these):**
+- **F093** — source sets `dN/dt = (b - d) × N` with a real multiplication sign; the row records `x`. Correct: `×` is a banned glyph (§4).
+- **F122** — source typesets the logistic equation as a stacked fraction, so the PDF text layer yields the scrambled `dn/dt = k n rn k -` plus private-use bracket glyphs. The row's `dN/dt = rN [(K - N)/K]` is the correct linearisation, and matches the equation as drawn inside Fig 11.3.
+- **F239** — merges Fig 11.4(a) and (b) into one label row where §6 suggests one row per figure-part. Cosmetic only; neither part carries in-figure text.
+
+**Carried into Pass 2 (advisory, not Gate 1 blockers):**
+- `check_pdf.py` check 6 requires **every** figure label to appear in the generated running text. **"Expanding"** (Fig 11.1) never appears in NCERT's prose — the body says "growing" (F054) and the Summary says "stationary" (F251). The script must put the word *Expanding* into the running text when it describes the age pyramids, or check 6 will FAIL on a chapter that is otherwise complete. Same applies to reconciling *stable* / *stationary* / *declining*.
+- F146's table renders as a 3-column data table; keep the `+ / - / 0` sign convention as text (F145), since arrows and symbols are banned glyphs.
+
+**Gate 1: GREEN — completed.** Third full re-audit, all 268 rows, both directions: **no missing NCERT content**, and the 3 mechanical defects found are fixed in this file rather than logged for later. The inventory is frozen with all ticks empty and is now safe to machine-read. Pass 2 (write `Ch11_OrganismsAndPopulations.py`) may begin. Nothing beyond Gate 1 has been started — there is no script and no chapter PDF — so Gate 2 and Gate 3 are **not** claimed.
