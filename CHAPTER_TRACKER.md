@@ -8,7 +8,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 
 **Progress: 10 / 32 chapters done** — Class 11: 6/19 · Class 12: 4/13
 
-**Current work:** Class 12, Chapter 13 — Biodiversity and Conservation (the last chapter of the Ecology unit) is at **Pass 1 complete, Gate 1 CLOSED** (2026-08-22), hard-stopped there on instruction. All of Pass 1 is done: 2/2 NCERT figures extracted as 300 dpi clip renders, converted to true monochrome and each verified; 23 in-figure labels harvested by reading the images and **folded into the Facts table as F039/F081**; **189 facts frozen (F001-F189, contiguous, 0 gaps)**; 21 heading and 8 opener rows; 25 summary sentences classified; exercise-gap table written. Every header count was re-derived by machine parse, which caught and fixed a hand-tally slip (heading 22→21, opener 9→8) **without touching a single Facts row**. **Pass 2 has correctly not begun — no chapter script or PDF exists, so Gates 2 and 3 remain blocked and Ch13 is not yet Done.** Class 12 Chapter 12 — Ecosystem is **closed** (Gate 3 earned on its third full-read audit).
+**Current work:** Class 12, Chapter 13 — Biodiversity and Conservation (the last chapter of the Ecology unit) is at **Pass 2 complete, Gate 2 GREEN** (2026-08-22). Pass 1 remains as frozen: 2/2 figures clip-rendered and verified monochrome, 23 in-figure labels folded in as F039/F081, **189 facts frozen (F001-F189, contiguous, 0 gaps)**, 21 heading and 8 opener rows, 25 summary sentences classified, exercise-gap table written. Pass 2 built `Ch13_BiodiversityAndConservation.py` linearly from that inventory against the repo-level frozen `neet_template.py`, producing an **11-page PDF (34,117 chars, 2 mono images)**; every row was ticked while writing, all seven Pass 1 carry-overs were actioned, and `check_pdf.py` exits **0 — 0 fail, 1 warn**, that warn being check 4 matching "**photo**synthesis" in F143 rather than any real portrait row. **Pass 3 has not begun — no every-page render pass and no bidirectional full read — so Gate 3 is open and Ch13 is not yet Done.** Class 12 Chapter 12 — Ecosystem is **closed** (Gate 3 earned on its third full-read audit).
 
 **Count-correction note (2026-08-22):** this header previously read "9 / 32 · Class 12: 3/13" while the Class 12 section footer read "4 / 13". The footer was correct — Class 12 has four closed chapters (9, 10, 11, 12) — so Ch12's closure had been recorded in its own unit table and section total but never propagated to this header. Corrected to 10 / 32. Ch13 is deliberately **not** counted: Gate 1 closed is not Gate 3 closed.
 
@@ -102,6 +102,6 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 |---|---|
 | 11. Organisms and Populations | ✅ Done |
 | 12. Ecosystem | ✅ Done |
-| 13. Biodiversity and Conservation | ▶️ In progress — **Pass 1 complete, Gate 1 CLOSED**: 189 facts frozen (F001-F189) · 23 labels folded in as F039/F081 · 21 headings / 8 openers · 25 summary rows · 2/2 assets verified. Pass 2 not begun (no script/PDF), so **not Done** |
+| 13. Biodiversity and Conservation | ▶️ In progress — **Pass 2 complete, Gate 2 GREEN**: script + 11-page PDF built on the frozen template · 189/189 rows ticked · 23/23 figure labels in running text · `check_pdf.py` exit 0 (0 fail, 1 inspected benign warn). **Pass 3 not begun**, so **not Done** |
 
 **Class 12 total: 4 / 13 done**
