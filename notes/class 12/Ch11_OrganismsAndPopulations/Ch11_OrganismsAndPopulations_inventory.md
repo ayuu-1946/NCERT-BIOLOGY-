@@ -542,3 +542,69 @@ insert: ['#', 'NCERT', 'exercise', 'question', 'Where', 'the', 'chapter', 'answe
 **Verdict: PASS.** All five conditions hold against the final rebuilt PDF, and the two defects that invalidated Session 4's verdict are fixed at the template level with an automated gate (check 9) standing behind them so no later chapter can regress into the same defect silently.
 
 **Note on what this cost.** Session 4's Pass 3(a) budget was spent on pages and still missed two mechanical defects; check 9 now finds them in milliseconds. That is the v6 thesis restated by example — every defect a linter can decide should become a linter check the moment it is found by eye, or the next chapter pays for it again.
+
+> **Session 5's verdict held on content but missed one mechanical defect (D4).** Its five conditions are all still true as written; condition 1 is the one that failed, for the third session running. See the Session 6 record below. Session 5's line on the badges — *"`'Table 11.1'` and `'Appendix'` look tight at screen zoom but are full strings, not truncations"* — is the exact miss: it resolved a *visual* suspicion by querying the *text layer*, where the string is of course intact. The pixels disagreed with the text layer, and the pixels are the deliverable.
+
+---
+
+### Session 6 (2026-08-21) — Gate 3 re-audit; D4 found at the point Session 5 explicitly looked and cleared
+
+Session 5 declared PASS. This session re-audited rather than inherited it, per §6. **Content is confirmed sound — the audit trail of 268 rows in both directions stands and was not re-litigated.** But one mechanical defect was sitting in the delivered build, at precisely the coordinates Session 5 had inspected and signed off.
+
+**Environment (§0, rebuilt — the sandbox does not persist the venv).** `reportlab 5.0.1` / `pdfplumber 0.11.7` / `pymupdf 1.28.2` / `Pillow 12.3.0`, all four imports verified before touching anything. Session 5's warning about the `pip`/`python3` version split is confirmed and still the right advice: use a venv.
+
+Also confirmed: `Final Result PDF/` and `Python Script Latest/` at the repo root hold nothing but `.gitkeep`. That is **correct, not a gap** — §92 retired both in favour of the per-chapter `notes/` folder. Recorded so a later session does not "fix" it by moving deliverables back.
+
+#### One confirmed defect (D4), fixed at the template level
+
+| ID | Defect | Root cause | Fix |
+|---|---|---|---|
+| **D4** | The badge plate on a heading whose badge holds a *word* rather than a number is drawn **wider than the table column that holds it**, so the heading banner — painted after it, and starting at the column boundary — covers the badge's final glyph. `Appendix` printed as `Appendi`; `Table 11.1` lost its last digit. 4 sites: p8 `Table 11.1` (H2), p13 `Appendix` (H1), p14 `Appendix` (H3 ×2). | `neet_template.heading()` hard-coded the badge column to `1.02*cm` (28.91pt, of which 23.91pt is usable after `RIGHTPADDING=5`), while `_badge_section()` sizes the plate to fit its text: `max(size, stringWidth + 2*pad)` = **31.10pt** for `Appendix` at level 1. The plate overran its cell by 5.19pt and the banner overwrote it. Purely a function of label *width*, so it was invisible for every numeric badge (`11.1`, `(i)`, `Ch 11`) and fired only on long word labels. | `heading()` now measures the badge it just built and sets the column to `max(1.02*cm, badge.width + BADGE_COL_GUTTER_PT)`. `1.02*cm` is kept as a **floor**, so every numeric badge — i.e. every badge in every already-closed chapter — keeps its exact previous geometry, and only labels that genuinely need room get it. Fixed for **every** chapter that imports the template. |
+
+D4 is a **rendering defect, not content loss** — the text layer always contained the full word. That is exactly why no text-based check could ever see it, including check 2, which measured the badge at a legal 6.0pt and passed it, and check 9, which counted it as a healthy banner. Only the fill geometry shows it.
+
+#### The gate that should have caught it: `check_pdf.py` check 10
+
+Session 5 *looked at this badge*, felt it was tight, and cleared it against the text layer. So the fix is again not "look harder" — it is a hard gate. **Check 10 (badge plate not colliding with its heading banner)** was added: it collects every filled rectangle whose darkest channel is `< 0.60` (the four template greys that carry white type — `INK`, `DARK_GREY`, `MED_GREY`, `SOFT_GREY` at 0.42 — cleanly separated from row/callout shading at 0.91-0.94, so no threshold tuning) and FAILs if any two overlap by more than 0.5pt in both axes.
+
+- Verified adversarially, the same way check 9 was: run against the **pre-fix** PDF it FAILs and names all 4 sites with their overlap geometry (`p8 4.8×10.0pt`, `p13 5.2×13.5pt`, `p14 3.1×10.0pt` ×2), exit 1. Against the fixed PDF it PASSes: **119 filled plates, all clear of their neighbours**, exit 0.
+- A 0.5pt tolerance keeps rasteriser rounding from producing phantom failures.
+
+#### The pixels vs. the text layer — how D4 was actually caught
+
+The badge was rendered at 700 dpi and *looked at as an image*, instead of being queried as a string. The clipped `x` is plainly visible. The confirming measurement is geometric, from `page.get_drawings()`: badge plate `x 48.52 → 79.62`, banner `x 74.43 → 549.76` — a 5.19pt overlap, banner drawn second. No amount of `get_text()` inspection can produce that number.
+
+The word-level diff of the old and new builds is the tidiest evidence that the fix is geometry-only:
+
+```
+replace | old: ['11.1Population']  | new: ['11.1', 'Population']
+replace | old: ['AppendixTERMS']   | new: ['Appendix', 'TERMS']
+```
+
+**Two replacements, zero insertions, zero deletions, +2 characters** (the two spaces). The badge and title had been overlapping so tightly that PDF text extraction ran them into a single token; separating the plates separates the tokens. Nothing reflowed: **14 pp → 14 pp, 6 images → 6 images, 43106 → 43108 chars.**
+
+#### Pass 3(a) — visual render check: **14/14 pages inspected**
+
+All 14 pages of the final build re-rendered and looked at individually. Because the fix moved no text (proved above), this pass was a confirmation rather than a re-do, with the 4 D4 sites additionally re-rendered at 700 dpi: `Appendix` and `Table 11.1` now sit fully inside their plates with clear separation from the banner. No orphaned heading, overflow, clipping, squashed figure or misaligned process-flow rule.
+
+One item **inspected and accepted, not a defect:** the H3 banner grey (`SOFT_GREY #6B6B6B`) under white type gives a contrast ratio of ≈5.3:1, above the 4.5:1 WCAG AA threshold for normal text. It was checked because an early drawings scan filtered at 0.35 and appeared to show white text with no plate behind it; the plate is simply lighter than that filter. Legible, unchanged, and the reason check 10's threshold is 0.60 rather than 0.35.
+
+#### Pass 3(b) — content cross-check
+
+Direction 1 and Direction 2 were **re-verified, not re-derived**: 268/268 rows ticked, 22/22 figure labels in running text, and the word-level diff above proves the text of the delivered build is byte-for-byte the text Session 5 audited apart from two inserted spaces. Session 5's and Session 4's per-section reading claims and the false-positive list therefore transfer intact and are deliberately **not re-litigated** (the (i)/(iii)/(ii)/(iv) ordering and the chess-anecdote Rule 3 merge remain settled).
+
+#### Gate 3 — all five conditions, re-verified against the final rebuilt PDF
+
+| # | Condition | Evidence |
+|---|---|---|
+| 1 | Zero confirmed defects remain | D1, D2, D3 (earlier sessions) and **D4 (this session)** all fixed. D4 fixed in `neet_template.py` so the class cannot recur, gated by new check 10 |
+| 2 | `check_pdf.py` green on the *final rebuilt* PDF | Re-run this session, not carried forward: **exit 0, 0 fail / 1 warn**, checks 1-**10**. The single WARN is check 4's manifest-mentions-a-portrait true negative (no portrait asset; RAMDEO MISRA is text-only, F011-F022) — accepted, unchanged |
+| 3 | Pass 3(a) covered every page | **14/14 pages**, equal to the delivered page count; the 4 D4 sites additionally re-rendered at 700 dpi |
+| 4 | Pass 3(b) full read, both directions | 268/268 COVERED, 0 UNINVENTORIED, carried on the proof that the delivered text is unchanged from the audited text apart from 2 spaces |
+| 5 | Rebuild reproducible | Regenerated twice from the final script: **14 pp / 43108 chars / 6 images**, extracted text **identical** across runs; only `CreationDate`/`ModDate`/`/ID` differ |
+
+**Verdict: PASS.** Gate 3 holds against the final rebuilt PDF, with D4 fixed at the template level and check 10 standing behind it.
+
+#### Open item for the next session (does not affect Ch11)
+
+Check 10 was run across **all 9 chapter PDFs** in `notes/`. Ch11 and 5 others are clean; **3 already-closed chapters still carry D4 in their committed PDFs** — `Ch1_TheLivingWorld` (p6, 2 sites), `Ch2_BiologicalClassification` (p14, 1 site), `Ch3_PlantKingdom` (p10, 2 sites), all class 11. The template fix is already in place, so per §96 ("every chapter re-rendered against it changes identically") each needs only a rebuild plus a check-10 run to clear; the `1.02*cm` floor guarantees their numeric badges are untouched. Left as an explicit open item rather than silently rebuilding three closed deliverables in a Ch11 session.

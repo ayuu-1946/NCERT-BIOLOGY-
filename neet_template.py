@@ -222,11 +222,25 @@ def heading(number: str, text: str, level: int, has_table: bool = False):
     automated gate (check 9) - not in a per-chapter workaround.
     """
     size = {1: 13.5, 2: 11.5, 3: 10.0}[level]
-    cells = [_badge_section(number, size), Paragraph(text, STYLES[f"H{level}"])]
-    widths = [1.02 * cm, None]
+    badge = _badge_section(number, size)
+    # The badge column must be at least as wide as the badge plate itself. Otherwise
+    # the plate overruns its cell and the banner in the next column - painted after
+    # it - covers the plate's last glyph, so "Appendix" prints as "Appendi".
+    # _badge_section() deliberately grows the plate sideways to hold its label at the
+    # >=6pt legibility floor (§0.4 check 2), so a hard-coded 1.02cm column clipped
+    # every word-shaped label ("Appendix", "Recap", "Table 11.1") while numeric
+    # badges ("11.1.4", which need only ~20pt) always fitted and hid the bug.
+    # 1.02cm is kept as the FLOOR so numeric badges keep their exact former position
+    # and no already-closed chapter shifts; the column widens only when the label
+    # genuinely needs the room. Mechanical defect -> fixed once here in the frozen
+    # template for every chapter, and gated by check_pdf.py check 10.
+    BADGE_GUTTER = 5  # must match the badge cell's RIGHTPADDING below
+    badge_col = max(1.02 * cm, badge.width + BADGE_GUTTER)
+    cells = [badge, Paragraph(text, STYLES[f"H{level}"])]
+    widths = [badge_col, None]
     if has_table:
         cells.append(_icon_table())
-        widths = [1.02 * cm, FRAME_WIDTH - 1.02 * cm - 0.55 * cm, 0.55 * cm]
+        widths = [badge_col, FRAME_WIDTH - badge_col - 0.55 * cm, 0.55 * cm]
     t = Table([cells], colWidths=widths)
     t.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
