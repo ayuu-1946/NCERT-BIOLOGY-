@@ -53,7 +53,7 @@ from reportlab.lib.colors import HexColor, white
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
-                                Image, KeepTogether, HRFlowable)
+                                Image, KeepTogether, HRFlowable, CondPageBreak)
 from reportlab.graphics.shapes import Drawing, Circle, Rect, Polygon, String, Line
 from reportlab.pdfbase.pdfmetrics import stringWidth
 
@@ -202,9 +202,25 @@ def motif_dna(size: float = 42) -> Drawing:
     return d
 
 
+# Vertical space a heading must have below it, or it is pushed to the next page.
+# A banner is ~17pt tall; ORPHAN_GUARD_PT reserves the banner plus two lines of
+# Body (10.8pt / 15.2pt leading) so a heading can never be the last thing on a
+# page with its own section text starting on the next one. See heading() below.
+ORPHAN_GUARD_PT = 52
+
+
 def heading(number: str, text: str, level: int, has_table: bool = False):
     """Banner heading with its section-number badge (§4.1 + Heading structure).
-    `number` is the NCERT section number, kept visible for traceability (§3)."""
+    `number` is the NCERT section number, kept visible for traceability (§3).
+
+    Returns a KeepTogether([CondPageBreak(ORPHAN_GUARD_PT), banner]) rather than a
+    bare Table: a bare banner has nothing binding it to the text beneath it, so a
+    heading landing near a page break is left stranded at the foot of the page
+    while its section body starts overleaf. That is the "orphaned heading" layout
+    bug §6 Pass 3(a) exists to catch, and it is a mechanical defect, so it belongs
+    in the frozen template (fixed once for every chapter) and in check_pdf.py's
+    automated gate (check 9) - not in a per-chapter workaround.
+    """
     size = {1: 13.5, 2: 11.5, 3: 10.0}[level]
     cells = [_badge_section(number, size), Paragraph(text, STYLES[f"H{level}"])]
     widths = [1.02 * cm, None]
@@ -221,7 +237,7 @@ def heading(number: str, text: str, level: int, has_table: bool = False):
         ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
     ]))
     t.hAlign = "LEFT"
-    return t
+    return KeepTogether([CondPageBreak(ORPHAN_GUARD_PT), t])
 
 
 def keyterm(text: str):
