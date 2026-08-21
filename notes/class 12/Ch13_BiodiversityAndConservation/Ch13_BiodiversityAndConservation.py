@@ -210,6 +210,12 @@ story.append(b1(
     "Among animals, <b>insects</b> are the <b>most species-rich taxonomic group</b>, making up "
     "<b>more than 70 per cent</b> of the total. That means, <b>out of every 10 animals on this "
     "planet, 7 are insects</b>."))
+# [VERIFICATION FIX] F035a (Pass 3(b) direction 2, UNINVENTORIED) - NCERT asks this question
+# immediately after the insect figure and never answers it; exercise 9 is built on it.
+story.append(b1(
+    "NCERT stops here to ask, and does not answer: <b>\"Again, how do we explain this enormous "
+    "diversification of insects?\"</b> - the same puzzle <b>exercise 9</b> puts as how animals "
+    "achieved their greater diversification."))
 # F037 + F181 - both wordings carried, per carry-over 5
 story.append(note(
     "Two different NCERT statements about <b>Fungi</b>, and both are examinable. The <b>body</b> "
@@ -282,6 +288,12 @@ story.append(data_table([
      "species</b>"],
 ], col_widths=[4.6, 5.8]))
 story.append(gap())
+# [VERIFICATION FIX] F048a (Pass 3(b) direction 2, UNINVENTORIED) - the two rhetorical questions
+# NCERT poses between the India figures and F049; both were absent from the frozen inventory.
+story.append(body(
+    "NCERT then asks two questions of its own: <b>\"How many living species are actually there "
+    "waiting to be discovered and named?\"</b> and <b>\"Would we ever be able to complete the "
+    "inventory of the biological wealth of our country?\"</b>"))
 # F049, F050, F051
 story.append(body(
     "Consider the <b>immense trained manpower (taxonomists)</b> and the <b>time required to "
@@ -345,9 +357,12 @@ story.append(b1(
     "species waiting to be discovered and named</b>."))
 story.append(gap())
 # F066, F067, F068 - the three hypotheses
+# [VERIFICATION FIX] F065a (Pass 3(b) direction 2, UNINVENTORIED) - NCERT's own framing sentence,
+# restored verbatim in place of the earlier paraphrase.
 story.append(body(
-    "<b>Why are tropics so species-rich?</b> Ecologists and evolutionary biologists have proposed "
-    "these hypotheses:"))
+    "<b>What is so special about tropics that might account for their greater biological "
+    "diversity?</b> <b>Ecologists and evolutionary biologists</b> have proposed <b>various "
+    "hypotheses</b>; some important ones are:"))
 story.append(data_table([
     ["Hypothesis", "Reasoning (NCERT)"],
     ["<b>(a) More evolutionary time</b>",
@@ -430,6 +445,10 @@ story.append(body(
 story.append(b1(
     "For <b>many decades</b>, ecologists believed that <b>communities with more species, "
     "generally, tend to be more stable</b> than those with <b>less species</b>."))
+# [VERIFICATION FIX] F085a (Pass 3(b) direction 2, UNINVENTORIED) - NCERT asks this question and
+# F086 is its answer; the question itself had no inventory row and was absent from the notes.
+story.append(b1(
+    "NCERT then asks: <b>\"What exactly is stability for a biological community?\"</b>"))
 story.append(keyterm(
     "A <b>stable community</b> should <b>not show too much variation in productivity from year to "
     "year</b>; it must be either <b>resistant or resilient to occasional disturbances</b> "
@@ -461,9 +480,12 @@ story.append(b1("How is our quality of life affected if, say, instead of <b>20,0
                 "only <b>15,000 species of ants</b> on earth?"))
 story.append(gap())
 # F092, F093, F094 - the rivet popper hypothesis
+# [VERIFICATION FIX] F092a (Pass 3(b) direction 2, UNINVENTORIED) - the first half of NCERT's
+# sentence ("There are no direct answers to such naive questions") had no row and was dropped.
 story.append(body(
-    "A proper perspective comes through an analogy - the <b>'rivet popper hypothesis'</b> used by "
-    "<b>Stanford ecologist Paul Ehrlich</b>:"))
+    "<b>There are no direct answers to such naive questions</b>, but a proper perspective comes "
+    "through an analogy - the <b>'rivet popper hypothesis'</b> used by <b>Stanford ecologist Paul "
+    "Ehrlich</b>:"))
 story.append(process_flow([
     "In an <b>airplane (ecosystem)</b> all parts are joined together using <b>thousands of rivets "
     "(species)</b>.",
@@ -552,10 +574,12 @@ story.append(b1("<b>(c)</b> <b>increased variability in certain ecosystem proces
 
 # ---- 13.1.4 Causes of biodiversity losses - 'The Evil Quartet' (F111-F132) ----
 story.append(heading("13.1.4", "Causes of biodiversity losses - 'The Evil Quartet'", 3))
-# F111, F112
+# F111, F112; [VERIFICATION FIX] F112a (Pass 3(b) direction 2, UNINVENTORIED) - the section's own
+# opening sentence ("The accelerated rates ... are largely due to human activities") had no row.
 story.append(body(
-    "There are <b>four major causes</b> - <b>'The Evil Quartet' is the sobriquet used to describe "
-    "them</b>."))
+    "<b>The accelerated rates of species extinctions that the world is facing now are largely due "
+    "to human activities.</b> There are <b>four major causes</b> - <b>'The Evil Quartet' is the "
+    "sobriquet used to describe them</b>."))
 
 # (i) Habitat loss and fragmentation - F113-F119
 story.append(body("<b>(i) Habitat loss and fragmentation:</b>"))
@@ -796,6 +820,11 @@ story.append(b1(
 story.append(b1(
     "There are <b>many animals that have become extinct in the wild but continue to be maintained "
     "in zoological parks</b>."))
+# [VERIFICATION FIX] F171a (Pass 3(b) direction 2, UNINVENTORIED) - the sentence that introduces
+# the modern techniques ("advanced beyond keeping threatened species in enclosures") had no row.
+story.append(b1(
+    "In <b>recent years ex situ conservation has advanced beyond keeping threatened species in "
+    "enclosures</b>:"))
 # F172, F173, F174, F175
 story.append(data_table([
     ["Modern ex situ technique", "What it preserves (NCERT)"],

@@ -1,16 +1,16 @@
 # Frozen Inventory — Biodiversity and Conservation (Class 12, Chapter 13)
 Source: `Chapter/class 12/Chapter 13 - Biodiversity and Conservation.pdf` (13 pp; p13 is a blank `NOTES` page) | Frozen: 2026-08-21 | Rows: **189** (`F001`..`F189`)
 
-Tick legend: `x` = written into the script and verified present in the generated PDF. **All 189 rows are now ticked** — Pass 2 is complete, and `check_pdf.py` check 7 reports "All 189 Facts rows ticked." No Facts row wording was altered when ticking; only the `Ticked` column changed.
+Tick legend: `x` = written into the script and verified present in the generated PDF. **All 196 rows are now ticked** (189 frozen at Pass 1 + 7 added at Pass 3(b)) — `check_pdf.py` check 7 reports "All 196 Facts rows ticked." No frozen Facts row was reworded at any point; only the `Ticked` column changed, and the 7 Pass 3(b) rows are additions flagged as real Pass 1 gaps.
 
 ## Header counts — all machine-derived (§6 Pass 1 step 8), never hand-tallied
 
 | Count | Value |
 |---|---|
-| Facts rows total | 189 |
-| ID range / contiguity | F001..F189 — 0 gaps, 0 duplicates |
+| Facts rows total | **196** — 189 frozen at Pass 1 + **7 added at Pass 3(b)** (`F035a`, `F048a`, `F065a`, `F085a`, `F092a`, `F112a`, `F171a`), each a real Pass 1 gap, never back-dated into the freeze |
+| ID range / contiguity | F001..F189 — 0 gaps, 0 duplicates; plus the 7 `a`-suffixed Pass 3(b) rows above |
 | `Type: heading` rows | 21 |
-| `Type: opener` rows | 8 |
+| `Type: opener` rows | **9** — 8 frozen at Pass 1 + `F112a` added at Pass 3(b) |
 | Figure-label rows | 2 (F039, F081) |
 | Label strings parsed by `_extract_labels` | 23 (18 + 5) — no doubling, no phantom figure |
 | Summary sentences classified | 25 — BODY-PRESENT 19, SUMMARY-UNIQUE 6 |
@@ -58,7 +58,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 >
 > **Carry-overs actioned in Pass 2** (all seven from "Carry-overs Pass 2 must action"): Fig 13.2's caption names which plot is the arithmetic-scale hyperbola and which is the log-log line (1); `S = CA<super>Z</super>` is written into the running text and extracts as `S = CAZ`, matching F081 unchanged (2); `log S = log C + Z log A` is written verbatim in 13.1.2 (ii) (3); all degrees stayed spelled out (4); F037's four-class form and F181's all-vertebrates form are carried together in one NOTE (5); 448 sanctuaries is the body figure with the summary's "more than 450" in a NOTE (6); the `Type`-column casing was left untouched (7).
 >
-> **Gate 2 is not Gate 3.** Pass 3 — the every-page visual render and the bidirectional full-read content cross-check — has **not** been done, so this chapter is **not** Done and must not be counted as closed.
+> **Gate 2 is not Gate 3.** Pass 3 has since been completed in full — see the `## Gate 3 record` at the end of this file: 3(a) inspected 11/11 pages, 3(b) read all 13 source pages against the script blocks in both directions and found 7 UNINVENTORIED items, all fixed. Gate 2 was **re-run on the final rebuilt PDF** (exit 0, 196/196 rows ticked) and the figures quoted in this Gate 2 block (189 rows, 11 pp, 54 headings, 82 plates) are the pre-fix values, kept as the historical record.
 
 ---
 
@@ -102,6 +102,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F034 | 13.1.1 | number | "while plants (including algae, fungi, bryophytes, gymnosperms and angiosperms) comprise no more than 22 per cent of the total" | x |
 | F035 | 13.1.1 | number | "Among animals, insects are the most species-rich taxonomic group, making up more than 70 per cent of the total." | x |
 | F036 | 13.1.1 | number | "That means, out of every 10 animals on this planet, 7 are insects." | x |
+| F035a | 13.1.1 | question | **ADDED AT PASS 3(b) — real Pass 1 gap (UNINVENTORIED).** "Again, how do we explain this enormous diversification of insects?" — posed on source p3 and never answered; it is the body antecedent of exercise 9. | x |
 | F037 | 13.1.1 | concept | "The number of fungi species in the world is more than the combined total of the species of fishes, amphibians, reptiles and mammals." | x |
 | F038 | 13.1.1 | caption | "Figure 13.1 Representing global biodiversity: proportionate number of species of major taxa of plants, invertebrates and vertebrates", plus the in-text pointer "In Figure 13.1, biodiversity is depicted showing species number of major taxa." | x |
 | F039 | Fig 13.1 | Caption | Figure labels: "Invertebrates"; "Other animal groups"; "Crustaceans"; "Molluscs"; "Insects"; "Vertebrates"; "Fishes"; "Mammals"; "Birds"; "Reptiles"; "Amphibians"; "Plants"; "Mosses"; "Ferns and allies"; "Fungi"; "Angiosperms"; "Algae"; "Lichens" | x |
@@ -114,6 +115,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F046 | 13.1.1 | number | "Nearly 45,000 species of plants and twice as many of animals have been recorded from India." | x |
 | F047 | 13.1.1 | number | "If we accept May's global estimates, only 22 per cent of the total species have been recorded so far." | x |
 | F048 | 13.1.1 | number | "Applying this proportion to India's diversity figures, we estimate that there are probably more than 1,00,000 plant species and more than 3,00,000 animal species yet to be discovered and described." | x |
+| F048a | 13.1.1 | question | **ADDED AT PASS 3(b) — real Pass 1 gap (UNINVENTORIED).** Source p4's two rhetorical questions: "How many living species are actually there waiting to be discovered and named?" and "Would we ever be able to complete the inventory of the biological wealth of our country?" | x |
 | F049 | 13.1.1 | concept | "Consider the immense trained manpower (taxonomists) and the time required to complete the job." | x |
 | F050 | 13.1.1 | concept | "The situation appears more hopeless when we realise that a large fraction of these species faces the threat of becoming extinct even before we discover them." | x |
 | F051 | 13.1.1 | concept | "Nature's biological library is burning even before we catalogued the titles of all the books stocked there." | x |
@@ -131,6 +133,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F063 | 13.1.2 | concept | "The largely tropical Amazonian rain forest in South America has the greatest biodiversity on earth" | x |
 | F064 | 13.1.2 | number | The Amazon inventory: "more than 40,000 species of plants, 3,000 of fishes, 1,300 of birds, 427 of mammals, 427 of amphibians, 378 of reptiles and of more than 1,25,000 invertebrates" | x |
 | F065 | 13.1.2 | number | "Scientists estimate that in these rain forests there might be at least two million insect species waiting to be discovered and named." | x |
+| F065a | 13.1.2 | question | **ADDED AT PASS 3(b) — real Pass 1 gap (UNINVENTORIED).** The framing sentence that introduces the three hypotheses: "What is so special about tropics that might account for their greater biological diversity? Ecologists and evolutionary biologists have proposed various hypotheses; some important ones are..." (source pp4–5). | x |
 | F066 | 13.1.2 | concept | Hypothesis (a): "Speciation is generally a function of time, unlike temperate regions subjected to frequent glaciations in the past, tropical latitudes have remained relatively undisturbed for millions of years and thus, had a long evolutionary time for species diversification" | x |
 | F067 | 13.1.2 | concept | Hypothesis (b): "Tropical environments, unlike temperate ones, are less seasonal, relatively more constant and predictable. Such constant environments promote niche specialisation and lead to a greater species diversity" | x |
 | F068 | 13.1.2 | concept | Hypothesis (c): "There is more solar energy available in the tropics, which contributes to higher productivity; this in turn might contribute indirectly to greater diversity." | x |
@@ -151,6 +154,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F083 | 13.1.3 | opener | "Does the number of species in a community really matter to the functioning of the ecosystem?" | x |
 | F084 | 13.1.3 | concept | "This is a question for which ecologists have not been able to give a definitive answer." | x |
 | F085 | 13.1.3 | concept | "For many decades, ecologists believed that communities with more species, generally, tend to be more stable than those with less species." | x |
+| F085a | 13.1.3 | question | **ADDED AT PASS 3(b) — real Pass 1 gap (UNINVENTORIED).** "What exactly is stability for a biological community?" (source pp5–6) — F086 is its answer, but the question itself had no row. | x |
 | F086 | 13.1.3 | definition | "A stable community should not show too much variation in productivity from year to year; it must be either resistant or resilient to occasional disturbances (natural or man-made), and it must also be resistant to invasions by alien species." | x |
 | F087 | 13.1.3 | name | "We don't know how these attributes are linked to species richness in a community, but David Tilman's long-term ecosystem experiments using outdoor plots provide some tentative answers." | x |
 | F088 | 13.1.3 | concept | "Tilman found that plots with more species showed less year-to-year variation in total biomass." | x |
@@ -158,6 +162,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F090 | 13.1.3 | concept | "rich biodiversity is not only essential for ecosystem health but imperative for the very survival of the human race on this planet" | x |
 | F091 | 13.1.3 | questions | "Does it really matter to us if a few species become extinct?"; "Would Western Ghats ecosystems be less functional if one of its tree frog species is lost forever?"; "How is our quality of life affected if, say, instead of 20,000 we have only 15,000 species of ants on earth?" | x |
 | F092 | 13.1.3 | name | "we can develop a proper perspective through an analogy (the 'rivet popper hypothesis') used by Stanford ecologist Paul Ehrlich" | x |
+| F092a | 13.1.3 | concept | **ADDED AT PASS 3(b) — real Pass 1 gap (UNINVENTORIED).** The dropped first half of the rivet-popper sentence: "There are no direct answers to such naive questions but..." (source p6). F092 froze only the second half. | x |
 | F093 | 13.1.3 | concept | "In an airplane (ecosystem) all parts are joined together using thousands of rivets (species). If every passenger travelling in it starts popping a rivet to take home (causing a species to become extinct), it may not affect flight safety (proper functioning of the ecosystem) initially, but as more and more rivets are removed, the plane becomes dangerously weak over a period of time." | x |
 | F094 | 13.1.3 | concept | "Furthermore, which rivet is removed may also be critical. Loss of rivets on the wings (key species that drive major ecosystem functions) is obviously a more serious threat to flight safety than loss of a few rivets on the seats or windows inside the plane." | x |
 | F095 | 13.1.4 | heading | "13.1.4 Loss of Biodiversity" | x |
@@ -177,6 +182,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F109 | 13.1.4 | number | "Ecologists warn that if the present trends continue, nearly half of all the species on earth might be wiped out within the next 100 years." | x |
 | F110 | 13.1.4 | list | "In general, loss of biodiversity in a region may lead to (a) decline in plant production, (b) lowered resistance to environmental perturbations such as drought and (c) increased variability in certain ecosystem processes such as plant productivity, water use, and pest and disease cycles." | x |
 | F111 | 13.1.4 | heading | "Causes of biodiversity losses:" | x |
+| F112a | 13.1.4 | opener | **ADDED AT PASS 3(b) — real Pass 1 gap (UNINVENTORIED).** The first sentence of the "Causes of biodiversity losses" block: "The accelerated rates of species extinctions that the world is facing now are largely due to human activities." (source p7) — exactly the antecedent/opener class §6 warns is dropped most often. | x |
 | F112 | 13.1.4 | concept | "There are four major causes ('The Evil Quartet' is the sobriquet used to describe them)." | x |
 | F113 | 13.1.4 | heading | "(i) Habitat loss and fragmentation:" | x |
 | F114 | 13.1.4 | concept | "This is the most important cause driving animals and plants to extinction." | x |
@@ -237,6 +243,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F169 | 13.2.2 | definition | "In this approach, threatened animals and plants are taken out from their natural habitat and placed in special setting where they can be protected and given special care." | x |
 | F170 | 13.2.2 | example | "Zoological parks, botanical gardens and wildlife safari parks serve this purpose." | x |
 | F171 | 13.2.2 | concept | "There are many animals that have become extinct in the wild but continue to be maintained in zoological parks." | x |
+| F171a | 13.2.2 | concept | **ADDED AT PASS 3(b) — real Pass 1 gap (UNINVENTORIED).** "In recent years ex situ conservation has advanced beyond keeping threatened species in enclosures." (source p10) — the sentence that introduces the modern techniques F172–F175. | x |
 | F172 | 13.2.2 | concept | "Now gametes of threatened species can be preserved in viable and fertile condition for long periods using cryopreservation techniques" | x |
 | F173 | 13.2.2 | concept | "eggs can be fertilised in vitro" | x |
 | F174 | 13.2.2 | concept | "and plants can be propagated using tissue culture methods" | x |
@@ -421,6 +428,68 @@ Per-figure label counts: Fig 13.1 = **18** (Invertebrates panel 5, Vertebrates p
 
 **True negative, recorded so it is never mistaken for a suppressed finding:** check 4 (person photograph) has nothing legitimate to fire on — the Gate 1 census established this chapter contains no photograph of any kind and no scientist portrait, and Pass 3(a) confirms by eye that the only two embedded images are a pie-chart plate and a line graph.
 
-### Pass 3(b) — content cross-check: **NOT STARTED**
+### Pass 3(b) — content cross-check: **COMPLETE, both directions, full read** (session 2026-08-22d)
 
-The bidirectional full read (inventory → script, and the mandatory source → inventory direction) has **not** been done. **Gate 3 is therefore OPEN and this chapter is not Done.** Conditions 1, 2, 3 and 5 of Gate 3 are met or trivially re-checkable; **condition 4 is not**. No coverage score, similarity table or grep result may be used to close it — the next session must read source §13.1-13.2 and the summary/exercises start to finish against the `# ---- 13.n ----` blocks, and state per-section what was read against what.
+**Environment rebuilt first, per §0.2.** `/vercel/share/neetenv/bin/python` again did not exist at session start (fourth consecutive sandbox reset). Rebuilt before anything else: CPython 3.13.11 @ `/vercel/share/neetenv`, reportlab 5.0.1 · pdfplumber OK · pymupdf 1.28.2 · Pillow 12.3.0.
+
+**What was read against what — no grep, no coverage score, no similarity table.** The source PDF's text was extracted page by page to `scratch/ch13/source_text.txt` and **read start to finish, all 13 pages** (p13 is the blank `NOTES` page). The full 936-line script was read start to finish in three contiguous chunks. The Facts table was read from **this file**, not from memory. Grep was used **only twice**, both times after the reading, to *confirm* that seven already-identified sentences were absent from the built PDF — never to clear a row.
+
+| Source read | Script block(s) read against it | Direction 1 (inventory → script) | Direction 2 (source → inventory) |
+|---|---|---|---|
+| p1 opener + §13.1 head (source pp1–2) | `# ---- Chapter opener (F001-F008) ----`, `# ---- 13.1 BIODIVERSITY ----` | F001–F023 all COVERED | clean — 0 UNINVENTORIED |
+| §13.1.1 (source pp2–4) | `# ---- 13.1.1 ... ----` | F024–F051, F180, F181, F186 all COVERED | **2 UNINVENTORIED → D1 (F035a), D2 (F048a)** |
+| §13.1.2 (i) + (ii) (source pp4–5) | `# ---- 13.1.2 ... ----`, `(i) Latitudinal gradients`, `(ii) Species-Area relationships` | F052–F081, F187 all COVERED; both figure-label rows confirmed in running text and each figure sits at its own topic | **1 UNINVENTORIED → D3 (F065a)** |
+| §13.1.3 (source pp5–6) | `# ---- 13.1.3 ... ----` | F082–F094, F185 all COVERED | **2 UNINVENTORIED → D4 (F085a), D5 (F092a)** |
+| §13.1.4 incl. the Evil Quartet (source pp6–8) | `# ---- 13.1.4 ... ----`, `# ---- 13.1.4 Causes of biodiversity losses ----` | F095–F132, F179, F182, F189 all COVERED | **1 UNINVENTORIED → D6 (F112a)** |
+| §13.2 + §13.2.1 (source pp8–9) | `# ---- 13.2 ... ----`, `# ---- 13.2.1 ... ----` | F133–F147, F183, F188 all COVERED | clean — 0 UNINVENTORIED |
+| §13.2.2 in situ + ex situ (source pp9–10) | `# ---- 13.2.2 ... ----`, `In situ conservation`, `Ex situ conservation` | F148–F178, F184 all COVERED | **1 UNINVENTORIED → D7 (F171a)** |
+| SUMMARY (source pp10–11) | `# ---- Quick Recap ----` + the folded rows F179–F185 | all 25 classified sentences traced to their body rows | clean — 0 UNINVENTORIED |
+| EXERCISES 1–10 (source pp11–12) | `# ---- Terms used in the exercises ----` | F186–F189 COVERED; Q1, Q2, Q3, Q5, Q6, Q7 re-read and confirmed answerable from the body | clean — 0 UNINVENTORIED |
+
+**0 MISSING, 0 FABRICATED, 0 DRIFTED. 7 UNINVENTORIED — all in one family: NCERT's rhetorical questions and framing/opening sentences.** Direction 1 was clean everywhere, exactly as §6 warns it would be: none of the seven had a row, so nothing could be classified against them. This is a **real Pass 1 gap**, logged as such and **not back-dated into the freeze** — the seven new rows carry `a`-suffixed IDs and each row says it was added at Pass 3(b).
+
+| # | Confirmed defect (class) | Source | Fix | Row added |
+|---|---|---|---|---|
+| D1 | "Again, how do we explain this enormous diversification of insects?" — question posed and never answered; the body antecedent of exercise 9 | p3 | bullet added after the insect proportions in 13.1.1 | `F035a` |
+| D2 | "How many living species are actually there waiting to be discovered and named?" / "Would we ever be able to complete the inventory of the biological wealth of our country?" | p4 | paragraph added before F049 in 13.1.1 | `F048a` |
+| D3 | "What is so special about tropics that might account for their greater biological diversity? Ecologists and evolutionary biologists have proposed various hypotheses; some important ones are..." — was present only as the paraphrase "Why are tropics so species-rich?" | pp4–5 | NCERT's own wording restored ahead of the hypotheses table | `F065a` |
+| D4 | "What exactly is stability for a biological community?" — F086 was written as its answer with the question itself dropped | pp5–6 | bullet added before the stable-community key term | `F085a` |
+| D5 | "There are no direct answers to such naive questions but..." — F092 froze only the second half of the sentence | p6 | clause restored at the head of the rivet-popper lead-in | `F092a` |
+| D6 | "The accelerated rates of species extinctions that the world is facing now are largely due to human activities." — the **opening sentence** of the Evil Quartet block, the exact class §6 says is dropped most often | p7 | sentence restored ahead of "There are four major causes" | `F112a` |
+| D7 | "In recent years ex situ conservation has advanced beyond keeping threatened species in enclosures." — the sentence that introduces F172–F175 | p10 | bullet added above the modern-technique table | `F171a` |
+
+All seven fixes were made through their `# ---- N.N ----` block markers and tagged `# [VERIFICATION FIX]` in the script. **Seven is more than "a handful", and per §6 that is reported as a signal, not smoothed over: Pass 1 systematically inventoried NCERT's *statements* while skipping its *questions and framing sentences*.** It is a single, well-bounded omission pattern rather than scattered damage, and the affected sections were re-read in full rather than patched piecemeal.
+
+**False positives raised in 3(b), investigated and dismissed — kept so a later session does not re-litigate them:**
+
+| # | Flag | Why it is a FALSE POSITIVE |
+|---|---|---|
+| FP-B1 | p3's "Let us look at some interesting aspects about earth's biodiversity based on the currently available species inventories." has no Facts row | Pure navigational transition carrying no fact, qualifier, number or term; its content is entirely the rows that follow (F033–F037). Adding a row would inventory the book's typesetting, not its content |
+| FP-B2 | Figure 13.1's panel table calls Insects "by far the largest wedge", wording NCERT does not use in the figure | Not fabrication: it restates F035 ("insects are the most species-rich taxonomic group, making up more than 70 per cent") as a reading aid for a figure that prints **no** percentages, and F035 is written verbatim two bullets above |
+| FP-B3 | The script labels F137/F142/F147 as H3 banner headings, though the inventory classes them as concept rows | Explicitly permitted by the Gate 1 "judgement call recorded openly" — presentation choice, not a structural claim. No heading row was invented and no concept row was reclassified |
+
+**Post-fix re-verification (all against the final rebuilt PDF, nothing carried forward):**
+- **Gate 2 re-run:** `check_pdf.py` → **exit 0, VERDICT WARN (0 fail, 1 warn)**. Checks 1, 2, 3, 5, 6, 7, 8, 9, 10 PASS — smallest glyph **6.0pt** · 2/2 images monochrome · **23/23** figure labels in running text · **196/196** Facts rows ticked · 11/11 pages A4 portrait · **55** banner headings none orphaned · **83** badge plates none colliding. The single WARN is again check 4 keying on "**photo**" inside F143's "through photosynthesis" — the same inspected, benign false positive, not a portrait row.
+- **Pass 3(a) re-done on the rebuilt PDF: 11/11 pages re-rendered (110 dpi) and re-inspected**, because the seven insertions reflowed text across the whole chapter. No overflow, no clipping, no orphaned heading, no table off-frame; both figures still sit in their bordered boxes at their own topic with captions attached; the repeated table header on pp7, 8 and 10 confirms `repeatRows=1` still holds. FP-A1, FP-A2 and FP-A3 remain the only cosmetic observations and remain dismissed.
+- **Reproducibility (Gate 3 condition 5):** built twice from the final script — **11 pages · 2 images · 35,632 extracted characters · identical text SHA-256 (`6ba3b2f26e92b6c6…`)** on both builds. (The earlier record's 34,117-character figure was measured with a different extractor and pre-dates these seven insertions; 35,632 is the pdfplumber measurement of the final artefact.)
+
+> ## GATE 3 STATUS: **GREEN — CLOSED. Chapter 13 is DONE.**
+>
+> | Gate 3 condition (§6) | State |
+> |---|---|
+> | 1. Zero confirmed defects remain | ✅ all 7 fixed and re-verified in the rebuilt PDF |
+> | 2. `check_pdf.py` green on the **final rebuilt** PDF | ✅ exit 0 (0 fail, 1 inspected benign warn), run this session |
+> | 3. Pass 3(a) covered every page | ✅ 11/11 inspected at Pass 3(a), and **11/11 re-inspected after the rebuild** |
+> | 4. Pass 3(b) full read, **both directions**, per-section claim | ✅ table above — 13/13 source pages read start to finish against the named script blocks; direction 2 found all 7 defects |
+> | 5. Rebuild reproducible | ✅ two builds identical (11 pp · 2 imgs · 35,632 chars · same text SHA-256) |
+
+### Coverage note (§6 delivery)
+
+- **Section-wise coverage.** 13.1 — 15/15 body facts, 3 levels tabulated. 13.1.1 — 28 body facts + F180/F181/F186, 1/1 figure (Fig 13.1) embedded and verified mono, 18/18 labels in text. 13.1.2 — 30 body facts + F187, 1/1 figure (Fig 13.2) embedded and verified mono, 5/5 labels in text. 13.1.3 — 13 body facts + F185. 13.1.4 — 38 body facts + F179/F182/F189. 13.2.1 — 14 body facts + F183/F188. 13.2.2 — 31 body facts + F184. Summary — 6/6 summary-unique folded, 19/19 body-present traced. Exercises — 10/10 scanned, 4/4 gaps closed. Plus the 7 Pass 3(b) rows.
+- **Compression decisions.** NCERT prose merged into tables wherever the facts are parallel (the four opener counts; the three diversity levels; the latitude/species evidence; the Amazon inventory; the three tropical hypotheses; Z by scale of analysis; recorded losses; threatened-group percentages; alien species; hotspot numbers; ex-situ techniques) and into `process_flow()` where NCERT is sequential (the extrapolation method, the rivet-popper argument, Rio 1992 → Johannesburg 2002). Every merged row keeps NCERT's exact numbers and qualifiers, so the flat fact list is unchanged.
+- **Exercise-gap terms.** All four covered and visibly attributed: Q4 in a NOTE at the end of 13.1.2 (ii); Q8 in a NOTE in 13.2.1 marked summary-sourced plus inference; Q9 in a NOTE under 13.1.1; Q10 in a MEMORY AID marked "not in NCERT". All four also tabulated in the closing appendix.
+- **Drift caught and fixed.** D1–D7 above — 7 UNINVENTORIED items (rhetorical questions and framing/opening sentences), 0 MISSING, 0 FABRICATED, 0 DRIFTED.
+- **Figures requiring manual attention.** None — 2/2 extracted, converted and verified.
+- **Color-dependent figures.** Fig 13.2 — its two plots were separated by hue in the original; the caption now names the mid-grey curve as the arithmetic-scale rectangular hyperbola `S = CA^Z` and the near-black line as the same relationship on a log-log scale. Fig 13.1's wedges survive on grey level, boundary stroke and their own text labels, and its proportions are carried in the running text because NCERT prints none inside the figure.
+- **Source problems.** None — no garbled or unrecoverable passage; the only text-layer limitation is that all 23 in-figure labels are vector strokes and had to be harvested by eye (recorded at Gate 1).
+- **Linter verdict.** `check_pdf.py` exit 0 — **0 FAIL, 1 WARN**, the WARN being check 4 matching "photo" inside "photosynthesis" in F143. This chapter contains no photograph of any kind, established four independent ways at Gate 1 and re-confirmed by eye on all 11 pages.
