@@ -96,19 +96,24 @@ story.append(P("There is a wide diversity in living organisms in our biosphere. 
                "organisms made of the same chemicals, i.e., elements and compounds? "
                "<b>Although there is a bewildering diversity of living organisms, their chemical "
                "composition and metabolic reactions appear to be remarkably similar.</b>"))
-story.append(P("If we perform a chemical analysis on a plant tissue, animal tissue or a microbial "
-               "paste, we obtain a list of elements like carbon, hydrogen, oxygen and several "
-               "others, and their respective content per unit mass of a living tissue. If the same "
-               "analysis is performed on a piece of earth's crust as an example of non-living "
-               "matter, we obtain a similar list. In absolute terms, no such differences could be "
-               "made out; <b>the elemental composition of living tissues and non-living matter "
-               "appear also to be similar when analysed qualitatively.</b>"))
+# [VERIFICATION FIX] D1: NCERT's "You have learnt in chemistry how elemental analysis is
+# performed" was dropped in the rewrite; restored here.
+story.append(P("You have learnt in chemistry how <b>elemental analysis</b> is performed. If we "
+               "perform such an analysis on a plant tissue, animal tissue or a microbial paste, we "
+               "obtain a list of elements like carbon, hydrogen, oxygen and several others, and "
+               "their respective content per unit mass of a living tissue. If the same analysis is "
+               "performed on a piece of earth's crust as an example of non-living matter, we obtain "
+               "a similar list. In absolute terms, no such differences could be made out; <b>the "
+               "elemental composition of living tissues and non-living matter appear also to be "
+               "similar when analysed qualitatively.</b>"))
+# [VERIFICATION FIX] D5: summary-unique oxygen fact was narrated as commentary about the summary
+# ("taking the summary's fuller list"); now folded in as plain content per s3.
 story.append(P("All the elements present in a sample of earth's crust are also present in a sample "
                "of living tissue. However, a closer examination reveals that <b>the relative "
                "abundance of carbon and hydrogen with respect to other elements is higher in any "
-               "living organism than in earth's crust</b> - and taking the summary's fuller list, "
-               "the relative abundance of <b>carbon, hydrogen and oxygen</b> is higher in living "
-               "systems when compared to inanimate matter."))
+               "living organism than in earth's crust</b> (Table 9.1); taken over the three "
+               "elements together, the relative abundance of <b>carbon, hydrogen and oxygen</b> is "
+               "higher in living systems when compared to inanimate matter."))
 story.append(data_table([
     ["Element", "% Weight of Earth's crust", "% Weight of Human body"],
     ["Hydrogen (H)", "0.14", "9.5"],
@@ -226,8 +231,10 @@ story.append(P("Some lipids have phosphorous and a phosphorylated organic compou
                "example. Some tissues, especially the neural tissues, have lipids with more complex "
                "structures."))
 # [VERIFICATION FIX] summary-unique F271 was ticked but never written into the body; folded in here.
-story.append(P("As the summary states it, <b>phospholipids</b> contain, in addition, a "
-               "<b>phosphorylated nitrogenous compound</b>."))
+# [VERIFICATION FIX] D5: was narrated as "As the summary states it"; now stated as plain content.
+story.append(P("<b>Fats and oils</b> are glycerides in which fatty acids are esterified to "
+               "glycerol; <b>phospholipids</b> contain, in addition, a <b>phosphorylated "
+               "nitrogenous compound</b>."))
 story.append(figure("fig_9_1c.png",
                     "Fig. 9.1 (c) - Fats and oils (lipids): a fatty acid (palmitic acid), "
                     "glycerol, a triglyceride (R1, R2, R3 are fatty acids), a phospholipid "
