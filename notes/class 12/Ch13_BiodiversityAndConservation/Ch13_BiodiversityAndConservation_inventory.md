@@ -376,3 +376,51 @@ Per-figure label counts: Fig 13.1 = **18** (Invertebrates panel 5, Vertebrates p
 5. **F037 and F181 must both appear.** The body's four-class comparison (fishes, amphibians, reptiles, mammals) and the summary's broader "all vertebrates combined" claim are different statements. Writing only the summary form loses the body's exact list; writing only the body form loses the summary's generalisation. A NOTE box carrying both is the safest home.
 6. **F164 vs F184.** Write 448 wildlife sanctuaries as the body figure and note the summary's "more than 450" — a NEET question may quote either.
 7. **`Type` column casing is inconsistent for caption rows** (found by this session's re-parse, recorded rather than silently rewritten). F038 and F080 use lower-case `caption` (the two NCERT figure captions); F039 and F081 use capitalised `Caption` (the two label-harvest rows). A case-sensitive tally therefore sees `caption: 2` + `Caption: 2` instead of one class of 4. This breaks no Gate 1 criterion — no header count is derived from the caption type, and `check_pdf.py`'s `_extract_labels` keys off the *wording* (`Figure labels…`), not the type, so all 23 labels are still found. Left as-is deliberately: F039/F081 are structurally a different kind of row from F038/F080, and normalising the casing now would edit frozen Facts rows for a cosmetic gain. Any future pass that tallies by `Type` must case-fold.
+
+---
+
+## Gate 3 record
+
+### Pass 3(a) — visual render check: **COMPLETE, 11/11 pages inspected** (session 2026-08-22c)
+
+**Environment rebuilt first, per §0.2.** `/vercel/share/neetenv/bin/python` did not exist at session start (the sandbox had reset again). The venv was recreated — CPython 3.13.11 @ `/vercel/share/neetenv`, reportlab 5.0.1 · pdfplumber OK · pymupdf 1.28.2 · Pillow 12.3.0 — **before** anything was diagnosed, exactly as §0.2 requires.
+
+**Gate 2 re-confirmed in this session, not carried forward.** `check_pdf.py "notes/class 12/Ch13_BiodiversityAndConservation"` → **exit 0, VERDICT WARN (0 fail, 1 warn)**; checks 1, 2, 3, 5, 6, 7, 8, 9, 10 all PASS (smallest glyph 6.0pt · 2/2 images monochrome · 23/23 labels in running text · 189/189 rows ticked · 11/11 pages A4 portrait · 54 headings none orphaned · 82 badge plates none colliding). The lone WARN is again check 4 keying on "**photo**" inside F143's "through photosynthesis", not a portrait row.
+
+**What was rendered.** Every page twice: once at 150 dpi (1241×1754) for on-screen reading, and once at **300 dpi print resolution converted to true 1-bit B&W** (2481×3508, `convert("L")` then threshold at 190) for the photocopier-safety read. All 22 images were opened and looked at — this is a page-by-page inspection claim, not a spot check.
+
+| Page | Elements on the page | Verdict |
+|---|---|---|
+| 1 | title block + DNA motif · `Ch 13` opener banner · `13.1` H1 · `13.1.1` H2 · 2 tables · key-term bullet | clean — no overflow, no clipping |
+| 2 | bullets · 4-step `process_flow` · table · 2 NOTE boxes | clean (trailing blank inspected — see FP-A2) |
+| 3 | **Fig 13.1** in its bordered box + caption · panel-label table · 2 tables | clean — figure monochrome, aspect ratio exact |
+| 4 | `13.1.2` H2 · `13.1.2 (i)` H3 · 3 tables (one 5-row, one 8-row) · `13.1.2 (ii)` H3 | clean — no table ran off the frame |
+| 5 | table · **Fig 13.2** + colour-loss caption · NOTE · `13.1.3` H2 · key-term bullets | clean — `S = CA<super>Z</super>` renders as a true superscript |
+| 6 | bullets · 4-step `process_flow` · `13.1.4` H2 · 2 tables | clean |
+| 7 | bullets · `13.1.4` H3 (Evil Quartet) · (i)-(iv) inline sub-heads · table | clean (badge number inspected — see FP-A1) |
+| 8 | **MEMORY AID** box · `13.2` H1 · `13.2.1` H2 + 3 × `13.2.1` H3 · NOTE | clean — NOTE vs MEMORY AID still tell-apart-able at 1-bit |
+| 9 | `13.2.2` H2 · 2 × `13.2.2` H3 · 3 tables · NOTE | clean |
+| 10 | continued table **with its header row repeated** · 2-step `process_flow` · `Recap` H1 | clean — `repeatRows=1` held |
+| 11 | `Appendix` H1 · 4-row exercise table | clean — last page, table closes inside the frame |
+
+**Machine measurements taken alongside the eye (evidence, not a substitute for it):**
+- **Frame containment.** Content bbox on all 11 pages sits inside the frame vertically (top ≥ 45.1pt vs 39.7pt band edge; bottom ≤ 796.4pt vs 802.3pt). Nothing enters the 1.4 cm bands — the same thing check 1 asserts, now confirmed geometrically.
+- **Figure integrity.** Fig 13.1: native 1501×1434 (AR 1.0467) placed 326.0×311.4pt (AR 1.0467). Fig 13.2: native 1117×959 (AR 1.1648) placed 268.1×230.2pt (AR 1.1648). **Aspect ratio preserved to 4 decimal places — neither figure is squashed.** Both report `colorspace=1` (single-channel gray).
+- **Cross-page style consistency.** A span census of every white-on-dark glyph in the PDF returns exactly one size per element class: H1 banner text **10.5pt** Times-Bold (pp. 1, 8, 10, 11), H2/table-head text **9.5pt** (all 11 pages), H3 banner text **9.0pt** (pp. 4, 7, 8, 9), section badges **6.0pt** (pp. 1, 4-9) with the word-badges (`Ch 13`, `Recap`, `Appendix`) at **6.21pt**, step-flow digits **8.0pt** (pp. 2, 6, 10). The drawing-fill census returns exactly **6** greys (0.102, 0.173, 0.290, 0.420, 0.910, 0.941) — the template's canonical palette and nothing else. **No element type drifts between its instances**, which is what importing `neet_template.py` was supposed to guarantee.
+- **B&W print safety.** At 300 dpi/1-bit the NOTE box (solid rule + `!` circle) and the MEMORY AID box (dashed rule + star + "not in NCERT" label) remain unambiguously distinct with their background fills washed out — meaning survives on border, icon and label alone. Badge digits (`13.1.4`, `13.2`) and step digits (1-4) are all comfortably legible at print size.
+
+**Confirmed defects from Pass 3(a): ZERO.** No script edit and no rebuild was needed, so the committed PDF is still the verified artefact.
+
+**Three flags raised, investigated and dismissed — recorded so a later session does not "fix" them:**
+
+| # | Flag | Why it is a FALSE POSITIVE |
+|---|---|---|
+| FP-A1 | Section badges repeat: `13.1.4` appears on p6 (H2 *Loss of Biodiversity*) **and** p7 (H3 *Causes of biodiversity losses — 'The Evil Quartet'*); `13.2.1` appears 4× on p8; `13.2.2` 3× on pp. 9-10 | Deliberate and internally consistent: **an unnumbered NCERT sub-heading inherits the number of the section it lives in**, while sub-parts NCERT itself numbers get their own label (`13.1.2 (i)`, `13.1.2 (ii)`). NCERT gives the Evil Quartet, the three "why conserve" arguments and in-situ/ex-situ **no numbers of their own** — inventing `13.1.5`/`13.2.3` would be the drift. Verified against script lines 484/554, 642-703, 715-789 |
+| FP-A2 | p2 ends with **221pt** (~26 % of the frame) of trailing white space | Caused by `figure()`'s `KeepTogether` refusing to split Fig 13.1 from its caption, and by the panel-label table that must follow the figure. The alternative — an image on one page and its caption on the next — is the worse defect. p11's 447pt is simply the last page. Every other page ends within 6-31pt of the frame foot |
+| FP-A3 | Content bbox reaches x=554.8pt on pp. 3 and 9, 2.3pt past the 552.5pt frame edge | Table border **stroke width**, measured from the outside of the rule; the text itself stops inside the frame and the page edge is 40pt further out. No glyph is clipped on any page |
+
+**True negative, recorded so it is never mistaken for a suppressed finding:** check 4 (person photograph) has nothing legitimate to fire on — the Gate 1 census established this chapter contains no photograph of any kind and no scientist portrait, and Pass 3(a) confirms by eye that the only two embedded images are a pie-chart plate and a line graph.
+
+### Pass 3(b) — content cross-check: **NOT STARTED**
+
+The bidirectional full read (inventory → script, and the mandatory source → inventory direction) has **not** been done. **Gate 3 is therefore OPEN and this chapter is not Done.** Conditions 1, 2, 3 and 5 of Gate 3 are met or trivially re-checkable; **condition 4 is not**. No coverage score, similarity table or grep result may be used to close it — the next session must read source §13.1-13.2 and the summary/exercises start to finish against the `# ---- 13.n ----` blocks, and state per-section what was read against what.
