@@ -412,13 +412,21 @@ Session 2 re-audited session 1's claim. This session re-audited **session 2's** 
 
 ## Gate 2 record
 
-`Ch11_OrganismsAndPopulations.py` was written linearly from the 268 frozen rows against `neet_template.py`, one `# ---- N.N ----` block per section, ticking rows as each block was written. Final `check_pdf.py --strict` on the rebuilt PDF: **0 fail, 1 warn**, 13 pp, 6 mono images, 268/268 rows ticked, 22/22 figure labels present in running text.
+`Ch11_OrganismsAndPopulations.py` was written linearly from the 268 frozen rows against `neet_template.py`, one `# ---- N.N ----` block per section, ticking rows as each block was written. Final `check_pdf.py --strict` on the rebuilt PDF: **0 fail, 1 warn**, 13 pp, 6 mono images, 268/268 rows ticked, 22/22 figure labels present in running text. *(Session 5 note: the build is now **14 pp** after the orphaned-heading fix D2/D3 below. The 13 pp figure here is the historical Pass 2 number and is left as-written; the current live figures are in the Session 5 record.)*
 
 The single WARN is **check 4 (no person photograph embedded)**. It is an accepted true negative, not a suppressed finding: check 4 fires on the *manifest* mentioning a portrait, and the RAMDEO MISRA headshot on source p2 is deliberately **not** extracted — the profile is text-only (F011-F022) and `assets/` contains no portrait file. All 6 embedded images are the chapter's 6 figures, each confirmed `mode == "L"`.
 
 The Pass 1 advisory about check 6 was honoured: **"Expanding"**, **"Stable"** and **"Declining"** are all written into the running text of the age-pyramid block, and the body *stable* / Summary *stationary* wording clash is reconciled in an explicit NOTE rather than silently picking one.
 
 ## Gate 3 record
+
+### Session 4 (2026-08-21) — first Gate 3 attempt — SUPERSEDED
+
+> **This section's verdict of PASS was premature and its numbers are stale.** It is kept in full because §6 requires audit work to survive in the record, but it must be read against the Session 5 record below, which supersedes it. Two facts invalidate its verdict:
+> - Its Pass 3(a) claim of "14/14 pages" was made against the **pre-D1** build, then D1 reduced the build to 13 pp — so the closing verdict simultaneously claimed 14/14 pages inspected and a 13-page deliverable. The page count and inspection count in one record did not agree.
+> - Its page inspection **missed two genuine orphaned headings** (D2, D3 below), the very defect class §6 Pass 3(a) names. Gate 3 was declared PASS while they were still present — the third time this project has closed a gate on a defective chapter.
+>
+> Stale figures below: `13 pp`, `42152` chars, `64` bytes. Current: **14 pp**, **43502** chars, **66** bytes.
 
 ### Pass 3(a) — visual render check: 14/14 pages inspected
 
@@ -467,3 +475,70 @@ Source re-extracted from `Chapter/class 12/Chapter 11 - Organisms and Population
 - "Attributes a population has but an individual does not" and "Age pyramids" are script sub-headings badged 11.1.1 with no NCERT counterpart. Dismissed: NCERT runs this material as unbroken prose; these are navigational headings over NCERT content, adding no facts, and no NCERT heading was dropped to make room.
 
 **Gate 3: all five conditions hold.** (1) Zero confirmed defects remain — D1 fixed. (2) `check_pdf.py --strict` re-run against the *final rebuilt* PDF: 0 fail, 1 accepted warn. (3) Pass 3(a) covered 14/14 pages. (4) Pass 3(b) was a stated full read in both directions, per section, source pages named against script blocks. (5) Rebuild is reproducible — regenerating from the final script gives byte-identical output apart from 64 bytes of `CreationDate`/`ModDate`, with page count, extracted char count (42152) and image count (6) all matching. **Verdict: PASS.**
+
+> **^ This verdict is WITHDRAWN.** Condition 1 did not in fact hold: D2 and D3 (orphaned headings on pp. 8 and 12) were present in the build this verdict was written against. Condition 3's count did not match the delivered page count. See the Session 5 record for the re-audit and the current verdict.
+
+---
+
+### Session 5 (2026-08-21) — Gate 3 re-audit, from scratch
+
+Session 4 declared PASS. This session re-audited that claim instead of accepting it, on the §6 principle that a chapter wrongly marked closed is worse than one openly marked incomplete. **The verdict did not survive contact with a page-by-page look:** two orphaned headings were sitting in the delivered build.
+
+**Environment (§0, rebuilt — the sandbox does not persist the venv).** `reportlab 5.0.1` / `pdfplumber` / `pymupdf 1.28.2` / `Pillow 12.3.0`, all four imports verified before touching the source. Note for future sessions: the sandbox's `pip` targets a Python 3.9 that is *not* the `python3` on PATH (3.13), so `pip install` appears to succeed while the imports still fail; a venv is the reliable path.
+
+#### Two confirmed defects (D2, D3), fixed at the template level
+
+| ID | Defect | Root cause | Fix |
+|---|---|---|---|
+| **D2** | p8 ended with the bare H3 banner `(ii) Competition`; its body text ("When Darwin spoke of the struggle for existence...") began on p9. | `neet_template.heading()` returned a bare `Table` with nothing binding it to the following flowable, so any heading landing near a page break was stranded. A per-chapter defect class, not a Ch11 typo. | `heading()` now returns `KeepTogether([CondPageBreak(ORPHAN_GUARD_PT), banner])` with `ORPHAN_GUARD_PT = 52` (banner ~17pt + two body lines), so a heading without room for text beneath it moves to the next page with its section. Fixed for **every** chapter that imports the template. |
+| **D3** | p12 ended with the bare Appendix banner `TERMS USED IN THE EXERCISES`; its body began on p13. | Same root cause as D2. | Same fix. |
+
+Both were **mechanical layout defects, not content loss** — no NCERT fact was missing in either case. That is precisely why they are the linter's job and not the human pass's, which is the v6 doctrine that Session 4 failed to get the benefit of.
+
+#### The gate that should have caught them: `check_pdf.py` check 9
+
+Session 4's page inspection claimed all pages and still missed both, so the fix is not "look harder" — it is a new hard gate. **Check 9 (orphaned headings)** was added: it buckets text spans by page, identifies banner headings by their white fill (`color == 0xFFFFFF`), and FAILs if the lowest heading on a page has no non-heading text below it.
+
+- `_is_banner()` excludes `process_flow` step-badge digits, which are also white: a step digit always has its step text to the right on the same visual line, a banner heading never does. Without this the check both inflated the heading count and misreported a step digit `'3'` on p11 as an orphan.
+- Verified adversarially: run against the **pre-fix** PDF the check FAILs and names all three sites; against the fixed PDF it PASSes with **70 banner headings** all followed by content on their own page.
+
+#### Pass 3(a) — visual render check: **14/14 pages inspected**
+
+All 14 pages of the *final* build re-rendered with `pymupdf` (110 dpi) and looked at individually — not spot-checked, and re-done from page 1 because the D2/D3 fix reflowed the whole document. No orphaned heading, no overflow, no clipping, no squashed figure, no misaligned process-flow rule. Cross-page style consistency confirmed by comparing H1/H2/H3 banners, data tables, NOTE, MEMORY AID, process flows and figure boxes drawn from pp. 1-2, 5-8 and 11-14: identical, as expected from an imported template.
+
+All 16 heading badges were additionally read out of the text layer to rule out clipping — `'Unit X'`, `'Profile'`, `'Ch 11'`, `'11.1'`, `'11.1.1'`, `'11.1.2'`, `'(i)'`, `'(ii)'`, `'11.1.3'`, `'11.1.4'`, `'Table 11.1'`, `'(iii)'`, `'(iv)'`, `'(v)'`, `'Recap'`, `'Appendix'` — every one complete and ≥ 6.0pt, i.e. above the 5.0pt FAIL floor and at/above the 6.0pt review band (`'Table 11.1'` and `'Appendix'` look tight at screen zoom but are full strings, not truncations).
+
+#### Pass 3(b) — content cross-check, independent full read in BOTH directions
+
+Source re-extracted with `pdfplumber` (17 pp) and **read start to finish**, then read against the rendered 14-page build page by page. No coverage percentage, similarity score or grep result was used to clear anything.
+
+- **Direction 2 (source → inventory), the one that has actually failed:** walked all 17 source pages sentence by sentence and heading by heading. Every sentence, every heading including the unnumbered `Growth Models` / `(i)`-`(v)` sub-heads, every section-opening/antecedent sentence, all 6 Table 11.1 rows, both NCERT embedded prompts, all 17 SUMMARY sentences and all 10 exercises trace to a row. **0 UNINVENTORIED.**
+- **Direction 1 (inventory → script):** 268/268 Facts rows ticked and confirmed present in the rendered output; 22/22 figure labels found in running text by check 6; 5 figure-label rows placed at their topics. **0 MISSING, 0 FABRICATED, 0 DRIFTED.**
+- Session 4's per-section reading-claim table (source pages named against `# ---- N.N ----` blocks) was re-walked and every claim held. It is not restated here; it stands as written above.
+- The Session 4 false-positive list was **re-read and left untouched** — in particular the (i)/(iii)/(ii)/(iv) process ordering and the chess-anecdote Rule 3 merge are settled decisions, deliberately not re-litigated.
+
+#### Reflow verification — the +165 characters
+
+The fix moved the build 13 pp → 14 pp and the extracted char count 42152 → 43502. That delta was proved to be layout-only, not content, by word-level diff of the two builds:
+
+```
+insert: ['Feature', 'Exponential', '(geometric)', 'growth', 'Logistic', '(Verhulst-Pearl)', 'growth']
+insert: ['Example', 'Who', 'benefits', 'Who', 'is', 'unaffected']
+insert: ['#', 'NCERT', 'exercise', 'question', 'Where', 'the', 'chapter', 'answers', 'it']
+```
+
+**Three inserts, zero deletions, zero modifications** (+22 words). All three are `data_table`'s `repeatRows=1` header re-emitting because those tables now split across a page boundary — the intended behaviour, and a readability gain: no data row appears without its header.
+
+#### Gate 3 — all five conditions, re-verified against the final rebuilt PDF
+
+| # | Condition | Evidence |
+|---|---|---|
+| 1 | Zero confirmed defects remain | D1 (session 4), **D2, D3 (this session)** all fixed; D2/D3 fixed in `neet_template.py` so the class cannot recur, and gated by new check 9 |
+| 2 | `check_pdf.py` green on the *final rebuilt* PDF | Re-run this session, not carried forward: **exit 0, 0 fail / 1 warn**, checks 1-9. The single WARN is check 4's manifest-mentions-a-portrait true negative (no portrait asset exists; RAMDEO MISRA is text-only, F011-F022) — accepted, eyeballed, unchanged |
+| 3 | Pass 3(a) covered every page | **14/14 pages** inspected individually, re-done after the reflow; 14 pp is also the delivered page count, so the count and the deliverable agree |
+| 4 | Pass 3(b) full read, both directions, per-section reading claims | Source 17/17 pp read start to finish against the 14-page build; Direction 2 = 0 UNINVENTORIED, Direction 1 = 268/268 COVERED. No statistical screen used to clear a row |
+| 5 | Rebuild reproducible | Regenerated from the final script: **14 pp / 43502 chars / 6 images**, all identical. Byte diff = **66 bytes in 3 runs**: `CreationDate` (4), `ModDate` (4), and ReportLab's `/ID` hash (58), which is derived from the timestamp. No other byte differs |
+
+**Verdict: PASS.** All five conditions hold against the final rebuilt PDF, and the two defects that invalidated Session 4's verdict are fixed at the template level with an automated gate (check 9) standing behind them so no later chapter can regress into the same defect silently.
+
+**Note on what this cost.** Session 4's Pass 3(a) budget was spent on pages and still missed two mechanical defects; check 9 now finds them in milliseconds. That is the v6 thesis restated by example — every defect a linter can decide should become a linter check the moment it is found by eye, or the next chapter pays for it again.

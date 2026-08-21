@@ -27,11 +27,25 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | 10 | Cell Cycle and Cell Division | 11 | ✅ **PASSED** — 167 facts frozen (F001-F167) · 8 label rows / 24 in-figure labels · 11 summary-unique folded · 8/8 mono assets | ✅ **PASS (0 fail, 0 warn — also green under `--strict`)** · **11 pp** · 8 mono imgs | ✅ **re-run full read: 3 defects found (2 DRIFTED + 1 MISSING) → all fixed** · now 175/175 covered · Gate 2 re-confirmed green | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 re-earned)** |
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
-| 11 | Organisms and Populations | 12 | ✅ **COMPLETE — third full re-audit of all 268 rows (2026-08-21)** — **268 facts** (F001-F265 + F030a/F189a/F252a) · 5 label rows / 22 in-figure labels re-read off the images · 18/18 headings · 16 opener rows · 17/17 summary sentences classified, 5 summary-unique folded · 10/10 exercises · 6/6 mono assets re-verified · **direction 2 clean — 0 UNINVENTORIED content** · 3 mechanical defects found + fixed (F146 unescaped pipes, F001 half-frozen heading, F252a markdown inside quote) | ⬜ not started — no script, no PDF yet | ⬜ not started | ⚠️ inventory · assets · `extract_figures.py` present; **pdf + py still to be written** | **▶️ IN PROGRESS — Gate 1 COMPLETE (audit-only session by instruction)** |
+| 11 | Organisms and Populations | 12 | ✅ **COMPLETE — third full re-audit of all 268 rows (2026-08-21)** — **268 facts** (F001-F265 + F030a/F189a/F252a) · 5 label rows / 22 in-figure labels re-read off the images · 18/18 headings · 16 opener rows · 17/17 summary sentences classified, 5 summary-unique folded · 10/10 exercises · 6/6 mono assets re-verified · **direction 2 clean — 0 UNINVENTORIED content** · 3 mechanical defects found + fixed (F146 unescaped pipes, F001 half-frozen heading, F252a markdown inside quote) | ✅ **PASS (0 fail, 1 inspected benign warn)** · **14 pp** · 6 mono imgs · 268/268 rows ticked · 22/22 labels in text · **check 9 (orphaned headings) added and green** | ✅ **PASS — re-audited: 3 confirmed defects (D1 orphaned caption, **D2 + D3 orphaned headings**) → all fixed** · 14/14 pages inspected · full read both directions, 0 UNINVENTORIED · rebuild reproducible (66 timestamp bytes) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 re-earned after session 4's verdict was withdrawn)** |
 
 ---
 
-## Chapter 11 (Class 12) — Organisms and Populations — ▶️ IN PROGRESS (Gate 1 closed only)
+## Chapter 11 (Class 12) — Organisms and Populations — ✅ FULLY COMPLETE — CLOSED
+
+**Current state (session 5, 2026-08-21): all three gates green, chapter delivered.** 14 pp · 6 mono figures · 268/268 rows ticked · `check_pdf.py` 0 fail / 1 accepted warn across all 9 checks. The Gate 1 narrative below is the historical session-2 record and describes a point where the script and PDF did not yet exist; read it as history, not as current status.
+
+| Gate | Status | Where the evidence lives |
+|---|---|---|
+| Gate 1 | ✅ GREEN — three independent full re-audits of all 268 rows | inventory `## Gate 1 record` |
+| Gate 2 | ✅ GREEN — 0 fail, 1 inspected benign warn (check 4 portrait true negative), checks 1-9 | inventory `## Gate 2 record` |
+| Gate 3 | ✅ **PASS — re-earned in session 5.** Session 4 declared PASS while two orphaned headings (D2, D3) were still in the build; that verdict is withdrawn in the record. D2/D3 were fixed in `neet_template.py` (`heading()` now guards with `CondPageBreak`) and are now gated automatically by **`check_pdf.py` check 9**, so the defect class cannot recur silently in any chapter. | inventory `## Gate 3 record` → *Session 5* |
+
+**Cross-chapter effect of this chapter's Gate 3.** Two repo-level improvements came out of it and apply to every future chapter: `neet_template.heading()` can no longer strand a heading at a page foot, and `check_pdf.py` grew **check 9** to gate the orphaned-heading defect class that §6 Pass 3(a) names but nothing enforced.
+
+---
+
+### Historical record — session 2 (Gate 1 only)
 
 Session 2 (2026-08-21) was scoped to **Pass 1 / Gate 1 only, then stop.** Session 1 had already produced an inventory and figure assets and declared Gate 1 GREEN; this session re-audited that claim from the source PDF instead of inheriting it, on the Ch9 precedent that an unverified green gate is how a defective chapter ships. **Pass 2 was deliberately not started** — there is no chapter script and no chapter PDF, so Gate 2 and Gate 3 are explicitly **not** claimed.
 
@@ -50,8 +64,8 @@ Session 2 (2026-08-21) was scoped to **Pass 1 / Gate 1 only, then stop.** Sessio
 | **Label-matrix parse check** | Ran `check_pdf.py`'s own `_extract_labels` against the inventory: all **22** labels parse off all **5** rows, no markdown header row mis-parsed as data — so Pass 2's check 6 will audit real labels. |
 | **Portrait rule (check 4)** | The source's one photograph of a person — the RAMDEO MISRA headshot (p2) — is deliberately not extracted; the profile is text-only (F011-F022) and no portrait asset exists in `assets/`. Recorded as a true negative, not a suppressed finding. |
 | **Gate 1 status** | ✅ **GREEN — re-earned on this session's evidence** (independent source re-read + machine re-count + 3 gaps closed), not inherited from session 1's claim. |
-| **Gate 2 / Gate 3 status** | ⬜ **Not started, not claimed.** Pass 2 begins by writing `Ch11_OrganismsAndPopulations.py` linearly from the now-268-row frozen inventory, importing `neet_template.py`, ticking rows as each `# ---- N.N ----` block is written, then looping render→`check_pdf.py` until green. |
-| **Deliverables so far** | `Ch11_OrganismsAndPopulations_inventory.md` (268 rows, figure-label rows, summary classification, exercise-gap terms, figure manifest, Gate 1 re-audit record) · `assets/` (6 verified monochrome PNGs) · `extract_figures.py`. **Still owed: the PDF and the script.** |
+| **Gate 2 / Gate 3 status** *(as at session 2)* | ⬜ Not started, not claimed at that time. Pass 2 was to begin by writing `Ch11_OrganismsAndPopulations.py` linearly from the 268-row frozen inventory, importing `neet_template.py`, ticking rows as each `# ---- N.N ----` block was written, then looping render→`check_pdf.py` until green. **Both gates are now GREEN — see the current-state table above.** |
+| **Deliverables** *(as at session 2)* | `Ch11_OrganismsAndPopulations_inventory.md` · `assets/` (6 verified monochrome PNGs) · `extract_figures.py`. The PDF and script were still owed at that point; **both now exist and are delivered.** |
 
 **Chapter shape (for Pass 2).** Post-rationalisation NCERT Ch11 has a single numbered section, **11.1 Populations**, with 11.1.1 Population Attributes, 11.1.2 Population Growth (Growth Models → (i) Exponential growth, (ii) Logistic growth), 11.1.3 Life History Variation and 11.1.4 Population Interactions ((i) Predation … (v) Mutualism), plus Table 11.1, 6 figures, Summary and 10 exercises. The old "Organism and Its Environment" half of the chapter is **not** in this edition and must not be written in from memory (Rule 5).
 
