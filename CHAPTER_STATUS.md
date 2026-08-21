@@ -29,23 +29,26 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 11 | Organisms and Populations | 12 | ✅ **COMPLETE — third full re-audit of all 268 rows (2026-08-21)** — **268 facts** (F001-F265 + F030a/F189a/F252a) · 5 label rows / 22 in-figure labels re-read off the images · 18/18 headings · 16 opener rows · 17/17 summary sentences classified, 5 summary-unique folded · 10/10 exercises · 6/6 mono assets re-verified · **direction 2 clean — 0 UNINVENTORIED content** · 3 mechanical defects found + fixed (F146 unescaped pipes, F001 half-frozen heading, F252a markdown inside quote) | ✅ **PASS (0 fail, 1 inspected benign warn)** · **14 pp** · 6 mono imgs · 268/268 rows ticked · 22/22 labels in text · **checks 9 + 10 (orphaned headings, badge/banner collision) added and green** | ✅ **PASS — re-audited: 4 confirmed defects (D1 orphaned caption, **D2 + D3 orphaned headings**, **D4 badge plate clipped by banner**) → all fixed** · 14/14 pages inspected (4 D4 sites re-rendered at 700 dpi) · full read both directions, 0 UNINVENTORIED · rebuild reproducible (text-identical, only timestamps differ) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 re-earned at session 6 after D4 was found by pixel inspection and fixed at template level)** |
 | 12 | Ecosystem | 12 | ✅ 196 facts frozen (F001-F196, contiguous, 0 unticked — re-parsed) · 7 label rows / 67 label strings (67 unique, no doubling, no phantom row) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 mono assets re-viewed | ✅ **PASS (0 fail, 1 benign warn) · exit 0 — GATE 2 GREEN**, re-run on the **post-D4 rebuild** · **10 pp** · 7 mono imgs · 196/196 rows ticked · **67/67 figure labels in text** · checks 1,2,3,5,6,7,8,9,10 all green | ✅ **PASS — Gate 3 CLOSED.** 3(a): 10/10 pages inspected (110 + 300 dpi 1-bit); 3(b): **bidirectional full read re-run three times**, most recently under an explicit **grep prohibition**, 11/11 source pages read start to finish, **0 UNINVENTORIED** (×3). **4 confirmed defects (D1 row-ID leak · D2 F114 drift · D3 contradictory Ex 1(e) answers · D4 mislabelled fix comments) → all fixed.** Reproducibility: 3 builds identical (10 pp / 25,683 chars / 7 imgs / same text SHA-256) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 earned on the third full-read audit; two earlier PASSes withdrawn as premature)** |
-| 13 | Biodiversity and Conservation | 12 | ▶️ **OPEN — figures half only.** Figure census closed 4 ways (2 numbered figures, no 13.3+ exists) · 2/2 assets 300 dpi clip-rendered, `mode=="L"`, 0 colour px, each opened and read against checks (a)-(f) · **23 in-figure labels** harvested off the images (18 + 5, all distinct; text layer yields **zero**) · figure manifest done · label matrix written with **provisional** `FIG-1`/`FIG-2` IDs pending fold-in. **Fact inventory, summary classification, exercise-gap and heading census NOT STARTED** | ⬜ blocked — Gate 1 open, no script or PDF exists | ⬜ blocked | ⬜ `assets/` (2 figs) + inventory stub only | **▶️ IN PROGRESS — PASS 1, GATE 1 OPEN (hard stop; Pass 2 must not begin)** |
+| 13 | Biodiversity and Conservation | 12 | ✅ **PASS 1 COMPLETE — GATE 1 CLOSED (2026-08-22).** Figure census closed 4 ways (2 numbered figures, no 13.3+ exists) · 2/2 assets 300 dpi clip-rendered, `mode=="L"`, 0 colour px, each opened and read against checks (a)-(f) · **23 in-figure labels** harvested off the images (18 + 5; text layer yields **zero**), **folded into the Facts table as F039/F081 and confirmed by the real `_extract_labels`: 23 labels / 2 figures / 0 duplicate pairs / no phantom `Fig #` row** · **189 facts frozen, F001-F189 contiguous, 0 gaps, 0 dup IDs** · **21 heading rows · 8 opener rows** (both corrected from a hand-tally slip of 22/9 — no row added, removed or reclassified) · 25 summary sentences classified (19 BODY-PRESENT, 6 SUMMARY-UNIQUE) · exercise-gap table done · every header count re-derived by machine parse and matching | ⬜ blocked — correct at a Gate 1 hard stop: no script or PDF exists yet | ⬜ blocked | ⬜ `assets/` (2 figs) + **frozen inventory** | **✅ PASS 1 DONE — GATE 1 CLOSED (hard stop honoured; Pass 2 not begun)** |
 
 ---
 
-## Chapter 13 (Class 12) — Biodiversity and Conservation — ▶️ PASS 1, GATE 1 OPEN
+## Chapter 13 (Class 12) — Biodiversity and Conservation — ✅ PASS 1 COMPLETE, GATE 1 CLOSED
 
-**Current state (session 2026-08-21c): scoped deliberately to the figures half of Pass 1.** The instruction for this session was to start the last Ecology chapter, hard-stop at Gate 1, and complete the images work specifically. That is what happened — nothing more is claimed.
+**Current state (session 2026-08-22): Gate 1 closed and hard-stopped there, as instructed.** The previous session completed the figures half; this session resumed at the three documented resume steps, re-parsed every header count mechanically, closed the one real defect, and stopped. **Pass 2 has not begun — no chapter script and no PDF exist, which is the correct state at a Gate 1 hard stop.**
 
 | Artifact | State |
 |---|---|
-| Environment (§0.2-0.3) | ✅ rebuilt — venv `/vercel/share/neetenv`, CPython 3.13.11 · reportlab 5.0.1 · pdfplumber OK · pymupdf 1.28.2 · Pillow 12.3.0 (matches the §0.3 reference set) |
+| Environment (§0.2-0.3) | ✅ **rebuilt this session** — the sandbox was fresh and `/vercel/share/neetenv` did not exist. venv recreated, CPython 3.13.11 · reportlab · pdfplumber · pymupdf · Pillow 12.3.0 |
 | Figure census | ✅ closed — **2 figures**, established four independent ways |
-| Extraction → mono → per-figure verification | ✅ 2/2, each image opened and read |
+| Extraction → mono → per-figure verification | ✅ 2/2, each image opened and read; assets re-verified this session (`L` mode, 1501×1434 and 1117×959) |
 | Figure manifest | ✅ written |
-| Figure-label matrix (23 labels) | ✅ written, **provisional IDs** |
-| Fact inventory / summary / exercise-gap / heading census | ❌ **NOT STARTED** |
-| **Gate 1** | ❌ **OPEN — not passed** |
+| Figure-label matrix (23 labels) | ✅ **folded into the Facts table with real IDs (F039, F081); provisional table deleted** — the documented trap did not fire |
+| Fact inventory | ✅ **189 rows frozen, F001-F189 contiguous, 0 gaps, 0 duplicate IDs** |
+| Heading / opener census | ✅ **21 heading rows · 8 opener rows** (both corrected this session — see below) |
+| Summary classification | ✅ 25 sentences classified — 19 BODY-PRESENT, 6 SUMMARY-UNIQUE |
+| Exercise-gap table | ✅ written |
+| **Gate 1** | ✅ **CLOSED — every header count re-derived by machine parse and matching** |
 
 ### Figure census (why "only 2 figures" is a finding, not a shortfall)
 
@@ -64,15 +67,29 @@ Both were taken as **clip renders, not embedded-object grabs** — Fig 13.1 is p
 
 ### Labels: 23 harvested by eye, 0 recoverable by text extraction
 
-Fig 13.1 (18): Invertebrates · Other animal groups · Crustaceans · Molluscs · Insects · Vertebrates · Fishes · Mammals · Birds · Reptiles · Amphibians · Plants · Mosses · Ferns and allies · Fungi · Angiosperms · Algae · Lichens. Fig 13.2 (5): Species richness · Area · S = CA^Z · Log S = log C + Z log A · log-log scale.
+Fig 13.1 (18): Invertebrates · Other animal groups · Crustaceans · Molluscs · Insects · Vertebrates · Fishes · Mammals · Birds · Reptiles · Amphibians · Plants · Mosses · Ferns and allies · Fungi · Angiosperms · Algae · Lichens. Fig 13.2 (5): Species richness · Area · S = CAZ · Log S = log C + Z log A · log-log scale.
+
+All 23 were confirmed this session by running `check_pdf.py`'s **real** `_extract_labels` against the frozen inventory — 18 under `Fig 13.1`, 5 under `Fig 13.2`, **zero duplicated (figure, label) pairs and no phantom `Fig #` row**. Note the third Fig 13.2 label is recorded as `S = CAZ`, the extraction-normalised form of the figure's `S = CA` with a superscript Z; carry-over 2 in the inventory forbids "correcting" it to a caret or a Unicode superscript, since either would guarantee an unfixable check-6 FAIL.
 
 `page.get_text()` on pp3 and p5 returns the captions and body prose and **zero** in-figure labels — every one of the 23 is a vector stroke. This is exactly the silent failure §4.4 describes: a text-extraction harvest would have produced an empty matrix that passes Gate 1 and check 6 trivially.
 
-### What blocks Gate 1, and the one trap left for the next session
+### How Gate 1 was closed (session 2026-08-22)
 
-Gate 1 needs the frozen contiguous fact inventory, the heading/opener census, the summary classification and the exercise-gap table. None exist. **No chapter script or PDF has been written, and `check_pdf.py` has not been run** — there is nothing to run it against, and running Pass 2 on an open Gate 1 is the §6 violation that caused every late-discovered defect in Ch9, Ch11 and Ch12.
+The three resume steps from the previous session's handoff were executed, and the documented trap was checked rather than assumed:
 
-The trap: the label matrix currently sits in its **own** table with provisional `FIG-1`/`FIG-2` IDs. Before Gate 1 closes it must be folded into the Facts table with real `Fnnn` IDs and the provisional table deleted. If both copies survive, `_extract_labels` will count all 23 labels twice and parse the markdown separator as a phantom figure named `Fig #` — a check-6 FAIL that no amount of prose editing can clear. This is written at the top of the inventory as well, so it cannot be missed by a session that reads only that file.
+1. **Label fold-in verified, not trusted.** The provisional `FIG-1`/`FIG-2` table is gone and the labels live in the Facts table as F039 (18 labels) and F081 (5). Running the actual `_extract_labels` from `check_pdf.py` returns **23 labels across exactly 2 figures, 0 duplicate pairs, no phantom `Fig #` row** — so the double-count trap did not fire.
+2. **Header counts re-derived by machine, per §6 step 8.** A parse of the frozen table confirms 189 contiguous rows (no gaps, no duplicate IDs), 25 summary sentences (19 + 6), and 23 labels split 18/5.
+3. **Defect 1 (the one real defect) fixed.** The header claimed **22** heading rows and **9** opener rows; the true values are **21** and **8**.
+
+**Defect 1 was a hand-tally error, not a missing row — this matters.** The heading census listed 9 numbered IDs plus an unnumbered list that has only ever contained **12** entries, while asserting "= 13"; 9 + 12 = 21. The opener census named **8** real IDs, and the phantom 9th was a *structural finding* (13.1.2 and 13.2 have no opener prose of their own) written up as though it were a row. Both were corrected in the header table, in the Gate 1 checklist rows that restate them, and in the prose census sections — all four places, so nothing contradicts anything else. **No Facts row was added, removed or reclassified**, which is what keeps the inventory legitimately frozen.
+
+**A third, minor finding was recorded rather than silently fixed:** the `Type` column mixes `caption` (F038, F080) with `Caption` (F039, F081), so a case-sensitive tally splits 4 caption-ish rows into two classes. It breaks no Gate 1 criterion — no header count derives from that type, and `_extract_labels` keys off the row wording, not the type — so it is logged as carry-over 7 instead of editing frozen rows for a cosmetic gain.
+
+**Environment note:** the sandbox was fresh and `/vercel/share/neetenv` did not exist, so the venv was rebuilt before any verification ran. The previous handoff attributed a failed step-3 run to a script bug; the real cause was simply the missing interpreter.
+
+### State at the hard stop
+
+**Gate 1 is closed. Pass 2 has deliberately not begun** — no chapter script and no PDF exist, so `check_pdf.py` still has nothing to run against, and Gate 2/Gate 3 remain correctly blocked. Starting Pass 2 on this chapter is the next session's job; doing it before Gate 1 closed is the §6 violation that produced the late defects in Ch9, Ch11 and Ch12. The inventory carries **7 carry-overs** Pass 2 must action (Fig 13.2 colour-loss caption, the `S = CAZ` superscript rule, the log-form equation, spelled-out degree signs, F037/F181 both appearing, F164-vs-F184 sanctuary counts, and the `Type`-casing note).
 
 ---
 

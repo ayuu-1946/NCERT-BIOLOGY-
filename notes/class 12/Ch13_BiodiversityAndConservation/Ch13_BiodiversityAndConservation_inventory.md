@@ -9,8 +9,8 @@ Tick legend: `x` = written into the script and verified present in the generated
 |---|---|
 | Facts rows total | 189 |
 | ID range / contiguity | F001..F189 — 0 gaps, 0 duplicates |
-| `Type: heading` rows | 22 |
-| `Type: opener` rows | 9 |
+| `Type: heading` rows | 21 |
+| `Type: opener` rows | 8 |
 | Figure-label rows | 2 (F039, F081) |
 | Label strings parsed by `_extract_labels` | 23 (18 + 5) — no doubling, no phantom figure |
 | Summary sentences classified | 25 — BODY-PRESENT 19, SUMMARY-UNIQUE 6 |
@@ -26,8 +26,8 @@ Tick legend: `x` = written into the script and verified present in the generated
 > | Every in-figure label has a matrix row, harvested by opening each rendered asset | done — 23 labels; both assets re-opened and re-read this session |
 > | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | done — 2 figures, 23 labels, no doubling, no `Fig #` phantom row |
 > | Header counts match a re-parse of the table; IDs contiguous | done — see the count table above |
-> | Every heading has a row, incl. unnumbered sub-headings (step 3a) | done — 22 heading rows, walked as their own list |
-> | Every section's opening sentence has a row (step 3b) | done — 9 opener rows |
+> | Every heading has a row, incl. unnumbered sub-headings (step 3a) | done — 21 heading rows, walked as their own list |
+> | Every section's opening sentence has a row (step 3b) | done — 8 opener rows |
 > | Every figure `Mono: yes` and `Verified: yes` | done — 2/2 |
 > | Every exercise-gap term has a planned home | done — 4 gaps, each with a named destination |
 > | Every SUMMARY-UNIQUE fact folded into a body row | done — 6 folded, F179–F184 |
@@ -233,13 +233,19 @@ Tick legend: `x` = written into the script and verified present in the generated
 
 ### Heading census (step 3a) — walked as its own list, ignoring prose
 
-22 heading rows. Numbered: F001 (chapter title), F009 (13.1), F024 (13.1.1), F052 (13.1.2), F082 (13.1.3), F095 (13.1.4), F133 (13.2), F134 (13.2.1), F148 (13.2.2) = 9. Unnumbered run-in sub-headings, the class of item Ch9's D4 lost: F013, F018, F020 (the three diversity levels), F053, F069 (the two biodiversity patterns), F111 ("Causes of biodiversity losses:"), F113, F120, F124, F129 (the four Evil Quartet causes), F153 ("In situ conservation–"), F168 ("Ex situ Conservation–") = 13.
+21 heading rows. Numbered: F001 (chapter title), F009 (13.1), F024 (13.1.1), F052 (13.1.2), F082 (13.1.3), F095 (13.1.4), F133 (13.2), F134 (13.2.1), F148 (13.2.2) = 9. Unnumbered run-in sub-headings, the class of item Ch9's D4 lost: F013, F018, F020 (the three diversity levels), F053, F069 (the two biodiversity patterns), F111 ("Causes of biodiversity losses:"), F113, F120, F124, F129 (the four Evil Quartet causes), F153 ("In situ conservation–"), F168 ("Ex situ Conservation–") = 12. Total 9 + 12 = 21.
+
+**Count-correction note (Gate 1 §6 re-parse, this session):** the header and this line previously read **22** (9 numbered + "13" unnumbered) while the unnumbered ID list itself has only ever contained **12** entries — the "13" was a hand-tally slip, not a missing row. A machine re-parse of the Facts table returns exactly 21 `Type: heading` rows, matching the enumerated IDs above. No Facts row was added, removed, or reclassified to reach this figure.
 
 **Judgement call recorded openly:** "The narrowly utilitarian arguments…", "The broadly utilitarian argument…" and "The ethical argument…" (F137, F142, F147) are *italicised phrases inside running prose*, not headings, so they are inventoried as concept rows rather than heading rows. Pass 2 may still typeset them as H3-level headings for readability — that is a presentation choice, not a structural omission. If a later pass decides they are headings, add heading rows rather than reclassifying these.
 
 ### Opener census (step 3b) — first sentence of every section, inventoried deliberately
 
-9 opener rows: F002 (chapter opener), F010 (13.1), F025 (13.1.1), F054 (13.1.2), F083 (13.1.3), F096 (13.1.4), F135 (13.2.1), F149 (13.2.2), and F053+F054 together covering the fact that **13.1.2 has no prose of its own** — it opens directly on sub-heading (i). Likewise **13.2 has no opener prose**, running straight into 13.2.1; both are recorded as deliberate structural findings, not as missing rows.
+8 opener rows: F002 (chapter opener), F010 (13.1), F025 (13.1.1), F054 (13.1.2), F083 (13.1.3), F096 (13.1.4), F135 (13.2.1), F149 (13.2.2).
+
+Two sections have **no opener prose of their own** and therefore correctly contribute **no** opener row: **13.1.2** opens directly on sub-heading (i) (F053 is its heading, F054 the first sentence that follows), and **13.2** runs straight into 13.2.1. Both are deliberate structural findings, not missing rows.
+
+**Count-correction note (Gate 1 §6 re-parse, this session):** the header and this line previously read **9**. The enumerated list has only ever named **8** real `Type: opener` IDs; the phantom 9th was the *structural finding* about 13.1.2/13.2 being written up as though it were an additional row. A machine re-parse returns exactly 8 `Type: opener` rows. No Facts row was added, removed, or reclassified.
 
 ---
 
@@ -344,3 +350,4 @@ Per-figure label counts: Fig 13.1 = **18** (Invertebrates panel 5, Vertebrates p
 4. **Degree signs.** F057, F059 and F060 have already been spelled out as "23.5 degrees N", "41 degrees N", "71 degrees N". Keep them spelled out in the PDF so check 5 has nothing to flag.
 5. **F037 and F181 must both appear.** The body's four-class comparison (fishes, amphibians, reptiles, mammals) and the summary's broader "all vertebrates combined" claim are different statements. Writing only the summary form loses the body's exact list; writing only the body form loses the summary's generalisation. A NOTE box carrying both is the safest home.
 6. **F164 vs F184.** Write 448 wildlife sanctuaries as the body figure and note the summary's "more than 450" — a NEET question may quote either.
+7. **`Type` column casing is inconsistent for caption rows** (found by this session's re-parse, recorded rather than silently rewritten). F038 and F080 use lower-case `caption` (the two NCERT figure captions); F039 and F081 use capitalised `Caption` (the two label-harvest rows). A case-sensitive tally therefore sees `caption: 2` + `Caption: 2` instead of one class of 4. This breaks no Gate 1 criterion — no header count is derived from the caption type, and `check_pdf.py`'s `_extract_labels` keys off the *wording* (`Figure labels…`), not the type, so all 23 labels are still found. Left as-is deliberately: F039/F081 are structurally a different kind of row from F038/F080, and normalising the casing now would edit frozen Facts rows for a cosmetic gain. Any future pass that tallies by `Type` must case-fold.
