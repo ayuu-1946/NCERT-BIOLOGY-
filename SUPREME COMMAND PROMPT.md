@@ -458,7 +458,7 @@ Open every converted image and confirm: (a) it is the correct figure for its cap
 v6 replaces the single Pre-Writing + single Verification model with a **fixed, gated pass sequence**. A **normal chapter runs 3 passes**; a **big chapter runs 5 passes** (Pass 1 and Pass 2 each split in half). Every pass ends in a **gate** that must be met before the next pass begins. Gates are automated wherever a machine can decide, so human attention is spent only where it must be.
 
 Sequence at a glance:
-- **Normal (3 passes):** `Pass 1 → [Gate 1] → Pass 2 → [Gate 2: check_pdf.py green] → Pass 3 → [Gate 3: zero confirmed defects] → deliver`
+- **Normal (3 passes):** `Pass 1 → [Gate 1] → Pass 2 → [Gate 2: check_pdf.py green] → Pass 3 → [Gate 3: zero confirmed defects + bidirectional full read] → deliver`
 - **Big (5 passes):** `Pass 1a → Pass 1b → [Gate 1] → Pass 2a → Pass 2b → [Gate 2] → Pass 3 → [Gate 3] → deliver`
 
 ### Pass 1 — Source Mastery & Frozen Inventory
@@ -503,6 +503,8 @@ Steps:
 1. **First read:** read the entire chapter, including exercises, start to finish, without stopping to build the checklist. Get the shape of the chapter in your head.
 2. **Independent inventory pass:** re-read section by section and build the Facts inventory — one row per fact [ID][Section][Type][Exact wording]. Cover Rule 1's full list.
 3. **Second, independent hunting pass:** re-read again, specifically hunting what pass 2 likely missed — qualifier words buried mid-sentence, a footnote, a caption detail, a number in a parenthetical. Treat pass 2's inventory as provisional until this pass confirms or extends it.
+   - **3a. Structural sweep — every heading gets its own row, `Type: heading`.** Walk the chapter's headings alone, ignoring prose, and give each one a row: numbered sections *and* the unnumbered sub-headings sitting inside them. Sub-headings are the easiest thing in the chapter to lose, because the prose beneath them is present and reads fine, so nothing looks wrong — the book's structure is silently flattened and §3 traceability breaks. **Ch9's D4 was exactly this:** §9.8.4's *"Temperature and pH"* and *"Concentration of Substrate"* had all their content but neither heading, and nothing caught it until a full read.
+   - **3b. Section-opener sweep — inventory the FIRST sentence of every section deliberately.** Opening sentences define the terms the rest of the section leans on, and they are the single most-dropped item in this workflow. Pay special attention when a section's opening sentence defines a word appearing in that section's own heading. **Ch9's D9 was exactly this:** §9.8.2's *"The chemical or metabolic conversion refers to a reaction."* was missing, leaving "conversion" — a word in the heading directly above it — never defined.
 4. **Figure extraction, conversion, verification & label-matrix pass (§4.4):** clip-extract every figure at 300 dpi, convert each to monochrome, verify each visually, complete the figure manifest with `Mono`/`Verified` marked, **and enter every in-figure label as its own row in the figure-label matrix.** Doing this now means the script references verified assets from the start and problem figures surface while there is still time to re-extract.
 5. **Exercise-gap scan (Rule 2):** note every term/fact an exercise assumes but the body never explains, and where the explanation will go.
 6. **Summary scan (Rule 3):** classify every summary sentence BODY-PRESENT or SUMMARY-UNIQUE; fold every SUMMARY-UNIQUE fact into the correct body-section entry now.
@@ -510,6 +512,7 @@ Steps:
 
 **Gate 1 (must be green before Pass 2 begins):**
 - Every fact has a Facts row and every in-figure label has a figure-label-matrix row.
+- **Every heading has a row (`Type: heading`), including unnumbered sub-headings** (step 3a), and **every section's opening sentence has a row** (step 3b). Confirm by walking the headings and the section-openers as their own list — not by assuming the prose sweep caught them.
 - Every figure in the manifest is marked `Mono: yes` and `Verified: yes`.
 - Every exercise-gap term has a planned home; every SUMMARY-UNIQUE fact has been folded into a body row.
 - The inventory file is saved to the chapter folder.
@@ -543,11 +546,19 @@ With mechanical defects gated out by Pass 2, Pass 3 is two focused checks a mach
 
 **(a) Visual render check.** Render **every page** with `pymupdf` and look at each directly. Layout bugs (overflow, clipping, a table running off the page, an orphaned heading, a process-flow rule misaligned with its badges, a figure squashed to the wrong aspect ratio) show up only in the rendered page, not in extracted text. Additionally render each page at true print DPI + a B&W 1-bit threshold and confirm cross-page **style consistency**: pull one rendered instance of each element type (H1, H2, H3, table, NOTE, MEMORY AID, process flow, figure box) from at least three different points in the chapter and confirm they are visually *identical*. (Because styles are imported from `neet_template.py`, drift here should be rare — this check now confirms the template held, rather than hunting hand-typed drift.)
 
-**(b) Content cross-check against the frozen inventory.** Do one complete, full read — not a keyword search — of the source sections and the matching script blocks, checking every inventory row (loaded from the saved FILE, not memory). Classify each item:
+**(b) Content cross-check — run in BOTH directions.** Do one complete, full read — not a keyword search — of the source sections and the matching script blocks, checking every inventory row (loaded from the saved FILE, not memory). Classify each item:
 - **COVERED** — present and accurate in the script
 - **MISSING** — in the inventory/NCERT but absent from the script
 - **FABRICATED** — in the script but not in NCERT or the inventory
 - **DRIFTED** — present but the value/qualifier/direction/term is wrong (defect 4 was this class)
+- **UNINVENTORIED** — in NCERT but has **no inventory row at all** (see the mandatory second direction below)
+
+> **⚠ Both directions are mandatory. Direction 2 is the one that has actually failed.**
+>
+> 1. **Inventory → script.** For every row, is it in the script and correct? This catches MISSING / DRIFTED / FABRICATED.
+> 2. **Source → inventory.** Read the NCERT section itself and ask the opposite question: *is every sentence and every heading here represented by some row?* This catches **UNINVENTORIED** content — a Pass 1 gap, not a Pass 2 gap.
+>
+> Direction 1 alone is **structurally incapable** of finding a Pass 1 omission: if the freeze never created a row, there is nothing to classify, and the section reports CLEAN while the chapter is genuinely incomplete. **Ch9 Biomolecules proved this twice.** Gate 3 closed on Ch9 on two separate occasions with direction 1 clean, while the chapter was still missing an NCERT sentence (`D9` — the §9.8.2 antecedent that defined the very word in the section's own heading) and **two** NCERT sub-headings (`D4` — §9.8.4's *"Temperature and pH"* and *"Concentration of Substrate"*). Both were invisible to direction 1 and both required adding new inventory rows (`F194a`, `F221a`, `F225a`) during Pass 3. When direction 2 forces a new row, say so plainly and log it as a **real Pass 1 gap** — never back-date it into the freeze to make Pass 1 look clean.
 
 Divide the chapter's sections into adjacent pairs and run one subagent per pair in parallel (`config: { $kind: "explore" }`) with the shared rubric below; **if parallel subagents are unavailable, do the identical section-pair cross-check yourself, sequentially — the rigor is in the rubric and the full-read discipline, not the parallelism.** Figure-label-matrix rows are cross-checked here too (correct asset, caption number/text correct, placed at the right topic), as a human backstop to `check_pdf.py` check 6.
 
@@ -555,16 +566,48 @@ Divide the chapter's sections into adjacent pairs and run one subagent per pair 
 For each of your 2 assigned sections:
 1. Read the full source text for these sections, start to finish — not a term search.
 2. Read the full corresponding script block(s), start to finish.
-3. Classify each inventory row COVERED / MISSING / FABRICATED / DRIFTED.
-4. For each figure-label row: confirm the label appears in the running text and the figure sits at its topic.
-5. Return: SECTION | STATUS (CLEAN | ISSUES FOUND) | COVERED count | MISSING list | FABRICATED list | DRIFTED (NCERT says X, script says Y)
+3. DIRECTION 1 (inventory -> script): classify each inventory row
+   COVERED / MISSING / FABRICATED / DRIFTED.
+4. DIRECTION 2 (source -> inventory), MANDATORY: walk the NCERT section
+   sentence by sentence and heading by heading. For each one, name the row
+   that carries it. Anything with no row is UNINVENTORIED - report it.
+   Check explicitly, because these are the ones that slip:
+     - every sub-heading, including H3s under a numbered section
+     - the FIRST sentence of each section (antecedent/defining sentences
+       are the most commonly dropped item of all - this was Ch9 D9)
+     - sentences that define a term used in the section's own heading
+5. For each figure-label row: confirm the label appears in the running text
+   and the figure sits at its topic.
+6. Return: SECTION | STATUS (CLEAN | ISSUES FOUND) | COVERED count |
+   MISSING list | FABRICATED list | DRIFTED (NCERT says X, script says Y) |
+   UNINVENTORIED list
+   A section is CLEAN only if BOTH directions are clean. Do not report CLEAN
+   on the strength of direction 1 alone.
 ```
 
 **Confirm every flag by full read, never by grep.** A grep miss does not mean a fact is missing (it may be paraphrased or reflowed by `pdfplumber`); a grep hit does not mean it's correct. Open the source paragraph and the script block and read both before deciding CONFIRMED vs FALSE POSITIVE.
 
+**No statistical text match may close Gate 3 — this is a hard bar, not a preference.** Token-coverage scores, similarity percentages, fuzzy matching, "N/N rows at ≥X% coverage" tables, and any other automated comparison of inventory wording against the extracted PDF text layer are **Pass 2 evidence only**. They may be used to *locate* suspicious rows; they may **never** be used to *clear* them, and a table of coverage percentages is **not** a Pass 3(b) full read no matter how green it looks.
+
+The reason is mechanical, not stylistic: **these screens fail silently in exactly the cases that matter most.** Drop the antecedent sentence from a section and the remaining tokens still overlap heavily, so the score stays high. Omit a sub-heading entirely and there is no row to score, so nothing registers at all. On Ch9 a screen reporting *"276/276 substantive rows at ≥78% coverage, 260 at 100%"* passed a chapter that was missing one NCERT sentence and two NCERT sub-headings. **A high score is not evidence of coverage — it is evidence only that the text you did write resembles the text you wrote down.**
+
+**Gate 3 evidence must be a stated, human-legible reading claim**, per section, in both directions — "read source §9.8.4 pp. 114–115 against script block `# ---- 9.8.4 ----`; both sub-headings present; 12 rows COVERED; 0 UNINVENTORIED." If the record cannot state *what was read against what*, Gate 3 is **not** satisfied, regardless of any linter or coverage output.
+
+**Record false positives separately from confirmed defects, and keep both.** A flag investigated and correctly dismissed is real audit work and must survive in the record with its reasoning, distinct from the confirmed-defect list — otherwise a later session re-litigates settled decisions or, worse, "fixes" something a human deliberately rejected. Likewise, note where a `check_pdf.py` check legitimately does not fire (e.g. check 4 on a chapter with no scientist profile) so a true negative is never later mistaken for a suppressed finding.
+
 **Fix confirmed items via their block markers.** Open the `.py`, locate the block via its `# ---- N.N ----` comment, edit only that block (tag `# [VERIFICATION FIX]`), regenerate the PDF, **re-run `check_pdf.py` (it must stay green)**, and re-verify only the fixed block. The rest was already verified and nothing else changed.
 
-**Gate 3 (deliver):** zero confirmed defects remain AND `check_pdf.py` is still green. Then deliver the full chapter folder (§0.5): the PDF, the `.py` script (saved as a file, not pasted in chat), the inventory with every row ticked, and `assets/` with every verified monochrome figure. If Pass 3 surfaces more than a handful of small scattered issues, treat that as a signal Pass 1 was incomplete — redo the relevant part of Pass 1 rather than patching piecemeal against a shaky checklist.
+**Gate 3 (deliver) — all five conditions, no exceptions:**
+
+1. **Zero confirmed defects remain.**
+2. **`check_pdf.py` is still green**, re-run against the *final rebuilt* PDF — never a verdict carried forward from an earlier run or an earlier session.
+3. **Pass 3(a) covered every page**, stated as a count (e.g. "15/15 pages inspected"), not as "spot-checked".
+4. **Pass 3(b) was a full read in both directions**, with a per-section reading claim naming source pages against script blocks. **No coverage percentage, similarity score, or grep result may substitute for this** (see the hard bar above).
+5. **The rebuild is reproducible** — regenerate from the final script and confirm the PDF matches the committed one (same page count, same extracted character count, same image count; an embedded timestamp is the only acceptable byte difference).
+
+**Say "PASS" only when all five hold.** If Pass 3(b) was in fact a token screen, the honest verdict is *Gate 3 not yet satisfied* — say that instead. A chapter wrongly marked closed is worse than one openly marked incomplete, because it will never be looked at again: **Ch9 was marked CLOSED twice while still defective.** Never let a green linter stand in for the content read — Gate 2 and Gate 3 test different things, and Ch9 was fully green under `--strict` while all three of its confirmed defects were still present.
+
+Then deliver the full chapter folder (§0.5): the PDF, the `.py` script (saved as a file, not pasted in chat), the inventory with every row ticked, and `assets/` with every verified monochrome figure. If Pass 3 surfaces more than a handful of small scattered issues, treat that as a signal Pass 1 was incomplete — redo the relevant part of Pass 1 rather than patching piecemeal against a shaky checklist.
 
 Along with the files, include:
 - A **section-wise coverage confirmation** (e.g. "14.1 — 12/12 body facts, 2/2 summary-unique, 3/3 figures embedded + verified mono, all figure labels in text").
