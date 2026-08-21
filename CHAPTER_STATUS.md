@@ -28,7 +28,77 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | 9 | Biotechnology: Principles and Processes | 12 | ✅ 200 facts frozen · 38/38 labels | ✅ WARN (0 fail, **1 benign warn**) · 13 pp · 7 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 10 | Biotechnology and its Applications | 12 | ✅ 147 facts frozen · 10/10 labels · 14 summary rows | ✅ PASS (0 fail, **1 benign warn**) · 8 pp · 3 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 11 | Organisms and Populations | 12 | ✅ **COMPLETE — third full re-audit of all 268 rows (2026-08-21)** — **268 facts** (F001-F265 + F030a/F189a/F252a) · 5 label rows / 22 in-figure labels re-read off the images · 18/18 headings · 16 opener rows · 17/17 summary sentences classified, 5 summary-unique folded · 10/10 exercises · 6/6 mono assets re-verified · **direction 2 clean — 0 UNINVENTORIED content** · 3 mechanical defects found + fixed (F146 unescaped pipes, F001 half-frozen heading, F252a markdown inside quote) | ✅ **PASS (0 fail, 1 inspected benign warn)** · **14 pp** · 6 mono imgs · 268/268 rows ticked · 22/22 labels in text · **checks 9 + 10 (orphaned headings, badge/banner collision) added and green** | ✅ **PASS — re-audited: 4 confirmed defects (D1 orphaned caption, **D2 + D3 orphaned headings**, **D4 badge plate clipped by banner**) → all fixed** · 14/14 pages inspected (4 D4 sites re-rendered at 700 dpi) · full read both directions, 0 UNINVENTORIED · rebuild reproducible (text-identical, only timestamps differ) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 re-earned at session 6 after D4 was found by pixel inspection and fixed at template level)** |
-| 12 | Ecosystem | 12 | ✅ 196 facts frozen (F001-F196) · 7 label rows / 61 in-figure labels (67 quoted strings) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 mono assets | ✅ **PASS (0 fail, 1 benign warn) · exit 0 — GATE 2 GREEN** · **10 pp** · 7 mono imgs · 196/196 rows ticked · **67/67 figure labels in text** · checks 1,2,3,5,6,7,8,9,10 all green | ⬜ not started (Pass 3 dual verification pending) | ✅ pdf · py · inventory · assets | **▶️ Gate 2 green — awaiting Pass 3 / Gate 3** |
+| 12 | Ecosystem | 12 | ✅ 196 facts frozen (F001-F196) · 7 label rows / 61 in-figure labels (67 quoted strings) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 mono assets | ✅ **PASS (0 fail, 1 benign warn) · exit 0 — GATE 2 GREEN** · **10 pp** · 7 mono imgs · 196/196 rows ticked · **67/67 figure labels in text** · checks 1,2,3,5,6,7,8,9,10 all green | ▶️ **3(a) VISUAL PASS CLOSED** — 10/10 pages inspected at 110 dpi + 300 dpi 1-bit B&W · **1 confirmed defect (D1: 6 inventory row IDs leaked into reader-facing text) → fixed** · style consistency verified mechanically · Gate 2 re-run green after rebuild. **3(b) content cross-check pending** | ✅ pdf · py · inventory · assets | **▶️ Gate 3(a) closed — Gate 3(b) in progress** |
+
+---
+
+## Chapter 12 (Class 12) — Ecosystem — ▶️ GATE 3(a) CLOSED · GATE 3(b) IN PROGRESS
+
+**Current state (2026-08-21):** Gates 1 and 2 green; **Pass 3(a) complete with one confirmed defect found and fixed**; Pass 3(b) bidirectional content read is the only remaining work before Gate 3 can be judged. 10 pp · 7 mono figures · 196/196 rows ticked.
+
+| Gate | Status | Evidence |
+|---|---|---|
+| Gate 1 | ✅ GREEN | 196 facts (F001-F196) · 7 label rows / 61 in-figure labels (67 quoted strings) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 assets mono+verified |
+| Gate 2 | ✅ GREEN — re-run on the **final rebuilt** PDF, 0 fail / 1 benign warn, exit 0 | all of checks 1,2,3,5,6,7,8,9,10 PASS · 67/67 labels in text · 196/196 rows ticked |
+| Gate 3(a) | ✅ **CLOSED** — 10/10 pages inspected, 1 confirmed defect fixed | this section |
+| Gate 3(b) | ▶️ **IN PROGRESS** — bidirectional full read not yet done | — |
+
+### Environment (re-established this session, §0.2–0.3)
+
+Venv rebuilt at `/vercel/share/neetenv` (Python 3.13.11); reportlab 5.0.1 · pymupdf 1.28.2 · Pillow 12.3.0 · pdfplumber OK — matches the known-good reference set. Every command run through `/vercel/share/neetenv/bin/python`, never bare `python3`.
+
+### Pass 3(a) — visual render check: 10/10 pages inspected
+
+Every page rendered twice and viewed directly: at 110 dpi for layout, and at **300 dpi + a true 1-bit B&W threshold** for print-safety and cross-page style consistency. Not spot-checked — all ten pages.
+
+| Page | Content | Verdict |
+|---|---|---|
+| 1 | Title block + DNA motif, chapter opener, 12.1 opening, 2 tables, NOTE box, 4-step process flow | clean |
+| 2 | 12.1 pond sub-heading, 4-row table, 12.2 Productivity, 2 tables, 2 NOTE boxes | clean |
+| 3 | 12.3 Decomposition, **5-step process flow**, 2 NOTE boxes, factor table | **D1 found here (5 leaks)** |
+| 4 | **Fig 12.1** (bordered, mono, captioned), 12.4 Energy flow, NOTE box | clean |
+| 5 | Consumer-category table, GFC 3-step flow, DFC, ecosystem table, NOTE, trophic-level table | clean |
+| 6 | **Fig 12.2** + caption, standing crop, 10 per cent law | clean |
+| 7 | **Fig 12.3** + caption (colour-dependency stated in words), 12.5 Ecological pyramids, 4-column pyramid-values table | clean |
+| 8 | NOTE box + **Fig 12.4 (a)(b)(c)(d)** — 4 figures, each with its own caption, correct order | clean |
+| 9 | Pyramid exceptions, limitations NOTE, 12.6 Nutrient cycling, Quick Recap, appendix heading | clean |
+| 10 | Exercise-gap term table, NCERT exercises appendix, closing statement | **D1 found here (1 leak)** |
+
+**Mechanical style-consistency check (replaces hand-hunting for drift).** Extracted every `(font, size)` class in the PDF and the pages it appears on — one Times-only canon, no stray font, each element type identical wherever it recurs:
+
+| Element | Style | Pages seen |
+|---|---|---|
+| Body / bold running text | Times-Roman / Times-Bold 10.8pt | all 10 |
+| Table cells / heads | Times-Roman / Times-Bold 9.5pt | 1,2,3,5,7,9,10 |
+| NOTE + MEMORY-AID italics | Times-Italic / Times-BoldItalic 10.2pt | 1,2,3,4,5,8,9 |
+| Section-number badges | Times-Bold 6.21pt | 1,2,3,4,7,9 |
+| H1/H2 banner text | Times-Bold 10.5pt | 1,2,3,4,7,9 |
+| Figure captions | Times-Italic 9.5pt | 4,6,7,8,10 |
+
+- **Frame integrity:** every page's text bbox starts at left = 48.5pt (> the 42.5pt margin) with nothing in the top/bottom 1.4 cm bands — consistent with check 1 PASS.
+- **Figure geometry:** 7 image placements, each ≤ 450.7pt wide inside the 15.9 cm column, aspect ratios intact, none upscaled or squashed; Fig 12.4(a)-(d) each sit with their own caption.
+- **B&W print safety:** at 1-bit threshold the NOTE double-rule borders, banner reversed-out text, triangle step badges and their digits all remain legible and tell-apart-able; no meaning rests on fill alone.
+
+### Confirmed defect (Pass 3(a))
+
+| ID | Defect | Class | Where | Fix |
+|---|---|---|---|---|
+| **D1** | **Inventory row IDs leaked into reader-facing text** — the PDF printed internal bookkeeping tokens to the student: `(F060)`, `(F061)`, `(F062)`, `(F064-F066)`, `(F067)` inside the §12.3 decomposition process flow, and `(F146)` in the exercise-gap table on p10. 6 tokens total. | Content pollution (fabricated, non-NCERT text) | `# ---- 12.3 DECOMPOSITION ----` and `# ---- Terms used in the exercises ----` | Row IDs moved out of the strings into adjacent `# F0xx` code comments, so traceability is preserved in the script while the reader-facing text carries only NCERT content. Tagged `# [VERIFICATION FIX]`. |
+
+**Why no linter caught it:** `check_pdf.py`'s checks cover geometry, legibility, glyphs, mono images and label coverage — none inspect for *extra* text that has no business being in a student-facing document. This is exactly the class §6 reserves for the human pass.
+
+**Post-fix verification:**
+- Regex sweep of the rebuilt PDF's text layer: **0 remaining `(Fnnn)` tokens** (was 6).
+- `check_pdf.py` re-run on the rebuilt PDF: **still green — 0 fail, 1 benign warn, exit 0**, all of checks 1,2,3,5,6,7,8,9,10 PASS, 67/67 labels still in text, 196/196 rows still ticked.
+- Page count unchanged at 10; pages 3 and 10 re-rendered and re-inspected — text reflowed cleanly, no new orphan, no clipping, flow badges still aligned with their vertical rule.
+
+### Accepted WARN — true negative, not a suppressed finding
+
+**Check 4 (no person photograph)** fires on this chapter as a **benign false positive** and is accepted. The heuristic matches the substring `photo` inside ordinary biological vocabulary — `photosynthesis`, `photosynthetically`, `photosynthetic` — in rows F036, F041, F048, F075, F076, F193. NCERT Class 12 Chapter 12 contains **no scientist profile and no portrait at all**, so there is nothing that could have been embedded; the manifest lists 7 diagram figures and zero photographs. Recorded here so a later session does not mistake this true negative for a real finding.
+
+### Remaining work — Pass 3(b)
+
+Bidirectional full read against the frozen inventory, per §6 Pass 3(b): direction 1 (inventory → script) and the **mandatory** direction 2 (source → inventory, hunting UNINVENTORIED content — sub-headings and section-opening sentences especially). No coverage percentage or token screen may close it.
 
 ---
 
