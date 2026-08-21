@@ -724,6 +724,45 @@ story.append(B("&bull; <b>Metal ions</b>: a number of enzymes require metal ions
 story.append(P("Catalytic activity is lost when the co-factor is removed from the enzyme, which "
                "testifies that they play a crucial role in the catalytic activity of the enzyme."))
 
+# ---- Quick Recap ---- (rewritten, denser version of the NCERT summary)
+# [VERIFICATION FIX] Pass 3 audit: the mandatory Quick Recap (Content Order item 8) was
+# absent - the chapter ran from 9.8.6 Co-factors straight into the Appendix. Added here.
+story.append(H("QR", "Quick Recap", 1,
+               P("Despite a bewildering diversity of living organisms, their chemical composition "
+                 "and metabolic reactions are remarkably similar. Qualitatively the elemental "
+                 "composition of living tissue and of non-living matter look alike, but a closer "
+                 "examination shows the relative abundance of <b>carbon, hydrogen and oxygen</b> is "
+                 "higher in living systems than in inanimate matter. The most abundant chemical in "
+                 "living organisms is <b>water</b>.")))
+story.append(B("&bull; <b>Small molecules.</b> There are thousands of low-molecular-weight "
+               "(under 1000 Da) biomolecules - amino acids, monosaccharide and disaccharide sugars, "
+               "fatty acids, glycerol, nucleotides, nucleosides and nitrogen bases. There are "
+               "<b>20</b> types of amino acids and <b>5</b> types of nucleotides. Fats and oils are "
+               "glycerides in which fatty acids are esterified to glycerol; <b>phospholipids</b> "
+               "contain, in addition, a phosphorylated nitrogenous compound."))
+story.append(B("&bull; <b>Macromolecules.</b> Only <b>three</b> types are found in living systems - "
+               "proteins, nucleic acids and polysaccharides; <b>lipids</b>, because of their "
+               "association with membranes, separate into the macromolecular fraction. "
+               "Biomacromolecules are <b>polymers</b> made of building blocks which are different, "
+               "so proteins are <b>heteropolymers</b> of amino acids and nucleic acids (RNA and DNA) "
+               "are composed of nucleotides. Biomacromolecules have a hierarchy of structures - "
+               "<b>primary, secondary, tertiary and quaternary</b>."))
+story.append(B("&bull; <b>Functions.</b> Nucleic acids serve as the <b>genetic material</b>, "
+               "carrying hereditary information passed from the parental generation to the progeny. "
+               "Polysaccharides are components of the cell wall in plants and fungi and of the "
+               "exoskeleton of arthropods, and are also storage forms of energy (e.g., starch and "
+               "glycogen). Proteins serve a variety of cellular functions - many are enzymes, some "
+               "antibodies, some receptors, some hormones and some structural proteins. "
+               "<b>Collagen</b> is the most abundant protein in the animal world and <b>RuBisCO</b> "
+               "(Ribulose bisphosphate Carboxylase-Oxygenase) is the most abundant protein in the "
+               "whole of the biosphere."))
+story.append(B("&bull; <b>Enzymes.</b> Enzymes are proteins which catalyse biochemical reactions in "
+               "the cells, while <b>ribozymes</b> are nucleic acids with catalytic power. "
+               "Proteinaceous enzymes exhibit <b>substrate specificity</b>, require an optimum "
+               "temperature and pH for maximal activity, and are <b>denatured</b> at high "
+               "temperatures. Enzymes <b>lower the activation energy</b> of reactions and thereby "
+               "enhance their rate greatly."))
+
 # ---- Appendix: Terms used in the exercises ---- (exercise-gap scan, Rule 5)
 story.append(H("A", "Appendix - Terms Assumed by the NCERT Exercises", 1,
                P("This appendix records what the chapter itself supplies for each exercise "
