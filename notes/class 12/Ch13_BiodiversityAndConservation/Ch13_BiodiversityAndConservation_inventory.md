@@ -1,5 +1,7 @@
 # Frozen Inventory — Biodiversity and Conservation (Class 12, Chapter 13)
-Source: `Chapter/class 12/Chapter 13 - Biodiversity and Conservation.pdf` (13 pp; p13 is a blank `NOTES` page) | Frozen: 2026-08-21 | Rows: **189** (`F001`..`F189`)
+Source: `Chapter/class 12/Chapter 13 - Biodiversity and Conservation.pdf` (13 pp; p13 is a blank `NOTES` page) | Frozen: 2026-08-21 | Rows: **196** (`F001`..`F189` frozen at Pass 1, plus the 7 `a`-suffixed rows added at Pass 3(b))
+
+**Stale-count correction (Gate 3(b) closure session):** this line previously read `Rows: **189** (F001..F189)`, the pre-3(b) value, while the machine-derived table below and `check_pdf.py` check 7 both reported **196**. Per §6 ("the rows win and the count changes") the line was corrected to match the rows — no Facts row was added, removed, reworded or reclassified to achieve it.
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. **All 196 rows are now ticked** (189 frozen at Pass 1 + 7 added at Pass 3(b)) — `check_pdf.py` check 7 reports "All 196 Facts rows ticked." No frozen Facts row was reworded at any point; only the `Ticked` column changed, and the 7 Pass 3(b) rows are additions flagged as real Pass 1 gaps.
 
@@ -493,3 +495,24 @@ All seven fixes were made through their `# ---- N.N ----` block markers and tagg
 - **Color-dependent figures.** Fig 13.2 — its two plots were separated by hue in the original; the caption now names the mid-grey curve as the arithmetic-scale rectangular hyperbola `S = CA^Z` and the near-black line as the same relationship on a log-log scale. Fig 13.1's wedges survive on grey level, boundary stroke and their own text labels, and its proportions are carried in the running text because NCERT prints none inside the figure.
 - **Source problems.** None — no garbled or unrecoverable passage; the only text-layer limitation is that all 23 in-figure labels are vector strokes and had to be harvested by eye (recorded at Gate 1).
 - **Linter verdict.** `check_pdf.py` exit 0 — **0 FAIL, 1 WARN**, the WARN being check 4 matching "photo" inside "photosynthesis" in F143. This chapter contains no photograph of any kind, established four independent ways at Gate 1 and re-confirmed by eye on all 11 pages.
+
+### Independent re-verification of this record (closure session)
+
+The Gate 3(b) audit above was written by a session that **ended before it could update `CHAPTER_STATUS.md` and `CHAPTER_TRACKER.md`**, leaving the three status documents disagreeing — itself a defect under Gate 3(b) rule 2. Because §7 forbids trusting inherited state, every claim above was **re-derived from the artefacts in this session** before the trackers were touched, rather than taken on the predecessor's word:
+
+| Claim re-checked | Method used in this session | Result |
+|---|---|---|
+| All 7 fixes present in the PDF | pdfplumber text extract of the committed PDF, searched for each of the 7 phrases | **7/7 present** |
+| All 7 fixes are NCERT's own wording | re-extracted the **source** chapter PDF and read each sentence in its surrounding context | **7/7 verbatim** — see the two search artefacts noted below |
+| All 7 carry an audit trail | `grep -c "VERIFICATION FIX"` on the script, then read every hit with its block marker | **7 tags**, each naming its row ID, `Pass 3(b) direction 2`, and `UNINVENTORIED` |
+| Row count and ticks | machine re-parse of the Facts table (not the header) | **196 rows, 196 unique, 196 ticked, 0 unticked**; 189 base IDs contiguous `F001..F189`, 0 gaps, plus exactly the 7 `a`-suffixed rows |
+| `Type: opener` count = 9 | machine re-parse by type | **9** — `F002, F010, F025, F054, F083, F096, F112a, F135, F149`, confirming `F112a` is the 9th |
+| Gate 2 green | `check_pdf.py` re-run from a rebuilt venv | **exit 0, VERDICT WARN (0 fail, 1 warn)** — 196/196 rows ticked, 23/23 labels, 55 headings none orphaned, 83 plates none colliding, smallest glyph 6.0pt, 2/2 images mono, 11/11 A4 portrait |
+| Reproducibility | rebuilt from the script and compared against the committed PDF | **identical** — 11 pp · 2 imgs · 35,632 chars · text SHA-256 `6ba3b2f26e92b6c6…` on both, matching the recorded value |
+| Pass 3(a) still valid post-rebuild | re-rendered **11/11** pages at 110 dpi and inspected every one by eye | **0 defects** — no clipping, no overflow, no orphaned heading; both figure boxes intact with captions attached; repeated table headers on pp7/8/10 confirm `repeatRows=1`; the p2→p3 `KeepTogether` whitespace remains the accepted FP-A2 |
+
+**Two search artefacts worth recording so a later session does not mistake them for missing content.** A naive substring search for D4 and D5 initially returned *not found* against the source, and **both were faults in the search string, not in the fix**:
+- **D4** — NCERT's sentence is split across a page break by the running header, extracting as *"What exactly is stability for a biological **Reprint 2026-27 BIODIVERSITY AND CONSERVATION** community?"*. Any search for the intact phrase fails on a sentence that is genuinely present.
+- **D5** — NCERT prints *"nä**i**ve"* with a diaeresis, so a search for the ASCII *"naive"* misses it. The script deliberately renders the plain ASCII form, which is correct under the §4 banned-glyph rule.
+
+This is exactly the failure mode §6 warns about when grep is used as evidence: **a false *absence* is as misleading as a false presence**, which is why both were resolved by reading the surrounding source text rather than by trusting the match count. Gate 3 remains **GREEN — CLOSED**, now on re-derived evidence, and the three status documents were brought into agreement in this same session per Gate 3(b) rule 8 (atomic closure).
