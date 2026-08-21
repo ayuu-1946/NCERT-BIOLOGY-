@@ -203,6 +203,7 @@ Source scope note: the chapter has **no scientist profile box and no photograph 
 | F192 | 9.8.1 | Statement | "this very metabolic pathway with one or two additional reactions gives rise to a variety of metabolic end products" | x |
 | F193 | 9.8.1 | Example + organism | "In our skeletal muscle, under anaerobic conditions, lactic acid is formed. Under normal aerobic conditions, pyruvic acid is formed. In yeast, during fermentation, the same pathway leads to the production of ethanol (alcohol)" | x |
 | F194 | 9.8.1 | Statement | "Hence, in different conditions different products are possible" | x |
+| F194a | 9.8.2 | Definition | "The chemical or metabolic conversion refers to a reaction" | x |
 | F195 | 9.8.2 | Definition | "The chemical which is converted into a product is called a 'substrate'" | x |
 | F196 | 9.8.2 | Definition | "Hence enzymes, i.e. proteins with three dimensional structures including an 'active site', convert a substrate (S) into a product (P). Symbolically, this can be depicted as: S -> P" | x |
 | F197 | 9.8.2 | Statement | "It is now understood that the substrate 'S' has to bind the enzyme at its 'active site' within a given cleft or pocket" | x |
@@ -230,10 +231,12 @@ Source scope note: the chapter has **no scientist profile box and no photograph 
 | F219 | 9.8.3 | Process step | "The active site of the enzyme, now in close proximity of the substrate breaks the chemical bonds of the substrate and the new enzyme-product complex is formed" | x |
 | F220 | 9.8.3 | Process step | "The enzyme releases the products of the reaction and the free enzyme is ready to bind to another molecule of the substrate and run through the catalytic cycle once again" | x |
 | F221 | 9.8.4 | Classification | "The activity of an enzyme can be affected by a change in the conditions which can alter the tertiary structure of the protein. These include temperature, pH, change in substrate concentration or binding of specific chemicals that regulate its activity" | x |
+| F221a | 9.8.4 | Sub-heading | "Temperature and pH" | x |
 | F222 | 9.8.4 | Qualifier | "Enzymes generally function in a narrow range of temperature and pH (Figure 9.5)" | x |
 | F223 | 9.8.4 | Definition | "Each enzyme shows its highest activity at a particular temperature and pH called the optimum temperature and optimum pH" | x |
 | F224 | 9.8.4 | Statement | "Activity declines both below and above the optimum value" | x |
 | F225 | 9.8.4 | Comparison + qualifier | "Low temperature preserves the enzyme in a temporarily inactive state whereas high temperature destroys enzymatic activity because proteins are denatured by heat" | x |
+| F225a | 9.8.4 | Sub-heading | "Concentration of Substrate" | x |
 | F226 | 9.8.4 | Statement | "With the increase in substrate concentration, the velocity of the enzymatic reaction rises at first" | x |
 | F227 | 9.8.4 | Definition + exception | "The reaction ultimately reaches a maximum velocity (Vmax) which is not exceeded by any further rise in concentration of the substrate" | x |
 | F228 | 9.8.4 | Statement | "This is because the enzyme molecules are fewer than the substrate molecules and after saturation of these molecules, there are no free enzyme molecules to bind with the additional substrate molecules (Figure 9.5)" | x |
