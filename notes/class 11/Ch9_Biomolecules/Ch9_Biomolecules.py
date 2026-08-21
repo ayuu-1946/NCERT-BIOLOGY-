@@ -103,12 +103,14 @@ story.append(P("If we perform a chemical analysis on a plant tissue, animal tiss
                "matter, we obtain a similar list. In absolute terms, no such differences could be "
                "made out; <b>the elemental composition of living tissues and non-living matter "
                "appear also to be similar when analysed qualitatively.</b>"))
+# [VERIFICATION FIX] D5: summary-unique oxygen fact was narrated as commentary about the summary
+# ("taking the summary's fuller list"); now folded in as plain content per s3.
 story.append(P("All the elements present in a sample of earth's crust are also present in a sample "
                "of living tissue. However, a closer examination reveals that <b>the relative "
                "abundance of carbon and hydrogen with respect to other elements is higher in any "
-               "living organism than in earth's crust</b> - and taking the summary's fuller list, "
-               "the relative abundance of <b>carbon, hydrogen and oxygen</b> is higher in living "
-               "systems when compared to inanimate matter."))
+               "living organism than in earth's crust</b> (Table 9.1); taken over the three "
+               "elements together, the relative abundance of <b>carbon, hydrogen and oxygen</b> is "
+               "higher in living systems when compared to inanimate matter."))
 story.append(data_table([
     ["Element", "% Weight of Earth's crust", "% Weight of Human body"],
     ["Hydrogen (H)", "0.14", "9.5"],
@@ -226,8 +228,10 @@ story.append(P("Some lipids have phosphorous and a phosphorylated organic compou
                "example. Some tissues, especially the neural tissues, have lipids with more complex "
                "structures."))
 # [VERIFICATION FIX] summary-unique F271 was ticked but never written into the body; folded in here.
-story.append(P("As the summary states it, <b>phospholipids</b> contain, in addition, a "
-               "<b>phosphorylated nitrogenous compound</b>."))
+# [VERIFICATION FIX] D5: was narrated as "As the summary states it"; now stated as plain content.
+story.append(P("<b>Fats and oils</b> are glycerides in which fatty acids are esterified to "
+               "glycerol; <b>phospholipids</b> contain, in addition, a <b>phosphorylated "
+               "nitrogenous compound</b>."))
 story.append(figure("fig_9_1c.png",
                     "Fig. 9.1 (c) - Fats and oils (lipids): a fatty acid (palmitic acid), "
                     "glycerol, a triglyceride (R1, R2, R3 are fatty acids), a phospholipid "
@@ -263,9 +267,9 @@ story.append(labels_line(["Nucleotide", "Adenine", "Adenylic acid"]))
 story.append(P("<i>Figure 9.1 - Diagrammatic representation of small molecular weight organic "
                "compounds in living tissues.</i>"))
 # [VERIFICATION FIX] summary-unique F269 was ticked but never written into the body; folded in here.
-story.append(P("As the summary catalogues them, <b>amino acids, monosaccharide and disaccharide "
-               "sugars, fatty acids, glycerol, nucleotides, nucleosides and nitrogen bases</b> are "
-               "some of the organic compounds seen in living organisms."))
+story.append(P("<b>Amino acids, monosaccharide and disaccharide sugars, fatty acids, glycerol, "
+               "nucleotides, nucleosides and nitrogen bases</b> are some of the organic compounds "
+               "seen in living organisms."))
 
 # ---- 9.2 Primary and Secondary Metabolites ---- (F072-F078)
 story.append(H("9.2", "Primary and Secondary Metabolites", 1,
@@ -312,8 +316,8 @@ story.append(P("These classes of compounds - with the exception of lipids - have
 story.append(keyterm("Those which have molecular weights <b>less than one thousand daltons</b> are "
                      "usually referred to as <b>micromolecules</b> or simply biomolecules, while "
                      "those found in the acid-insoluble fraction are called <b>macromolecules</b> "
-                     "or biomacromolecules. (The summary notes there are thousands of such small "
-                     "molecular weight, under 1000 Da, biomolecules.)"))
+                     "or biomacromolecules. There are <b>thousands</b> of such small molecular "
+                     "weight biomolecules, all under <b>1000 Da</b>."))
 story.append(P("The molecules in the insoluble fraction, with the exception of lipids, are "
                "<b>polymeric substances</b>. Then why do lipids, whose molecular weights do not "
                "exceed 800 Da, come under the acid-insoluble (macromolecular) fraction?"))
@@ -360,9 +364,8 @@ story.append(keyterm("Certain amino acids are <b>essential</b> for our health an
                      "<b>essential</b> amino acids through our diet/food."))
 story.append(P("Proteins carry out many functions in living organisms: some transport nutrients "
                "across the cell membrane, some fight infectious organisms, some are hormones, some "
-               "are enzymes, etc. As the summary puts it, many of them are enzymes, some are "
-               "antibodies, some are receptors, some are hormones and some others are "
-               "<b>structural proteins</b>."))
+               "are enzymes, etc. Many of them are enzymes, some are antibodies, some are "
+               "receptors, some are hormones and some others are <b>structural proteins</b>."))
 story.append(P("<b>Collagen</b> is the most abundant protein in the animal world, and <b>Ribulose "
                "bisphosphate Carboxylase-Oxygenase (RuBisCO)</b> is the most abundant protein in "
                "the whole of the biosphere."))
@@ -406,11 +409,9 @@ story.append(P("Plant cell walls are made of cellulose. Paper made from plant pu
                "N-acetyl galactosamine, etc.). Exoskeletons of arthropods, for example, have a "
                "complex polysaccharide called <b>chitin</b>. These complex polysaccharides are "
                "mostly homopolymers."))
-story.append(note("The summary generalises this section: polysaccharides are components of the "
-                  "<b>cell wall in plants, fungi</b> and also of the <b>exoskeleton of "
-                  "arthropods</b>, and they are storage forms of energy (e.g., starch and "
-                  "glycogen). The body names plant cell walls and arthropod exoskeletons directly; "
-                  "the mention of <b>fungi</b> comes from the summary."))
+story.append(note("Taken together: polysaccharides are components of the <b>cell wall in plants "
+                  "and fungi</b> and also of the <b>exoskeleton of arthropods</b>, and they are "
+                  "storage forms of energy (e.g., starch and glycogen)."))
 
 # ---- 9.6 Nucleic Acids ---- (F126-F135, summary-unique F270, F277)
 story.append(H("9.6", "Nucleic Acids", 1,
@@ -432,12 +433,11 @@ story.append(P("The sugar found in polynucleotides is either <b>ribose</b> (a mo
                "<b>deoxyribonucleic acid (DNA)</b> while that which contains ribose is called "
                "<b>ribonucleic acid (RNA)</b>."))
 # [VERIFICATION FIX] summary-unique F270 was ticked but never written into the body; folded in here.
-story.append(P("The summary fixes the counts: there are <b>20 types of amino acids</b> and "
+story.append(P("Across all living organisms there are <b>20 types of amino acids</b> and "
                "<b>5 types of nucleotides</b>."))
 story.append(note("Nucleic acids serve as genetic material: DNA and RNA carry <b>hereditary "
-                  "information</b> and are passed on from the parental generation to the progeny "
-                  "(the parent-to-progeny transmission clause is stated in the summary; the body "
-                  "states that DNA and RNA function as genetic material)."))
+                  "information</b> and are passed on from the parental generation to the "
+                  "<b>progeny</b>."))
 
 # ---- 9.7 Structure of Proteins ---- (F136-F157, summary-unique F273) + Fig 9.3
 story.append(H("9.7", "Structure of Proteins", 1,
@@ -495,8 +495,8 @@ story.append(memory_aid("Four levels of protein structure - <b>Primary</b> = seq
                         "and beta-pleated sheet; <b>Tertiary</b> = whole chain folded like a "
                         "woollen ball (needed for biological activity); <b>Quaternary</b> = "
                         "several subunits assembled together (e.g. haemoglobin's 2 alpha + 2 "
-                        "beta). The summary generalises this hierarchy - primary, secondary, "
-                        "tertiary and quaternary - to all biomacromolecules."))
+                        "beta). This same hierarchy - primary, secondary, tertiary and quaternary - "
+                        "is described for biomacromolecules generally."))
 
 # ---- 9.8 Enzymes ---- (F158-F170)
 story.append(H("9.8", "Enzymes", 1,
@@ -559,8 +559,10 @@ story.append(P("In our skeletal muscle, under anaerobic conditions, <b>lactic ac
                "fermentation, the same pathway leads to the production of <b>ethanol</b> "
                "(alcohol). Hence, in different conditions different products are possible."))
 
-# ---- 9.8.2 How do Enzymes bring about High Rates of Catalysis? ---- (F195-F212) + Fig 9.4
-story.append(H("9.8.2", "How do Enzymes bring about such High Rates of Catalysis?", 2,
+# ---- 9.8.2 How do Enzymes bring about such High Rates of Chemical Conversions? ---- (F195-F212) + Fig 9.4
+# [VERIFICATION FIX] D6: heading read "...High Rates of Catalysis?"; NCERT's own heading is
+# "...High Rates of Chemical Conversions?" - restored verbatim.
+story.append(H("9.8.2", "How do Enzymes bring about such High Rates of Chemical Conversions?", 2,
                keyterm("The chemical which is converted into a product is called a "
                        "<b>'substrate'</b>. Enzymes - i.e. proteins with three-dimensional "
                        "structures including an active site - convert a substrate (S) into a "
