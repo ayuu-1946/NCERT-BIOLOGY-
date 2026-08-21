@@ -8,7 +8,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 
 **Progress: 9 / 32 chapters done** — Class 11: 6/19 · Class 12: 3/13
 
-**Current work:** Class 12, Chapter 12 — Ecosystem is in progress at **Gate 2**; Pass 3 / Gate 3 remain.
+**Current work:** Class 12, Chapter 12 — Ecosystem is in progress at **Gate 3**. Pass 3(a) (visual render check) is **closed** — 10/10 pages inspected, 1 confirmed defect found and fixed, Gate 2 re-confirmed green on the rebuild. Pass 3(b) (bidirectional content read) remains.
 
 ---
 
@@ -99,7 +99,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | Chapter | Status |
 |---|---|
 | 11. Organisms and Populations | ✅ Done |
-| 12. Ecosystem | ▶️ In progress — Gate 2 green |
+| 12. Ecosystem | ▶️ In progress — Gate 3(a) closed, 3(b) pending |
 | 13. Biodiversity and Conservation | ⬜ Not done |
 
 **Class 12 total: 2 / 13 done**

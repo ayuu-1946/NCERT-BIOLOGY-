@@ -247,15 +247,21 @@ story.append(keyterm(
 story.append(body(
     "The important steps in the process of decomposition are (in NCERT's order):"))
 story.append(process_flow([
+    # [VERIFICATION FIX] inventory row IDs moved out of reader-facing text into these comments
+    # F060
     "<b>Fragmentation</b> - <b>detritivores (e.g., earthworm)</b> break down detritus into "
-    "<b>smaller particles</b>. (F060)",
+    "<b>smaller particles</b>.",
+    # F061
     "<b>Leaching</b> - <b>water-soluble inorganic nutrients</b> go down into the <b>soil horizon</b> "
-    "and get <b>precipitated as unavailable salts</b>. (F061)",
+    "and get <b>precipitated as unavailable salts</b>.",
+    # F062
     "<b>Catabolism</b> - <b>bacterial and fungal enzymes degrade detritus into simpler inorganic "
-    "substances</b>. (F062)",
-    "<b>Humification</b> - leads to accumulation of <b>humus</b> (see below). (F064-F066)",
+    "substances</b>.",
+    # F064-F066
+    "<b>Humification</b> - leads to accumulation of <b>humus</b> (see below).",
+    # F067
     "<b>Mineralisation</b> - the humus is further degraded to release inorganic nutrients (see "
-    "below). (F067)",
+    "below).",
 ]))
 # F063 - simultaneity qualifier (marks-critical)
 story.append(note(
@@ -395,9 +401,12 @@ story.append(body(
 story.append(note("<b>NCERT prompt:</b> How would you classify human beings!"))
 # F114-F117 - trophic levels + Figure 12.2 table (covers all Fig 12.2 labels F156, F157)
 story.append(keyterm(
-    "<b>Trophic level</b>: organisms occupy a place in the community according to their <b>feeding "
-    "relationship</b> with other organisms. Based on the <b>source of their nutrition or food</b>, "
-    "organisms occupy a specific place in the food chain that is known as their trophic level."))
+    # [VERIFICATION FIX] F114 - restored NCERT's "in the natural surroundings or in a community"
+    # (the rewrite had compressed this to "in the community", dropping the frozen phrase)
+    "<b>Trophic level</b>: organisms occupy a place <b>in the natural surroundings or in a "
+    "community</b> according to their <b>feeding relationship</b> with other organisms. Based on the "
+    "<b>source of their nutrition or food</b>, organisms occupy a specific place in the food chain "
+    "that is known as their trophic level."))
 story.append(body(
     "<b>Trophic levels in an ecosystem (Figure 12.2):</b> producers belong to the <b>first trophic "
     "level</b>, herbivores (primary consumer) to the <b>second</b>, and carnivores (secondary "
@@ -621,8 +630,9 @@ story.append(data_table([
     ["<b>Secondary producers</b> (Ex 4)", "The term appears nowhere in the chapter; NCERT uses "
      "<b>secondary productivity</b> and <b>primary/secondary consumers</b>. As there is no such "
      "category, the intended answer is <b>(d) None of the above</b>"],
+    # [VERIFICATION FIX] row ID F146 moved out of reader-facing text into this comment
     ["<b>Pyramid of numbers in a tree-dominated ecosystem</b> (Ex 1(b))", "Posed as an activity "
-     "(F146). The pyramid is <b>inverted / spindle-shaped</b>, the same non-upright case as the "
+     "in NCERT. The pyramid is <b>inverted / spindle-shaped</b>, the same non-upright case as the "
      "big-tree/insects/birds example"],
 ], col_widths=[3.4, 7.2]))
 story.append(heading("Appendix", "NCERT Exercises (for reference)", 3))

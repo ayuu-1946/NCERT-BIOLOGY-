@@ -338,3 +338,91 @@ Environment for this session (§0.2/§0.3) was rebuilt from scratch: reportlab 5
 **Visual sanity check (pre-Pass 3):** pages rendered at 110 dpi; the 5-column §12.5 pyramid-values table fits the frame without overflow, the `kg m-2` superscript renders correctly, and Fig 12.3/12.4a-d read cleanly in monochrome with Sun/Heat markers and bar values legible. A full every-page Pass 3(a) render + Pass 3(b) dual-direction content read remains to be done for Gate 3.
 
 **GATE 2: GREEN — Pass 3 may begin.**
+
+---
+
+## Gate 3 record
+
+**Verdict: PASS.** All five §6 Gate 3 conditions hold. Two confirmed defects were found by the human passes (neither was catchable by any linter check) and both are fixed; `check_pdf.py` was re-run on the **final rebuilt** PDF and is still green.
+
+### Pass 3(a) — visual render check: 10/10 pages
+
+Every page rendered twice with `pymupdf` and viewed directly: 110 dpi for layout, and **300 dpi + true 1-bit B&W threshold** for print-safety and cross-page style consistency. Stated as a count, not a spot-check: **10 of 10 pages inspected.**
+
+Findings: no overflow, no clipping, no table running off the frame, no orphaned heading, no process-flow rule misaligned with its badges, no figure at a wrong aspect ratio. **D1 was found here** (see below).
+
+Cross-page style consistency was verified **mechanically** by extracting every `(font, size)` class and the pages it appears on, which is stronger than pulling three samples by eye:
+
+| Element | Style | Pages |
+|---|---|---|
+| Body / bold running text | Times-Roman / Times-Bold 10.8pt | all 10 |
+| Table cells / heads | Times-Roman / Times-Bold 9.5pt | 1,2,3,5,7,9,10 |
+| NOTE italics | Times-Italic / Times-BoldItalic 10.2pt | 1,2,3,4,5,8,9 |
+| Section-number badges | Times-Bold 6.21pt | 1,2,3,4,7,9 |
+| Banner heading text | Times-Bold 10.5pt | 1,2,3,4,7,9 |
+| Figure captions | Times-Italic 9.5pt | 4,6,7,8,10 |
+
+Every element type is identical wherever it recurs — the frozen `neet_template.py` held, with no drift. One Times-only font canon, no stray font anywhere. Frame integrity: every page's text starts at left = 48.5pt (inside the 42.5pt margin) with nothing in the 1.4 cm bands. At 1-bit threshold the NOTE double-rules, reversed-out banner text and triangle step-digits all stay legible, so no meaning rests on fill alone.
+
+### Pass 3(b) — content cross-check, BOTH directions, full read
+
+The **entire source chapter was read start to finish** (11/11 pages extracted via `pdfplumber` and read as continuous text, not term-searched), and the **entire script was read start to finish** (all 5 numbered sections plus opener, folded §12.6, Quick Recap and both appendices). No coverage percentage, similarity score, or grep result was used to clear any row — per the §6 hard bar.
+
+Per-section reading claims (what was read against what):
+
+| Section | Source read | Script block read | Direction 1 (inventory to script) | Direction 2 (source to inventory) |
+|---|---|---|---|---|
+| Chapter opener | source p1 | `# ---- Chapter opener (F001-F010) ----` | F001-F010 COVERED (10) | clean — contents listing, all 3 ecosystem categories and the roadmap sentence all carried |
+| 12.1 Structure & Function | source p2 | `# ---- 12.1 ECOSYSTEM - STRUCTURE AND FUNCTION ----` | F011-F033 + F173, F175 COVERED (25) | clean — opener sentence present; 4 functional aspects in NCERT's order; full pond breakdown; **no unnumbered sub-heading exists to lose** |
+| 12.2 Productivity | source pp2-3 | `# ---- 12.2 PRODUCTIVITY ----` | F034-F053 + F177-F181 COVERED (25) | clean — GPP/NPP/secondary all defined; 170 / 55 billion tons and the 70 per cent both carried. NCERT's "It can be divided..." antecedent correctly resolved to *productivity* (not drift) |
+| 12.3 Decomposition | source pp3-4 | `# ---- 12.3 DECOMPOSITION ----` | F054-F072 + F182-F183 COVERED (21) | clean — all five steps; simultaneity qualifier; five-vs-three Summary conflict carried as a NOTE. **D1 found here** |
+| 12.4 Energy Flow | source pp5-7 | `# ---- 12.4 ENERGY FLOW ----` | F073-F127 + F184-F186 COVERED (58) | **D2 found here** — F114's "in the natural surroundings or in a community" had been compressed to "in the community". Rest clean: PAR <50%, 2-10%, both thermodynamics prompts, GFC/DFC, 10 per cent law, standing crop |
+| 12.5 Ecological Pyramids | source pp7-10 | `# ---- 12.5 ECOLOGICAL PYRAMIDS ----` | F128-F153 + F196 COVERED (27) | clean — all three types inline (a)/(b)/(c); sparrow example; both exceptions; limitations paragraph placed at end of §12.5 per the recorded source anomaly |
+| 12.6 Nutrient cycling (folded) | source p10 Summary | `# ---- Nutrient cycling & ecosystem services ----` | F187-F190 COVERED (4) | clean — gaseous/sedimentary + reservoirs + ecosystem services, correctly flagged as Summary-only |
+| Quick Recap | source p10 Summary | `# ---- Quick Recap ----` | F171-F190 COVERED (20 summary sentences classified) | clean — all 20 summary sentences classified; 8 SUMMARY-UNIQUE folded into body rows |
+| Exercises + appendix | source pp10-11 | `# ---- Terms used in the exercises ----` | F191-F195 COVERED (5) | clean — all 11 questions carried; 5 exercise-gap terms each answered from in-chapter statements. **D1 found here** |
+
+**Direction 2 result: 0 UNINVENTORIED items.** The three historic slip-classes were each checked explicitly:
+- **Sub-headings:** Ch12 is structurally flat — 5 numbered headings, **zero** unnumbered sub-headings (re-confirmed against the source; the Ch9 "D4" failure mode is structurally impossible here). All 10 heading rows present.
+- **Section-opening sentences:** all 6 opener rows (F003, F012, F035, F055, F074, F129) verified present and in place — this is the Ch9 "D9" class and it is clean.
+- **Terms defined in their own section's heading:** "productivity", "decomposition", "energy flow", "ecological pyramids" are each defined in the body of the section that names them.
+
+Machine validation of the inventory itself (re-parsed, not hand-tallied): 196 Facts rows, 196 unique IDs, **contiguous F001-F196 with no gaps or duplicates**, **0 unticked rows**, 10 heading rows, 6 opener rows. `check_pdf.py._extract_labels` parses **7 figures / 67 label strings, 67 unique — no doubling and no phantom `Fig #` row**, so the Ch12 inventory-format trap is confirmed avoided.
+
+**Figure cross-check (human backstop to check 6).** All 7 assets opened and read: each is the correct diagram for its caption, monochrome, uncropped, labels legible, placed inline at its topic (12.1 at decomposition, 12.2/12.3 at trophic levels and energy flow, 12.4a-d at ecological pyramids), each with the NCERT figure number verbatim.
+
+### Confirmed defects — found and fixed
+
+| ID | Class | Defect | Fix |
+|---|---|---|---|
+| **D1** | FABRICATED (non-NCERT text) | 6 internal inventory row IDs printed in reader-facing text: `(F060)`, `(F061)`, `(F062)`, `(F064-F066)`, `(F067)` in the §12.3 process flow and `(F146)` in the exercise-gap table. Found by Pass 3(a); invisible to every linter check, since none test for *extra* text. | Row IDs moved into adjacent `# F0xx` code comments — traceability kept in the script, reader sees only NCERT content. Verified: **0 `(Fnnn)` tokens** remain in the PDF text layer. |
+| **D2** | DRIFTED | F114 froze *"Organisms occupy a place in the natural surroundings or in a community according to their feeding relationship..."* but the script compressed it to *"a place in the community"*, dropping "in the natural surroundings". Found by Pass 3(b) direction 1 full read. | Restored to "in the natural surroundings or in a community". Verified present in the rebuilt PDF. |
+
+Both fixed via their `# ---- N.N ----` block markers, tagged `# [VERIFICATION FIX]`; only those blocks were touched, and only those blocks were re-verified (pages 3, 5, 10 re-rendered and re-inspected — text reflowed cleanly, no new orphan, no clipping, page count unchanged).
+
+### False positives — investigated and dismissed (kept per §6, do not re-litigate)
+
+| Flag | Why dismissed |
+|---|---|
+| §12.2 "Productivity can be divided into GPP and NPP" vs NCERT's "It can be divided into..." | **FALSE POSITIVE.** NCERT's "It" refers to productivity (previous sentence). Resolving the pronoun is required by the rewrite mandate and changes no fact. |
+| §12.4 "the green plants in the ecosystem are called producers" vs NCERT's "The green plant in the ecosystem are called producers" | **FALSE POSITIVE.** NCERT has a singular/plural typo; the fact is unchanged and the plural is correct English. |
+| Fig 12.4(a) "nearly 6 millions plants" vs bar value "5,842,000" | **FALSE POSITIVE — deliberate.** A pre-recorded source anomaly; both numbers are carried verbatim and a NOTE tells the reader not to reconcile them. |
+| §12.5 limitations paragraph position | **FALSE POSITIVE — deliberate.** Source p10 typesets it below the EXERCISES heading, but it is §12.5's closing paragraph; placing it at the end of §12.5 is the recorded, intended reordering. |
+| Decomposition "five steps" vs Summary "three processes" | **FALSE POSITIVE — deliberate.** Genuine NCERT internal conflict; both carried with an explicit NOTE. |
+
+### Checks that legitimately did not fire (true negatives, not suppressed findings)
+
+- **check 4 (no person photograph)** — WARN accepted. The heuristic matches the substring `photo` inside `photosynthesis` / `photosynthetically` / `photosynthetic` (rows F036, F041, F048, F075, F076, F193). This chapter has **no scientist profile and no portrait at all**; the manifest is 7 diagram figures and 0 photographs, so there was never anything to embed. §5 item 3 does not apply to Ch12.
+- **Exercise-gap appendix** — fired (5 terms), so Rule 2's appendix is present rather than omitted.
+
+### Gate 3 conditions
+
+| # | Condition | Status |
+|---|---|---|
+| 1 | Zero confirmed defects remain | ✅ D1 and D2 both fixed and re-verified |
+| 2 | `check_pdf.py` still green on the **final rebuilt** PDF | ✅ re-run after the last edit: 0 fail, 1 accepted benign warn, exit 0 |
+| 3 | Pass 3(a) covered every page | ✅ **10/10 pages** inspected (110 dpi + 300 dpi 1-bit) |
+| 4 | Pass 3(b) full read in both directions, per-section reading claims | ✅ table above; 0 UNINVENTORIED; no token screen used |
+| 5 | Rebuild reproducible | ✅ two consecutive builds: 10 pages, 25,481 chars, 7 images, identical text SHA (`f57a9726ffd71ee3`) |
+
+**GATE 3: PASS — chapter closed.**
