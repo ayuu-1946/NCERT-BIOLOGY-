@@ -641,7 +641,10 @@ story.append(body(
     "fix carbon dioxide; (b) in an ecosystem dominated by trees, the pyramid of numbers is "
     "<b>inverted/spindle</b> type; (c) in aquatic ecosystems, the limiting factor for productivity "
     "is <b>light</b>; (d) common detritivores are <b>earthworms</b>; (e) the major reservoir of "
-    "carbon on earth is <b>oceans/hydrosphere</b>."))
+    # [VERIFICATION FIX] D2 - was "oceans/hydrosphere": "oceans" is not NCERT's wording and
+    # contradicted the appendix row above. F189 says the gaseous-cycle (carbon) reservoir is the
+    # "atmosphere or hydrosphere"; both answers to Ex 1(e) now agree and match the frozen row.
+    "carbon on earth is the <b>atmosphere or hydrosphere</b> (the gaseous-cycle reservoir)."))
 story.append(body(
     "<b>2-5 (MCQ):</b> 2. Largest population in a food chain - <b>(a) Producers</b>. 3. The second "
     "trophic level in a lake - <b>(b) Zooplankton</b>. 4. Secondary producers are - <b>(d) None of "
