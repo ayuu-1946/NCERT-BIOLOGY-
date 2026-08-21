@@ -343,7 +343,9 @@ Environment for this session (§0.2/§0.3) was rebuilt from scratch: reportlab 5
 
 ## Gate 3 record
 
-**Verdict: PASS.** All five §6 Gate 3 conditions hold. Two confirmed defects were found by the human passes (neither was catchable by any linter check) and both are fixed; `check_pdf.py` was re-run on the **final rebuilt** PDF and is still green.
+**Verdict: PASS.** All five §6 Gate 3 conditions hold. **Three** confirmed defects were found by the human passes (none was catchable by any linter check) and all three are fixed; `check_pdf.py` was re-run on the **final rebuilt** PDF and is still green.
+
+> **Record correction — read this before trusting the sections below.** An earlier session wrote a "Verdict: PASS" Gate 3 record here whose Pass 3(b) table marked the **Exercises + appendix** row *"clean"* in both directions and claimed **0 UNINVENTORIED / 0 remaining defects**, while `CHAPTER_STATUS.md` and `CHAPTER_TRACKER.md` simultaneously recorded 3(b) as *pending*. That PASS was **premature**: an independent re-read of the same block in the session of 2026-08-21 found **D3** (below), a genuine content defect sitting inside the very block the table called clean. The claim has been corrected rather than preserved, and the two directions were re-run from scratch — not inherited from the earlier narration. This is the exact "marked CLOSED while still defective" failure mode §6 warns about (Ch9, twice); it is logged here instead of being quietly overwritten so a later audit can see that the earlier PASS was not trustworthy on its own.
 
 ### Pass 3(a) — visual render check: 10/10 pages
 
@@ -380,7 +382,26 @@ Per-section reading claims (what was read against what):
 | 12.5 Ecological Pyramids | source pp7-10 | `# ---- 12.5 ECOLOGICAL PYRAMIDS ----` | F128-F153 + F196 COVERED (27) | clean — all three types inline (a)/(b)/(c); sparrow example; both exceptions; limitations paragraph placed at end of §12.5 per the recorded source anomaly |
 | 12.6 Nutrient cycling (folded) | source p10 Summary | `# ---- Nutrient cycling & ecosystem services ----` | F187-F190 COVERED (4) | clean — gaseous/sedimentary + reservoirs + ecosystem services, correctly flagged as Summary-only |
 | Quick Recap | source p10 Summary | `# ---- Quick Recap ----` | F171-F190 COVERED (20 summary sentences classified) | clean — all 20 summary sentences classified; 8 SUMMARY-UNIQUE folded into body rows |
-| Exercises + appendix | source pp10-11 | `# ---- Terms used in the exercises ----` | F191-F195 COVERED (5) | clean — all 11 questions carried; 5 exercise-gap terms each answered from in-chapter statements. **D1 found here** |
+| Exercises + appendix | source pp10-11 | `# ---- Terms used in the exercises ----` | F191-F195 COVERED (5) | ~~clean~~ **NOT clean — see D3.** All 11 questions carried and 5 exercise-gap terms each answered from in-chapter statements, but the two answers given for Ex 1(e) contradicted each other and one used non-NCERT wording. **D1 and D3 both found here** |
+
+#### Independent re-verification of Pass 3(b), 2026-08-21 (this is the reading claim that closes the gate)
+
+The table above was **not** taken on trust. Because `CHAPTER_STATUS.md`/`CHAPTER_TRACKER.md` recorded 3(b) as *pending* while the record above claimed PASS, both directions were re-run from the source PDF in a fresh environment (§0 venv rebuilt; `reportlab 5.0.1 / pymupdf 1.28.2 / Pillow 12.3.0` on CPython 3.13.11 @ `/vercel/share/neetenv`, matching the §0.3 known-good reference).
+
+What was read against what, this session:
+
+| # | Source read (fresh `pdfplumber` extract, 11 pp / 20,656 chars) | Script block read | Direction 1 | Direction 2 |
+|---|---|---|---|---|
+| 1 | p1 (opener) + p2 (§12.1) | `# ---- Chapter opener ----`, `# ---- 12.1 ... ----` | F001-F033 COVERED | clean — every opener/§12.1 sentence traced to a row |
+| 2 | pp2-3 (§12.2) + pp3-4 (§12.3) | `# ---- 12.2 PRODUCTIVITY ----`, `# ---- 12.3 DECOMPOSITION ----` | F034-F072 COVERED | clean — incl. F063 simultaneity qualifier, F045 "herbiviores", five-vs-three NOTE |
+| 3 | pp5-7 (§12.4) | `# ---- 12.4 ENERGY FLOW ----` | F073-F127 COVERED; F114's restored "in the natural surroundings or in a community" re-confirmed present at script line ~406 | clean — all 4 embedded NCERT questions (F081/F113/F124/F127) preserved |
+| 4 | pp7-10 (§12.5) | `# ---- 12.5 ECOLOGICAL PYRAMIDS ----` | F128-F153, F196 COVERED | clean — (a)/(b)/(c) rendered **inline**, matching F196's finding that NCERT printed no sub-headings here |
+| 5 | p10 (Summary, 20 sentences) | `# ---- Nutrient cycling ... ----`, `# ---- Quick Recap ----` | F171-F190 COVERED | clean — 8 SUMMARY-UNIQUE facts folded into body blocks, not left summary-only |
+| 6 | pp10-11 (Exercises 1-11) | `# ---- Terms used in the exercises ----` | F191-F196 COVERED | **D3 FOUND** (below) |
+
+**Direction 2 result, re-confirmed independently: 0 UNINVENTORIED items.** Every sentence, every heading and every section-opening line on all 11 source pages maps to a frozen row. The three historic slip-classes were each re-walked as their own list, not assumed from the prose sweep: 10/10 heading rows verified against the source's actual heading set (5 numbered + CHAPTER 12/ECOSYSTEM + contents listing + SUMMARY + EXERCISES + F196's structural confirmation); 6/6 opener rows verified in place; and no unnumbered sub-heading exists anywhere in the chapter to lose.
+
+No coverage percentage, similarity score, or token screen was used at any point to clear a row — machine parsing was used only to *locate* rows and to assert structural facts (ID contiguity, tick state, label counts), per the §6 hard bar.
 
 **Direction 2 result: 0 UNINVENTORIED items.** The three historic slip-classes were each checked explicitly:
 - **Sub-headings:** Ch12 is structurally flat — 5 numbered headings, **zero** unnumbered sub-headings (re-confirmed against the source; the Ch9 "D4" failure mode is structurally impossible here). All 10 heading rows present.
@@ -397,8 +418,9 @@ Machine validation of the inventory itself (re-parsed, not hand-tallied): 196 Fa
 |---|---|---|---|
 | **D1** | FABRICATED (non-NCERT text) | 6 internal inventory row IDs printed in reader-facing text: `(F060)`, `(F061)`, `(F062)`, `(F064-F066)`, `(F067)` in the §12.3 process flow and `(F146)` in the exercise-gap table. Found by Pass 3(a); invisible to every linter check, since none test for *extra* text. | Row IDs moved into adjacent `# F0xx` code comments — traceability kept in the script, reader sees only NCERT content. Verified: **0 `(Fnnn)` tokens** remain in the PDF text layer. |
 | **D2** | DRIFTED | F114 froze *"Organisms occupy a place in the natural surroundings or in a community according to their feeding relationship..."* but the script compressed it to *"a place in the community"*, dropping "in the natural surroundings". Found by Pass 3(b) direction 1 full read. | Restored to "in the natural surroundings or in a community". Verified present in the rebuilt PDF. |
+| **D3** | DRIFTED + FABRICATED (Rule 5) | **The script gave two different answers to the same exercise blank.** For Ex 1(e) *"The major reservoir of carbon on earth is____"*, the exercise-gap appendix table answered **"atmosphere or hydrosphere"** (matching F189 verbatim), while the exercises list nine lines below answered **"oceans/hydrosphere"**. The word **"oceans" appears nowhere in NCERT's reservoir sentence** — F189 reads *"Atmosphere or hydrosphere is the reservoir for the gaseous type of cycle (carbon)"* — so the second answer both contradicted the first and introduced outside content, breaching Rule 5. A student reading page 10 straight through would hit both answers within one screen. Found by Pass 3(b) direction 2 on the Exercises block, in the session of 2026-08-21 — **inside a block the earlier record had marked "clean" in both directions**, and invisible to every `check_pdf.py` check (no check compares two in-document answers, and both strings are legitimate chapter vocabulary). | Exercises list corrected to **"the atmosphere or hydrosphere (the gaseous-cycle reservoir)"** so both answers agree and both match F189. Fixed in the `# ---- Terms used in the exercises ... ----` block, tagged `# [VERIFICATION FIX]`, with the reason recorded in an adjacent comment. Rebuilt; page 10 re-rendered and re-inspected (text reflowed cleanly, no new orphan, no clipping, page count unchanged at 10); `check_pdf.py` re-run green. |
 
-Both fixed via their `# ---- N.N ----` block markers, tagged `# [VERIFICATION FIX]`; only those blocks were touched, and only those blocks were re-verified (pages 3, 5, 10 re-rendered and re-inspected — text reflowed cleanly, no new orphan, no clipping, page count unchanged).
+All three fixed via their `# ---- N.N ----` block markers, tagged `# [VERIFICATION FIX]`; only those blocks were touched, and only those blocks were re-verified (pages 3, 5 and 10 re-rendered and re-inspected — text reflowed cleanly, no new orphan, no clipping, page count unchanged at 10 throughout).
 
 ### False positives — investigated and dismissed (kept per §6, do not re-litigate)
 
@@ -409,6 +431,9 @@ Both fixed via their `# ---- N.N ----` block markers, tagged `# [VERIFICATION FI
 | Fig 12.4(a) "nearly 6 millions plants" vs bar value "5,842,000" | **FALSE POSITIVE — deliberate.** A pre-recorded source anomaly; both numbers are carried verbatim and a NOTE tells the reader not to reconcile them. |
 | §12.5 limitations paragraph position | **FALSE POSITIVE — deliberate.** Source p10 typesets it below the EXERCISES heading, but it is §12.5's closing paragraph; placing it at the end of §12.5 is the recorded, intended reordering. |
 | Decomposition "five steps" vs Summary "three processes" | **FALSE POSITIVE — deliberate.** Genuine NCERT internal conflict; both carried with an explicit NOTE. |
+| Nutrient cycling / gaseous vs sedimentary / ecosystem services appear in the Summary but in **no** body section (§12.1-12.5) | **FALSE POSITIVE — checked first, this session.** This looks like a large Direction-2 hole, and was re-investigated as one before being dismissed. It is correctly handled: F187-F190 are classified SUMMARY-UNIQUE in the summary-classification table and folded into a dedicated `# ---- Nutrient cycling & ecosystem services ----` block rendered as §12.6, plus the Quick Recap and the Ex 1(e) appendix row. Nothing is summary-only. |
+| MCQ 5 answered "(b) 50%" when NCERT's body says "less than 50 per cent" | **FALSE POSITIVE — deliberate.** (b) is the only defensible option among 100% / 50% / 1-5% / 2-10%, and the script states NCERT's exact "less than 50 per cent" wording in parentheses beside the answer rather than silently asserting a flat 50%. Verified against source p11 options and F075. |
+| MCQ 2/3/4 answers (Producers / Zooplankton / None of the above) | **FALSE POSITIVE.** Each re-derived from in-chapter facts this session: pyramid-of-numbers base is largest (F143), Fig 12.2 puts zooplankton at the second trophic level, and "secondary producers" is a term NCERT never defines (recorded exercise-gap), making (d) correct. |
 
 ### Checks that legitimately did not fire (true negatives, not suppressed findings)
 
@@ -419,10 +444,12 @@ Both fixed via their `# ---- N.N ----` block markers, tagged `# [VERIFICATION FI
 
 | # | Condition | Status |
 |---|---|---|
-| 1 | Zero confirmed defects remain | ✅ D1 and D2 both fixed and re-verified |
-| 2 | `check_pdf.py` still green on the **final rebuilt** PDF | ✅ re-run after the last edit: 0 fail, 1 accepted benign warn, exit 0 |
-| 3 | Pass 3(a) covered every page | ✅ **10/10 pages** inspected (110 dpi + 300 dpi 1-bit) |
-| 4 | Pass 3(b) full read in both directions, per-section reading claims | ✅ table above; 0 UNINVENTORIED; no token screen used |
-| 5 | Rebuild reproducible | ✅ two consecutive builds: 10 pages, 25,481 chars, 7 images, identical text SHA (`f57a9726ffd71ee3`) |
+| 1 | Zero confirmed defects remain | ✅ D1, D2 **and D3** fixed and re-verified. D3 was found *after* the earlier record claimed this condition met, so it is stated as re-measured, not carried forward |
+| 2 | `check_pdf.py` still green on the **final rebuilt** PDF | ✅ re-run on the post-D3 rebuild: checks 1,2,3,5,6,7,8,9,10 PASS; check 4 WARN (documented benign); **0 fail, exit 0** |
+| 3 | Pass 3(a) covered every page | ✅ **10/10 pages** inspected (110 dpi + 300 dpi 1-bit) in the earlier session; page 10 re-inspected this session after the D3 fix |
+| 4 | Pass 3(b) full read in both directions, per-section reading claims | ✅ **re-run independently 2026-08-21** — see the 6-row reading-claim table above naming source pages against script blocks. 11/11 source pages read start to finish; **0 UNINVENTORIED**; 1 new confirmed defect (D3) found by direction 2. No coverage percentage, similarity score or grep result was used to clear any row |
+| 5 | Rebuild reproducible | ✅ **re-measured this session** on the post-D3 script — two consecutive builds both: **10 pages, 25,683 extracted chars, 7 images**, identical text SHA-256 `558e0346fbb82bdf7cfb915f2a75c809a0beca09c6b35921def219d009c48ec5` (char count differs from the earlier 25,481 because the D3 fix changed the wording; the two *current* builds match each other exactly) |
 
-**GATE 3: PASS — chapter closed.**
+**Figure re-verification (item 3 of this session, human backstop to check 6).** All 7 assets re-opened and viewed directly at full size this session, not merely mode-checked: `fig_12_1` (decomposition cycle, 7 labels), `fig_12_2` (trophic levels, 17), `fig_12_3` (energy flow with Sun/Heat markers, 10), `fig_12_4a` (pyramid of numbers: 3 / 3,54,000 / 708,000 / 5,842,000), `fig_12_4b` (biomass: 1.5 / 11 / 37 / 809), `fig_12_4c` (inverted biomass: PC 21 above P 4 — correctly inverted), `fig_12_4d` (energy: 10 / 100 / 1000 / 10,000 J above 1,000,000 J of Sunlight). Every one: correct diagram for its caption, correct topic placement, uncropped, all labels legible, `PIL` mode `L` true monochrome. Every numeric label matches its frozen row exactly. All 7 captions match NCERT verbatim.
+
+**GATE 3: PASS — chapter closed.** All five conditions re-measured against on-disk state in the session of 2026-08-21, not inherited from the earlier record's narration.
