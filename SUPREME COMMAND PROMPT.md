@@ -45,18 +45,44 @@ Do not skip this even if you did it in a previous session — the sandbox resets
 - `Pillow` (imported as `PIL`) — converts every extracted figure to true monochrome before it is embedded (§4.4), and inspects rendered pages/images for the B&W print-safety and grayscale checks
 
 ### 0.2 Install
+
+**Build a dedicated venv and use its interpreter for every command in this workflow.** This is the only form of the install that has actually worked in this sandbox:
+
 ```bash
-pip install --break-system-packages reportlab pdfplumber pymupdf Pillow
+uv venv /vercel/share/neetenv --python 3.13
+uv pip install --python /vercel/share/neetenv/bin/python reportlab pdfplumber pymupdf Pillow
 ```
 
-### 0.3 Verify the install before proceeding
-```python
-import reportlab, pdfplumber, pymupdf, PIL
-print("reportlab:", reportlab.Version)
-print("pdfplumber: OK")
-print("pymupdf:", pymupdf.__version__)
-print("Pillow:", PIL.__version__)
+Then invoke **every** Python command in this workflow through that interpreter — never bare `python3`:
+
+```bash
+/vercel/share/neetenv/bin/python check_pdf.py "notes/class 12/Ch12_Ecosystem"
 ```
+
+**Why the obvious commands fail (measured, not theoretical — this cost four failed attempts in the Ch12 session):**
+- `pip install --break-system-packages ...` — the documented v6 command — **fails outright.** In this sandbox `pip` is aliased to `uv`, which does not accept that flag.
+- `pip install --system ...` **appears to succeed and is the dangerous one.** It resolves to a *different* Python (3.9) than the `python3` on PATH (3.13), so every install reports success while `import reportlab` under `python3` still raises `ModuleNotFoundError`. Believing the success message and moving on means §0.3 fails for a reason that looks like a broken library but is actually two interpreters.
+- `uv pip install --python "$(which python3)" ...` also fails: the `python3` on PATH is a uv-managed, externally-managed interpreter that refuses package installation.
+
+A venv sidesteps all three. If the sandbox layout has changed and these commands fail differently, **fix the environment — do not fall back to writing around a missing library.** Print `sys.prefix` and `sys.version` from the interpreter you intend to use and confirm packages land in *that* prefix before proceeding.
+
+### 0.3 Verify the install before proceeding
+
+Run this **with the venv interpreter from §0.2**, not bare `python3` — verifying with a different interpreter than the one you will use is how the two-interpreter trap stays hidden:
+
+```bash
+/vercel/share/neetenv/bin/python -c "
+import sys, reportlab, pdfplumber, pymupdf, PIL
+print('interpreter:', sys.version.split()[0], '@', sys.prefix)
+print('reportlab:', reportlab.Version)
+print('pdfplumber: OK')
+print('pymupdf:', pymupdf.__version__)
+print('Pillow:', PIL.__version__)
+"
+```
+
+Printing the interpreter path alongside the versions is deliberate: it makes "installed into the wrong Python" visible at the moment of verification instead of three steps later. Reference known-good output (Ch12 session): reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0 on 3.13.
+
 If any import fails, fix the environment now. Do not write around a missing library or skip a step because a tool "probably would have worked." `check_pdf.py` reports a clean SETUP ERROR (exit code 2) if `pymupdf` or `Pillow` is absent, so a red gate from a missing library is never mistaken for a red gate from a real defect.
 
 ### 0.4 Smoke test (confirms the frozen template renders correctly, once per session)
@@ -397,6 +423,10 @@ Both box types (exported as `note()` / `memory_aid()`) keep the `NOTE_BG` fill a
 2. Save each figure to `assets/fig_<ch>_<n>.png` per the naming rule in §0.5.
 3. Build the **figure manifest** and **figure-label matrix** as sections of the inventory (§6 Pass 1).
 
+**Harvest in-figure labels by OPENING each rendered asset and reading it — never by text extraction.** In-figure labels are frequently baked into the artwork as pixels or vector strokes and are **absent from the PDF text layer entirely**. In Ch12 Ecosystem, *all 61* labels across all 7 figures were invisible to `page.get_text()`; a text-extraction sweep of those same pages returns the captions and body prose but **zero** labels.
+
+This is a silent, self-concealing failure. Text extraction does not error — it returns an empty label set, which yields an empty figure-label matrix, which **passes Gate 1 and check 6 trivially** because there are no rows to fail. The result is a green gate that has verified nothing, disarming the exact check (defects 5–6) this artifact exists to enforce. A suspiciously label-free figure is a red flag, not a clean result: a labelled NCERT diagram that yields no labels means the harvest method was wrong, not that the diagram has no labels.
+
 **Step 2 — Convert to true monochrome (mandatory, every figure):**
 ```python
 from PIL import Image, ImageOps
@@ -499,6 +529,12 @@ Tick legend: `x` = written into the script and verified present in the generated
 
 **The per-figure figure-label matrix is the v6-mandatory artifact.** Rows are recorded as Facts-table rows whose wording begins `Figure labels:` (one row per figure, or per figure-part for multi-part figures like `Fig 9.7 (a)`/`(b)`), with each in-figure label as a quoted string. This is exactly the format `check_pdf.py`'s `_extract_labels` parses, and check 6 fails the build unless every label appears in the running text. Recording labels as their own rows converts "every label must appear in text" from an assumed discipline into an audited, per-label row.
 
+**The matrix must exist in exactly ONE place in the inventory file — the Facts table. Never restate it as a second table for readability.** `_extract_labels` scans *every* pipe-delimited line in the file, so a duplicate table is not a harmless convenience; it corrupts the parse two ways at once, and both were hit in the Ch12 session:
+1. **Every label counts twice.** A restated 61-label matrix parsed as 136 label strings.
+2. **The restated table's own markdown separator (`|----|-------|`) parses as a phantom figure named `Fig #`**, carrying junk "labels" harvested from the dashes.
+
+Both produce check-6 FAILs that are **impossible to fix by editing prose**, because no running text can ever contain a phantom label — a clean chapter is reported as broken and the failure points at content rather than at the inventory's formatting. If you want the matrix readable elsewhere, describe it in prose or list the row IDs; never repeat it as pipe-delimited rows.
+
 Steps:
 1. **First read:** read the entire chapter, including exercises, start to finish, without stopping to build the checklist. Get the shape of the chapter in your head.
 2. **Independent inventory pass:** re-read section by section and build the Facts inventory — one row per fact [ID][Section][Type][Exact wording]. Cover Rule 1's full list.
@@ -509,9 +545,12 @@ Steps:
 5. **Exercise-gap scan (Rule 2):** note every term/fact an exercise assumes but the body never explains, and where the explanation will go.
 6. **Summary scan (Rule 3):** classify every summary sentence BODY-PRESENT or SUMMARY-UNIQUE; fold every SUMMARY-UNIQUE fact into the correct body-section entry now.
 7. **Freeze the inventory and save the file.** Number every row; you will tick rows off in the file itself during Pass 2.
+8. **Derive every count in the header by re-parsing the finished table — never by hand tally.** Row totals, ID ranges, heading-row counts, opener-row counts, figure-label-row counts and summary-sentence counts are all machine-countable, so count them with a machine and assert ID contiguity (`F001..FNNN` with no gaps or duplicates) at the same time. Hand tallies are unreliable in practice, not in principle: Ch11's freeze shipped a header disagreeing with its own table, and the Ch12 first draft understated heading rows as 8 (actually 10) and summary sentences as 17 (actually 20) — in the same file, in one sitting. A header that contradicts its own table poisons every later audit that trusts it instead of recounting.
 
 **Gate 1 (must be green before Pass 2 begins):**
-- Every fact has a Facts row and every in-figure label has a figure-label-matrix row.
+- Every fact has a Facts row and every in-figure label has a figure-label-matrix row, with labels **harvested by opening each rendered asset** (§4.4 Step 1) — an empty or thin label set means the harvest method was wrong, not that the figures are unlabelled.
+- **The inventory has been validated by running `check_pdf.py`'s own `_extract_labels` against it** — Gate 1 is a *machine-checked* gate, not merely a written artifact. Confirm it parses the expected figure count, the expected label count with **no doubling**, and **no phantom figure rows** (e.g. a `Fig #` row from a markdown separator). Writing the matrix in a format that merely *looks* correct is exactly how the Ch12 draft earned two unfixable check-6 FAILs on a chapter with no real defect; the fix must happen here, while the script does not yet exist, not at Gate 2 where it presents as a content problem.
+- **Every count in the inventory header matches a re-parse of the table** (step 8), including contiguous `F001..FNNN` IDs with no gaps or duplicates.
 - **Every heading has a row (`Type: heading`), including unnumbered sub-headings** (step 3a), and **every section's opening sentence has a row** (step 3b). Confirm by walking the headings and the section-openers as their own list — not by assuming the prose sweep caught them.
 - Every figure in the manifest is marked `Mono: yes` and `Verified: yes`.
 - Every exercise-gap term has a planned home; every SUMMARY-UNIQUE fact has been folded into a body row.
