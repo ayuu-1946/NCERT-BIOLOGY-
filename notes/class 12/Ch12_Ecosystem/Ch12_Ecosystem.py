@@ -247,7 +247,7 @@ story.append(keyterm(
 story.append(body(
     "The important steps in the process of decomposition are (in NCERT's order):"))
 story.append(process_flow([
-    # [VERIFICATION FIX] inventory row IDs moved out of reader-facing text into these comments
+    # [VERIFICATION FIX] D1 - inventory row IDs moved out of reader-facing text into these comments
     # F060
     "<b>Fragmentation</b> - <b>detritivores (e.g., earthworm)</b> break down detritus into "
     "<b>smaller particles</b>.",
@@ -401,8 +401,8 @@ story.append(body(
 story.append(note("<b>NCERT prompt:</b> How would you classify human beings!"))
 # F114-F117 - trophic levels + Figure 12.2 table (covers all Fig 12.2 labels F156, F157)
 story.append(keyterm(
-    # [VERIFICATION FIX] F114 - restored NCERT's "in the natural surroundings or in a community"
-    # (the rewrite had compressed this to "in the community", dropping the frozen phrase)
+    # [VERIFICATION FIX] D2 (F114) - restored NCERT's "in the natural surroundings or in a
+    # community" (the rewrite had compressed this to "in the community", dropping the frozen phrase)
     "<b>Trophic level</b>: organisms occupy a place <b>in the natural surroundings or in a "
     "community</b> according to their <b>feeding relationship</b> with other organisms. Based on the "
     "<b>source of their nutrition or food</b>, organisms occupy a specific place in the food chain "
@@ -630,7 +630,7 @@ story.append(data_table([
     ["<b>Secondary producers</b> (Ex 4)", "The term appears nowhere in the chapter; NCERT uses "
      "<b>secondary productivity</b> and <b>primary/secondary consumers</b>. As there is no such "
      "category, the intended answer is <b>(d) None of the above</b>"],
-    # [VERIFICATION FIX] row ID F146 moved out of reader-facing text into this comment
+    # [VERIFICATION FIX] D1 - row ID F146 moved out of reader-facing text into this comment
     ["<b>Pyramid of numbers in a tree-dominated ecosystem</b> (Ex 1(b))", "Posed as an activity "
      "in NCERT. The pyramid is <b>inverted / spindle-shaped</b>, the same non-upright case as the "
      "big-tree/insects/birds example"],
@@ -641,9 +641,11 @@ story.append(body(
     "fix carbon dioxide; (b) in an ecosystem dominated by trees, the pyramid of numbers is "
     "<b>inverted/spindle</b> type; (c) in aquatic ecosystems, the limiting factor for productivity "
     "is <b>light</b>; (d) common detritivores are <b>earthworms</b>; (e) the major reservoir of "
-    # [VERIFICATION FIX] D2 - was "oceans/hydrosphere": "oceans" is not NCERT's wording and
+    # [VERIFICATION FIX] D3 - was "oceans/hydrosphere": "oceans" is not NCERT's wording and
     # contradicted the appendix row above. F189 says the gaseous-cycle (carbon) reservoir is the
     # "atmosphere or hydrosphere"; both answers to Ex 1(e) now agree and match the frozen row.
+    # (D4: this comment previously mislabelled the fix as "D2"; D2 is the separate F114 fix in
+    # the 12.4 block. Defect IDs here now match the inventory's defect register.)
     "carbon on earth is the <b>atmosphere or hydrosphere</b> (the gaseous-cycle reservoir)."))
 story.append(body(
     "<b>2-5 (MCQ):</b> 2. Largest population in a food chain - <b>(a) Producers</b>. 3. The second "
