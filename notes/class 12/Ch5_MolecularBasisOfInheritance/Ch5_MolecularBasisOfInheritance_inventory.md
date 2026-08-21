@@ -1,4 +1,6 @@
-# Frozen Inventory — Molecular Basis of Inheritance (Class 12, Chapter 5)
+# Working Inventory (NOT FROZEN) — Molecular Basis of Inheritance (Class 12, Chapter 5)
+
+> The `# Frozen Inventory` title used by completed chapters is deliberately **withheld** until `1-Z` actually freezes this file. A naive `grep -i frozen` on the old title would have reported this chapter as frozen while six sweeps were still outstanding.
 
 Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — Pass 1a in progress** | Rows so far: **231** (`F001`..`F231`)
 
