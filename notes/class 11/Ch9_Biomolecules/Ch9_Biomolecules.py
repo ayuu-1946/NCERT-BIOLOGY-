@@ -562,8 +562,12 @@ story.append(P("In our skeletal muscle, under anaerobic conditions, <b>lactic ac
 # ---- 9.8.2 How do Enzymes bring about such High Rates of Chemical Conversions? ---- (F195-F212) + Fig 9.4
 # [VERIFICATION FIX] D6: heading read "...High Rates of Catalysis?"; NCERT's own heading is
 # "...High Rates of Chemical Conversions?" - restored verbatim.
+# [VERIFICATION FIX] D9: NCERT's antecedent sentence "The chemical or metabolic conversion
+# refers to a reaction." was absent - the block opened straight at the substrate definition,
+# leaving "conversion" (the word in this very heading) undefined. Restored as F194a.
 story.append(H("9.8.2", "How do Enzymes bring about such High Rates of Chemical Conversions?", 2,
-               keyterm("The chemical which is converted into a product is called a "
+               keyterm("The <b>chemical or metabolic conversion</b> referred to here is a "
+                       "<b>reaction</b>. The chemical which is converted into a product is called a "
                        "<b>'substrate'</b>. Enzymes - i.e. proteins with three-dimensional "
                        "structures including an active site - convert a substrate (S) into a "
                        "product (P). Symbolically: S -> P.")))
@@ -625,12 +629,17 @@ story.append(H("9.8.4", "Factors Affecting Enzyme Activity", 2,
                  "alter the tertiary structure of the protein. These include <b>temperature, pH, "
                  "change in substrate concentration</b> or binding of specific chemicals that "
                  "regulate its activity.")))
-story.append(keyterm("Enzymes generally function in a narrow range of temperature and pH (Figure "
+# [VERIFICATION FIX] D4: NCERT 9.8.4 carries two sub-headings, "Temperature and pH" and
+# "Concentration of Substrate". The content was present but both headings were missing, so the
+# sub-structure of 9.8.4 was untraceable against the book. Restored verbatim as H3 blocks
+# under 9.8.4 (NCERT leaves them unnumbered; the parent number is kept for traceability, s3).
+story.append(H("9.8.4", "Temperature and pH", 3,
+               keyterm("Enzymes generally function in a narrow range of temperature and pH (Figure "
                      "9.5). Each enzyme shows its highest activity at a particular temperature and "
                      "pH called the <b>optimum temperature</b> and <b>optimum pH</b>. Activity "
                      "declines both below and above the optimum value. (Proteinaceous enzymes thus "
                      "exhibit <b>substrate specificity</b> and require optimum temperature and pH "
-                     "for maximal activity.)"))
+                     "for maximal activity.)")))
 story.append(P("<b>Low temperature</b> preserves the enzyme in a temporarily inactive state, "
                "whereas <b>high temperature</b> destroys enzymatic activity because proteins are "
                "<b>denatured</b> by heat."))
@@ -643,12 +652,14 @@ story.append(figure("fig_9_5b.png",
                     "peaks at the optimum temperature and falls on either side.",
                     max_width_cm=7.5))
 story.append(labels_line(["Temperature"]))
-story.append(P("With the increase in substrate concentration, the velocity of the enzymatic "
-               "reaction rises at first. The reaction ultimately reaches a <b>maximum velocity "
-               "(Vmax)</b> which is not exceeded by any further rise in the concentration of the "
-               "substrate. This is because the enzyme molecules are fewer than the substrate "
-               "molecules and, after saturation of these molecules, there are no free enzyme "
-               "molecules to bind with the additional substrate molecules (Figure 9.5)."))
+# [VERIFICATION FIX] D4 (second of the two NCERT 9.8.4 sub-headings).
+story.append(H("9.8.4", "Concentration of Substrate", 3,
+               P("With the increase in substrate concentration, the velocity of the enzymatic "
+                 "reaction rises at first. The reaction ultimately reaches a <b>maximum velocity "
+                 "(Vmax)</b> which is not exceeded by any further rise in the concentration of the "
+                 "substrate. This is because the enzyme molecules are fewer than the substrate "
+                 "molecules and, after saturation of these molecules, there are no free enzyme "
+                 "molecules to bind with the additional substrate molecules (Figure 9.5).")))
 story.append(figure("fig_9_5c.png",
                     "Fig. 9.5 (c) - Effect of change in substrate concentration on enzyme "
                     "activity: velocity rises then plateaus at Vmax.", max_width_cm=7.5))
