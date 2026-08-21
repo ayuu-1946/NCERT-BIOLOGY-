@@ -2,7 +2,7 @@
 
 > The `# Frozen Inventory` title used by completed chapters is deliberately **withheld** until `1-Z` actually freezes this file. A naive `grep -i frozen` on the old title would have reported this chapter as frozen while six sweeps were still outstanding.
 
-Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — Pass 1a complete, 1b not started** | Rows so far: **264** (`F001`..`F264`)
+Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — all six text sweeps (1a-S/H/O, 1b-S/H/O) complete; `1-F` and `1-Z` outstanding** | Rows so far: **506** (`F001`..`F506`)
 
 **Big-chapter protocol (§6, 5 passes).** 31 source pages, 10 numbered sections plus summary and exercises, so this chapter runs `1a → 1b → 2a → 2b → 3`. The source seam is:
 
@@ -20,11 +20,15 @@ Tick legend: `x` = written into the script and verified present in the generated
 | **1a-S** — source read & prose inventory, first half | intro + §5.1–§5.5 | **done** | **231** (`F001`..`F231`) |
 | **1a-H** — heading sweep, first half | intro + §5.1–§5.5 | **done** | **17** (`F232`..`F248`) — 16 in-body + the p1 chapter title |
 | **1a-O** — opener sweep, first half | intro + §5.1–§5.5 | **done** | **16** (`F249`..`F264`) — one per heading-bearing section |
-| **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Summary + Exercises | not started | — |
-| **1b-H** — heading sweep, second half | §5.6–§5.10 | not started | — |
-| **1b-O** — opener sweep, second half | §5.6–§5.10 | not started | — |
+| **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Exercises | **done** | **218** (`F265`..`F482`) — §5.6 onward from the mid-p17 seam, incl. the 14 Exercises questions |
+| **1b-H** — heading sweep, second half | §5.6–§5.10 + Summary + Exercises | **done** | **13** (`F483`..`F495`) — 10 numbered + `Goals of HGP` + `SUMMARY` + `EXERCISES` |
+| **1b-O** — opener sweep, second half | §5.6–§5.10 | **done** | **11** (`F496`..`F506`) — one per heading-bearing section; `SUMMARY`/`EXERCISES` deliberately excluded (see note) |
 | **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | not started | — |
 | **1-Z** — gaps, summary & freeze, whole chapter | steps 7–10 | not started | — |
+
+**Why `1b-H` wrote 13 rows but `1b-O` wrote 11.** Three of the 13 headings do not take an opener row: `EXERCISES` runs straight into question 1 with no prose, and `SUMMARY`'s sentences are owned by **`1-Z` step 8** (BODY-PRESENT / SUMMARY-UNIQUE classification) — giving the Summary an opener row here would put the same sentence under two owners, which is how a sentence gets written twice into the script. `Goals of HGP` *does* take one (`F503`) because it has a genuine stem sentence. So 13 headings − `SUMMARY` − `EXERCISES` = 11 openers.
+
+**Prose/opener boundary was checked, not assumed.** All 11 openers were confirmed *absent* from the 218 `1b-S` prose rows before `1b-O` ran: each section's `1b-S` block starts at sentence 2 (e.g. §5.7's prose starts `F314` "The order and sequence of amino acids…", with the defining opener "Translation refers to…" left to `F499`). Zero overlap, so no sentence is inventoried twice.
 
 Environment re-established this session per §0.2–§0.3: `/vercel/share/neetenv` was **absent** (expected — it does not survive a session boundary) and was rebuilt. CPython 3.13.11 @ `/vercel/share/neetenv`, reportlab 5.0.1, pdfplumber OK, pymupdf 1.28.2, Pillow 12.3.0.
 
@@ -32,30 +36,35 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 
 | Count | Value |
 |---|---|
-| Facts rows so far | **248** (`F001`..`F248`) — first half only |
-| ID range / contiguity | F001..F248 — 0 gaps, 0 duplicates (re-parsed from the table below) |
-| `Type: heading` rows | **17** (`F232`..`F248`) — first half done by `1a-H`: **16 in-body headings + the p1 chapter title = 17**. Second half owned by `1b-H`. |
-| `Type: opener` rows | **0** — owned by sessions 1a-O / 1b-O, deliberately absent here |
+| Facts rows so far | **506** (`F001`..`F506`) — **whole chapter, all text swept** |
+| ID range / contiguity | F001..F506 — 0 gaps, 0 duplicates, IDs monotonically increasing (re-parsed from the table below) |
+| `Type: heading` rows | **30** = `1a-H` 17 (`F232`..`F248`) + `1b-H` 13 (`F483`..`F495`). Chapter title is 1 of the 30, so **in-body headings = 29**. |
+| `Type: opener` rows | **27** = `1a-O` 16 (`F249`..`F264`) + `1b-O` 11 (`F496`..`F506`) |
 | Figure-label rows | **0** — owned by session 1-F |
-| Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **0 labels, 0 figures, no phantom `Fig #` row** — re-run against this file this session; the empty-matrix state is the expected pre-1-F result |
-| `Type` values used (normalized, lower-case) | `concept` 149 · `definition` 28 · `heading` 17 · `number` 16 · `list` 15 · `question` 11 · `name` 9 · `example` 3 = 248; no other value present |
+| Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **0 labels, 0 figures, no phantom `Fig #` row** — re-run against this file this session under the rebuilt venv; the empty-matrix state is the expected pre-1-F result |
+| `Type` values used (normalized, lower-case) | `concept` 260 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 = 506; no other value present |
 | Rows ticked | **0** — Pass 2 not started |
 | Summary sentences classified | not started (1-Z) |
 | Exercise-gap terms | not started (1-Z) |
 | Figures in manifest | not started (1-F) |
 
-Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 248 rows, `F001..F248`, **0 gaps, 0 duplicates**, and the `Type` column asserted to contain only the eight values listed. The census is derivable from its own list — `149 + 28 + 17 + 16 + 15 + 11 + 9 + 3 = 248`, matching the row total.
+Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 506 rows, `F001..F506`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `260 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 506`, matching the row total.
 
-**Heading census, derivable from its own list (§6 step 10).** The 17 `Type: heading` rows are `F232`..`F248`, and each group's size is the **length of the ID list beside it**, machine-counted, not asserted:
+`table` (1 row, `F280`) is a **new `Type` value introduced by `1b-S`**, for the `Table 5.1` codon checker-board caption. It is neither prose nor a figure; see carry-over 9, which records that the table's 64 cells are not text-extractable and that **no session currently owns rebuilding them**.
+
+**Heading census, derivable from its own list (§6 step 10).** The 30 `Type: heading` rows are `F232`..`F248` and `F483`..`F495`; each group's size is the **length of the ID list beside it**, machine-counted, not asserted:
 
 | Group | IDs | Count |
 |---|---|---|
 | Chapter title (p1) | `F232` | 1 |
-| Numbered section banners | `F233` 5.1 · `F236` 5.2 · `F241` 5.3 · `F242` 5.4 · `F245` 5.5 | 5 |
-| Numbered sub-headings | `F234` · `F235` · `F239` · `F240` · `F243` · `F244` · `F246` · `F247` · `F248` | 9 |
-| Unnumbered sub-headings | `F237` · `F238` | 2 |
+| Numbered section banners — first half | `F233` 5.1 · `F236` 5.2 · `F241` 5.3 · `F242` 5.4 · `F245` 5.5 | 5 |
+| Numbered section banners — second half | `F483` 5.6 · `F486` 5.7 · `F487` 5.8 · `F489` 5.9 · `F493` 5.10 | 5 |
+| Numbered sub-headings — first half | `F234` · `F235` · `F239` · `F240` · `F243` · `F244` · `F246` · `F247` · `F248` | 9 |
+| Numbered sub-headings — second half | `F484` · `F485` · `F488` · `F491` · `F492` | 5 |
+| Unnumbered sub-headings | `F237` · `F238` (first half) · `F490` `Goals of HGP` (second half) | 3 |
+| Back-matter headings | `F494` SUMMARY · `F495` EXERCISES | 2 |
 
-`1 + 5 + 9 + 2 = 17` ✓ equals the machine `Type: heading` count. In-body headings excluding the chapter title = **16**. `5.6 GENETIC CODE` (p17) is the seam banner and belongs to `1b-H`.
+`1 + 5 + 5 + 9 + 5 + 3 + 2 = 30` ✓ equals the machine `Type: heading` count. **10 numbered section banners (5 + 5) matches the 10 sections the protocol choice was based on** — an independent cross-check that no banner was missed. In-body headings excluding the chapter title = **29**.
 
 > ## GATE 1 STATUS: **OPEN — blocked. Pass 2 may not begin.**
 >
@@ -561,6 +570,30 @@ Scope of this table after session 1a-S: **prose facts of the first half only**. 
 | F480 | Exercises | question | "12. Why is the Human Genome project called a mega project?" | |
 | F481 | Exercises | question | "13. What is DNA fingerprinting? Mention its application." | |
 | F482 | Exercises | question | "14. Briefly describe the following: (a) Transcription (b) Polymorphism (c) Translation (d) Bioinformatics" | |
+| F483 | 5.6 | heading | "5.6  GENETIC CODE" (p17, 13.0pt Bookman-Demi section banner; the seam banner - mid-page, with the tail of 5.5.3 above it) | |
+| F484 | 5.6.1 | heading | "5.6.1 Mutations and Genetic Code" (p19, 12.0pt Bookman-Demi) | |
+| F485 | 5.6.2 | heading | "5.6.2 tRNA– the Adapter Molecule" (p20, 12.0pt Bookman-Demi; source sets the en-dash flush against "tRNA" with no leading space - reproduce as "tRNA - the Adapter Molecule" in flat ASCII, see carry-over 3) | |
+| F486 | 5.7 | heading | "5.7  TRANSLATION" (p20, 14.0pt Bookman-Demi section banner) | |
+| F487 | 5.8 | heading | "5.8  REGULATION OF GENE EXPRESSION" (p21, 13.0pt Bookman-Demi section banner) | |
+| F488 | 5.8.1 | heading | "5.8.1 The Lac operon" (p22, 12.0pt Bookman-Demi; source casing is "The Lac operon" - capital L, lowercase o, do not normalise to "lac operon") | |
+| F489 | 5.9 | heading | "5.9 HUMAN GENOME PROJECT" (p24, 14.0pt Bookman,Bold section banner; note font family changes from Bookman-Demi to Bookman,Bold at p24 - see carry-over 15) | |
+| F490 | 5.9 (Goals of HGP) | heading | "Goals of HGP" (p24, 10.5pt Bookman,Bold, **unnumbered boxed sub-heading** inside 5.9; its six list items are rows F383-F388) | |
+| F491 | 5.9.1 | heading | "5.9.1 Salient Features of Human Genome" (p26, 12.0pt Bookman,Bold) | |
+| F492 | 5.9.2 | heading | "5.9.2 Applications and Future Challenges" (p26, 12.0pt Bookman,Bold) | |
+| F493 | 5.10 | heading | "5.10 DNA FINGERPRINTING" (p27, 14.0pt Bookman-Demi section banner) | |
+| F494 | Summary | heading | "SUMMARY" (p30, 13.0pt Bookman-Demi) | |
+| F495 | Exercises | heading | "EXERCISES" (p31, **30.0pt AvantGarde-Book - NOT bold**; an all-bold heading filter misses this heading entirely, see carry-over 14) | |
+| F496 | 5.6 | opener | "During replication and transcription a nucleic acid was copied to form another nucleic acid." (p17) | |
+| F497 | 5.6.1 | opener | "The relationships between genes and DNA are best understood by mutation studies." (p19) | |
+| F498 | 5.6.2 | opener | "From the very beginning of the proposition of code, it was clear to Francis Crick that there has to be a mechanism to read the code and also to link it to the amino acids, because amino acids have no structural specialities to read the code uniquely." (p20 - the only place the adapter-molecule rationale is stated) | |
+| F499 | 5.7 | opener | "Translation refers to the process of polymerisation of amino acids to form a polypeptide (Figure 5.13)." (p20 - **the chapter's only definition of translation**; if this opener is skipped the chapter ships without defining translation) | |
+| F500 | 5.8 | opener | "Regulation of gene expression refers to a very broad term that may occur at various levels." (p21 - **the chapter's only definition of regulation of gene expression**) | |
+| F501 | 5.8.1 | opener | "The elucidation of the lac operon was also a result of a close association between a geneticist, Francois Jacob and a biochemist, Jacque Monod." (p22 - carries both names; F350 records only "They were the first...", so this opener is the sole source of Jacob and Monod) | |
+| F502 | 5.9 | opener | "In the preceding sections you have learnt that it is the sequence of bases in DNA that determines the genetic information of a given organism." (p24) | |
+| F503 | 5.9 (Goals of HGP) | opener | "Some of the important goals of HGP were as follows:" (p24 - stem for the six list items F383-F388) | |
+| F504 | 5.9.1 | opener | "Some of the salient observations drawn from human genome project are as follows:" (p26 - stem for the nine list items F409-F417) | |
+| F505 | 5.9.2 | opener | "Deriving meaningful knowledge from the DNA sequences will define research through the coming decades leading to our understanding of biological systems." (p26) | |
+| F506 | 5.10 | opener | "As stated in the preceding section, 99.9 per cent of base sequence among humans is the same." (p27 - the 99.9 per cent premise the whole DNA-fingerprinting section rests on) | |
 
 ## Figure-label matrix
 
@@ -590,3 +623,11 @@ Numbered, added to freely; each is a defect that will not have to be rediscovere
 6. **The hypothetical transcription-unit sequence (F199) is marks-critical and must be reproduced base-for-base**, with the template strand written 3'-to-5' above the coding strand written 5'-to-3', exactly as NCERT orders them.
 7. **Two different human genome figures appear in the first half** — `3.3 x 10^9 bp` haploid (F019) and `6.6 x 10^9 bp` diploid (F057, F166). Keep the haploid/diploid qualifier attached to each; dropping it is a silent factual error.
 8. **F102 is a name row, not the §5.2.1 opener.** It records only the names and the 1952 date; the opening sentence itself is still owed by 1a-O. Do not treat F102 as satisfying that requirement.
+9. **`Table 5.1` (the 64-codon checker-board, p18) is NOT text-extractable and is not a figure either.** F280 records only its caption. The 64 codon-to-amino-acid cells do not come back from `get_text` in any usable row/column order, so the table must be **hand-built in the script from an authoritative codon table and then proof-read cell-by-cell against the rendered source page**. It must not be clipped as an image (it is a table, not a figure, so `1-F` does not own it) and it must not be silently dropped — F288/F289 are exercises that explicitly instruct the student to "take help of the checkerboard", so the chapter is unusable without it. Decide the owner explicitly before Pass 2a; today it is owned by **nobody**, which is exactly how it will go missing.
+10. **`Methodologies :` (p25) is a bold run-in label, not a heading.** 10.5pt bold, followed by light text on the *same* line ("The methods involved two major approaches."). It was deliberately **not** given a heading row by `1b-H`; its content is F395. Thirteen other bold run-in fragments on pp. 17-31 were checked and all are ordinary inline bold emphasis on defined terms mid-sentence (`frameshift insertion`, `aminoacylation of tRNA`, `Sequence Annotation`, `Polymorphism`, `heterogeneous nuclear RNA`, etc.). Do not promote any of them to headings, and do not let a "bold-at-line-start" heuristic do it either.
+11. **NCERT prints the human genome size inconsistently inside §5.10.** F423 (from the opener's following sentence) has `3 x 10^9 bp`; two sentences later F426 has `Imagine trying to compare two sets of 3 x 10^6 base pairs.` The `10^6` is the source's own error. **Reproduce both exactly as printed** and do not "fix" the exponent — but flag it in the chapter's teaching note if one exists, because a student comparing the two lines will otherwise think they misread.
+12. **NCERT mis-numbers the third Goals-of-HGP item as `(iiii)`** (p24, F385). The rewrite prints it as `(iii)` so the list reads i-ii-iii-iv-v-vi, and the remaining items are **not** renumbered. Do not treat the `(iiii)`/`(iii)` difference as a transcription error in a later verification pass.
+13. **Second-half openers carrying load-bearing definitions — delivered by `1b-O`, listed here so no later pass drops them.** `§5.7` (F499) is **the chapter's only definition of translation** and `§5.8` (F500) **the only definition of regulation of gene expression** — the same failure mode as carry-over 1's §5.5/§5.5.2. `§5.8.1` (F501) is the sole source of the names **Francois Jacob and Jacque Monod**. `§5.10` (F506) carries the **99.9 per cent** premise the entire DNA-fingerprinting argument rests on. All four must survive into the script.
+14. **`EXERCISES` (p31) is set in 30.0pt AvantGarde-**Book** — it is not bold.** Every other second-half heading is Demi/Bold, so an "all spans bold" heading filter silently drops the Exercises heading while appearing to work perfectly. The chapter-title row F232 is the same non-bold 30pt display class. Any heading re-parse must accept non-bold display type above ~13pt, or assert these two rows exist by name.
+15. **Book-page folios are 14.0pt bold and outrank every sub-heading.** The printed page numbers `95`-`109` are set 14.0pt `AvantGarde-Demi` / `CenturyGothic,Bold` — they pass a `bold and size >= 10.5` heading filter and yield ~15 phantom heading rows, a *different* trap from the 9.0pt running heads already recorded in `Ch5_TRACKER.md` §4 trap 1 (a 10.5pt floor does **not** exclude these). **Filter numeric-only lines.** Related: the body font family switches from `Bookman-Demi`/`AvantGarde-Demi` to `Bookman,Bold`/`CenturyGothic,Bold` at **p24**, so a filter keyed on the literal string `Demi` misses the §5.9, §5.9.1 and §5.9.2 headings entirely.
+16. **The `RAM HAS RED CAP` frameshift mnemonic is 10.5pt full-bold on its own line, seven times (p19).** Those seven lines are prose examples (F298-F302), **not** headings — full-bold standalone lines at exactly the unnumbered-sub-heading size and weight. `1b-H` excluded them deliberately. Also `anticodon loop` (p20, 10.5pt full-bold standalone) is an **in-figure label for Figure 5.12 owned by `1-F`** - the same class of trap as `Central dogma` in carry-over 2, and it must not become a heading row.
