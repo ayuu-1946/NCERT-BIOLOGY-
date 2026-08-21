@@ -32,7 +32,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer, KeepTogether  # noqa: E402
+from reportlab.platypus import Paragraph, KeepTogether  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch11_OrganismsAndPopulations.pdf")
@@ -947,7 +947,11 @@ story.append(note(
     "rat, <b>0.12</b> for the flour beetle and <b>0.0205</b> for the human population in India in "
     "<b>1981</b>. A doubling in 3 years is a very high intrinsic rate of natural increase."))
 
-story.append(Spacer(1, 6))
+# [VERIFICATION FIX] Pass 3(a) D1: the 6pt Spacer pushed this 2-line closing caption
+# (25pt leading + 3pt spaceBefore + 8pt spaceAfter = 36pt) past the ~40pt left on the
+# last text page, orphaning it onto a page of its own. Dropped the Spacer so it sets
+# on the same page as the appendix it closes; the Caption style's own spaceBefore=3
+# already separates it from the preceding note box.
 story.append(Paragraph(
     "<i>Every fact, number, name, qualifier, table row, figure and figure label in NCERT Class 12 "
     "Chapter 11 is carried above. Nothing outside the source chapter has been added, except the "
