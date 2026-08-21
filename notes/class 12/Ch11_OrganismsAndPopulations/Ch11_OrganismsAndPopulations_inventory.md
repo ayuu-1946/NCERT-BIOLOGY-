@@ -1,5 +1,7 @@
 # Frozen Inventory — Organisms and Populations (Class 12, Chapter 11)
-Source: Chapter/class 12/Chapter 11 - Organisms and Populations.pdf (17 pages: unit opener p1, scientist profile p2, chapter opener p3, body pp4-15, Summary p16, Exercises p17) | Frozen: 2026-08-21 | Rows: 232 facts (incl. 6 figure-label rows carrying 25 in-figure labels, 21 heading rows, 14 section-opener rows) + 17 summary + 2 exercise-gap + 6 figure assets
+Source: Chapter/class 12/Chapter 11 - Organisms and Populations.pdf (17 pages: unit opener p1, scientist profile p2, chapter opener p3, body pp4-15, Summary p16, Exercises p17) | Frozen: 2026-08-21 | Re-audited and re-frozen: 2026-08-21 (Gate 1 verification session) | Rows: **268** facts, F001-F265 plus F030a, F189a, F252a (incl. 5 figure-label rows carrying 22 in-figure labels, 18 heading rows, 16 section-opener rows) + 17 summary + 2 exercise-gap + 6 figure assets
+
+> **Header-count correction (this session).** The first freeze's header claimed "232 facts ... 6 figure-label rows carrying 25 in-figure labels, 21 heading rows, 14 section-opener rows". A programmatic re-count of the table itself gives **265 rows at first freeze** (contiguous F001-F265, no duplicates), **5** figure-label rows carrying **22** labels, **18** `heading` rows and **16** `Opener` rows. The header was wrong, not the table; the numbers above are the re-counted, machine-verified values. Three rows were then **added** by this session's source-to-inventory sweep (see Gate 1 record), taking the total to 268.
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 Pass 1 freezes this file with ticks empty; ticks are filled in during Pass 2 as each block is written.
@@ -40,6 +42,7 @@ Workflow: normal chapter, 3-pass (v6 §6). This file is the Gate 1 artifact.
 | F028 | Chapter opener | Definition | "The 'how-type' questions seek the mechanism behind the process while the 'why-type' questions seek the significance of the process." | |
 | F029 | Chapter opener | Example | "for the first question in our example, the answer might be in terms of the operation of the voice box and the vibrating bone in the bird" | |
 | F030 | Chapter opener | Example | "for the second question the answer may lie in the bird's need to communicate with its mate during breeding season" | |
+| F030a | Chapter opener | Concept | "When you observe nature around you with a scientific frame of mind you will certainly come up with many interesting questions of both types" (antecedent sentence introducing the four embedded questions in F031 and tying them back to the how-type/why-type pair; **added 2026-08-21 by the Gate 1 source-to-inventory sweep — a real Pass 1 gap, not back-dated**) | |
 | F031 | Chapter opener | Question | "Why are night-blooming flowers generally white? How does the bee know which flower has nectar? Why does cactus have so many thorns? How does the chick spures recognise her own mother?" (embedded questions; NCERT prints "chick spures") | |
 | F032 | 11.1 | heading | "11.1 POPULATIONS" | |
 | F033 | 11.1 | Opener | "You have already learnt in previous classes that Ecology is a subject which studies the interactions among organisms and between the organism and its physical (abiotic) environment." | |
@@ -199,6 +202,7 @@ Workflow: normal chapter, 3-pass (v6 §6). This file is the Gate 1 artifact.
 | F187 | 11.1.4 (ii) | Definition | "Secondly, resources need not be limiting for competition to occur; in interference competition, the feeding efficiency of one species might be reduced due to the interfering and inhibitory presence of the other species, even if resources (food and space) are abundant." | |
 | F188 | 11.1.4 (ii) | Definition | "Therefore, competition is best defined as a process in which the fitness of one species (measured in terms of its 'r' the intrinsic rate of increase) is significantly lower in the presence of another species." | |
 | F189 | 11.1.4 (ii) | Scientist | "It is relatively easy to demonstrate in laboratory experiments, as Gause and other experimental ecologists did, when resources are limited the competitively superior species will eventually eliminate the other species, but evidence for such competitive exclusion occurring in nature is not always conclusive." | |
+| F189a | 11.1.4 (ii) | Qualifier | "Strong and persuasive circumstantial evidence does exist however in some cases." (the hedge that bridges "evidence ... is not always conclusive" (F189) to the Abingdon tortoise case (F190); qualifiers "strong and persuasive", "circumstantial", "in some cases" are all marks-critical. **Added 2026-08-21 by the Gate 1 source-to-inventory sweep — a real Pass 1 gap, not back-dated**) | |
 | F190 | 11.1.4 (ii) | Number | "The Abingdon tortoise in Galapagos Islands became extinct within a decade after goats were introduced on the island, apparently due to the greater browsing efficiency of the goats." | |
 | F191 | 11.1.4 (ii) | Definition | "Another evidence for the occurrence of competition in nature comes from what is called 'competitive release'. A species whose distribution is restricted to a small geographical area because of the presence of a competitively superior species, is found to expand its distributional range dramatically when the competing species is experimentally removed." | |
 | F192 | 11.1.4 (ii) | Scientist | "Connell's elegant field experiments showed that on the rocky sea coasts of Scotland, the larger and competitively superior barnacle Balanus dominates the intertidal area, and excludes the smaller barnacle Chathamalus from that zone." | |
@@ -262,6 +266,7 @@ Workflow: normal chapter, 3-pass (v6 §6). This file is the Gate 1 artifact.
 | F250 | Summary | Definition | "As a branch of biology, Ecology is the study of the relationships of living organisms with the abiotic (physico-chemical factors) and biotic components (other species) of their environment." (SUMMARY-UNIQUE gloss: abiotic = physico-chemical factors; biotic = other species) | |
 | F251 | Summary | Qualifier | "its shape indicates whether a population is stationary, growing or declining" (SUMMARY-UNIQUE term "stationary" alongside body's "stable") | |
 | F252 | Summary | Concept | "In either case, growth is ultimately limited by the carrying capacity of the environment." (SUMMARY-UNIQUE: applies to exponential AND logistic) | |
+| F252a | Summary | Qualifier | "When resources are unlimited, the growth is **usually** exponential but when resources become progressively limiting, the growth pattern turns logistic." (SUMMARY-UNIQUE qualifier: the body states the exponential case flatly - "Then the population grows in an exponential or geometric fashion" (F092) - with no hedge; NCERT's "usually" appears only in the Summary and must be preserved exactly. **Added 2026-08-21 by the Gate 1 source-to-inventory sweep — a real Pass 1 gap, not back-dated**) | |
 | F253 | Summary | Definition | "The intrinsic rate of natural increase (r) is a measure of the inherent potential of a population to grow." (SUMMARY-UNIQUE phrasing) | |
 | F254 | Summary | Qualifier | "some predators help in controlling their prey populations" (summary qualifier "some") | |
 | F255 | Exercises | heading | "EXERCISES" | |
@@ -288,7 +293,7 @@ Workflow: normal chapter, 3-pass (v6 §6). This file is the Gate 1 artifact.
 | "The proportion of different age groups of males and females in a population is often presented graphically as age pyramid; its shape indicates whether a population is stationary, growing or declining." | SUMMARY-UNIQUE (term "stationary"; body says "stable", figure says "Stable") | body 11.1.1 (F251 folded beside F054) |
 | "Ecological effects of any factors on a population are generally reflected in its size (population density), which may be expressed in different ways (numbers, biomass, per cent cover, etc.,) depending on the species." | BODY-PRESENT | F057-F063 |
 | "Populations grow through births and immigration and decline through deaths and emigration." | BODY-PRESENT | F074-F078 |
-| "When resources are unlimited, the growth is usually exponential but when resources become progressively limiting, the growth pattern turns logistic." | BODY-PRESENT | F090, F114 |
+| "When resources are unlimited, the growth is usually exponential but when resources become progressively limiting, the growth pattern turns logistic." | **BODY-PRESENT in substance, SUMMARY-UNIQUE in qualifier** (reclassified 2026-08-21: the two growth patterns are body-present, but the hedge "usually" on the exponential case exists only here) | F090, F114 + qualifier folded as F252a into body 11.1.2 exponential block |
 | "In either case, growth is ultimately limited by the carrying capacity of the environment." | SUMMARY-UNIQUE (body ties K only to logistic growth) | body 11.1.2 logistic block (F252) |
 | "The intrinsic rate of natural increase (r) is a measure of the inherent potential of a population to grow." | SUMMARY-UNIQUE (body defines r only as an assessment parameter) | body 11.1.2 (F253 beside F095) |
 | "In nature populations of different species in a habitat do not live in isolation but interact in many ways." | BODY-PRESENT | F141 |
@@ -320,11 +325,49 @@ Portrait note (check 4): the source carries one photograph of a person — the R
 
 ## Gate 1 record
 
-- Facts rows: 265 IDs (F001-F265), covering unit opener, scientist profile, chapter opener, 11.1, 11.1.1, 11.1.2 (incl. Growth Models / Exponential / Logistic), 11.1.3, 11.1.4 (incl. Predation / Competition / Parasitism / Commensalism / Mutualism), Table 11.1, Summary-unique lines and all 10 exercises.
-- Heading rows (`Type: heading`), walked as their own list: F001 (Unit X contents), F011 (scientist), F023 (chapter title), F032 (11.1), F036 (11.1.1), F070 (11.1.2), F085 (Growth Models), F089 ((i) Exponential growth), F113 ((ii) Logistic growth), F128 (11.1.3), F136 (11.1.4), F158 ((i) Predation), F183 ((ii) Competition), F199 ((iii) Parasitism), F220 ((iv) Commensalism), F225 ((v) Mutualism), F249 (SUMMARY), F255 (EXERCISES). Unnumbered sub-headings are all present.
-- Section-opener rows (`Type: Opener`), walked as their own list: F002, F012, F024, F033, F037, F071, F086, F090, F114, F129, F137, F159, F184, F200, F221, F226. Every section's first sentence has its own row.
-- Figure-label matrix: 6 rows (F056, F084, F127, F239, F248 — F239 covers both 11.4 parts) carrying 25 in-figure labels.
-- Every figure in the manifest is `Mono: yes`, `Verified: yes` (visually inspected after conversion at 300 dpi).
-- Exercise-gap terms: 2, both with a planned home in the appendix.
-- SUMMARY-UNIQUE facts: 4 (F250, F251, F252, F253), each folded into a body section row.
-- Inventory file saved to the chapter folder. **Gate 1: GREEN.**
+### Session 2 (2026-08-21) — independent Gate 1 re-audit
+
+Gate 1 was claimed GREEN at the end of session 1. This session re-audited that claim from the source PDF rather than accepting it, because a claimed-green gate that was never independently checked is exactly how Ch9 shipped defective twice.
+
+**Environment (§0, redone from scratch — the sandbox does not persist `.venv`).** `reportlab 5.0.1` / `pdfplumber` / `pymupdf 1.28.2` / `Pillow 12.3.0`, all four imports verified. §0.4 smoke test re-run through `neet_template.py` (H1/H2/H3 + badges, `data_table`, `process_flow`, `note`, `memory_aid`, `title_block`, `figure`): 2 pages, both A4 portrait; smallest rendered glyph **6.0pt** (above the 5.0pt FAIL floor, at the 6.0pt WARN boundary, so the section-number badge and step digits are legible at print size); both embedded figures `mode == "L"`, colorspace 1, extrema (0, 255); the 1-bit B&W threshold render keeps the NOTE solid border and the MEMORY AID dashed border tell-apart-able and both text labels readable. Figure conversion was proved on **Fig 11.5, an originally full-colour photograph** (not a line drawing), and the bee still separates cleanly from the flower and the black background after `convert("L")` + `autocontrast`. `check_pdf.py` then ran end-to-end against the smoke PDF: **exit 0, 0 fail / 0 warn**, checks 4/6/7 correctly SKIP (no inventory passed). Throwaway artifacts stayed in `scratch/ch11op/`.
+
+**Source re-extraction.** Text re-extracted independently with `pdfplumber` from `Chapter/class 12/Chapter 11 - Organisms and Populations.pdf` to `scratch/ch11op/source_fresh.txt` (17 pages) and read start to finish, then swept a second time in the source-to-inventory direction (heading walk, section-opener walk, sentence walk).
+
+**Machine re-count of the frozen table** (the header's own numbers were wrong — see the correction note at the top of this file):
+
+| Metric | Header claimed | Actually in the table | Now |
+|---|---|---|---|
+| Facts rows | 232 | 265 (F001-F265, contiguous, 0 duplicates) | 268 |
+| Figure-label rows / labels | 6 rows / 25 labels | 5 rows / 22 labels | 5 rows / 22 labels |
+| `heading` rows | 21 | 18 | 18 |
+| `Opener` rows | 14 | 16 | 16 (F030a is an antecedent inside an already-opened section, so it is typed `Concept`, not `Opener`) |
+
+**Three UNINVENTORIED items found and added as new rows (real Pass 1 gaps — logged, not back-dated):**
+
+| New row | Section | What was missing | Why it matters |
+|---|---|---|---|
+| **F189a** | 11.1.4 (ii) Competition | "Strong and persuasive circumstantial evidence does exist however in some cases." | A whole NCERT sentence with three qualifiers, sitting between "not always conclusive" (F189) and the Abingdon tortoise case (F190). Drop it and the tortoise example reads as proof rather than as circumstantial evidence — a direct assertion-reason trap. |
+| **F030a** | Chapter opener | "When you observe nature around you with a scientific frame of mind you will certainly come up with many interesting questions of both types" | The antecedent that ties the four embedded questions (F031) back to the how-type/why-type pair (F028). Antecedent sentences are this workflow's most-dropped item (Ch9 D9). |
+| **F252a** | Summary | The qualifier **"usually"** in "the growth is usually exponential" | The body states the exponential case with no hedge (F092). Qualifier drift in either direction is marks-critical (Rule 4). |
+
+**Considered and deliberately NOT given rows** (recorded so a later session does not re-litigate them):
+- "Here is an example." (p4) — pure transitional filler, Rule 3.
+- "In earlier chapters you have learnt that ..." (p4) — framing clause; its factual content is F041.
+- "Whatever might be the ultimate reasons," (p5) — transitional clause into the four processes (F074).
+- "To give you some idea about the magnitude of r values," (p7) — framing clause into F096.
+- "The king felt that fulfilling the minister's bet was so easy. He started with a single grain on the first square and proceeded to fill the other squares following minister's suggested procedure" (p8) — narrative restatement of the doubling rule already frozen verbatim as F109; Rule 3 merge, no fact lost.
+- "Here you can see how co-evolution operates." (p15) — pointer sentence restating F234.
+- The `+` / `-` signs on the Fig 11.2 arrows — not text labels; their meaning is frozen as F080 (B + I vs D + E) and Table 11.1's sign convention (F145).
+
+**Standing Gate 1 conditions, re-verified this session:**
+- Facts rows: **268** — F001-F265 contiguous plus F030a, F189a, F252a. Covers unit opener, scientist profile, chapter opener, 11.1, 11.1.1, 11.1.2 (incl. Growth Models / Exponential / Logistic), 11.1.3, 11.1.4 (incl. Predation / Competition / Parasitism / Commensalism / Mutualism), Table 11.1, the Summary-unique lines and all 10 exercises.
+- Heading rows (`Type: heading`), walked as their own list against the source's headings: F001 (Unit X contents), F011 (RAMDEO MISRA), F023 (chapter title), F032 (11.1 POPULATIONS), F036 (11.1.1), F070 (11.1.2), F085 (Growth Models), F089 ((i) Exponential growth), F113 ((ii) Logistic growth), F128 (11.1.3), F136 (11.1.4), F158 ((i) Predation), F183 ((ii) Competition), F199 ((iii) Parasitism), F220 ((iv) Commensalism), F225 ((v) Mutualism), F249 (SUMMARY), F255 (EXERCISES) — **18 rows, and the source has exactly these 18 headings.** Every unnumbered sub-heading is present. Table 11.1's own title is carried by F146.
+- Section-opener rows (`Type: Opener`), walked as their own list: F002, F012, F024, F033, F037, F071, F086, F090, F114, F129, F137, F159, F184, F200, F221, F226, plus F030a's antecedent — **every section's first sentence has its own row.**
+- Figure-label matrix: **5 rows (F056, F084, F127, F239, F248 — F239 covers both Fig 11.4 parts) carrying 22 in-figure labels.** Verified by running `check_pdf.py`'s own `_extract_labels` against this file: it parses all 22 labels off all 5 rows, with no markdown header row mis-parsed as data (the parser keys each label by the row's Section cell, so the 22 report under 3 section buckets - 11.1.1, 11.1.2, 11.1.4 (v) - which is expected, not a missing row). Labels were re-read off the extracted images themselves, not off the caption text — Fig 11.1 carries exactly 6 (Post-reproductive, Reproductive, Pre-reproductive, Expanding, Stable, Declining), Fig 11.2 exactly 5, Fig 11.3 exactly 7; Fig 11.4(a)/(b) and Fig 11.5 carry no in-figure text, so their rows carry the caption strings.
+- Figure manifest: all 6 assets re-checked on disk this session — `mode == "L"`, extrema `(0, 255)`, and each image visually confirmed to be the figure its caption claims. All `Mono: yes`, `Verified: yes`. **No figure requires manual attention.**
+- Exercise-gap terms: 2 (**community**; **solving r from a doubling time**), both with a planned home in the "Terms used in the exercises" appendix.
+- SUMMARY-UNIQUE facts: **5** — F250, F251, F252, F252a, F253 — each folded into a named body section row.
+- Portrait rule: the RAMDEO MISRA headshot (source p2) is deliberately not extracted; the profile is text-only (F011-F022). No portrait asset exists in `assets/`.
+- Inventory file saved to the chapter folder.
+
+**Gate 1: GREEN** — re-earned on this session's evidence (source re-read + machine re-count + 3 gaps closed), not carried forward from session 1's claim. Pass 2 (write the script) may now begin. Nothing beyond Gate 1 has been started: there is no `Ch11_OrganismsAndPopulations.py` and no chapter PDF yet, so Gate 2 and Gate 3 are **not** claimed.
