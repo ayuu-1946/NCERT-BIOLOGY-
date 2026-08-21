@@ -56,6 +56,10 @@ must read p17; `1b-S` starts at the banner, not at the top of the page.
 | 8 | `1-Z` | steps 7–9 whole chapter | ⬜ not started | exercise-gap scan, summary classification, **freeze** |
 | 9 | — | step 10 | ⬜ not started | machine re-parse of every count |
 
+**Two denominators, one state.** This ledger says **9** because row 9 (step 10, machine re-parse) is
+its own row; the inventory's Session log says **8** because it lists sweeps only. 8 sweeps + 1
+verification = 9. Report whichever you use *with its basis*, never a bare "1 of N".
+
 Then Pass 2a/2b (script), Gate 2 (lint loop to exit 0 on all 8 checks), Pass 3 (dual verification),
 Gate 3.
 
@@ -69,6 +73,16 @@ Gate 3.
 
 No `Ch5_MolecularBasisOfInheritance.py`. No `.pdf`. No `assets/`. **Correct for this stage** — but it
 also means the deliverable is 0% built. One sweep of one half of the source exists.
+
+One further Ch5 file is committed **outside** the chapter folder and is not a deliverable:
+
+    scratch/ch5mbi/full_text.txt   66 KB, 1290 lines — pdfplumber dump of all 31 source pages,
+                                   page-delimited `===== PAGE n =====`
+
+It is a working aid only (§0.5 permits a scratch directory). It is **not** the source of truth: every
+count is re-derived from the inventory and every page-level claim from the source PDF. Do not let a
+future session promote it to a deliverable or read facts out of it instead of the PDF — the figures
+and in-figure labels `1-F` needs do not exist in a text dump at all.
 
 ### Machine-derived state of the inventory
 
@@ -119,7 +133,7 @@ re-checks `ls /vercel/share/neetenv/bin/python` first**; sandboxes lose it.
 re-reading it is how sweeps contaminate each other.** Append `Type: heading` rows continuing from
 `F231` (so `F232…`). Touch no existing row.
 
-### Target: 16 heading rows
+### Target: 17 heading lines on pp. 1–17 (16 in-body + the p1 chapter title)
 
 Reconstructed from the PDF this session at line level (not span level — see trap 2):
 
@@ -220,3 +234,4 @@ The deliverable is one merged PDF — **never two half-PDFs**.
 | `1a-S` | Inventory H1 was `# Frozen Inventory`, copied from completed chapters, while line 3 said NOT FROZEN. Retitled `# Working Inventory (NOT FROZEN)`; frozen title now withheld until `1-Z` earns it. |
 | `1a-S` scoping | `Central dogma` (p4) was mis-scoped to `1a-H` as a heading. It is a 10.5pt Light diagram label → reassigned to `1-F` as an in-figure label. |
 | repo roll-up | Done tally re-derived by counting ✅ rows (`awk`) rather than incremented: 11 of 32 (Class 11: 6, Class 12: 5). Ch5's ▶️ row is excluded because Gate 1 is open. |
+| tracker audit (consistency-only session, no sweep run) | Every Ch5 claim in this file, the inventory, `CHAPTER_TRACKER.md` and `CHAPTER_STATUS.md` re-derived from disk: **231 rows / F001..F231 / 0 gaps / 0 dups / 0 ticked** ✓ · `Type` census 149·28·16·15·11·9·3 = 231 ✓ · 0 heading, 0 opener, 0 figure-label rows ✓ · H1 still `# Working Inventory (NOT FROZEN)` ✓ · no `.py`, no `.pdf`, no `assets/` ✓ · source PDF `/Count 31` = 31 pp ✓ · `5.6 GENETIC CODE` banner on **p17**, confirming the mid-page seam ✓ · 10 section banners on pp. 2/6/10/10/13/17/20/21/24/27 ✓ · sub-headings on the exact pages §4 claims (5.1.1 p2, 5.1.2 p5, 5.2.1 p7, 5.2.2 p8, 5.4.1 p10, 5.4.2 p12, 5.5.1 p13, 5.5.2 p14, 5.5.3 p15), unnumbered subs p6/p7, `Central dogma` p4 ✓ · captions `Figure 5.1`–`5.16` **with 5.4a/5.4b present ⇒ 16 numbers / 17 assets** ✓ · repo Done tally re-counted = **11 ✅ rows** ✓. **Three inconsistencies found and fixed:** (a) §4 was headed "Target: 16 heading rows" above a 17-row table → retitled to state 17 lines = 16 in-body + chapter title; (b) inventory said "1 of 8" where this ledger says 9 → both now state their basis (§2 note); (c) `scratch/ch5mbi/full_text.txt` was committed but recorded nowhere → now listed in §3 as a non-deliverable working aid. **Caveat:** `/vercel/share/neetenv` is absent again (expected), so `_extract_labels` was not run under the venv — its parser logic was replicated with system `python3` and returns **0 label rows**, matching the claim; re-run it properly next session. |

@@ -59,7 +59,7 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 > | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | **not started** — meaningful only after 1-F |
 > | Header counts match a re-parse of the table; IDs contiguous | done for the rows that exist — re-parsed this session |
 > | Exercise-gap terms and SUMMARY-UNIQUE folding | **not started** — 1-Z |
-> | Pass 1's sessions have each run and reported a machine-derived count | 1 of 8 (`1a-S`) |
+> | Pass 1's sessions have each run and reported a machine-derived count | **1 of 8 sweep sessions** (`1a-S`) — this file's Session log counts the 8 sweeps only; `Ch5_TRACKER.md` §2 counts **9** because it adds the closing step-10 machine re-parse as its own row. Same state, two denominators: 8 sweeps + 1 verification = 9 ledger sessions. |
 > | Inventory file saved to the chapter folder | done — this file |
 
 ## Facts
