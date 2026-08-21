@@ -32,5 +32,10 @@ story.append(memory_aid("MICE - Mortality, Immigration, Competition, Emigration.
 story.append(_shared_figure("fig_11_3.png",
                         "Fig. 11.3 - Population growth curve: a exponential, b logistic, K carrying capacity.",
                         ASSETS))
+# colour-carrying source figure (originally a full-colour photograph) - proves the
+# convert("L") + autocontrast pipeline, per SUPREME COMMAND PROMPT v6 SS0.4 item 4
+story.append(_shared_figure("fig_11_5.png",
+                        "Fig. 11.5 - Showing bee - a pollinator on orchid flower.",
+                        ASSETS))
 
 build_pdf(os.path.join(HERE, "smoke.pdf"), story, title="Smoke Test")
