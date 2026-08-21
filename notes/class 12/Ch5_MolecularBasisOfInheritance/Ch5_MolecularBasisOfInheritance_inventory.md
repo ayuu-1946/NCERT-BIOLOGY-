@@ -2,7 +2,7 @@
 
 > The `# Frozen Inventory` title used by completed chapters is deliberately **withheld** until `1-Z` actually freezes this file. A naive `grep -i frozen` on the old title would have reported this chapter as frozen while six sweeps were still outstanding.
 
-Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — Pass 1a in progress** | Rows so far: **231** (`F001`..`F231`)
+Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — Pass 1a complete, 1b not started** | Rows so far: **264** (`F001`..`F264`)
 
 **Big-chapter protocol (§6, 5 passes).** 31 source pages, 10 numbered sections plus summary and exercises, so this chapter runs `1a → 1b → 2a → 2b → 3`. The source seam is:
 
@@ -17,9 +17,9 @@ Tick legend: `x` = written into the script and verified present in the generated
 
 | Session | Scope | State | Rows added (machine-derived) |
 |---|---|---|---|
-| **1a-S** — source read & prose inventory, first half | intro + §5.1–§5.5 | **done** (this session) | **231** (`F001`..`F231`) |
-| **1a-H** — heading sweep, first half | intro + §5.1–§5.5 | not started | — |
-| **1a-O** — opener sweep, first half | intro + §5.1–§5.5 | not started | — |
+| **1a-S** — source read & prose inventory, first half | intro + §5.1–§5.5 | **done** | **231** (`F001`..`F231`) |
+| **1a-H** — heading sweep, first half | intro + §5.1–§5.5 | **done** | **17** (`F232`..`F248`) — 16 in-body + the p1 chapter title |
+| **1a-O** — opener sweep, first half | intro + §5.1–§5.5 | **done** | **16** (`F249`..`F264`) — one per heading-bearing section |
 | **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Summary + Exercises | not started | — |
 | **1b-H** — heading sweep, second half | §5.6–§5.10 | not started | — |
 | **1b-O** — opener sweep, second half | §5.6–§5.10 | not started | — |
@@ -32,19 +32,30 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 
 | Count | Value |
 |---|---|
-| Facts rows so far | **231** (`F001`..`F231`) — first half only |
-| ID range / contiguity | F001..F231 — 0 gaps, 0 duplicates (re-parsed from the table below) |
-| `Type: heading` rows | **0** — owned by sessions 1a-H / 1b-H, deliberately absent here |
+| Facts rows so far | **248** (`F001`..`F248`) — first half only |
+| ID range / contiguity | F001..F248 — 0 gaps, 0 duplicates (re-parsed from the table below) |
+| `Type: heading` rows | **17** (`F232`..`F248`) — first half done by `1a-H`: **16 in-body headings + the p1 chapter title = 17**. Second half owned by `1b-H`. |
 | `Type: opener` rows | **0** — owned by sessions 1a-O / 1b-O, deliberately absent here |
 | Figure-label rows | **0** — owned by session 1-F |
 | Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **0 labels, 0 figures, no phantom `Fig #` row** — re-run against this file this session; the empty-matrix state is the expected pre-1-F result |
-| `Type` values used (normalized, lower-case) | `concept` 149 · `definition` 28 · `number` 16 · `list` 15 · `question` 11 · `name` 9 · `example` 3 = 231; no other value present |
+| `Type` values used (normalized, lower-case) | `concept` 149 · `definition` 28 · `heading` 17 · `number` 16 · `list` 15 · `question` 11 · `name` 9 · `example` 3 = 248; no other value present |
 | Rows ticked | **0** — Pass 2 not started |
 | Summary sentences classified | not started (1-Z) |
 | Exercise-gap terms | not started (1-Z) |
 | Figures in manifest | not started (1-F) |
 
-Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 231 rows, `F001..F231`, **0 gaps, 0 duplicates**, and the `Type` column asserted to contain only the seven values listed. The census is derivable from its own list — `149 + 28 + 16 + 15 + 11 + 9 + 3 = 231`, matching the row total.
+Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 248 rows, `F001..F248`, **0 gaps, 0 duplicates**, and the `Type` column asserted to contain only the eight values listed. The census is derivable from its own list — `149 + 28 + 17 + 16 + 15 + 11 + 9 + 3 = 248`, matching the row total.
+
+**Heading census, derivable from its own list (§6 step 10).** The 17 `Type: heading` rows are `F232`..`F248`, and each group's size is the **length of the ID list beside it**, machine-counted, not asserted:
+
+| Group | IDs | Count |
+|---|---|---|
+| Chapter title (p1) | `F232` | 1 |
+| Numbered section banners | `F233` 5.1 · `F236` 5.2 · `F241` 5.3 · `F242` 5.4 · `F245` 5.5 | 5 |
+| Numbered sub-headings | `F234` · `F235` · `F239` · `F240` · `F243` · `F244` · `F246` · `F247` · `F248` | 9 |
+| Unnumbered sub-headings | `F237` · `F238` | 2 |
+
+`1 + 5 + 9 + 2 = 17` ✓ equals the machine `Type: heading` count. In-body headings excluding the chapter title = **16**. `5.6 GENETIC CODE` (p17) is the seam banner and belongs to `1b-H`.
 
 > ## GATE 1 STATUS: **OPEN — blocked. Pass 2 may not begin.**
 >
@@ -52,14 +63,14 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 > |---|---|
 > | Environment (§0.2–0.3) re-established | done — venv rebuilt, all four imports verified under that interpreter |
 > | Every fact has a Facts row (three source reads) | **partial** — first half done (231 rows); second half is 1b-S |
-> | Every heading has a row incl. unnumbered sub-headings | **not started** — 1a-H, 1b-H |
-> | Every section's opening sentence has a row | **not started** — 1a-O, 1b-O |
+> | Every heading has a row incl. unnumbered sub-headings | **partial** — first half done by `1a-H`: 17 rows `F232..F248`, including both unnumbered subs (`F237`, `F238`). Second half is `1b-H`. |
+> | Every section's opening sentence has a row | **partial** — first half done by `1a-O`; second half is `1b-O` |
 > | Every in-figure label has a matrix row, harvested by opening each rendered asset | **not started** — 1-F |
 > | Every figure `Mono: yes` and `Verified: yes` | **not started** — 1-F |
 > | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | **not started** — meaningful only after 1-F |
 > | Header counts match a re-parse of the table; IDs contiguous | done for the rows that exist — re-parsed this session |
 > | Exercise-gap terms and SUMMARY-UNIQUE folding | **not started** — 1-Z |
-> | Pass 1's sessions have each run and reported a machine-derived count | 1 of 8 (`1a-S`) |
+> | Pass 1's sessions have each run and reported a machine-derived count | **1 of 8 sweep sessions** (`1a-S`) — this file's Session log counts the 8 sweeps only; `Ch5_TRACKER.md` §2 counts **9** because it adds the closing step-10 machine re-parse as its own row. Same state, two denominators: 8 sweeps + 1 verification = 9 ledger sessions. |
 > | Inventory file saved to the chapter folder | done — this file |
 
 ## Facts
@@ -299,6 +310,39 @@ Scope of this table after session 1a-S: **prose facts of the first half only**. 
 | F229 | 5.5.3 | number | "hnRNA undergoes additional processing called as capping and tailing. In capping an unusual nucleotide (methyl guanosine triphosphate) is added to the 5'-end of hnRNA. In tailing, adenylate residues (200-300) are added at 3'-end in a template independent manner." | |
 | F230 | 5.5.3 | concept | "It is the fully processed hnRNA, now called mRNA, that is transported out of the nucleus for translation (Figure 5.11)." | |
 | F231 | 5.5.3 | concept | "The significance of such complexities is now beginning to be understood. The split-gene arrangements represent probably an ancient feature of the genome. The presence of introns is reminiscent of antiquity, and the process of splicing represents the dominance of RNA-world. In recent times, the understanding of RNA and RNA-dependent processes in the living system have assumed more importance." | |
+| F232 | — | heading | "MOLECULAR BASIS OF INHERITANCE" (chapter title, p1; set 30.0pt AvantGarde-**Book** over two lines "MOLECULAR BASIS OF" / "INHERITANCE", preceded by "CHAPTER 5" at 26.0pt — **not bold**, see trap 6) | |
+| F233 | 5.1 | heading | "5.1 THE DNA" (p2, 14.0pt Bookman-Demi section banner) | |
+| F234 | 5.1.1 | heading | "5.1.1 Structure of Polynucleotide Chain" (p2, 12.0pt) | |
+| F235 | 5.1.2 | heading | "5.1.2 Packaging of DNA Helix" (p5, 12.0pt; source prints two spaces after the number) | |
+| F236 | 5.2 | heading | "5.2 THE SEARCH FOR GENETIC MATERIAL" (p6, 14.0pt banner; 10 small-caps spans — see traps 2 and 7) | |
+| F237 | 5.2 | heading | "Transforming Principle" (p6, 10.5pt full-bold, **unnumbered sub-heading** inside 5.2) | |
+| F238 | 5.2 | heading | "Biochemical Characterisation of Transforming Principle" (p7, 10.5pt full-bold, **unnumbered sub-heading** inside 5.2) | |
+| F239 | 5.2.1 | heading | "5.2.1 The Genetic Material is DNA" (p7, 12.0pt) | |
+| F240 | 5.2.2 | heading | "5.2.2 Properties of Genetic Material (DNA versus RNA)" (p8, 12.0pt) | |
+| F241 | 5.3 | heading | "5.3 RNA WORLD" (p10, 14.0pt banner) | |
+| F242 | 5.4 | heading | "5.4 REPLICATION" (p10, 14.0pt banner) | |
+| F243 | 5.4.1 | heading | "5.4.1 The Experimental Proof" (p10, 12.0pt) | |
+| F244 | 5.4.2 | heading | "5.4.2 The Machinery and the Enzymes" (p12, 12.0pt) | |
+| F245 | 5.5 | heading | "5.5 TRANSCRIPTION" (p13, 14.0pt banner) | |
+| F246 | 5.5.1 | heading | "5.5.1 Transcription Unit" (p13, 12.0pt) | |
+| F247 | 5.5.2 | heading | "5.5.2 Transcription Unit and the Gene" (p14, 12.0pt) | |
+| F248 | 5.5.3 | heading | "5.5.3 Types of RNA and the process of Transcription" (p15, 12.0pt) | |
+| F249 | 5.1 | opener | "DNA is a long polymer of deoxyribonucleotides." (p2 — **defines DNA**; the whole section leans on it) | |
+| F250 | 5.1.1 | opener | "Let us recapitulate the chemical structure of a polynucleotide chain (DNA or RNA)." (p2) | |
+| F251 | 5.1.2 | opener | "Taken the distance between two consecutive base pairs as 0.34 nm (0.34x10^-9 m), if the length of DNA double helix in a typical mammalian cell is calculated (simply by multiplying the total number of bp with distance between two consecutive bp, that is, 6.6 x 10^9 bp x 0.34 x 10^-9 m/bp), it comes out to be approximately 2.2 metres." (p5 — carries the 2.2 m calculation; overlaps F056/F057 by design, an opener row is still required) | |
+| F252 | 5.2 | opener | "Even though the discovery of nuclein by Meischer and the proposition for principles of inheritance by Mendel were almost at the same time, but that the DNA acts as a genetic material took long to be discovered and proven." (p6) | |
+| F253 | 5.2 (Transforming Principle) | opener | "In 1928, Frederick Griffith, in a series of experiments with Streptococcus pneumoniae (bacterium responsible for pneumonia), witnessed a miraculous transformation in the bacteria." (p6 — opener of the unnumbered sub-heading `F237`) | |
+| F254 | 5.2 (Biochemical Characterisation) | opener | "Prior to the work of Oswald Avery, Colin MacLeod and Maclyn McCarty (1933-44), the genetic material was thought to be a protein." (p7 — opener of the unnumbered sub-heading `F238`) | |
+| F255 | 5.2.1 | opener | "The unequivocal proof that DNA is the genetic material came from the experiments of Alfred Hershey and Martha Chase (1952)." (p7) | |
+| F256 | 5.2.2 | opener | "From the foregoing discussion, it is clear that the debate between proteins versus DNA as the genetic material was unequivocally resolved from Hershey-Chase experiment." (p8) | |
+| F257 | 5.3 | opener | "From foregoing discussion, an immediate question becomes evident - which is the first genetic material?" (p10) | |
+| F258 | 5.4 | opener | "While proposing the double helical structure for DNA, Watson and Crick had immediately proposed a scheme for replication of DNA." (p10) | |
+| F259 | 5.4.1 | opener | "It is now proven that DNA replicates semiconservatively." (p10) | |
+| F260 | 5.4.2 | opener | "In living cells, such as E. coli, the process of replication requires a set of catalysts (enzymes)." (p12) | |
+| F261 | 5.5 | opener | "The process of copying genetic information from one strand of the DNA into RNA is termed as transcription." (p13 — **the only place transcription is defined**; §6 step 5's load-bearing case. Recovered by column-aware reading: a naive y-sort splices the `Figure 5.8 Replicating Fork` caption into mid-sentence — see trap 8) | |
+| F262 | 5.5.1 | opener | "A transcription unit in DNA is defined primarily by the three regions in the DNA: (i) A Promoter (ii) The Structural gene (iii) A Terminator" (p13 — the sentence ends at the three-item list; the "convention in defining the two strands" sentence that follows is a separate sentence, not part of the opener) | |
+| F263 | 5.5.2 | opener | "A gene is defined as the functional unit of inheritance." (p14 — **the only place gene is defined**; §6 step 5's second load-bearing case, and the word sits in the heading `F247` directly above it) | |
+| F264 | 5.5.3 | opener | "In bacteria, there are three major types of RNAs: mRNA (messenger RNA), tRNA (transfer RNA), and rRNA (ribosomal RNA)." (p15) | |
 
 ## Figure-label matrix
 
