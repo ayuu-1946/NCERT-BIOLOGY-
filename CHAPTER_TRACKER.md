@@ -101,7 +101,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | Chapter | Status |
 |---|---|
 | 7. Human Health and Disease | ⬜ Not done |
-| 8. Microbes in Human Welfare | ⬜ Not done |
+| 8. Microbes in Human Welfare | ▶️ **`1-F` figure sweep COMPLETE — GATE 1 OPEN** — **9/9 verified mono assets** (`mode=L`, 300 dpi) covering **8 numbered figures**, 8.2 split into `8_2a` (panels a+b) + `8_2c`; no unnumbered plates, so the denominator is 9 · rects hand-pinned in `extract_figures.py`, each with a comment recording what pinned it · four-part crop gate passed (**A word-grazing · B drawings-extent · B2 raster-extent · C border ink**) — **B2 was added this chapter** because check B reports `no drawings` for the four photographic plates 8.4–8.7 and would have left them mechanically unchecked · check A is **vacuous for 5 of 9 assets** (0 words in rect; every callout is artwork, not text) · **2 rects re-pinned after the gate caught real clipping**: `fig_8_1` (`82,78,…`→`56,76,…`, flagellum sliced off panel c) and `fig_8_3` (`148,…`→`93,…`, petri dish a clipped) · 4 gate hits explained and accepted in writing (page-header motif, neighbouring 8.2c leader artwork, caption tint panels) · all 9 PNGs eyeballed on a fresh contact sheet · figure manifest + caption-verbatim check + figure-label matrix written. **NO Facts table, no `F###` row, no script, no PDF — `1-S`/`1-H`/`1-O`/`1-Z` all outstanding** |
 
 ### Unit IX — Biotechnology
 

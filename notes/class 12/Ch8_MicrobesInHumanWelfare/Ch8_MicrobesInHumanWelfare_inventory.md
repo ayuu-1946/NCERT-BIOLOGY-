@@ -12,7 +12,35 @@ Assets: `assets/` — **9 PNG files** (8 numbered NCERT figures; 8.2 split into 
 
 Captions below are the NCERT caption text, and each was **checked against the
 rendered PNG** (not merely against the figure number) per the extraction
-skill's step 6.
+skill's step 6 — the Ch5 `fig_5_3` failure (row existed, caption described a
+different plate) is what this column guards against.
+
+Caption strings were additionally **re-extracted verbatim from the source text
+layer** and matched character-for-character against the table below, with their
+own bounding boxes recorded so the crop's bottom edge could be pinned relative
+to them:
+
+| NCERT caption | Caption bbox (pt) | On page |
+|---|---|---|
+| `Figure 8.1 Bacteria: (a) Rod-shaped, magnified 1500X; …` | y 374.4–440.6, x 58.8–371.8 | 2 |
+| `Figure 8.2 Viruses: (a) A bacteriophage; …` | y 392.7–447.8, x 282.5–525.4 | 2 |
+| `Figure 8.3 (a) Colonies of bacteria growing in a petri dish; …` | y 681.9–702.7, x 141.8–429.9 | 2 |
+| `Figure 8.4 Fermentors` | y 255.6–265.2, x 109.2–220.8 | 4 |
+| `Figure 8.5 Fermentation Plant` | y 460.6–470.2, x 83.3–233.3 | 4 |
+| `Figure 8.6 Secondary treatment` | y 271.0–280.6, x 98.4–256.6 | 6 |
+| `Figure 8.7 An aerial view of a sewage plant` | y 226.4–235.9, x 298.3–509.1 | 7 |
+| `Figure 8.8 A typical biogas plant` | y 354.0–363.6, x 128.9–289.7 | 8 |
+
+**Convention followed:** captions are **excluded** from every crop (the Ch5
+convention), because the notes restate captions as text. Each rect's bottom
+edge therefore stops short of its caption's `y0`.
+
+**One edge worth recording:** the Figure 8.1 caption block's bbox is 313 pt wide
+(x 58.8–371.8) and so *overlaps fig_8_2c's* column in x, at y 374–441. A
+word-level check of the y 368–394 band returns exactly **one** word on the whole
+page — fig 8.2's own `(c)` panel letter at x 361.0, `frac=1.00` inside the rect.
+The wide bbox is a multi-line block artifact, not caption text sitting in the
+crop, so `fig_8_2c`'s bottom edge at y=388 is safe.
 
 | Asset | NCERT figure | Caption (as printed) | Src page | Rect (pt) | Kind | Verified content |
 |---|---|---|---|---|---|---|
