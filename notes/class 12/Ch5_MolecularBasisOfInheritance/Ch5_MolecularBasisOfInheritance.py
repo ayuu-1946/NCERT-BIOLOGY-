@@ -8,22 +8,24 @@ Built to: SUPREME COMMAND PROMPT.md v6 (fixed-pass gated edition, shared canon m
 Run from the repository root:
     python3 "notes/class 12/Ch5_MolecularBasisOfInheritance/Ch5_MolecularBasisOfInheritance.py"
 
-=== BUILD STATE: PASS 2a (FIRST HALF ONLY) ===
-This chapter is a big chapter (646 inventory rows, 19 figures), so it is built under the
-§6 big-chapter split protocol: Pass 2 is divided into 2a (first half) and 2b (second half).
+=== BUILD STATE: PASS 2 COMPLETE (2a + 2b), GATE 2 CLOSED ===
+This chapter is a big chapter (646 inventory rows, 18 assets), so it was built under the
+§6 big-chapter split protocol: Pass 2 divided into 2a (first half) and 2b (second half).
 
-  Pass 2a  -- THIS SESSION -- source pp. 1-17, NCERT sections 5.1 .. 5.5.3.
-              Inventory rows carried: F001-F264 (facts, headings, openers of the first
-              half) + F511-F601 (figure-label rows for figures 5.1-5.10 and the
-              unnumbered central-dogma panel). 355 rows total.
-  Pass 2b  -- NOT YET WRITTEN -- source pp. 17-33, sections 5.5.4 .. 5.10 + QUICK RECAP
-              + APPENDIX, rows F265-F510 and F602-F646.
+  Pass 2a  -- source pp. 1-17, NCERT sections 5.1 .. 5.5.3. Rows F001-F264 (facts,
+              headings, openers of the first half) + F511-F601 (figure-label rows for
+              figures 5.1-5.10 and the unnumbered central-dogma panel).
+  Pass 2b  -- source pp. 17-31, sections 5.6 .. 5.10 + QUICK RECAP + the exercise-terms
+              table. Rows F265-F510 and F602-F646. (There is no NCERT section 5.5.4:
+              §5.5 ends at 5.5.3 and the next banner is 5.6 GENETIC CODE. An earlier
+              handoff listed "5.5.4" in 2b's scope; the inventory's own section column
+              has no such value.)
 
-Because 2b has not run, this file deliberately ends after 5.5.3 and there is NO
-QUICK RECAP and NO APPENDIX block yet -- those are chapter-closing blocks and belong to
-the pass that finishes the chapter. Do not add them here; do not treat their absence as
-a defect of 2a. Pass 3 (layout/vision audit) and the check_pdf.py full gate run only
-after 2b, on the complete story.
+The whole story is therefore present: §5.1 through §5.10, QUICK RECAP, and TERMS USED IN
+THE EXERCISES. Gate 2 closed with check_pdf.py exiting 0 on the complete file, with all
+646 inventory rows ticked after a row-by-row presence audit against the built PDF
+(scratch/ch5_2b/tickaudit.py). Pass 3 (the human layout/vision + content-drift audit)
+has NOT run.
 
 Figures: every asset in assets/ was clip-extracted at 300 dpi and pushed through
 convert_figures_mono.py (PIL convert("L") + autocontrast). figure() re-asserts
@@ -229,6 +231,14 @@ story.append(Paragraph(
     STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(Paragraph(
+    "<b>Who found DNA, and when.</b> DNA as an <b>acidic substance present in the "
+    "nucleus</b> was first identified by <b>Friedrich Meischer in 1869</b>, and he named "
+    "it <b>'Nuclein'</b>. Its structure, however, stayed out of reach for a very long "
+    "time, because a polymer that long could not be isolated intact with the techniques "
+    "then available.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
     "<b>How the double helix was established.</b> In 1953, <b>James Watson</b> and "
     "<b>Francis Crick</b> proposed a strikingly simple but famous <b>Double Helix</b> "
     "model for the structure of DNA. The model rested on two pieces of evidence supplied "
@@ -421,6 +431,15 @@ story.append(Paragraph(
     "chemically diverse and abundant. The experiments in this section settle the question "
     "in favour of DNA.",
     STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "<b>Where the search had reached by 1926.</b> By <b>1926</b>, the quest to determine "
+    "the mechanism for genetic inheritance had reached the <b>molecular level</b>. "
+    "Previous discoveries by <b>Gregor Mendel</b>, <b>Walter Sutton</b>, <b>Thomas Hunt "
+    "Morgan</b> and numerous other scientists had narrowed the search to the "
+    "<b>chromosomes located in the nucleus</b> of most cells -- so the remaining question "
+    "was which molecule <i>in</i> the chromosome carried the information.",
+    STYLES["Body"]))
 
 # --- Transforming Principle (F237 unnumbered heading, F253 opener) ---
 story.append(heading("5.2", "Transforming Principle", 2))
@@ -565,7 +584,9 @@ story.append(heading("5.2.2", "Properties of Genetic Material (DNA versus RNA)",
 
 story.append(Paragraph(
     "From the foregoing discussion, it is clear that the debate between proteins versus "
-    "DNA as the genetic material is settled in favour of DNA. But the question of why DNA "
+    "DNA as the genetic material is settled in favour of DNA. It subsequently became "
+    "clear, however, that in <b>some viruses RNA is the genetic material</b> -- for "
+    "example <b>Tobacco Mosaic virus</b> and <b>QB bacteriophage</b>. But the question of why DNA "
     "is the predominant genetic material, whereas RNA performs the dynamic functions of "
     "messenger and adapter, has to be answered from the <b>differences between the "
     "chemical structures of the two nucleic acid molecules</b>. A molecule that can act "
@@ -609,7 +630,9 @@ story.append(data_table([
      "The <b>two strands of DNA, being complementary, if separated by heating come "
      "together when appropriate conditions are provided</b>. Further, being "
      "<b>double-stranded, DNA can resist changes brought about by evolution</b> -- one "
-     "strand can be repaired using the other as reference."],
+     "strand can be repaired using the other as reference. NCERT stops here on purpose: "
+     "the detailed discussion of this requires understanding the process of repair in "
+     "DNA, which is studied in higher classes."],
     ["<b>Mutation rate</b>",
      "<b>RNA mutates at a faster rate</b>. Consequently, <b>viruses having RNA genome "
      "and having shorter life span mutate and evolve faster</b>."],
@@ -947,6 +970,15 @@ story.append(Paragraph(
     "promoter, and an <b>enhancer</b> is one such example.",
     STYLES["Body"]))
 story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "The chapter's own worked duplex makes the two strand names concrete:",
+    STYLES["Body"]))
+story.append(data_table([
+    ["Strand", "Sequence as printed"],
+    ["<b>Template Strand</b>", "3'-ATGCATGCATGCATGCATGCATGC-5'"],
+    ["<b>Coding Strand</b>", "5'-TACGTACGTACGTACGTACGTACG-3'"],
+], col_widths=[2.4, 6.6]))
+story.append(Spacer(1, 4))
 story.append(note(
     "<b>Writing the RNA from a given DNA sequence.</b> NCERT gives a DNA duplex and asks "
     "you to write the sequence of RNA transcribed from it. Work in three moves: "
@@ -954,6 +986,23 @@ story.append(note(
     "(ii) read it and write the <b>complement</b>; (iii) put <b>U wherever the rule would "
     "give T</b>. The quick check: the finished RNA is identical to the <b>coding "
     "strand</b> with every T replaced by U, and it runs 5' to 3'."))
+story.append(Spacer(1, 3))
+# Rule 2 gap (inventory exercise-gap scan, Q3 and Q4 = F471, F472). Both questions hand
+# you the same 28-nucleotide strand and differ only in what is asked of it, so they are
+# worked here, next to the strand definitions they depend on.
+story.append(note(
+    "<b>The two sequence questions in the exercises, worked.</b> Both start from the same "
+    "strand, written 5' to 3': <b>5'-ATGCATGCATGCATGCATGCATGCATGC-3'</b>, that is ATGC "
+    "repeated seven times.<br/>"
+    "<b>(a) Write the complementary strand in the 5'-to-3' direction.</b> Complement each "
+    "base (A with T, G with C) to get 3'-TACGTACGTACGTACGTACGTACGTACG-5', then read that "
+    "back the other way because the answer is wanted 5' to 3': "
+    "<b>5'-GCATGCATGCATGCATGCATGCATGCAT-3'</b>. Complementing without reversing is the "
+    "standard slip.<br/>"
+    "<b>(b) The same strand is the coding strand of a transcription unit -- write the "
+    "mRNA.</b> The coding strand already has the RNA's sequence and polarity, so only the "
+    "base substitution is needed: <b>5'-AUGCAUGCAUGCAUGCAUGCAUGCAUGC-3'</b>. No reversal "
+    "here, because the mRNA matches the coding strand rather than complementing it."))
 story.append(Spacer(1, 3))
 story.append(memory_aid(
     "The strand names are counter-intuitive and are examined for exactly that reason: the "
@@ -2149,6 +2198,10 @@ story.append(Spacer(1, 5))
 # "primary step" phrasing is kept to the Recap; the body keeps NCERT's "in prokaryotes /
 # predominant" qualifier.
 story.append(heading("QR", "QUICK RECAP", 1))
+story.append(Paragraph(
+    "This is the chapter's <b>SUMMARY</b>, rewritten denser: every sentence of the NCERT "
+    "summary is accounted for here or has been folded into the body section it belongs to.",
+    STYLES["Body"]))
 story.append(Paragraph(
     "&bull; <b>Nucleic acids are long polymers of nucleotides.</b> While <b>DNA stores "
     "genetic information, RNA mostly helps in transfer and expression of information</b>.",
