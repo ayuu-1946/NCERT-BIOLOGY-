@@ -44,7 +44,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import KeepTogether, Paragraph, Spacer  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch8_MicrobesInHumanWelfare.pdf")
@@ -831,22 +831,26 @@ story.append(b1("<b>Q13(b) - microbes in soil:</b> nitrogen fixation, phosphorus
                 "mycorrhiza, addition of organic matter, and decomposition of organic matter "
                 "(see 8.6)."))
 story.append(gap())
-# F198 - the BOD data table given in exercise Q11, reproduced exactly
-story.append(body(
-    "<b>Exercise Q11 data (reproduce these values exactly).</b> Three samples of waste water were "
-    "collected before water treatment, and their <b>BOD</b> recorded as follows:"))
-story.append(data_table([
-    ["Sample", "BOD recorded", "Which water it is, by BOD"],
-    ["<b>A</b>", "<b>20mg/L</b>", "River water - low BOD, so least polluting potential"],
-    ["<b>B</b>", "<b>8mg/L</b>", "Secondary effluent - lowest BOD, already treated"],
-    ["<b>C</b>", "<b>400mg/L</b>", "Untreated sewage water - highest BOD, most polluting potential"],
-], col_widths=[1.6, 2.4, 6.0]))
-story.append(gap())
-story.append(note(
-    "The three waters named in Q11 are <b>river water</b>, <b>untreated sewage water</b> and "
-    "<b>secondary effluent</b>, and the values given are <b>20mg/L, 8mg/L and 400mg/L, "
-    "respectively</b>, for samples A, B and C. Match them by the rule that <b>the greater the BOD "
-    "of waste water, the more is its polluting potential</b>."))
+# F198 - the BOD data table given in exercise Q11, reproduced exactly.
+# Lead-in + table + its NOTE are bound as one block: the NOTE reads the table's three
+# rows back as the Q11 answer, so a page break between them strands the NOTE on a page
+# of its own with the values it discusses overleaf (Pass 3(a) layout defect).
+story.append(KeepTogether([
+    body("<b>Exercise Q11 data (reproduce these values exactly).</b> Three samples of waste water "
+         "were collected before water treatment, and their <b>BOD</b> recorded as follows:"),
+    data_table([
+        ["Sample", "BOD recorded", "Which water it is, by BOD"],
+        ["<b>A</b>", "<b>20mg/L</b>", "River water - low BOD, so least polluting potential"],
+        ["<b>B</b>", "<b>8mg/L</b>", "Secondary effluent - lowest BOD, already treated"],
+        ["<b>C</b>", "<b>400mg/L</b>",
+         "Untreated sewage water - highest BOD, most polluting potential"],
+    ], col_widths=[1.6, 2.4, 6.0]),
+    gap(),
+    note("The three waters named in Q11 are <b>river water</b>, <b>untreated sewage water</b> and "
+         "<b>secondary effluent</b>, and the values given are <b>20mg/L, 8mg/L and 400mg/L, "
+         "respectively</b>, for samples A, B and C. Match them by the rule that <b>the greater "
+         "the BOD of waste water, the more is its polluting potential</b>."),
+]))
 
 
 if __name__ == "__main__":
