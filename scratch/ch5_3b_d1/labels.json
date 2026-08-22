@@ -1,0 +1,576 @@
+{
+ "Fig 5.1": [
+  [
+   "F511",
+   "\"5′ phosphate\""
+  ],
+  [
+   "F512",
+   "\"3′ hydroxyl\""
+  ],
+  [
+   "F513",
+   "\"A\""
+  ],
+  [
+   "F514",
+   "\"T\""
+  ],
+  [
+   "F515",
+   "\"G\""
+  ],
+  [
+   "F516",
+   "\"C\""
+  ]
+ ],
+ "Fig 5.2": [
+  [
+   "F517",
+   "\"5′\""
+  ],
+  [
+   "F518",
+   "\"3′\""
+  ],
+  [
+   "F519",
+   "\"hydrogen bonds\""
+  ],
+  [
+   "F520",
+   "\"A\""
+  ],
+  [
+   "F521",
+   "\"T\""
+  ],
+  [
+   "F522",
+   "\"G\""
+  ],
+  [
+   "F523",
+   "\"C\""
+  ]
+ ],
+ "Fig 5.3": [
+  [
+   "F524",
+   "\"Base pairs\""
+  ],
+  [
+   "F525",
+   "\"Adenine\""
+  ],
+  [
+   "F526",
+   "\"Thymine\""
+  ],
+  [
+   "F527",
+   "\"Guanine\""
+  ],
+  [
+   "F528",
+   "\"Cytosine\""
+  ],
+  [
+   "F529",
+   "\"Sugar phosphate backbone\""
+  ],
+  [
+   "F530",
+   "\"Central dogma\""
+  ],
+  [
+   "F531",
+   "\"DNA\""
+  ],
+  [
+   "F532",
+   "\"RNA\""
+  ],
+  [
+   "F533",
+   "\"Protein\""
+  ]
+ ],
+ "Fig 5.4a": [
+  [
+   "F534",
+   "\"DNA\""
+  ],
+  [
+   "F535",
+   "\"H1 histone\""
+  ],
+  [
+   "F536",
+   "\"Histone octamer\""
+  ],
+  [
+   "F537",
+   "\"Core of histone molecules\""
+  ]
+ ],
+ "Fig 5.5": [
+  [
+   "F538",
+   "\"Bacteriophage\""
+  ],
+  [
+   "F539",
+   "\"Radioactive (35S) labelled protein capsule\""
+  ],
+  [
+   "F540",
+   "\"Radioactive (32P) labelled DNA\""
+  ],
+  [
+   "F541",
+   "\"Infection\""
+  ],
+  [
+   "F542",
+   "\"Blending\""
+  ],
+  [
+   "F543",
+   "\"Centrifugation\""
+  ],
+  [
+   "F544",
+   "\"No radioactive (35S) detected in cells\""
+  ],
+  [
+   "F545",
+   "\"Radioactive (35S) detected in supernatant\""
+  ],
+  [
+   "F546",
+   "\"Radioactive (32P) detected in cells\""
+  ],
+  [
+   "F547",
+   "\"No radioactivity detected in supernatant\""
+  ]
+ ],
+ "Fig 5.6": [
+  [
+   "F548",
+   "\"5′\""
+  ],
+  [
+   "F549",
+   "\"3′\""
+  ],
+  [
+   "F550",
+   "\"A\""
+  ],
+  [
+   "F551",
+   "\"T\""
+  ],
+  [
+   "F552",
+   "\"G\""
+  ],
+  [
+   "F553",
+   "\"C\""
+  ]
+ ],
+ "Fig 5.7": [
+  [
+   "F554",
+   "\"15N-DNA\""
+  ],
+  [
+   "F555",
+   "\"14N-DNA\""
+  ],
+  [
+   "F556",
+   "\"Generation I\""
+  ],
+  [
+   "F557",
+   "\"Generation II\""
+  ],
+  [
+   "F558",
+   "\"20 min\""
+  ],
+  [
+   "F559",
+   "\"40 min\""
+  ],
+  [
+   "F560",
+   "\"Gravitational force\""
+  ],
+  [
+   "F561",
+   "\"Heavy\""
+  ],
+  [
+   "F562",
+   "\"Hybrid\""
+  ],
+  [
+   "F563",
+   "\"Light\""
+  ],
+  [
+   "F564",
+   "\"Separation of DNA by Centrifugation\""
+  ]
+ ],
+ "Fig 5.8": [
+  [
+   "F565",
+   "\"Template DNA (parental strands)\""
+  ],
+  [
+   "F566",
+   "\"Continuous synthesis\""
+  ],
+  [
+   "F567",
+   "\"Discontinuous synthesis\""
+  ],
+  [
+   "F568",
+   "\"Newly synthesised strands\""
+  ],
+  [
+   "F569",
+   "\"5′\""
+  ],
+  [
+   "F570",
+   "\"3′\""
+  ]
+ ],
+ "Fig 5.9": [
+  [
+   "F571",
+   "\"Transcription start site\""
+  ],
+  [
+   "F572",
+   "\"Promoter\""
+  ],
+  [
+   "F573",
+   "\"Structural gene\""
+  ],
+  [
+   "F574",
+   "\"Template strand\""
+  ],
+  [
+   "F575",
+   "\"Terminator\""
+  ],
+  [
+   "F576",
+   "\"Coding strand\""
+  ],
+  [
+   "F577",
+   "\"5′\""
+  ],
+  [
+   "F578",
+   "\"3′\""
+  ]
+ ],
+ "Fig 5.10": [
+  [
+   "F579",
+   "\"Promoter\""
+  ],
+  [
+   "F580",
+   "\"RNA polymerase\""
+  ],
+  [
+   "F581",
+   "\"Sigma factor\""
+  ],
+  [
+   "F582",
+   "\"DNA helix\""
+  ],
+  [
+   "F583",
+   "\"Initiation\""
+  ],
+  [
+   "F584",
+   "\"Elongation\""
+  ],
+  [
+   "F585",
+   "\"Termination\""
+  ],
+  [
+   "F586",
+   "\"Terminator\""
+  ],
+  [
+   "F587",
+   "\"RNA\""
+  ],
+  [
+   "F588",
+   "\"Rho factor\""
+  ],
+  [
+   "F589",
+   "\"5′\""
+  ],
+  [
+   "F590",
+   "\"3′\""
+  ]
+ ],
+ "Fig 5.11": [
+  [
+   "F591",
+   "\"Capping\""
+  ],
+  [
+   "F592",
+   "\"Cap\""
+  ],
+  [
+   "F593",
+   "\"Intron\""
+  ],
+  [
+   "F594",
+   "\"Exon\""
+  ],
+  [
+   "F595",
+   "\"RNA splicing\""
+  ],
+  [
+   "F596",
+   "\"Polyadenylation\""
+  ],
+  [
+   "F597",
+   "\"Poly A tail\""
+  ],
+  [
+   "F598",
+   "\"Messenger RNA\""
+  ],
+  [
+   "F599",
+   "\"3′ mRNA\""
+  ],
+  [
+   "F600",
+   "\"5′\""
+  ],
+  [
+   "F601",
+   "\"3′\""
+  ]
+ ],
+ "Fig 5.12": [
+  [
+   "F602",
+   "\"tRNA\""
+  ],
+  [
+   "F603",
+   "\"Ser\""
+  ],
+  [
+   "F604",
+   "\"Tyr\""
+  ],
+  [
+   "F605",
+   "\"Anticodon\""
+  ],
+  [
+   "F606",
+   "\"anticodon loop\""
+  ],
+  [
+   "F607",
+   "\"Codon\""
+  ],
+  [
+   "F608",
+   "\"mRNA\""
+  ],
+  [
+   "F609",
+   "\"5′\""
+  ],
+  [
+   "F610",
+   "\"3′\""
+  ]
+ ],
+ "Fig 5.13": [
+  [
+   "F611",
+   "\"Growing polypeptide chain\""
+  ],
+  [
+   "F612",
+   "\"tRNA\""
+  ],
+  [
+   "F613",
+   "\"mRNA\""
+  ],
+  [
+   "F614",
+   "\"Ribosome\""
+  ],
+  [
+   "F615",
+   "\"Gly\""
+  ],
+  [
+   "F616",
+   "\"Leu\""
+  ],
+  [
+   "F617",
+   "\"Tyr\""
+  ],
+  [
+   "F618",
+   "\"Ser\""
+  ],
+  [
+   "F619",
+   "\"Ala\""
+  ],
+  [
+   "F620",
+   "\"Val\""
+  ],
+  [
+   "F621",
+   "\"Asn\""
+  ],
+  [
+   "F622",
+   "\"5′\""
+  ],
+  [
+   "F623",
+   "\"3′\""
+  ]
+ ],
+ "Fig 5.14": [
+  [
+   "F624",
+   "\"In absence of inducer\""
+  ],
+  [
+   "F625",
+   "\"In presence of inducer\""
+  ],
+  [
+   "F626",
+   "\"Repressor mRNA\""
+  ],
+  [
+   "F627",
+   "\"Repressor\""
+  ],
+  [
+   "F628",
+   "\"Repressor binds to the operator region (o) and prevents RNA polymerase from transcribing the operon\""
+  ],
+  [
+   "F629",
+   "\"lac mRNA\""
+  ],
+  [
+   "F630",
+   "\"Transcription\""
+  ],
+  [
+   "F631",
+   "\"Translation\""
+  ],
+  [
+   "F632",
+   "\"β-galactosidase\""
+  ],
+  [
+   "F633",
+   "\"permease\""
+  ],
+  [
+   "F634",
+   "\"transacetylase\""
+  ],
+  [
+   "F635",
+   "\"Inducer\""
+  ],
+  [
+   "F636",
+   "\"Inactive repressor\""
+  ]
+ ],
+ "Fig 5.16": [
+  [
+   "F637",
+   "\"Paternal chromosome\""
+  ],
+  [
+   "F638",
+   "\"Maternal chromosome\""
+  ],
+  [
+   "F639",
+   "\"Chromosome 7\""
+  ],
+  [
+   "F640",
+   "\"Chromosome 2\""
+  ],
+  [
+   "F641",
+   "\"Chromosome 16\""
+  ],
+  [
+   "F642",
+   "\"DNA from individual A\""
+  ],
+  [
+   "F643",
+   "\"DNA from individual B\""
+  ],
+  [
+   "F644",
+   "\"DNA from crime scene (C)\""
+  ],
+  [
+   "F645",
+   "\"Number of short tandem repeats\""
+  ],
+  [
+   "F646",
+   "\"Amplified repeats, separated by size on a gel, give a DNA fingerprint\""
+  ]
+ ]
+}
