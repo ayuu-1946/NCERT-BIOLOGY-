@@ -442,7 +442,7 @@ story.append(Paragraph(
     STYLES["Body"]))
 
 # --- Transforming Principle (F237 unnumbered heading, F253 opener) ---
-story.append(heading("5.2", "Transforming Principle", 2))
+story.append(heading("5.2a", "Transforming Principle", 2))
 
 story.append(Paragraph(
     "In <b>1928</b>, <b>Frederick Griffith</b>, in a series of experiments with "
@@ -485,7 +485,7 @@ story.append(Paragraph(
     STYLES["Body"]))
 
 # --- Biochemical Characterisation (F238 heading, F254 opener, F101 question) ---
-story.append(heading("5.2", "Biochemical Characterisation of Transforming Principle", 2))
+story.append(heading("5.2b", "Biochemical Characterisation of Transforming Principle", 2))
 
 story.append(Paragraph(
     "Prior to the work of <b>Oswald Avery, Colin MacLeod and Maclyn McCarty "
@@ -1846,7 +1846,7 @@ story.append(Spacer(1, 4))
 
 # Goals of HGP -- F490 is an unnumbered boxed sub-heading inside 5.9, not a numbered
 # section, so it is set as a level-3 heading with no number.
-story.append(heading("Goals", "Goals of HGP", 3))
+story.append(heading("5.9a", "Goals of HGP", 3))
 story.append(Paragraph(
     "Some of the <b>important goals of HGP</b> were as follows:", STYLES["Body"]))
 story.append(data_table([
@@ -2208,65 +2208,65 @@ story.append(Paragraph(
     "summary is accounted for here or has been folded into the body section it belongs to.",
     STYLES["Body"]))
 story.append(Paragraph(
-    "&bull; <b>Nucleic acids are long polymers of nucleotides.</b> While <b>DNA stores "
+    "<bullet>&bull;</bullet> <b>Nucleic acids are long polymers of nucleotides.</b> While <b>DNA stores "
     "genetic information, RNA mostly helps in transfer and expression of information</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; Though <b>DNA and RNA both function as genetic material</b>, <b>DNA being "
+    "<bullet>&bull;</bullet> Though <b>DNA and RNA both function as genetic material</b>, <b>DNA being "
     "chemically and structurally more stable is a better genetic material</b>. However, "
     "<b>RNA is the first to evolve and DNA was derived from RNA</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; The <b>hallmark of the double stranded helical structure of DNA is the hydrogen "
+    "<bullet>&bull;</bullet> The <b>hallmark of the double stranded helical structure of DNA is the hydrogen "
     "bonding between the bases from opposite strands</b>. The rule is that <b>Adenine pairs "
     "with Thymine through two H-bonds, and Guanine with Cytosine through three "
     "H-bonds</b>. This <b>makes one strand complementary to the other</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; The <b>DNA replicates semiconservatively</b>, the process being <b>guided by "
+    "<bullet>&bull;</bullet> The <b>DNA replicates semiconservatively</b>, the process being <b>guided by "
     "the complementary H-bonding</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; A <b>segment of DNA that codes for RNA</b> may in a simplistic term be referred "
+    "<bullet>&bull;</bullet> A <b>segment of DNA that codes for RNA</b> may in a simplistic term be referred "
     "to as a <b>gene</b>. During <b>transcription</b> also, <b>one of the strands of DNA "
     "acts as a template to direct the synthesis of complementary RNA</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; In <b>bacteria, the transcribed mRNA is functional, hence can directly be "
+    "<bullet>&bull;</bullet> In <b>bacteria, the transcribed mRNA is functional, hence can directly be "
     "translated</b>. In <b>eukaryotes, the gene is split</b>: the <b>coding sequences, "
     "exons, are interrupted by non-coding sequences, introns</b>. <b>Introns are removed "
     "and exons are joined to produce functional RNA by splicing.</b>",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; The <b>messenger RNA contains the base sequences that are read in a combination "
+    "<bullet>&bull;</bullet> The <b>messenger RNA contains the base sequences that are read in a combination "
     "of three (to make triplet genetic code) to code for an amino acid</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; The <b>genetic code is read again on the principle of complementarity by tRNA "
+    "<bullet>&bull;</bullet> The <b>genetic code is read again on the principle of complementarity by tRNA "
     "that acts as an adapter molecule</b>. There are <b>specific tRNAs for every amino "
     "acid</b>. The <b>tRNA binds to specific amino acid at one end and pairs through "
     "H-bonding with codes on mRNA through its anticodons</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; The <b>site of translation (protein synthesis) is ribosomes</b>, which <b>bind "
+    "<bullet>&bull;</bullet> The <b>site of translation (protein synthesis) is ribosomes</b>, which <b>bind "
     "to mRNA and provide platform for joining of amino acids</b>. <b>One of the rRNA acts "
     "as a catalyst for peptide bond formation, which is an example of RNA enzyme "
     "(ribozyme).</b>",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; <b>Regulation of transcription is the primary step for regulation of gene "
+    "<bullet>&bull;</bullet> <b>Regulation of transcription is the primary step for regulation of gene "
     "expression.</b> In <b>bacteria, more than one gene is arranged together and regulated "
     "in units called as operons</b>. The <b>operon is regulated by the amount of lactose in "
     "the medium where the bacteria are grown</b>; therefore this <b>regulation can also be "
     "viewed as regulation of enzyme synthesis by its substrate</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; <b>Human genome project was a mega project that aimed to sequence every base in "
+    "<bullet>&bull;</bullet> <b>Human genome project was a mega project that aimed to sequence every base in "
     "human genome.</b> This <b>project has yielded much new information</b>, and <b>many new "
     "areas and avenues have opened up as a consequence of the project</b>.",
     STYLES["Bullet1"]))
 story.append(Paragraph(
-    "&bull; <b>DNA Fingerprinting is a technique to find out variations in individuals of a "
+    "<bullet>&bull;</bullet> <b>DNA Fingerprinting is a technique to find out variations in individuals of a "
     "population at DNA level.</b> It <b>works on the principle of polymorphism in DNA "
     "sequences</b>.",
     STYLES["Bullet1"]))

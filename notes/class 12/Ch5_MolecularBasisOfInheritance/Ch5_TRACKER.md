@@ -1,7 +1,17 @@
 # Ch5 Molecular Basis of Inheritance — Chapter Tracker
 
-**Status: ▶️ IN PROGRESS — PASS 1 COMPLETE (GATE 1 CLOSED); PASS 2a + 2b WRITTEN; GATE 2 CLOSED 2026-08-22. GATE 3 NEVER RUN.**
-**646 of 646 frozen rows ticked, each audited against the built PDF. Script 2360 lines; PDF 31 pages / 1977 KB; 18 verified mono assets. `check_pdf.py` PASS — 0 fail, 0 warn, all 9 checks green; `--strict` exits 0.**
+**Status: ▶️ IN PROGRESS — PASS 1 COMPLETE (GATE 1 CLOSED); PASS 2a + 2b WRITTEN; GATE 2 CLOSED 2026-08-22. GATE 3a COMPLETE AND ITS FIXES LANDED; GATE 3b NEVER RUN, SO GATE 3 IS STILL OPEN.**
+**646 of 646 frozen rows ticked, each audited against the built PDF. PDF **30 pages** with **17 embedded mono images**; 18 verified mono assets on disk (`fig_5_15` retained on disk, removed from the PDF by owner decision). `check_pdf.py` PASS — 0 fail, 0 warn, all 9 checks green; `--strict` exits 0, re-confirmed after this session's fixes.**
+*(Corrected this session: this line read "PDF 31 pages / 1977 KB" and "Script 2360 lines". A machine re-open of the built PDF returns **30** pages, and the page-count claim is the one that matters for the page walk, so the stale number is replaced rather than carried. The 18-vs-17 distinction — assets on disk vs images embedded — is now stated explicitly, since collapsing the two is the recurring miscount in this chapter.)*
+
+**Gate 3a closure + fix pass (this session) — Gate 3a is COMPLETE; Gate 3 stays OPEN because 3b has never run.**
+Environment first (§0.2): `/vercel/share/neetenv` was **absent again** — the expected state — and was rebuilt and import-verified before anything was diagnosed. The incoming handoff's findings were re-derived rather than trusted, and one of them did not survive.
+
+- **Badges — FIXED.** Three heading badges were non-unique or non-numeric because NCERT leaves the sub-heading unnumbered: two rendered `5.2` on p6 (colliding with the parent §5.2 banner) and one rendered `Goals` on p24. Convention adopted: **letter suffix**. `heading("5.2","Transforming Principle")` → **`5.2a`**; `heading("5.2","Biochemical Characterisation of Transforming Principle")` → **`5.2b`**; `heading("Goals","Goals of HGP")` → **`5.9a`**. Changed **at the three call sites only** — this is an **authoring rule, and `neet_template.py` was NOT touched**, so no other chapter is affected. `QR` and `EX` are intentional non-numeric mnemonic badges and were left alone by decision.
+- **Bullets — FIXED, but the inherited diagnosis was wrong.** The handoff claimed **21 literal `•` glyphs "bypassing Check 5"**. Re-derived by machine scan: **zero typed U+2022 characters in the script.** All 21 bullets are ReportLab markup — **9 correct hanging `<bullet>&bull;</bullet>`** and **12 in Quick Recap as inline `&bull;` with no hanging indent**. Check 5 was therefore never bypassed and **`check_pdf.py` was correctly left unpatched**; the actual defect was **markup inconsistency**. The **12 Quick Recap paragraphs were normalized to `<bullet>&bull;</bullet>`**; `Bullet1` already sets `firstLineIndent=-8`, so they now hang like every other bullet. The large `●` on p24 was checked and is **`keyterm()`, a separate template component — not an inconsistent bullet** — and was left as-is. *Lesson for future sessions: a "banned glyph" finding must be confirmed against the source text by scan, because ReportLab entity markup and typed literals look identical in a rendered page.*
+- **Baked-in double borders — ACCEPTED, CLOSED, DO NOT RE-RAISE.** `fig_5_4b`, `fig_5_6`, `fig_5_7`, `fig_5_9` carry NCERT's own thin frame inside the crop, so they show a double border inside the template's figure box. Same disposition as the source watermark: an **inherited cosmetic artifact of the source artwork**, not a defect. Re-cropping four assets costs real session time for no pedagogical gain.
+- **Post-fix verification.** `check_pdf.py --strict` re-run: **PASS, 0 fail / 0 warn** — 30 pages, **646/646 ticked**, **136/136 labels**, 17 embedded mono images, smallest text 6.0 pt, no badge-plate collisions, no orphaned headings. Every metric identical to the pre-fix run, so the edits regressed nothing. Pages **6, 24, 29** were re-rendered at 140 dpi and re-inspected by eye to confirm the three badges and all 12 re-hung bullets.
+- **What Gate 3a did NOT do.** It walked pages and assets. It did **not** compare inventory rows against the source. **Gate 3b — the bidirectional full read of all 646 rows (Direction 1: every row traced to the NCERT source; Direction 2: every source sentence checked for UNINVENTORIED facts) — has never been run and is the only remaining work before Gate 3 can close.** Per the Ch13 precedent, this is where genuine Pass-1 gaps surface, so it must not be shortcut.
 
 **Gate 2 closure (2026-08-22) — every claim re-derived from disk, not inherited.** The incoming handoff was explicitly unsure how far Pass 2b had reached, so nothing in it was trusted:
 
@@ -153,13 +163,35 @@ re-checks `ls /vercel/share/neetenv/bin/python` first**; sandboxes lose it.
 
 ---
 
-## 4. NEXT SESSION — Pass 2a (script), whole chapter
+## 4. NEXT SESSION — Gate 3b, the bidirectional full read
 
-**Gate 1 is CLOSED. `1-F` and `1-Z` are both done, so the next session is Pass 2a — writing
-`Ch5_MolecularBasisOfInheritance.py`.** The inventory is **frozen at 646 rows (`F001..F646`)**:
-no session may append Facts rows, and **no session may append headings from `F231`** — that ID has
-been occupied since `1a-S` closed. During Pass 2 the only permitted edit to the inventory is
-ticking a row's `Ticked` column.
+**Gates 1 and 2 are CLOSED. Gate 3a is CLOSED (page/asset walk done, both fixable defects fixed,
+strict re-run still PASS 0/0). The next session is Gate 3b — and it is the only thing left before
+Gate 3 can close.**
+
+Scope, both directions, all **646** rows:
+
+1. **Direction 1 — every inventory row traced to the NCERT source.** Confirm the row's wording is
+   faithful to the source page it cites, not merely present somewhere in the PDF. Gate 2's tick
+   audit compared rows against the **built PDF's own text**, which cannot detect a row that was
+   mis-transcribed in Pass 1 — both sides of that comparison come from us. Direction 1 is the
+   first check that puts the **source** on one side.
+2. **Direction 2 — every source sentence checked for UNINVENTORIED facts.** Read the 31 source
+   pages and flag anything carrying exam weight that no `F###` row covers. Per the **Ch13
+   precedent this is where real Pass-1 gaps surface**, so it must not be shortcut or sampled.
+
+Rules that still bind: the inventory is **frozen at 646 rows (`F001..F646`)** — Gate 3b may
+**flag** an UNINVENTORIED fact but may **not append a Facts row** to fix it; record the finding and
+raise it for an owner decision. **No session may append headings from `F231`** (occupied since
+`1a-S`). Rebuild `/vercel/share/neetenv` first (§0.2) — it is reliably absent at session start.
+
+Do **not** re-raise, they are closed by owner decision: the **source watermark** on the embedded
+assets, and the **baked-in double borders** on `fig_5_4b` / `fig_5_6` / `fig_5_7` / `fig_5_9`.
+
+*(Superseded, kept per §7: this section previously read "NEXT SESSION — Pass 2a (script), whole
+chapter" and briefed the writing of `Ch5_MolecularBasisOfInheritance.py`. Pass 2a and 2b are
+complete, Gate 2 closed 2026-08-22, and the script and 30-page PDF both exist on disk — obeying the
+old brief would have re-run a finished pass.)*
 
 Everything below in §4a is the **historical `1a-H` scoping record**, retained for audit; it is
 **not** an instruction to any future session.
@@ -327,6 +359,7 @@ The deliverable is one merged PDF — **never two half-PDFs**.
 ## 6. Corrections log
 
 | When | Correction |
+| Gate 3a fix pass (this session — **Gate 3a CLOSED, fixes landed, Gate 3 still OPEN pending 3b**) | Environment first: `/vercel/share/neetenv` was **absent again** (expected, §0.2) and was rebuilt and import-verified before any diagnosis. **Three defects dispositioned, two fixed in the script, one accepted; one inherited finding disproved.** (a) **Badges FIXED** — three heading badges were non-unique or non-numeric because NCERT leaves the sub-heading unnumbered (two rendered `5.2` on p6, colliding with the parent §5.2 banner; one rendered `Goals` on p24). Owner chose the **letter-suffix** convention: now **`5.2a` Transforming Principle**, **`5.2b` Biochemical Characterisation of Transforming Principle**, **`5.9a` Goals of HGP**. Applied **at the three call sites only** — an **authoring rule; `neet_template.py` was NOT modified**, so no other chapter is affected. `QR`/`EX` left as intentional non-numeric mnemonic badges. (b) **The handoff's "21 literal `•` glyphs bypassing Check 5" claim was RE-DERIVED AND FOUND FALSE** — a machine scan returns **zero typed U+2022 characters**; all 21 bullets are ReportLab markup, **9 as correct hanging `<bullet>&bull;</bullet>`** and **12 in Quick Recap as inline `&bull;` with no hanging indent**. Check 5 was never bypassed, so **`check_pdf.py` was correctly left unpatched**; the real defect was **markup inconsistency**, and the **12 Quick Recap paragraphs were normalized to `<bullet>&bull;</bullet>`** (`Bullet1` already sets `firstLineIndent=-8`, so they now hang like the rest). The large `●` on p24 was investigated and is **`keyterm()`, a different template component — not an inconsistent bullet** — left as-is. *Lesson: a "banned glyph" finding must be confirmed by scanning the source text, since entity markup and typed literals are indistinguishable in a rendered page.* (c) **Baked-in double borders ACCEPTED and CLOSED** — `fig_5_4b`/`fig_5_6`/`fig_5_7`/`fig_5_9` carry NCERT's own thin frame inside the crop; same disposition as the source watermark, an inherited cosmetic artifact of the source artwork. **Do not re-raise.** (d) **Stale current-state numbers corrected in this tracker's own header**: it claimed **"PDF 31 pages"** where a machine re-open returns **30**, and it conflated **18 assets on disk** with **17 images embedded in the PDF** (`fig_5_15` is retained on disk but removed from the PDF by owner decision) — both restated, the page count being the one that governs the page walk. (e) **§4 was stale and dangerous**: it was still headed **"NEXT SESSION — Pass 2a (script)"** and briefed writing `Ch5_MolecularBasisOfInheritance.py`, a pass that closed with Gate 2 on 2026-08-22 — obeying it would have re-run a finished pass over an existing script and PDF. §4 now carries the real **Gate 3b** brief (both directions, all 646 rows, the frozen-inventory "flag but do not append" rule, the §0.2 venv note, and the explicit do-not-re-raise list), with the superseded text quoted rather than deleted. **Post-fix verification:** `check_pdf.py --strict` **PASS, 0 fail / 0 warn** — 30 pages, 646/646 ticked, 136/136 labels, 17 mono images, smallest text 6.0 pt — every metric identical to the pre-fix run, so the edits regressed nothing; pages **6, 24, 29** re-rendered at 140 dpi and re-inspected by eye. **No inventory Facts row was touched, no history rewritten, `neet_template.py` untouched, Gate 3 not closed.** |
 |---|---|
 | `1a-S` | Inventory H1 was `# Frozen Inventory`, copied from completed chapters, while line 3 said NOT FROZEN. Retitled `# Working Inventory (NOT FROZEN)`; frozen title now withheld until `1-Z` earns it. |
 | `1a-S` scoping | `Central dogma` (p4) was mis-scoped to `1a-H` as a heading. It is a 10.5pt Light diagram label → reassigned to `1-F` as an in-figure label. |
