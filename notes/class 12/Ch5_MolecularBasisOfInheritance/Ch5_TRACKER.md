@@ -59,7 +59,7 @@ must read p17; `1b-S` starts at the banner, not at the top of the page.
 | 5 | `1b-H` | 1b headings only | ✅ **done** | 13 heading rows `F483..F495` (incl. `Goals of HGP`, `SUMMARY`, `EXERCISES`) |
 | 6 | `1b-O` | 1b openers only | ✅ **done** | 11 opener rows `F496..F506` |
 | 7 | `1-F` | **whole chapter** figures | ⬜ **NEXT — the only thing blocking Gate 1** | assets + manifest + in-figure label rows |
-| 8 | `1-Z` | steps 7–9 whole chapter | ⚠️ **partial — 7 and 8 done, 9 (freeze) withheld** | exercise-gap scan (16 items, 5 gaps), summary classification (33 = 29 + 4), 4 folded rows `F507..F510`; **freeze deferred until after `1-F`** |
+| 8 | `1-Z` | steps 7–9 whole chapter | ⚠️ **partial — 7 and 8 done, 9 (freeze) withheld** | exercise-gap scan (**17 rows**, 5 gaps), summary classification (33 = 29 + 4), 4 folded rows `F507..F510`; **freeze deferred until after `1-F`** |
 | 9 | — | step 10 | ✅ **done** (re-runnable, and must be re-run after `1-F` and after the freeze) | machine re-parse of every count |
 
 **Why `1-Z` could run before `1-F`.** Steps 7, 8 and 10 read prose and count table rows, so they do
@@ -111,7 +111,7 @@ Re-parsed from the file this session, not recalled:
 | `Type: opener` | **27** — `1a-O` 16 + `1b-O` 11 ✓ |
 | Figure-label rows | **0 — the Gate 1 blocker**, owned by `1-F` |
 | Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE**; the 4 unique facts folded in as `F507..F510` ✓ (the fold count equals the number of rows appended, so it is checkable, not asserted) |
-| Exercise items scanned | **16** — all 14 end-of-chapter questions `F469..F482` plus in-body `F288`/`F289`; **5 genuine gaps**, each with a named inline home |
+| Exercise-gap table rows | **17 (machine-parsed as the table's own length), 5 of them GAP** — 16 rows covering all 14 end-of-chapter questions `F469..F482` (Q3+Q4 share a row; Q8 splits a/b/c; Q14 splits (a)(b)(c) and (d)) + 1 row for in-body `F288`/`F289`. **Corrected from "16" this session**: the old figure was a hand-tally of *questions* reported as if it were *rows*, and it disagreed with the table it described. Each gap has a named inline home. |
 | Rows ticked | **0** — Pass 2 not started |
 | `_extract_labels` (the linter's own parser) | **0 labels, 0 figures, no phantom `Fig #` row** — correct pre-`1-F` state, **and this time run under the rebuilt venv**, closing the caveat left by the tracker-audit session |
 | Frozen | **No.** H1 reads `# Working Inventory (NOT FROZEN)` — withheld on purpose, see §2 |
