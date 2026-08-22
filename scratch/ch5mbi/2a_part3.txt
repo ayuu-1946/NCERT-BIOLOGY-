@@ -1,0 +1,84 @@
+F181 | 5.4.2 | concept | "It is because of the requirement of the origin of replication that a piece of DNA if needed to be propagated during recombinant DNA procedures, requires a vector. The vectors provide the origin of replication."
+F182 | 5.4.2 | concept | "Further, not every detail of replication is understood well."
+F183 | 5.4.2 | concept | "In eukaryotes, the replication of DNA takes place at S-phase of the cell-cycle."
+F184 | 5.4.2 | concept | "The replication of DNA and cell division cycle should be highly coordinated."
+F185 | 5.4.2 | concept | "A failure in cell division after DNA replication results into polyploidy (a chromosomal anomaly)."
+F186 | 5.4.2 | concept | "You will learn the detailed nature of origin and the processes occurring at this site, in higher classes."
+F187 | 5.5 | concept | "Here also, the principle of complementarity governs the process of transcription, except the adenosine complements now forms base pair with uracil instead of thymine."
+F188 | 5.5 | concept | "However, unlike in the process of replication, which once set in, the total DNA of an organism gets duplicated, in transcription only a segment of DNA and only one of the strands is copied into RNA."
+F189 | 5.5 | concept | "This necessitates defining the boundaries that would demarcate the region and the strand of DNA that would be transcribed."
+F190 | 5.5 | concept | "First, if both strands act as a template, they would code for RNA molecule with different sequences (Remember complementarity does not mean identical), and in turn, if they code for proteins, the sequence of amino acids in the proteins would be different."
+F191 | 5.5 | concept | "Hence, one segment of the DNA would be coding for two different proteins, and this would complicate the genetic information transfer machinery."
+F192 | 5.5 | concept | "Second, the two RNA molecules if produced simultaneously would be complementary to each other, hence would form a double stranded RNA."
+F193 | 5.5 | concept | "This would prevent RNA from being translated into protein and the exercise of transcription would become a futile one."
+F194 | 5.5.1 | list | "A transcription unit in DNA is defined primarily by the three regions in the DNA: (i) A Promoter (ii) The Structural gene (iii) A Terminator"
+F195 | 5.5.1 | concept | "There is a convention in defining the two strands of the DNA in the structural gene of a transcription unit."
+F196 | 5.5.1 | definition | "Since the two strands have opposite polarity and the DNA-dependent RNA polymerase also catalyse the polymerisation in only one direction, that is, 5'-to-3', the strand that has the polarity 3'-to-5' acts as a template, and is also referred to as template strand."
+F197 | 5.5.1 | definition | "The other strand which has the polarity (5'-to-3') and the sequence same as RNA (except thymine at the place of uracil), is displaced during transcription. Strangely, this strand (which does not code for anything) is referred to as coding strand."
+F198 | 5.5.1 | concept | "All the reference point while defining a transcription unit is made with coding strand."
+F199 | 5.5.1 | example | "3'-ATGCATGCATGCATGCATGCATGC-5' Template Strand / 5'-TACGTACGTACGTACGTACGTACG-3' Coding Strand"
+F200 | 5.5.1 | question | "Can you now write the sequence of RNA transcribed from the above DNA?"
+F201 | 5.5.1 | concept | "The promoter and terminator flank the structural gene in a transcription unit."
+F202 | 5.5.1 | definition | "The promoter is said to be located towards 5'-end (upstream) of the structural gene (the reference is made with respect to the polarity of coding strand)."
+F203 | 5.5.1 | definition | "It is a DNA sequence that provides binding site for RNA polymerase, and it is the presence of a promoter in a transcription unit that also defines the template and coding strands."
+F204 | 5.5.1 | concept | "By switching its position with terminator, the definition of coding and template strands could be reversed."
+F205 | 5.5.1 | definition | "The terminator is located towards 3'-end (downstream) of the coding strand and it usually defines the end of the process of transcription (Figure 5.9)."
+F206 | 5.5.1 | concept | "There are additional regulatory sequences that may be present further upstream or downstream to the promoter. Some of the properties of these sequences shall be discussed while dealing with regulation of gene expression."
+F207 | 5.5.2 | concept | "Though there is no ambiguity that the genes are located on the DNA, it is difficult to literally define a gene in terms of DNA sequence."
+F208 | 5.5.2 | concept | "The DNA sequence coding for tRNA or rRNA molecule also define a gene."
+F209 | 5.5.2 | definition | "However by defining a cistron as a segment of DNA coding for a polypeptide, the structural gene in a transcription unit could be said as monocistronic (mostly in eukaryotes) or polycistronic (mostly in bacteria or prokaryotes)."
+F210 | 5.5.2 | concept | "In eukaryotes, the monocistronic structural genes have interrupted coding sequences - the genes in eukaryotes are split."
+F211 | 5.5.2 | definition | "The coding sequences or expressed sequences are defined as exons. Exons are said to be those sequence that appear in mature or processed RNA."
+F212 | 5.5.2 | definition | "The exons are interrupted by introns. Introns or intervening sequences do not appear in mature or processed RNA."
+F213 | 5.5.2 | concept | "The split-gene arrangement further complicates the definition of a gene in terms of a DNA segment."
+F214 | 5.5.2 | concept | "Inheritance of a character is also affected by promoter and regulatory sequences of a structural gene."
+F215 | 5.5.2 | definition | "Hence, sometime the regulatory sequences are loosely defined as regulatory genes, even though these sequences do not code for any RNA or protein."
+F216 | 5.5.3 | concept | "All three RNAs are needed to synthesise a protein in a cell."
+F217 | 5.5.3 | concept | "The mRNA provides the template, tRNA brings aminoacids and reads the genetic code, and rRNAs play structural and catalytic role during translation."
+F218 | 5.5.3 | concept | "There is single DNA-dependent RNA polymerase that catalyses transcription of all types of RNA in bacteria."
+F219 | 5.5.3 | concept | "RNA polymerase binds to promoter and initiates transcription (Initiation). It uses nucleoside triphosphates as substrate and polymerises in a template depended fashion following the rule of complementarity."
+F220 | 5.5.3 | concept | "It somehow also facilitates opening of the helix and continues elongation. Only a short stretch of RNA remains bound to the enzyme."
+F221 | 5.5.3 | concept | "Once the polymerases reaches the terminator region, the nascent RNA falls off, so also the RNA polymerase. This results in termination of transcription."
+F222 | 5.5.3 | question | "An intriguing question is that how is the RNA polymerases able to catalyse all the three steps, which are initiation, elongation and termination."
+F223 | 5.5.3 | concept | "The RNA polymerase is only capable of catalysing the process of elongation. It associates transiently with initiation-factor (sigma) and termination-factor (rho) to initiate and terminate the transcription, respectively."
+F224 | 5.5.3 | concept | "Association with these factors alter the specificity of the RNA polymerase to either initiate or terminate (Figure 5.10)."
+F225 | 5.5.3 | concept | "In bacteria, since the mRNA does not require any processing to become active, and also since transcription and translation take place in the same compartment (there is no separation of cytosol and nucleus in bacteria), many times the translation can begin much before the mRNA is fully transcribed. Consequently, the transcription and translation can be coupled in bacteria."
+F226 | 5.5.3 | list | "In eukaryotes, there are two additional complexities - (i) There are at least three RNA polymerases in the nucleus (in addition to the RNA polymerase found in the organelles). There is a clear cut division of labour."
+F227 | 5.5.3 | number | "The RNA polymerase I transcribes rRNAs (28S, 18S, and 5.8S), whereas the RNA polymerase III is responsible for transcription of tRNA, 5srRNA, and snRNAs (small nuclear RNAs). The RNA polymerase II transcribes precursor of mRNA, the heterogeneous nuclear RNA (hnRNA)."
+F228 | 5.5.3 | list | "(ii) The second complexity is that the primary transcripts contain both the exons and the introns and are non-functional. Hence, it is subjected to a process called splicing where the introns are removed and exons are joined in a defined order."
+F229 | 5.5.3 | number | "hnRNA undergoes additional processing called as capping and tailing. In capping an unusual nucleotide (methyl guanosine triphosphate) is added to the 5'-end of hnRNA. In tailing, adenylate residues (200-300) are added at 3'-end in a template independent manner."
+F230 | 5.5.3 | concept | "It is the fully processed hnRNA, now called mRNA, that is transported out of the nucleus for translation (Figure 5.11)."
+F231 | 5.5.3 | concept | "The significance of such complexities is now beginning to be understood. The split-gene arrangements represent probably an ancient feature of the genome. The presence of introns is reminiscent of antiquity, and the process of splicing represents the dominance of RNA-world. In recent times, the understanding of RNA and RNA-dependent processes in the living system have assumed more importance."
+F232 | — | heading | "MOLECULAR BASIS OF INHERITANCE" (chapter title, p1; set 30.0pt AvantGarde-**Book** over two lines "MOLECULAR BASIS OF" / "INHERITANCE", preceded by "CHAPTER 5" at 26.0pt — **not bold**, see trap 6)
+F233 | 5.1 | heading | "5.1 THE DNA" (p2, 14.0pt Bookman-Demi section banner)
+F234 | 5.1.1 | heading | "5.1.1 Structure of Polynucleotide Chain" (p2, 12.0pt)
+F235 | 5.1.2 | heading | "5.1.2 Packaging of DNA Helix" (p5, 12.0pt; source prints two spaces after the number)
+F236 | 5.2 | heading | "5.2 THE SEARCH FOR GENETIC MATERIAL" (p6, 14.0pt banner; 10 small-caps spans — see traps 2 and 7)
+F237 | 5.2 | heading | "Transforming Principle" (p6, 10.5pt full-bold, **unnumbered sub-heading** inside 5.2)
+F238 | 5.2 | heading | "Biochemical Characterisation of Transforming Principle" (p7, 10.5pt full-bold, **unnumbered sub-heading** inside 5.2)
+F239 | 5.2.1 | heading | "5.2.1 The Genetic Material is DNA" (p7, 12.0pt)
+F240 | 5.2.2 | heading | "5.2.2 Properties of Genetic Material (DNA versus RNA)" (p8, 12.0pt)
+F241 | 5.3 | heading | "5.3 RNA WORLD" (p10, 14.0pt banner)
+F242 | 5.4 | heading | "5.4 REPLICATION" (p10, 14.0pt banner)
+F243 | 5.4.1 | heading | "5.4.1 The Experimental Proof" (p10, 12.0pt)
+F244 | 5.4.2 | heading | "5.4.2 The Machinery and the Enzymes" (p12, 12.0pt)
+F245 | 5.5 | heading | "5.5 TRANSCRIPTION" (p13, 14.0pt banner)
+F246 | 5.5.1 | heading | "5.5.1 Transcription Unit" (p13, 12.0pt)
+F247 | 5.5.2 | heading | "5.5.2 Transcription Unit and the Gene" (p14, 12.0pt)
+F248 | 5.5.3 | heading | "5.5.3 Types of RNA and the process of Transcription" (p15, 12.0pt)
+F249 | 5.1 | opener | "DNA is a long polymer of deoxyribonucleotides." (p2 — **defines DNA**; the whole section leans on it)
+F250 | 5.1.1 | opener | "Let us recapitulate the chemical structure of a polynucleotide chain (DNA or RNA)." (p2)
+F251 | 5.1.2 | opener | "Taken the distance between two consecutive base pairs as 0.34 nm (0.34x10^-9 m), if the length of DNA double helix in a typical mammalian cell is calculated (simply by multiplying the total number of bp with distance between two consecutive bp, that is, 6.6 x 10^9 bp x 0.34 x 10^-9 m/bp), it comes out to be approximately 2.2 metres." (p5 — carries the 2.2 m calculation; overlaps F056/F057 by design, an opener row is still required)
+F252 | 5.2 | opener | "Even though the discovery of nuclein by Meischer and the proposition for principles of inheritance by Mendel were almost at the same time, but that the DNA acts as a genetic material took long to be discovered and proven." (p6)
+F253 | 5.2 (Transforming Principle) | opener | "In 1928, Frederick Griffith, in a series of experiments with Streptococcus pneumoniae (bacterium responsible for pneumonia), witnessed a miraculous transformation in the bacteria." (p6 — opener of the unnumbered sub-heading `F237`)
+F254 | 5.2 (Biochemical Characterisation) | opener | "Prior to the work of Oswald Avery, Colin MacLeod and Maclyn McCarty (1933-44), the genetic material was thought to be a protein." (p7 — opener of the unnumbered sub-heading `F238`)
+F255 | 5.2.1 | opener | "The unequivocal proof that DNA is the genetic material came from the experiments of Alfred Hershey and Martha Chase (1952)." (p7)
+F256 | 5.2.2 | opener | "From the foregoing discussion, it is clear that the debate between proteins versus DNA as the genetic material was unequivocally resolved from Hershey-Chase experiment." (p8)
+F257 | 5.3 | opener | "From foregoing discussion, an immediate question becomes evident - which is the first genetic material?" (p10)
+F258 | 5.4 | opener | "While proposing the double helical structure for DNA, Watson and Crick had immediately proposed a scheme for replication of DNA." (p10)
+F259 | 5.4.1 | opener | "It is now proven that DNA replicates semiconservatively." (p10)
+F260 | 5.4.2 | opener | "In living cells, such as E. coli, the process of replication requires a set of catalysts (enzymes)." (p12)
+F261 | 5.5 | opener | "The process of copying genetic information from one strand of the DNA into RNA is termed as transcription." (p13 — **the only place transcription is defined**; §6 step 5's load-bearing case. Recovered by column-aware reading: a naive y-sort splices the `Figure 5.8 Replicating Fork` caption into mid-sentence — see trap 8)
+F262 | 5.5.1 | opener | "A transcription unit in DNA is defined primarily by the three regions in the DNA: (i) A Promoter (ii) The Structural gene (iii) A Terminator" (p13 — the sentence ends at the three-item list; the "convention in defining the two strands" sentence that follows is a separate sentence, not part of the opener)
+F263 | 5.5.2 | opener | "A gene is defined as the functional unit of inheritance." (p14 — **the only place gene is defined**; §6 step 5's second load-bearing case, and the word sits in the heading `F247` directly above it)
+F264 | 5.5.3 | opener | "In bacteria, there are three major types of RNAs: mRNA (messenger RNA), tRNA (transfer RNA), and rRNA (ribosomal RNA)." (p15)
