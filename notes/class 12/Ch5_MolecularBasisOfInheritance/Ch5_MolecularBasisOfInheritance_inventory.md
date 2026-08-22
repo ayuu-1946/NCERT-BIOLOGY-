@@ -23,7 +23,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Exercises | **done** | **218** (`F265`..`F482`) — §5.6 onward from the mid-p17 seam, incl. the 14 Exercises questions |
 | **1b-H** — heading sweep, second half | §5.6–§5.10 + Summary + Exercises | **done** | **13** (`F483`..`F495`) — 10 numbered + `Goals of HGP` + `SUMMARY` + `EXERCISES` |
 | **1b-O** — opener sweep, second half | §5.6–§5.10 | **done** | **11** (`F496`..`F506`) — one per heading-bearing section; `SUMMARY`/`EXERCISES` deliberately excluded (see note) |
-| **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | **done** | **136** figure-label rows (`F511`..`F646`) + 17 verified mono assets |
+| **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | **done** | **136** figure-label rows (`F511`..`F646`) + 18 verified mono assets (17 numbered/split + 1 unnumbered) |
 | **1-Z** — gaps, summary & freeze, whole chapter | steps 7, 8, 9 and 10 | **done** | **4** SUMMARY-UNIQUE folds (`F507`..`F510`), 33-row Summary classification, **17-row** exercise-gap scan, freeze and final machine re-parse |
 
 **Gate 1 closure.** Every Pass 1 sweep is complete. The final machine parse found 646 contiguous monotonic rows, 0 gaps, 0 duplicates, 0 ticked rows, 136 figure-label rows, 17 assets, and `_extract_labels` returned 136 labels across the 15 figures that contain textual labels, with no doubling and no phantom `Fig #` row. `5.4b` and `5.15` are the two genuinely label-free assets. Gate 1 is CLOSED; Pass 2 has not started.
@@ -48,7 +48,7 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 | Rows ticked | **0** — Pass 2 not started |
 | Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE** (machine sentence-split of p30; see the Summary classification section). All 4 SUMMARY-UNIQUE facts folded into body sections as `F507`..`F510`. |
 | Exercise-gap terms | **17 item rows — 16 covering all 14 end-of-chapter questions (`F469`..`F482`) + 1 covering the two in-body exercises `F288`/`F289` — of which 5 are genuine gaps**, each with a named inline home; `F288`/`F289` are blocked on `Table 5.1`, escalated to carry-over 17. **Corrected this session from "16 scanned items" by machine parse of the table's own length:** the 14 questions occupy 16 rows (Q3+Q4 share one row, `Q8` splits into a/b/c, `Q14` splits into (a)(b)(c) and (d)), and the in-body pair is the 17th. 5 GAP rows re-counted by machine, unchanged. |
-| Figures in manifest | **17/17 verified mono assets complete** (`5.1`–`5.16`, with split `5.4a`/`5.4b`) |
+| Figures in manifest | **18/18 verified mono assets complete** (`5.1`–`5.16`, with split `5.4a`/`5.4b`, plus the unnumbered `fig_5_central_dogma`) |
 
 Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 510 rows, `F001..F510`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `264 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 510`, matching the row total. **The four rows `1-Z` added are all `concept`**, which is the only census cell that moved (260 -> 264); every other cell is byte-identical to the pre-`1-Z` parse.
 
@@ -77,7 +77,7 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 > | Every heading has a row incl. unnumbered sub-headings | **done** — `1a-H` 17 rows `F232..F248` (both unnumbered subs `F237`, `F238`) + `1b-H` 13 rows `F483..F495` (incl. `Goals of HGP`, `SUMMARY`, `EXERCISES`) = **30** |
 > | Every section's opening sentence has a row | **done** — `1a-O` 16 `F249..F264` + `1b-O` 11 `F496..F506` = **27** |
 > | Every in-figure label has a matrix row, harvested by opening each rendered asset | **done** — 136 rows `F511`..`F646`; `5.4b` and `5.15` are genuinely label-free |
-> | Every figure `Mono: yes` and `Verified: yes` | **done** — 17/17 manifest rows; every final asset opened after conversion |
+> | Every figure `Mono: yes` and `Verified: yes` | **done** — 18/18 manifest rows; every final asset opened after conversion, and every rect cleared the three-part crop gate (word-grazing + drawings-extent + border-band ink) |
 > | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | **done** — 136 labels, 15 label-bearing figures, no doubling, no phantom `Fig #` row |
 > | Header counts match a re-parse of the table; IDs contiguous | **done** — 646 rows, `F001..F646`, 0 gaps, 0 dups, monotonic, census sums to 646 |
 > | Exercise-gap terms and SUMMARY-UNIQUE folding | **done** — **17 exercise-gap rows / 5 gaps**; 33 summary sentences classified; 4 SUMMARY-UNIQUE facts folded as `F507`..`F510` |
@@ -744,13 +744,16 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 
 ## Figure manifest and figure-label matrix
 
-**Session `1-F` is COMPLETE.** All 17 caption-anchored assets were rendered at 300 dpi, converted with `convert("L")` plus autocontrast, then individually opened and checked against their captions for complete labels/leader lines, print legibility, and genuine monochrome. The 136 in-figure label rows are contiguous at `F511`–`F646`; `5.4b` and `5.15` have no textual in-figure labels.
+**Session `1-F` is COMPLETE.** All 18 assets — 16 numbered figures (`5.1`–`5.16`, with `5.4` split into `5.4a`/`5.4b`) plus one unnumbered bonus plate (`fig_5_central_dogma`) — were rendered at 300 dpi from hand-pinned rects, converted with `convert("L")` plus autocontrast, then individually opened and checked against their captions for complete labels/leader lines, print legibility, and genuine monochrome. The 136 in-figure label rows are contiguous at `F511`–`F646`; `5.4b` and `5.15` have no textual in-figure labels.
+
+**Rect-pinning re-verification (post-merge of PR #85).** Two rects were still clipping their artwork after the merge and have been re-pinned: `fig_5_16` (was `86,78,422,502`, cutting off the whole right-hand column and the left ends of the crime-scene panel) and `fig_5_2` (was `108,80,526,272`, cutting the `3'`/`HO` labels and the bottom rule). Both plates carry **zero text-layer words** — every label is vector artwork — so the word-grazing audit reported them clean while the crop was visibly wrong. The audit is now paired with a `get_drawings()`-extent check and a border-band ink check; see the `ncert-figure-extraction` skill for the full three-part gate.
 
 | Asset | Source artwork page | Caption | Mono | Verified | State |
 |---|---:|---|---|---|---|
 | `assets/fig_5_1.png` | 2 | Figure 5.1 — A Polynucleotide chain | yes | yes | done — final file opened after conversion; correct artwork, complete labels/leader lines, print-legible, mode `L` |
 | `assets/fig_5_2.png` | 4 | Figure 5.2 — Double stranded polynucleotide chain | yes | yes | done — page-break caption resolved to artwork on p4; final file opened after conversion |
-| `assets/fig_5_3.png` | 4 | Figure 5.3 — Central dogma | yes | yes | done — final file opened after conversion; includes the required `Central dogma` label |
+| `assets/fig_5_3.png` | 4 | Figure 5.3 — DNA double helix | yes | yes | done — final file opened after conversion. **Caption corrected:** this row previously read "Central dogma", which did not match the asset (the artwork is the helix + A-T / G-C base-pair legend). The central-dogma schematic is a separate, unnumbered plate — see the row below. |
+| `assets/fig_5_central_dogma.png` | 4 | *(unnumbered in NCERT)* — Central dogma schematic at the foot of p4 | yes | yes | done — bonus asset, no NCERT figure number; carries the `replication` / `transcription` / `translation` / `Central dogma` labels |
 | `assets/fig_5_4a.png` | 5 | Figure 5.4a — Nucleosome | yes | yes | done |
 | `assets/fig_5_4b.png` | 5 | Figure 5.4b — EM picture — 'Beads-on-String' | yes | yes | done — no textual in-figure labels |
 | `assets/fig_5_5.png` | 8 | Figure 5.5 — Hershey and Chase Experiment | yes | yes | done |
