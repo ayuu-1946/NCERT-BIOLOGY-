@@ -1783,7 +1783,8 @@ story.append(memory_aid(
 # 5.9  HUMAN GENOME PROJECT
 # --------------------------------------------------------------------------------------
 # ---- 5.9 (F489 heading, F502 opener, F373-F408; Goals sub-heading F490 + stem F503 +
-#      items F383-F388; Figure 5.15; Rule 2 gap Q14(d) Bioinformatics extends F381/F382) ----
+#      items F383-F388; Figure 5.15 REMOVED by owner decision, see note at its former call
+#      site below; Rule 2 gap Q14(d) Bioinformatics extends F381/F382) ----
 story.append(heading("5.9", "HUMAN GENOME PROJECT", 1))
 
 story.append(Paragraph(
@@ -1914,12 +1915,16 @@ story.append(process_flow([
     "and Y) to be sequenced</b>.",
 ]))
 story.append(Spacer(1, 4))
-story.append(figure(
-    "fig_5_15.png",
-    "Figure 5.15 Human Genome Project -- the sequencing workflow, from total DNA through "
-    "random fragments cloned in BAC and YAC vectors, to automated sequencing and "
-    "computer-based alignment of overlapping fragments."))
-story.append(Spacer(1, 3))
+# [CONTENT DECISION - project owner, Gate 3a round 3] Figure 5.15 REMOVED from the PDF.
+# Deliberate content-scope decision (figure judged unnecessary), NOT a defect fix and NOT
+# an omission -- do not re-add it. The asset stays on disk at assets/fig_5_15.png.
+# Safe to remove: fig_5_15 carried NO in-figure label rows (it is one of the chapter's two
+# genuinely label-free assets, with 5.4b), and the chapter has no caption-type Facts rows,
+# so no frozen inventory row depended on it. Every fact the plate depicted -- isolate and
+# fragment, clone in BAC/YAC, automated sequencing, computer-based alignment of overlaps --
+# is already carried in full by the process_flow block immediately above, which is where
+# F404 ("alignment ... humanly not possible ... specialised computer based programs") lives.
+# No running prose referenced "Figure 5.15" by number; the caption was its only mention.
 story.append(Paragraph(
     "Another <b>challenging task was assigning the genetic and physical maps on the "
     "genome</b>. This was generated using information on <b>polymorphism of restriction "
