@@ -93,7 +93,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | Chapter | Status |
 |---|---|
 | 4. Principles of Inheritance and Variation | ⬜ Not done |
-| 5. Molecular Basis of Inheritance | ▶️ **Gate 1 CLOSED** — Pass 1 complete; 646 frozen rows (`F001..F646`), 136 figure-label rows, 17/17 verified mono assets; Pass 2 not started |
+| 5. Molecular Basis of Inheritance | ▶️ **Gate 1 CLOSED** — Pass 1 complete; 646 frozen rows (`F001..F646`), 136 figure-label rows, **18/18 verified mono assets** (16 figure numbers; `5.4` splits a/b, plus the unnumbered p4 central-dogma plate); Pass 2 not started |
 | 6. Evolution | ⬜ Not done |
 
 ### Unit VIII — Biology in Human Welfare

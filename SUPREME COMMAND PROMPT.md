@@ -422,10 +422,19 @@ Both box types (exported as `note()` / `memory_aid()`) keep the `NOTE_BG` fill a
 
 **Every figure in the source chapter is extracted, converted to true monochrome, and embedded via `neet_template.figure()`. No exceptions, no "decorative" waivers — if NCERT printed it, the replacement carries it.** Text and image are complementary: a reader skimming only the image still sees the key labels; a reader skimming only the text still gets every fact.
 
+> ### ⚙️ THE EXTRACTION PROCEDURE LIVES IN A SKILL FILE — READ IT FIRST
+>
+> **`skills/ncert-figure-extraction/SKILL.md` is the authoritative, executable procedure for Step 1.** Read it in full before extracting a single figure, and follow it as written. It carries the hand-pinned-bounding-box workflow (grid-overlay pinning, then the three-way audit: text-layer grazing, drawings-extent overflow, and border-band ink) that guarantees no body text bleeds into a crop and no artwork is clipped off.
+>
+> **This section (§4.4) states the *obligations*; the skill states the *method*.** Where the skill gives a concrete command, script, or threshold, the skill wins — it is maintained against real extraction failures. Where they appear to conflict on a *requirement* (every figure extracted, monochrome, opened-and-verified, every label a row), §4.4 wins. Do not re-derive an extraction approach from memory when the skill is on disk, and do not treat a bare `get_pixmap` as sufficient: an unaudited clip is exactly how a crop ships with a neighbouring paragraph baked into it, or with a leader line sheared off.
+>
+> Invoke it by name (`in-repo-ncert-figure-extraction`) or read the file directly. Triggers: extracting a chapter's figures, re-extracting after bad crops, any *"figures came out wrong/cropped/useless"* report.
+
 **Step 1 — Locate and extract (Pass 1 session **1-F**, before writing the script — figures get a session to themselves and share it with no other step; see §6 Pass 1):**
-1. Open the source chapter PDF with `pymupdf`. **Prefer a high-resolution clip render of the figure's bounding box: `page.get_pixmap(clip=rect, dpi=300)`.** A clipped render survives vector diagrams and mixed text/graphic figures that a raw embedded-image extraction can miss or mangle. Only use embedded-object extraction when the figure is genuinely a single raster image and the clip render is worse.
+1. **Follow `skills/ncert-figure-extraction/SKILL.md`.** In outline: open the source chapter PDF with `pymupdf` and render a **high-resolution clip of each figure's hand-pinned bounding box — `page.get_pixmap(clip=rect, dpi=300)`**. A clipped render survives vector diagrams and mixed text/graphic figures that a raw embedded-image extraction can miss or mangle. Only use embedded-object extraction when the figure is genuinely a single raster image and the clip render is worse. **Every rect must clear the skill's three-part crop audit before it is accepted.**
 2. Save each figure to `assets/fig_<ch>_<n>.png` per the naming rule in §0.5.
 3. Build the **figure manifest** and **figure-label matrix** as sections of the inventory (§6 Pass 1).
+4. **The figure census is enumerated from the page images, not from caption numbers alone.** Unnumbered plates are real figures and are extracted like any other — Ch5's central-dogma plate on p4 carries no `Figure 5.x` number, so a caption-derived census predicted 17 assets where the chapter actually holds **18**. A count taken from captions is a lower bound; reconcile it against what is visibly on the pages.
 
 **Harvest in-figure labels by OPENING each rendered asset and reading it — never by text extraction.** In-figure labels are frequently baked into the artwork as pixels or vector strokes and are **absent from the PDF text layer entirely**. In Ch12 Ecosystem, *all 61* labels across all 7 figures were invisible to `page.get_text()`; a text-extraction sweep of those same pages returns the captions and body prose but **zero** labels.
 

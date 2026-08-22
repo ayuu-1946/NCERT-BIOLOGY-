@@ -142,28 +142,44 @@ re-checks `ls /vercel/share/neetenv/bin/python` first**; sandboxes lose it.
 
 ---
 
-## 4. NEXT SESSION — `1-F`, whole-chapter figures
+## 4. NEXT SESSION — Pass 2a (script), whole chapter
 
-**`1-F` is the only thing standing between this chapter and a Gate 1 judgement.** Everything in
-this section below the horizontal rule is the **historical `1a-H` scoping record**, retained for
-audit; it is **not** an instruction to any future session. `1a-H` closed long ago and the
-inventory now stands at **510 rows (`F001..F510`)**, so **no session may append headings from
-`F231`** — that ID has been occupied since `1a-S` closed.
+**Gate 1 is CLOSED. `1-F` and `1-Z` are both done, so the next session is Pass 2a — writing
+`Ch5_MolecularBasisOfInheritance.py`.** The inventory is **frozen at 646 rows (`F001..F646`)**:
+no session may append Facts rows, and **no session may append headings from `F231`** — that ID has
+been occupied since `1a-S` closed. During Pass 2 the only permitted edit to the inventory is
+ticking a row's `Ticked` column.
 
-### Scope of `1-F` — whole chapter, figures only
+Everything below in §4a is the **historical `1a-H` scoping record**, retained for audit; it is
+**not** an instruction to any future session.
+
+### HISTORICAL — scope of `1-F` (session closed; do not action)
+
+> **Superseded.** `1-F` **is done**: 18 verified mono assets and 136 in-figure label rows
+> (`F511`..`F646`). The forward-looking brief below is kept verbatim for auditability (§7). Note
+> its asset count reads **17**, which was the pre-session census; the delivered count is **18**,
+> because the unnumbered `fig_5_central_dogma` plate on p4 was extracted as a bonus asset. The
+> acceptance criteria below were all met except where this note supersedes them.
 
 Figures run **whole-chapter, never per half** (§1): a half-chapter manifest cannot be checked for
 duplicate or missing `Fig #` across the mid-page-17 seam. Prose, headings and openers are **already
 swept and must not be re-read** — re-reading them is how sweeps contaminate each other.
 
-**Census enumerated from source, not memory: 16 figure numbers ⇒ 17 assets**, because `Figure 5.4`
-splits into `5.4a Nucleosome` and `5.4b EM picture — 'Beads-on-String'`.
+**Census enumerated from source, not memory: 16 figure numbers ⇒ 18 assets.** `Figure 5.4`
+splits into `5.4a Nucleosome` and `5.4b EM picture — 'Beads-on-String'` (+1), and the **unnumbered
+central-dogma plate on p4** was extracted as `fig_5_central_dogma` (+1). The pre-`1-F` brief in this
+section predicted **17**; the 18th asset was found during the sweep and is the correct count — a
+count enumerated from captions alone misses unnumbered plates.
 
 | Half | Figures | Assets |
 |---|---|---|
 | First (pp. 1–17) | 5.1, 5.2, 5.3, **5.4a, 5.4b**, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11 | 12 |
 | Second (pp. 17–31) | 5.12, 5.13, 5.14, 5.15, 5.16 | 5 |
-| **Total** | **16 numbers** | **17 assets** |
+| Unnumbered | central dogma (p4) — `fig_5_central_dogma` | 1 |
+| **Total** | **16 numbers** | **18 assets** |
+
+**Verified on disk after `1-F`:** 18 PNGs in `assets/`, all PIL mode `L` (0 non-grayscale), smallest
+1214x392 px, manifest rows = 18 = file count.
 
 The full trap list, per-asset requirements and label obligations live in §5 under **`1-F`** — read
 that entry before starting. In brief: create `assets/` (it does not exist yet), clip-extract each
@@ -178,10 +194,12 @@ continuing from **`F511`** — including `Central dogma` (p4, per §6 correction
 - Every manifest row asserts `Mono: yes` and `Verified: yes`, each backed by opening the file.
 - One Facts row per in-figure label, IDs contiguous from `F511`; re-parse reports 0 gaps, 0 dups.
 - `check_pdf.py`'s own `_extract_labels` returns the **expected figure count with no doubling and
-  no phantom `Fig #` row** — it currently returns 0, which is the correct *pre*-`1-F` state, not a pass.
+  no phantom `Fig #` row** — at the time this was written it returned 0, the correct *pre*-`1-F`
+  state, not a pass. **It now returns 136 labels across 15 label-bearing figures.**
 - `CHAPTER_TRACKER.md`, `CHAPTER_STATUS.md` and this file all updated in the **same** session.
-- **Gate 1 stays OPEN when `1-F` closes.** `1-Z` step 9 (freeze) then a final step-10 re-parse must
-  follow before Gate 1 may even be judged. Do not freeze inside `1-F`.
+- **Gate 1 stayed OPEN when `1-F` closed** — `1-Z` step 9 (freeze) and a final step-10 re-parse had
+  to follow before Gate 1 could be judged, and no freeze happened inside `1-F`. Both have since run,
+  and **Gate 1 is now CLOSED**.
 
 ---
 
@@ -246,15 +264,15 @@ rows now on disk, 1 is the chapter title, so **in-body headings = 29**.
 - Every heading in pp. 1–17 has exactly one row; no heading absorbed into a prose row. ✓
 - No row sourced from a 9.0pt running head, and no row sourced from a 9.5pt figure caption. ✓
 - Every heading string is a full joined line, no `5.2 T` truncation. ✓
-- IDs contiguous from `F232`; re-parse reports 0 gaps, 0 duplicates. ✓ (still true at 510 rows)
+- IDs contiguous from `F232`; re-parse reports 0 gaps, 0 duplicates. ✓ (still true at 646 rows)
 - Exit report stated the machine-derived `Type: heading` count and the title-inclusion convention. ✓
 - `CHAPTER_TRACKER.md`, `CHAPTER_STATUS.md` and this file updated in the **same** session. ✓
-- **Gate 1 stayed OPEN** — `1a-H` closing was not Gate 1 closing, and Gate 1 is **still open today**,
-  blocked on `1-F` (§4).
+- **Gate 1 stayed OPEN** — `1a-H` closing was not Gate 1 closing. Gate 1 remained open through
+  `1-F` and `1-Z`, and is **CLOSED as of the post-freeze step-10 re-parse** (§3).
 
 ---
 
-## 5. Forward notes — only `1-F` and `1-Z` step 9 are still live
+## 5. Forward notes — Pass 1 fully closed; only Pass 2 onward is still live
 
 **`1a-O` — ✅ done; note retained for audit, not for action.** Openers only, pp. 1–17. The
 load-bearing ones: the §5.5 opener is the only place *transcription* is defined, and the §5.5.2
@@ -274,19 +292,19 @@ line. Each asset needs 300 dpi clip extraction, mono conversion, and **verificat
 opening the rendered file** — `Mono: yes` / `Verified: yes` asserted per row, plus one Facts row per
 in-figure label (including `Central dogma`, per trap 4).
 
-**`1-Z` — ⚠️ partial: steps 7, 8 and 10 done; step 9 (freeze) still LIVE and deliberately withheld.**
-The exercise-gap scan (**17 rows, 5 gaps**) and the summary classification (33 = 29 BODY-PRESENT + 4
-SUMMARY-UNIQUE, folded as `F507..F510`) are complete. What remains is **step 9 — the freeze**: retitle
-the inventory H1 from `# Working Inventory (NOT FROZEN)` to the frozen convention, **and it may not run
-until `1-F` has closed.** Retitling early is a false completion signal — the H1 was already caught
-reading `# Frozen Inventory` once while six sweeps were outstanding, where a `grep -i frozen` over
-`notes/` would have counted Ch5 as frozen.
+**`1-Z` — ✅ COMPLETE: steps 7, 8, 9 and 10 all done.** The exercise-gap scan (**17 rows = 5 GAP + 11
+Covered + 1 Blocked**) and the summary classification (33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE, folded
+as `F507..F510`) landed first. **Step 9 — the freeze — ran only after `1-F` closed**, as required: the
+inventory H1 now reads `# Frozen Inventory — Ch5 ... (FROZEN — Gate 1 closed)`. Retitling early would
+have been a false completion signal — the H1 was once caught reading `# Frozen Inventory` while six
+sweeps were outstanding, where a `grep -i frozen` over `notes/` would have counted Ch5 as frozen.
 
-**Gate 1** is **OPEN today** and may only be *judged* after `1-F` closes and `1-Z` step 9 plus a final
-step-10 re-parse have run. Completing `1b` was necessary but not sufficient. The judgement needs: a
-complete inventory, `_extract_labels` clean (right figure count, no doubling, no phantom `Fig #` row),
-every count matching a re-parse, all figures `Mono: yes` / `Verified: yes`, and each sweep traceable to
-a session that closed on it. **Six landed sweeps do not close Gate 1.**
+**Gate 1 is CLOSED**, judged only after `1-F` closed and `1-Z` step 9 plus a final step-10 re-parse had
+run. Completing `1b` was necessary but not sufficient. The judgement required, and got: a complete
+inventory (646 rows, 0 gaps, 0 dups), `_extract_labels` clean (136 labels / 15 label-bearing figures,
+no doubling, no phantom `Fig #` row), every count matching a re-parse, all 18 figures `Mono: yes` /
+`Verified: yes`, and each sweep traceable to a session that closed on it. **Six landed sweeps did not
+close Gate 1 — eight did, plus the freeze and the re-parse.**
 
 **Pass 2a/2b** — one script, `Ch5_MolecularBasisOfInheritance.py`, written linearly in Content Order
 from the frozen inventory, importing `neet_template.py` with **no style re-declared**; both halves go

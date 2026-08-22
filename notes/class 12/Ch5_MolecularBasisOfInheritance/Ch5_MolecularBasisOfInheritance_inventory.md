@@ -9,7 +9,7 @@ Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp
 - **Pass 1a — first half:** chapter introduction + §5.1 The DNA, §5.2 The Search for Genetic Material, §5.3 RNA World, §5.4 Replication, §5.5 Transcription (source pp. 1–17, book pp. 79–95, up to but excluding the `5.6 GENETIC CODE` banner).
 - **Pass 1b — second half:** §5.6 Genetic Code, §5.7 Translation, §5.8 Regulation of Gene Expression, §5.9 Human Genome Project, §5.10 DNA Fingerprinting, Summary and Exercises (source pp. 17–31).
 
-Per §6, `1a/1b` halve the **source**; `1-S / 1-H / 1-O / 1-F / 1-Z` separate the **kinds of work**. The sweeps therefore run per half (1a-S, 1a-H, 1a-O, then 1b-S, 1b-H, 1b-O), while **figures run as one whole-chapter 1-F session** and the freeze as one whole-chapter 1-Z. Gate 1 is evaluated over the whole chapter, and **completing `1b` is necessary but not sufficient**: the evaluation may only happen after `1-F` has closed and `1-Z` step 9 (freeze) plus a final step-10 re-parse have run. `1b` is done; **Gate 1 is nonetheless still OPEN.**
+Per §6, `1a/1b` halve the **source**; `1-S / 1-H / 1-O / 1-F / 1-Z` separate the **kinds of work**. The sweeps therefore run per half (1a-S, 1a-H, 1a-O, then 1b-S, 1b-H, 1b-O), while **figures run as one whole-chapter 1-F session** and the freeze as one whole-chapter 1-Z. Gate 1 is evaluated over the whole chapter, and **completing `1b` was necessary but not sufficient**: the evaluation could only happen after `1-F` had closed and `1-Z` step 9 (freeze) plus a final step-10 re-parse had run. All of those have now happened, so **Gate 1 is CLOSED** — see the Gate 1 status block below for the requirement-by-requirement verdict.
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. **No row is ticked — Pass 2 has not started.**
 
@@ -26,7 +26,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | **done** | **136** figure-label rows (`F511`..`F646`) + 18 verified mono assets (17 numbered/split + 1 unnumbered) |
 | **1-Z** — gaps, summary & freeze, whole chapter | steps 7, 8, 9 and 10 | **done** | **4** SUMMARY-UNIQUE folds (`F507`..`F510`), 33-row Summary classification, **17-row** exercise-gap scan, freeze and final machine re-parse |
 
-**Gate 1 closure.** Every Pass 1 sweep is complete. The final machine parse found 646 contiguous monotonic rows, 0 gaps, 0 duplicates, 0 ticked rows, 136 figure-label rows, 17 assets, and `_extract_labels` returned 136 labels across the 15 figures that contain textual labels, with no doubling and no phantom `Fig #` row. `5.4b` and `5.15` are the two genuinely label-free assets. Gate 1 is CLOSED; Pass 2 has not started.
+**Gate 1 closure.** Every Pass 1 sweep is complete. The final machine parse found 646 contiguous monotonic rows, 0 gaps, 0 duplicates, 0 ticked rows, 136 figure-label rows, 18 assets (all PIL mode `L`, smallest 1214x392 px), and `_extract_labels` returned 136 labels across the 15 figures that contain textual labels, with no doubling and no phantom `Fig #` row. `5.4b` and `5.15` are the two genuinely label-free assets. Gate 1 is CLOSED; Pass 2 has not started.
 
 **Why `1b-H` wrote 13 rows but `1b-O` wrote 11.** Three of the 13 headings do not take an opener row: `EXERCISES` runs straight into question 1 with no prose, and `SUMMARY`'s sentences are owned by **`1-Z` step 8** (BODY-PRESENT / SUMMARY-UNIQUE classification) — giving the Summary an opener row here would put the same sentence under two owners, which is how a sentence gets written twice into the script. `Goals of HGP` *does* take one (`F503`) because it has a genuine stem sentence. So 13 headings − `SUMMARY` − `EXERCISES` = 11 openers.
 
@@ -50,7 +50,9 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 | Exercise-gap terms | **17 item rows — 16 covering all 14 end-of-chapter questions (`F469`..`F482`) + 1 covering the two in-body exercises `F288`/`F289` — of which 5 are genuine gaps**, each with a named inline home; `F288`/`F289` are blocked on `Table 5.1`, escalated to carry-over 17. **Corrected this session from "16 scanned items" by machine parse of the table's own length:** the 14 questions occupy 16 rows (Q3+Q4 share one row, `Q8` splits into a/b/c, `Q14` splits into (a)(b)(c) and (d)), and the in-body pair is the 17th. 5 GAP rows re-counted by machine, unchanged. |
 | Figures in manifest | **18/18 verified mono assets complete** (`5.1`–`5.16`, with split `5.4a`/`5.4b`, plus the unnumbered `fig_5_central_dogma`) |
 
-Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 510 rows, `F001..F510`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `264 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 510`, matching the row total. **The four rows `1-Z` added are all `concept`**, which is the only census cell that moved (260 -> 264); every other cell is byte-identical to the pre-`1-Z` parse.
+Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 646 rows, `F001..F646`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the eleven values listed. The census is derivable from its own list — `264 + 136 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 646`, matching the row total. **The four rows `1-Z` added are all `concept`** (260 -> 264) and **the 136 rows `1-F` added are all `figure-label`** (0 -> 136); those are the only two census cells that moved, and every other cell is byte-identical to the pre-`1-Z` parse.
+
+**This paragraph was itself a stale-count defect, caught by the post-`1-F` step-10 re-parse.** It read "510 rows, `F001..F510`" and summed a ten-value census to 510 — the pre-`1-F` state — while the header table two rows above already said 646. That is exactly the §6 step-10 failure mode of fixing a count in one place only: `1-F` updated the header and the gate block but not this prose census, so the file contradicted itself for one whole session. The lesson is recorded rather than silently patched: after any session that appends rows, grep the file for the *old* total, not just for the new one.
 
 `table` (1 row, `F280`) is a **new `Type` value introduced by `1b-S`**, for the `Table 5.1` codon checker-board caption. It is neither prose nor a figure; see carry-over 9, which records that the table's 64 cells are not text-extractable and that **no session currently owns rebuilding them**.
 
@@ -68,12 +70,12 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 
 `1 + 5 + 5 + 9 + 5 + 3 + 2 = 30` ✓ equals the machine `Type: heading` count. **10 numbered section banners (5 + 5) matches the 10 sections the protocol choice was based on** — an independent cross-check that no banner was missed. In-body headings excluding the chapter title = **29**.
 
-> ## GATE 1 STATUS: **OPEN — blocked. Pass 2 may not begin.**
+> ## GATE 1 STATUS: **CLOSED — all requirements green. Pass 2 may begin.**
 >
 > | Gate 1 requirement (§6) | State |
 > |---|---|
 > | Environment (§0.2–0.3) re-established | done — venv rebuilt, all four imports verified under that interpreter |
-> | Every fact has a Facts row (three source reads) | **done for text** — `1a-S` 231 + `1b-S` 218 + `1-Z` 4 folds; only figure-label rows are outstanding (1-F) |
+> | Every fact has a Facts row (three source reads) | **done** — `1a-S` 231 + `1b-S` 218 + `1-Z` 4 folds = 453 text rows, plus `1a-H`/`1b-H` 30 headings, `1a-O`/`1b-O` 27 openers and `1-F` 136 figure-labels = **646** |
 > | Every heading has a row incl. unnumbered sub-headings | **done** — `1a-H` 17 rows `F232..F248` (both unnumbered subs `F237`, `F238`) + `1b-H` 13 rows `F483..F495` (incl. `Goals of HGP`, `SUMMARY`, `EXERCISES`) = **30** |
 > | Every section's opening sentence has a row | **done** — `1a-O` 16 `F249..F264` + `1b-O` 11 `F496..F506` = **27** |
 > | Every in-figure label has a matrix row, harvested by opening each rendered asset | **done** — 136 rows `F511`..`F646`; `5.4b` and `5.15` are genuinely label-free |
@@ -847,10 +849,6 @@ Done by session **1-Z** (step 7, Rule 2). **All 14 end-of-chapter questions were
 | **Q14(a)(b)(c)** (`F482`) transcription, polymorphism, translation | Covered — transcription `F261` opener, polymorphism `F441`/`F442`, translation `F499` opener. **These three answers live entirely in opener rows**, which is exactly why `1a-O`/`1b-O` were run as their own sessions; if those rows are dropped in Pass 2, three quarters of Q14 becomes unanswerable. |
 | **Q14(d)** (`F482`) what Bioinformatics *is* | **GAP.** `F382` names the field ("a new area in biology called Bioinformatics") but never says what it does, so "briefly describe Bioinformatics" has no answer in the body. **Home: extend the §5.9 block at `F381`/`F382`** with one sentence framing it from `F381` (storage, retrieval and analysis of the enormous sequence data) and goals (iii)/(iv) `F385`/`F386` (store the information in databases; improve tools for data analysis). No outside definition. |
 | **In-body `F288`/`F289`** — both instruct the student to "take help of the checkerboard", i.e. `Table 5.1` | **Blocked, not a Rule 2 gap.** The 64 codon cells are not text-extractable (carry-over 9) and **no session owns rebuilding them**. Without the table these two exercises are unanswerable, so the owner must be named before Pass 2a. Escalated to carry-over 17. |
-
-## Figure manifest
-
-Empty — owned by session **1-F**. A first-half-only manifest cannot be checked for duplicate or missing `Fig #` numbering across the seam, so figures are deliberately deferred to a single whole-chapter session (§6 big-chapter protocol).
 
 ## Carry-over list
 
