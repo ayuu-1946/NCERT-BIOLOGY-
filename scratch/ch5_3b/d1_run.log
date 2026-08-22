@@ -1,0 +1,21 @@
+rows: 646
+verdicts: {'EXACT': 431, 'MISS': 215}
+
+verdict x type:
+   EXACT  concept        252
+   EXACT  definition     56
+   EXACT  example        11
+   EXACT  list           32
+   EXACT  name           18
+   EXACT  number         31
+   EXACT  question       31
+   MISS   concept        12
+   MISS   example        2
+   MISS   figure-label   136
+   MISS   heading        30
+   MISS   list           1
+   MISS   number         6
+   MISS   opener         27
+   MISS   table          1
+
+wrote scratch/ch5_3b/d1_trace.tsv

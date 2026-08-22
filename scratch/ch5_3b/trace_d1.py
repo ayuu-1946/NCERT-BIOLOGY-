@@ -126,12 +126,20 @@ def load_rows():
     return rows
 
 
-def unquote(t: str) -> str:
+def unquote(t: str):
+    """Return (body, annotation).
+
+    An inventory cell is `"the row wording" (authoring note ...)`. The note is
+    OUR commentary -- font sizes, trap references, carry-over pointers -- and is
+    deliberately NOT source text. Comparing it against the source manufactures
+    drift: it was what dragged every heading row to a ~0.4 ratio and hid the
+    real signal. Only the FIRST quoted span is the claim about the source.
+    """
     t = t.strip()
-    m = re.match(r'^["\u201c](.*)["\u201d]$', t, re.S)
+    m = re.match(r'^["\u201c\u201d](.*?)["\u201c\u201d](.*)$', t, re.S)
     if m:
-        t = m.group(1)
-    return t.strip()
+        return m.group(1).strip(), m.group(2).strip()
+    return t, ""
 
 
 def best_ratio(needle: str, hay: str):
@@ -158,7 +166,7 @@ def main():
     rows = load_rows()
     results = []
     for r in rows:
-        body = unquote(r["text"])
+        body, annot = unquote(r["text"])
         body = re.sub(r"\s*\[(?:label|heading|opener|figure)[^\]]*\]\s*", " ",
                       body, flags=re.I)
         hit_page, verdict, ratio, win = None, "MISS", 0.0, ""
@@ -174,7 +182,8 @@ def main():
             ratio, win = best_ratio(norm(body, True), stream)
             verdict = "NEAR" if ratio >= 0.93 else "MISS"
         results.append({**r, "verdict": verdict, "page": hit_page or "",
-                        "ratio": round(ratio, 3), "window": win})
+                        "ratio": round(ratio, 3), "window": win,
+                        "body": body, "annot": annot})
 
     print("rows:", len(results))
     print("verdicts:", dict(Counter(x["verdict"] for x in results)))
@@ -185,10 +194,10 @@ def main():
 
     out = Path("scratch/ch5_3b/d1_trace.tsv")
     with out.open("w") as f:
-        f.write("id\tsection\ttype\tverdict\tratio\tpage\ttext\twindow\n")
+        f.write("id\tsection\ttype\tverdict\tratio\tpage\tbody\twindow\n")
         for x in results:
             f.write(f"{x['id']}\t{x['section']}\t{x['type']}\t{x['verdict']}\t"
-                    f"{x['ratio']}\t{x['page']}\t{x['text']}\t{x['window']}\n")
+                    f"{x['ratio']}\t{x['page']}\t{x['body']}\t{x['window']}\n")
     print("\nwrote", out)
 
 
