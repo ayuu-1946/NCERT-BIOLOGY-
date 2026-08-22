@@ -45,8 +45,17 @@ RENDER_DPI = 300
 
 # (asset id, 1-indexed artwork page, clip rect x0, y0, x1, y1)
 FIGS = [
-    # p2: full-width plate under the last text line, above the caption
-    ("5_1", 2, (108, 575, 528, 676)),
+    # p2: full-width plate under the last text line, above the caption.
+    # RE-PINNED (Gate 3b figure-clipping fix): the original (108,575,528,676)
+    # box clipped real artwork -- the vector glyphs of the "3' hydroxyl" label
+    # run out to x=529.13 and the lowest base box reaches y=677.68, so the old
+    # right/bottom edges cut ~1.1pt and ~1.7pt of ink respectively.  Rect is
+    # now pinned ~2-4pt outside the drawings extent in the figure's y-band
+    # (x 117.07-529.13, y 580.43-677.68, page-number block at x<93 excluded).
+    # Bottom still stops well short of the caption band (caption drawing row
+    # starts y=688.40, the words "Figure 5.1 ..." at y=693.8), and the top
+    # clears the last body line above (ends y=568.2).
+    ("5_1", 2, (108, 573, 532, 682)),
     # p4: full-width plate at the top of the page.  Its labels ("3'", "HO",
     # "5'") are vector, not text-layer, so the drawings extent (x 89.6-514.9,
     # y 84.1-275.4) is what pins this rect; the caption starts at y=291.3.
