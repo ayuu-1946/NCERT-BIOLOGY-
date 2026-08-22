@@ -1,9 +1,9 @@
 # Ch5 Molecular Basis of Inheritance — Chapter Tracker
 
 **Status: ▶️ IN PROGRESS — all six text sweeps done; `1-Z` steps 7/8/10 done, **freeze withheld**. GATE 1 OPEN. GATE 2 AND GATE 3 NEVER RUN.**
-**7 of 9 Pass-1 sessions complete (`1-F` not started, `1-Z` partial). 0 of 510 inventory rows ticked. No script, no PDF, no assets.**
+**7 of 9 Pass-1 sessions complete (`1-F` partial: 3/17 assets complete, label rows not started; `1-Z` partial). 0 of 510 inventory rows ticked. No script or PDF; 3 verified mono assets.**
 
-**Gate 1 is blocked on exactly one thing: `1-F`.** Every text obligation is now discharged — prose,
+**Gate 1 is blocked on exactly one thing: completion of `1-F`.** Session 1-F stopped at a clean asset boundary: `5.1`, `5.2`, and `5.3` are final 300 dpi grayscale assets opened and verified after conversion; the other 14 draft crops were removed, and all figure-label rows remain outstanding from `F511`. Every text obligation is now discharged — prose,
 headings, openers, exercise-gap scan, summary classification and folding, and the closing machine
 re-parse. What is missing is the figure sweep: **0 figure-label rows, empty manifest, no `assets/`.**
 `1-Z` step 9 (the freeze) was deliberately **not** run this session, because freezing asserts all of

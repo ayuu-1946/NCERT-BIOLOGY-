@@ -2,7 +2,7 @@
 
 > The `# Frozen Inventory` title used by completed chapters is deliberately **withheld** until `1-Z` actually freezes this file. A naive `grep -i frozen` on the old title would have reported this chapter as frozen while six sweeps were still outstanding.
 
-Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — all six text sweeps (1a-S/H/O, 1b-S/H/O) complete, and `1-Z` steps 7, 8 and 10 complete; `1-F` (figures) outstanding, so step 9 (freeze) is deliberately NOT performed and GATE 1 REMAINS OPEN** | Rows so far: **510** (`F001`..`F510`)
+Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — all six text sweeps (1a-S/H/O, 1b-S/H/O) complete, `1-Z` steps 7, 8 and 10 complete, and `1-F` PARTIAL (3/17 assets complete; label rows not started); step 9 (freeze) is deliberately NOT performed and GATE 1 REMAINS OPEN** | Rows so far: **510** (`F001`..`F510`)
 
 **Big-chapter protocol (§6, 5 passes).** 31 source pages, 10 numbered sections plus summary and exercises, so this chapter runs `1a → 1b → 2a → 2b → 3`. The source seam is:
 
@@ -48,7 +48,7 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 | Rows ticked | **0** — Pass 2 not started |
 | Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE** (machine sentence-split of p30; see the Summary classification section). All 4 SUMMARY-UNIQUE facts folded into body sections as `F507`..`F510`. |
 | Exercise-gap terms | **17 item rows — 16 covering all 14 end-of-chapter questions (`F469`..`F482`) + 1 covering the two in-body exercises `F288`/`F289` — of which 5 are genuine gaps**, each with a named inline home; `F288`/`F289` are blocked on `Table 5.1`, escalated to carry-over 17. **Corrected this session from "16 scanned items" by machine parse of the table's own length:** the 14 questions occupy 16 rows (Q3+Q4 share one row, `Q8` splits into a/b/c, `Q14` splits into (a)(b)(c) and (d)), and the in-body pair is the 17th. 5 GAP rows re-counted by machine, unchanged. |
-| Figures in manifest | **0 — not started (1-F)** |
+| Figures in manifest | **17 manifest rows: 3 complete assets (`5.1`–`5.3`), 14 outstanding; 3 PNG files on disk** — `1-F` PARTIAL |
 
 Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 510 rows, `F001..F510`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `264 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 510`, matching the row total. **The four rows `1-Z` added are all `concept`**, which is the only census cell that moved (260 -> 264); every other cell is byte-identical to the pre-`1-Z` parse.
 
@@ -606,9 +606,31 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 | F509 | 5.8.1 | concept | "Lac operon is the prototype operon in bacteria, which codes for genes responsible for metabolism of lactose." (**SUMMARY-UNIQUE**, p30 Summary sentence 25, folded into 5.8.1 by `1-Z` step 8 - the word *prototype* appears nowhere in the body; F350 says only that Jacob and Monod were "the first to elucidate a transcriptionally regulated system") | |
 | F510 | 5.10 | concept | "It has immense applications in the field of forensic science, genetic biodiversity and evolutionary biology." (**SUMMARY-UNIQUE**, p30 Summary sentence 33, folded into 5.10 by `1-Z` step 8 - body F467 names only forensic science and "population and genetic diversities"; *genetic biodiversity* and *evolutionary biology* are named only in the Summary) | |
 
-## Figure-label matrix
+## Figure manifest and figure-label matrix
 
-Empty — owned by session **1-F**, which runs once for the whole chapter after 1b. Rows will be added **into the Facts table above** as rows whose wording begins `Figure labels:`, per §6. No pipe-delimited table is written here, deliberately: a second copy of the matrix doubles every label and turns a markdown separator into a phantom `Fig #` figure (the Ch12 failure).
+**Session `1-F` is PARTIAL at a clean asset boundary.** Three assets are complete; the other fourteen draft crops were removed rather than leaving unverified files that could be mistaken for deliverables. Gate 1 remains OPEN, and no figure-label Facts rows have yet been appended.
+
+| Asset | Source artwork page | Caption | Mono | Verified | State |
+|---|---:|---|---|---|---|
+| `assets/fig_5_1.png` | 2 | Figure 5.1 — A Polynucleotide chain | yes | yes | done — final file opened after conversion; correct artwork, complete labels/leader lines, print-legible, mode `L` |
+| `assets/fig_5_2.png` | 4 | Figure 5.2 — Double stranded polynucleotide chain | yes | yes | done — page-break caption resolved to artwork on p4; final file opened after conversion |
+| `assets/fig_5_3.png` | 4 | Figure 5.3 — Central dogma | yes | yes | done — final file opened after conversion; includes the required `Central dogma` label |
+| `assets/fig_5_4a.png` | 5 | Figure 5.4a — Nucleosome | — | — | outstanding |
+| `assets/fig_5_4b.png` | 5 | Figure 5.4b — EM picture — 'Beads-on-String' | — | — | outstanding |
+| `assets/fig_5_5.png` | 8 | Figure 5.5 — Hershey and Chase Experiment | — | — | outstanding |
+| `assets/fig_5_6.png` | 10 | Figure 5.6 — Watson-Crick model for semiconservative DNA replication | — | — | outstanding |
+| `assets/fig_5_7.png` | 11 | Figure 5.7 — Meselson and Stahl's Experiment | — | — | outstanding |
+| `assets/fig_5_8.png` | 13 | Figure 5.8 — Replicating Fork | — | — | outstanding |
+| `assets/fig_5_9.png` | 14 | Figure 5.9 — Schematic structure of a transcription unit | — | — | outstanding |
+| `assets/fig_5_10.png` | 15 | Figure 5.10 — Process of Transcription in Bacteria | — | — | outstanding |
+| `assets/fig_5_11.png` | 16 | Figure 5.11 — Process of Transcription in Eukaryotes | — | — | outstanding |
+| `assets/fig_5_12.png` | 20 | Figure 5.12 — tRNA — the adapter molecule | — | — | outstanding; must include `anticodon loop` in the label rows |
+| `assets/fig_5_13.png` | 21 | Figure 5.13 — Translation | — | — | outstanding |
+| `assets/fig_5_14.png` | 23 | Figure 5.14 — The lac Operon | — | — | outstanding |
+| `assets/fig_5_15.png` | 25 | Figure 5.15 — Human Genome Project | — | — | outstanding; number and caption text are on separate lines |
+| `assets/fig_5_16.png` | 29 | Figure 5.16 — Schematic representation of DNA fingerprinting | — | — | outstanding |
+
+Label rows will be added **into the Facts table above**, contiguously from `F511`, with wording beginning `Figure labels:`, per §6. No second pipe-delimited label table is written here: a duplicate copy would double every parsed label and can turn a markdown separator into a phantom `Fig #` figure.
 
 ## Summary classification
 

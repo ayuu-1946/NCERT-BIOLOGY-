@@ -93,7 +93,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | Chapter | Status |
 |---|---|
 | 4. Principles of Inheritance and Variation | ⬜ Not done |
-| 5. Molecular Basis of Inheritance | ▶️ In progress — all 6 sweeps + `1-Z` steps 7/8/10 done (510 rows); **Gate 1 OPEN**, blocked on `1-F`; Pass 2 not started |
+| 5. Molecular Basis of Inheritance | ▶️ In progress — all 6 sweeps + `1-Z` steps 7/8/10 done (510 rows); **Gate 1 OPEN**, blocked on the remainder of `1-F` (3/17 assets complete; label rows not started); Pass 2 not started |
 | 6. Evolution | ⬜ Not done |
 
 ### Unit VIII — Biology in Human Welfare
