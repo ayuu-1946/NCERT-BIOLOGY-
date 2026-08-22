@@ -1,11 +1,11 @@
 # Ch8 Microbes in Human Welfare (Class 12) — Chapter Tracker
 
-**Status: ▶️ IN PROGRESS — the `1-F` figure sweep is COMPLETE (9 verified mono assets, three-part crop gate passed). Everything else in Pass 1 is UNSTARTED, so **GATE 1 IS OPEN** and this chapter does not enter the Done tally.**
+**Status: ▶️ IN PROGRESS — Pass 1 is COMPLETE and **GATE 1 IS GREEN** (frozen inventory, 207 rows `F001`..`F207`, all counts machine-derived). Pass 2 has not started, so this chapter still does not enter the Done tally.**
 
-**Do not read the figure sweep as Gate 1.** Gate 1 requires a *frozen numbered
-Facts inventory* **plus** the figure manifest **plus** the figure-label matrix.
-Only the manifest and the (unticked) label matrix exist. There is no Facts
-table, no `F###` row, no script and no generated PDF.
+**Gate 1 green does not mean the chapter is done.** There is still no
+`Ch8_MicrobesInHumanWelfare.py` and no generated PDF; every row in the inventory
+is **unticked**, which is the correct state before Pass 2. The next gate is
+Gate 2 (`check_pdf.py` exits 0), and it cannot be judged until the script renders.
 
 This is a per-chapter tracker; it is the detail layer under the repo-wide
 `CHAPTER_TRACKER.md` and `CHAPTER_STATUS.md` roll-ups. Where those disagree with
@@ -80,20 +80,22 @@ tail — the prose sweep runs **pp. 3–11**.
 
 | # | Session | Scope | State | Sole deliverable |
 |---|---|---|---|---|
-| 1 | `1-F` | **whole chapter** figures | ✅ **done** | 9 verified mono assets + `extract_figures.py` with hand-pinned rects + figure manifest + label matrix |
-| 2 | `1-S` | prose facts, steps 1–3 | ⬜ **not started** | `F###` prose rows |
-| 3 | `1-H` | headings only | ⬜ **not started** | heading rows |
-| 4 | `1-O` | section openers only | ⬜ **not started** | opener rows |
-| 5 | `1-Z` | steps 7–9, freeze | ⬜ **not started** | exercise-gap scan, summary classification, freeze |
+| 1 | `1-F` | **whole chapter** figures | ✅ **done** | 9 verified mono assets + `extract_figures.py` with hand-pinned rects + figure manifest + label matrix — **9 assets / 17 labels** |
+| 2 | `1-S` | prose facts, steps 1–3 | ✅ **done** | prose/caption/term/name/number/question/crossref rows — **169 rows** (198 Facts rows minus 15 heading, 14 opener) |
+| 3 | `1-H` | headings only | ✅ **done** | heading rows — **15** (9 numbered + 6 unnumbered) |
+| 4 | `1-O` | section openers only | ✅ **done** | opener rows — **14** |
+| 5 | `1-Z` | steps 7–9, freeze | ✅ **done** | 4 exercise-gap terms, 18 summary sentences classified (16 BODY-PRESENT / 2 SUMMARY-UNIQUE), inventory frozen at **207 rows** |
 
-**Row 1 does not close Gate 1.** See the header note.
+**All five sessions ran and each reported its own machine-derived count**, which
+is itself a Gate 1 criterion. Every count above was re-parsed from the finished
+inventory file, not tallied by hand — see "Gate 1 validation" below.
 
 ---
 
 ## 3. What is actually on disk
 
     notes/class 12/Ch8_MicrobesInHumanWelfare/
-      Ch8_MicrobesInHumanWelfare_inventory.md   figure manifest + label matrix ONLY; NOT frozen, no Facts table
+      Ch8_MicrobesInHumanWelfare_inventory.md   FROZEN — 207 rows F001..F207, all unticked
       Ch8_TRACKER.md                            this file
       extract_figures.py                        hand-pinned rects + 4-part crop gate
       assets/                                   9 verified mono PNGs
@@ -127,7 +129,7 @@ Re-derived this session, not recalled:
 | Split figures | **Figure 8.2 → 2 assets** (`a`+`b` panels together; `c` separate) |
 | Unnumbered/bonus plates | **0** — none exist in this chapter, so the denominator is 9 everywhere |
 | Vector vs raster | 1 vector schematic (8.8); 8 raster/micrograph plates |
-| Facts rows | **0 — no Facts table exists yet** |
+| Facts rows | **198** (`F001`..`F198`) + **9** figure-label rows (`F199`..`F207`) = **207** |
 
 Re-derive with:
 
@@ -222,28 +224,92 @@ figure's artwork, or a caption background — none is clipped figure content.
 
 ---
 
-## 5. NEXT SESSION — `1-S`, the prose sweep
+## 5. Gate 1 validation — how it was judged
 
-**Gate 1 is OPEN.** The figure sweep is done; **no prose, heading or opener row
-exists yet**. The next session is `1-S`: steps 1–3 over all 12 source pages,
-producing the numbered Facts table from `F001`.
+Gate 1 is a **machine-checked** gate, so nothing below is a claim; each line is
+the output of re-parsing the finished inventory file.
+
+| Criterion | Result |
+|---|---|
+| Total rows / ID contiguity | 207 rows, `F001`..`F207`, contiguous, 0 duplicates |
+| Facts vs matrix split | 198 + 9 |
+| `check_pdf.py._extract_labels` run against the inventory | **17 labels across 5 figure rows**; **no doubling**; **no phantom `Fig #` row** |
+| Heading rows | 15 = 9 numbered + 6 unnumbered |
+| Opener rows | 14 |
+| Caption rows | 8 (one per numbered figure) |
+| `Type` vocabulary | 10 values, all lowercase, no strays |
+| Summary sentences | 18 = 16 BODY-PRESENT + 2 SUMMARY-UNIQUE, both folded into body rows |
+| Exercise-gap terms | 4, each with a planned home |
+| Manifest `Mono`/`Verified` | 9/9 `yes yes` |
+
+Re-derive with:
+
+    /vercel/share/neetenv/bin/python - <<'EOF'
+    import re, importlib.util, collections
+    p="notes/class 12/Ch8_MicrobesInHumanWelfare/Ch8_MicrobesInHumanWelfare_inventory.md"
+    txt=open(p).read()
+    rows=[[c.strip() for c in l.strip().strip("|").split("|")]
+          for l in txt.splitlines() if l.strip().startswith("|")]
+    rows=[r for r in rows if len(r)>=4 and re.fullmatch(r"F\d{3}", r[0])]
+    n=sorted(int(r[0][1:]) for r in rows)
+    print("rows", len(rows), "contiguous", n==list(range(1,len(n)+1)))
+    print(collections.Counter(r[2] for r in rows))
+    s=importlib.util.spec_from_file_location("cp","check_pdf.py")
+    cp=importlib.util.module_from_spec(s); s.loader.exec_module(cp)
+    labs=cp._extract_labels(txt)
+    print("labels", len(labs), "figs", len({f for f,_ in labs}))
+    EOF
+
+### Two formatting traps this chapter hit, recorded so they are not re-introduced
+
+1. **The prompt's own suggested matrix header is a phantom-label generator.** A
+   header cell reading `Figure labels (one row per figure; every in-figure label
+   listed)` **matches `_extract_labels`' own regex**, has no quoted strings, and so
+   falls through to the semicolon fallback — manufacturing two phantom labels
+   (`(one row per figure`, `every in-figure label listed)`) that no running text
+   could ever satisfy. The header column is therefore worded **`Label row
+   wording`**. Do not "restore" the documented wording.
+2. **Unlabelled figures must not get a `Figure labels: (none)` row**, for the same
+   reason. The four photographic plates (8.4–8.7) carry rows worded
+   `No in-figure labels — ...`, which the parser skips by design, so each figure
+   still has a row while contributing 0 labels. This is why the parse reports
+   **9 matrix rows but 5 figure rows / 17 labels**, and the discrepancy is
+   intentional.
+
+The old duplicate label table was also **removed**: the inventory previously
+restated the matrix as a second, 3-column table. It happened to be invisible to
+the parser (fewer than 4 cells), but the §6 rule is one location only, and a later
+edit adding a column would have silently doubled every label.
+
+---
+
+## 6. NEXT SESSION — Pass 2, write the script
+
+**Gate 1 is green, so Pass 2 may begin.** Deliverable:
+`Ch8_MicrobesInHumanWelfare.py`, importing `neet_template.py`, written **linearly
+from the frozen inventory** in Content Order, with each row ticked in the
+inventory file *as it is written* — not reconciled afterwards.
 
 Binding rules for that session:
 
-1. **Do not re-read or re-audit the figures.** `1-F` is closed. Re-reading swept
-   material is how sweeps contaminate each other.
-2. **Figure-label rows come last**, after the prose/heading/opener rows exist, so
-   their IDs are contiguous at the end of the table. The labels themselves are
-   already harvested — they are in the inventory's label matrix, and they
-   **cannot be recovered by copy-paste from the PDF** because they are artwork.
-   Transcribe them from that matrix.
-3. **Rebuild `/vercel/share/neetenv` first** (§0.2) — it is reliably absent.
-4. The manifest's **denominator is 9 assets / 8 figure numbers.** Report either
-   with its basis; never a bare count.
+1. **Rebuild `/vercel/share/neetenv` first** (§0.2) — it is reliably absent, and a
+   missing interpreter is this workflow's most-misdiagnosed failure.
+2. **Do not re-open Pass 1.** The inventory is frozen. If a genuine omission
+   surfaces, add the row *and* fix every restatement of every affected count in the
+   same edit, then re-run the parse.
+3. **All 17 in-figure labels must appear in running text** — `check_pdf.py` check 6
+   fails the build otherwise. They are artwork and cannot be copy-pasted from the
+   source PDF; transcribe them from rows `F199`..`F207`.
+4. **Banned glyphs (check 5)** bite this chapter specifically: write `CO2`, `CH4`,
+   `H2`, `B12` and `100 C` as plain ASCII, never as subscripts or with a degree
+   sign. The inventory rows are already written that way — copy them verbatim.
+5. **Embed all 9 assets via `figure()`**; the denominator is 9 assets / 8 figure
+   numbers, because Figure 8.2 is split. Report either with its basis.
+6. The 4 exercise-gap NOTE boxes must be **visibly marked as beyond the body text**,
+   so exercise-support content is never mistaken for an NCERT sentence.
 
-Then `1-H` → `1-O` → `1-Z` (freeze) → judge Gate 1 → Pass 2 (script importing
-`neet_template.py`, embedding these 9 assets via `figure()`) → Gate 2
-(`check_pdf.py` green) → Pass 3 → Gate 3.
+Then Gate 2 (`check_pdf.py` exits 0) → Pass 3 (bidirectional content cross-check +
+visual render check) → Gate 3 → deliver.
 
 ---
 
