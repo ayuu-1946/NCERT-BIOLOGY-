@@ -249,6 +249,23 @@ story.append(figure(
     "with opposite polarity -- 5' to 3' on the upper strand and 3' to 5' on the lower -- "
     "and the base pairs A with T and G with C are held together by hydrogen bonds "
     "(the hydrogen bonds are marked; note two between A and T, three between G and C)."))
+story.append(Spacer(1, 3))
+# Rule 2 gap (inventory exercise-gap scan, Q2; carry-over 18). The body gives Chargaff's
+# constant ratios and the A-T / G-C pairing rule but never the step that the four base
+# percentages of a duplex sum to 100, so the arithmetic the exercise asks for is
+# unreachable. Derived here from those two facts only, as a NOTE box so it reads as the
+# rewrite's scaffolding and not as an NCERT sentence.
+story.append(note(
+    "<b>Working out one base percentage from another.</b> The exercises ask: <i>if a double "
+    "stranded DNA has 20 per cent of cytosine, calculate the per cent of adenine.</i> Two "
+    "facts already stated above are all you need. Because <b>C pairs only with G</b>, "
+    "<b>%C = %G</b>, so <b>%G is also 20</b>. Together C and G therefore account for "
+    "<b>40 per cent</b> of the bases. The DNA has <b>only four bases</b>, so their "
+    "percentages must <b>add up to 100</b>, leaving <b>60 per cent</b> to be shared by A "
+    "and T. Because <b>A pairs only with T</b>, <b>%A = %T</b>, so each is half of 60: "
+    "<b>%A = 30 per cent</b> (and %T = 30 per cent). The general form worth remembering is "
+    "<b>%A = %T</b>, <b>%G = %C</b>, and <b>%A + %T + %G + %C = 100</b>."))
+story.append(Spacer(1, 3))
 
 story.append(Paragraph(
     "The salient features of the Double-helix structure of DNA are these:",
@@ -764,6 +781,29 @@ story.append(Paragraph(
     "deoxynucleotides. These enzymes are <b>highly efficient</b> because they have to "
     "catalyse polymerisation of a large number of nucleotides in a very short time.",
     STYLES["Body"]))
+story.append(Spacer(1, 3))
+# Rule 2 gap (inventory exercise-gap scan, Q6; carry-over 18). The body names only
+# DNA-dependent DNA polymerase (here) and DNA-dependent RNA polymerase (5.5.1 / 5.5.3);
+# the RNA-templated classes are alluded to only by the chapter's own remark that in some
+# viruses the flow of information runs in reverse, from RNA to DNA. The grid below names
+# the four classes that follow from the chapter's own naming convention -- template first,
+# product second -- and adds no enzyme name, organism or number the source does not carry.
+story.append(note(
+    "<b>Naming the nucleic-acid polymerases.</b> The exercises ask you to <i>list the types "
+    "of nucleic acid polymerases</i> by the <b>chemical nature of the template (DNA or "
+    "RNA)</b> and the <b>nature of the nucleic acid synthesised from it (DNA or RNA)</b>. "
+    "The chapter's own naming convention does the work: the enzyme is named "
+    "<b>[template]-dependent [product] polymerase</b>. That gives <b>four</b> "
+    "combinations.<br/><br/>"
+    "<b>DNA-dependent DNA polymerase</b> -- DNA template, DNA product: the <b>replication</b> "
+    "enzyme named in this section. <b>DNA-dependent RNA polymerase</b> -- DNA template, RNA "
+    "product: the <b>transcription</b> enzyme of section 5.5. <b>RNA-dependent DNA "
+    "polymerase</b> -- RNA template, DNA product: this is the direction the chapter refers "
+    "to when it notes that <b>in some viruses the flow of information is in reverse "
+    "direction, that is, from RNA to DNA</b>. <b>RNA-dependent RNA polymerase</b> -- RNA "
+    "template, RNA product: the remaining combination, used by viruses whose genome is RNA "
+    "and which must copy it as RNA."))
+story.append(Spacer(1, 3))
 story.append(Paragraph(
     "E. coli, that has only <b>4.6 x 10<super>6</super> bp</b>, completes the process of "
     "replication within <b>18 minutes</b>; that means the <b>average rate of "
@@ -1038,12 +1078,1215 @@ story.append(memory_aid(
     "elongates. For the three RNAs: <b>mRNA is the message, tRNA transfers the amino "
     "acid, rRNA is the ribosome</b> -- structural and catalytic."))
 story.append(Spacer(1, 4))
+
+# ---- 5.5.3 (continued) Transcription in eukaryotes, splicing, capping and tailing ----
+# (F225-F231; Figure 5.11 with labels F591-F601). Written in Pass 2b: Pass 2a stopped at
+# F224, so this is the tail of 5.5.3 and not a separate numbered section -- NCERT has no
+# section 5.5.4.
+story.append(Paragraph(
+    "In <b>bacteria</b>, since the mRNA does not require any processing to become active, "
+    "and also since transcription and translation take place in the same compartment "
+    "(there is no separation of cytosol and nucleus in bacteria), many times the "
+    "<b>translation can begin much before the mRNA is fully transcribed</b>. Consequently, "
+    "the <b>transcription and translation can be coupled in bacteria</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "In <b>eukaryotes</b>, there are <b>two additional complexities</b>.",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "<b>(i)</b> There are <b>at least three RNA polymerases in the nucleus</b> (in addition "
+    "to the RNA polymerase found in the organelles). There is a <b>clear cut division of "
+    "labour</b>:",
+    STYLES["Body"]))
+story.append(data_table([
+    ["Enzyme", "What it transcribes"],
+    ["<b>RNA polymerase I</b>",
+     "Transcribes <b>rRNAs</b> -- the <b>28S, 18S and 5.8S</b> rRNAs."],
+    ["<b>RNA polymerase II</b>",
+     "Transcribes the <b>precursor of mRNA</b>, the <b>heterogeneous nuclear RNA "
+     "(hnRNA)</b>."],
+    ["<b>RNA polymerase III</b>",
+     "Transcribes <b>tRNA</b>, <b>5srRNA</b> and <b>snRNAs</b> (small nuclear RNAs)."],
+], col_widths=[2.4, 6.6]))
+story.append(Spacer(1, 4))
+story.append(Paragraph(
+    "<b>(ii)</b> The second complexity is that the <b>primary transcripts contain both the "
+    "exons and the introns and are non-functional</b>. Hence, it is subjected to a process "
+    "called <b>splicing</b> where the <b>introns are removed and exons are joined in a "
+    "defined order</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "hnRNA undergoes <b>additional processing called as capping and tailing</b>. In "
+    "<b>capping</b>, an unusual nucleotide (<b>methyl guanosine triphosphate</b>) is added "
+    "to the <b>5'-end</b> of hnRNA. In <b>tailing</b>, <b>adenylate residues (200-300)</b> "
+    "are added at the <b>3'-end</b> in a <b>template independent manner</b>. It is the "
+    "<b>fully processed hnRNA, now called mRNA</b>, that is <b>transported out of the "
+    "nucleus for translation</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(process_flow([
+    "<b>Transcription.</b> RNA polymerase II copies the split gene into <b>hnRNA</b>, "
+    "which still carries every <b>Exon</b> and every <b>Intron</b>.",
+    "<b>Capping.</b> Methyl guanosine triphosphate is added at the <b>5'</b> end -- the "
+    "<b>Cap</b>.",
+    "<b>Tailing / Polyadenylation.</b> 200-300 adenylate residues are added at the "
+    "<b>3'</b> end, template independently -- the <b>Poly A tail</b>.",
+    "<b>RNA splicing.</b> Introns are excised and exons joined in a defined order, giving "
+    "the mature <b>Messenger RNA</b>.",
+    "<b>Export.</b> The fully processed <b>3' mRNA</b> leaves the nucleus for "
+    "translation.",
+]))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_11.png",
+    "Figure 5.11 Process of transcription in eukaryotes. The primary transcript carries "
+    "<b>Exon</b> and <b>Intron</b> stretches; <b>Capping</b> adds the <b>Cap</b> at the "
+    "<b>5'</b> end and <b>Polyadenylation</b> adds the <b>Poly A tail</b> at the <b>3'</b> "
+    "end, then <b>RNA splicing</b> removes the introns to give the mature "
+    "<b>Messenger RNA</b> -- the <b>3' mRNA</b> that is exported for translation."))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "The <b>significance of such complexities is now beginning to be understood</b>. The "
+    "<b>split-gene arrangements represent probably an ancient feature of the genome</b>. "
+    "The <b>presence of introns is reminiscent of antiquity</b>, and the <b>process of "
+    "splicing represents the dominance of RNA-world</b>. In recent times, the understanding "
+    "of RNA and RNA-dependent processes in the living system have assumed more importance.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "Eukaryotic processing in order: <b>cap the 5' end, tail the 3' end, then splice</b>. "
+    "Remember the polymerase division of labour by the <b>rRNA / mRNA / tRNA</b> order of "
+    "<b>I / II / III</b> -- polymerase <b>II</b> is the one that matters most in this "
+    "chapter because it makes <b>hnRNA</b>, the precursor of mRNA. And note the contrast "
+    "that NEET likes: in <b>bacteria</b> transcription and translation are <b>coupled</b> "
+    "(no processing, no nucleus); in <b>eukaryotes</b> they are separated by processing and "
+    "by the nuclear envelope."))
+
+
+# --------------------------------------------------------------------------------------
+# 5.6  GENETIC CODE
+# --------------------------------------------------------------------------------------
+# ---- 5.6 (F483 heading, F496 opener, F265-F291, Table 5.1 = F280) ----
+story.append(heading("5.6", "GENETIC CODE", 1, has_table=True))
+
+story.append(Paragraph(
+    "During replication and transcription a nucleic acid was copied to form another "
+    "nucleic acid. Hence, these <b>processes are easy to conceptualise on the basis of "
+    "complementarity</b>. The process of <b>translation</b> requires <b>transfer of genetic "
+    "information from a polymer of nucleotides to synthesise a polymer of amino acids</b>. "
+    "<b>Neither does any complementarity exist between nucleotides and amino acids, nor "
+    "could any be drawn theoretically.</b>",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "There existed ample evidences, though, to support the notion that <b>change in nucleic "
+    "acids (genetic material) were responsible for change in amino acids in proteins</b>. "
+    "This led to the <b>proposition of a genetic code that could direct the sequence of "
+    "amino acids during synthesis of proteins</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "If determining the biochemical nature of genetic material and the structure of DNA was "
+    "very exciting, the <b>proposition and deciphering of genetic code were most "
+    "challenging</b>. In a very true sense, it required involvement of <b>scientists from "
+    "several disciplines -- physicists, organic chemists, biochemists and geneticists</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(data_table([
+    ["Who", "Contribution to the genetic code"],
+    ["<b>George Gamow</b><br/>(a physicist)",
+     "Argued that since there are <b>only 4 bases</b> and if they have to <b>code for 20 "
+     "amino acids</b>, the <b>code should constitute a combination of bases</b>. He "
+     "suggested that in order to code for all the 20 amino acids, the <b>code should be "
+     "made up of three nucleotides</b>. This was a <b>very bold proposition</b>, because a "
+     "permutation combination of <b>4^3 (4 x 4 x 4) would generate 64 codons</b> -- "
+     "generating <b>many more codons than required</b>."],
+    ["<b>Har Gobind Khorana</b>",
+     "The <b>chemical method</b> he developed was instrumental in <b>synthesising RNA "
+     "molecules with defined combinations of bases</b> (<b>homopolymers and "
+     "copolymers</b>)."],
+    ["<b>Marshall Nirenberg</b>",
+     "His <b>cell-free system for protein synthesis</b> finally <b>helped the code to be "
+     "deciphered</b>."],
+    ["<b>Severo Ochoa</b>",
+     "His enzyme (<b>polynucleotide phosphorylase</b>) was also helpful in <b>polymerising "
+     "RNA with defined sequences in a template independent manner</b> (enzymatic synthesis "
+     "of RNA)."],
+], col_widths=[2.0, 7.0]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "<b>Providing proof that the codon was a triplet, was a more daunting task.</b> "
+    "Finally a <b>checker-board for genetic code was prepared</b>, which is given in "
+    "<b>Table 5.1</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 4))
+
+# --------------------------------------------------------------------------------------
+# Table 5.1 -- the 64-codon checker-board.
+#
+# Inventory carry-over 9 and 17: the 64 cells of the source table are NOT text-extractable
+# (get_text returns no usable row/column order) and the table is not a figure, so session
+# 1-F does not own it and it had no owner at all. Carry-over 17 required an owner to be
+# named before Pass 2a; Pass 2a did not build it. It is built here, in the section that
+# refers to it, because two in-body exercises (F288/F289) explicitly instruct the student
+# to "take help of the checkerboard" and are unanswerable without it.
+#
+# The grid is generated from the mapping below rather than typed out as 64 literal cells,
+# so that a proof-read is a read of 64 short entries in codon order instead of a read of
+# rendered table syntax. Order is NCERT's: first base down the rows, second base across
+# the columns, third base within each cell in U, C, A, G order.
+# --------------------------------------------------------------------------------------
+_BASES = ("U", "C", "A", "G")
+_CODONS = {
+    "UUU": "Phe", "UUC": "Phe", "UUA": "Leu", "UUG": "Leu",
+    "UCU": "Ser", "UCC": "Ser", "UCA": "Ser", "UCG": "Ser",
+    "UAU": "Tyr", "UAC": "Tyr", "UAA": "Stop", "UAG": "Stop",
+    "UGU": "Cys", "UGC": "Cys", "UGA": "Stop", "UGG": "Trp",
+    "CUU": "Leu", "CUC": "Leu", "CUA": "Leu", "CUG": "Leu",
+    "CCU": "Pro", "CCC": "Pro", "CCA": "Pro", "CCG": "Pro",
+    "CAU": "His", "CAC": "His", "CAA": "Gln", "CAG": "Gln",
+    "CGU": "Arg", "CGC": "Arg", "CGA": "Arg", "CGG": "Arg",
+    "AUU": "Ile", "AUC": "Ile", "AUA": "Ile", "AUG": "Met",
+    "ACU": "Thr", "ACC": "Thr", "ACA": "Thr", "ACG": "Thr",
+    "AAU": "Asn", "AAC": "Asn", "AAA": "Lys", "AAG": "Lys",
+    "AGU": "Ser", "AGC": "Ser", "AGA": "Arg", "AGG": "Arg",
+    "GUU": "Val", "GUC": "Val", "GUA": "Val", "GUG": "Val",
+    "GCU": "Ala", "GCC": "Ala", "GCA": "Ala", "GCG": "Ala",
+    "GAU": "Asp", "GAC": "Asp", "GAA": "Glu", "GAG": "Glu",
+    "GGU": "Gly", "GGC": "Gly", "GGA": "Gly", "GGG": "Gly",
+}
+assert len(_CODONS) == 64, f"codon table must have 64 cells, has {len(_CODONS)}"
+assert sum(1 for v in _CODONS.values() if v == "Stop") == 3, "there must be exactly 3 stop codons"
+
+
+def _codon_cell(first: str, second: str) -> str:
+    """The four codons sharing a first and second base, third base in U, C, A, G order."""
+    lines = []
+    for third in _BASES:
+        codon = first + second + third
+        aa = _CODONS[codon]
+        marker = " <b>(Stop)</b>" if aa == "Stop" else ""
+        shown = "" if aa == "Stop" else " " + aa
+        lines.append(f"<b>{codon}</b>{shown}{marker}")
+    return "<br/>".join(lines)
+
+
+_codon_rows = [["1st base", "2nd base: U", "2nd base: C", "2nd base: A", "2nd base: G"]]
+for _first in _BASES:
+    _codon_rows.append(
+        [f"<b>{_first}</b>"] + [_codon_cell(_first, _second) for _second in _BASES])
+
+story.append(Paragraph(
+    "<b>Table 5.1 The Codons for the Various Amino Acids</b>", STYLES["Body"]))
+story.append(data_table(_codon_rows, col_widths=[0.7, 2.075, 2.075, 2.075, 2.075],
+                        font_size=8))
+story.append(Spacer(1, 3))
 story.append(note(
-    "<b>End of Pass 2a (source pp. 1-17, sections 5.1 to 5.5.3).</b> The chapter "
-    "continues with 5.5.4 (transcription in eukaryotes and RNA splicing), 5.6 (genetic "
-    "code), 5.7 (translation), 5.8 (regulation of gene expression / lac operon), "
-    "5.9 (Human Genome Project) and 5.10 (DNA fingerprinting), followed by the QUICK "
-    "RECAP and APPENDIX blocks. Those are written in Pass 2b."))
+    "<b>How to read the checker-board.</b> Take the codon's <b>first base from the row</b>, "
+    "its <b>second base from the column</b>, and find the line inside that cell whose "
+    "<b>third base</b> matches -- the third base always runs <b>U, C, A, G</b> down the "
+    "cell. So <b>AUG</b> is row <b>A</b>, column <b>U</b>, third line <b>G</b>: "
+    "<b>Met</b>. Reading the whole board confirms the counts quoted in the salient "
+    "features below -- <b>64 codons</b> in all, of which <b>61 code for amino acids</b> and "
+    "<b>3 (UAA, UAG, UGA) are stop codons</b>."))
+story.append(Spacer(1, 4))
+
+story.append(Paragraph(
+    "The <b>salient features of genetic code</b> are as follows:", STYLES["Body"]))
+story.append(data_table([
+    ["Feature", "Statement"],
+    ["<b>(i) Triplet</b>",
+     "The <b>codon is triplet</b>. <b>61 codons code for amino acids</b> and <b>3 codons "
+     "do not code for any amino acids</b>, hence they <b>function as stop codons</b>."],
+    ["<b>(ii) Degenerate</b>",
+     "<b>Some amino acids are coded by more than one codon</b>, hence the <b>code is "
+     "degenerate</b>."],
+    ["<b>(iii) Contiguous</b>",
+     "The <b>codon is read in mRNA in a contiguous fashion</b>. <b>There are no "
+     "punctuations.</b>"],
+    ["<b>(iv) Nearly universal</b>",
+     "The <b>code is nearly universal</b>: for example, <b>from bacteria to human UUU "
+     "would code for Phenylalanine (phe)</b>. <b>Some exceptions to this rule have been "
+     "found in mitochondrial codons, and in some protozoans.</b>"],
+    ["<b>(v) AUG is dual</b>",
+     "<b>AUG has dual functions.</b> It <b>codes for Methionine (met)</b>, and it also "
+     "<b>act as initiator codon</b>."],
+    ["<b>(vi) Stop codons</b>",
+     "<b>UAA, UAG, UGA are stop terminator codons.</b>"],
+], col_widths=[2.1, 6.9]))
+story.append(Spacer(1, 4))
+story.append(note(
+    "<b>Worked exercise (NCERT, in-body).</b> <i>If following is the sequence of "
+    "nucleotides in mRNA, predict the sequence of amino acid coded by it (take help of the "
+    "checkerboard):</i> <b>-AUG UUU UUC UUC UUU UUU UUC-</b>. Reading Table 5.1 codon by "
+    "codon: AUG = <b>Met</b>, UUU = <b>Phe</b>, UUC = <b>Phe</b>, UUC = <b>Phe</b>, "
+    "UUU = <b>Phe</b>, UUU = <b>Phe</b>, UUC = <b>Phe</b>. So the peptide is "
+    "<b>Met-Phe-Phe-Phe-Phe-Phe-Phe</b>.<br/><br/>"
+    "<i>Now try the opposite. Following is the sequence of amino acids coded by an mRNA. "
+    "Predict the nucleotide sequence in the RNA:</i> <b>Met-Phe-Phe-Phe-Phe-Phe-Phe</b>. "
+    "<i>Do you face any difficulty in predicting the opposite?</i> Yes -- and that is the "
+    "point of the question. <b>Met</b> is unambiguous (only <b>AUG</b>), but each "
+    "<b>Phe</b> could be <b>UUU or UUC</b>, so six positions have two choices each and the "
+    "answer is not unique.<br/><br/>"
+    "<i>Can you now correlate which two properties of genetic code you have learnt?</i> "
+    "The forward direction works unambiguously because the code is a <b>triplet</b> read "
+    "<b>contiguously without punctuation</b>; the reverse direction is ambiguous because "
+    "the code is <b>degenerate</b>. Degeneracy is why translation is one-way readable: "
+    "<b>codon to amino acid is certain, amino acid to codon is not</b>."))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "Fix the numbers: <b>4 bases, triplet code, 4^3 = 64 codons, 61 coding + 3 stop, for "
+    "20 amino acids</b>. The three stops are <b>UAA, UAG, UGA</b> -- remember them as "
+    "<b>U-A-A / U-A-G / U-G-A</b>, all beginning with U. <b>AUG</b> is the one codon with "
+    "<b>two jobs</b>: <b>start</b> and <b>Met</b>. And keep the two contrasted properties "
+    "straight: <b>degenerate</b> = one amino acid, many codons; <b>unambiguous</b> = one "
+    "codon, never two amino acids."))
+
+
+# ---- 5.6.1 Mutations and Genetic Code (F484 heading, F497 opener, F292-F305) ----
+story.append(heading("5.6.1", "Mutations and Genetic Code", 2))
+
+story.append(Paragraph(
+    "The <b>relationships between genes and DNA are best understood by mutation "
+    "studies</b>. You have studied about <b>mutation and its effect in Chapter 4</b>.",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "Effects of <b>large deletions and rearrangements</b> in a segment of DNA are easy to "
+    "comprehend. It may result in <b>loss or gain of a gene and so a function</b>. The "
+    "effect of <b>point mutations</b> will be explained here.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "A <b>classical example of point mutation</b> is a <b>change of single base pair in the "
+    "gene for beta globin chain</b> that results in the <b>change of amino acid residue "
+    "glutamate to valine</b>. It results into a diseased condition called as <b>sickle cell "
+    "anemia</b>."))
+story.append(Paragraph(
+    "Effect of point mutations that <b>inserts or deletes a base</b> in a structural gene "
+    "can be better understood by the following simple example. Consider a statement that is "
+    "made up of the following words <b>each having three letters like genetic code</b>:",
+    STYLES["Body"]))
+story.append(Spacer(1, 2))
+story.append(data_table([
+    ["What is done to the sentence", "How it now reads"],
+    ["The original statement (every word a triplet)",
+     "<b>RAM HAS RED CAP</b>"],
+    ["<b>Insert one letter</b> B in between HAS and RED, and rearrange",
+     "<b>RAM HAS BRE DCA P</b>"],
+    ["<b>Insert two letters</b> at the same place, say <b>BI</b>",
+     "<b>RAM HAS BIR EDC AP</b>"],
+    ["<b>Insert three letters</b> together, say <b>BIG</b>",
+     "<b>RAM HAS BIG RED CAP</b>"],
+    ["<b>Delete one letter</b> (R), and rearrange",
+     "<b>RAM HAS EDC AP</b>"],
+    ["<b>Delete two letters</b> (R, E), and rearrange",
+     "<b>RAM HAS DCA P</b>"],
+    ["<b>Delete three letters</b> (R, E, D), and rearrange",
+     "<b>RAM HAS CAP</b>"],
+], col_widths=[4.6, 4.4]))
+story.append(Spacer(1, 4))
+story.append(Paragraph(
+    "The <b>conclusion from the above exercise is very obvious</b>. <b>Insertion or "
+    "deletion of one or two bases changes the reading frame from the point of insertion or "
+    "deletion.</b> However, such mutations are referred to as <b>frameshift insertion or "
+    "deletion mutations</b>.",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "<b>Insertion or deletion of three or its multiple bases</b> insert or delete in one or "
+    "multiple codon hence <b>one or multiple amino acids</b>, and the <b>reading frame "
+    "remains unaltered from that point onwards</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "The whole point of <b>RAM HAS RED CAP</b> is the <b>multiple-of-three rule</b>: "
+    "add or remove <b>1 or 2</b> bases and every codon downstream is garbled -- a "
+    "<b>frameshift</b>; add or remove <b>3 or a multiple of 3</b> and you only gain or lose "
+    "whole amino acids, with the <b>reading frame intact</b>. Note the contrast NEET tests: "
+    "<b>sickle cell anemia is a substitution</b> (one base pair changed, glutamate to "
+    "valine), <b>not</b> a frameshift."))
+
+
+# ---- 5.6.2 tRNA - the Adapter Molecule (F485 heading, F498 opener, F306-F313; Fig 5.12) ----
+story.append(heading("5.6.2", "tRNA - the Adapter Molecule", 2))
+
+story.append(Paragraph(
+    "From the very beginning of the proposition of code, it was <b>clear to Francis "
+    "Crick</b> that there has to be a <b>mechanism to read the code and also to link it to "
+    "the amino acids</b>, because <b>amino acids have no structural specialities to read "
+    "the code uniquely</b>. He postulated the <b>presence of an adapter molecule</b> that "
+    "would <b>on one hand read the code and on other hand would bind to specific amino "
+    "acids</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "The <b>tRNA, then called sRNA (soluble RNA)</b>, was <b>known before the genetic code "
+    "was postulated</b>. However, its <b>role as an adapter molecule was assigned much "
+    "later</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "<b>tRNA has an anticodon loop that has bases complementary to the code</b>, and it "
+    "also has an <b>amino acid acceptor end to which it binds to amino acids</b>. "
+    "<b>tRNAs are specific for each amino acid.</b>"))
+story.append(Paragraph(
+    "For <b>initiation</b>, there is <b>another specific tRNA</b> that is referred to as "
+    "<b>initiator tRNA</b>. <b>There are no tRNAs for stop codons.</b>",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "In Figure 5.12, the <b>secondary structure of tRNA</b> has been depicted that "
+    "<b>looks like a clover-leaf</b>. In <b>actual structure, the tRNA is a compact "
+    "molecule which looks like inverted L</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_12.png",
+    "Figure 5.12 tRNA -- the adapter molecule. The clover-leaf secondary structure of "
+    "<b>tRNA</b> carries its amino acid at the acceptor end (shown for <b>Ser</b> and "
+    "<b>Tyr</b>) and its <b>Anticodon</b> on the <b>anticodon loop</b>, which pairs with "
+    "the matching <b>Codon</b> on the <b>mRNA</b> running <b>5'</b> to <b>3'</b>."))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "tRNA is the <b>adapter</b>: <b>two ends, two jobs</b> -- the <b>anticodon loop reads "
+    "the mRNA codon</b> by complementarity, the <b>amino acid acceptor end carries the "
+    "amino acid</b>. Two shape facts are examined against each other: the <b>secondary</b> "
+    "structure is a <b>clover-leaf</b>, the <b>actual</b> three-dimensional structure is an "
+    "<b>inverted L</b>. And remember the two absences: <b>no tRNA for stop codons</b>, but "
+    "there <b>is</b> a special <b>initiator tRNA</b>."))
+
+
+# --------------------------------------------------------------------------------------
+# 5.7  TRANSLATION
+# --------------------------------------------------------------------------------------
+# ---- 5.7 (F486 heading, F499 opener = the chapter's only definition of translation,
+#      F314-F335, F507 summary-unique; Figure 5.13 labels F611-F623) ----
+story.append(heading("5.7", "TRANSLATION", 1))
+
+story.append(keyterm(
+    "<b>Translation</b> refers to the <b>process of polymerisation of amino acids to form a "
+    "polypeptide</b>. The <b>order and sequence of amino acids are defined by the sequence "
+    "of bases in the mRNA</b>."))
+story.append(Paragraph(
+    "The <b>amino acids are joined by a bond which is known as a peptide bond</b>. "
+    "<b>Formation of a peptide bond requires energy.</b> Therefore, in the <b>first phase "
+    "itself amino acids are activated in the presence of ATP and linked to their cognate "
+    "tRNA</b> -- a process commonly called as <b>charging of tRNA</b> or <b>aminoacylation "
+    "of tRNA</b> to be more specific.",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "If <b>two such charged tRNAs are brought close enough</b>, the <b>formation of peptide "
+    "bond between them would be favoured energetically</b>. The <b>presence of a catalyst "
+    "would enhance the rate of peptide bond formation</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "The <b>cellular factory responsible for synthesising proteins is the ribosome</b>. The "
+    "ribosome consists of <b>structural RNAs and about 80 different proteins</b>."))
+story.append(Paragraph(
+    "In its <b>inactive state, it exists as two subunits: a large subunit and a small "
+    "subunit</b>. When the <b>small subunit encounters an mRNA</b>, the <b>process of "
+    "translation of the mRNA to protein begins</b>. There are <b>two sites in the large "
+    "subunit</b>, for <b>subsequent amino acids to bind to</b> and thus, be <b>close enough "
+    "to each other for the formation of a peptide bond</b>. The <b>ribosome also acts as a "
+    "catalyst (23S rRNA in bacteria is the enzyme -- ribozyme) for the formation of peptide "
+    "bond</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(data_table([
+    ["Region of the mRNA", "What it is"],
+    ["<b>Translational unit</b>",
+     "A <b>translational unit in mRNA is the sequence of RNA that is flanked by the start "
+     "codon (AUG) and the stop codon and codes for a polypeptide</b>."],
+    ["<b>Untranslated regions (UTR)</b>",
+     "An mRNA also has some <b>additional sequences that are not translated</b> and are "
+     "referred as <b>untranslated regions (UTR)</b>. The <b>UTRs are present at both "
+     "5'-end (before start codon) and at 3'-end (after stop codon)</b>. They are "
+     "<b>required for efficient translation process</b>."],
+], col_widths=[2.4, 6.6]))
+story.append(Spacer(1, 4))
+story.append(process_flow([
+    "<b>Charging / aminoacylation.</b> Amino acids are <b>activated in the presence of "
+    "ATP</b> and <b>linked to their cognate tRNA</b>.",
+    "<b>Initiation.</b> The <b>ribosome binds to the mRNA at the start codon (AUG)</b> "
+    "that is <b>recognised only by the initiator tRNA</b>.",
+    "<b>Elongation.</b> Complexes of an <b>amino acid linked to tRNA</b> sequentially bind "
+    "the <b>appropriate codon in mRNA by forming complementary base pairs with the tRNA "
+    "anticodon</b>; the <b>ribosome moves from codon to codon along the mRNA</b> and "
+    "<b>amino acids are added one by one</b>, translated into <b>Polypeptide</b> sequences "
+    "dictated by DNA and represented by mRNA.",
+    "<b>Termination.</b> A <b>release factor binds to the stop codon</b>, "
+    "<b>terminating translation</b> and <b>releasing the complete polypeptide from the "
+    "ribosome</b>.",
+]))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_13.png",
+    "Figure 5.13 Translation. The <b>Ribosome</b> moves along the <b>mRNA</b> from "
+    "<b>5'</b> to <b>3'</b> while each <b>tRNA</b> delivers its amino acid to the "
+    "<b>Growing polypeptide chain</b> -- here the residues <b>Gly</b>, <b>Leu</b>, "
+    "<b>Tyr</b>, <b>Ser</b>, <b>Ala</b>, <b>Val</b> and <b>Asn</b>."))
+story.append(Spacer(1, 3))
+story.append(note(
+    "<b>Why translation is evidence for the RNA world.</b> Look at what does the work in "
+    "this section: the <b>message is RNA</b> (mRNA), the <b>adapter is RNA</b> (tRNA), and "
+    "the <b>catalyst is RNA</b> (the 23S rRNA ribozyme). Proteins are the product, not the "
+    "machinery. <b>Translation is a process that has evolved around RNA, indicating that "
+    "life began around RNA.</b>"))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "Two ribosome facts answer the common two-mark question <i>\"list two essential roles "
+    "of the ribosome\"</i>: it provides the <b>two binding sites in the large subunit</b> "
+    "that hold successive amino acids close enough to react, and its <b>23S rRNA acts as a "
+    "ribozyme</b> catalysing the peptide bond. Remember <b>charging comes before "
+    "initiation</b> -- ATP is spent activating the amino acid, not making the peptide bond "
+    "directly. UTRs sit <b>outside</b> the start and stop codons and are <b>not "
+    "translated</b>, yet are needed for efficient translation."))
+
+
+# --------------------------------------------------------------------------------------
+# 5.8  REGULATION OF GENE EXPRESSION
+# --------------------------------------------------------------------------------------
+# ---- 5.8 (F487 heading, F500 opener = the chapter's only definition of regulation of
+#      gene expression, F336-F349, F508 summary-unique) ----
+story.append(heading("5.8", "REGULATION OF GENE EXPRESSION", 1))
+
+story.append(keyterm(
+    "<b>Regulation of gene expression</b> refers to a <b>very broad term that may occur at "
+    "various levels</b>. Considering that <b>gene expression results in the formation of a "
+    "polypeptide</b>, it can be <b>regulated at several levels</b>."))
+story.append(Paragraph(
+    "In <b>eukaryotes</b>, the regulation could be exerted at:",
+    STYLES["Body"]))
+story.append(data_table([
+    ["Level", "What is regulated there"],
+    ["<b>(i) Transcriptional level</b>", "Formation of the <b>primary transcript</b>."],
+    ["<b>(ii) Processing level</b>", "<b>Regulation of splicing.</b>"],
+    ["<b>(iii) Transport</b>",
+     "<b>Transport of mRNA from nucleus to the cytoplasm.</b>"],
+    ["<b>(iv) Translational level</b>", "<b>Translation</b> of the mRNA itself."],
+], col_widths=[2.4, 6.6]))
+story.append(Spacer(1, 4))
+story.append(Paragraph(
+    "The <b>genes in a cell are expressed to perform a particular function or a set of "
+    "functions</b>. For example, if an enzyme called <b>beta-galactosidase</b> is "
+    "synthesised by <b>E. coli</b>, it is used to <b>catalyse the hydrolysis of a "
+    "disaccharide, lactose into galactose and glucose</b>; the <b>bacteria use them as a "
+    "source of energy</b>. Hence, if the <b>bacteria do not have lactose around them</b> to "
+    "be utilised for energy source, they would <b>no longer require the synthesis of the "
+    "enzyme beta-galactosidase</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "Therefore, in simple terms, it is the <b>metabolic, physiological or environmental "
+    "conditions that regulate the expression of genes</b>. The <b>development and "
+    "differentiation of embryo into adult organisms</b> are also a result of the "
+    "<b>coordinated regulation of expression of several sets of genes</b>."))
+story.append(Spacer(1, 3))
+story.append(note(
+    "<b>Why regulation is not optional.</b> <b>Since transcription and translation are "
+    "energetically very expensive processes, these have to be tightly regulated.</b> A cell "
+    "that transcribed and translated every gene all the time would spend its energy budget "
+    "producing enzymes for substrates that are not there."))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "In <b>prokaryotes, control of the rate of transcriptional initiation is the "
+    "predominant site for control of gene expression</b>. In a transcription unit, the "
+    "<b>activity of RNA polymerase at a given promoter is in turn regulated by interaction "
+    "with accessory proteins</b>, which <b>affect its ability to recognise start sites</b>. "
+    "These <b>regulatory proteins can act both positively (activators) and negatively "
+    "(repressors)</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "The <b>accessibility of promoter regions of prokaryotic DNA</b> is in many cases "
+    "<b>regulated by the interaction of proteins with sequences termed operators</b>. The "
+    "<b>operator region is adjacent to the promoter elements in most operons</b> and in "
+    "most cases the <b>sequences of the operator bind a repressor protein</b>."))
+story.append(Paragraph(
+    "<b>Each operon has its specific operator and specific repressor.</b> For example, "
+    "<b>lac operator is present only in the lac operon</b> and it <b>interacts specifically "
+    "with lac repressor only</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "Note the <b>qualifier</b>, because it is the difference between a right and a wrong "
+    "answer: it is <b>in prokaryotes</b> that <b>transcriptional initiation</b> is the "
+    "<b>predominant</b> control point. In eukaryotes there are <b>four</b> levels -- "
+    "<b>transcription, processing, transport, translation</b>. Regulatory proteins come in "
+    "two signs: <b>activators (positive)</b> and <b>repressors (negative)</b>."))
+
+
+# ---- 5.8.1 The Lac operon (F488 heading, F501 opener = sole source of Jacob and Monod,
+#      F350-F372, F509 summary-unique; Figure 5.14 labels F624-F636;
+#      Rule 2 gap Q10 = NOTE box after F371, per inventory carry-over 18) ----
+story.append(heading("5.8.1", "The Lac operon", 2))
+
+story.append(Paragraph(
+    "The <b>elucidation of the lac operon</b> was also a result of a <b>close association "
+    "between a geneticist, Francois Jacob and a biochemist, Jacque Monod</b>. They were the "
+    "<b>first to elucidate a transcriptionally regulated system</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "In <b>lac operon</b> (here <b>lac refers to lactose</b>), a <b>polycistronic "
+    "structural gene is regulated by a common promoter and regulatory genes</b>. Such "
+    "arrangement is <b>very common in bacteria</b> and is referred to as <b>operon</b>. "
+    "<b>Lac operon is the prototype operon in bacteria</b>, which codes for genes "
+    "<b>responsible for metabolism of lactose</b>."))
+story.append(Paragraph(
+    "To name few such examples: <b>lac operon, trp operon, ara operon, his operon, val "
+    "operon</b>, etc.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "The <b>lac operon consists of one regulatory gene (the i gene</b> -- here the <b>term "
+    "i does not refer to inducer, rather it is derived from the word inhibitor</b>) <b>and "
+    "three structural genes (z, y, and a)</b>.",
+    STYLES["Body"]))
+story.append(data_table([
+    ["Gene", "Product and its job"],
+    ["<b>i gene</b> (regulatory)",
+     "Codes for the <b>repressor of the lac operon</b>. It is synthesised "
+     "<b>all-the-time (constitutively)</b>."],
+    ["<b>z gene</b>",
+     "Codes for <b>beta-galactosidase (beta-gal)</b>, which is <b>primarily responsible "
+     "for the hydrolysis of the disaccharide, lactose into its monomeric units, galactose "
+     "and glucose</b>."],
+    ["<b>y gene</b>",
+     "Codes for <b>permease</b>, which <b>increases permeability of the cell to "
+     "beta-galactosides</b>."],
+    ["<b>a gene</b>",
+     "Encodes a <b>transacetylase</b>."],
+], col_widths=[2.1, 6.9]))
+story.append(Spacer(1, 4))
+story.append(Paragraph(
+    "Hence, <b>all the three gene products in lac operon are required for metabolism of "
+    "lactose</b>. In <b>most other operons as well, the genes present in the operon are "
+    "needed together to function in the same or related metabolic pathway</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "<b>Lactose is the substrate for the enzyme beta-galactosidase and it regulates "
+    "switching on and off of the operon.</b> Hence, it is termed as <b>inducer</b>."))
+story.append(Paragraph(
+    "In the <b>absence of a preferred carbon source such as glucose</b>, if <b>lactose is "
+    "provided in the growth medium</b> of the bacteria, the <b>lactose is transported into "
+    "the cells through the action of permease</b>. (Remember, a <b>very low level of "
+    "expression of lac operon has to be present in the cell all the time</b>, otherwise "
+    "<b>lactose cannot enter the cells</b>.) The lactose then <b>induces the operon</b> in "
+    "the following manner.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(process_flow([
+    "The <b>repressor of the operon is synthesised (all-the-time -- constitutively) from "
+    "the i gene</b>, as <b>Repressor mRNA</b> and then <b>Repressor</b> protein.",
+    "<b>In absence of inducer:</b> the <b>Repressor binds to the operator region (o) and "
+    "prevents RNA polymerase from transcribing the operon</b>.",
+    "<b>In presence of inducer:</b> in the presence of an <b>inducer, such as lactose or "
+    "allolactose, the repressor is inactivated by interaction with the inducer</b> -- an "
+    "<b>Inactive repressor</b>.",
+    "This <b>allows RNA polymerase access to the promoter and transcription proceeds</b>, "
+    "giving <b>lac mRNA</b>.",
+    "<b>Transcription</b> then <b>Translation</b> of that polycistronic message yields "
+    "<b>beta-galactosidase</b>, <b>permease</b> and <b>transacetylase</b>.",
+]))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_14.png",
+    "Figure 5.14 The lac operon. <b>In absence of inducer</b>, the <b>Repressor mRNA</b> "
+    "from the i gene gives the <b>Repressor</b>, and the <b>Repressor binds to the operator "
+    "region (o) and prevents RNA polymerase from transcribing the operon</b>. "
+    "<b>In presence of inducer</b>, the <b>Inducer</b> gives an <b>Inactive repressor</b>, "
+    "so <b>lac mRNA</b> is made and <b>Transcription</b> followed by <b>Translation</b> "
+    "yields <b>beta-galactosidase</b>, <b>permease</b> and <b>transacetylase</b>."))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "Essentially, <b>regulation of lac operon can also be visualised as regulation of "
+    "enzyme synthesis by its substrate</b>. Remember, <b>glucose or galactose cannot act as "
+    "inducers for lac operon</b>. <b>Regulation of lac operon by repressor is referred to "
+    "as negative regulation.</b> <b>Lac operon is under control of positive regulation as "
+    "well, but it is beyond the scope of discussion at this level.</b>",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(note(
+    "<b>Why the operon switches itself off again -- and the answer to <i>\"can you think "
+    "for how long the lac operon would be expressed in the presence of lactose?\"</i></b> "
+    "Only <b>as long as the lactose lasts</b>. Put the facts of this section in a line: "
+    "<b>lactose is the inducer</b>, and <b>lactose is also the substrate of "
+    "beta-galactosidase</b>, the very enzyme the operon switches on. So the induced enzyme "
+    "<b>consumes the inducer</b> -- hydrolysing it to <b>galactose and glucose</b>, neither "
+    "of which <b>can act as an inducer</b>. As the lactose is used up there is nothing left "
+    "to <b>inactivate the repressor</b>, the repressor <b>binds the operator again</b>, and "
+    "<b>transcription stops</b>. The operon is therefore self-limiting: it stays on only "
+    "while its own substrate is present."))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "Gene letters, in order: <b>i-z-y-a</b> = <b>inhibitor (repressor), beta-gal, permease, "
+    "transacetylase</b>. The <b>i stands for inhibitor, not inducer</b> -- a favourite "
+    "trap. The <b>inducer is lactose (or allolactose)</b>; <b>glucose and galactose are "
+    "not inducers</b>. Repressor <b>on</b> the operator = operon <b>off</b>; inducer "
+    "<b>inactivates</b> the repressor = operon <b>on</b>. This repressor-based control is "
+    "<b>negative regulation</b>."))
+
+
+# --------------------------------------------------------------------------------------
+# 5.9  HUMAN GENOME PROJECT
+# --------------------------------------------------------------------------------------
+# ---- 5.9 (F489 heading, F502 opener, F373-F408; Goals sub-heading F490 + stem F503 +
+#      items F383-F388; Figure 5.15; Rule 2 gap Q14(d) Bioinformatics extends F381/F382) ----
+story.append(heading("5.9", "HUMAN GENOME PROJECT", 1))
+
+story.append(Paragraph(
+    "In the preceding sections you have learnt that it is the <b>sequence of bases in DNA "
+    "that determines the genetic information of a given organism</b>. In other words, "
+    "<b>genetic make-up of an organism or an individual lies in the DNA sequences</b>. If "
+    "<b>two individuals differ, then their DNA sequences should also be different, at least "
+    "at some places</b>. These assumptions led to the <b>quest of finding out the complete "
+    "DNA sequence of human genome</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "With the establishment of <b>genetic engineering techniques</b> where it was possible "
+    "to <b>isolate and clone any piece of DNA</b> and availability of <b>simple and fast "
+    "techniques for determining DNA sequences</b>, a very <b>ambitious project of "
+    "sequencing human genome was launched in the year 1990</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "<b>Human Genome Project (HGP) was called a mega project.</b> You can imagine the "
+    "magnitude and the requirements for the project if we simply define the aims of the "
+    "project as follows."))
+story.append(data_table([
+    ["What makes it a mega project", "The figure NCERT gives"],
+    ["<b>Size of the genome</b>",
+     "Human genome is said to have approximately <b>3 x 10^9 bp</b>."],
+    ["<b>Cost per base</b>",
+     "<b>US $ 3 per bp</b> (the estimated cost in the beginning)."],
+    ["<b>Total estimated cost</b>",
+     "Approximately <b>9 billion US dollars</b>."],
+    ["<b>Storage, if printed</b>",
+     "If each page of a book contained <b>1000 letters</b> and each book contained "
+     "<b>1000 pages</b>, then <b>3300 such books</b> would be required to store the "
+     "information of DNA sequence <b>from a single human cell</b>."],
+    ["<b>Computation</b>",
+     "The <b>enormous amount of data</b> expected to be generated also necessitated the "
+     "use of <b>high speed computational devices for data storage and retrieval, and "
+     "analysis</b>."],
+    ["<b>Duration and coordination</b>",
+     "A <b>13-year project coordinated by the U.S. Department of Energy and the National "
+     "Institute of Health</b>. During the early years, the <b>Wellcome Trust (U.K.)</b> "
+     "became a major partner; additional contributions came from <b>Japan, France, "
+     "Germany, China</b> and others. The project was <b>completed in 2003</b>."],
+], col_widths=[2.4, 6.6]))
+story.append(Spacer(1, 4))
+story.append(keyterm(
+    "<b>HGP was closely associated with the rapid development of a new area in biology "
+    "called Bioinformatics.</b>"))
+story.append(note(
+    "<b>What Bioinformatics does.</b> NCERT names the field but does not say what it is, "
+    "and the exercises ask you to describe it -- so read it off the need that created it. "
+    "The project generated an <b>enormous amount of data</b> requiring <b>high speed "
+    "computational devices for data storage and retrieval, and analysis</b>, and two of the "
+    "HGP's own stated goals were to <b>store this information in databases</b> and to "
+    "<b>improve tools for data analysis</b>. <b>Bioinformatics is that area of biology: the "
+    "use of computational methods and databases to store, retrieve and analyse biological "
+    "sequence information.</b>"))
+story.append(Spacer(1, 4))
+
+# Goals of HGP -- F490 is an unnumbered boxed sub-heading inside 5.9, not a numbered
+# section, so it is set as a level-3 heading with no number.
+story.append(heading("Goals", "Goals of HGP", 3))
+story.append(Paragraph(
+    "Some of the <b>important goals of HGP</b> were as follows:", STYLES["Body"]))
+story.append(data_table([
+    ["#", "Goal"],
+    ["<b>(i)</b>",
+     "<b>Identify all the approximately 20,000-25,000 genes in human DNA;</b>"],
+    ["<b>(ii)</b>",
+     "<b>Determine the sequences of the 3 billion chemical base pairs that make up human "
+     "DNA;</b>"],
+    ["<b>(iii)</b>", "<b>Store this information in databases;</b>"],
+    ["<b>(iv)</b>", "<b>Improve tools for data analysis;</b>"],
+    ["<b>(v)</b>",
+     "<b>Transfer related technologies to other sectors, such as industries;</b>"],
+    ["<b>(vi)</b>",
+     "<b>Address the ethical, legal, and social issues (ELSI) that may arise from the "
+     "project.</b>"],
+], col_widths=[0.8, 8.2]))
+story.append(Spacer(1, 4))
+story.append(Paragraph(
+    "<b>Knowledge about the effects of DNA variations among individuals can lead to "
+    "revolutionary new ways to diagnose, treat and someday prevent the thousands of "
+    "disorders that affect human beings.</b> Besides providing clues to understanding human "
+    "biology, learning about <b>non-human organisms DNA sequences</b> can lead to an "
+    "understanding of their <b>natural capabilities</b> that can be applied toward solving "
+    "challenges in <b>health care, agriculture, energy production, environmental "
+    "remediation</b>. <b>Many non-human model organisms</b>, such as <b>bacteria, yeast, "
+    "Caenorhabditis elegans (a free living non-pathogenic nematode), Drosophila (the fruit "
+    "fly), plants (rice and Arabidopsis)</b>, etc., have <b>also been sequenced</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "<b>Methodologies :</b> The <b>methods involved two major approaches</b>.",
+    STYLES["Body"]))
+story.append(data_table([
+    ["Approach", "What it sequenced"],
+    ["<b>Expressed Sequence Tags (ESTs)</b>",
+     "One approach focused on <b>identifying all the genes that are expressed as RNA</b>."],
+    ["<b>Sequence Annotation</b>",
+     "The other took the <b>blind approach of simply sequencing the whole set of genome "
+     "that contained all the coding and non-coding sequence</b>, and <b>later assigning "
+     "different regions in the sequence with functions</b>."],
+], col_widths=[2.4, 6.6]))
+story.append(Spacer(1, 4))
+story.append(process_flow([
+    "<b>Isolate and fragment.</b> The <b>total DNA from a cell is isolated</b> and "
+    "<b>converted into random fragments of relatively smaller sizes</b> (recall DNA is a "
+    "very long polymer, and there are <b>technical limitations in sequencing very long "
+    "pieces of DNA</b>).",
+    "<b>Clone.</b> The fragments are <b>cloned in suitable host using specialised "
+    "vectors</b>. The <b>cloning resulted into amplification of each piece of DNA "
+    "fragment</b> so that it subsequently <b>could be sequenced with ease</b>. The "
+    "<b>commonly used hosts were bacteria and yeast</b>, and the vectors were called "
+    "<b>BAC (bacterial artificial chromosomes)</b> and <b>YAC (yeast artificial "
+    "chromosomes)</b>.",
+    "<b>Sequence.</b> The fragments were sequenced using <b>automated DNA sequencers</b> "
+    "that worked on the <b>principle of a method developed by Frederick Sanger</b>. "
+    "(Remember, <b>Sanger is also credited for developing method for determination of amino "
+    "acid sequences in proteins</b>.)",
+    "<b>Assemble.</b> These sequences were then <b>arranged based on some overlapping "
+    "regions present in them</b>. This required <b>generation of overlapping fragments for "
+    "sequencing</b>. <b>Alignment of these sequences was humanly not possible</b>, "
+    "therefore <b>specialised computer based programs were developed</b>.",
+    "<b>Annotate and assign.</b> These sequences were <b>subsequently annotated and were "
+    "assigned to each chromosome</b>. The <b>sequence of chromosome 1 was completed only in "
+    "May 2006</b> -- this was the <b>last of the 24 human chromosomes (22 autosomes and X "
+    "and Y) to be sequenced</b>.",
+]))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_15.png",
+    "Figure 5.15 Human Genome Project -- the sequencing workflow, from total DNA through "
+    "random fragments cloned in BAC and YAC vectors, to automated sequencing and "
+    "computer-based alignment of overlapping fragments."))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "Another <b>challenging task was assigning the genetic and physical maps on the "
+    "genome</b>. This was generated using information on <b>polymorphism of restriction "
+    "endonuclease recognition sites</b>, and some <b>repetitive DNA sequences known as "
+    "microsatellites</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "The mega-project numbers worth carrying: <b>launched 1990, completed 2003, a 13-year "
+    "project</b>; <b>3 x 10^9 bp</b> at <b>US $3 per bp</b> = about <b>9 billion "
+    "dollars</b>; <b>3300 books</b> to print one cell's sequence. <b>Chromosome 1 was "
+    "last</b>, finished <b>May 2006</b> -- after the project itself was declared complete. "
+    "Two methodologies, two names: <b>ESTs</b> = genes expressed as RNA only; <b>Sequence "
+    "Annotation</b> = sequence everything, assign function later. <b>Sanger</b> for the "
+    "sequencing method, <b>BAC and YAC</b> for the vectors."))
+
+
+# ---- 5.9.1 Salient Features of Human Genome (F491 heading, F504 stem, F409-F417) ----
+story.append(heading("5.9.1", "Salient Features of Human Genome", 2))
+
+story.append(Paragraph(
+    "Some of the <b>salient observations drawn from human genome project</b> are as "
+    "follows:", STYLES["Body"]))
+story.append(data_table([
+    ["#", "Observation"],
+    ["<b>(i)</b>",
+     "The <b>human genome contains 3164.7 million bp</b>."],
+    ["<b>(ii)</b>",
+     "The <b>average gene consists of 3000 bases</b>, but <b>sizes vary greatly</b>, with "
+     "the <b>largest known human gene being dystrophin at 2.4 million bases</b>."],
+    ["<b>(iii)</b>",
+     "The <b>total number of genes is estimated at 30,000</b> -- much <b>lower than "
+     "previous estimates of 80,000 to 1,40,000 genes</b>. <b>Almost all (99.9 per cent) "
+     "nucleotide bases are exactly the same in all humans.</b>"],
+    ["<b>(iv)</b>",
+     "The <b>functions are unknown for over 50 per cent of the discovered genes</b>."],
+    ["<b>(v)</b>",
+     "<b>Less than 2 per cent of the genome codes for proteins.</b>"],
+    ["<b>(vi)</b>",
+     "<b>Repeated sequences make up very large portion of the human genome.</b>"],
+    ["<b>(vii)</b>",
+     "<b>Repetitive sequences are stretches of DNA sequences that are repeated many times, "
+     "sometimes hundred to thousand times.</b> They are <b>thought to have no direct coding "
+     "functions</b>, but they <b>shed light on chromosome structure, dynamics and "
+     "evolution</b>."],
+    ["<b>(viii)</b>",
+     "<b>Chromosome 1 has most genes (2968)</b>, and the <b>Y has the fewest (231)</b>."],
+    ["<b>(ix)</b>",
+     "Scientists have identified about <b>1.4 million locations where single-base DNA "
+     "differences (SNPs -- single nucleotide polymorphism, pronounced as 'snips') occur in "
+     "humans</b>. This information promises to <b>revolutionise the processes of finding "
+     "chromosomal locations for disease-associated sequences and tracing human history</b>."],
+], col_widths=[0.9, 8.1]))
+story.append(Spacer(1, 4))
+story.append(memory_aid(
+    "The numbers most often asked: <b>3164.7 million bp</b>; <b>average gene 3000 bases</b>; "
+    "<b>dystrophin is the largest at 2.4 million bases</b>; <b>about 30,000 genes</b>; "
+    "<b>99.9 per cent of bases identical between humans</b>; <b>functions unknown for over "
+    "50 per cent</b> of genes; <b>less than 2 per cent codes for protein</b>; "
+    "<b>chromosome 1 has the most genes (2968), Y the fewest (231)</b>; <b>1.4 million "
+    "SNPs</b>. Do not confuse <b>chromosome 1 has the most genes</b> with <b>chromosome 1 "
+    "was sequenced last</b> -- both are true and both are examined."))
+
+
+# ---- 5.9.2 Applications and Future Challenges (F492 heading, F505 opener, F418-F422) ----
+story.append(heading("5.9.2", "Applications and Future Challenges", 2))
+
+story.append(Paragraph(
+    "<b>Deriving meaningful knowledge from the DNA sequences will define research through "
+    "the coming decades leading to our understanding of biological systems.</b> This "
+    "<b>enormous task will require the expertise and creativity of tens of thousands of "
+    "scientists from varied disciplines in both the public and private sectors "
+    "worldwide</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "One of the <b>greatest impacts of having the HG sequence</b> may well be <b>enabling a "
+    "radically new approach to biological research</b>. <b>In the past, researchers studied "
+    "one or a few genes at a time.</b> With <b>whole-genome sequences and new "
+    "high-throughput technologies</b>, we can <b>approach questions systematically and on a "
+    "much broader scale</b>. They can <b>study all the genes in a genome</b>, for example, "
+    "<b>all the transcripts in a particular tissue or organ or tumor</b>, or <b>how tens of "
+    "thousands of genes and proteins work together in interconnected networks to orchestrate "
+    "the chemistry of life</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "The shift the HGP caused is the examinable idea here: <b>from one-or-a-few genes at a "
+    "time to whole genomes at once</b>, made possible by <b>high-throughput "
+    "technologies</b>. That is also the answer to why <b>Bioinformatics</b> had to be "
+    "invented alongside it."))
+
+
+# --------------------------------------------------------------------------------------
+# 5.10  DNA FINGERPRINTING
+# --------------------------------------------------------------------------------------
+# ---- 5.10 (F493 heading, F506 opener = the 99.9 per cent premise, F423-F468,
+#      F510 summary-unique; Figure 5.16 labels F637-F646; Q8(a) contrast presented as a
+#      table per the inventory's exercise-gap scan -- no new fact added) ----
+story.append(heading("5.10", "DNA FINGERPRINTING", 1))
+
+story.append(keyterm(
+    "As stated in the preceding section, <b>99.9 per cent of base sequence among humans is "
+    "the same</b>. Assuming human genome as <b>3 x 10^9 bp</b>, in how many base sequences "
+    "would there be differences? It is <b>these differences in sequence of DNA which make "
+    "every individual unique in their phenotypic appearance</b>."))
+story.append(Paragraph(
+    "If one aims to <b>find out genetic differences between two individuals or among "
+    "individuals of a population</b>, <b>sequencing the DNA every time would be a daunting "
+    "and expensive task</b>. <b>Imagine trying to compare two sets of 3 x 10^6 base "
+    "pairs.</b>",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(note(
+    "<b>A printing inconsistency in the source, so you do not think you misread.</b> This "
+    "section quotes the human genome as <b>3 x 10^9 bp</b> and then, two sentences later, "
+    "as <b>3 x 10^6 base pairs</b>. Both are reproduced above exactly as NCERT prints "
+    "them. The figure established by the Human Genome Project in the preceding section is "
+    "<b>3 x 10^9</b> (about <b>3164.7 million bp</b>); the <b>10^6</b> is the source's own "
+    "slip."))
+story.append(Spacer(1, 4))
+story.append(keyterm(
+    "<b>DNA fingerprinting is a very quick way to compare the DNA sequences of any two "
+    "individuals.</b> DNA fingerprinting involves <b>identifying differences in some "
+    "specific regions in DNA sequence called as repetitive DNA</b>, because in these "
+    "sequences, a <b>small stretch of DNA is repeated many times</b>."))
+story.append(Paragraph(
+    "These <b>repetitive DNA are separated from bulk genomic DNA as different peaks during "
+    "density gradient centrifugation</b>. The <b>bulk DNA forms a major peak</b> and the "
+    "<b>other small peaks are referred to as satellite DNA</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+# Q8(a) of the exercises asks for Repetitive DNA vs Satellite DNA. The inventory's
+# exercise-gap scan found the contrast is present but scattered across F428-F431, so it is
+# presented here as a two-column table. No fact is added.
+story.append(data_table([
+    ["Repetitive DNA", "Satellite DNA"],
+    ["Sequences in which a <b>small stretch of DNA is repeated many times</b>. Identifying "
+     "differences in these regions is what <b>DNA fingerprinting</b> does.",
+     "The <b>small peaks other than the major bulk-DNA peak</b> obtained when repetitive "
+     "DNA is <b>separated from bulk genomic DNA during density gradient "
+     "centrifugation</b>."],
+    ["The <b>general class</b> -- any many-times-repeated stretch, making up a <b>large "
+     "portion of the human genome</b>.",
+     "A <b>sub-class defined by its centrifugation behaviour</b>, and further classified "
+     "<b>depending on base composition (A : T rich or G:C rich), length of segment, and "
+     "number of repetitive units</b> into <b>micro-satellites, mini-satellites</b> etc."],
+], col_widths=[4.5, 4.5]))
+story.append(Spacer(1, 4))
+story.append(Paragraph(
+    "These <b>sequences normally do not code for any proteins</b>, but they <b>form a large "
+    "portion of human genome</b>. These <b>sequence show high degree of polymorphism and "
+    "form the basis of DNA fingerprinting</b>.",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "Since <b>DNA from every tissue (such as blood, hair-follicle, skin, bone, saliva, "
+    "sperm etc.), from an individual show the same degree of polymorphism</b>, they become "
+    "<b>very useful identification tool in forensic applications</b>. Further, as the "
+    "<b>polymorphisms are inheritable from parents to children</b>, <b>DNA fingerprinting "
+    "is the basis of paternity testing, in case of disputes</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "As <b>polymorphism in DNA sequence is the basis of genetic mapping of human genome as "
+    "well as of DNA fingerprinting</b>, it is essential that we understand <b>what DNA "
+    "polymorphism means</b> in simple terms.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "<b>Polymorphism (variation at genetic level) arises due to mutations.</b> In simple "
+    "terms, <b>if an inheritable mutation is observed in a population at high frequency, it "
+    "is referred to as DNA polymorphism</b>. More precisely, <b>allelic sequence variation "
+    "has traditionally been described as a DNA polymorphism if more than one variant "
+    "(allele) at a locus occurs in human population with a frequency greater than "
+    "0.01</b>."))
+story.append(Paragraph(
+    "(Recall different kind of <b>mutations</b> and their effects that you have already "
+    "studied in <b>Chapter 4</b>, and in the preceding sections in this chapter. Recall "
+    "also the definition of <b>alleles</b> from Chapter 4.)",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "<b>New mutations may arise in an individual either in somatic cells or in the germ "
+    "cells</b> (cells that generate gametes in sexually reproducing organisms). If a "
+    "<b>germ cell mutation does not seriously impair individual's ability to have offspring "
+    "who can transmit the mutation, it can spread to the other members of population</b> "
+    "(through sexual reproduction).",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "The <b>probability of such variation to be observed in non-coding DNA sequence would "
+    "be higher</b>, as <b>mutations in these sequences may not have any immediate "
+    "effect/impact in an individual's reproductive ability</b>. These <b>mutations keep on "
+    "accumulating generation after generation, and form one of the basis of "
+    "variability/polymorphism</b>. There is a <b>variety of different types of "
+    "polymorphisms ranging from single nucleotide change to very large scale changes</b>. "
+    "For <b>evolution and speciation, such polymorphisms play very important role</b>, and "
+    "you will study these in details at higher classes.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(keyterm(
+    "The <b>technique of DNA Fingerprinting was initially developed by Alec Jeffreys</b>. "
+    "He used a <b>satellite DNA as probe that shows very high degree of polymorphism</b>. "
+    "It was called as <b>Variable Number of Tandem Repeats (VNTR)</b>."))
+story.append(Paragraph(
+    "The technique, as used earlier, <b>involved Southern blot hybridisation using "
+    "radiolabelled VNTR as a probe</b>. It <b>involved the following steps</b>:",
+    STYLES["Body"]))
+story.append(Spacer(1, 2))
+story.append(process_flow([
+    "<b>(i) Isolation of DNA.</b>",
+    "<b>(ii) Digestion of DNA by restriction endonucleases.</b>",
+    "<b>(iii) Separation of DNA fragments by electrophoresis.</b>",
+    "<b>(iv) Transferring (blotting) of separated DNA fragments to synthetic "
+    "membranes</b>, such as <b>nitrocellulose or nylon</b>.",
+    "<b>(v) Hybridisation using labelled VNTR probe.</b>",
+    "<b>(vi) Detection of hybridised DNA fragments by autoradiography.</b>",
+]))
+story.append(Spacer(1, 4))
+story.append(Paragraph(
+    "The <b>VNTR belongs to a class of satellite DNA referred to as mini-satellite</b>. A "
+    "<b>small DNA sequence is arranged tandemly in many copy numbers</b>. The <b>copy "
+    "number varies from chromosome to chromosome in an individual</b>. The <b>numbers of "
+    "repeat show very high degree of polymorphism</b>. As a result the <b>size of VNTR "
+    "varies in size from 0.1 to 20 kb</b>.",
+    STYLES["Body"]))
+story.append(Paragraph(
+    "Consequently, after <b>hybridisation with VNTR probe, the autoradiogram gives many "
+    "bands of differing sizes</b>. These <b>bands give a characteristic pattern for an "
+    "individual DNA</b>. It <b>differs from individual to individual in a population except "
+    "in the case of monozygotic (identical) twins</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_16.png",
+    "Figure 5.16 Schematic representation of DNA fingerprinting. Repeats on the "
+    "<b>Paternal chromosome</b> and the <b>Maternal chromosome</b> -- shown for "
+    "<b>Chromosome 7</b>, <b>Chromosome 2</b> and <b>Chromosome 16</b> -- differ in the "
+    "<b>Number of short tandem repeats</b>. <b>Amplified repeats, separated by size on a "
+    "gel, give a DNA fingerprint</b>, so that <b>DNA from individual A</b>, <b>DNA from "
+    "individual B</b> and <b>DNA from crime scene (C)</b> can be compared band for band."))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "The <b>sensitivity of the technique has been increased by use of polymerase chain "
+    "reaction (PCR</b> -- you will study about it in <b>Chapter 9</b>). Consequently, "
+    "<b>DNA from a single cell is enough to perform DNA fingerprinting analysis</b>. "
+    "<b>Currently, many different probes are used to generate DNA fingerprints.</b>",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(Paragraph(
+    "In addition to application in <b>forensic science</b>, it has much wider application, "
+    "such as in <b>determining population and genetic diversities</b>. It has <b>immense "
+    "applications in the field of forensic science, genetic biodiversity and evolutionary "
+    "biology</b>.",
+    STYLES["Body"]))
+story.append(Spacer(1, 3))
+story.append(memory_aid(
+    "The chain of logic: <b>99.9 per cent of human DNA is identical</b>, so you look only "
+    "where it varies -- the <b>repetitive / satellite DNA</b>, which is <b>non-coding</b> "
+    "and therefore <b>free to accumulate mutations</b>, giving <b>high polymorphism</b>. "
+    "<b>Alec Jeffreys</b>, probe = <b>VNTR</b>, a <b>mini-satellite</b>, size <b>0.1 to 20 "
+    "kb</b>; the original readout was <b>Southern blot + autoradiography</b>, now made far "
+    "more sensitive by <b>PCR</b> -- <b>a single cell is enough</b>. Two exam traps: "
+    "<b>identical (monozygotic) twins share a fingerprint</b>, and <b>polymorphism counts "
+    "as polymorphism only above a frequency of 0.01</b>."))
+
+
+story.append(Spacer(1, 5))
+
+# =============================== QUICK RECAP ========================================
+# ---- Quick Recap (F494 SUMMARY heading; denser rewrite of the chapter summary, Rule 3).
+# The inventory's Summary classification split the source Summary into 33 sentences:
+# 29 BODY-PRESENT + 4 SUMMARY-UNIQUE. The 4 summary-unique facts are NOT repeated here --
+# they were folded into the body above as F507 (5.7), F508 (5.8), F509 (5.8.1) and
+# F510 (5.10). The 29 body-present sentences are recapped below and, per carry-over 19,
+# appear only here and not as body rows. Carry-over 20: sentence 23's unqualified
+# "primary step" phrasing is kept to the Recap; the body keeps NCERT's "in prokaryotes /
+# predominant" qualifier.
+story.append(heading("QR", "QUICK RECAP", 1))
+story.append(Paragraph(
+    "&bull; <b>Nucleic acids are long polymers of nucleotides.</b> While <b>DNA stores "
+    "genetic information, RNA mostly helps in transfer and expression of information</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; Though <b>DNA and RNA both function as genetic material</b>, <b>DNA being "
+    "chemically and structurally more stable is a better genetic material</b>. However, "
+    "<b>RNA is the first to evolve and DNA was derived from RNA</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; The <b>hallmark of the double stranded helical structure of DNA is the hydrogen "
+    "bonding between the bases from opposite strands</b>. The rule is that <b>Adenine pairs "
+    "with Thymine through two H-bonds, and Guanine with Cytosine through three "
+    "H-bonds</b>. This <b>makes one strand complementary to the other</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; The <b>DNA replicates semiconservatively</b>, the process being <b>guided by "
+    "the complementary H-bonding</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; A <b>segment of DNA that codes for RNA</b> may in a simplistic term be referred "
+    "to as a <b>gene</b>. During <b>transcription</b> also, <b>one of the strands of DNA "
+    "acts as a template to direct the synthesis of complementary RNA</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; In <b>bacteria, the transcribed mRNA is functional, hence can directly be "
+    "translated</b>. In <b>eukaryotes, the gene is split</b>: the <b>coding sequences, "
+    "exons, are interrupted by non-coding sequences, introns</b>. <b>Introns are removed "
+    "and exons are joined to produce functional RNA by splicing.</b>",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; The <b>messenger RNA contains the base sequences that are read in a combination "
+    "of three (to make triplet genetic code) to code for an amino acid</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; The <b>genetic code is read again on the principle of complementarity by tRNA "
+    "that acts as an adapter molecule</b>. There are <b>specific tRNAs for every amino "
+    "acid</b>. The <b>tRNA binds to specific amino acid at one end and pairs through "
+    "H-bonding with codes on mRNA through its anticodons</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; The <b>site of translation (protein synthesis) is ribosomes</b>, which <b>bind "
+    "to mRNA and provide platform for joining of amino acids</b>. <b>One of the rRNA acts "
+    "as a catalyst for peptide bond formation, which is an example of RNA enzyme "
+    "(ribozyme).</b>",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; <b>Regulation of transcription is the primary step for regulation of gene "
+    "expression.</b> In <b>bacteria, more than one gene is arranged together and regulated "
+    "in units called as operons</b>. The <b>operon is regulated by the amount of lactose in "
+    "the medium where the bacteria are grown</b>; therefore this <b>regulation can also be "
+    "viewed as regulation of enzyme synthesis by its substrate</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; <b>Human genome project was a mega project that aimed to sequence every base in "
+    "human genome.</b> This <b>project has yielded much new information</b>, and <b>many new "
+    "areas and avenues have opened up as a consequence of the project</b>.",
+    STYLES["Bullet1"]))
+story.append(Paragraph(
+    "&bull; <b>DNA Fingerprinting is a technique to find out variations in individuals of a "
+    "population at DNA level.</b> It <b>works on the principle of polymorphism in DNA "
+    "sequences</b>.",
+    STYLES["Bullet1"]))
+story.append(Spacer(1, 5))
+
+# =============================== EXERCISE-GAP APPENDIX ==============================
+# ---- Terms used in the exercises (F495 EXERCISES heading; F469-F482 are the 14 questions).
+# The inventory's exercise-gap scan (session 1-Z step 7) found 5 genuine gaps out of 17
+# item rows. Four of them were closed inline where they belong, as NOTE boxes, per Rule 2
+# option 1 and carry-over 18: Q2 in 5.1.1, Q3/Q4 in 5.5.1, Q6 in 5.4.2, Q10 in 5.8.1 and
+# Q14(d) in 5.9. This appendix is the index to those, so a reader working the exercises can
+# find each one, plus the pointers for the questions the body already covers.
+story.append(heading("EX", "TERMS USED IN THE EXERCISES", 1))
+story.append(Paragraph(
+    "The end-of-chapter questions were scanned one by one against the body of this chapter. "
+    "Most are answerable directly from the sections above; the few that lean on a "
+    "convention or a step the source never spells out are closed <b>using only facts from "
+    "this chapter</b>, in a <b>NOTE box beside the facts they depend on</b>. This table "
+    "says where each answer lives.",
+    STYLES["Body"]))
+story.append(data_table([
+    ["Exercise", "Where its answer lives"],
+    ["<b>Q1</b> bases vs nucleosides",
+     "&sect;5.1.1 -- a <b>nucleoside</b> is base + sugar (N-glycosidic linkage), and "
+     "<b>adenosine, guanosine, cytidine, uridine</b> are named there. So <b>Cytidine</b> "
+     "and <b>Guanosine</b> are nucleosides; <b>Adenine, Thymine, Uracil, Cytosine</b> are "
+     "bases."],
+    ["<b>Q2</b> per cent of adenine",
+     "&sect;5.1.1 -- <b>worked NOTE box</b> beside Chargaff's rule and the A-T / G-C "
+     "pairing rule."],
+    ["<b>Q3, Q4</b> complementary strand and mRNA of a given 28-mer",
+     "&sect;5.5.1 -- <b>worked NOTE box</b> beside the template / coding strand "
+     "definitions, doing the given sequence once for the complementary strand and once for "
+     "the mRNA."],
+    ["<b>Q5</b> which property suggested semi-conservative replication",
+     "&sect;5.1.1 and &sect;5.4 -- <b>complementary base pairing</b>, and Watson and "
+     "Crick's own statement that it <b>suggests a mechanism for copying</b>."],
+    ["<b>Q6</b> types of nucleic acid polymerases",
+     "&sect;5.4.2 -- <b>NOTE box</b> laying the classes out as a template-versus-product "
+     "grid."],
+    ["<b>Q7</b> how Hershey and Chase told DNA from protein",
+     "&sect;5.2.1 -- <b>radioactive phosphorus</b> labels DNA only (protein has no P), "
+     "<b>radioactive sulfur</b> labels protein only (DNA has no S)."],
+    ["<b>Q8</b> (a) repetitive vs satellite DNA, (b) mRNA vs tRNA, (c) template vs coding "
+     "strand",
+     "(a) &sect;5.10 -- the <b>two-column table</b> in that section. "
+     "(b) &sect;5.5.3 (mRNA is the template) and &sect;5.6.2 (tRNA is the adapter). "
+     "(c) &sect;5.5.1 -- <b>template strand is 3'-to-5' and is copied</b>; <b>coding strand "
+     "is 5'-to-3' and codes for nothing</b>."],
+    ["<b>Q9</b> two essential roles of the ribosome",
+     "&sect;5.7 -- the <b>two binding sites in the large subunit</b> that hold successive "
+     "amino acids close enough to react, and the <b>23S rRNA ribozyme</b> that catalyses "
+     "the peptide bond."],
+    ["<b>Q10</b> why the lac operon shuts down again after lactose is added",
+     "&sect;5.8.1 -- <b>NOTE box</b> after negative regulation: the induced "
+     "beta-galactosidase <b>consumes the inducer</b>, so the repressor re-binds the "
+     "operator."],
+    ["<b>Q11</b> function of promoter, tRNA, exons",
+     "&sect;5.5.1 (promoter -- binding site for RNA polymerase, defines template and coding "
+     "strands), &sect;5.6.2 (tRNA -- adapter, reads codon and carries amino acid), "
+     "&sect;5.5.2 (exons -- expressed sequences that appear in mature RNA)."],
+    ["<b>Q12</b> why HGP is called a mega project",
+     "&sect;5.9 -- the <b>mega project table</b>: 3 x 10^9 bp at US $3 per bp, about 9 "
+     "billion dollars, 3300 books to print one cell's sequence, 13 years, high-speed "
+     "computation."],
+    ["<b>Q13</b> what DNA fingerprinting is, and its applications",
+     "&sect;5.10 -- definition, <b>Alec Jeffreys</b> and the <b>VNTR</b> probe, the "
+     "<b>six steps</b>, and the applications (<b>forensic science, paternity testing, "
+     "population and genetic diversities, genetic biodiversity, evolutionary "
+     "biology</b>)."],
+    ["<b>Q14</b> (a) transcription, (b) polymorphism, (c) translation, (d) bioinformatics",
+     "(a) &sect;5.5 opener, (b) &sect;5.10 (variation arising from mutation, above a "
+     "frequency of 0.01), (c) &sect;5.7 opener, (d) &sect;5.9 -- <b>NOTE box</b> on what "
+     "bioinformatics does."],
+    ["<b>In-body exercises</b> beneath Table 5.1",
+     "&sect;5.6 -- both are <b>worked in full</b> in the NOTE box under the codon "
+     "checker-board, including why the reverse direction is ambiguous."],
+], col_widths=[2.6, 6.4]))
 
 
 # --------------------------------------------------------------------------------------
