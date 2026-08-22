@@ -1,8 +1,8 @@
-# Working Inventory (NOT FROZEN) — Molecular Basis of Inheritance (Class 12, Chapter 5)
+# Frozen Inventory — Molecular Basis of Inheritance (Class 12, Chapter 5)
 
-> The `# Frozen Inventory` title used by completed chapters is deliberately **withheld** until `1-Z` actually freezes this file. A naive `grep -i frozen` on the old title would have reported this chapter as frozen while six sweeps were still outstanding.
+> **Frozen at Gate 1 closure.** Facts rows `F001`–`F646` are now immutable during Pass 2 except for tick marks; metadata may be corrected only by re-deriving it from the rows.
 
-Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — all six text sweeps (1a-S/H/O, 1b-S/H/O) complete, and `1-Z` steps 7, 8 and 10 complete; `1-F` (figures) outstanding, so step 9 (freeze) is deliberately NOT performed and GATE 1 REMAINS OPEN** | Rows so far: **510** (`F001`..`F510`)
+Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **FROZEN — all Pass 1 sweeps complete; GATE 1 CLOSED; Pass 2 not started** | Rows: **646** (`F001`..`F646`)
 
 **Big-chapter protocol (§6, 5 passes).** 31 source pages, 10 numbered sections plus summary and exercises, so this chapter runs `1a → 1b → 2a → 2b → 3`. The source seam is:
 
@@ -23,10 +23,10 @@ Tick legend: `x` = written into the script and verified present in the generated
 | **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Exercises | **done** | **218** (`F265`..`F482`) — §5.6 onward from the mid-p17 seam, incl. the 14 Exercises questions |
 | **1b-H** — heading sweep, second half | §5.6–§5.10 + Summary + Exercises | **done** | **13** (`F483`..`F495`) — 10 numbered + `Goals of HGP` + `SUMMARY` + `EXERCISES` |
 | **1b-O** — opener sweep, second half | §5.6–§5.10 | **done** | **11** (`F496`..`F506`) — one per heading-bearing section; `SUMMARY`/`EXERCISES` deliberately excluded (see note) |
-| **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | **not started** | — |
-| **1-Z** — gaps, summary & freeze, whole chapter | steps 7, 8, 10 done · **step 9 (freeze) deliberately withheld** | **partial — done except the freeze** | **4** (`F507`..`F510`) — the 4 SUMMARY-UNIQUE folds; plus the 33-row Summary classification and the **17-row** exercise-gap scan, neither of which is a Facts row |
+| **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | **done** | **136** figure-label rows (`F511`..`F646`) + 17 verified mono assets |
+| **1-Z** — gaps, summary & freeze, whole chapter | steps 7, 8, 9 and 10 | **done** | **4** SUMMARY-UNIQUE folds (`F507`..`F510`), 33-row Summary classification, **17-row** exercise-gap scan, freeze and final machine re-parse |
 
-**Why `1-Z` is partial and Gate 1 is still OPEN.** Steps 7 (exercise-gap scan), 8 (summary classification + folding) and 10 (machine re-parse of every count) ran this session and are complete. **Step 9 — the freeze — did not run and must not**, because `1-F` has not happened: the Facts table still has 0 figure-label rows and the figure manifest is still empty, so freezing now would retitle the H1 to the frozen convention while a whole mandatory sweep is outstanding. That is precisely the false-completion signal §6 warns about, and it was already caught once in this chapter's history (see the corrections log in `Ch5_TRACKER.md`). Order from here: run `1-F`, then re-run `1-Z` step 9 + step 10 only, then judge Gate 1.
+**Gate 1 closure.** Every Pass 1 sweep is complete. The final machine parse found 646 contiguous monotonic rows, 0 gaps, 0 duplicates, 0 ticked rows, 136 figure-label rows, 17 assets, and `_extract_labels` returned 136 labels across the 15 figures that contain textual labels, with no doubling and no phantom `Fig #` row. `5.4b` and `5.15` are the two genuinely label-free assets. Gate 1 is CLOSED; Pass 2 has not started.
 
 **Why `1b-H` wrote 13 rows but `1b-O` wrote 11.** Three of the 13 headings do not take an opener row: `EXERCISES` runs straight into question 1 with no prose, and `SUMMARY`'s sentences are owned by **`1-Z` step 8** (BODY-PRESENT / SUMMARY-UNIQUE classification) — giving the Summary an opener row here would put the same sentence under two owners, which is how a sentence gets written twice into the script. `Goals of HGP` *does* take one (`F503`) because it has a genuine stem sentence. So 13 headings − `SUMMARY` − `EXERCISES` = 11 openers.
 
@@ -38,17 +38,17 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 
 | Count | Value |
 |---|---|
-| Facts rows so far | **510** (`F001`..`F510`) — **whole chapter, all text swept, 4 SUMMARY-UNIQUE folds added by `1-Z`** |
-| ID range / contiguity | F001..F510 — 0 gaps, 0 duplicates, IDs monotonically increasing (re-parsed from the table below) |
+| Facts rows | **646** (`F001`..`F646`) — whole chapter, all text and figures swept |
+| ID range / contiguity | F001..F646 — 0 gaps, 0 duplicates, IDs monotonically increasing (re-parsed from the table below) |
 | `Type: heading` rows | **30** = `1a-H` 17 (`F232`..`F248`) + `1b-H` 13 (`F483`..`F495`). Chapter title is 1 of the 30, so **in-body headings = 29**. |
 | `Type: opener` rows | **27** = `1a-O` 16 (`F249`..`F264`) + `1b-O` 11 (`F496`..`F506`) |
-| Figure-label rows | **0** — owned by session 1-F |
-| Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **0 labels, 0 figures, no phantom `Fig #` row** — re-run against this file this session under the rebuilt venv; the empty-matrix state is the expected pre-1-F result |
-| `Type` values used (normalized, lower-case) | `concept` 264 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 = 510; no other value present |
+| Figure-label rows | **136** (`F511`..`F646`) |
+| Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **136 labels across 15 label-bearing figures, no doubling, no phantom `Fig #` row**; `5.4b` and `5.15` are genuinely label-free |
+| `Type` values used (normalized, lower-case) | `concept` 264 · `figure-label` 136 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 = 646; no other value present |
 | Rows ticked | **0** — Pass 2 not started |
 | Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE** (machine sentence-split of p30; see the Summary classification section). All 4 SUMMARY-UNIQUE facts folded into body sections as `F507`..`F510`. |
 | Exercise-gap terms | **17 item rows — 16 covering all 14 end-of-chapter questions (`F469`..`F482`) + 1 covering the two in-body exercises `F288`/`F289` — of which 5 are genuine gaps**, each with a named inline home; `F288`/`F289` are blocked on `Table 5.1`, escalated to carry-over 17. **Corrected this session from "16 scanned items" by machine parse of the table's own length:** the 14 questions occupy 16 rows (Q3+Q4 share one row, `Q8` splits into a/b/c, `Q14` splits into (a)(b)(c) and (d)), and the in-body pair is the 17th. 5 GAP rows re-counted by machine, unchanged. |
-| Figures in manifest | **0 — not started (1-F)** |
+| Figures in manifest | **17/17 verified mono assets complete** (`5.1`–`5.16`, with split `5.4a`/`5.4b`) |
 
 Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 510 rows, `F001..F510`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `264 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 510`, matching the row total. **The four rows `1-Z` added are all `concept`**, which is the only census cell that moved (260 -> 264); every other cell is byte-identical to the pre-`1-Z` parse.
 
@@ -76,20 +76,20 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 > | Every fact has a Facts row (three source reads) | **done for text** — `1a-S` 231 + `1b-S` 218 + `1-Z` 4 folds; only figure-label rows are outstanding (1-F) |
 > | Every heading has a row incl. unnumbered sub-headings | **done** — `1a-H` 17 rows `F232..F248` (both unnumbered subs `F237`, `F238`) + `1b-H` 13 rows `F483..F495` (incl. `Goals of HGP`, `SUMMARY`, `EXERCISES`) = **30** |
 > | Every section's opening sentence has a row | **done** — `1a-O` 16 `F249..F264` + `1b-O` 11 `F496..F506` = **27** |
-> | Every in-figure label has a matrix row, harvested by opening each rendered asset | **NOT STARTED — 1-F. This is the single criterion blocking Gate 1.** |
-> | Every figure `Mono: yes` and `Verified: yes` | **NOT STARTED** — 1-F; the manifest is still empty |
-> | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | **run this session under the rebuilt venv: 0 labels, 0 figures, no phantom `Fig #` row.** That is the *correct pre-1-F result*, not a pass — the criterion is only meaningfully green once 1-F has entered real labels and the parse returns the expected figure count with no doubling. |
-> | Header counts match a re-parse of the table; IDs contiguous | **done** — re-parsed this session after the `1-Z` edits: 510 rows, `F001..F510`, 0 gaps, 0 dups, monotonic, census sums to 510, `Type` uses exactly ten normalized values |
-> | Exercise-gap terms and SUMMARY-UNIQUE folding | **done** — `1-Z` steps 7 and 8: **17 exercise-gap rows** covering all 14 questions plus the in-body pair, with 5 gaps homed; 33 summary sentences classified; all 4 SUMMARY-UNIQUE facts folded as `F507`..`F510`. (Row count corrected from "16" this session — see the header-counts note.) |
-> | Pass 1's sessions have each run and reported a machine-derived count | **7 of 8 sweep sessions** — `1a-S` 231, `1a-H` 17, `1a-O` 16, `1b-S` 218, `1b-H` 13, `1b-O` 11, `1-Z` 4 (partial: steps 7/8/10, freeze withheld); **`1-F` has not run.** This file's Session log counts the 8 sweeps only; `Ch5_TRACKER.md` §2 counts **9** because it adds the closing step-10 machine re-parse as its own row. Same state, two denominators: 8 sweeps + 1 verification = 9 ledger sessions. |
-> | Inventory frozen (step 9) | **NOT DONE, deliberately** — H1 still reads `# Working Inventory (NOT FROZEN)`. Freezing before `1-F` would be a false completion signal. |
+> | Every in-figure label has a matrix row, harvested by opening each rendered asset | **done** — 136 rows `F511`..`F646`; `5.4b` and `5.15` are genuinely label-free |
+> | Every figure `Mono: yes` and `Verified: yes` | **done** — 17/17 manifest rows; every final asset opened after conversion |
+> | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | **done** — 136 labels, 15 label-bearing figures, no doubling, no phantom `Fig #` row |
+> | Header counts match a re-parse of the table; IDs contiguous | **done** — 646 rows, `F001..F646`, 0 gaps, 0 dups, monotonic, census sums to 646 |
+> | Exercise-gap terms and SUMMARY-UNIQUE folding | **done** — **17 exercise-gap rows / 5 gaps**; 33 summary sentences classified; 4 SUMMARY-UNIQUE facts folded as `F507`..`F510` |
+> | Pass 1's sessions have each run and reported a machine-derived count | **8 of 8 sweeps complete**; `Ch5_TRACKER.md` counts 9 ledger entries by listing the closing machine re-parse separately |
+> | Inventory frozen (step 9) | **done** — H1 reads `# Frozen Inventory` |
 > | Inventory file saved to the chapter folder | done — this file |
 >
-> **What is left before Gate 1 can be judged:** `1-F` (all 17 figure assets clip-extracted at 300 dpi, converted to true monochrome, each **verified by opening the rendered file**, manifest completed, and one Facts row per in-figure label — including `Central dogma` p4 and `anticodon loop` p20, per carry-overs 2 and 16), then `1-Z` step 9 (freeze) plus a final step-10 re-parse, then a real `_extract_labels` run whose figure and label counts are checked for doubling and phantom rows. Nothing else is outstanding.
+> **Gate 1 verdict: CLOSED.** Pass 2 has not started.
 
 ## Facts
 
-**Current scope of this table** (after `1a-S`/`1a-H`/`1a-O`/`1b-S`/`1b-H`/`1b-O` plus `1-Z` steps 7/8/10): **all text of the whole chapter — prose, headings and openers, both halves, plus the 4 SUMMARY-UNIQUE folds.** Machine-derived: **510 rows, `F001`..`F510`**, of which **30 are `Type: heading`** and **27 are `Type: opener`**. The one kind of row still absent is the **in-figure label row, owned by `1-F`** (currently **0**) — which is exactly why Gate 1 is still OPEN. Label rows continue from **`F511`**.
+**Frozen scope of this table:** all Pass 1 content for the whole chapter — prose, headings, openers, 4 SUMMARY-UNIQUE folds, and every harvested in-figure label. Machine-derived: **646 rows, `F001`..`F646`**, including **30 headings, 27 openers, and 136 figure-label rows**. Pass 2 may change only tick marks.
 
 > **Superseded scope note, retained for audit.** While only `1a-S` had run, this table's scope was *"prose facts of the first half only"*, with headings and section-opening sentences **deliberately excluded** as the sole deliverables of `1a-H` and `1a-O` (§6 Pass 1 step 3: "This step does not cover headings or openers"), and openers carrying load-bearing definitions were listed in the carry-over list below as pointers for `1a-O` rather than absorbed as rows here. All three sessions have since closed, so that exclusion no longer describes this file. **Do not read the old note as licence to omit heading or opener rows, and do not re-append them — they are already present.**
 
@@ -605,10 +605,168 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 | F508 | 5.8 | concept | "Since, transcription and translation are energetically very expensive processes, these have to be tightly regulated." (**SUMMARY-UNIQUE**, p30 Summary sentence 22, folded into 5.8 by `1-Z` step 8 - the body says only that *replication* is energetically very expensive (F169), never transcription or translation, and never gives energetic cost as the reason regulation is required) | |
 | F509 | 5.8.1 | concept | "Lac operon is the prototype operon in bacteria, which codes for genes responsible for metabolism of lactose." (**SUMMARY-UNIQUE**, p30 Summary sentence 25, folded into 5.8.1 by `1-Z` step 8 - the word *prototype* appears nowhere in the body; F350 says only that Jacob and Monod were "the first to elucidate a transcriptionally regulated system") | |
 | F510 | 5.10 | concept | "It has immense applications in the field of forensic science, genetic biodiversity and evolutionary biology." (**SUMMARY-UNIQUE**, p30 Summary sentence 33, folded into 5.10 by `1-Z` step 8 - body F467 names only forensic science and "population and genetic diversities"; *genetic biodiversity* and *evolutionary biology* are named only in the Summary) | |
+| F511 | Fig 5.1 | figure-label | Figure labels: "5′ phosphate" | |
+| F512 | Fig 5.1 | figure-label | Figure labels: "3′ hydroxyl" | |
+| F513 | Fig 5.1 | figure-label | Figure labels: "A" | |
+| F514 | Fig 5.1 | figure-label | Figure labels: "T" | |
+| F515 | Fig 5.1 | figure-label | Figure labels: "G" | |
+| F516 | Fig 5.1 | figure-label | Figure labels: "C" | |
+| F517 | Fig 5.2 | figure-label | Figure labels: "5′" | |
+| F518 | Fig 5.2 | figure-label | Figure labels: "3′" | |
+| F519 | Fig 5.2 | figure-label | Figure labels: "hydrogen bonds" | |
+| F520 | Fig 5.2 | figure-label | Figure labels: "A" | |
+| F521 | Fig 5.2 | figure-label | Figure labels: "T" | |
+| F522 | Fig 5.2 | figure-label | Figure labels: "G" | |
+| F523 | Fig 5.2 | figure-label | Figure labels: "C" | |
+| F524 | Fig 5.3 | figure-label | Figure labels: "Base pairs" | |
+| F525 | Fig 5.3 | figure-label | Figure labels: "Adenine" | |
+| F526 | Fig 5.3 | figure-label | Figure labels: "Thymine" | |
+| F527 | Fig 5.3 | figure-label | Figure labels: "Guanine" | |
+| F528 | Fig 5.3 | figure-label | Figure labels: "Cytosine" | |
+| F529 | Fig 5.3 | figure-label | Figure labels: "Sugar phosphate backbone" | |
+| F530 | Fig 5.3 | figure-label | Figure labels: "Central dogma" | |
+| F531 | Fig 5.3 | figure-label | Figure labels: "DNA" | |
+| F532 | Fig 5.3 | figure-label | Figure labels: "RNA" | |
+| F533 | Fig 5.3 | figure-label | Figure labels: "Protein" | |
+| F534 | Fig 5.4a | figure-label | Figure labels: "DNA" | |
+| F535 | Fig 5.4a | figure-label | Figure labels: "H1 histone" | |
+| F536 | Fig 5.4a | figure-label | Figure labels: "Histone octamer" | |
+| F537 | Fig 5.4a | figure-label | Figure labels: "Core of histone molecules" | |
+| F538 | Fig 5.5 | figure-label | Figure labels: "Bacteriophage" | |
+| F539 | Fig 5.5 | figure-label | Figure labels: "Radioactive (35S) labelled protein capsule" | |
+| F540 | Fig 5.5 | figure-label | Figure labels: "Radioactive (32P) labelled DNA" | |
+| F541 | Fig 5.5 | figure-label | Figure labels: "Infection" | |
+| F542 | Fig 5.5 | figure-label | Figure labels: "Blending" | |
+| F543 | Fig 5.5 | figure-label | Figure labels: "Centrifugation" | |
+| F544 | Fig 5.5 | figure-label | Figure labels: "No radioactive (35S) detected in cells" | |
+| F545 | Fig 5.5 | figure-label | Figure labels: "Radioactive (35S) detected in supernatant" | |
+| F546 | Fig 5.5 | figure-label | Figure labels: "Radioactive (32P) detected in cells" | |
+| F547 | Fig 5.5 | figure-label | Figure labels: "No radioactivity detected in supernatant" | |
+| F548 | Fig 5.6 | figure-label | Figure labels: "5′" | |
+| F549 | Fig 5.6 | figure-label | Figure labels: "3′" | |
+| F550 | Fig 5.6 | figure-label | Figure labels: "A" | |
+| F551 | Fig 5.6 | figure-label | Figure labels: "T" | |
+| F552 | Fig 5.6 | figure-label | Figure labels: "G" | |
+| F553 | Fig 5.6 | figure-label | Figure labels: "C" | |
+| F554 | Fig 5.7 | figure-label | Figure labels: "15N-DNA" | |
+| F555 | Fig 5.7 | figure-label | Figure labels: "14N-DNA" | |
+| F556 | Fig 5.7 | figure-label | Figure labels: "Generation I" | |
+| F557 | Fig 5.7 | figure-label | Figure labels: "Generation II" | |
+| F558 | Fig 5.7 | figure-label | Figure labels: "20 min" | |
+| F559 | Fig 5.7 | figure-label | Figure labels: "40 min" | |
+| F560 | Fig 5.7 | figure-label | Figure labels: "Gravitational force" | |
+| F561 | Fig 5.7 | figure-label | Figure labels: "Heavy" | |
+| F562 | Fig 5.7 | figure-label | Figure labels: "Hybrid" | |
+| F563 | Fig 5.7 | figure-label | Figure labels: "Light" | |
+| F564 | Fig 5.7 | figure-label | Figure labels: "Separation of DNA by Centrifugation" | |
+| F565 | Fig 5.8 | figure-label | Figure labels: "Template DNA (parental strands)" | |
+| F566 | Fig 5.8 | figure-label | Figure labels: "Continuous synthesis" | |
+| F567 | Fig 5.8 | figure-label | Figure labels: "Discontinuous synthesis" | |
+| F568 | Fig 5.8 | figure-label | Figure labels: "Newly synthesised strands" | |
+| F569 | Fig 5.8 | figure-label | Figure labels: "5′" | |
+| F570 | Fig 5.8 | figure-label | Figure labels: "3′" | |
+| F571 | Fig 5.9 | figure-label | Figure labels: "Transcription start site" | |
+| F572 | Fig 5.9 | figure-label | Figure labels: "Promoter" | |
+| F573 | Fig 5.9 | figure-label | Figure labels: "Structural gene" | |
+| F574 | Fig 5.9 | figure-label | Figure labels: "Template strand" | |
+| F575 | Fig 5.9 | figure-label | Figure labels: "Terminator" | |
+| F576 | Fig 5.9 | figure-label | Figure labels: "Coding strand" | |
+| F577 | Fig 5.9 | figure-label | Figure labels: "5′" | |
+| F578 | Fig 5.9 | figure-label | Figure labels: "3′" | |
+| F579 | Fig 5.10 | figure-label | Figure labels: "Promoter" | |
+| F580 | Fig 5.10 | figure-label | Figure labels: "RNA polymerase" | |
+| F581 | Fig 5.10 | figure-label | Figure labels: "Sigma factor" | |
+| F582 | Fig 5.10 | figure-label | Figure labels: "DNA helix" | |
+| F583 | Fig 5.10 | figure-label | Figure labels: "Initiation" | |
+| F584 | Fig 5.10 | figure-label | Figure labels: "Elongation" | |
+| F585 | Fig 5.10 | figure-label | Figure labels: "Termination" | |
+| F586 | Fig 5.10 | figure-label | Figure labels: "Terminator" | |
+| F587 | Fig 5.10 | figure-label | Figure labels: "RNA" | |
+| F588 | Fig 5.10 | figure-label | Figure labels: "Rho factor" | |
+| F589 | Fig 5.10 | figure-label | Figure labels: "5′" | |
+| F590 | Fig 5.10 | figure-label | Figure labels: "3′" | |
+| F591 | Fig 5.11 | figure-label | Figure labels: "Capping" | |
+| F592 | Fig 5.11 | figure-label | Figure labels: "Cap" | |
+| F593 | Fig 5.11 | figure-label | Figure labels: "Intron" | |
+| F594 | Fig 5.11 | figure-label | Figure labels: "Exon" | |
+| F595 | Fig 5.11 | figure-label | Figure labels: "RNA splicing" | |
+| F596 | Fig 5.11 | figure-label | Figure labels: "Polyadenylation" | |
+| F597 | Fig 5.11 | figure-label | Figure labels: "Poly A tail" | |
+| F598 | Fig 5.11 | figure-label | Figure labels: "Messenger RNA" | |
+| F599 | Fig 5.11 | figure-label | Figure labels: "3′ mRNA" | |
+| F600 | Fig 5.11 | figure-label | Figure labels: "5′" | |
+| F601 | Fig 5.11 | figure-label | Figure labels: "3′" | |
+| F602 | Fig 5.12 | figure-label | Figure labels: "tRNA" | |
+| F603 | Fig 5.12 | figure-label | Figure labels: "Ser" | |
+| F604 | Fig 5.12 | figure-label | Figure labels: "Tyr" | |
+| F605 | Fig 5.12 | figure-label | Figure labels: "Anticodon" | |
+| F606 | Fig 5.12 | figure-label | Figure labels: "anticodon loop" | |
+| F607 | Fig 5.12 | figure-label | Figure labels: "Codon" | |
+| F608 | Fig 5.12 | figure-label | Figure labels: "mRNA" | |
+| F609 | Fig 5.12 | figure-label | Figure labels: "5′" | |
+| F610 | Fig 5.12 | figure-label | Figure labels: "3′" | |
+| F611 | Fig 5.13 | figure-label | Figure labels: "Growing polypeptide chain" | |
+| F612 | Fig 5.13 | figure-label | Figure labels: "tRNA" | |
+| F613 | Fig 5.13 | figure-label | Figure labels: "mRNA" | |
+| F614 | Fig 5.13 | figure-label | Figure labels: "Ribosome" | |
+| F615 | Fig 5.13 | figure-label | Figure labels: "Gly" | |
+| F616 | Fig 5.13 | figure-label | Figure labels: "Leu" | |
+| F617 | Fig 5.13 | figure-label | Figure labels: "Tyr" | |
+| F618 | Fig 5.13 | figure-label | Figure labels: "Ser" | |
+| F619 | Fig 5.13 | figure-label | Figure labels: "Ala" | |
+| F620 | Fig 5.13 | figure-label | Figure labels: "Val" | |
+| F621 | Fig 5.13 | figure-label | Figure labels: "Asn" | |
+| F622 | Fig 5.13 | figure-label | Figure labels: "5′" | |
+| F623 | Fig 5.13 | figure-label | Figure labels: "3′" | |
+| F624 | Fig 5.14 | figure-label | Figure labels: "In absence of inducer" | |
+| F625 | Fig 5.14 | figure-label | Figure labels: "In presence of inducer" | |
+| F626 | Fig 5.14 | figure-label | Figure labels: "Repressor mRNA" | |
+| F627 | Fig 5.14 | figure-label | Figure labels: "Repressor" | |
+| F628 | Fig 5.14 | figure-label | Figure labels: "Repressor binds to the operator region (o) and prevents RNA polymerase from transcribing the operon" | |
+| F629 | Fig 5.14 | figure-label | Figure labels: "lac mRNA" | |
+| F630 | Fig 5.14 | figure-label | Figure labels: "Transcription" | |
+| F631 | Fig 5.14 | figure-label | Figure labels: "Translation" | |
+| F632 | Fig 5.14 | figure-label | Figure labels: "β-galactosidase" | |
+| F633 | Fig 5.14 | figure-label | Figure labels: "permease" | |
+| F634 | Fig 5.14 | figure-label | Figure labels: "transacetylase" | |
+| F635 | Fig 5.14 | figure-label | Figure labels: "Inducer" | |
+| F636 | Fig 5.14 | figure-label | Figure labels: "Inactive repressor" | |
+| F637 | Fig 5.16 | figure-label | Figure labels: "Paternal chromosome" | |
+| F638 | Fig 5.16 | figure-label | Figure labels: "Maternal chromosome" | |
+| F639 | Fig 5.16 | figure-label | Figure labels: "Chromosome 7" | |
+| F640 | Fig 5.16 | figure-label | Figure labels: "Chromosome 2" | |
+| F641 | Fig 5.16 | figure-label | Figure labels: "Chromosome 16" | |
+| F642 | Fig 5.16 | figure-label | Figure labels: "DNA from individual A" | |
+| F643 | Fig 5.16 | figure-label | Figure labels: "DNA from individual B" | |
+| F644 | Fig 5.16 | figure-label | Figure labels: "DNA from crime scene (C)" | |
+| F645 | Fig 5.16 | figure-label | Figure labels: "Number of short tandem repeats" | |
+| F646 | Fig 5.16 | figure-label | Figure labels: "Amplified repeats, separated by size on a gel, give a DNA fingerprint" | |
 
-## Figure-label matrix
+## Figure manifest and figure-label matrix
 
-Empty — owned by session **1-F**, which runs once for the whole chapter after 1b. Rows will be added **into the Facts table above** as rows whose wording begins `Figure labels:`, per §6. No pipe-delimited table is written here, deliberately: a second copy of the matrix doubles every label and turns a markdown separator into a phantom `Fig #` figure (the Ch12 failure).
+**Session `1-F` is COMPLETE.** All 17 caption-anchored assets were rendered at 300 dpi, converted with `convert("L")` plus autocontrast, then individually opened and checked against their captions for complete labels/leader lines, print legibility, and genuine monochrome. The 136 in-figure label rows are contiguous at `F511`–`F646`; `5.4b` and `5.15` have no textual in-figure labels.
+
+| Asset | Source artwork page | Caption | Mono | Verified | State |
+|---|---:|---|---|---|---|
+| `assets/fig_5_1.png` | 2 | Figure 5.1 — A Polynucleotide chain | yes | yes | done — final file opened after conversion; correct artwork, complete labels/leader lines, print-legible, mode `L` |
+| `assets/fig_5_2.png` | 4 | Figure 5.2 — Double stranded polynucleotide chain | yes | yes | done — page-break caption resolved to artwork on p4; final file opened after conversion |
+| `assets/fig_5_3.png` | 4 | Figure 5.3 — Central dogma | yes | yes | done — final file opened after conversion; includes the required `Central dogma` label |
+| `assets/fig_5_4a.png` | 5 | Figure 5.4a — Nucleosome | yes | yes | done |
+| `assets/fig_5_4b.png` | 5 | Figure 5.4b — EM picture — 'Beads-on-String' | yes | yes | done — no textual in-figure labels |
+| `assets/fig_5_5.png` | 8 | Figure 5.5 — Hershey and Chase Experiment | yes | yes | done |
+| `assets/fig_5_6.png` | 10 | Figure 5.6 — Watson-Crick model for semiconservative DNA replication | yes | yes | done |
+| `assets/fig_5_7.png` | 11 | Figure 5.7 — Meselson and Stahl's Experiment | yes | yes | done |
+| `assets/fig_5_8.png` | 13 | Figure 5.8 — Replicating Fork | yes | yes | done — page-break caption resolved to artwork on p13 |
+| `assets/fig_5_9.png` | 14 | Figure 5.9 — Schematic structure of a transcription unit | yes | yes | done |
+| `assets/fig_5_10.png` | 15 | Figure 5.10 — Process of Transcription in Bacteria | yes | yes | done — page-break caption resolved to artwork on p15 |
+| `assets/fig_5_11.png` | 16 | Figure 5.11 — Process of Transcription in Eukaryotes | yes | yes | done — page-break caption resolved to artwork on p16 |
+| `assets/fig_5_12.png` | 20 | Figure 5.12 — tRNA — the adapter molecule | yes | yes | done — includes `anticodon loop` label row |
+| `assets/fig_5_13.png` | 21 | Figure 5.13 — Translation | yes | yes | done — page-break caption resolved to artwork on p21 |
+| `assets/fig_5_14.png` | 23 | Figure 5.14 — The lac Operon | yes | yes | done — page-break caption resolved to artwork on p23 |
+| `assets/fig_5_15.png` | 25 | Figure 5.15 — Human Genome Project | yes | yes | done — split caption number/text verified; no textual in-figure labels |
+| `assets/fig_5_16.png` | 29 | Figure 5.16 — Schematic representation of DNA fingerprinting | yes | yes | done — page-break caption resolved to artwork on p29 |
+
+Label rows are in the **Facts table above**, contiguously at `F511`–`F646`, one row per unique in-figure label, with wording beginning `Figure labels:`, per §6. No second pipe-delimited label table is written here: a duplicate copy would double every parsed label and can turn a markdown separator into a phantom `Fig #` figure.
 
 ## Summary classification
 

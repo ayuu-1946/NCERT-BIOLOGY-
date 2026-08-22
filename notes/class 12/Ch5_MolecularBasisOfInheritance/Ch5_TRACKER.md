@@ -1,13 +1,9 @@
 # Ch5 Molecular Basis of Inheritance — Chapter Tracker
 
-**Status: ▶️ IN PROGRESS — all six text sweeps done; `1-Z` steps 7/8/10 done, **freeze withheld**. GATE 1 OPEN. GATE 2 AND GATE 3 NEVER RUN.**
-**7 of 9 Pass-1 sessions complete (`1-F` not started, `1-Z` partial). 0 of 510 inventory rows ticked. No script, no PDF, no assets.**
+**Status: ▶️ IN PROGRESS — PASS 1 COMPLETE; GATE 1 CLOSED. Pass 2 not started. GATE 2 AND GATE 3 NEVER RUN.**
+**All 9 Pass-1 ledger entries complete. 0 of 646 frozen inventory rows ticked. No script or PDF; 17 verified mono assets.**
 
-**Gate 1 is blocked on exactly one thing: `1-F`.** Every text obligation is now discharged — prose,
-headings, openers, exercise-gap scan, summary classification and folding, and the closing machine
-re-parse. What is missing is the figure sweep: **0 figure-label rows, empty manifest, no `assets/`.**
-`1-Z` step 9 (the freeze) was deliberately **not** run this session, because freezing asserts all of
-Pass 1 is done and it is not. The H1 still reads `# Working Inventory (NOT FROZEN)` on purpose.
+**Gate 1 closed on 2026-08-22.** The final figure sweep produced 17 caption-anchored 300 dpi assets, all individually opened after grayscale conversion and verified for identity, complete labels/leader lines, print legibility, and `L` mode. The Facts table now ends at `F646`, including 136 contiguous figure-label rows (`F511`–`F646`); `check_pdf.py`'s own `_extract_labels` returns 136 labels across 15 label-bearing figures, with no doubling and no phantom `Fig #` row. Figures `5.4b` and `5.15` are genuinely label-free. The inventory H1 is frozen; Pass 2 has not started.
 
 This is a per-chapter tracker; it is the detail layer under the repo-wide `CHAPTER_TRACKER.md` and
 `CHAPTER_STATUS.md` roll-ups. Where those two disagree with this file about Ch5, **this file is the
@@ -58,9 +54,9 @@ must read p17; `1b-S` starts at the banner, not at the top of the page.
 | 4 | `1b-S` | 1b prose, steps 1–3 | ✅ **done** | 218 prose rows `F265..F482` |
 | 5 | `1b-H` | 1b headings only | ✅ **done** | 13 heading rows `F483..F495` (incl. `Goals of HGP`, `SUMMARY`, `EXERCISES`) |
 | 6 | `1b-O` | 1b openers only | ✅ **done** | 11 opener rows `F496..F506` |
-| 7 | `1-F` | **whole chapter** figures | ⬜ **NEXT — the only thing blocking Gate 1** | assets + manifest + in-figure label rows |
-| 8 | `1-Z` | steps 7–9 whole chapter | ⚠️ **partial — 7 and 8 done, 9 (freeze) withheld** | exercise-gap scan (**17 rows**, 5 gaps), summary classification (33 = 29 + 4), 4 folded rows `F507..F510`; **freeze deferred until after `1-F`** |
-| 9 | — | step 10 | ✅ **done** (re-runnable, and must be re-run after `1-F` and after the freeze) | machine re-parse of every count |
+| 7 | `1-F` | **whole chapter** figures | ✅ **done** | 17 verified mono assets + manifest + 136 in-figure label rows `F511..F646` |
+| 8 | `1-Z` | steps 7–9 whole chapter | ✅ **done** | exercise-gap scan (**17 rows**, 5 gaps), summary classification (33 = 29 + 4), 4 folded rows `F507..F510`, freeze |
+| 9 | — | step 10 | ✅ **done and re-run after freeze** | machine re-parse: 646 rows, 0 gaps/dups, monotonic, 0 ticked |
 
 **Why `1-Z` could run before `1-F`.** Steps 7, 8 and 10 read prose and count table rows, so they do
 not depend on the figure sweep. Step 9 is different in kind: it asserts that the whole of Pass 1 is
@@ -81,11 +77,11 @@ Gate 3.
 ## 3. What is actually on disk
 
     notes/class 12/Ch5_MolecularBasisOfInheritance/
-      Ch5_MolecularBasisOfInheritance_inventory.md   48 KB, NOT FROZEN
+      Ch5_MolecularBasisOfInheritance_inventory.md   FROZEN, 646 rows
       Ch5_TRACKER.md                                 this file
+      assets/                                        17 verified mono PNGs
 
-No `Ch5_MolecularBasisOfInheritance.py`. No `.pdf`. No `assets/`. **Correct for this stage** — but it
-also means the deliverable is 0% built. One sweep of one half of the source exists.
+No `Ch5_MolecularBasisOfInheritance.py` and no generated `.pdf`. **Correct at Gate 1 closure:** Pass 2 has not started.
 
 One further Ch5 file is committed **outside** the chapter folder and is not a deliverable:
 
@@ -103,18 +99,18 @@ Re-parsed from the file this session, not recalled:
 
 | Metric | Value |
 |---|---|
-| Facts rows | **510** |
-| ID range | `F001..F510`, **0 gaps, 0 duplicates, monotonically increasing** |
-| `Type` census | `concept` 264 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 |
-| Census sums to | 264+56+37+33+31+30+27+18+13+1 = **510** ✓ matches row count |
+| Facts rows | **646** |
+| ID range | `F001..F646`, **0 gaps, 0 duplicates, monotonically increasing** |
+| `Type` census | `concept` 264 · `figure-label` 136 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 |
+| Census sums to | 264+136+56+37+33+31+30+27+18+13+1 = **646** ✓ matches row count |
 | `Type: heading` | **30** — `1a-H` 17 + `1b-H` 13 ✓ |
 | `Type: opener` | **27** — `1a-O` 16 + `1b-O` 11 ✓ |
-| Figure-label rows | **0 — the Gate 1 blocker**, owned by `1-F` |
-| Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE**; the 4 unique facts folded in as `F507..F510` ✓ (the fold count equals the number of rows appended, so it is checkable, not asserted) |
-| Exercise-gap table rows | **17 (machine-parsed as the table's own length), 5 of them GAP** — 16 rows covering all 14 end-of-chapter questions `F469..F482` (Q3+Q4 share a row; Q8 splits a/b/c; Q14 splits (a)(b)(c) and (d)) + 1 row for in-body `F288`/`F289`. **Corrected from "16" this session**: the old figure was a hand-tally of *questions* reported as if it were *rows*, and it disagreed with the table it described. Each gap has a named inline home. |
+| Figure-label rows | **136** (`F511..F646`); `5.4b` and `5.15` are genuinely label-free |
+| Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE**; the 4 unique facts folded in as `F507..F510` ✓ |
+| Exercise-gap table rows | **17 (machine-parsed as the table's own length), 5 of them GAP** — each gap has a named inline home |
 | Rows ticked | **0** — Pass 2 not started |
-| `_extract_labels` (the linter's own parser) | **0 labels, 0 figures, no phantom `Fig #` row** — correct pre-`1-F` state, **and this time run under the rebuilt venv**, closing the caveat left by the tracker-audit session |
-| Frozen | **No.** H1 reads `# Working Inventory (NOT FROZEN)` — withheld on purpose, see §2 |
+| `_extract_labels` (the linter's own parser) | **136 labels, 15 label-bearing figures, no doubling, no phantom `Fig #` row** |
+| Frozen | **Yes.** H1 reads `# Frozen Inventory`; Gate 1 closed |
 
 Re-derive with:
 
