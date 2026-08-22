@@ -1,6 +1,7 @@
 # Ch5 Molecular Basis of Inheritance — Chapter Tracker
 
-**Status: ▶️ IN PROGRESS — PASS 1 COMPLETE (GATE 1 CLOSED); PASS 2a + 2b WRITTEN; GATE 2 CLOSED 2026-08-22. GATE 3a COMPLETE AND ITS FIXES LANDED; GATE 3b NEVER RUN, SO GATE 3 IS STILL OPEN.**
+**Status: ✅ COMPLETE — PASS 1 (GATE 1 CLOSED); PASS 2a + 2b (GATE 2 CLOSED 2026-08-22); PASS 3 COMPLETE — GATE 3a CLOSED and GATE 3b CLOSED, SO **GATE 3 IS CLOSED** AND THE CHAPTER IS DELIVERABLE.**
+*(Superseded, kept per §7: this line read "▶️ IN PROGRESS … GATE 3b NEVER RUN, SO GATE 3 IS STILL OPEN." Gate 3b has now been run in full, both directions, all 646 rows — see the Gate 3b closure block below.)*
 **646 of 646 frozen rows ticked, each audited against the built PDF. PDF **30 pages** with **17 embedded mono images**; 18 verified mono assets on disk (`fig_5_15` retained on disk, removed from the PDF by owner decision). `check_pdf.py` PASS — 0 fail, 0 warn, all 9 checks green; `--strict` exits 0, re-confirmed after this session's fixes.**
 *(Corrected this session: this line read "PDF 31 pages / 1977 KB" and "Script 2360 lines". A machine re-open of the built PDF returns **30** pages, and the page-count claim is the one that matters for the page walk, so the stale number is replaced rather than carried. The 18-vs-17 distinction — assets on disk vs images embedded — is now stated explicitly, since collapsing the two is the recurring miscount in this chapter.)*
 
