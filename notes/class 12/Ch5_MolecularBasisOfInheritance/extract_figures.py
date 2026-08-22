@@ -47,8 +47,10 @@ RENDER_DPI = 300
 FIGS = [
     # p2: full-width plate under the last text line, above the caption
     ("5_1", 2, (108, 575, 528, 676)),
-    # p4: full-width plate at the top of the page
-    ("5_2", 4, (108, 80, 526, 272)),
+    # p4: full-width plate at the top of the page.  Its labels ("3'", "HO",
+    # "5'") are vector, not text-layer, so the drawings extent (x 89.6-514.9,
+    # y 84.1-275.4) is what pins this rect; the caption starts at y=291.3.
+    ("5_2", 4, (86, 80, 519, 280)),
     # p4: helix + base-pair legend, left column only.  The wrap-around prose
     # column starts at x=314.88, so the right edge is pinned just short of it.
     ("5_3", 4, (50, 308, 313, 594)),
@@ -81,8 +83,11 @@ FIGS = [
     ("5_14", 23, (70, 82, 466, 354)),
     # p25: HGP montage right of the narrow prose column (ends x~217)
     ("5_15", 25, (224, 456, 468, 682)),
-    # p29: DNA fingerprinting schematic
-    ("5_16", 29, (86, 78, 422, 502)),
+    # p29: DNA fingerprinting schematic.  This plate carries NO text-layer
+    # words at all (every label is vector artwork), so the word-grazing audit
+    # is silent here -- the rect must instead be pinned off the page's
+    # get_drawings() extent, which is x 59.3-491.4 / y 83.6-499.7.
+    ("5_16", 29, (57, 81, 494, 502)),
 ]
 
 

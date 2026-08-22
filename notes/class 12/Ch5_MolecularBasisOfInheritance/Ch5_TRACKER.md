@@ -1,9 +1,11 @@
 # Ch5 Molecular Basis of Inheritance — Chapter Tracker
 
 **Status: ▶️ IN PROGRESS — PASS 1 COMPLETE; GATE 1 CLOSED. Pass 2 not started. GATE 2 AND GATE 3 NEVER RUN.**
-**All 9 Pass-1 ledger entries complete. 0 of 646 frozen inventory rows ticked. No script or PDF; 17 verified mono assets.**
+**All 9 Pass-1 ledger entries complete. 0 of 646 frozen inventory rows ticked. No script or PDF; 18 verified mono assets.**
 
-**Gate 1 closed on 2026-08-22.** The final figure sweep produced 17 caption-anchored 300 dpi assets, all individually opened after grayscale conversion and verified for identity, complete labels/leader lines, print legibility, and `L` mode. The Facts table now ends at `F646`, including 136 contiguous figure-label rows (`F511`–`F646`); `check_pdf.py`'s own `_extract_labels` returns 136 labels across 15 label-bearing figures, with no doubling and no phantom `Fig #` row. Figures `5.4b` and `5.15` are genuinely label-free. The inventory H1 is frozen; Pass 2 has not started.
+**Post-merge crop re-verification (2026-08-22, after PR #85).** Two rects were still clipping their plates and have been re-pinned and re-rendered: `fig_5_16` (`86,78,422,502` → `57,81,494,502`) and `fig_5_2` (`108,80,526,272` → `86,80,519,280`). Both plates carry **zero text-layer words**, so the word-grazing audit that "cleared" PR #85 had nothing to inspect on them. The crop gate is now three-part — word grazing **+** `get_drawings()`-extent overflow **+** unexplained dark ink in a 6 pt border band — and all 18 assets pass it and have been re-opened visually. The `fig_5_3` manifest caption (mislabelled `Central dogma`; the asset is the DNA double helix) is corrected, and the unnumbered `fig_5_central_dogma` bonus plate is now a manifest row, taking the asset count from 17 to 18. Reusable procedure: `skills/ncert-figure-extraction/SKILL.md`.
+
+**Gate 1 closed on 2026-08-22.** The final figure sweep produced 18 assets at 300 dpi, all individually opened after grayscale conversion and verified for identity, complete labels/leader lines, print legibility, and `L` mode. The Facts table now ends at `F646`, including 136 contiguous figure-label rows (`F511`–`F646`); `check_pdf.py`'s own `_extract_labels` returns 136 labels across 15 label-bearing figures, with no doubling and no phantom `Fig #` row. Figures `5.4b` and `5.15` are genuinely label-free. The inventory H1 is frozen; Pass 2 has not started.
 
 This is a per-chapter tracker; it is the detail layer under the repo-wide `CHAPTER_TRACKER.md` and
 `CHAPTER_STATUS.md` roll-ups. Where those two disagree with this file about Ch5, **this file is the
@@ -54,7 +56,7 @@ must read p17; `1b-S` starts at the banner, not at the top of the page.
 | 4 | `1b-S` | 1b prose, steps 1–3 | ✅ **done** | 218 prose rows `F265..F482` |
 | 5 | `1b-H` | 1b headings only | ✅ **done** | 13 heading rows `F483..F495` (incl. `Goals of HGP`, `SUMMARY`, `EXERCISES`) |
 | 6 | `1b-O` | 1b openers only | ✅ **done** | 11 opener rows `F496..F506` |
-| 7 | `1-F` | **whole chapter** figures | ✅ **done** | 17 verified mono assets + manifest + 136 in-figure label rows `F511..F646` |
+| 7 | `1-F` | **whole chapter** figures | ✅ **done** | 18 verified mono assets (17 numbered/split + 1 unnumbered) + manifest + 136 in-figure label rows `F511..F646` |
 | 8 | `1-Z` | steps 7–9 whole chapter | ✅ **done** | exercise-gap scan (**17 rows**, 5 gaps), summary classification (33 = 29 + 4), 4 folded rows `F507..F510`, freeze |
 | 9 | — | step 10 | ✅ **done and re-run after freeze** | machine re-parse: 646 rows, 0 gaps/dups, monotonic, 0 ticked |
 
@@ -79,7 +81,8 @@ Gate 3.
     notes/class 12/Ch5_MolecularBasisOfInheritance/
       Ch5_MolecularBasisOfInheritance_inventory.md   FROZEN, 646 rows
       Ch5_TRACKER.md                                 this file
-      assets/                                        17 verified mono PNGs
+      extract_figures.py                             hand-pinned rects + 3-part crop gate
+      assets/                                        18 verified mono PNGs
 
 No `Ch5_MolecularBasisOfInheritance.py` and no generated `.pdf`. **Correct at Gate 1 closure:** Pass 2 has not started.
 
