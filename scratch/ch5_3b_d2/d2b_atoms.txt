@@ -1,0 +1,7 @@
+NUM '101'        x1   pages 23
+NUM '102'        x1   pages 24
+NUM '110033'     x1   pages 25
+NUM '83'         x1   pages 5
+NUM '88'         x1   pages 10
+NUM '89'         x1   pages 11
+NUM '98'         x1   pages 20
