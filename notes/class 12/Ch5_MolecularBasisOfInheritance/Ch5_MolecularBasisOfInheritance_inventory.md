@@ -9,7 +9,7 @@ Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp
 - **Pass 1a — first half:** chapter introduction + §5.1 The DNA, §5.2 The Search for Genetic Material, §5.3 RNA World, §5.4 Replication, §5.5 Transcription (source pp. 1–17, book pp. 79–95, up to but excluding the `5.6 GENETIC CODE` banner).
 - **Pass 1b — second half:** §5.6 Genetic Code, §5.7 Translation, §5.8 Regulation of Gene Expression, §5.9 Human Genome Project, §5.10 DNA Fingerprinting, Summary and Exercises (source pp. 17–31).
 
-Per §6, `1a/1b` halve the **source**; `1-S / 1-H / 1-O / 1-F / 1-Z` separate the **kinds of work**. The sweeps therefore run per half (1a-S, 1a-H, 1a-O, then 1b-S, 1b-H, 1b-O), while **figures run as one whole-chapter 1-F session** and the freeze as one whole-chapter 1-Z. Gate 1 is evaluated over the whole chapter only after 1b.
+Per §6, `1a/1b` halve the **source**; `1-S / 1-H / 1-O / 1-F / 1-Z` separate the **kinds of work**. The sweeps therefore run per half (1a-S, 1a-H, 1a-O, then 1b-S, 1b-H, 1b-O), while **figures run as one whole-chapter 1-F session** and the freeze as one whole-chapter 1-Z. Gate 1 is evaluated over the whole chapter, and **completing `1b` is necessary but not sufficient**: the evaluation may only happen after `1-F` has closed and `1-Z` step 9 (freeze) plus a final step-10 re-parse have run. `1b` is done; **Gate 1 is nonetheless still OPEN.**
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. **No row is ticked — Pass 2 has not started.**
 
@@ -89,7 +89,9 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 
 ## Facts
 
-Scope of this table after session 1a-S: **prose facts of the first half only**. Headings and section-opening sentences are **deliberately excluded** — they are the sole deliverables of sessions 1a-H and 1a-O respectively (§6 Pass 1 step 3: "This step does not cover headings or openers"). Where an opener carries a definition that the rest of a section leans on, it is listed in the carry-over list below as a pointer for 1a-O, **not** absorbed as a row here.
+**Current scope of this table** (after `1a-S`/`1a-H`/`1a-O`/`1b-S`/`1b-H`/`1b-O` plus `1-Z` steps 7/8/10): **all text of the whole chapter — prose, headings and openers, both halves, plus the 4 SUMMARY-UNIQUE folds.** Machine-derived: **510 rows, `F001`..`F510`**, of which **30 are `Type: heading`** and **27 are `Type: opener`**. The one kind of row still absent is the **in-figure label row, owned by `1-F`** (currently **0**) — which is exactly why Gate 1 is still OPEN. Label rows continue from **`F511`**.
+
+> **Superseded scope note, retained for audit.** While only `1a-S` had run, this table's scope was *"prose facts of the first half only"*, with headings and section-opening sentences **deliberately excluded** as the sole deliverables of `1a-H` and `1a-O` (§6 Pass 1 step 3: "This step does not cover headings or openers"), and openers carrying load-bearing definitions were listed in the carry-over list below as pointers for `1a-O` rather than absorbed as rows here. All three sessions have since closed, so that exclusion no longer describes this file. **Do not read the old note as licence to omit heading or opener rows, and do not re-append them — they are already present.**
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
