@@ -27,7 +27,9 @@ Environment first (§0.2): `/vercel/share/neetenv` was **absent again** — the 
 
 **Post-merge crop re-verification (2026-08-22, after PR #85).** Two rects were still clipping their plates and have been re-pinned and re-rendered: `fig_5_16` (`86,78,422,502` → `57,81,494,502`) and `fig_5_2` (`108,80,526,272` → `86,80,519,280`). Both plates carry **zero text-layer words**, so the word-grazing audit that "cleared" PR #85 had nothing to inspect on them. The crop gate is now three-part — word grazing **+** `get_drawings()`-extent overflow **+** unexplained dark ink in a 6 pt border band — and all 18 assets pass it and have been re-opened visually. The `fig_5_3` manifest caption (mislabelled `Central dogma`; the asset is the DNA double helix) is corrected, and the unnumbered `fig_5_central_dogma` bonus plate is now a manifest row, taking the asset count from 17 to 18. Reusable procedure: `skills/ncert-figure-extraction/SKILL.md`.
 
-**Gate 1 closed on 2026-08-22.** The final figure sweep produced 18 assets at 300 dpi, all individually opened after grayscale conversion and verified for identity, complete labels/leader lines, print legibility, and `L` mode. The Facts table now ends at `F646`, including 136 contiguous figure-label rows (`F511`–`F646`); `check_pdf.py`'s own `_extract_labels` returns 136 labels across 15 label-bearing figures, with no doubling and no phantom `Fig #` row. Figures `5.4b` and `5.15` are genuinely label-free. The inventory H1 is frozen; Pass 2 has not started.
+**Gate 1 closed on 2026-08-22.** The final figure sweep produced 18 assets at 300 dpi, all individually opened after grayscale conversion and verified for identity, complete labels/leader lines, print legibility, and `L` mode. The Facts table now ends at `F646`, including 136 contiguous figure-label rows (`F511`–`F646`); `check_pdf.py`'s own `_extract_labels` returns 136 labels across 15 label-bearing figures, with no doubling and no phantom `Fig #` row. Figures `5.4b` and `5.15` are genuinely label-free. The inventory H1 is frozen. *(Dated record — its
+closing clause "Pass 2 has not started" was true on 2026-08-22 only. Pass 2 and Gate 3a have since
+closed; see §3 for current disk state and §4 for the live Gate 3b brief.)*
 
 This is a per-chapter tracker; it is the detail layer under the repo-wide `CHAPTER_TRACKER.md` and
 `CHAPTER_STATUS.md` roll-ups. Where those two disagree with this file about Ch5, **this file is the
@@ -101,12 +103,19 @@ Gate 3.
 ## 3. What is actually on disk
 
     notes/class 12/Ch5_MolecularBasisOfInheritance/
-      Ch5_MolecularBasisOfInheritance_inventory.md   FROZEN, 646 rows
+      Ch5_MolecularBasisOfInheritance_inventory.md   FROZEN, 646 rows, 646/646 ticked
+      Ch5_MolecularBasisOfInheritance.py             the generator, 139 KB
+      Ch5_MolecularBasisOfInheritance.pdf            the deliverable, 30 pages, 1.8 MB
       Ch5_TRACKER.md                                 this file
       extract_figures.py                             hand-pinned rects + 3-part crop gate
       assets/                                        18 verified mono PNGs
 
-No `Ch5_MolecularBasisOfInheritance.py` and no generated `.pdf`. **Correct at Gate 1 closure:** Pass 2 has not started.
+**Both the script and the PDF now exist and Pass 2 is COMPLETE** — re-verified from disk, not recalled.
+`check_pdf.py <folder> --strict` returns **PASS, 0 fail / 0 warn** on all 10 checks. The PDF carries
+**17 embedded mono images** against **18 assets on disk**: `fig_5_15` was removed from the PDF by owner
+decision at the Gate 3a fix pass and is deliberately retained on disk, so `18 - 17 = 1` is the expected
+difference, not a missing figure. *(This block previously read "No `.py` and no generated `.pdf` —
+Pass 2 has not started", frozen at Gate 1 closure while three gates had since moved.)*
 
 One further Ch5 file is committed **outside** the chapter folder and is not a deliverable:
 
@@ -120,7 +129,9 @@ and in-figure labels `1-F` needs do not exist in a text dump at all.
 
 ### Machine-derived state of the inventory
 
-Re-parsed from the file this session, not recalled:
+Re-parsed from the file at the latest state re-verification, not recalled. Every value below was
+re-derived after Pass 2 and the Gate 3a fixes had landed, so this table describes the **current** disk
+state — not the Gate-1-closure snapshot it originally held:
 
 | Metric | Value |
 |---|---|
@@ -133,9 +144,11 @@ Re-parsed from the file this session, not recalled:
 | Figure-label rows | **136** (`F511..F646`); `5.4b` and `5.15` are genuinely label-free |
 | Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE**; the 4 unique facts folded in as `F507..F510` ✓ |
 | Exercise-gap table rows | **17 (machine-parsed as the table's own length), 5 of them GAP** — each gap has a named inline home |
-| Rows ticked | **0** — Pass 2 not started |
+| Rows ticked | **646 / 646** — Pass 2 complete; check 7 green *(this row read `0 — Pass 2 not started` until the state re-verification; the ticks were earned against the built PDF's extracted text, not asserted)* |
 | `_extract_labels` (the linter's own parser) | **136 labels, 15 label-bearing figures, no doubling, no phantom `Fig #` row** |
-| Frozen | **Yes.** H1 reads `# Frozen Inventory`; Gate 1 closed |
+| Frozen | **Yes.** H1 reads `# Frozen Inventory — Molecular Basis of Inheritance (Class 12, Chapter 5)`; Gates 1, 2 and 3a closed |
+| `check_pdf.py --strict` | **PASS, 0 fail / 0 warn**, all 10 checks (invoke on the *folder*, not the PDF path — `check_pdf.py "notes/class 12/Ch5_MolecularBasisOfInheritance" --strict`; passing the `.pdf` gives `SETUP ERROR: not a folder`) |
+| Generated PDF | **30 pages**, A4 portrait throughout, **17 embedded mono images** (18 on disk; `fig_5_15` withheld by owner decision) |
 
 Re-derive with:
 
@@ -316,7 +329,12 @@ rows now on disk, 1 is the chapter title, so **in-body headings = 29**.
 
 ---
 
-## 5. Forward notes — Pass 1 fully closed; only Pass 2 onward is still live
+## 5. HISTORICAL — Pass 1 sweep notes (all closed; retained for audit, not for action)
+
+> **Scope note.** This section is a **historical record of the Pass 1 sweeps**, kept because its traps
+> and lessons stay useful for re-audits. **Nothing in it is actionable.** Passes 1 and 2 are complete
+> and Gates 1, 2 and 3a are closed; the only live work is **Gate 3b**, briefed in §4. Its heading
+> previously read "only Pass 2 onward is still live", which stopped being true when Pass 2 closed.
 
 **`1a-O` — ✅ done; note retained for audit, not for action.** Openers only, pp. 1–17. The
 load-bearing ones: the §5.5 opener is the only place *transcription* is defined, and the §5.5.2
@@ -325,9 +343,14 @@ ship without defining its two central terms — the exact Ch9 D9 failure. **Both
 have produced a row before `1a-O` closed**; openers now total **27** machine-verified rows
 (`F249..F264` + `F496..F506`).
 
-**`1-F` — ⬜ LIVE. The sole Gate 1 blocker; see §4 for the actionable brief.** Whole chapter.
-Captions enumerated from source: **16 figure numbers but 17
-assets**, because `Figure 5.4` is split into `5.4a Nucleosome` and `5.4b EM picture — 'Beads-on-String'`.
+**`1-F` — ✅ COMPLETE (closed at Gate 1; this block read "⬜ LIVE. The sole Gate 1 blocker" long after
+it closed).** Whole chapter. Captions enumerated from source: **16 figure numbers → 17 numbered asset
+files, plus the unnumbered p4 central-dogma plate = 18 assets total**, the count verified on disk.
+`Figure 5.4` is split into `5.4a Nucleosome` and `5.4b EM picture — 'Beads-on-String'`, which is what
+takes 16 numbers to 17 files. *(Corrected: this read "16 figure numbers but 17 assets", stating the
+numbered-file count as the total and dropping the unnumbered plate — the same §4.4 miscount already
+fixed twice in the roll-ups. 17 is the count of numbered files and of images embedded in the PDF;
+**18** is the count of assets on disk. Three different denominators, each right in its own sentence.)*
 First half: 5.1, 5.2, 5.3, **5.4a, 5.4b**, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11 (12 assets).
 Second half: 5.12, 5.13, 5.14, 5.15, 5.16 (5 assets). Two traps: the a/b pair is what makes a
 duplicate-`Fig #` check fire falsely or hide a real dupe, and **`Figure 5.15`'s caption text sits on
@@ -339,7 +362,9 @@ in-figure label (including `Central dogma`, per trap 4).
 **`1-Z` — ✅ COMPLETE: steps 7, 8, 9 and 10 all done.** The exercise-gap scan (**17 rows = 5 GAP + 11
 Covered + 1 Blocked**) and the summary classification (33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE, folded
 as `F507..F510`) landed first. **Step 9 — the freeze — ran only after `1-F` closed**, as required: the
-inventory H1 now reads `# Frozen Inventory — Ch5 ... (FROZEN — Gate 1 closed)`. Retitling early would
+inventory H1 now reads, verbatim from disk, `# Frozen Inventory — Molecular Basis of Inheritance
+(Class 12, Chapter 5)` *(this line previously paraphrased it as `# Frozen Inventory — Ch5 ... (FROZEN —
+Gate 1 closed)`, a quote of text that is not in the file)*. Retitling early would
 have been a false completion signal — the H1 was once caught reading `# Frozen Inventory` while six
 sweeps were outstanding, where a `grep -i frozen` over `notes/` would have counted Ch5 as frozen.
 
@@ -350,16 +375,22 @@ no doubling, no phantom `Fig #` row), every count matching a re-parse, all 18 fi
 `Verified: yes`, and each sweep traceable to a session that closed on it. **Six landed sweeps did not
 close Gate 1 — eight did, plus the freeze and the re-parse.**
 
-**Pass 2a/2b** — one script, `Ch5_MolecularBasisOfInheritance.py`, written linearly in Content Order
-from the frozen inventory, importing `neet_template.py` with **no style re-declared**; both halves go
-into the **same** script and rows are ticked **as each block is written**, not reconciled afterwards.
-The deliverable is one merged PDF — **never two half-PDFs**.
+**Pass 2a/2b — ✅ COMPLETE, Gate 2 CLOSED.** One script, `Ch5_MolecularBasisOfInheritance.py`, written
+linearly in Content Order from the frozen inventory, importing `neet_template.py` with **no style
+re-declared**; both halves went into the **same** script and the deliverable is **one merged 30-page
+PDF**, never two half-PDFs — all as required. Outcome: **646/646 rows ticked**, `--strict` **PASS
+0 fail / 0 warn**, re-derived independently across four sessions, so Gate 2 is settled. The ticks were
+**earned against the built PDF's extracted text** by `scratch/ch5_2b/tickaudit.py`, which surfaced 11
+token misses of which **8 were real omissions** and were written in (`F035`, `F036`, `F078`, `F079`,
+`F117`, `F133`, `F199`, `F494`) — the reason this gate is trusted. *(This block was still written as
+a forward instruction — "rows are ticked as each block is written" — after the work had finished.)*
 
 ---
 
 ## 6. Corrections log
 
 | When | Correction |
+| documentation state-sync pass (consistency-only session — **no sweep run, no gate advanced; Gates 1+2+3a closed, Gate 3b still not started**) | Environment first: `/vercel/share/neetenv` was **absent again** (expected, §0.2) and was rebuilt and import-verified before any diagnosis. **Every Ch5 headline number was re-derived from disk and all of them matched** — 646 rows `F001..F646` contiguous / 0 gaps / 0 dups / monotonic, census sums to 646, 30 heading + 27 opener + 136 figure-label rows, `_extract_labels` 136 labels / 15 label-bearing figures / no doubling / no phantom `Fig #`, **646/646 ticked**, 18 assets all `mode=L`, PDF 30 pp / 17 embedded images / A4 throughout, and `check_pdf.py --strict` **PASS 0 fail / 0 warn** on all 10 checks. **The substance was correct; the documentation describing it was not.** Six stale claims were fixed, all of them frozen at Gate-1-closure while three gates had since moved: (a) **§3's file tree** omitted both `Ch5_MolecularBasisOfInheritance.py` and the 30-page `.pdf`, and asserted **"No `.py` and no generated `.pdf` — Pass 2 has not started"**; (b) **§3's state table** said **"Rows ticked: 0 — Pass 2 not started"** against 646/646 on disk; (c) **§5's heading** read "only Pass 2 onward is still live" after Pass 2 closed — the section is now explicitly marked HISTORICAL, since it is sweep notes and a future agent could have actioned them; (d) **§5 still called `1-F` "⬜ LIVE. The sole Gate 1 blocker"** long after Gate 1 closed; (e) **the 17-vs-18 asset miscount survived in two more places** (§5 "16 figure numbers but 17 assets" and `CHAPTER_STATUS.md`'s overview row) — the same §4.4 error already corrected twice in the roll-ups, where the count of *numbered files* is stated as the total and the unnumbered p4 central-dogma plate is dropped; the three denominators are now stated explicitly (**16** numbers, **17** numbered files = images embedded in the PDF, **18** assets on disk); (f) **§5 quoted an inventory H1 that does not exist** (`# Frozen Inventory — Ch5 ... (FROZEN — Gate 1 closed)`) — replaced with the verbatim line, and the same misquote fixed in the inventory's own Gate 1 checklist. Also corrected: `CHAPTER_STATUS.md`'s overview row said **"0 ticked"** while the Gate 2 cell immediately to its right said 646/646 — a row contradicting itself. Two forward-looking blocks that had silently become false instructions were rewritten as completed records: §5's **"Pass 2a/2b ... rows are ticked as each block is written"** and the dated 2026-08-22 Gate 1 paragraph whose trailing "Pass 2 has not started" was true only on that date (marked as dated rather than rewritten). **The `18 - 17 = 1` gap is now documented as expected, not as a missing figure:** `fig_5_15` was withheld from the PDF by owner decision and is deliberately retained on disk. Also recorded the checker's invocation shape — it takes the **folder**, and passing the `.pdf` returns `SETUP ERROR: not a folder`. **No Facts row was touched, no count changed, no history deleted** (superseded text is quoted in place), and **no gate was advanced: Gate 3b remains the only live work.** |
 | Gate 3a fix pass (this session — **Gate 3a CLOSED, fixes landed, Gate 3 still OPEN pending 3b**) | Environment first: `/vercel/share/neetenv` was **absent again** (expected, §0.2) and was rebuilt and import-verified before any diagnosis. **Three defects dispositioned, two fixed in the script, one accepted; one inherited finding disproved.** (a) **Badges FIXED** — three heading badges were non-unique or non-numeric because NCERT leaves the sub-heading unnumbered (two rendered `5.2` on p6, colliding with the parent §5.2 banner; one rendered `Goals` on p24). Owner chose the **letter-suffix** convention: now **`5.2a` Transforming Principle**, **`5.2b` Biochemical Characterisation of Transforming Principle**, **`5.9a` Goals of HGP**. Applied **at the three call sites only** — an **authoring rule; `neet_template.py` was NOT modified**, so no other chapter is affected. `QR`/`EX` left as intentional non-numeric mnemonic badges. (b) **The handoff's "21 literal `•` glyphs bypassing Check 5" claim was RE-DERIVED AND FOUND FALSE** — a machine scan returns **zero typed U+2022 characters**; all 21 bullets are ReportLab markup, **9 as correct hanging `<bullet>&bull;</bullet>`** and **12 in Quick Recap as inline `&bull;` with no hanging indent**. Check 5 was never bypassed, so **`check_pdf.py` was correctly left unpatched**; the real defect was **markup inconsistency**, and the **12 Quick Recap paragraphs were normalized to `<bullet>&bull;</bullet>`** (`Bullet1` already sets `firstLineIndent=-8`, so they now hang like the rest). The large `●` on p24 was investigated and is **`keyterm()`, a different template component — not an inconsistent bullet** — left as-is. *Lesson: a "banned glyph" finding must be confirmed by scanning the source text, since entity markup and typed literals are indistinguishable in a rendered page.* (c) **Baked-in double borders ACCEPTED and CLOSED** — `fig_5_4b`/`fig_5_6`/`fig_5_7`/`fig_5_9` carry NCERT's own thin frame inside the crop; same disposition as the source watermark, an inherited cosmetic artifact of the source artwork. **Do not re-raise.** (d) **Stale current-state numbers corrected in this tracker's own header**: it claimed **"PDF 31 pages"** where a machine re-open returns **30**, and it conflated **18 assets on disk** with **17 images embedded in the PDF** (`fig_5_15` is retained on disk but removed from the PDF by owner decision) — both restated, the page count being the one that governs the page walk. (e) **§4 was stale and dangerous**: it was still headed **"NEXT SESSION — Pass 2a (script)"** and briefed writing `Ch5_MolecularBasisOfInheritance.py`, a pass that closed with Gate 2 on 2026-08-22 — obeying it would have re-run a finished pass over an existing script and PDF. §4 now carries the real **Gate 3b** brief (both directions, all 646 rows, the frozen-inventory "flag but do not append" rule, the §0.2 venv note, and the explicit do-not-re-raise list), with the superseded text quoted rather than deleted. **Post-fix verification:** `check_pdf.py --strict` **PASS, 0 fail / 0 warn** — 30 pages, 646/646 ticked, 136/136 labels, 17 mono images, smallest text 6.0 pt — every metric identical to the pre-fix run, so the edits regressed nothing; pages **6, 24, 29** re-rendered at 140 dpi and re-inspected by eye. **No inventory Facts row was touched, no history rewritten, `neet_template.py` untouched, Gate 3 not closed.** |
 |---|---|
 | `1a-S` | Inventory H1 was `# Frozen Inventory`, copied from completed chapters, while line 3 said NOT FROZEN. Retitled `# Working Inventory (NOT FROZEN)`; frozen title now withheld until `1-Z` earns it. |

@@ -95,10 +95,19 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 > | Header counts match a re-parse of the table; IDs contiguous | **done** — 646 rows, `F001..F646`, 0 gaps, 0 dups, monotonic, census sums to 646 |
 > | Exercise-gap terms and SUMMARY-UNIQUE folding | **done** — **17 exercise-gap rows / 5 gaps**; 33 summary sentences classified; 4 SUMMARY-UNIQUE facts folded as `F507`..`F510` |
 > | Pass 1's sessions have each run and reported a machine-derived count | **8 of 8 sweeps complete**; `Ch5_TRACKER.md` counts 9 ledger entries by listing the closing machine re-parse separately |
-> | Inventory frozen (step 9) | **done** — H1 reads `# Frozen Inventory` |
+> | Inventory frozen (step 9) | **done** — H1 reads `# Frozen Inventory — Molecular Basis of Inheritance (Class 12, Chapter 5)` |
 > | Inventory file saved to the chapter folder | done — this file |
 >
-> **Gate 1 verdict: CLOSED.** Pass 2 has not started.
+> **Gate 1 verdict: CLOSED.**
+>
+> **Current state beyond Gate 1 (re-verified from disk, not recalled).** **Pass 2 is COMPLETE and
+> Gate 2 is CLOSED:** the script and the 30-page PDF both exist and **all 646/646 rows are ticked**,
+> with `check_pdf.py "notes/class 12/Ch5_MolecularBasisOfInheritance" --strict` returning **PASS,
+> 0 fail / 0 warn** across all 10 checks. **Gate 3a is CLOSED** with both fixable defects fixed
+> (heading badges now `5.2a`/`5.2b`/`5.9a`; 12 Quick Recap bullets normalised to hanging
+> `<bullet>&bull;</bullet>`). **Gate 3b — the bidirectional full read — has NOT run, so Gate 3 is
+> still OPEN and this chapter is NOT done.** *(This line read "Pass 2 has not started" while all of
+> the above was already on disk.)*
 
 ## Facts
 
