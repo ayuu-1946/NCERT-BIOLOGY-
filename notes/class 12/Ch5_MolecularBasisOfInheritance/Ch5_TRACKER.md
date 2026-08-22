@@ -105,12 +105,12 @@ Re-parsed from the file this session, not recalled:
 | Census sums to | 264+136+56+37+33+31+30+27+18+13+1 = **646** ✓ matches row count |
 | `Type: heading` | **30** — `1a-H` 17 + `1b-H` 13 ✓ |
 | `Type: opener` | **27** — `1a-O` 16 + `1b-O` 11 ✓ |
-| Figure-label rows | **0 — the Gate 1 blocker**, owned by `1-F` |
-| Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE**; the 4 unique facts folded in as `F507..F510` ✓ (the fold count equals the number of rows appended, so it is checkable, not asserted) |
-| Exercise-gap table rows | **17 (machine-parsed as the table's own length), 5 of them GAP** — 16 rows covering all 14 end-of-chapter questions `F469..F482` (Q3+Q4 share a row; Q8 splits a/b/c; Q14 splits (a)(b)(c) and (d)) + 1 row for in-body `F288`/`F289`. **Corrected from "16" this session**: the old figure was a hand-tally of *questions* reported as if it were *rows*, and it disagreed with the table it described. Each gap has a named inline home. |
+| Figure-label rows | **136** (`F511..F646`); `5.4b` and `5.15` are genuinely label-free |
+| Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE**; the 4 unique facts folded in as `F507..F510` ✓ |
+| Exercise-gap table rows | **17 (machine-parsed as the table's own length), 5 of them GAP** — each gap has a named inline home |
 | Rows ticked | **0** — Pass 2 not started |
-| `_extract_labels` (the linter's own parser) | **0 labels, 0 figures, no phantom `Fig #` row** — correct pre-`1-F` state, **and this time run under the rebuilt venv**, closing the caveat left by the tracker-audit session |
-| Frozen | **No.** H1 reads `# Working Inventory (NOT FROZEN)` — withheld on purpose, see §2 |
+| `_extract_labels` (the linter's own parser) | **136 labels, 15 label-bearing figures, no doubling, no phantom `Fig #` row** |
+| Frozen | **Yes.** H1 reads `# Frozen Inventory`; Gate 1 closed |
 
 Re-derive with:
 
