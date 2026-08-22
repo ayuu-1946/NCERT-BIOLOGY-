@@ -1,0 +1,212 @@
+=== F010 [concept | Intro] ratio=0.824
+ROW: "The determination of complete nucleotide sequence of human genome during last decade has set in a new era of genomics."
+SRC:  ===== page 2 ===== biology of complete nucleotide sequence of human genome during last decade has set in a new era of genomics. in the l
+
+=== F016 [number | 5.1] ratio=0.84
+ROW: "a bacteriophage known as phi x 174 has 5386 nucleotides"
+SRC: example, a bacteriophage known as φx174 has 5386 nucleotides, ba
+
+=== F029 [concept | 5.1.1] ratio=0.721
+ROW: "A polymer thus formed has at one end a free phosphate moiety at 5'-end of sugar, which is referred to as 5'-end of polynucleotide chain."
+SRC: === molecular basis of inheritance phosphate moiety at 5'-end of sugar, which is referred to as 5'-end of polynucleotide chain. similarly, at the other end of
+
+=== F030 [concept | 5.1.1] ratio=0.924
+ROW: "Similarly, at the other end of the polymer the sugar has a free OH of 3'C group which is referred to as 3'-end of the polynucleotide chain."
+SRC: polynucleotide chain. similarly, at the other end of the polymer the sugar has a free oh of 3'c group which is referred to as 3' -end of the polynucleotide chain.
+
+=== F044 [list | 5.1.1] ratio=0.864
+ROW: "(ii) The two chains have anti-parallel polarity. It means, if one chain has the polarity 5'-to-3', the other has 3'-to-5'."
+SRC: nside. (ii) the two chains have anti-parallel polarity. it means, if one chain has the polarity 5'à3', the other has 3'à5'. (iii) the bases in
+
+=== F048 [number | 5.1.1] ratio=0.902
+ROW: "The pitch of the helix is 3.4 nm (a nanometre is one billionth of a metre, that is 10^-9 m) and there are roughly 10 bp in each turn."
+SRC: ight-handed fashion. the pitch of the helix is 3.4 nm (a nanometre is one billionth of a metre, that is 10-9 m) and there are roughly 10 bp in each reprin
+
+=== F053 [definition | 5.1.1] ratio=0.876
+ROW: "Very soon, Francis Crick proposed the Central dogma in molecular biology, which states that the genetic information flows from DNA-to-RNA-to-Protein."
+SRC: cation became revolutionary. very soon, francis crick proposed the central dogma in molecular biology, which states that the genetic information flows from dnaàrnaàprotein. 
+
+=== F057 [number | 5.1.2] ratio=0.915
+ROW: "6.6 x 10^9 bp x 0.34 x 10^-9 m/bp, it comes out to be approximately 2.2 metres"
+SRC:  is, 6.6 x 109 bp x 0.34 x 10-9m/bp), it comes out to be approximately 2.2 metres. a len
+
+=== F070 [definition | 5.1.2] ratio=0.917
+ROW: "Nucleosomes constitute the repeating unit of a structure in nucleus called chromatin, thread-like stained (coloured) bodies seen in nucleus."
+SRC:  dna helix. nucleosomes constitute the repeating unit of a structure in nucleus called chromatin, threadlike stained (coloured) bodies seen in nucleus. the nucleos
+
+=== F074 [definition | 5.1.2] ratio=0.818
+ROW: "The packaging of chromatin at higher level requires additional set of proteins that collectively are referred to as Non-histone Chromosomal (NHC) proteins."
+SRC: he packaging of chromatin at higher level requires additional set of proteins that collectively are referred to as reprint 2026-27 ===== page 6 ===== biology non-histone chromosoma
+
+=== F088 [concept | 5.2 (Transforming Principle)] ratio=0.889
+ROW: "When he injected a mixture of heat-killed S and live R bacteria, the mice died."
+SRC:  of inheritance injected a mixture of heat-killed s and live r bacteria, the mice died. more
+
+=== F117 [example | 5.2.2] ratio=0.763
+ROW: "However, it subsequently became clear that in some viruses, RNA is the genetic material (for example, Tobacco Mosaic viruses, QB bacteriophage, etc.)."
+SRC: t reprint 2026-27 ===== page 9 ===== molecular basis of inheritance in some viruses, rna is the genetic material (for example, tobacco mosaic viruses, qb bacteriophage, etc.).
+
+=== F138 [concept | 5.2.2] ratio=0.891
+ROW: "The above discussion indicate that both RNA and DNA can function as genetic material, but DNA being more stable is preferred for storage of genetic information. For the transmission of genetic information, RNA is better."
+SRC: e above discussion indicate that both rna and dna can function as reprint 2026-27 ===== page 10 ===== biology genetic material, but dna being more stable is preferred for storage of genetic information. for the transmission of genetic information, rna is b
+
+=== F146 [concept | 5.4] ratio=0.924
+ROW: "To quote their original statement that is as follows: 'It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material' (Watson and Crick, 1953)."
+SRC:  dna. to quote their original statement that is as follows: ''it has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material'' (watson and crick, 1953). the scheme suggested that the
+
+=== F150 [concept | 5.4.1] ratio=0.812
+ROW: "It was shown first in Escherichia coli and subsequently in higher organisms, such as plants and human cells."
+SRC: was shown first in escherichia coli and subsequently in higher organisms, such as plants splicing, etc.), evolved around rna. 
+
+=== F160 [number | 5.4.1] ratio=0.83
+ROW: "DNA extracted from the culture after another generation [that is after 40 minutes, II generation] was composed of equal amounts of this hybrid DNA and of 'light' DNA."
+SRC: rom the culture after another generation [that is after 40 minutes, ii generation] was reprint 2026-27 ===== page 12 ===== biology composed of equal amounts of this hybrid dna and of 'light' dn
+
+=== F174 [concept | 5.4.2] ratio=0.887
+ROW: "The DNA-dependent DNA polymerases catalyse polymerisation only in one direction, that is 5'-to-3'."
+SRC: cation fork. the dna-dependent dna polymerases catalyse polymerisation only in one direction, that is 5'à3'. this 
+
+=== F176 [concept | 5.4.2] ratio=0.882
+ROW: "Consequently, on one strand (the template with polarity 3'-to-5'), the replication is continuous, while on the other (the template with polarity 5'-to-3'), it is discontinuous."
+SRC: t the replicating fork. consequently, on one strand (the template with polarity 3'à5'), the replication is continuous, while on the other (the template with polarity 5'à3'), it is discontinuous. the discon
+
+=== F181 [concept | 5.4.2] ratio=0.903
+ROW: "It is because of the requirement of the origin of replication that a piece of DNA if needed to be propagated during recombinant DNA procedures, requires a vector. The vectors provide the origin of replication."
+SRC: == molecular basis of inheritance because of the requirement of the origin of replication that a piece of dna if needed to be propagated during recombinant dna procedures, requires a vector. the vectors provide the origin of replication. furth
+
+=== F185 [concept | 5.4.2] ratio=0.914
+ROW: "A failure in cell division after DNA replication results into polyploidy (a chromosomal anomaly)."
+SRC: ated. a failure in cell division after dna replication results into polyploidy(a chromosomal anomaly). you will l
+
+=== F196 [definition | 5.5.1] ratio=0.875
+ROW: "Since the two strands have opposite polarity and the DNA-dependent RNA polymerase also catalyse the polymerisation in only one direction, that is, 5'-to-3', the strand that has the polarity 3'-to-5' acts as a template, and is also referred to as template strand."
+SRC: the two strands have opposite polarity and the dna-dependent rna polymerase also catalyse the polymerisation in only one direction, that is, 5'→3', the strand that has the polarity 3'→5' acts as a template, and is also referred to as template strand. the other strand which has the polarity (5'→3') and th
+
+=== F197 [definition | 5.5.1] ratio=0.908
+ROW: "The other strand which has the polarity (5'-to-3') and the sequence same as RNA (except thymine at the place of uracil), is displaced during transcription. Strangely, this strand (which does not code for anything) is referred to as coding strand."
+SRC: so referred to as template strand. the other strand which has the polarity (5'→3') and the sequence same as rna (except thymine at the place of uracil), is displaced during transcription. strangely, this strand (which does not code for anything) is referred to as coding strand. all the 
+
+=== F199 [example | 5.5.1] ratio=0.905
+ROW: "3'-ATGCATGCATGCATGCATGCATGC-5' Template Strand / 5'-TACGTACGTACGTACGTACGTACG-3' Coding Strand"
+SRC: ented below: 3'-atgcatgcatgcatgcatgcatgc-5' template strand 5'-tacgtacgtacgtacgtacgtacg-3' coding strand can
+
+=== F207 [concept | 5.5.2] ratio=0.769
+ROW: "Though there is no ambiguity that the genes are located on the DNA, it is difficult to literally define a gene in terms of DNA sequence."
+SRC: hough there is no ambiguity that the genes are located on the dna, it is difficult to literally reprint 2026-27 ===== page 15 ===== molecular basis of inherit
+
+=== F219 [concept | 5.5.3] ratio=0.561
+ROW: "RNA polymerase binds to promoter and initiates transcription (Initiation). It uses nucleoside triphosphates as substrate and polymerises in a template depended fashion following the rule of complementarity."
+SRC: nt rna polymerase that catalyses transcription of all types of rna in bacteria. rna polymerase binds to promoter and initiates transcription (initiation). it uses nucleoside triphosphates as substrate 93 figure 5.10 process of transcription
+
+=== F223 [concept | 5.5.3] ratio=0.815
+ROW: "The RNA polymerase is only capable of catalysing the process of elongation. It associates transiently with initiation-factor (sigma) and termination-factor (rho) to initiate and terminate the transcription, respectively."
+SRC:  is only capable of catalysing the process of elongation. it associates transiently with initiation-factor (σ) and termination-factor (ρ) to initiate and terminate the transcription, respectively. association with these factors alter the specificity of the
+
+=== F226 [list | 5.5.3] ratio=0.915
+ROW: "In eukaryotes, there are two additional complexities - (i) There are at least three RNA polymerases in the nucleus (in addition to the RNA polymerase found in the organelles). There is a clear cut division of labour."
+SRC: bacteria. in eukaryotes, there are two additional complexities (i) there are at least three rna polymerases in the nucleus (in addition to the rna polymerase found in the organelles). there is a clear cut division of labour. the rna polymerase i transc
+
+=== F227 [number | 5.5.3] ratio=0.799
+ROW: "The RNA polymerase I transcribes rRNAs (28S, 18S, and 5.8S), whereas the RNA polymerase III is responsible for transcription of tRNA, 5srRNA, and snRNAs (small nuclear RNAs). The RNA polymerase II transcribes precursor of mRNA, the heterogeneous nuclear RNA (hnRNA)."
+SRC:  eukaryotes reprint 2026-27 ===== page 17 ===== molecular basis of inheritance (28s, 18s, and 5.8s), whereas the rna polymerase iii is responsible for transcription of trna, 5srrna, and snrnas (small nuclear rnas). the rna polymerase ii transcribes precursor of mrna, the heterogeneous nuclear rna (hnrna). (ii
+
+=== F276 [name | 5.6] ratio=0.839
+ROW: "The chemical method developed by Har Gobind Khorana was instrumental in synthesising RNA molecules with defined combinations of bases (homopolymers and copolymers)."
+SRC: the chemical method developed by har gobind khorana was reprint 2026-27 95 ===== page 18 ===== 96 instrumental in synthesising rna molecules with defined combinations of bases (homopolymers a
+
+=== F280 [table | 5.6] ratio=0.429
+ROW: "Table 5.1: The Codons for the Various Amino Acids" (p18, 10.0pt Bookman-Demi table caption; the 64-cell codon checker-board itself is **not text-extractable** - see carry-over 9)
+SRC: uu uuu uuctable 5.1: the codons for the various amino acids reprint 2026-27 biology ===== page 19 ===== molecular basis of inheritance now try the opposite. following is the sequence of amino acids coded by a
+
+=== F288 [question | 5.6] ratio=0.917
+ROW: "If following is the sequence of nucleotides in mRNA, predict the sequence of amino acid coded by it (take help of the checkerboard): -AUG UUU UUC UUC UUU UUU UUC-"
+SRC: odons. if following is the sequence of nucleotides in mrna, predict the sequence of amino acid coded by it (take help of the checkerboard): -aug uuu uuc uuc uuu uuu uuctable 5.1: the codons
+
+=== F302 [example | 5.6.1] ratio=0.908
+ROW: "The same exercise can be repeated, by deleting the letters R, E and D, one by one and rearranging the statement to make a triplet word. RAM HAS EDC AP / RAM HAS DCA P / RAM HAS CAP"
+SRC:  ram has big red cap the same exercise can be repeated, by deleting the letters r, e and d, one by one and rearranging the statement to make a triplet word. ram has edc ap 97 ram has dca p ram has cap the concl
+
+=== F304 [definition | 5.6.1] ratio=0.624
+ROW: "However, such mutations are referred to as frameshift insertion or deletion mutations."
+SRC: ver, such mutations are referred to as reprint 2026-27 97 ===== page 20 ===== 98 frameshift insertio
+
+=== F318 [concept | 5.7] ratio=0.742
+ROW: "If two such charged tRNAs are brought close enough, the formation of peptide bond between them would be favoured energetically."
+SRC: . if two such charged trnas are brought close enough, the formation of peptide bond between them reprint 2026-27 ===== page 21 ===== molecular basis
+
+=== F334 [concept | 5.7] ratio=0.644
+ROW: "Amino acids are added one by one, translated into Polypeptide sequences dictated by DNA and represented by mRNA." (source capitalises "Polypeptide" mid-sentence; reproduce NCERT's own casing)
+SRC: along the mrna. amino acids are added one by one, translated into polypeptide sequences dictated by dna and represented by mrna. at the end, a release factor binds to the stop codon, terminating translation and releasing the
+
+=== F356 [concept | 5.8.1] ratio=0.904
+ROW: "The z gene codes for beta-galactosidase (beta-gal), which is primarily responsible for the hydrolysis of the disaccharide, lactose into its monomeric units, galactose and glucose."
+SRC:  lac operon. the z gene codes for beta-galactosidase (β-gal), which is primarily responsible for the hydrolysis of the disaccharide, lactose into its monomeric units, galactose and glucose. the y gene codes f
+
+=== F357 [concept | 5.8.1] ratio=0.886
+ROW: "The y gene codes for permease, which increases permeability of the cell to beta-galactosides."
+SRC: and glucose. the y gene codes for permease, which increases permeability of the cell to β-galactosides. the 
+
+=== F385 [list | 5.9 (Goals of HGP)] ratio=0.129
+ROW: "(iiii) Store this information in databases;" (the source really prints the numeral as "(iiii)" - reproduce the item as "(iii)" in the rewrite but do not silently renumber the rest; see carry-over 12)
+SRC: nformation in databases; (iv) improve tools for data analysis; (v) transfer related technologies to other sectors, such as industries; (vi) address the ethical, legal, and social issues (elsi) that may arise from the project. 102 the
+
+=== F392 [concept | 5.9] ratio=0.783
+ROW: "Knowledge about the effects of DNA variations among individuals can lead to revolutionary new ways to diagnose, treat and someday prevent the thousands of disorders that affect human beings."
+SRC: ompleted in 2003. knowledge about the effects of dna variations among individuals can lead to revolutionary new ways to diagnose, treat and someday prevent the thousands of reprint 2026-27 biology ===== page 25 ===== mole
+
+=== F395 [concept | 5.9] ratio=0.527
+ROW: "Methodologies : The methods involved two major approaches." (10.5pt bold run-in label, **not** a standalone heading - see carry-over 10)
+SRC: d. methodologies : the methods involved two major approaches. one approach focused on identifying all the genes that are expressed as rna (referred to as expre
+
+=== F406 [number | 5.9] ratio=0.888
+ROW: "The sequence of chromosome 1 was completed only in May 2006 (this was the last of the 24 human chromosomes - 22 autosomes and X and Y - to be sequenced)."
+SRC: ome. the sequence of chromosome 1 was completed only in may 2006 (this was the last of the 24 human chromosomes - 22 autosomes and x and y - to be figure 5.15 a representative di
+
+=== F417 [number | 5.9.1] ratio=0.921
+ROW: "(ix) Scientists have identified about 1.4 million locations where single-base DNA differences (SNPs - single nucleotide polymorphism, pronounced as 'snips') occur in humans. This information promises to revolutionise the processes of finding chromosomal locations for disease-associated sequences and tracing human history."
+SRC: 8), and the y has the fewest (231). (ix) scientists have identified about 1.4 million locations where singlebase dna differences (snps - single nucleotide polymorphism, pronounced as 'snips') occur in humans. this information promises to revolutionise the processes of finding chromosomal locations for disease-associated sequences and tracing human history. 5.9.2 application
+
+=== F421 [concept | 5.9.2] ratio=0.863
+ROW: "With whole-genome sequences and new high-throughput technologies, we can approach questions systematically and on a much broader scale."
+SRC: at a time. with whole-genome sequences and new high-throughput technologies, we can approach questions systematically and on a much reprint 2026-27 ===== pag
+
+=== F426 [number | 5.10] ratio=0.224
+ROW: "Imagine trying to compare two sets of 3 x 10^6 base pairs." (the source prints the exponent as 6 here, two sentences after printing 3 x 10^9 for the same genome - reproduce as printed; see carry-over 11)
+SRC: g to compare two sets of 3 x 10 base pairs. dna fingerprinting is a very quick way to compare the dna sequences of any two individuals. dna fingerprinting involves identifying differences in some specific regions in dna sequence called
+
+=== F440 [concept | 5.10] ratio=0.854
+ROW: "If a germ cell mutation does not seriously impair individual's ability to have offspring who can transmit the mutation, it can spread to the other members of population (through sexual reproduction)."
+SRC: mutation does not seriously impair individual's ability to have offspring who can transmit the mutation, it can spread to reprint 2026-27 ===== page 28 ===== biology the other members of population (through sexual reproduction). all
+
+=== F443 [concept | 5.10] ratio=0.91
+ROW: "The probability of such variation to be observed in non-coding DNA sequence would be higher as mutations in these sequences may not have any immediate effect/impact in an individual's reproductive ability."
+SRC: e probability of such variation to be observed in noncoding dna sequence would be higher as mutations in these sequences may not have any immediate effect/impact in an individual's reproductive ability. these mutations keep on accumulating
+
+=== F465 [concept | 5.10] ratio=0.909
+ROW: "The sensitivity of the technique has been increased by use of polymerase chain reaction (PCR- you will study about it in Chapter 9)."
+SRC: c (identical) twins. the sensitivity of the technique has been increased by use of polymerase chain reaction (pcryou will study about it in chapter 9). co
+
+=== F467 [concept | 5.10] ratio=0.676
+ROW: "In addition to application in forensic science, it has much wider application, such as in determining population and genetic diversities."
+SRC: g analysis. in addition to application in forensic science, it has much wider application, such as reprint 2026-27 ===== page 29 ===== molecular basis of inher
+
+=== F471 [question | Exercises] ratio=0.901
+ROW: "3. If the sequence of one strand of DNA is written as follows: 5'-ATGCATGCATGCATGCATGCATGCATGC-3' Write down the sequence of complementary strand in 5'-to-3' direction."
+SRC: ent of adenine in the dna. 3. if the sequence of one strand of dna is written as follows: 5'-atgcatgcatgcatgcatgcatgcatgc-3' write down the sequence of complementary strand in 5'→3' direction. 4. 
+
+=== F507 [concept | 5.7] ratio=0.125
+ROW: "Translation is a process that has evolved around RNA, indicating that life began around RNA." (**SUMMARY-UNIQUE**, p30 Summary sentence 21, folded into 5.7 by `1-Z` step 8 - the body states that the protein-synthesising machinery evolved around RNA (F137), that essential life processes evolved around RNA (F141) and that RNA was the first genetic material (F140), but the conclusion "life began around RNA" is stated only in the Summary; implied does not count, Rule 3)
+SRC: s evolved around rna, indicating that life began around rna. since, transcription and translation are energetically very expensive processes, these have to be tightly regulated. regulation of transcription is the primary step for regulation of gene expression. in bacteria, more than one gene is arranged together and regulated in units called as operons. lac operon is the prototype operon in bacteria, which codes for genes responsible for metabolism of lactose. the operon is regulated by the amount of lactose in the medium where the bacteria ar
+
+=== F508 [concept | 5.8] ratio=0.194
+ROW: "Since, transcription and translation are energetically very expensive processes, these have to be tightly regulated." (**SUMMARY-UNIQUE**, p30 Summary sentence 22, folded into 5.8 by `1-Z` step 8 - the body says only that *replication* is energetically very expensive (F169), never transcription or translation, and never gives energetic cost as the reason regulation is required)
+SRC: re energetically very expensive processes, these have to be tightly regulated. regulation of transcription is the primary step for regulation of gene expression. in bacteria, more than one gene is arranged together and regulated in units called as operons. lac operon is the prototype operon in bacteria, which codes for genes responsible for metabolism of lactose. the operon is regulated by the amount of lactose in the medium where the bacte
+
+=== F509 [concept | 5.8.1] ratio=0.267
+ROW: "Lac operon is the prototype operon in bacteria, which codes for genes responsible for metabolism of lactose." (**SUMMARY-UNIQUE**, p30 Summary sentence 25, folded into 5.8.1 by `1-Z` step 8 - the word *prototype* appears nowhere in the body; F350 says only that Jacob and Monod were "the first to elucidate a transcriptionally regulated system")
+SRC: rototype operon in bacteria, which codes for genes responsible for metabolism of lactose. the operon is regulated by the amount of lactose in the medium where the bacteria are grown. therefore, this regulation can also be viewed as regulation of enzyme synthesis by its substrate. human genome project was a mega project that aimed to sequence every base in human genome. this project has yielded much n
+
+=== F510 [concept | 5.10] ratio=0.297
+ROW: "It has immense applications in the field of forensic science, genetic biodiversity and evolutionary biology." (**SUMMARY-UNIQUE**, p30 Summary sentence 33, folded into 5.10 by `1-Z` step 8 - body F467 names only forensic science and "population and genetic diversities"; *genetic biodiversity* and *evolutionary biology* are named only in the Summary)
+SRC: t has immense applications in the field of forensic science, genetic biodiversity and evolutionary biology. reprint 2026-27 ===== page 31 ===== molecular basis of inheritance exercises 1 group the following as nitrogenous bases and nucleosides: adenine, cytidine, thymine, guanosine, uracil and cytosine. 2. if a double stranded dna has 20 per cent of cytosine, calculate the per cent of adenine in the dna. 3.
+
