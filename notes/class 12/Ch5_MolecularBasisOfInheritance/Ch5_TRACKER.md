@@ -143,13 +143,58 @@ re-checks `ls /vercel/share/neetenv/bin/python` first**; sandboxes lose it.
 
 ---
 
-## 4. NEXT SESSION — `1a-H`, first-half headings
+## 4. NEXT SESSION — `1-F`, whole-chapter figures
 
-**Scope: pages 1–17 only. Headings only. Prose is ignored — it was already swept by `1a-S`, and
-re-reading it is how sweeps contaminate each other.** Append `Type: heading` rows continuing from
-`F231` (so `F232…`). Touch no existing row.
+**`1-F` is the only thing standing between this chapter and a Gate 1 judgement.** Everything in
+this section below the horizontal rule is the **historical `1a-H` scoping record**, retained for
+audit; it is **not** an instruction to any future session. `1a-H` closed long ago and the
+inventory now stands at **510 rows (`F001..F510`)**, so **no session may append headings from
+`F231`** — that ID has been occupied since `1a-S` closed.
 
-### Target: 17 heading lines on pp. 1–17 (16 in-body + the p1 chapter title)
+### Scope of `1-F` — whole chapter, figures only
+
+Figures run **whole-chapter, never per half** (§1): a half-chapter manifest cannot be checked for
+duplicate or missing `Fig #` across the mid-page-17 seam. Prose, headings and openers are **already
+swept and must not be re-read** — re-reading them is how sweeps contaminate each other.
+
+**Census enumerated from source, not memory: 16 figure numbers ⇒ 17 assets**, because `Figure 5.4`
+splits into `5.4a Nucleosome` and `5.4b EM picture — 'Beads-on-String'`.
+
+| Half | Figures | Assets |
+|---|---|---|
+| First (pp. 1–17) | 5.1, 5.2, 5.3, **5.4a, 5.4b**, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11 | 12 |
+| Second (pp. 17–31) | 5.12, 5.13, 5.14, 5.15, 5.16 | 5 |
+| **Total** | **16 numbers** | **17 assets** |
+
+The full trap list, per-asset requirements and label obligations live in §5 under **`1-F`** — read
+that entry before starting. In brief: create `assets/` (it does not exist yet), clip-extract each
+asset at 300 dpi, convert to true monochrome, **verify by actually opening each rendered file**
+(`Mono: yes` / `Verified: yes` per manifest row), and append **one Facts row per in-figure label**
+continuing from **`F511`** — including `Central dogma` (p4, per §6 correction) and `anticodon loop`
+(p20). Touch no existing row.
+
+### Acceptance criteria for `1-F`
+
+- `assets/` exists and holds **17** verified monochrome assets for **16** figure numbers.
+- Every manifest row asserts `Mono: yes` and `Verified: yes`, each backed by opening the file.
+- One Facts row per in-figure label, IDs contiguous from `F511`; re-parse reports 0 gaps, 0 dups.
+- `check_pdf.py`'s own `_extract_labels` returns the **expected figure count with no doubling and
+  no phantom `Fig #` row** — it currently returns 0, which is the correct *pre*-`1-F` state, not a pass.
+- `CHAPTER_TRACKER.md`, `CHAPTER_STATUS.md` and this file all updated in the **same** session.
+- **Gate 1 stays OPEN when `1-F` closes.** `1-Z` step 9 (freeze) then a final step-10 re-parse must
+  follow before Gate 1 may even be judged. Do not freeze inside `1-F`.
+
+---
+
+## 4a. HISTORICAL RECORD — `1a-H` scoping (session closed; do not action)
+
+> **Superseded.** The text below was written as the forward brief for `1a-H` and is kept verbatim for
+> auditability (§7: historical session records must remain auditable). `1a-H` **is done** — it
+> delivered 17 heading rows `F232..F248`, and `1b-H` later added 13 more (`F483..F495`) for the
+> machine-verified total of **30 `Type: heading` rows**. The "append from `F231`" instruction and the
+> "next session" framing are **obsolete**. Read this only as evidence of how the headings were scoped.
+
+### Target as scoped then: 17 heading lines on pp. 1–17 (16 in-body + the p1 chapter title)
 
 Reconstructed from the PDF this session at line level (not span level — see trap 2):
 
@@ -174,13 +219,13 @@ Reconstructed from the PDF this session at line level (not span level — see tr
 | 17 | `5.5.3 Types of RNA and the process of Transcription` | 15 | sub |
 
 That table lists 17 lines because the chapter title is row 1; **16 is the in-body heading count and
-17 the total including the chapter title.** Decide which convention the row set uses, state it in the
-exit report, and make the number you report match what a re-parse of the `Type: heading` rows
-returns. Do not report "16" and write 17 rows.
+17 the total including the chapter title.** *Outcome:* `1a-H` wrote **17** rows (`F232..F248`) on the
+title-inclusive convention, and that convention still holds across the chapter — of the 30 heading
+rows now on disk, 1 is the chapter title, so **in-body headings = 29**.
 
-`5.6 GENETIC CODE` (p17) is the seam banner and belongs to **`1b-H`**, not this session.
+`5.6 GENETIC CODE` (p17) is the seam banner and was left to **`1b-H`**, which duly recorded it.
 
-### Four traps found while scoping this session
+### Four traps found while scoping `1a-H` (still applicable to any heading re-audit)
 
 1. **Running headers are bold full lines.** `BIOLOGY` and `MOLECULAR BASIS OF INHERITANCE` appear at
    **9.0pt Bookman-Demi on nearly every page** as running heads. A "bold full line" heuristic
@@ -197,26 +242,30 @@ returns. Do not report "16" and write 17 rows.
    `1-F`**, and it must **not** become a heading row. The two genuine unnumbered sub-headings in the
    first half are rows 6 and 7 above, both 10.5pt full-bold, and nothing else.
 
-### Acceptance criteria for `1a-H`
+### Acceptance criteria `1a-H` was held to — all met at close
 
-- Every heading in pp. 1–17 has exactly one row; no heading absorbed into a prose row.
-- No row sourced from a 9.0pt running head, and no row sourced from a 9.5pt figure caption.
-- Every heading string is a full joined line, no `5.2 T` truncation.
-- IDs stay contiguous from `F232`; re-parse reports 0 gaps, 0 duplicates.
-- Exit report states the machine-derived `Type: heading` count and the title-inclusion convention.
-- `CHAPTER_TRACKER.md`, `CHAPTER_STATUS.md` and this file all updated in the **same** session.
-- **Gate 1 stays OPEN.** `1a-H` closing is not Gate 1 closing.
+- Every heading in pp. 1–17 has exactly one row; no heading absorbed into a prose row. ✓
+- No row sourced from a 9.0pt running head, and no row sourced from a 9.5pt figure caption. ✓
+- Every heading string is a full joined line, no `5.2 T` truncation. ✓
+- IDs contiguous from `F232`; re-parse reports 0 gaps, 0 duplicates. ✓ (still true at 510 rows)
+- Exit report stated the machine-derived `Type: heading` count and the title-inclusion convention. ✓
+- `CHAPTER_TRACKER.md`, `CHAPTER_STATUS.md` and this file updated in the **same** session. ✓
+- **Gate 1 stayed OPEN** — `1a-H` closing was not Gate 1 closing, and Gate 1 is **still open today**,
+  blocked on `1-F` (§4).
 
 ---
 
-## 5. Forward notes for later sessions
+## 5. Forward notes — only `1-F` and `1-Z` step 9 are still live
 
-**`1a-O`** — openers only, pp. 1–17. The load-bearing ones: the §5.5 opener is the only place
-*transcription* is defined, and the §5.5.2 opener is the only place *gene* is defined. If those two
-openers are skipped, the chapter ships without defining its two central terms — the exact Ch9 D9
-failure. Verify both produced a row before closing.
+**`1a-O` — ✅ done; note retained for audit, not for action.** Openers only, pp. 1–17. The
+load-bearing ones: the §5.5 opener is the only place *transcription* is defined, and the §5.5.2
+opener is the only place *gene* is defined. Had those two openers been skipped, the chapter would
+ship without defining its two central terms — the exact Ch9 D9 failure. **Both were confirmed to
+have produced a row before `1a-O` closed**; openers now total **27** machine-verified rows
+(`F249..F264` + `F496..F506`).
 
-**`1-F`** — whole chapter. Captions enumerated from source this session: **16 figure numbers but 17
+**`1-F` — ⬜ LIVE. The sole Gate 1 blocker; see §4 for the actionable brief.** Whole chapter.
+Captions enumerated from source: **16 figure numbers but 17
 assets**, because `Figure 5.4` is split into `5.4a Nucleosome` and `5.4b EM picture — 'Beads-on-String'`.
 First half: 5.1, 5.2, 5.3, **5.4a, 5.4b**, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11 (12 assets).
 Second half: 5.12, 5.13, 5.14, 5.15, 5.16 (5 assets). Two traps: the a/b pair is what makes a
@@ -226,15 +275,19 @@ line. Each asset needs 300 dpi clip extraction, mono conversion, and **verificat
 opening the rendered file** — `Mono: yes` / `Verified: yes` asserted per row, plus one Facts row per
 in-figure label (including `Central dogma`, per trap 4).
 
-**`1-Z`** — exercise-gap scan, summary sentences classified BODY-PRESENT / SUMMARY-UNIQUE, then
-freeze: retitle the inventory H1 from `# Working Inventory (NOT FROZEN)` to the frozen convention.
-**Retitling before this session is a false completion signal** — the H1 was already caught reading
-`# Frozen Inventory` once while six sweeps were outstanding, where a `grep -i frozen` over `notes/`
-would have counted Ch5 as frozen.
+**`1-Z` — ⚠️ partial: steps 7, 8 and 10 done; step 9 (freeze) still LIVE and deliberately withheld.**
+The exercise-gap scan (**17 rows, 5 gaps**) and the summary classification (33 = 29 BODY-PRESENT + 4
+SUMMARY-UNIQUE, folded as `F507..F510`) are complete. What remains is **step 9 — the freeze**: retitle
+the inventory H1 from `# Working Inventory (NOT FROZEN)` to the frozen convention, **and it may not run
+until `1-F` has closed.** Retitling early is a false completion signal — the H1 was already caught
+reading `# Frozen Inventory` once while six sweeps were outstanding, where a `grep -i frozen` over
+`notes/` would have counted Ch5 as frozen.
 
-**Gate 1** is judged only after `1b` — complete inventory, `_extract_labels` clean (right figure
-count, no doubling, no phantom `Fig #` row), every count matching a re-parse, all figures
-`Mono: yes` / `Verified: yes`, and each sweep traceable to a session that closed on it.
+**Gate 1** is **OPEN today** and may only be *judged* after `1-F` closes and `1-Z` step 9 plus a final
+step-10 re-parse have run. Completing `1b` was necessary but not sufficient. The judgement needs: a
+complete inventory, `_extract_labels` clean (right figure count, no doubling, no phantom `Fig #` row),
+every count matching a re-parse, all figures `Mono: yes` / `Verified: yes`, and each sweep traceable to
+a session that closed on it. **Six landed sweeps do not close Gate 1.**
 
 **Pass 2a/2b** — one script, `Ch5_MolecularBasisOfInheritance.py`, written linearly in Content Order
 from the frozen inventory, importing `neet_template.py` with **no style re-declared**; both halves go
@@ -250,4 +303,5 @@ The deliverable is one merged PDF — **never two half-PDFs**.
 | `1a-S` | Inventory H1 was `# Frozen Inventory`, copied from completed chapters, while line 3 said NOT FROZEN. Retitled `# Working Inventory (NOT FROZEN)`; frozen title now withheld until `1-Z` earns it. |
 | `1a-S` scoping | `Central dogma` (p4) was mis-scoped to `1a-H` as a heading. It is a 10.5pt Light diagram label → reassigned to `1-F` as an in-figure label. |
 | repo roll-up | Done tally re-derived by counting ✅ rows (`awk`) rather than incremented: 11 of 32 (Class 11: 6, Class 12: 5). Ch5's ▶️ row is excluded because Gate 1 is open. |
+| stale-instruction audit (consistency-only session, **no sweep run, no state advanced, Gate 1 still OPEN**) | Environment first: `/vercel/share/neetenv` was **absent again** (expected, §0.2) and was rebuilt — CPython 3.13.11, reportlab 5.0.1, pdfplumber OK, pymupdf 1.28.2, Pillow 12.3.0, all imports verified. Every current-state fact then **re-derived, not recalled**: **510 rows / `F001..F510` / 0 gaps / 0 dups / monotonic / 0 ticked**; census `concept` 264 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 **= 510** ✓; the **real** `_extract_labels` imported from `check_pdf.py` returns **0 labels / 0 figures / no phantom `Fig #` row** (correct pre-`1-F`); exercise-gap table machine-measured at **17 data rows / 5 GAP rows** ✓ (confirms the previous session's 16→17 correction — not reverted); H1 still `# Working Inventory (NOT FROZEN)`; no `.py`, no `.pdf`, no `assets/`; Done tally still **11/32**. **Four genuinely stale *current-state* blocks found and fixed, all of them instructions that would have misdirected the next agent:** (a) tracker **§4 was still titled "NEXT SESSION — `1a-H`"** and told the reader to append heading rows continuing from **`F231`** — an ID occupied since `1a-S`; §4 is now **"NEXT SESSION — `1-F`"** with the real figure brief, and the entire `1a-H` scoping record was moved intact to a new **§4a marked HISTORICAL / do not action** (history preserved verbatim, imperatives neutralised, acceptance criteria re-cast as met-at-close); (b) tracker **§5 listed `1a-O` as a forward note** though it closed long ago, and its `1-Z` entry described the whole session as pending — both re-labelled with state, leaving `1-F` and `1-Z` step 9 as the only live items; (c) tracker §5's **"Gate 1 is judged only after `1b`"** was misleading now that `1b` is done but Gate 1 is open — restated as "necessary but not sufficient"; (d) the inventory's **Facts-table scope note still read "after session 1a-S: prose facts of the first half only"**, which would license a future agent to think headings/openers were still missing — restated to the real 510-row whole-chapter scope, with the old note kept as an explicitly superseded quote, plus the same "necessary but not sufficient" fix to the §6-protocol Gate 1 sentence. **No inventory Facts row was touched**, no history rewritten, freeze not run, Gate 1 not closed, Pass 2 not started. |
 | tracker audit (consistency-only session, no sweep run) | Every Ch5 claim in this file, the inventory, `CHAPTER_TRACKER.md` and `CHAPTER_STATUS.md` re-derived from disk: **231 rows / F001..F231 / 0 gaps / 0 dups / 0 ticked** ✓ · `Type` census 149·28·16·15·11·9·3 = 231 ✓ · 0 heading, 0 opener, 0 figure-label rows ✓ · H1 still `# Working Inventory (NOT FROZEN)` ✓ · no `.py`, no `.pdf`, no `assets/` ✓ · source PDF `/Count 31` = 31 pp ✓ · `5.6 GENETIC CODE` banner on **p17**, confirming the mid-page seam ✓ · 10 section banners on pp. 2/6/10/10/13/17/20/21/24/27 ✓ · sub-headings on the exact pages §4 claims (5.1.1 p2, 5.1.2 p5, 5.2.1 p7, 5.2.2 p8, 5.4.1 p10, 5.4.2 p12, 5.5.1 p13, 5.5.2 p14, 5.5.3 p15), unnumbered subs p6/p7, `Central dogma` p4 ✓ · captions `Figure 5.1`–`5.16` **with 5.4a/5.4b present ⇒ 16 numbers / 17 assets** ✓ · repo Done tally re-counted = **11 ✅ rows** ✓. **Three inconsistencies found and fixed:** (a) §4 was headed "Target: 16 heading rows" above a 17-row table → retitled to state 17 lines = 16 in-body + chapter title; (b) inventory said "1 of 8" where this ledger says 9 → both now state their basis (§2 note); (c) `scratch/ch5mbi/full_text.txt` was committed but recorded nowhere → now listed in §3 as a non-deliverable working aid. **Caveat:** `/vercel/share/neetenv` is absent again (expected), so `_extract_labels` was not run under the venv — its parser logic was replicated with system `python3` and returns **0 label rows**, matching the claim; re-run it properly next session. |
