@@ -242,6 +242,35 @@ the output of re-parsing the finished inventory file.
 | Exercise-gap terms | 4, each with a planned home |
 | Manifest `Mono`/`Verified` | 9/9 `yes yes` |
 
+### Gate 1 re-validation (independent, later session)
+
+Gate 1 was **re-verified from disk** in a later session rather than trusted from
+this file, per the §0.2 rule that a handoff's account of *why* is a hypothesis.
+`/vercel/share/neetenv` was absent (the expected state) and was rebuilt to the
+same known-good versions: reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0,
+numpy 2.5.2 on CPython 3.13.
+
+All 14 machine criteria re-ran **PASS** — 207 rows, `F001`..`F207` contiguous,
+0 duplicates, 198 facts + 9 matrix rows, 15 heading / 14 opener / 8 caption rows,
+`Type` vocabulary 10 values all lowercase, 17 labels across 5 parsed figure rows,
+no doubling, no phantom `Fig #` row, all rows unticked. The 9 numbered in-body
+banners were re-derived from the source PDF independently and match the section
+map above; 9/9 assets re-confirmed `mode=L` on disk.
+
+**One real defect was found and fixed — a count restatement, not a row.** The
+inventory's *Count derivation* section and its *Gate 1 checklist* both claimed
+`_extract_labels` confirmed "**9** figure rows / 17 labels". The parser returns
+**5** figure rows, because the four `No in-figure labels` rows (`F203`-`F206`) are
+invisible to it by design. The inventory's own matrix note (`across 5 labelled
+assets`) and this tracker both already stated it correctly, so the file
+contradicted itself — precisely the "header disagrees with its own table" failure
+step 10 exists to prevent. Both restatements now read "17 labels across 5 parsed
+figure rows (9 matrix rows; 4 unlabelled contribute 0 by design)", the post-edit
+stale-claim sweep returned zero live survivors, and the full re-parse was re-run
+against the finished file. **No frozen row was touched and no count of rows,
+headings, openers, labels or assets changed** — the underlying inventory was
+correct throughout; only its description of the parser's output was wrong.
+
 Re-derive with:
 
     /vercel/share/neetenv/bin/python - <<'EOF'
@@ -308,7 +337,7 @@ Binding rules for that session:
 6. The 4 exercise-gap NOTE boxes must be **visibly marked as beyond the body text**,
    so exercise-support content is never mistaken for an NCERT sentence.
 
-Then Gate 2 (`check_pdf.py` exits 0) → Pass 3 (bidirectional content cross-check +
+Then Gate 2 (`check_pdf.py` exits 0) �� Pass 3 (bidirectional content cross-check +
 visual render check) → Gate 3 → deliver.
 
 ---

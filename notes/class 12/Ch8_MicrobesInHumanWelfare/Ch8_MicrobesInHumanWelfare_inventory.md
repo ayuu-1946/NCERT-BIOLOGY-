@@ -448,8 +448,10 @@ Every number in the header table was produced by re-parsing this finished file, 
 by hand tally, and the same parse asserts `F001..F207` contiguous with no gaps or
 duplicates and no `Type` value outside the normalized vocabulary. The label count
 was additionally produced by running `check_pdf.py`'s own `_extract_labels` against
-this file, confirming 9 figure rows, 17 labels, no doubling, and no phantom
-`Fig #` row from a markdown separator.
+this file, confirming 17 labels across 5 parsed figure rows, no doubling, and no
+phantom `Fig #` row from a markdown separator. The parser sees **5** figure rows,
+not 9, because the four `No in-figure labels` rows (`F203`-`F206`) are invisible to
+it by design — 9 matrix rows, 5 parsed figure rows, 17 labels.
 
 Counts are restated in exactly three places in this file — the header table, the
 two census sections, and the Gate 1 checklist below. Any correction must be applied
@@ -463,7 +465,7 @@ to all live restatements in one edit and the parse re-run.
 |---|---|
 | Every fact has a Facts row | yes — 198 rows, `F001`..`F198` |
 | Every in-figure label has a matrix row, harvested by opening each rendered asset | yes — 9 rows `F199`..`F207`, 17 labels; harvest was done in 1-F by opening assets, and re-confirmed in 1-Z for `fig_8_2a` and `fig_8_8` |
-| Inventory validated by running `check_pdf.py`'s `_extract_labels` | yes — 9 figures / 17 labels / no doubling / no phantom rows |
+| Inventory validated by running `check_pdf.py`'s `_extract_labels` | yes — 17 labels across 5 parsed figure rows (9 matrix rows; 4 unlabelled rows contribute 0 by design) / no doubling / no phantom rows |
 | Every header count matches a re-parse; IDs contiguous; `Type` normalized | yes |
 | Every heading has a row, including unnumbered sub-headings | yes — 15 rows (9 numbered + 6 unnumbered) |
 | Every section's opening sentence has a row | yes — 14 rows |
