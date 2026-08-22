@@ -761,7 +761,7 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 
 | Asset | Source artwork page | Caption | Mono | Verified | State |
 |---|---:|---|---|---|---|
-| `assets/fig_5_1.png` | 2 | Figure 5.1 — A Polynucleotide chain | yes | yes | done — final file opened after conversion; correct artwork, complete labels/leader lines, print-legible, mode `L` |
+| `assets/fig_5_1.png` | 2 | Figure 5.1 — A Polynucleotide chain | yes | yes | **RE-EXTRACTED** (Gate 3b figure-clipping fix) — the earlier rect `(108,575,528,676)` clipped ~1.1pt off the `3' hydroxyl` label and ~1.7pt off the lowest base boxes; re-pinned to `(108,573,532,682)` from the drawings extent (x 117.07–529.13, y 580.43–677.68). Final file opened again after re-conversion: correct artwork, all six labels whole, leader lines intact, print-legible, mode `L`; clean on all three parts of the crop gate |
 | `assets/fig_5_2.png` | 4 | Figure 5.2 — Double stranded polynucleotide chain | yes | yes | done — page-break caption resolved to artwork on p4; final file opened after conversion |
 | `assets/fig_5_3.png` | 4 | Figure 5.3 — DNA double helix | yes | yes | done — final file opened after conversion. **Caption corrected:** this row previously read "Central dogma", which did not match the asset (the artwork is the helix + A-T / G-C base-pair legend). The central-dogma schematic is a separate, unnumbered plate — see the row below. |
 | `assets/fig_5_central_dogma.png` | 4 | *(unnumbered in NCERT)* — Central dogma schematic at the foot of p4 | yes | yes | done — bonus asset, no NCERT figure number; carries the `replication` / `transcription` / `translation` / `Central dogma` labels |
