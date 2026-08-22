@@ -1,11 +1,15 @@
 # Ch8 Microbes in Human Welfare (Class 12) — Chapter Tracker
 
-**Status: ▶️ IN PROGRESS — Pass 1 is COMPLETE and **GATE 1 IS GREEN** (frozen inventory, 207 rows `F001`..`F207`, all counts machine-derived). Pass 2 has not started, so this chapter still does not enter the Done tally.**
+**Status: ▶️ IN PROGRESS — Passes 1 and 2 are COMPLETE. **GATE 1 IS GREEN** (frozen inventory, 207 rows `F001`..`F207`) and **GATE 2 IS GREEN** (`check_pdf.py` exit 0, 0 fail / 1 inspected WARN, 198/198 Facts rows ticked, 12-page PDF). Pass 3 has not started, so this chapter still does not enter the Done tally.**
 
-**Gate 1 green does not mean the chapter is done.** There is still no
-`Ch8_MicrobesInHumanWelfare.py` and no generated PDF; every row in the inventory
-is **unticked**, which is the correct state before Pass 2. The next gate is
-Gate 2 (`check_pdf.py` exits 0), and it cannot be judged until the script renders.
+**Gate 2 green does not mean the chapter is done.** The script and PDF now exist
+and every mechanical check passes, but **no human has read the PDF against the
+source yet**. Gate 2 is a *mechanical* gate: it proves the rows were written and
+the labels appear somewhere in the text, not that they are correct, in the right
+place, or free of drift. Every chapter in this repo that ran Pass 3 found real
+defects **after** a green Gate 2 — Ch9 found 3, Ch10 found 3, Ch12 found 4, Ch13
+found 7, all invisible to `check_pdf.py`. The next gate is Gate 3, and it
+requires a bidirectional full read.
 
 This is a per-chapter tracker; it is the detail layer under the repo-wide
 `CHAPTER_TRACKER.md` and `CHAPTER_STATUS.md` roll-ups. Where those disagree with
@@ -95,13 +99,24 @@ inventory file, not tallied by hand — see "Gate 1 validation" below.
 ## 3. What is actually on disk
 
     notes/class 12/Ch8_MicrobesInHumanWelfare/
-      Ch8_MicrobesInHumanWelfare_inventory.md   FROZEN — 207 rows F001..F207, all unticked
+      Ch8_MicrobesInHumanWelfare_inventory.md   FROZEN — 207 rows F001..F207, 198/198 Facts rows TICKED
+      Ch8_MicrobesInHumanWelfare.py             51,656 B — the Pass 2 script
+      Ch8_MicrobesInHumanWelfare.pdf            2,020,000 B — 12 pp A4, 9 embedded mono images
       Ch8_TRACKER.md                            this file
       extract_figures.py                        hand-pinned rects + 4-part crop gate
       assets/                                   9 verified mono PNGs
 
-No `Ch8_MicrobesInHumanWelfare.py` and no generated `.pdf`. **Correct at this
-point:** Pass 2 has not started.
+The script and PDF now exist, which is what made Gate 2 judgeable. Rebuild with:
+
+    cd /vercel/share/v0-project && /vercel/share/neetenv/bin/python \
+      "notes/class 12/Ch8_MicrobesInHumanWelfare/Ch8_MicrobesInHumanWelfare.py"
+
+**`check_pdf.py` takes the chapter folder, not two file paths** — passing the PDF
+and the inventory as separate positional arguments makes argparse reject the
+second one, and the shell then reports `EXIT=0` from `echo`, which reads exactly
+like a pass. This wasted a cycle in the Gate 2 session. The correct invocation is:
+
+    /vercel/share/neetenv/bin/python check_pdf.py "notes/class 12/Ch8_MicrobesInHumanWelfare"
 
 A `__pycache__/extract_figures.cpython-313.pyc` was created by the audit
 importing the extraction module and was **deleted** before commit — bytecode is
@@ -312,14 +327,64 @@ edit adding a column would have silently doubled every label.
 
 ---
 
-## 6. NEXT SESSION — Pass 2, write the script
+## 6. Gate 2 — how it was judged (CLOSED, green)
 
-**Gate 1 is green, so Pass 2 may begin.** Deliverable:
-`Ch8_MicrobesInHumanWelfare.py`, importing `neet_template.py`, written **linearly
-from the frozen inventory** in Content Order, with each row ticked in the
-inventory file *as it is written* — not reconciled afterwards.
+Pass 2 ran as specified: `Ch8_MicrobesInHumanWelfare.py` was written **linearly
+from the frozen inventory** in Content Order, importing `neet_template.py`, with
+rows ticked **as they were written** rather than reconciled afterwards. All six
+binding rules carried over from the Pass 1 handoff were honoured — the
+interpreter was rebuilt first, Pass 1 was never re-opened, no frozen row was
+edited, all 17 artwork labels were transcribed from `F199`..`F207`, the banned
+glyphs were written as plain ASCII, all 9 assets were embedded, and the 4
+exercise-gap NOTE boxes are visibly marked as beyond the body text.
 
-Binding rules for that session:
+### Full check results
+
+| # | Check | Result |
+|---|---|---|
+| 1 | Footer/header band | **PASS** — no text in the top/bottom margin bands |
+| 2 | Legibility floor | **PASS** — smallest rendered text **6.0pt** (fail <5.0, warn <6.0) |
+| 3 | Grayscale-only images | **PASS** — all **9** embedded images monochrome |
+| 4 | No person photograph | **WARN** — 9 heuristic hits, all inspected; see below |
+| 5 | Banned glyphs | **PASS** — no Unicode arrows, sub/superscripts, Greek or emoji |
+| 6 | Figure-label coverage | **PASS** — **17/17** labels fully in text, 0 partial, 0 missing |
+| 7 | Frozen inventory ticked | **PASS** — all **198** Facts rows ticked |
+| 8 | Page geometry | **PASS** — all **12** pages A4 portrait 595x842pt |
+| 9 | Orphaned headings | **PASS** — **37** banner headings all followed by content |
+| 10 | Badge/banner collision | **PASS** — **88** filled plates all clear of neighbours |
+
+**VERDICT: WARN — 0 fail, 1 warn, exit 0. Gate 2 is green.**
+
+### The check-4 WARN is accepted, with a decision recorded
+
+Check 4 is titled "scientist profile is text-only" and greps the manifest for
+portrait/photo wording. It fired **9 times**: on `F050` (a crossref whose text
+contains the word "photograph"), on `F203`–`F206` (the four
+`No in-figure labels — unlabelled photograph …` rows), and on the four
+`raster photograph` rows in the figure manifest. **Every one of these is the
+check matching the literal word "photograph", not detecting a face.**
+
+All four plates were opened and looked at:
+
+| Asset | What it actually shows | People? |
+|---|---|---|
+| `fig_8_4` | fermentor vessels | **none** |
+| `fig_8_5` | fermentation plant, wide industrial shot | **two incidental workers** — one on the walkway, one crouched at the base |
+| `fig_8_6` | aeration tank | **none** |
+| `fig_8_7` | aerial view of a sewage plant | **none** |
+
+`fig_8_5` was escalated rather than decided silently, because the hard rule says
+"no photograph of a person" while the check's own title scopes it to a *scientist
+profile*. **The user's explicit decision is to keep it embedded**: it is NCERT
+Figure 8.5 itself, the workers are incidental scale-figures in an industrial
+photograph rather than a portrait, and dropping it would break the 9-asset
+denominator that every count in this tracker rests on.
+
+**Do not "fix" this WARN.** Removing `fig_8_5`, or rewording `F050`/`F203`–`F206`
+to dodge the grep, would silently falsify the figure census. The WARN is expected
+on every future run of this chapter.
+
+### Binding rules that were honoured, kept for reference
 
 1. **Rebuild `/vercel/share/neetenv` first** (§0.2) — it is reliably absent, and a
    missing interpreter is this workflow's most-misdiagnosed failure.
@@ -337,12 +402,55 @@ Binding rules for that session:
 6. The 4 exercise-gap NOTE boxes must be **visibly marked as beyond the body text**,
    so exercise-support content is never mistaken for an NCERT sentence.
 
-Then Gate 2 (`check_pdf.py` exits 0) �� Pass 3 (bidirectional content cross-check +
-visual render check) → Gate 3 → deliver.
+All six were satisfied. Gate 2 is closed.
 
 ---
 
-## 6. Reusable procedure
+## 7. NEXT SESSION — Pass 3, the bidirectional read
+
+**Gate 2 is green, so Pass 3 may begin.** It has two halves and **3(b) is the
+one that finds defects**:
+
+**3(a) visual render check.** Open all **12 PDF pages** and all **9 assets** and
+look at them. Check for clipped badges, orphaned captions, plates colliding with
+banners, and figures rendered at unreadable scale. `check_pdf.py` checks 9 and 10
+catch only the mechanical subset of this.
+
+**3(b) bidirectional content cross-check.** Two directions, both required:
+
+- **Direction 1** — every one of the 207 inventory rows is present in the PDF and
+  says what the row says. A ticked box only proves someone believed they wrote it.
+- **Direction 2** — every sentence of the **source PDF, pp. 3–11, read start to
+  finish**, is accounted for by some row. This is the direction that finds
+  **UNINVENTORIED** content, and it is where Ch12 and Ch13 found most of their
+  defects.
+
+**Direction 2 may not be cleared with grep.** Ch12's first two Gate 3 passes were
+**withdrawn as premature** for exactly that reason and the third was run under an
+explicit grep prohibition. Read the pages; record a per-section reading claim.
+
+Binding rules for that session:
+
+1. **Rebuild `/vercel/share/neetenv` first** (§0.2). It is reliably absent.
+2. **Re-run `check_pdf.py "notes/class 12/Ch8_MicrobesInHumanWelfare"`** — folder
+   argument, single positional. Confirm it is still 0 fail / 1 WARN before starting,
+   and again after any fix.
+3. **The check-4 WARN stays.** It is inspected and accepted (see §6). Do not
+   remove `fig_8_5` and do not reword rows to dodge the grep.
+4. **A defect found in Pass 3 is fixed by adding an `a`-suffixed row** (`F123a`
+   style, as Ch9/Ch13 did) — never by renumbering the frozen block. Fix every
+   restatement of every affected count in the same edit, then re-run the parse.
+5. **Rebuild the PDF after any script edit** and re-run the checker. Ch12 verified
+   reproducibility by rebuilding three times and comparing the text SHA-256; do the
+   same here if any fix lands.
+6. **Atomic closure (§7 rule 8):** whatever Pass 3 concludes must be written into
+   this file, `CHAPTER_TRACKER.md` **and** `CHAPTER_STATUS.md` in the same session.
+
+Then Gate 3 → deliver. The chapter enters the Done tally **only** after 3(b).
+
+---
+
+## 8. Reusable procedure
 
 `skills/ncert-figure-extraction/SKILL.md`. Two findings from this chapter are
 worth folding back into it if it is ever revised:
