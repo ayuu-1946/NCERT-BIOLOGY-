@@ -283,6 +283,12 @@ story.append(Paragraph(
     "structure</b>.",
     STYLES["Bullet1"]))
 story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_3.png",
+    "Figure 5.3 DNA double helix. The two chains are coiled in a right-handed fashion; the "
+    "<b>Base pairs</b> lie stacked inside the helix and the <b>Sugar phosphate "
+    "backbone</b> runs outside. The pairing legend shows <b>Adenine</b> with "
+    "<b>Thymine</b> and <b>Guanine</b> with <b>Cytosine</b>."))
 story.append(note(
     "<b>Compare the ring structures, then read the geometry off them.</b> NCERT asks: "
     "compare the structure of purines and pyrimidines, and find out why the distance "
@@ -351,10 +357,10 @@ story.append(process_flow([
 ]))
 story.append(Spacer(1, 3))
 story.append(figure(
-    "fig_5_3.png",
-    "Figure 5.3 Nucleosome. DNA is wrapped around the histone octamer; the "
-    "H1 histone and the linker DNA are shown, with about 200 bp of DNA helix per "
-    "nucleosome."))
+    "fig_5_4a.png",
+    "Figure 5.4a Nucleosome. The <b>DNA</b> is wrapped around the <b>Histone octamer</b> -- "
+    "the <b>Core of histone molecules</b> -- with the <b>H1 histone</b> sitting where the "
+    "DNA enters and leaves; a typical nucleosome carries about 200 bp of DNA helix."))
 story.append(Paragraph(
     "The packaging of chromatin at higher level requires additional set of proteins that "
     "collectively are referred to as <b>Non-histone Chromosomal (NHC) proteins</b>. In a "
@@ -365,14 +371,10 @@ story.append(Paragraph(
     STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(figure(
-    "fig_5_4a.png",
-    "Figure 5.4 (a) Chromatin. The nucleosomes are seen as beads on a string; the "
-    "'beads-on-string' organisation of chromatin is shown at the electron-microscope "
-    "level."))
-story.append(figure(
     "fig_5_4b.png",
-    "Figure 5.4 (b) EM picture of chromatin, in which the nucleosomes appear as beads "
-    "joined by the string of linker DNA."))
+    "Figure 5.4b EM picture -- 'Beads-on-String'. In the electron micrograph the "
+    "nucleosomes of chromatin appear as dark beads threaded on the lighter string of the "
+    "intervening DNA."))
 story.append(Spacer(1, 3))
 story.append(note(
     "<b>Counting the nucleosomes in a mammalian cell.</b> NCERT asks how many such beads "
@@ -437,12 +439,6 @@ story.append(data_table([
      "virulent S."],
 ], col_widths=[2.9, 1.5, 4.6]))
 story.append(Spacer(1, 4))
-story.append(figure(
-    "fig_5_5.png",
-    "Figure 5.5 Griffith's experiment. Live S strain (smooth, virulent) kills the mice; "
-    "live R strain (rough, non-virulent) does not; heat-killed S strain does not; but "
-    "heat-killed S strain mixed with live R strain kills the mice, showing "
-    "transformation of R into S."))
 story.append(Paragraph(
     "Griffith concluded that the <b>R strain bacteria had somehow been transformed by the "
     "heat-killed S strain bacteria</b>. Some <b>'transforming principle'</b>, transferred "
@@ -526,11 +522,15 @@ story.append(process_flow([
 ]))
 story.append(Spacer(1, 3))
 story.append(figure(
-    "fig_5_6.png",
-    "Figure 5.6 The Hershey-Chase experiment. Phage DNA labelled with radioactive "
-    "phosphorus (32P) enters the bacterial cell, so the cells become radioactive, while "
-    "phage protein coat labelled with radioactive sulfur (35S) stays outside and is "
-    "removed by blending and centrifugation."))
+    "fig_5_5.png",
+    "Figure 5.5 The Hershey-Chase experiment. The two panels follow one "
+    "<b>Bacteriophage</b> each through <b>1. Infection</b>, <b>2. Blending</b> and "
+    "<b>3. Centrifugation</b>. With the <b>Radioactive (35S) labelled protein "
+    "capsule</b>, <b>No Radioactive (35S)</b> is <b>detected in cells</b> and the "
+    "<b>Radioactive (35S)</b> is <b>detected in supernatant</b>; with the "
+    "<b>Radioactive (32P) labelled DNA</b>, <b>Radioactive (32P)</b> is "
+    "<b>detected in cells</b> and <b>No Radioactivity</b> is <b>detected in "
+    "supernatant</b>."))
 story.append(Paragraph(
     "<b>DNA is therefore the genetic material that is passed from virus to bacteria.</b>",
     STYLES["Body"]))
@@ -656,10 +656,12 @@ story.append(Paragraph(
     STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(figure(
-    "fig_5_7.png",
-    "Figure 5.7 (a) Watson-Crick model of semiconservative DNA replication: the parental "
-    "double helix unwinds and each parental strand acts as a template for a new strand, "
-    "so each daughter DNA has one parental and one newly synthesised strand."))
+    "fig_5_6.png",
+    "Figure 5.6 Watson-Crick model for semiconservative DNA replication. The parental "
+    "double helix unzips from the middle -- the <b>5'</b> and <b>3'</b> ends of the two "
+    "separating chains are marked -- and each parental strand templates a new chain by "
+    "base pairing (GC, AT, TA, CG rungs), so each daughter helix ends up with one "
+    "parental and one newly synthesised strand."))
 story.append(Paragraph(
     "The scheme suggested that the two strands would separate and act as a template for "
     "the synthesis of new complementary strands. After the completion of replication, "
@@ -719,10 +721,13 @@ story.append(data_table([
 ], col_widths=[2.2, 2.6, 4.2]))
 story.append(Spacer(1, 4))
 story.append(figure(
-    "fig_5_8.png",
-    "Figure 5.8 Meselson and Stahl's experiment: E. coli grown in 15N medium then "
-    "transferred to 14N medium, with DNA sampled after 20 minutes and 40 minutes and "
-    "banded on CsCl density gradients as heavy, hybrid (intermediate) and light DNA."))
+    "fig_5_7.png",
+    "Figure 5.7 Meselson and Stahl's Experiment. Starting from <b>15N-DNA</b>, "
+    "<b>20 min</b> in 14N medium gives <b>Generation I</b> (one 15N-DNA strand with one "
+    "14N-DNA strand) and <b>40 min</b> gives <b>Generation II</b>. Under "
+    "<b>Gravitational force</b> the tubes below show the bands -- 15N15N <b>Heavy</b>, "
+    "14N15N <b>Hybrid</b> and 14N14N <b>Light</b> -- the caption noting the "
+    "<b>Separation of DNA by Centrifugation</b>."))
 story.append(Spacer(1, 2))
 story.append(note(
     "<b>Extending the count to 80 minutes.</b> NCERT asks what the proportions of light "
@@ -800,10 +805,11 @@ story.append(Paragraph(
     STYLES["Bullet1"]))
 story.append(Spacer(1, 4))
 story.append(figure(
-    "fig_5_9.png",
-    "Figure 5.9 Replicating fork. At the fork the parental strands separate; synthesis "
-    "on the 3' to 5' template strand is continuous, while on the 5' to 3' template strand "
-    "it is discontinuous, and DNA polymerase moves 5' to 3' on each new strand."))
+    "fig_5_8.png",
+    "Figure 5.8 Replicating fork. The <b>Template DNA (parental strands)</b> separates at "
+    "the fork; on the 3' to 5' template the <b>Newly synthesised strands</b> grow by "
+    "<b>Continuous synthesis</b>, while on the 5' to 3' template the growth is by "
+    "<b>Discontinuous synthesis</b> -- every arrow still running 5' to 3'."))
 story.append(Paragraph(
     "In eukaryotes, the replication of DNA takes place at <b>S-phase of the cell-cycle</b>. "
     "The replication of DNA and cell division cycle should be highly coordinated. A "
@@ -890,11 +896,12 @@ story.append(data_table([
 ], col_widths=[2.0, 7.0]))
 story.append(Spacer(1, 4))
 story.append(figure(
-    "fig_5_10.png",
-    "Figure 5.10 Schematic structure of a transcription unit, showing the promoter "
-    "upstream at the 5' end, the structural gene, and the terminator downstream at the "
-    "3' end, with the template strand (3' to 5') and the coding strand (5' to 3') "
-    "marked and the direction of transcription indicated."))
+    "fig_5_9.png",
+    "Figure 5.9 Schematic structure of a transcription unit. The <b>Promoter</b> lies "
+    "upstream with the <b>Transcription start site</b> arrow on it, then the "
+    "<b>Structural gene</b>, and the <b>Terminator</b> downstream; the upper strand runs "
+    "3' to 5' and is the <b>Template strand</b>, the lower runs 5' to 3' and is the "
+    "<b>Coding strand</b>."))
 story.append(Paragraph(
     "There are additional regulatory sequences further upstream or downstream to the "
     "promoter, and an <b>enhancer</b> is one such example.",
@@ -1015,6 +1022,15 @@ story.append(process_flow([
     "<b>Termination.</b> On reaching the terminator, and with the "
     "<b>termination factor (rho)</b>, the nascent RNA and the polymerase both fall off.",
 ]))
+story.append(Spacer(1, 4))
+story.append(figure(
+    "fig_5_10.png",
+    "Figure 5.10 Process of transcription in bacteria. <b>Initiation</b>: the <b>RNA "
+    "polymerase</b> with the <b>Sigma factor</b> binds the <b>Promoter</b> on the "
+    "<b>DNA helix</b>. <b>Elongation</b>: the helix is opened and <b>RNA</b> is "
+    "polymerised as the enzyme moves towards the <b>Terminator</b>, sigma having left. "
+    "<b>Termination</b>: with the <b>Rho factor</b>, both the <b>RNA</b> and the "
+    "<b>RNA Polymerase</b> fall off."))
 story.append(Spacer(1, 3))
 story.append(memory_aid(
     "Bacterial transcription needs <b>one polymerase plus two factors</b>: "
