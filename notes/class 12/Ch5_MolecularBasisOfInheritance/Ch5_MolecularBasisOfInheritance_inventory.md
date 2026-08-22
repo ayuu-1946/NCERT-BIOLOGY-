@@ -2,7 +2,7 @@
 
 > The `# Frozen Inventory` title used by completed chapters is deliberately **withheld** until `1-Z` actually freezes this file. A naive `grep -i frozen` on the old title would have reported this chapter as frozen while six sweeps were still outstanding.
 
-Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — all six text sweeps (1a-S/H/O, 1b-S/H/O) complete; `1-F` and `1-Z` outstanding** | Rows so far: **506** (`F001`..`F506`)
+Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **NOT FROZEN — all six text sweeps (1a-S/H/O, 1b-S/H/O) complete, and `1-Z` steps 7, 8 and 10 complete; `1-F` (figures) outstanding, so step 9 (freeze) is deliberately NOT performed and GATE 1 REMAINS OPEN** | Rows so far: **510** (`F001`..`F510`)
 
 **Big-chapter protocol (§6, 5 passes).** 31 source pages, 10 numbered sections plus summary and exercises, so this chapter runs `1a → 1b → 2a → 2b → 3`. The source seam is:
 
@@ -23,8 +23,10 @@ Tick legend: `x` = written into the script and verified present in the generated
 | **1b-S** — source read & prose inventory, second half | §5.6–§5.10 + Exercises | **done** | **218** (`F265`..`F482`) — §5.6 onward from the mid-p17 seam, incl. the 14 Exercises questions |
 | **1b-H** — heading sweep, second half | §5.6–§5.10 + Summary + Exercises | **done** | **13** (`F483`..`F495`) — 10 numbered + `Goals of HGP` + `SUMMARY` + `EXERCISES` |
 | **1b-O** — opener sweep, second half | §5.6–§5.10 | **done** | **11** (`F496`..`F506`) — one per heading-bearing section; `SUMMARY`/`EXERCISES` deliberately excluded (see note) |
-| **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | not started | — |
-| **1-Z** — gaps, summary & freeze, whole chapter | steps 7–10 | not started | — |
+| **1-F** — figures, whole chapter (single session) | all figures 5.1–5.16 | **not started** | — |
+| **1-Z** — gaps, summary & freeze, whole chapter | steps 7, 8, 10 done · **step 9 (freeze) deliberately withheld** | **partial — done except the freeze** | **4** (`F507`..`F510`) — the 4 SUMMARY-UNIQUE folds; plus the 33-row Summary classification and the 16-row exercise-gap scan, neither of which is a Facts row |
+
+**Why `1-Z` is partial and Gate 1 is still OPEN.** Steps 7 (exercise-gap scan), 8 (summary classification + folding) and 10 (machine re-parse of every count) ran this session and are complete. **Step 9 — the freeze — did not run and must not**, because `1-F` has not happened: the Facts table still has 0 figure-label rows and the figure manifest is still empty, so freezing now would retitle the H1 to the frozen convention while a whole mandatory sweep is outstanding. That is precisely the false-completion signal §6 warns about, and it was already caught once in this chapter's history (see the corrections log in `Ch5_TRACKER.md`). Order from here: run `1-F`, then re-run `1-Z` step 9 + step 10 only, then judge Gate 1.
 
 **Why `1b-H` wrote 13 rows but `1b-O` wrote 11.** Three of the 13 headings do not take an opener row: `EXERCISES` runs straight into question 1 with no prose, and `SUMMARY`'s sentences are owned by **`1-Z` step 8** (BODY-PRESENT / SUMMARY-UNIQUE classification) — giving the Summary an opener row here would put the same sentence under two owners, which is how a sentence gets written twice into the script. `Goals of HGP` *does* take one (`F503`) because it has a genuine stem sentence. So 13 headings − `SUMMARY` − `EXERCISES` = 11 openers.
 
@@ -36,19 +38,19 @@ Environment re-established this session per §0.2–§0.3: `/vercel/share/neeten
 
 | Count | Value |
 |---|---|
-| Facts rows so far | **506** (`F001`..`F506`) — **whole chapter, all text swept** |
-| ID range / contiguity | F001..F506 — 0 gaps, 0 duplicates, IDs monotonically increasing (re-parsed from the table below) |
+| Facts rows so far | **510** (`F001`..`F510`) — **whole chapter, all text swept, 4 SUMMARY-UNIQUE folds added by `1-Z`** |
+| ID range / contiguity | F001..F510 — 0 gaps, 0 duplicates, IDs monotonically increasing (re-parsed from the table below) |
 | `Type: heading` rows | **30** = `1a-H` 17 (`F232`..`F248`) + `1b-H` 13 (`F483`..`F495`). Chapter title is 1 of the 30, so **in-body headings = 29**. |
 | `Type: opener` rows | **27** = `1a-O` 16 (`F249`..`F264`) + `1b-O` 11 (`F496`..`F506`) |
 | Figure-label rows | **0** — owned by session 1-F |
 | Label strings parsed by `check_pdf.py`'s own `_extract_labels` | **0 labels, 0 figures, no phantom `Fig #` row** — re-run against this file this session under the rebuilt venv; the empty-matrix state is the expected pre-1-F result |
-| `Type` values used (normalized, lower-case) | `concept` 260 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 = 506; no other value present |
+| `Type` values used (normalized, lower-case) | `concept` 264 · `definition` 56 · `number` 37 · `list` 33 · `question` 31 · `heading` 30 · `opener` 27 · `name` 18 · `example` 13 · `table` 1 = 510; no other value present |
 | Rows ticked | **0** — Pass 2 not started |
-| Summary sentences classified | not started (1-Z) |
-| Exercise-gap terms | not started (1-Z) |
-| Figures in manifest | not started (1-F) |
+| Summary sentences classified | **33 = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE** (machine sentence-split of p30; see the Summary classification section). All 4 SUMMARY-UNIQUE facts folded into body sections as `F507`..`F510`. |
+| Exercise-gap terms | **16 scanned items across all 14 exercise questions (`F469`..`F482`) plus the two in-body exercises `F288`/`F289` — 5 genuine gaps**, each with a named inline home; `F288`/`F289` are blocked on `Table 5.1`, escalated to carry-over 17 |
+| Figures in manifest | **0 — not started (1-F)** |
 
-Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 506 rows, `F001..F506`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `260 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 506`, matching the row total.
+Every number above was produced by re-parsing this file's Facts table with a script (§6 step 10), not by hand tally: 510 rows, `F001..F510`, **0 gaps, 0 duplicates, monotonic**, and the `Type` column asserted to contain only the ten values listed. The census is derivable from its own list — `264 + 56 + 37 + 33 + 31 + 30 + 27 + 18 + 13 + 1 = 510`, matching the row total. **The four rows `1-Z` added are all `concept`**, which is the only census cell that moved (260 -> 264); every other cell is byte-identical to the pre-`1-Z` parse.
 
 `table` (1 row, `F280`) is a **new `Type` value introduced by `1b-S`**, for the `Table 5.1` codon checker-board caption. It is neither prose nor a figure; see carry-over 9, which records that the table's 64 cells are not text-extractable and that **no session currently owns rebuilding them**.
 
@@ -71,16 +73,19 @@ Every number above was produced by re-parsing this file's Facts table with a scr
 > | Gate 1 requirement (§6) | State |
 > |---|---|
 > | Environment (§0.2–0.3) re-established | done — venv rebuilt, all four imports verified under that interpreter |
-> | Every fact has a Facts row (three source reads) | **partial** — first half done (231 rows); second half is 1b-S |
-> | Every heading has a row incl. unnumbered sub-headings | **partial** — first half done by `1a-H`: 17 rows `F232..F248`, including both unnumbered subs (`F237`, `F238`). Second half is `1b-H`. |
-> | Every section's opening sentence has a row | **partial** — first half done by `1a-O`; second half is `1b-O` |
-> | Every in-figure label has a matrix row, harvested by opening each rendered asset | **not started** — 1-F |
-> | Every figure `Mono: yes` and `Verified: yes` | **not started** — 1-F |
-> | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | **not started** — meaningful only after 1-F |
-> | Header counts match a re-parse of the table; IDs contiguous | done for the rows that exist — re-parsed this session |
-> | Exercise-gap terms and SUMMARY-UNIQUE folding | **not started** — 1-Z |
-> | Pass 1's sessions have each run and reported a machine-derived count | **1 of 8 sweep sessions** (`1a-S`) — this file's Session log counts the 8 sweeps only; `Ch5_TRACKER.md` §2 counts **9** because it adds the closing step-10 machine re-parse as its own row. Same state, two denominators: 8 sweeps + 1 verification = 9 ledger sessions. |
+> | Every fact has a Facts row (three source reads) | **done for text** — `1a-S` 231 + `1b-S` 218 + `1-Z` 4 folds; only figure-label rows are outstanding (1-F) |
+> | Every heading has a row incl. unnumbered sub-headings | **done** — `1a-H` 17 rows `F232..F248` (both unnumbered subs `F237`, `F238`) + `1b-H` 13 rows `F483..F495` (incl. `Goals of HGP`, `SUMMARY`, `EXERCISES`) = **30** |
+> | Every section's opening sentence has a row | **done** — `1a-O` 16 `F249..F264` + `1b-O` 11 `F496..F506` = **27** |
+> | Every in-figure label has a matrix row, harvested by opening each rendered asset | **NOT STARTED — 1-F. This is the single criterion blocking Gate 1.** |
+> | Every figure `Mono: yes` and `Verified: yes` | **NOT STARTED** — 1-F; the manifest is still empty |
+> | Inventory validated by running `check_pdf.py`'s own `_extract_labels` | **run this session under the rebuilt venv: 0 labels, 0 figures, no phantom `Fig #` row.** That is the *correct pre-1-F result*, not a pass — the criterion is only meaningfully green once 1-F has entered real labels and the parse returns the expected figure count with no doubling. |
+> | Header counts match a re-parse of the table; IDs contiguous | **done** — re-parsed this session after the `1-Z` edits: 510 rows, `F001..F510`, 0 gaps, 0 dups, monotonic, census sums to 510, `Type` uses exactly ten normalized values |
+> | Exercise-gap terms and SUMMARY-UNIQUE folding | **done** — `1-Z` steps 7 and 8: 16 scanned exercise items with 5 gaps homed, 33 summary sentences classified, all 4 SUMMARY-UNIQUE facts folded as `F507`..`F510` |
+> | Pass 1's sessions have each run and reported a machine-derived count | **7 of 8 sweep sessions** — `1a-S` 231, `1a-H` 17, `1a-O` 16, `1b-S` 218, `1b-H` 13, `1b-O` 11, `1-Z` 4 (partial: steps 7/8/10, freeze withheld); **`1-F` has not run.** This file's Session log counts the 8 sweeps only; `Ch5_TRACKER.md` §2 counts **9** because it adds the closing step-10 machine re-parse as its own row. Same state, two denominators: 8 sweeps + 1 verification = 9 ledger sessions. |
+> | Inventory frozen (step 9) | **NOT DONE, deliberately** — H1 still reads `# Working Inventory (NOT FROZEN)`. Freezing before `1-F` would be a false completion signal. |
 > | Inventory file saved to the chapter folder | done — this file |
+>
+> **What is left before Gate 1 can be judged:** `1-F` (all 17 figure assets clip-extracted at 300 dpi, converted to true monochrome, each **verified by opening the rendered file**, manifest completed, and one Facts row per in-figure label — including `Central dogma` p4 and `anticodon loop` p20, per carry-overs 2 and 16), then `1-Z` step 9 (freeze) plus a final step-10 re-parse, then a real `_extract_labels` run whose figure and label counts are checked for doubling and phantom rows. Nothing else is outstanding.
 
 ## Facts
 
@@ -594,6 +599,10 @@ Scope of this table after session 1a-S: **prose facts of the first half only**. 
 | F504 | 5.9.1 | opener | "Some of the salient observations drawn from human genome project are as follows:" (p26 - stem for the nine list items F409-F417) | |
 | F505 | 5.9.2 | opener | "Deriving meaningful knowledge from the DNA sequences will define research through the coming decades leading to our understanding of biological systems." (p26) | |
 | F506 | 5.10 | opener | "As stated in the preceding section, 99.9 per cent of base sequence among humans is the same." (p27 - the 99.9 per cent premise the whole DNA-fingerprinting section rests on) | |
+| F507 | 5.7 | concept | "Translation is a process that has evolved around RNA, indicating that life began around RNA." (**SUMMARY-UNIQUE**, p30 Summary sentence 21, folded into 5.7 by `1-Z` step 8 - the body states that the protein-synthesising machinery evolved around RNA (F137), that essential life processes evolved around RNA (F141) and that RNA was the first genetic material (F140), but the conclusion "life began around RNA" is stated only in the Summary; implied does not count, Rule 3) | |
+| F508 | 5.8 | concept | "Since, transcription and translation are energetically very expensive processes, these have to be tightly regulated." (**SUMMARY-UNIQUE**, p30 Summary sentence 22, folded into 5.8 by `1-Z` step 8 - the body says only that *replication* is energetically very expensive (F169), never transcription or translation, and never gives energetic cost as the reason regulation is required) | |
+| F509 | 5.8.1 | concept | "Lac operon is the prototype operon in bacteria, which codes for genes responsible for metabolism of lactose." (**SUMMARY-UNIQUE**, p30 Summary sentence 25, folded into 5.8.1 by `1-Z` step 8 - the word *prototype* appears nowhere in the body; F350 says only that Jacob and Monod were "the first to elucidate a transcriptionally regulated system") | |
+| F510 | 5.10 | concept | "It has immense applications in the field of forensic science, genetic biodiversity and evolutionary biology." (**SUMMARY-UNIQUE**, p30 Summary sentence 33, folded into 5.10 by `1-Z` step 8 - body F467 names only forensic science and "population and genetic diversities"; *genetic biodiversity* and *evolutionary biology* are named only in the Summary) | |
 
 ## Figure-label matrix
 
@@ -601,11 +610,80 @@ Empty — owned by session **1-F**, which runs once for the whole chapter after 
 
 ## Summary classification
 
-Empty — owned by session **1-Z** (step 8). The chapter Summary sits in the second half of the source.
+Done by session **1-Z** (step 8, Rule 3). The Summary (source p30) was split into sentences **by machine, not by eye** — the same split that produced the count below:
+
+    /vercel/share/neetenv/bin/python - <<'EOF'
+    import pymupdf, re
+    d=pymupdf.open("Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf")
+    t=" ".join(d[29].get_text("text").split("SUMMARY",1)[1].split("Reprint")[0].split())
+    s=re.split(r'(?<=\.)\s+', t); print(len(s))   # -> 33
+    EOF
+
+**33 summary sentences = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE.** The 4 SUMMARY-UNIQUE facts were folded into body sections as rows `F507`, `F508`, `F509`, `F510` **in this session** (Rule 3: a summary-unique fact must be added to the relevant body section, and *implied does not count*). The 29 BODY-PRESENT sentences are **not** added as body rows — they belong to the rewritten Quick Recap, and adding them would write the same fact twice.
+
+| # | Summary sentence (p30) | Classification | Folded into |
+|---|---|---|---|
+| 1 | "Nucleic acids are long polymers of nucleotides." | BODY-PRESENT | F003 (Intro) |
+| 2 | "While DNA stores genetic information, RNA mostly helps in transfer and expression of information." | BODY-PRESENT | F005, F006, F136, F138 |
+| 3 | "Though DNA and RNA both function as genetic material, but DNA being chemically and structurally more stable is a better genetic material." | BODY-PRESENT | F138 (5.2.2) |
+| 4 | "However, RNA is the first to evolve and DNA was derived from RNA." | BODY-PRESENT | F140, F144 (5.3) |
+| 5 | "The hallmark of the double stranded helical structure of DNA is the hydrogen bonding between the bases from opposite strands." | BODY-PRESENT | F038, F045 (5.1.1) |
+| 6 | "The rule is that Adenine pairs with Thymine through two H-bonds, and Guanine with Cytosine through three H-bonds." | BODY-PRESENT | F045 (5.1.1) |
+| 7 | "This makes one strand complementary to the other." | BODY-PRESENT | F045, F046 (5.1.1) |
+| 8 | "The DNA replicates semiconservatively, the process is guided by the complementary H-bonding." | BODY-PRESENT | F149, F259, F163 (5.4/5.4.1) |
+| 9 | "A segment of DNA that codes for RNA may in a simplistic term can be referred as gene." | BODY-PRESENT | F263 opener (5.5.2) |
+| 10 | "During transcription also, one of the strands of DNA acts a template to direct the synthesis of complementary RNA." | BODY-PRESENT | F196 (5.5.1), F261 opener (5.5) |
+| 11 | "In bacteria, the transcribed mRNA is functional, hence can directly be translated." | BODY-PRESENT | F225 (5.5.3) |
+| 12 | "In eukaryotes, the gene is split." | BODY-PRESENT | F210 (5.5.2) |
+| 13 | "The coding sequences, exons, are interrupted by non-coding sequences, introns." | BODY-PRESENT | F210, F211, F228 |
+| 14 | "Introns are removed and exons are joined to produce functional RNA by splicing." | BODY-PRESENT | F228 (5.5.3) |
+| 15 | "The messenger RNA contains the base sequences that are read in a combination of three (to make triplet genetic code) to code for an amino acid." | BODY-PRESENT | F273, F274, F282 (5.6) |
+| 16 | "The genetic code is read again on the principle of complementarity by tRNA that acts as an adapter molecule." | BODY-PRESENT | F306, F307, F308 (5.6.2) |
+| 17 | "There are specific tRNAs for every amino acid." | BODY-PRESENT | F309 (5.6.2) |
+| 18 | "The tRNA binds to specific amino acid at one end and pairs through H-bonding with codes on mRNA through its anticodons." | BODY-PRESENT | F308, F332 |
+| 19 | "The site of translation (protein synthesis) is ribosomes, which bind to mRNA and provide platform for joining of amino acids." | BODY-PRESENT | F320, F323, F324 (5.7) |
+| 20 | "One of the rRNA acts as a catalyst for peptide bond formation, which is an example of RNA enzyme (ribozyme)." | BODY-PRESENT | F325 (5.7) |
+| 21 | "Translation is a process that has evolved around RNA, indicating that life began around RNA." | **SUMMARY-UNIQUE** | **added as F507 (5.7)** — F137/F140/F141 come close but never state that life began around RNA |
+| 22 | "Since, transcription and translation are energetically very expensive processes, these have to be tightly regulated." | **SUMMARY-UNIQUE** | **added as F508 (5.8)** — body gives the expense of *replication* only (F169) |
+| 23 | "Regulation of transcription is the primary step for regulation of gene expression." | BODY-PRESENT | F343 (5.8) — **qualifier note (Rule 4):** the body says "In prokaryotes, control of the rate of transcriptional initiation is the predominant site"; the Summary drops "In prokaryotes" and says "primary". Keep the body's qualifier; do not promote the Summary's unqualified form into the body. |
+| 24 | "In bacteria, more than one gene is arranged together and regulated in units called as operons." | BODY-PRESENT | F351, F352, F353 (5.8.1) |
+| 25 | "Lac operon is the prototype operon in bacteria, which codes for genes responsible for metabolism of lactose." | **SUMMARY-UNIQUE** | **added as F509 (5.8.1)** — "prototype" is nowhere in the body |
+| 26 | "The operon is regulated by the amount of lactose in the medium where the bacteria are grown." | BODY-PRESENT | F361, F362, F366 (5.8.1) |
+| 27 | "Therefore, this regulation can also be viewed as regulation of enzyme synthesis by its substrate." | BODY-PRESENT | F368 (5.8.1) |
+| 28 | "Human genome project was a mega project that aimed to sequence every base in human genome." | BODY-PRESENT | F377, F384 (5.9) |
+| 29 | "This project has yielded much new information." | BODY-PRESENT | F392, F409-F417 (5.9/5.9.1) |
+| 30 | "Many new areas and avenues have opened up as a consequence of the project." | BODY-PRESENT | F382 (Bioinformatics), F419-F422 (5.9.2) |
+| 31 | "DNA Fingerprinting is a technique to find out variations in individuals of a population at DNA level." | BODY-PRESENT | F428, F464 (5.10) |
+| 32 | "It works on the principle of polymorphism in DNA sequences." | BODY-PRESENT | F436, F441, F442 (5.10) |
+| 33 | "It has immense applications in the field of forensic science, genetic biodiversity and evolutionary biology." | **SUMMARY-UNIQUE** | **added as F510 (5.10)** — F467 names forensic science and "population and genetic diversities" only |
+
+`29 + 4 = 33` ✓ equals the machine sentence count, and the 4 SUMMARY-UNIQUE rows are exactly the 4 rows this session appended (`F507`..`F510`), so the fold is derivable from the list rather than asserted.
 
 ## Exercise-gap terms
 
-Empty — owned by session **1-Z** (step 7). The Exercises sit in the second half of the source.
+Done by session **1-Z** (step 7, Rule 2). **All 14 end-of-chapter questions were scanned, not just the suspicious ones** — every question gets a row so the scan is auditable, and a row saying "covered" is a checked claim with the row IDs that cover it, not an assumption. The 14 questions are inventory rows `F469`..`F482`; the two in-body exercises `F288`/`F289` are also scanned here because they lean on `Table 5.1`.
+
+**5 of 16 scanned items are genuine gaps** (marked **GAP**): a reader of the rewrite alone cannot currently answer Q2, Q3/Q4, Q6, Q10 or Q14(d). Each gap gets a home **inline where it belongs** (Rule 2 option 1) rather than an appendix, so the explanation sits beside the facts it depends on. Rule 5 still binds: nothing is invented — each addition is either arithmetic over facts the body already states, or a naming of the classes the body already exemplifies, and each must be written as an explanatory NOTE box so it is visibly the rewrite's scaffolding and not an NCERT sentence.
+
+| Term/fact assumed by exercises | Explained where |
+|---|---|
+| **Q1** (`F469`) nitrogenous base vs nucleoside; that Cytidine and Guanosine are nucleosides while Adenine, Thymine, Uracil, Cytosine are bases | Covered — `F024` defines nucleoside (base + sugar via N-glycosidic linkage), `F025` names adenosine/guanosine/cytidine/uridine, `F020`-`F023` name the bases. No addition needed. |
+| **Q2** (`F470`) that the four base percentages of a double-stranded DNA sum to 100, so %C = %G = 20 forces %A = %T = 30 | **GAP.** The body gives Chargaff's constant ratios (`F039`) and the A=T / G=C pairing (`F045`) but never the summing-to-100 step, so the arithmetic the question asks for is unreachable. **Home: a worked NOTE box in §5.1.1 immediately after the Chargaff/base-pairing block** (`F039`/`F045`), deriving 20 -> 20 -> 30 -> 30 from those two rows only. |
+| **Q3, Q4** (`F471`, `F472`) the writing convention: a complementary strand quoted 5'-to-3' is the *reverse* of the pairing order, and an mRNA sequence equals the coding strand with U in place of T | **GAP.** The body defines template vs coding strand (`F196`, `F197`) and U-for-T complementarity (`F187`), but never states either mechanical convention, so a student can pair the bases correctly and still write both answers backwards. **Home: one worked NOTE box in §5.5.1 beside `F196`**, doing the given 28-mer once for the complementary strand and once for the mRNA. |
+| **Q5** (`F473`) which property of the double helix suggested semi-conservative replication | Covered — `F038`, `F045`, `F046` (complementary base pairing) plus `F146`/`F147` (Watson and Crick's own copying-mechanism statement) and `F149`. No addition needed. |
+| **Q6** (`F474`) the full set of nucleic-acid polymerase classes named by template and product | **GAP.** The body names only **DNA-dependent DNA polymerase** (`F164`, `F172`, `F174`) and **DNA-dependent RNA polymerase** (`F196`, `F218`); the RNA-templated classes are only alluded to by `F054` ("In some viruses the flow of information is in reverse direction, that is, from RNA to DNA") and are never named. **Home: a NOTE box in §5.4.2 after `F164`** laying the classes out as a template-vs-product grid, anchored to `F054`, `F164` and `F218` and adding no organism, enzyme name or number the source does not contain. |
+| **Q7** (`F475`) how Hershey and Chase told DNA from protein | Covered — `F107`-`F114` (radioactive phosphorus vs radioactive sulfur; DNA has P not S, protein has S not P). No addition needed. |
+| **Q8(a)** (`F476`) Repetitive DNA vs Satellite DNA | Covered — `F428` defines repetitive DNA, `F429`/`F430` place satellite DNA as the small density-gradient peaks, `F431` gives the micro-/mini-satellite classes. The contrast is present but scattered; **present it as a 2-column table in §5.10** rather than adding any fact. |
+| **Q8(b)** (`F476`) mRNA vs tRNA | Covered — `F264` (three RNA types), `F216`/`F217` (mRNA's template role), `F308`-`F313` (tRNA structure and adapter role). No addition needed. |
+| **Q8(c)** (`F476`) Template strand vs Coding strand | Covered — `F196` (template strand), `F197` (coding strand), `F204` (the definitions reverse if the terminator switches position). No addition needed. |
+| **Q9** (`F477`) two essential roles of the ribosome in translation | Covered — `F324` (two binding sites holding successive amino acids close enough for a peptide bond) and `F325` (23S rRNA ribozyme catalysing that bond). No addition needed. |
+| **Q10** (`F478`) why the *lac* operon shuts down again some time after lactose is added | **GAP.** The body explains induction (`F361`-`F366`) and negative regulation (`F371`) but never says that the inducer is itself consumed as substrate, so nothing in the rewrite lets a reader reason back to the repressor re-binding the operator. **Home: a NOTE box in §5.8.1 immediately after `F371`**, built strictly from `F339` (beta-galactosidase hydrolyses lactose), `F361` (lactose is the substrate *and* the inducer) and `F365`/`F366` (repressor binds the operator unless inactivated by inducer). |
+| **Q11** (`F479`) function of promoter, tRNA, exons | Covered — promoter `F198`/`F201`/`F219`, tRNA `F308`-`F313`, exons `F211`/`F228`. No addition needed. |
+| **Q12** (`F480`) why HGP is called a mega project | Covered — `F377`-`F381` (3 x 10^9 bp, US $3 per bp, ~9 billion dollars, 3300 books, high-speed computation) and `F389`-`F391` (13 years, coordinating bodies, completed 2003). No addition needed. |
+| **Q13** (`F481`) what DNA fingerprinting is, and its applications | Covered — `F428` (definition), `F444`-`F455` (Jeffreys, VNTR, the six steps), `F467` plus the folded `F510` (applications). No addition needed. |
+| **Q14(a)(b)(c)** (`F482`) transcription, polymorphism, translation | Covered — transcription `F261` opener, polymorphism `F441`/`F442`, translation `F499` opener. **These three answers live entirely in opener rows**, which is exactly why `1a-O`/`1b-O` were run as their own sessions; if those rows are dropped in Pass 2, three quarters of Q14 becomes unanswerable. |
+| **Q14(d)** (`F482`) what Bioinformatics *is* | **GAP.** `F382` names the field ("a new area in biology called Bioinformatics") but never says what it does, so "briefly describe Bioinformatics" has no answer in the body. **Home: extend the §5.9 block at `F381`/`F382`** with one sentence framing it from `F381` (storage, retrieval and analysis of the enormous sequence data) and goals (iii)/(iv) `F385`/`F386` (store the information in databases; improve tools for data analysis). No outside definition. |
+| **In-body `F288`/`F289`** — both instruct the student to "take help of the checkerboard", i.e. `Table 5.1` | **Blocked, not a Rule 2 gap.** The 64 codon cells are not text-extractable (carry-over 9) and **no session owns rebuilding them**. Without the table these two exercises are unanswerable, so the owner must be named before Pass 2a. Escalated to carry-over 17. |
 
 ## Figure manifest
 
@@ -615,7 +693,7 @@ Empty — owned by session **1-F**. A first-half-only manifest cannot be checked
 
 Numbered, added to freely; each is a defect that will not have to be rediscovered.
 
-1. **Openers carrying load-bearing definitions — pointers for session 1a-O, not rows here.** Several first-half sections open by defining the very term in their heading, which is the §6 step-5 failure mode. 1a-O must produce a row for each of: §5.1 "DNA is a long polymer of deoxyribonucleotides."; §5.1.1 "Let us recapitulate the chemical structure of a polynucleotide chain (DNA or RNA)."; §5.1.2 the 0.34 nm / 2.2 metre calculation sentence; §5.2 the Meischer-and-Mendel timing sentence; §5.2.1 "The unequivocal proof that DNA is the genetic material came from the experiments of Alfred Hershey and Martha Chase (1952)."; §5.2.2 the "debate ... unequivocally resolved" sentence; §5.3 "which is the first genetic material?"; §5.4 "While proposing the double helical structure for DNA, Watson and Crick had immediately proposed a scheme for replication of DNA."; §5.4.1 "It is now proven that DNA replicates semiconservatively."; §5.4.2 "In living cells, such as E. coli, the process of replication requires a set of catalysts (enzymes)."; **§5.5 "The process of copying genetic information from one strand of the DNA into RNA is termed as transcription."** (the definition of transcription lives only in the opener); §5.5.1 the three-region sentence; **§5.5.2 "A gene is defined as the functional unit of inheritance."**; §5.5.3 "In bacteria, there are three major types of RNAs: mRNA (messenger RNA), tRNA (transfer RNA), and rRNA (ribosomal RNA)."
+1. **Openers carrying load-bearing definitions �� pointers for session 1a-O, not rows here.** Several first-half sections open by defining the very term in their heading, which is the §6 step-5 failure mode. 1a-O must produce a row for each of: §5.1 "DNA is a long polymer of deoxyribonucleotides."; §5.1.1 "Let us recapitulate the chemical structure of a polynucleotide chain (DNA or RNA)."; §5.1.2 the 0.34 nm / 2.2 metre calculation sentence; §5.2 the Meischer-and-Mendel timing sentence; §5.2.1 "The unequivocal proof that DNA is the genetic material came from the experiments of Alfred Hershey and Martha Chase (1952)."; §5.2.2 the "debate ... unequivocally resolved" sentence; §5.3 "which is the first genetic material?"; §5.4 "While proposing the double helical structure for DNA, Watson and Crick had immediately proposed a scheme for replication of DNA."; §5.4.1 "It is now proven that DNA replicates semiconservatively."; §5.4.2 "In living cells, such as E. coli, the process of replication requires a set of catalysts (enzymes)."; **§5.5 "The process of copying genetic information from one strand of the DNA into RNA is termed as transcription."** (the definition of transcription lives only in the opener); §5.5.1 the three-region sentence; **§5.5.2 "A gene is defined as the functional unit of inheritance."**; §5.5.3 "In bacteria, there are three major types of RNAs: mRNA (messenger RNA), tRNA (transfer RNA), and rRNA (ribosomal RNA)."
 2. **Unnumbered sub-headings spotted in the first half — pointers for session 1a-H.** `Transforming Principle` (p. 6) and `Biochemical Characterisation of Transforming Principle` (p. 7), both inside §5.2, both 10.5pt full-bold. **CORRECTED:** this entry previously also listed "the boxed `Central dogma` label on source p. 4" as a 1a-H heading. Re-checked against the PDF — it is plain 10.5pt Bookman-**Light** text labelling the DNA-to-RNA-to-Protein diagram, not a bold sub-heading. It is **reassigned to `1-F` as an in-figure label** and must not become a heading row. 1a-H must still walk the skeleton independently and not rely on this list being complete; see `Ch5_TRACKER.md` for the full 17-line target and the running-header / small-caps-span traps.
 3. **Banned-glyph traps for Pass 2 (check 5).** This chapter is dense in glyphs the linter rejects: the source's `5'→3'` arrows (write `5'-to-3'`), the Greek `σ` and `ρ` transcription factors (write `sigma` and `rho`), `φ×174` (write `phi x 174`), and superscripts/subscripts in `4.6 × 10^6`, `3.3 × 10^9`, `10^-9 m`, `15NH4Cl`, `14NH4Cl`, `28S/18S/5.8S`. All must be flat ASCII text in the script — never Unicode arrows, Greek letters, or real super/subscripts. Rows F016, F018, F019, F044, F048, F056, F057, F058, F152, F156, F166, F174, F176, F196, F197, F223, F227 are the ones carrying them.
 4. **`QB bacteriophage` (F117) is the source's own spelling** of Qbeta. Reproduce it as NCERT prints it; do not "correct" it to a Greek beta, which would trip check 5.
@@ -631,3 +709,8 @@ Numbered, added to freely; each is a defect that will not have to be rediscovere
 14. **`EXERCISES` (p31) is set in 30.0pt AvantGarde-**Book** — it is not bold.** Every other second-half heading is Demi/Bold, so an "all spans bold" heading filter silently drops the Exercises heading while appearing to work perfectly. The chapter-title row F232 is the same non-bold 30pt display class. Any heading re-parse must accept non-bold display type above ~13pt, or assert these two rows exist by name.
 15. **Book-page folios are 14.0pt bold and outrank every sub-heading.** The printed page numbers `95`-`109` are set 14.0pt `AvantGarde-Demi` / `CenturyGothic,Bold` — they pass a `bold and size >= 10.5` heading filter and yield ~15 phantom heading rows, a *different* trap from the 9.0pt running heads already recorded in `Ch5_TRACKER.md` §4 trap 1 (a 10.5pt floor does **not** exclude these). **Filter numeric-only lines.** Related: the body font family switches from `Bookman-Demi`/`AvantGarde-Demi` to `Bookman,Bold`/`CenturyGothic,Bold` at **p24**, so a filter keyed on the literal string `Demi` misses the §5.9, §5.9.1 and §5.9.2 headings entirely.
 16. **The `RAM HAS RED CAP` frameshift mnemonic is 10.5pt full-bold on its own line, seven times (p19).** Those seven lines are prose examples (F298-F302), **not** headings — full-bold standalone lines at exactly the unnumbered-sub-heading size and weight. `1b-H` excluded them deliberately. Also `anticodon loop` (p20, 10.5pt full-bold standalone) is an **in-figure label for Figure 5.12 owned by `1-F`** - the same class of trap as `Central dogma` in carry-over 2, and it must not become a heading row.
+17. **`Table 5.1` still has no owner, and `1-Z` step 7 escalated it from "awkward" to "blocking."** The exercise-gap scan found that `F288` and `F289` both instruct the student to "take help of the checkerboard", so without the 64 codon cells two exercises are unanswerable and Rule 2 cannot be satisfied by any amount of prose. Carry-over 9 established the mechanics (not text-extractable, not a figure, so `1-F` does not own it). **Decision required before Pass 2a: name the owner.** Recommended owner is Pass 2a itself — hand-build the table in the script from the rendered source page and proof-read it cell-by-cell against p18 — because that is the only session that will have the table's final layout in front of it.
+18. **The five Rule 2 additions are rewrite scaffolding and must be visibly labelled as such.** `1-Z` step 7 authorises five inline explanations (Q2 base-percentage arithmetic in §5.1.1; Q3/Q4 strand-writing conventions in §5.5.1; Q6 polymerase template/product grid in §5.4.2; Q10 inducer-consumption reasoning in §5.8.1; Q14(d) what Bioinformatics does, in §5.9). Each is derived **only** from rows already in this inventory, and each must be rendered as a NOTE box, never as running body prose — otherwise a later verification pass reading the PDF against the source will correctly flag them as content NCERT never wrote. Rule 5 is not suspended by Rule 2; it is bounded by it.
+19. **The 29 BODY-PRESENT summary sentences must not become body rows.** They go into the rewritten Quick Recap only. Their body anchors are listed per sentence in the Summary classification section, so a Pass 3 reader can check each one without re-deriving the classification.
+20. **Qualifier drift already present in the source's own Summary (Rule 4).** Summary sentence 23 says "Regulation of transcription is the primary step for regulation of gene expression" while the body row `F343` says "**In prokaryotes**, control of the rate of transcriptional initiation is the **predominant** site for control of gene expression." Write the body sentence with NCERT's qualifier and keep the Summary's looser phrasing only in the Quick Recap; do not let the Summary's unqualified form overwrite `F343`.
+21. **`1-Z` ran without `1-F`, which is allowed for steps 7/8/10 and forbidden for step 9.** Steps 7, 8 and 10 read prose and count rows, so they are independent of the figure sweep; step 9 asserts the whole of Pass 1 is done, so it is not. If a future session sees "1-Z done" anywhere, check *which steps* — this file's Session log states the split explicitly.
