@@ -2,7 +2,9 @@
 
 > **Frozen at Gate 1 closure.** Facts rows `F001`–`F646` are now immutable during Pass 2 except for tick marks; metadata may be corrected only by re-deriving it from the rows.
 
-Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **FROZEN — GATE 1 CLOSED; Pass 2a + 2b written; GATE 2 CLOSED (all 646 rows ticked, `check_pdf.py --strict` exit 0); Pass 3 not started** | Rows: **646** (`F001`..`F646`)
+Source: `Chapter/class 12/Chapter 5 - Molecular Basis of Inheritance.pdf` (31 pp) | Status: **FROZEN — GATE 1 CLOSED; Pass 2a + 2b written; GATE 2 CLOSED (all 646 rows ticked, `check_pdf.py --strict` exit 0); PASS 3 COMPLETE — Gate 3a and Gate 3b both run, GATE 3 CLOSED** | Rows: **646** (`F001`..`F646`)
+
+*(Superseded, kept per §7: this line previously ended "Pass 3 not started". Gate 3a (page/asset walk) and Gate 3b (bidirectional full read of all 646 rows) have both now been run — see the Gate 3b defect register at the foot of this file.)*
 
 **Big-chapter protocol (§6, 5 passes).** 31 source pages, 10 numbered sections plus summary and exercises, so this chapter runs `1a → 1b → 2a → 2b → 3`. The source seam is:
 
@@ -884,3 +886,37 @@ Numbered, added to freely; each is a defect that will not have to be rediscovere
 19. **The 29 BODY-PRESENT summary sentences must not become body rows.** They go into the rewritten Quick Recap only. Their body anchors are listed per sentence in the Summary classification section, so a Pass 3 reader can check each one without re-deriving the classification.
 20. **Qualifier drift already present in the source's own Summary (Rule 4).** Summary sentence 23 says "Regulation of transcription is the primary step for regulation of gene expression" while the body row `F343` says "**In prokaryotes**, control of the rate of transcriptional initiation is the **predominant** site for control of gene expression." Write the body sentence with NCERT's qualifier and keep the Summary's looser phrasing only in the Quick Recap; do not let the Summary's unqualified form overwrite `F343`.
 21. **`1-Z` ran without `1-F`, which is allowed for steps 7/8/10 and forbidden for step 9.** Steps 7, 8 and 10 read prose and count rows, so they are independent of the figure sweep; step 9 asserts the whole of Pass 1 is done, so it is not. If a future session sees "1-Z done" anywhere, check *which steps* — this file's Session log states the split explicitly.
+
+## Gate 3b defect register
+
+Produced by the Gate 3b bidirectional full read (both directions, all 646 rows). The
+**Facts table above was not touched** — the freeze bars appending or rewording a row, so
+each finding is registered here and, where it was a genuine fact loss in the *deliverable*,
+fixed in the script (the freeze binds the inventory, not the PDF). Full evidence,
+method and per-figure verdict table: `scratch/ch5_3b_d1/findings.md`.
+Script comments carry these same `D1-n` / `D2-n` ids at the lines they fix.
+
+| id | finding | class | severity | disposition |
+|---|---|---|---|---|
+| `D1-1` | `F530`-`F533` are filed under **Fig 5.3** but are printed on the **unnumbered central-dogma plate** on p4 (`fig_5_central_dogma.png`). Fig 5.3's artwork prints only six labels (`F524`-`F529`). Same root cause as the already-corrected `fig_5_3` caption mislabel: `1-F` had no figure number to file the plate under. | section attribution | low | OPEN — re-section at the next unfreeze. No fact lost. |
+| `D1-2` | `F532` reads **"RNA"**; the plate prints **"mRNA"**. Exam-relevant — that the middle term of the central dogma is specifically mRNA is the point. | wording drift | **medium** | Row OPEN (frozen). **PDF fixed:** the plate's caption now names all six printed labels including `mRNA`. |
+| `D1-3` | The plate's printed labels `replication`, `transcription`, `translation` have **no** `figure-label` row anywhere in `F511`-`F646`. | uninventoried figure content | low | Rows OPEN (frozen). **PDF fixed** by the same caption edit. |
+| `D1-4` | `F606` **"anticodon loop"** is a phantom figure label. Fig 5.12 prints only **"Anticodon"** (`F605`); the rect holds zero text-layer words, the sole `anticodon` word on p20 lies outside it, and "anticodon loop" occurs once chapter-wide — in **body prose** on p20. Carry-over 16 predicted this label was `1-F`'s to own; the source disagrees. | row type | low | OPEN — retype `figure-label` → `concept` at the next unfreeze. Fact is real and in the PDF. |
+| `D2-1` | NCERT's **Fig 5.16 caption** (p29) is four substantive sentences and **no `F###` row covers any of them** — captions are recorded only as short titles in the figure manifest. Its conclusion, *"the banding pattern of DNA from crime scene matches with individual B, and not with A"*, was **absent from the built PDF entirely** (it said only "can be compared band for band"). | **uninventoried fact — real loss** | **medium** | Rows OPEN (frozen). **PDF fixed:** the Fig 5.16 caption now carries the VNTR-per-allele statement and the C-matches-B conclusion. |
+
+**Not defects, recorded so they are not re-raised:** Fig 5.7's `15N`/`14N` tube-band
+annotations, Fig 5.11's `m7G` cap chemistry, Fig 5.14's operon letter boxes (`p i p o z y a`),
+Fig 5.16's gel lane letters (`C A B`) and its 0-12 repeat scale are printed but carry no
+label row — each is chemical shorthand or a symbol whose meaning is already carried by a
+prose row. `F223`'s `sigma`/`rho` for the source's `σ`/`ρ` is required by check 5, so it is
+correct authoring, not drift.
+
+**What Gate 3b positively established** (re-run, don't recall — commands in the findings file):
+510 non-figure rows all trace to the source (495 verbatim + 15 explained extraction
+artefacts, eye-read one by one); 136 figure-label rows read off 300 dpi source crops of all
+15 label-bearing figures; and in the reverse direction 962 source sentences, 93 numeric
+literals and 159 proper nouns swept three structurally independent ways, yielding exactly
+one uninventoried fact with exam weight (`D2-1`). The seven "missing" numbers the atom sweep
+reported are NCERT folio page numbers (83, 88, 89, 98, 101, 102, and `110033` = folio 103
+with digits doubled by the two-column overlay) spliced into sentences by the extractor —
+**zero content numbers and zero proper nouns are missing.**

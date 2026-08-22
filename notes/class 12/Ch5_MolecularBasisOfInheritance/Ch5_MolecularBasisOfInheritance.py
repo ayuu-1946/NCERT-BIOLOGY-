@@ -111,8 +111,13 @@ story.append(note(
     "chapter hangs, so it is worth fixing before anything else."))
 story.append(figure(
     "fig_5_central_dogma.png",
+    # Gate 3b D1-2/D1-3: this plate's printed labels are replication, DNA,
+    # transcription, mRNA, translation, protein -- the middle term is mRNA, and
+    # replication/transcription/translation carry no inventory label row at all.
+    # The caption now names all six so every printed label is in running text.
     "The central dogma of molecular biology: DNA is transcribed to RNA, and RNA is "
-    "translated to protein. (DNA to RNA to Protein; transcription; translation.)"))
+    "translated to protein. (Plate labels: replication; DNA; transcription; mRNA; "
+    "translation; protein.)"))
 
 # --------------------------------------------------------------------------------------
 # 5.1  THE DNA   (F233 heading, F249 opener, F001-F058 facts)
@@ -2164,7 +2169,13 @@ story.append(figure(
     "<b>Chromosome 7</b>, <b>Chromosome 2</b> and <b>Chromosome 16</b> -- differ in the "
     "<b>Number of short tandem repeats</b>. <b>Amplified repeats, separated by size on a "
     "gel, give a DNA fingerprint</b>, so that <b>DNA from individual A</b>, <b>DNA from "
-    "individual B</b> and <b>DNA from crime scene (C)</b> can be compared band for band."))
+    "individual B</b> and <b>DNA from crime scene (C)</b> can be compared band for band. "
+    # Gate 3b D2-1: NCERT's own Fig 5.16 caption states both of these and no
+    # inventory row covered them; the second is the conclusion the figure exists
+    # to deliver and was absent from this PDF entirely.
+    "The <b>two alleles (paternal and maternal) of a chromosome also carry different copy "
+    "numbers of VNTR</b>. Reading the gel, the <b>banding pattern of the crime-scene DNA "
+    "matches individual B, and not individual A</b>."))
 story.append(Spacer(1, 3))
 story.append(Paragraph(
     "The <b>sensitivity of the technique has been increased by use of polymerase chain "

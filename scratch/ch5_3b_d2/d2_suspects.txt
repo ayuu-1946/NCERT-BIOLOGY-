@@ -1,0 +1,84 @@
+=== p30  cover=0.333 best=0.442 (F388)
+SENT: many new areas and avenues have opened up as a consequence of the project
+UNSEEN TOKENS: areas, avenues, opened, consequence
+
+=== p30  cover=0.333 best=0.442 (F388)
+SENT: many new areas and avenues have opened up as a consequence of the project
+UNSEEN TOKENS: areas, avenues, opened, consequence
+
+=== p29  cover=0.444 best=0.4 (F012)
+SENT: for the sake of understanding different colour schemes have been used to trace the origin of each band in the gel
+UNSEEN TOKENS: sake, colour, schemes, trace, band
+
+=== p29  cover=0.444 best=0.4 (F012)
+SENT: for the sake of understanding different colour schemes have been used to trace the origin of each band in the gel
+UNSEEN TOKENS: sake, colour, schemes, trace, band
+
+=== p30  cover=0.714 best=0.491 (F178)
+SENT: the dna replicates semiconservatively, the process is guided by the complementary h-bonding
+UNSEEN TOKENS: guided, h-bonding
+
+=== p30  cover=0.714 best=0.491 (F178)
+SENT: the dna replicates semiconservatively, the process is guided by the complementary h-bonding
+UNSEEN TOKENS: guided, h-bonding
+
+=== p30  cover=0.75 best=0.429 (F266)
+SENT: the site of translation (protein synthesis) is ribosomes, which bind to mrna and provide platform for joining of amino acids
+UNSEEN TOKENS: ribosomes, platform, joining
+
+=== p30  cover=0.75 best=0.429 (F266)
+SENT: the site of translation (protein synthesis) is ribosomes, which bind to mrna and provide platform for joining of amino acids
+UNSEEN TOKENS: ribosomes, platform, joining
+
+=== p29  cover=0.75 best=0.474 (F424)
+SENT: it is clear that the banding pattern of dna from crime scene matches with individual b, and not with a
+UNSEEN TOKENS: banding, matches
+
+=== p29  cover=0.75 best=0.474 (F424)
+SENT: it is clear that the banding pattern of dna from crime scene matches with individual b, and not with a
+UNSEEN TOKENS: banding, matches
+
+=== p30  cover=0.75 best=0.506 (F391)
+SENT: this project has yielded much new information
+UNSEEN TOKENS: yielded
+
+=== p30  cover=0.75 best=0.506 (F391)
+SENT: this project has yielded much new information
+UNSEEN TOKENS: yielded
+
+=== p30  cover=0.8 best=0.446 (F261)
+SENT: while dna stores genetic information, rna mostly helps in transfer and expression of information
+UNSEEN TOKENS: stores, helps
+
+=== p30  cover=0.8 best=0.446 (F261)
+SENT: while dna stores genetic information, rna mostly helps in transfer and expression of information
+UNSEEN TOKENS: stores, helps
+
+=== p30  cover=0.8 best=0.449 (F433)
+SENT: it works on the principle of polymorphism in dna sequences
+UNSEEN TOKENS: works
+
+=== p30  cover=0.8 best=0.449 (F433)
+SENT: it works on the principle of polymorphism in dna sequences
+UNSEEN TOKENS: works
+
+=== p30  cover=0.818 best=0.472 (F052)
+SENT: the hallmark of the double stranded helical structure of dna is the hydrogen bonding between the bases from opposite strands
+UNSEEN TOKENS: hallmark, bonding
+
+=== p30  cover=0.818 best=0.472 (F052)
+SENT: the hallmark of the double stranded helical structure of dna is the hydrogen bonding between the bases from opposite strands
+UNSEEN TOKENS: hallmark, bonding
+
+=== p5  cover=0.833 best=0.56 (F066)
+SENT: both the amino acid residues carry positive charges figure 5.4b em picture-'beads-on-string'in their side chains
+UNSEEN TOKENS: 4b, picture-'beads-on-string'in
+
+=== p30  cover=0.846 best=0.468 (F314)
+SENT: the trna binds to specific amino acid at one end and pairs through h-bonding with codes on mrna through its anticodons
+UNSEEN TOKENS: h-bonding, anticodons
+
+=== p30  cover=0.846 best=0.468 (F314)
+SENT: the trna binds to specific amino acid at one end and pairs through h-bonding with codes on mrna through its anticodons
+UNSEEN TOKENS: h-bonding, anticodons
+
