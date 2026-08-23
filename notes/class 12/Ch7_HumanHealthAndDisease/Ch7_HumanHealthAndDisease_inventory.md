@@ -1089,3 +1089,62 @@ for Pass 2 or later, kept here so they are not rediscovered.
    `fig_7_4`.
 10. **The Swaminathan portrait (page 2) is a hard no** under `§5` item 3 / `§4.4`,
     greyscaled or not. `check_pdf.py` check 4 would WARN on it.
+11. **`°` (U+00B0) is NOT a banned glyph — do not "fix" it.** Two frozen rows carry
+    it: `F023` ("39° to 40°C") and the 1-S note restating that range. Item 8 above
+    correctly bans `α`, and the natural assumption is that the degree sign goes the
+    same way — so this was **tested against the linter rather than assumed**:
+    `α` **is** in `check_pdf.py`'s `GREEK` set, while `°` is in **none** of
+    `ARROWS`, `GREEK` or `SUBSUP`. The typhoid fever range may therefore be
+    rendered with a real degree sign. Recorded so a later session does not spend
+    Pass 2 budget "spelling out" a glyph that was never a problem, and does not
+    generalise item 8 into a rule the linter does not hold.
+
+### Gate 1 re-verification — resumed session, 2026-08-23
+
+Gate 1 was **re-derived from scratch, not re-read**, per the `§7` rule that a
+handoff's findings are claims to re-derive. The venv was **absent** at session
+start (the expected `§0.2` state) and was rebuilt to identical versions
+(reportlab 5.0.1 / pymupdf 1.28.2 / Pillow 12.3.0 on 3.13) **before** anything was
+diagnosed. `scratch/ch7_1z/derive_counts.py` re-ran green (exit 0, 10/10), and
+these claims were re-measured independently against the **source PDF and the
+assets on disk**, not against this file's own prose:
+
+- **346 rows, `F001`..`F346`**, contiguous, 0 gaps, 0 duplicates, **0 ticked**;
+  block sums `276+29+28+2+11 = 346`; `Type` = 17 values, all lowercase.
+- **`_extract_labels` imported from the real `check_pdf.py`** returns **21 labels /
+  4 figures** (7.1→7, 7.4→3, 7.5→3, 7.6→8), **no doubling, no phantom `Fig #`**.
+  The Ch12 trap was *executed*, not merely cited, and did **not** fire.
+- **Census-vs-list arithmetic re-checked:** headings `16 + 13 = 29` (16 and 13 IDs
+  actually listed); the opener roll-call holds 30 table rows carrying exactly **28**
+  opener IDs, contiguous `F306`..`F333` and identical to the 28 `Type: opener` rows
+  in the Facts table. An early probe of mine reported "34 opener IDs" — that was
+  **my regex catching the heading IDs in the roll-call's left column**, not a defect
+  in the file. Noted because the next session will likely write the same probe.
+- **All 11 assets re-opened**: every one `mode=L` with all sampled pixels R==G==B.
+  Figs 7.1 and 7.4 were viewed at full size and their quoted labels confirmed
+  against the artwork; both crops are complete, with no clipped callouts.
+- **Summary re-extracted** by re-running `summary_sentences.py`: **18 sentences**,
+  sentence 1 reads *"Health is not just the absence of disease."* — the self-check
+  this file demands — so the block-geometry selection is still correct.
+- **The two SUMMARY-UNIQUE rows re-tested against the source:** "cholera" gets
+  **1 hit in 22 pages, on p21 (the summary itself)** and none in the body, so
+  `F335` stands. `F334` is subtler and was deliberately re-challenged: the word
+  "psychological" *does* occur 5 times in the body — but never in a definition of
+  health. The body's definition (p4) is "physical, mental and social"; the summary
+  (p21) is "physical, mental, social and psychological". The row records the added
+  qualifier, which is correct.
+- **Both exercise gaps re-confirmed as genuine:** "DNA vaccine", "suitable gene"
+  and "water-borne" occur **only on p22** (the exercises). The body writes
+  "air-borne" (p7) and never "water-borne".
+- **The largest 1-F carry-over was verified closed, not assumed closed:** the
+  process-arrow sentences have real rows — 18 `figure-text` rows, including
+  `F045`-`F052` (malaria life cycle) and `F171`/`F172` (HIV replication).
+
+**No frozen row was added, removed, reworded or reclassified in this session.**
+Two carry-overs (11 above, and the roll-call regex note) were appended, and the
+roll-up documents were corrected — `CHAPTER_TRACKER.md`'s Ch7 row still read
+"session `1-F` only / GATE 1 NOT MET / no Facts table, no heading/opener census",
+which was a **live false claim**, and `CHAPTER_STATUS.md` had **no Ch7 row at all**.
+Both now name the specific gate. Roll-ups were **re-derived by counting** `✅` rows
+(Class 11 = 6, Class 12 = 6, **12/32**) rather than incremented; Gate 1 closure
+earns Ch7 **no** place in that tally, so the totals correctly did not move.
