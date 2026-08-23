@@ -318,8 +318,12 @@ expected state, not an anomaly — and was rebuilt first, before any diagnosis
 **Result: 52 / 52 assertions PASS, zero corrections to this chapter.** Verified
 independently: 200 Facts + 9 matrix = 209 rows; `F001`..`F207` contiguous, zero
 gaps, zero duplicates; `F055a`/`F085a` the only suffixed IDs; **0 unticked**; type
-census `fact 97, name 29, term 19, heading 15, opener 14, caption 8, question 7,
-crossref 6, number 5`, all inside the 10-value lowercase vocabulary; 17 labels
+census `fact 97, name 29, term 19, heading 15, opener 14, label 9, caption 8,
+question 7, crossref 6, number 5` — **10 values summing to 209**, all inside the
+lowercase vocabulary, and **it must be quoted whole**: the nine Facts-table types sum
+to 200 and the 9 `label` rows (`F199`..`F207`) are the balance, so dropping `label`
+makes the census silently contradict the 209 row total (this session's first writeup
+did exactly that; caught by the self-check below and corrected); 17 labels
 across 5 parsed figure rows with no doubling and no phantom `Fig #` row, and the
 per-figure distribution `8.1:2, 8.2(a):6, 8.2(c):1, 8.3:1, 8.8:7` matching the
 matrix row by row; 18 summary sentences (16 + 2) with `F195`/`F196` confirmed to
@@ -343,18 +347,47 @@ incremented: Class 11 **6 / 19**, Class 12 **6 / 13**, total **12 / 32**. This i
 exactly the silent-drift class the closure rules predict, and it appeared without
 anyone touching Ch8.
 
-Re-derive with:
+**A second defect was found in this file itself, in the re-derivation recipe below.**
+The snippet previously filtered IDs with `re.fullmatch(r"F\d{3}", r[0])`, which
+**silently drops `F055a` and `F085a`** — the two rows Pass 3 added. Run against the
+current inventory it printed `rows 207 ... contiguous True` and a census of
+`fact 96, question 6`, i.e. it under-reported the frozen chapter by exactly the two
+Pass 3 rows **while looking clean**, because 207 consecutive plain IDs really are
+contiguous. A future session trusting this documented command would have concluded the
+inventory was over-counted and "corrected" 209 → 207, deleting real NCERT content that
+direction 2 had to read the source start-to-finish to find. The regex is now
+`F\d{3}[a-z]?` and the suffixed IDs are asserted present rather than assumed. This is
+the sharpest lesson of the session: **the recipe a tracker hands forward is itself a
+claim, and running it is the only way to know it still matches the file it describes.**
+
+**The same regex bug is latent in two Ch7 scratch scripts** —
+`scratch/ch7_1o/verify_verbatim.py:124` and `scratch/ch7_1z/derive_counts.py:41` both
+match `F\d{3}` with no suffix branch. Ch7's inventory currently holds **346 rows and
+zero suffixed IDs**, so they are correct *today* and were left alone (they are scratch
+aids, not deliverables, and Ch7 is mid-Pass-1). But Ch7 has not run Pass 3, and Pass 3
+is exactly what mints suffixed IDs — Ch8 gained `F055a`/`F085a` that way. **Whoever
+runs Ch7's Pass 3 must widen both regexes to `F\d{3}[a-z]?` before trusting either
+script's counts**, or Ch7 will under-report its inventory the same way and look clean
+doing it.
+
+Re-derive with (verified against the current 209-row file, not transcribed):
 
     /vercel/share/neetenv/bin/python - <<'EOF'
-    import re, importlib.util, collections
+    import re, collections
     p="notes/class 12/Ch8_MicrobesInHumanWelfare/Ch8_MicrobesInHumanWelfare_inventory.md"
     txt=open(p).read()
     rows=[[c.strip() for c in l.strip().strip("|").split("|")]
           for l in txt.splitlines() if l.strip().startswith("|")]
-    rows=[r for r in rows if len(r)>=4 and re.fullmatch(r"F\d{3}", r[0])]
-    n=sorted(int(r[0][1:]) for r in rows)
-    print("rows", len(rows), "contiguous", n==list(range(1,len(n)+1)))
-    print(collections.Counter(r[2] for r in rows))
+    # F\d{3}[a-z]? — the [a-z]? is load-bearing: F055a and F085a are real rows.
+    rows=[r for r in rows if len(r)>=4 and re.fullmatch(r"F\d{3}[a-z]?", r[0])]
+    ids=[r[0] for r in rows]
+    n=sorted(int(r[0][1:4]) for r in rows)
+    print("rows", len(rows), "(expect 209)")
+    print("suffixed present:", [i for i in ids if not i[-1].isdigit()], "(expect F055a, F085a)")
+    print("contiguous:", sorted(set(n))==list(range(1,208)), "(expect True over F001..F207)")
+    print("ticked:", sum(1 for r in rows if r[-1].strip()=="x"), "/", len(rows))
+    c=collections.Counter(r[2] for r in rows)
+    print(c, "sum", sum(c.values()), "(expect 209 over 10 types, incl. label 9)")
     s=importlib.util.spec_from_file_location("cp","check_pdf.py")
     cp=importlib.util.module_from_spec(s); s.loader.exec_module(cp)
     labs=cp._extract_labels(txt)
