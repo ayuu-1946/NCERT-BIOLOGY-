@@ -1,47 +1,74 @@
 # Frozen Inventory — Chapter 7: Human Health and Disease (Class XII)
 
-**Status: PASS 1 INCOMPLETE — Gate 1 NOT met.**
+**Status: PASS 1 COMPLETE — GATE 1 CLOSED (2026-08-23). Pass 2 not started.**
 
-This file currently holds the output of **session 1-F only** (figure extraction).
-It is a partial inventory, deliberately published in this state so that the work
-already done is durable and auditable. Four of the five mandatory Pass 1 sessions
-have **not** run. See "Session log" and "What is missing" below before using this
-file for anything.
+Source PDF: `Chapter/class 12/Chapter 7 - Human Health and Disease.pdf` (22 pages)
+| Frozen: 2026-08-23 | **Rows: 346 (`F001`..`F346`, contiguous)**
 
-Source PDF: `Chapter/class 12/Chapter 7 - Human Health and Disease.pdf` (22 pages).
+All five mandatory Pass 1 sessions have run, each as its own session with its own
+machine-derived row count. Every count below was produced by re-parsing this
+finished file (`scratch/ch7_1z/derive_counts.py`), never by hand tally.
+
+**Gate 1 closed does not mean the chapter is done.** There is no script and no
+PDF yet; all 346 rows are deliberately unticked (ticking happens during Pass 2).
+Gates 2 and 3 are correctly still open. This chapter must not appear in any
+"done" tally.
+
+| Row block | Session | Count | IDs |
+|---|---|---|---|
+| Facts | 1-S | 276 | `F001`-`F276` |
+| Headings (`Type: heading`) | 1-H | 29 | `F277`-`F305` |
+| Openers (`Type: opener`) | 1-O | 28 | `F306`-`F333` |
+| Summary-unique folded in | 1-Z | 2 | `F334`-`F335` |
+| Figure-label matrix (`Type: label`) | 1-F / IDs by 1-Z | 11 | `F336`-`F346` |
+| **Total** | | **346** | `F001`-`F346` |
+
+`276 + 29 + 28 + 2 + 11 = 346`, which equals the highest ID and the parsed row
+count. 11 figures, 11 assets, all `mode=L`; 21 in-figure labels across the 4
+labelled plates.
 
 ---
 
 ## Session log — Pass 1
 
-| Session | Scope | State |
-|---|---|---|
-| **1-F** | Figures: census, rect pinning, extraction, three-part audit, label matrix | **complete** (2026-08-23) |
-| 1-S | Source read + Facts inventory (`F###` rows) | **not started** |
-| 1-H | Structural census (heading sweep) | **not started** |
-| 1-O | Section-opener census | **not started** |
-| 1-Z | Independent re-verification / count derivation | **not started** |
+| Session | Scope | State | Rows added |
+|---|---|---|---|
+| **1-S** | Source read + Facts inventory (steps 1, 2, 3) | **complete** | 276 (`F001`-`F276`) |
+| **1-H** | Structural census (heading sweep, step 4) | **complete** | 29 (`F277`-`F305`) |
+| **1-O** | Section-opener census (step 5) | **complete** | 28 (`F306`-`F333`) |
+| **1-F** | Figures: census, rect pinning, extraction, five-part audit, label matrix (step 6) | **complete** (2026-08-23) | 11 matrix rows (IDs assigned by 1-Z) |
+| **1-Z** | Exercise-gap scan, summary classification, freeze, count derivation (steps 7-10) | **complete** (2026-08-23) | 2 (`F334`-`F335`) |
 
 Session 1-F was executed across two sittings. The first (previous chat) pinned the
 rects, ran the audit and reviewed a contact sheet, but **ran out of budget before
 writing any inventory file** and did not commit its audit script. The second
-(this session) rebuilt the environment, re-derived every machine claim from
-scratch, re-opened all 11 assets, and wrote this file.
+rebuilt the environment, re-derived every machine claim from scratch, re-opened
+all 11 assets, and wrote this file.
 
-### What is missing
+### Correction log — what session 1-Z changed
 
-`§6` requires Pass 1 to span **five** sessions, each with its own machine-derived
-row count. Gate 1 cannot be claimed until 1-S, 1-H, 1-O and 1-Z have each run as
-their own session. Specifically absent from this file:
+Per `§6` rule 5, a frozen inventory may be corrected in its **metadata**, never in
+its rows. 1-Z changed **four metadata items and zero Facts rows**:
 
-- the **Facts table** (`F###` rows) — the substance of the chapter
-- **Header counts** and the step-10 **count derivation**
-- **Structural census** (headings) and **opener census**
-- **Summary classification** (BODY-PRESENT vs SUMMARY-UNIQUE)
-- **Exercise-gap terms**
-- any **Gate 1 checklist**
+1. **This status header.** It previously read "PASS 1 INCOMPLETE — Gate 1 NOT met"
+   and "holds the output of session 1-F only", listing 1-S/1-H/1-O/1-Z as "not
+   started". That was accurate when 1-F wrote it, but 1-S, 1-H and 1-O had since
+   run and appended their censuses **without updating the header** — so the file
+   contradicted its own contents. Rewritten to match the table it sits above.
+2. **The 1-S type distribution** (see that section). Its transcribed numbers summed
+   to **307 across a claimed 276 rows** — arithmetically impossible — and 12 of its
+   14 values disagreed with a re-parse. 1-S had explicitly instructed 1-Z to re-run
+   the parse rather than trust the transcription; doing so is what caught it.
+3. **The obsolete "What is missing" blocker section**, removed. An obsolete blocker
+   is worse than none: it instructs the next session to redo closed work.
+4. **The Gate 1 checklist**, added at the end of this file.
 
-Do not treat the figure work below as evidence that the chapter is inventoried.
+**Verified, not assumed:** `F334`'s SUMMARY-UNIQUE classification was challenged and
+**upheld**. A body probe hits "a state of complete physical, mental and social
+well-being" at `F006`, which looks like a match — but the summary's wording adds
+**"psychological"** to that list, and that added qualifier is precisely what `F334`
+records. This is a Rule 4 qualifier distinction, and the row's parenthetical
+already stated it correctly.
 
 ---
 
@@ -440,16 +467,29 @@ obligations, not label-coverage obligations.
 ### Session 1-S row count (machine-derived)
 
 Parsed from the finished table by `scratch/ch7_1s/count_rows.py`, not tallied by
-hand: **276 rows, `F001`..`F276`, contiguous, no gaps, no duplicates.** Type
-distribution over the 12 normalized values, also machine-derived:
+hand: **276 rows, `F001`..`F276`, contiguous, no gaps, no duplicates.** Row count
+re-confirmed by session 1-Z.
 
-`fact` 100, `prevention` 22, `term` 40, `example` 22, `symptom` 20, `mechanism` 20,
-`figure-text` 18, `process` 13, `transmission` 10, `diagnosis` 9, `cause` 12,
-`treatment` 7, `number` 9, `structure` 5.
+**Type distribution over the 14 values used in this block — corrected by session
+1-Z** (`scratch/ch7_1z/derive_counts.py`, restricted to `F001`..`F276`):
 
-The authoritative numbers are whatever `count_rows.py` prints against the file as
-committed; the list above is a transcription of that output and 1-Z must re-run
-the parse rather than trust it.
+`fact` 86, `term` 45, `example` 23, `prevention` 19, `figure-text` 18,
+`mechanism` 14, `symptom` 14, `process` 11, `diagnosis` 10, `cause` 9,
+`transmission` 9, `number` 7, `treatment` 7, `structure` 4.
+
+These sum to **276**, matching the row count.
+
+**History — why this was corrected.** 1-S originally transcribed the distribution
+as `fact` 100, `prevention` 22, `term` 40, `example` 22, `symptom` 20,
+`mechanism` 20, `figure-text` 18, `process` 13, `transmission` 10, `diagnosis` 9,
+`cause` 12, `treatment` 7, `number` 9, `structure` 5, and described it as "the 12
+normalized values" while listing 14. Those figures **sum to 307 over a block of
+276 rows**, so they could not all have been right, and 12 of the 14 disagreed with
+a re-parse. Only `figure-text` (18) and `treatment` (7) were correct. 1-S itself
+recorded that "the authoritative numbers are whatever `count_rows.py` prints
+against the file as committed... and 1-Z must re-run the parse rather than trust
+it" — running it is what surfaced this. The row data was never wrong; only the
+tally about it was, so no Facts row was touched (`§6` rule 5).
 
 ### What 1-S deliberately did not inventory
 
@@ -649,6 +689,99 @@ This is a **finding, not a row** (`§6` step 10: "a structural finding is not a
 row"), so it is deliberately not counted in the 28. **Pass 2 obligation:** the
 notes must keep the Widal-test definition adjacent to the Typhoid Mary anecdote
 rather than reproducing NCERT's split, which reads as a non-sequitur.
+
+---
+
+## Summary classification — session 1-Z (step 8)
+
+The NCERT summary is a **second source document**, not a recap to skip. It runs
+from the `SUMMARY` heading on page 21 (block `y0=469.7`) and continues at the top
+of page 22 above `EXERCISES` (`y=288.2`).
+
+**Sentence count: 18, machine-derived** by `scratch/ch7_1z/summary_sentences.py`.
+
+**Extraction note — a trap this chapter really does contain.** A plain
+`get_text()` on page 21 returns the summary **spliced with five paragraphs of
+§7.5.4's body prose**, because pymupdf emits that page's blocks out of visual
+order. The script therefore selects by *block geometry*, not emission order. A
+first attempt selected spans by an x-band derived from the `SUMMARY` heading's own
+`x0` (185.5) and silently dropped the summary's entire first half, yielding 8
+sentences whose first read *"Plasmodium falciparum , if not afforded by
+vaccination and immunisation."* — a spliced non-sentence. That nonsense is what
+exposed the bug. Anyone re-deriving this count must confirm sentence 1 reads
+"Health is not just the absence of disease."; if it does not, the extraction is
+wrong, not the count.
+
+| # | Summary sentence (abridged) | Classification | Folded into |
+|---|---|---|---|
+| 1 | "Health is not just the absence of disease." | BODY-PRESENT | `F006` |
+| 2 | "It is a state of complete physical, mental, social and **psychological** well-being." | **SUMMARY-UNIQUE** | `F334` (new row) |
+| 3 | "Diseases like typhoid, **cholera**, pneumonia, fungal infections of skin, malaria..." | **SUMMARY-UNIQUE** | `F335` (new row) |
+| 4 | "Vector-borne diseases like malaria especially one caused by *P. falciparum*, if not treated, may prove fatal." | BODY-PRESENT | `F036`, `F037` |
+| 5 | "...public health measures like proper disposal of waste, decontamination of drinking water, control of vectors..." | BODY-PRESENT | `F011`, `F067`, `F068` |
+| 6 | "Our immune system plays the major role in preventing these diseases..." | BODY-PRESENT | `F080` |
+| 7 | "The innate defences of our body like skin, mucous membranes, antimicrobial substances... tears, saliva and the phagocytic cells..." | BODY-PRESENT | `F084`, `F085`, `F086` |
+| 8 | "...specific antibodies (humoral immune response) and cells (cell mediated immune response) serve to kill these pathogens." | BODY-PRESENT | `F096`, `F097` |
+| 9 | "Immune system has memory." | BODY-PRESENT | `F088`, `F112` |
+| 10 | "On subsequent exposure to same pathogen, the immune response is rapid and more intense." | BODY-PRESENT | `F112` |
+| 11 | "This forms the basis of protection afforded by vaccination and immunisation." | BODY-PRESENT | `F317` |
+| 12 | "Among other diseases, AIDS and cancer kill a large number of individuals worldwide." | BODY-PRESENT | `F016`, `F146`, `F177` |
+| 13 | "AIDS caused by the human immuno-deficiency virus (HIV) is fatal but can be prevented if certain precautions are taken." | BODY-PRESENT | `F147`, `F161`, `F162` |
+| 14 | "Many cancers are curable if detected early and appropriate therapeutic measures are taken." | BODY-PRESENT | `F192` |
+| 15 | "Of late, drug and alcohol abuse among youth and adolescents is becoming another cause of concern." | BODY-PRESENT | `F206` |
+| 16 | "Because of the addictive nature... perceived benefits like relief from stress... peer pressure, examinations-related and competition-related stresses." | BODY-PRESENT | `F233`, `F242`, `F330` |
+| 17 | "In doing so, he/she may get addicted to them." | BODY-PRESENT | `F248` |
+| 18 | "Education about their harmful effects, counselling and seeking immediate professional and medical help..." | BODY-PRESENT | `F273`, `F276` |
+
+**16 BODY-PRESENT + 2 SUMMARY-UNIQUE = 18**, matching the machine count.
+
+Both SUMMARY-UNIQUE facts were folded into body rows **before** the freeze, as
+Rule 3 requires. Note that sentence 2's uniqueness is a **single qualifier word**:
+the body's definition of health at `F006` reads "physical, mental and social
+well-being" and the summary adds **"psychological"**. Implied does not count and
+near-identical does not count — only explicit statement does, which is why this
+is a body addition and not a skipped recap. Sentence 3's uniqueness is the single
+disease name **cholera**, which appears nowhere in the body (0 hits across pages
+4-21).
+
+---
+
+## Exercise-gap terms — session 1-Z (step 7)
+
+All **17** exercises on page 22 were read and each term/fact they assume was
+checked against the body. Grep located candidates; every verdict below was then
+confirmed by **reading the surrounding body text**, since a paraphrase counts as
+body-present and a keyword count cannot establish that.
+
+| Term/fact assumed by exercises | Ex # | Explained where |
+|---|---|---|
+| Public health measures | 1 | Body — `F067`, `F068`, `F069`, `F011` |
+| Role of biology in disease control (vaccines, antibiotics, smallpox eradication) | 2 | Body — `F073`-`F079` block |
+| Transmission of Amoebiasis / Malaria / Ascariasis / Pneumonia | 3 | Body — `F053`, `F062`, `F057`, `F029` |
+| **"Water-borne diseases"** as a named grouping | 4 | **Gap (terminology).** NCERT gives the *measures* (`F067`-`F069`) and names typhoid, amoebiasis and ascariasis as transmitted "through food and water", but never uses the phrase "water-borne" — it only ever writes "air-borne" (`F070`) and "vector-borne". **Plan:** state the water-borne grouping explicitly where `F067`-`F069` are written up, naming which of this chapter's diseases belong to it, so the exercise's phrasing is answerable without inventing content. |
+| **"DNA vaccines"** and **"a suitable gene"** | 5 | **Gap (genuine).** Zero occurrences of "DNA vaccine" or "suitable gene" anywhere in the chapter body. The nearest content is `F115`/`F116` — recombinant-DNA-technology vaccines, e.g. hepatitis B produced from yeast — which is a *different* vaccine class. NCERT's own question says "Discuss with your teacher", conceding the chapter does not cover it, and Rule 5 forbids importing the mechanism from Chapter 10 or from outside knowledge. **Plan:** a **Terms used in the exercises** appendix entry that states exactly what this chapter does support (recombinant antigenic polypeptides, `F115`-`F116`) and flags that the DNA-vaccine mechanism itself is out of this chapter's scope. Do not silently fold an invented explanation into the main text. |
+| Primary and secondary lymphoid organs | 6 | Body — `F134`, `F135`, `F136` |
+| MALT | 7a | Body — `F143` |
+| CMI | 7b | Body — `F097` |
+| AIDS (expansion) | 7c | Body — `F322` / §7.3 opener |
+| NACO | 7d | Body — `F165` |
+| HIV (expansion) | 7e | Body — `F147` |
+| Innate vs acquired immunity, with examples | 8a | Body — `F081`, `F083`, `F286` |
+| Active vs passive immunity, with examples | 8b | Body — `F104`-`F109` |
+| Labelled antibody diagram | 9 | Figure 7.4 + labels `F339`; structure at `F092`-`F094` |
+| Routes of HIV transmission | 10 | Body — `F148`, `F149` |
+| Mechanism of HIV immune deficiency | 11 | Body — `F153`-`F158` |
+| Cancerous vs normal cell (contact inhibition) | 12 | Body — `F180`, `F182`, `F184` |
+| Metastasis | 13 | Body — `F186` |
+| Harmful effects of alcohol/drug abuse | 14 | Body — `F243`-`F254` |
+| Peer influence and protecting oneself | 15 | Body — `F242`, `F272` |
+| Why quitting is hard (addiction/dependence) | 16 | Body — `F233`, `F248`, `F330` |
+| What motivates youngsters; how to avoid | 17 | Body — `F236`-`F242`, `F270`-`F276` |
+
+**Verdict: 2 gaps out of 17 exercises** — one genuine content gap (Ex 5, DNA
+vaccines) and one terminology gap (Ex 4, "water-borne"). Every other exercise is
+answerable from rows already in the freeze. Both gaps have a planned home, which
+is what Gate 1 requires; writing them is Pass 2's job.
 
 ---
 
@@ -871,14 +1004,88 @@ vs the rect's bottom at 302). It is a rule, not text, and carries no content.
 
 ---
 
+## Gate 1 checklist — CLOSED 2026-08-23 (session 1-Z)
+
+Every box below was verified by running something, not by reading the file.
+The deriving script is `scratch/ch7_1z/derive_counts.py`; it exits 0.
+
+- [x] **Every fact has a Facts row; every in-figure label has a matrix row.**
+      346 rows, `F001`..`F346`. 11 matrix rows, one per asset.
+- [x] **Labels harvested by opening each rendered asset**, not by text sweep.
+      A text sweep returns **0** labels for this chapter — every callout is
+      artwork — so a thin label set here would have meant a wrong method, not an
+      unlabelled chapter. All 11 assets were opened individually at full size.
+      21 labels across the 4 labelled plates.
+- [x] **Inventory validated by `check_pdf.py`'s own `_extract_labels`.** Imported
+      the real function from the repo-root linter (not a reimplementation) and ran
+      it against this file: **21 labels / 4 figures** (`Fig 7.1` 7, `Fig 7.4` 3,
+      `Fig 7.5` 3, `Fig 7.6` 8). **No doubling** (no label string parsed twice)
+      and **no phantom `Fig #` row** from a markdown separator — the Ch12 trap was
+      checked and **did not fire**. The 7 unlabelled matrix rows are worded to
+      avoid the semicolon fallback and contribute 0 labels by design.
+- [x] **Every count matches a re-parse; IDs contiguous.** `F001`..`F346`, no gaps,
+      no duplicates, row count == highest ID. Block totals
+      `276 + 29 + 28 + 2 + 11 = 346`. Each census total equals the length of the
+      list beside it (`16 + 13 = 29` headings).
+- [x] **`Type` column single-cased.** 17 distinct values, all lowercase; no value
+      split across casings (the Ch13 `caption`/`Caption` defect does not recur).
+- [x] **Every heading has a row, including unnumbered sub-headings.** 29 rows =
+      16 numbered + 13 unnumbered, walked as their own list in session 1-H. The
+      four innate-immunity barrier heads are included despite the source setting
+      (i)-(iii) in regular italic and (iv) in bold italic — the Ch9 D4 failure mode.
+- [x] **Every section opener has a row.** 28 rows from session 1-O.
+- [x] **All five Pass 1 sessions actually ran, each reporting its own
+      machine-derived count.** 1-S 276, 1-H 29, 1-O 28, 1-F 11 matrix rows, 1-Z 2.
+- [x] **Every figure `Mono: yes` / `Verified: yes`.** 11/11 assets `mode=L`;
+      five-part crop audit (A word-grazing, B drawings-extent, B2 raster-extent,
+      B3 raster-tile union, C/C2 border ink) recorded below with every overflow
+      explained by coordinate.
+- [x] **Every exercise-gap term has a planned home** (2 gaps of 17 exercises) and
+      **every SUMMARY-UNIQUE fact is folded into a body row** (`F334`, `F335`).
+- [x] **Inventory file saved to the chapter folder.**
+
+**Gate 1 is closed. Gates 2 and 3 remain open.** No script, no PDF, 0 of 346 rows
+ticked. `check_pdf.py` cannot be run against this chapter yet — there is no PDF —
+and check 6 cannot pass meaningfully until Pass 2 writes running text for the 21
+labels to be found in. This chapter is **not** done and must not be counted as such.
+
+---
+
 ## Carry-over to later sessions
 
-1. **1-S must create the Facts table**, and must cover the 14 process-arrow
-   sentences in figs 7.1 and 7.6 plus the three unquoted label sets listed above.
-2. **1-Z must assign `F###` IDs** to the 11 label-matrix rows and reconcile them.
-3. **`check_pdf.py` check 6 cannot pass meaningfully until 1-S exists** — there is
-   no running text yet for the 21 parsed labels to be found in.
-4. The `extract_figures.py` docstring's stale fig 7.10 overflow numbers
-   (`L2.8/T14.3/R7.6`, measured against the superseded rect) should be corrected
-   to `L4.8/T9.3/R11.6` when that file is next touched, so a future session does
-   not mistake the mismatch for a regression.
+Numbered and cumulative. Items 1-2 are **closed**; the rest are live obligations
+for Pass 2 or later, kept here so they are not rediscovered.
+
+1. ~~1-S must create the Facts table, covering the 14 process-arrow sentences in
+   figs 7.1/7.6 and the three unquoted label sets.~~ **Closed** — 1-S wrote
+   `F001`-`F276`, including the `figure-text` rows (18 of them).
+2. ~~1-Z must assign `F###` IDs to the 11 label-matrix rows.~~ **Closed** —
+   `F336`-`F346`, contiguous with the rest of the file.
+3. **`check_pdf.py` check 6 needs running text.** The 21 parsed labels must each
+   appear in the notes' prose. Highest-risk rows: `Fig 7.6`'s 8 labels
+   (retrovirus replication) and `Fig 7.1`'s 7 (Plasmodium life cycle) — these are
+   exactly defects 5-6 from the Ch9 post-mortem, so write the label words into the
+   running text as each figure is placed, not afterwards.
+4. **`extract_figures.py` docstring holds stale fig 7.10 overflow numbers**
+   (`L2.8/T14.3/R7.6`, measured against the superseded rect `348,224,460,366`).
+   Correct to `L4.8/T9.3/R11.6` when that file is next touched, so a future
+   session does not read the mismatch as a regression. Cosmetic — deliberately
+   **not** fixed during a freeze-closing session.
+5. **Pass 2 must keep the Widal-test definition adjacent to the Typhoid Mary
+   anecdote.** NCERT splits them: the definition sits in the prose *above* the
+   "Widal test" run-in head while the opener under that head pivots straight to
+   Mary Mallon (structural finding at `F308`). Reproducing the split reads as a
+   non-sequitur.
+6. **Ex 5 (DNA vaccines) must go in the "Terms used in the exercises" appendix,
+   not the main text.** Rule 5 forbids importing the mechanism from Chapter 10.
+   State only what `F115`-`F116` support and mark the rest out of scope.
+7. **Ex 4 needs the "water-borne" grouping named explicitly** where `F067`-`F069`
+   are written up. NCERT itself only ever writes "air-borne" and "vector-borne".
+8. **Do not render `H2L2` (`F094`) with a caret or Unicode subscript.** Antibody
+   notation must stay flat text or `check_pdf.py` check 5 (banned glyphs) fails.
+   The same applies to `α-interferon` (`F205`) — write "alpha-interferon".
+9. **Figure 7.4's QR thumbnail on page 3 must stay excluded.** It re-prints the
+   antibody artwork and carries no fact of its own; embedding it would duplicate
+   `fig_7_4`.
+10. **The Swaminathan portrait (page 2) is a hard no** under `§5` item 3 / `§4.4`,
+    greyscaled or not. `check_pdf.py` check 4 would WARN on it.
