@@ -467,6 +467,31 @@ Counts are restated in exactly three places in this file — the header table, t
 two census sections, and the Gate 1 checklist below. Any correction must be applied
 to all live restatements in one edit and the parse re-run.
 
+**Independent Gate 1 re-derivation (2026-08-24) — no numbers changed.** Per the Gate 1
+Closure rule that a predecessor's findings are claims to re-derive rather than results
+to apply, every count above was re-parsed from this file by a fresh audit that trusted
+nothing written in it: `scratch/ch8_gate1_reaudit/audit.py`, run as
+`/vercel/share/neetenv/bin/python scratch/ch8_gate1_reaudit/audit.py`. The venv was
+**absent at session start** (§0.2 — it never survives a session boundary) and was
+rebuilt before anything was diagnosed. Result: **52 / 52 assertions green, zero
+corrections needed** (assertion count itself machine-counted from the run, not stated
+by hand). Reproduced independently: 200 Facts rows, 9 matrix rows, 209
+total, `F001..F207` contiguous with zero gaps and zero duplicates, `F055a`/`F085a` the
+only suffixed IDs, 0 unticked, type census `fact 97, name 29, term 19, heading 15,
+opener 14, caption 8, question 7, crossref 6, number 5` with every `Type` value inside
+the normalized lowercase vocabulary, 18 summary sentences (16 + 2), 4 exercise-gap
+terms each with a home, 9 manifest rows all `Mono: yes`/`Verified: yes` matching 9
+PNGs on disk all in `PIL` mode `L`, and both censuses equal to the length of their own
+ID lists *and* to the row-derived counts (heading `9 + 6 = 15`, opener `14`), with every
+census ID confirmed to be a real row of that type. `check_pdf.py`'s own
+`_extract_labels` was re-run against this file: **17 labels across 5 parsed figure
+rows, no doubling, no phantom `Fig #` row**, with `F203`-`F206` invisible to the parser
+as designed — the Ch12 trap is documented here but **did not fire**, confirmed by
+execution rather than inherited as a finding. One roll-up defect was found *outside*
+this chapter and fixed in the same session: `CHAPTER_TRACKER.md`'s Class 12 footer read
+"5 / 13" against a machine-counted **6 / 13** (Ch8's own closure never propagated to
+it) — the silent-increment drift, not a Ch8 content defect.
+
 ---
 
 ## Gate 1 checklist

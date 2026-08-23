@@ -122,4 +122,6 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | 12. Ecosystem | ✅ Done |
 | 13. Biodiversity and Conservation | ✅ Done |
 
-**Class 12 total: 5 / 13 done** — Units IX and X are both complete
+**Class 12 total: 6 / 13 done** — Units IX and X are both complete
+
+**Count-correction note (2026-08-24, Ch8 Gate 1 re-derivation session):** this footer previously read "5 / 13" while the document header read "Class 12: 6/13". Counting the ✅ rows in the table above returns **6** (Ch8, Ch9, Ch10, Ch11, Ch12, Ch13), so the header was right and this footer was a stale increment — Ch8's closure was recorded in the header and in its own row but never propagated here. Re-derived by machine (`grep`/parse of the ✅ rows per class section), never incremented: Class 11 **6 / 19**, Class 12 **6 / 13**, total **12 / 32**.

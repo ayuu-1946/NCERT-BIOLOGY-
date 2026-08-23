@@ -94,8 +94,9 @@ tail — the prose sweep runs **pp. 3–11**.
 | 7 | Pass 3 session 1 | 3(a) visual + 3(b) direction 1 | ✅ **done** | 12/12 PDF pages and 9/9 assets inspected; all 207 rows checked present-and-faithful in the PDF |
 | 8 | Pass 3 session 2 | 3(b) direction 2, Gate 3 | ✅ **done** | source pp. 3–11 read start to finish under the grep prohibition; **3 defects found and fixed**; 2 rows added (`F055a`, `F085a`) → **209 rows / 200 Facts**; Gate 3 CLOSED |
 | 9 | Closure | atomic doc reconciliation | ✅ **done** | Gate 2 re-verified from disk (200/200 ticked, exit 0); all three trackers brought onto the post-Pass-3 counts in one edit |
+| 10 | Gate 1 re-derivation (2026-08-24) | audit only — no content authority | ✅ **done** | venv rebuilt (absent again at session start); `scratch/ch8_gate1_reaudit/audit.py` re-parsed every Gate 1 number from the frozen file, trusting nothing written in it — **52 / 52 assertions green, 0 corrections to this chapter**; `check_pdf.py` re-run from disk (0 fail / 1 inspected WARN, 200/200 ticked, 17/17 labels in text). One defect found **outside** the chapter: `CHAPTER_TRACKER.md`'s Class 12 footer read 5 / 13 against a machine-counted 6 / 13 — fixed |
 
-**All nine sessions ran and each reported its own machine-derived count**, which
+**All nine build sessions ran and each reported its own machine-derived count**, which
 is itself a Gate 1 criterion. Every count above was re-parsed from the finished
 inventory file, not tallied by hand — see "Gate 1 validation" below.
 
@@ -298,6 +299,49 @@ stale-claim sweep returned zero live survivors, and the full re-parse was re-run
 against the finished file. **No frozen row was touched and no count of rows,
 headings, openers, labels or assets changed** — the underlying inventory was
 correct throughout; only its description of the parser's output was wrong.
+
+### Gate 1 re-derivation #2 (2026-08-24) — post-Pass-3 state, clean
+
+The re-validation above ran against the **pre-Pass-3** inventory (207 rows / 198
+Facts, all rows unticked). It has now been re-run against the **current** file, so
+the post-Pass-3 counts are independently verified too and no criterion rests on a
+verdict carried forward across the Pass 3 edits.
+
+Audit: `scratch/ch8_gate1_reaudit/audit.py`, written fresh rather than reused, and
+deliberately structured as *derived vs claimed* on every line so a green run is
+evidence and not a restatement. It imports `check_pdf.py`'s real `_extract_labels`
+instead of reimplementing it. `/vercel/share/neetenv` was **absent again** at
+session start — the third consecutive session to find it gone, which is the
+expected state, not an anomaly — and was rebuilt first, before any diagnosis
+(reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0 on CPython 3.13.11).
+
+**Result: 52 / 52 assertions PASS, zero corrections to this chapter.** Verified
+independently: 200 Facts + 9 matrix = 209 rows; `F001`..`F207` contiguous, zero
+gaps, zero duplicates; `F055a`/`F085a` the only suffixed IDs; **0 unticked**; type
+census `fact 97, name 29, term 19, heading 15, opener 14, caption 8, question 7,
+crossref 6, number 5`, all inside the 10-value lowercase vocabulary; 17 labels
+across 5 parsed figure rows with no doubling and no phantom `Fig #` row, and the
+per-figure distribution `8.1:2, 8.2(a):6, 8.2(c):1, 8.3:1, 8.8:7` matching the
+matrix row by row; 18 summary sentences (16 + 2) with `F195`/`F196` confirmed to
+exist as real rows; 4 exercise-gap terms each with a home; 9 manifest rows all
+`Mono: yes`/`Verified: yes`, filenames matching the 9 PNGs on disk, all `mode=L`.
+Both censuses were checked against *their own lists and the rows*: heading
+`9 + 6 = 15` and opener `14`, with every census ID confirmed to be a real row of
+that type in both directions (no census-only IDs, no row-only IDs). `check_pdf.py`
+re-run from disk: 0 fail, 1 accepted WARN, 200/200 ticked, 17/17 labels in text.
+
+**The Ch12 label trap is documented in this chapter and did not fire.** Executing
+the parser is the only way to know that, and it was executed — a warning carried
+forward describes a risk, never a finding.
+
+**The one defect found was outside this chapter.** `CHAPTER_TRACKER.md`'s Class 12
+footer read "5 / 13" while its own header read "6/13"; counting the ✅ rows returns
+**6**, so Ch8's own closure had been recorded in the header and in its row but never
+propagated to the footer. Fixed with the corrected value plus a history note, and
+the roll-ups were re-derived by parsing rows per class section rather than
+incremented: Class 11 **6 / 19**, Class 12 **6 / 13**, total **12 / 32**. This is
+exactly the silent-drift class the closure rules predict, and it appeared without
+anyone touching Ch8.
 
 Re-derive with:
 
