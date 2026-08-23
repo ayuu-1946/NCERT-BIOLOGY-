@@ -128,6 +128,8 @@ obligations, not label-coverage obligations.
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
+| F001a | intro | term | "Health, for a long time, was considered as a state of body and mind where there was a balance of certain 'humors'." (**ADDED IN PASS 3(b) — defect D1, a real Pass 1 gap, NOT back-dated into the freeze.** Direction 2 found this had no row at all: it is the section's antecedent/defining sentence, and without it the "good humor" hypothesis that `F003` disproves is never stated. Ch9 `D9` profile.) | x |
+| F001b | intro | fact | "This is what early Greeks like Hippocrates as well as Indian Ayurveda system of medicine asserted." (**ADDED IN PASS 3(b) — defect D1, a real Pass 1 gap.** Names the two traditions that asserted the humors idea; absent from the frozen inventory entirely, and "Hippocrates"/"Ayurveda" returned 0 hits in the delivered PDF.) | x |
 | F001 | intro | fact | "It was thought that persons with 'blackbile' belonged to hot personality and would have fevers. This idea was arrived at by pure reflective thought." | x |
 | F002 | intro | fact | "The discovery of blood circulation by William Harvey using experimental method" | x |
 | F003 | intro | fact | "the demonstration of normal body temperature in persons with blackbile using thermometer disproved the 'good humor' hypothesis of health" | x |
@@ -360,6 +362,7 @@ obligations, not label-coverage obligations.
 | F230 | 7.5 | fact | "Tobacco chewing is associated with increased risk of cancer of the oral cavity." | x |
 | F231 | 7.5 | mechanism | "Smoking increases carbon monoxide (CO) content in blood and reduces the concentration of haembound oxygen. This causes oxygen deficiency in the body." | x |
 | F232 | 7.5 | fact | "When one buys packets of cigarettes one cannot miss the statutory warning that is present on the packing which warns against smoking and says how it is injurious to health." | x |
+| F232a | 7.5 | fact | "Yet, smoking is very prevalent in society, both among young and old." (**ADDED IN PASS 3(b) — defect D2, a real Pass 1 gap, NOT back-dated into the freeze.** Direction 2 found this sentence, which sits between `F232` and `F233` in the source, had no row at all; "prevalent" returned 0 hits in the delivered PDF. It is the contrastive "Yet" that makes `F233`'s advice follow — the warning exists, the habit persists anyway.) | x |
 | F233 | 7.5 | fact | "Knowing the dangers of smoking and chewing tobacco, and its addictive nature, the youth and old need to avoid these habits. Any addict requires counselling and medical help to get rid of the habit." | x |
 | F234 | 7.5.1 | number | "The period between 12-18 years of age may be thought of as adolescence period." | x |
 | F235 | 7.5.1 | term | "In other words, adolescence is a bridge linking childhood and adulthood." | x |

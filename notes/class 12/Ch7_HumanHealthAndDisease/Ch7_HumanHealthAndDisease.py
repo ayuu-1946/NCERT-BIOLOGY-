@@ -101,6 +101,18 @@ story.append(body(
 story.append(gap())
 
 story.append(heading("7.0", "How the idea of health was arrived at", 2))
+# [VERIFICATION FIX - Gate 3(b) defect D1, UNINVENTORIED] F001a, F001b.
+# Pass 3(b) direction 2 found that the section's own two antecedent sentences - the old
+# definition of health ('balance of certain humors') and who asserted it (Hippocrates /
+# Indian Ayurveda) - had NO inventory row at all, so direction 1 was structurally blind
+# to them. Without them the 'blackbile' sentence below opens on an undefined idea and
+# the 'good humor' hypothesis it is later said to disprove is never stated. This is the
+# Ch9 D9 profile (a dropped defining/antecedent sentence) and is logged as a real Pass 1
+# gap, not back-dated into the freeze.
+story.append(body(
+    "<b>Health, for a long time, was considered as a state of body and mind where there was a "
+    "balance of certain 'humors'.</b> This is what <b>early Greeks like Hippocrates</b>, as well as "
+    "the <b>Indian Ayurveda system of medicine</b>, <b>asserted</b>."))
 # F001 - the 'blackbile' idea, arrived at by pure reflective thought
 story.append(body(
     "Early ideas about health were <b>not</b> experimental. It was thought that persons with "
@@ -1207,7 +1219,12 @@ story.append(gap())
 story.append(note(
     "When one buys packets of cigarettes one <b>cannot miss the statutory warning</b> that is "
     "present on the packing, which <b>warns against smoking and says how it is injurious to "
-    "health</b>. <b>Knowing the dangers of smoking and chewing tobacco, and its addictive nature, "
+    "health</b>. "
+    # [VERIFICATION FIX - Gate 3(b) defect D2, UNINVENTORIED] F232a. Pass 3(b) direction 2
+    # found NCERT's contrast sentence had no inventory row: it is the 'Yet' that makes the
+    # next sentence follow (warning exists, habit persists anyway, hence the advice).
+    "<b>Yet, smoking is very prevalent in society, both among young and old.</b> "
+    "<b>Knowing the dangers of smoking and chewing tobacco, and its addictive nature, "
     "the youth and old need to avoid these habits.</b> <b>Any addict requires counselling and "
     "medical help to get rid of the habit.</b>"))
 story.append(gap())
