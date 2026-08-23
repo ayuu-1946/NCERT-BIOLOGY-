@@ -455,4 +455,325 @@ story.append(b1(
     "<b>effectively treat infectious diseases</b>."))
 story.append(gap())
 
-# INSERTION_POINT_2
+# ======================================================================================
+# ---- 7.2 IMMUNITY (F280 heading, F309 opener, F079-F081) ----
+# ======================================================================================
+story.append(heading("7.2", "IMMUNITY", 1))
+# F309 (opener), F079
+story.append(body(
+    "<b>Everyday we are exposed to a large number of infectious agents.</b> However, <b>only a few "
+    "of these exposures result in disease</b>. Why? This is due to the fact that the <b>body is "
+    "able to defend itself from most of these foreign agents</b>."))
+# F080, F081
+story.append(keyterm(
+    "This <b>overall ability of the host to fight the disease-causing organisms, conferred by the "
+    "immune system, is called immunity</b>. Immunity is of <b>two types</b>: "
+    "<b>(i) Innate immunity</b> and <b>(ii) Acquired immunity</b>."))
+story.append(gap())
+
+# ---- 7.2.1 Innate Immunity (F281 heading, F310 opener, F082-F087; F282-F285 + F311-F314) ----
+story.append(heading("7.2.1", "Innate Immunity", 2, has_table=True))
+# F310 (opener)
+story.append(body(
+    "<b>Innate immunity is non-specific type of defence, that is present at the time of birth.</b>"))
+# F082, F083
+story.append(body(
+    "This is accomplished by <b>providing different types of barriers to the entry of the foreign "
+    "agents into our body</b>. <b>Innate immunity consists of four types of barriers.</b>"))
+# F282-F285 headings and F311-F314 openers, all four barriers as their own rows.
+# NCERT sets (i)-(iii) in light italic and (iv) in bold italic; all four are the same
+# structural level, so all four get a heading here (inventory 1-H class 3).
+story.append(heading("7.2.1 (i)", "Physical barriers", 3))
+# F084 = F311
+story.append(body(
+    "<b>Physical barriers:</b> <b>Skin</b> on our body is the <b>main barrier</b> which "
+    "<b>prevents entry of the micro-organisms</b>. <b>Mucus coating of the epithelium</b> lining "
+    "the <b>respiratory, gastrointestinal and urogenital tracts</b> also helps in <b>trapping "
+    "microbes</b> entering our body."))
+story.append(heading("7.2.1 (ii)", "Physiological barriers", 3))
+# F085 = F312
+story.append(body(
+    "<b>Physiological barriers:</b> <b>Acid in the stomach</b>, <b>saliva in the mouth</b>, "
+    "<b>tears from eyes</b> - <b>all prevent microbial growth</b>."))
+story.append(heading("7.2.1 (iii)", "Cellular barriers", 3))
+# F086 = F313
+story.append(body(
+    "<b>Cellular barriers:</b> Certain types of <b>leukocytes (WBC)</b> of our body like "
+    "<b>polymorpho-nuclear leukocytes (PMNL-neutrophils)</b> and <b>monocytes</b> and <b>natural "
+    "killer (type of lymphocytes)</b> in the blood, as well as <b>macrophages in tissues</b>, can "
+    "<b>phagocytose and destroy microbes</b>."))
+story.append(heading("7.2.1 (iv)", "Cytokine barriers", 3))
+# F087 = F314
+story.append(body(
+    "<b>Cytokine barriers:</b> <b>Virus-infected cells secrete proteins called interferons</b> "
+    "which <b>protect non-infected cells from further viral infection</b>."))
+story.append(gap())
+story.append(memory_aid(
+    "The four innate barriers in NCERT's own order read <b>P-P-C-C</b>: <b>P</b>hysical, "
+    "<b>P</b>hysiological, <b>C</b>ellular, <b>C</b>ytokine - skin first, then secretions, then "
+    "cells, then the proteins cells secrete."))
+story.append(gap())
+
+# ---- 7.2.2 Acquired Immunity (F286 heading, F315 opener, F088-F103) + Figure 7.4 ----
+story.append(heading("7.2.2", "Acquired Immunity", 2))
+# F315 (opener), F088
+story.append(body(
+    "<b>Acquired immunity, on the other hand, is pathogen specific.</b> It is characterised by "
+    "<b>memory</b>."))
+# F089, F090
+story.append(body(
+    "When our body encounters a pathogen for the <b>first time</b> it produces a response called "
+    "<b>primary response</b>, which is of <b>low intensity</b>. <b>Subsequent encounter with the "
+    "same pathogen</b> elicits a <b>highly intensified secondary or anamnestic response</b>. This "
+    "is ascribed to the fact that our body <b>appears to have memory of the first encounter</b>."))
+# F091, F092, F093
+story.append(body(
+    "The <b>primary and secondary immune responses</b> are carried out with the help of <b>two "
+    "special types of lymphocytes</b> present in our blood, i.e., <b>B-lymphocytes</b> and "
+    "<b>T-lymphocytes</b>. The <b>B-lymphocytes produce an army of proteins</b> in response to "
+    "pathogens into our blood to fight with them; these <b>proteins are called antibodies</b>. The "
+    "<b>T-cells themselves do not secrete antibodies</b> but <b>help B cells to produce them</b>."))
+story.append(gap())
+# F094 + the fig 7.4 obligations (F102 N/C termini, F103 S-S disulfide bridges) and
+# F339 labels, all in running text.
+story.append(keyterm(
+    "Each <b>antibody molecule</b> has <b>four peptide chains</b>: <b>two small called light "
+    "chains</b> and <b>two longer called heavy chains</b>. Hence, an antibody is represented as "
+    "<b>H<sub>2</sub>L<sub>2</sub></b>."))
+story.append(body(
+    "<b>Reading Figure 7.4:</b> the plate labels the two <b>Antigen binding site</b> regions at the "
+    "top of the Y, each <b>Light chain</b> on the outside and each <b>Heavy chain</b> in the middle. "
+    "Every chain is marked at its ends: <b>N</b> at the <b>amino terminus</b> and <b>C</b> at each "
+    "<b>carboxyl terminus</b>. The <b>S-S</b> marks are <b>disulfide bonds</b> - the two heavy "
+    "chains are held to each other, and each light chain to its heavy chain, by <b>disulfide "
+    "bonds</b>."))
+story.append(figure("fig_7_4.png", "Fig. 7.4 - Structure of an antibody molecule."))
+story.append(gap())
+# F095, F096, F097
+story.append(body(
+    "<b>Different types of antibodies</b> are produced in our body. <b>IgA</b>, <b>IgM</b>, "
+    "<b>IgE</b>, <b>IgG</b> are some of them."))
+story.append(data_table([
+    ["Type of acquired immune response", "Carried out by", "Why it is named so"],
+    ["<b>Humoral immune response</b> (antibody mediated)",
+     "<b>Antibodies</b> produced by <b>B-lymphocytes</b>",
+     "Because these <b>antibodies are found in the blood</b>. This is <b>one of the two types</b> "
+     "of our acquired immune response."],
+    ["<b>Cell-mediated immune response</b> or <b>cell-mediated immunity (CMI)</b>",
+     "<b>T-lymphocytes</b> mediate CMI",
+     "The <b>second type</b> - mediated by cells, not by antibodies in the blood."],
+], col_widths=[30, 26, 44]))
+story.append(gap())
+# F098, F099, F100, F101 - transplantation
+story.append(heading("7.2.2a", "Transplantation and graft rejection", 3))
+story.append(body(
+    "Very often, when some <b>human organs</b> like <b>heart, eye, liver, kidney</b> fail to "
+    "function satisfactorily, <b>transplantation is the only remedy</b> to enable the patient to "
+    "live a normal life."))
+story.append(b1(
+    "<b>Grafts from just any source</b> - an <b>animal</b>, <b>another primate</b>, or <b>any human "
+    "beings</b> - <b>cannot be made</b>, since the grafts would be <b>rejected sooner or later</b>."))
+story.append(b1(
+    "<b>Tissue matching</b> and <b>blood group matching</b> are <b>essential</b> before undertaking "
+    "any graft/transplant, and <b>even after this the patient has to take immuno-suppresants all "
+    "his/her life</b>."))
+story.append(b1(
+    "The body is able to <b>differentiate 'self' and 'nonself'</b>, and the <b>cell-mediated immune "
+    "response is responsible for the graft rejection</b>."))
+story.append(gap())
+
+# ---- 7.2.3 Active and Passive Immunity (F287 heading, F316 opener, F104-F109) ----
+story.append(heading("7.2.3", "Active and Passive Immunity", 2, has_table=True))
+# F316 (opener)
+story.append(body(
+    "When a <b>host is exposed to antigens</b>, which may be in the form of <b>living or dead "
+    "microbes or other proteins</b>, <b>antibodies are produced in the host body</b>."))
+# F104, F105, F106, F107
+story.append(data_table([
+    ["", "Active immunity", "Passive immunity"],
+    ["What it is",
+     "The immunity produced when the host itself makes antibodies after exposure to antigens.",
+     "When <b>ready-made antibodies are directly given</b> to protect the body against foreign "
+     "agents."],
+    ["Speed",
+     "<b>Slow</b> - <b>takes time to give its full effective response</b>.",
+     "Immediate protection, because the antibodies are already formed."],
+    ["How it is induced",
+     "<b>Injecting the microbes deliberately during immunisation</b>, or <b>infectious organisms "
+     "gaining access into body during natural infection</b>.",
+     "Antibodies made elsewhere are transferred in."],
+], col_widths=[16, 42, 42]))
+story.append(gap())
+# F108, F109
+story.append(b1(
+    "The <b>yellowish fluid colostrum</b> secreted by the mother during the <b>initial days of "
+    "lactation</b> has <b>abundant antibodies (IgA)</b> to <b>protect the infant</b>."))
+story.append(b1(
+    "The <b>foetus</b> also receives <b>some antibodies from their mother, through the placenta "
+    "during pregnancy</b>. These are some <b>examples of passive immunity</b>."))
+story.append(gap())
+
+# ---- 7.2.4 Vaccination and Immunisation (F288 heading, F317 opener, F110-F116) ----
+story.append(heading("7.2.4", "Vaccination and Immunisation", 2))
+# F317 (opener)
+story.append(body(
+    "The <b>principle of immunisation or vaccination</b> is based on the <b>property of 'memory' of "
+    "the immune system</b>."))
+# F110, F111, F112
+story.append(process_flow([
+    "In <b>vaccination</b>, a preparation of <b>antigenic proteins of pathogen</b> or "
+    "<b>inactivated/weakened pathogen</b> (<b>vaccine</b>) is introduced into the body.",
+    "The <b>antibodies produced in the body against these antigens</b> would <b>neutralise the "
+    "pathogenic agents during actual infection</b>.",
+    "The vaccines also <b>generate memory - B and T-cells</b> that <b>recognise the pathogen "
+    "quickly on subsequent exposure</b> and <b>overwhelm the invaders with a massive production of "
+    "antibodies</b>.",
+]))
+story.append(gap())
+# F113, F114
+story.append(body(
+    "If a person is infected with some <b>deadly microbes to which quick immune response is "
+    "required</b>, as in <b>tetanus</b>, we need to <b>directly inject the preformed antibodies</b>, "
+    "or <b>antitoxin</b> (a preparation containing antibodies to the toxin). Even in cases of "
+    "<b>snakebites</b>, the injection which is given to the patients <b>contains preformed "
+    "antibodies against the snake venom</b>. This type of immunisation is called <b>passive "
+    "immunisation</b>."))
+# F115, F116
+story.append(body(
+    "<b>Recombinant DNA technology</b> has allowed the <b>production of antigenic polypeptides of "
+    "pathogen in bacteria or yeast</b>. Vaccines produced using this approach allow <b>large scale "
+    "production</b> and hence <b>greater availability for immunisation</b>, e.g., <b>hepatitis B "
+    "vaccine produced from yeast</b>."))
+story.append(gap())
+
+# ---- 7.2.5 Allergies (F289 heading, F318 opener, F117-F126) ----
+story.append(heading("7.2.5", "Allergies", 2))
+# F318 (opener), F117
+story.append(body(
+    "When you have gone to a <b>new place</b> and suddenly you started <b>sneezing, wheezing</b> "
+    "for no explained reason, and when you went away your <b>symptoms disappeared</b> - some of us "
+    "are <b>sensitive to some particles in the environment</b>. The above-mentioned reaction could "
+    "be because of <b>allergy to pollen, mites</b>, etc., which are <b>different in different "
+    "places</b>."))
+# F118, F119, F120, F121
+story.append(keyterm(
+    "The <b>exaggerated response of the immune system to certain antigens present in the "
+    "environment</b> is called <b>allergy</b>. The <b>substances to which such an immune response "
+    "is produced are called allergens</b>. The <b>antibodies produced to these are of IgE type</b>."))
+story.append(b1(
+    "<b>Common examples of allergens:</b> <b>mites in dust</b>, <b>pollens</b>, <b>animal "
+    "dander</b>, etc."))
+# F122, F123
+story.append(b1(
+    "<b>Symptoms:</b> <b>sneezing</b>, <b>watery eyes</b>, <b>running nose</b> and <b>difficulty in "
+    "breathing</b>."))
+story.append(b1(
+    "<b>Cause:</b> allergy is due to the <b>release of chemicals like histamine and serotonin from "
+    "the mast cells</b>."))
+# F124, F125
+story.append(b1(
+    "<b>Determining the cause:</b> the patient is <b>exposed to or injected with very small doses "
+    "of possible allergens</b>, and the <b>reactions studied</b>."))
+story.append(b1(
+    "<b>Treatment:</b> the use of drugs like <b>anti-histamine</b>, <b>adrenalin</b> and "
+    "<b>steroids</b> <b>quickly reduce the symptoms of allergy</b>."))
+# F126
+story.append(note(
+    "<b>Modern-day life style</b> has resulted in <b>lowering of immunity</b> and <b>more "
+    "sensitivity to allergens</b> - <b>more and more children in metro cities of India suffer from "
+    "allergies and asthma</b> due to <b>sensitivity to the environment</b>. This could be because of "
+    "the <b>protected environment provided early in life</b>."))
+story.append(gap())
+
+# ---- 7.2.6 Auto Immunity (F290 heading, F319 opener, F127-F130) ----
+story.append(heading("7.2.6", "Auto Immunity", 2))
+# F319 (opener)
+story.append(body(
+    "<b>Memory-based acquired immunity evolved in higher vertebrates</b> based on the <b>ability to "
+    "differentiate foreign organisms (e.g., pathogens) from self-cells</b>."))
+# F127, F128, F129, F130
+story.append(body(
+    "While we <b>still do not understand the basis of this</b>, <b>two corollaries</b> of this "
+    "ability have to be understood:"))
+story.append(b1(
+    "<b>One</b>, <b>higher vertebrates can distinguish foreign molecules as well as foreign "
+    "organisms</b>. <b>Most of the experimental immunology deals with this aspect.</b>"))
+story.append(b1(
+    "<b>Two</b>, sometimes, due to <b>genetic and other unknown reasons</b>, the <b>body attacks "
+    "self-cells</b>. This results in <b>damage to the body</b> and is called <b>auto-immune "
+    "disease</b>."))
+story.append(body(
+    "<b>Rheumatoid arthritis</b>, which affects many people in our society, is an <b>auto-immune "
+    "disease</b>."))
+story.append(gap())
+
+# ---- 7.2.7 Immune System in the Body (F291 heading, F320 opener, F131-F144) ----
+story.append(heading("7.2.7", "Immune System in the Body", 2))
+# F320 (opener)
+story.append(body(
+    "The <b>human immune system consists of lymphoid organs, tissues, cells and soluble molecules "
+    "like antibodies</b>."))
+# F131, F132
+story.append(body(
+    "The <b>immune system is unique</b> in the sense that it <b>recognises foreign antigens</b>, "
+    "<b>responds to these</b> and <b>remembers them</b>. The immune system also plays an important "
+    "role in <b>allergic reactions</b>, <b>auto-immune diseases</b> and <b>organ "
+    "transplantation</b>."))
+story.append(gap())
+# F292 heading + F321 opener + F133-F136
+story.append(heading("7.2.7a", "Lymphoid organs", 3, has_table=True))
+story.append(keyterm(
+    "<b>Lymphoid organs:</b> These are the <b>organs where origin and/or maturation and "
+    "proliferation of lymphocytes occur</b>."))
+story.append(data_table([
+    ["Class", "Which organs", "What happens there"],
+    ["<b>Primary</b> lymphoid organs",
+     "<b>Bone marrow</b> and <b>thymus</b>",
+     "<b>Immature lymphocytes differentiate into antigen-sensitive lymphocytes.</b>"],
+    ["<b>Secondary</b> lymphoid organs",
+     "<b>Spleen</b>, <b>lymph nodes</b>, <b>tonsils</b>, <b>Peyer's patches of small intestine</b> "
+     "and <b>appendix</b>",
+     "After maturation the lymphocytes <b>migrate</b> here. They <b>provide the sites for "
+     "interaction of lymphocytes with the antigen</b>, which then <b>proliferate to become "
+     "effector cells</b>."],
+], col_widths=[22, 34, 44]))
+story.append(gap())
+# F137, F138, F139
+story.append(b1(
+    "<b>Bone marrow</b> is the <b>main lymphoid organ</b> where <b>all blood cells including "
+    "lymphocytes are produced</b>."))
+story.append(b1(
+    "The <b>thymus</b> is a <b>lobed organ</b> located <b>near the heart</b> and <b>beneath the "
+    "breastbone</b>. It is <b>quite large at the time of birth</b> but <b>keeps reducing in size "
+    "with age</b>, and <b>by the time puberty is attained it reduces to a very small size</b>."))
+story.append(b1(
+    "<b>Both bone-marrow and thymus provide micro-environments for the development and maturation "
+    "of T-lymphocytes.</b>"))
+# F140
+story.append(b1(
+    "The <b>spleen</b> is a <b>large bean-shaped organ</b>. It <b>mainly contains lymphocytes and "
+    "phagocytes</b>. It acts as a <b>filter of the blood</b> by <b>trapping blood-borne "
+    "micro-organisms</b>. Spleen also has a <b>large reservoir of erythrocytes</b>."))
+# F141, F142
+story.append(b1(
+    "The <b>lymph nodes</b> are <b>small solid structures</b> located at <b>different points along "
+    "the lymphatic system</b>. They serve to <b>trap the micro-organisms or other antigens</b> which "
+    "happen to <b>get into the lymph and tissue fluid</b>. <b>Antigens trapped in the lymph nodes "
+    "are responsible for the activation of lymphocytes present there and cause the immune "
+    "response.</b>"))
+# F340 - Figure 7.5's three labels in running text
+story.append(body(
+    "<b>Reading Figure 7.5:</b> the plate marks the <b>Lymph nodes</b> at points along the body, the "
+    "<b>Thymus</b> behind the breastbone, and the <b>Lymphatic vessels</b> that connect them."))
+story.append(figure("fig_7_5.png",
+                    "Fig. 7.5 - Diagrammatic representation of Lymph nodes.", max_width_cm=8.5))
+story.append(gap())
+# F143, F144
+story.append(keyterm(
+    "There is <b>lymphoid tissue also located within the lining of the major tracts</b> "
+    "(<b>respiratory, digestive and urogenital tracts</b>) called <b>mucosa-associated lymphoid "
+    "tissue (MALT)</b>. It constitutes <b>about 50 per cent of the lymphoid tissue in human "
+    "body</b>."))
+story.append(gap())
+
+# INSERTION_POINT_3
