@@ -1,15 +1,16 @@
 # Ch8 Microbes in Human Welfare (Class 12) — Chapter Tracker
 
-**Status: ▶️ IN PROGRESS — Passes 1 and 2 are COMPLETE. **GATE 1 IS GREEN** (frozen inventory, 207 rows `F001`..`F207`) and **GATE 2 IS GREEN** (`check_pdf.py` exit 0, 0 fail / 1 inspected WARN, 198/198 Facts rows ticked, 12-page PDF). Pass 3 has not started, so this chapter still does not enter the Done tally.**
+**Status: ✅ DONE — All three passes COMPLETE. **GATE 1 GREEN** (frozen inventory, now 209 rows: `F001`..`F207` from the 1-Z freeze plus `F055a` and `F085a` added by Pass 3). **GATE 2 GREEN** (`check_pdf.py` exit 0, 0 fail / 1 inspected WARN, **200/200 Facts rows ticked**, 12-page A4 PDF, deterministic rebuild). **GATE 3 GREEN** (bidirectional read done both directions; 3 defects found and fixed; visual render check done on the reflowed pages). This chapter now enters the Done tally.**
 
-**Gate 2 green does not mean the chapter is done.** The script and PDF now exist
-and every mechanical check passes, but **no human has read the PDF against the
-source yet**. Gate 2 is a *mechanical* gate: it proves the rows were written and
-the labels appear somewhere in the text, not that they are correct, in the right
-place, or free of drift. Every chapter in this repo that ran Pass 3 found real
-defects **after** a green Gate 2 — Ch9 found 3, Ch10 found 3, Ch12 found 4, Ch13
-found 7, all invisible to `check_pdf.py`. The next gate is Gate 3, and it
-requires a bidirectional full read.
+**Gate 3 confirmed the rule again.** Gate 2 was green on a PDF that was missing
+two NCERT sentences and contained one self-contradicting statement. Gate 2 is a
+*mechanical* gate: it proves the rows were written and the labels appear
+somewhere in the text, not that they are correct, in the right place, or free of
+drift. Every chapter in this repo that ran Pass 3 found real defects **after** a
+green Gate 2 — Ch9 found 3, Ch10 found 3, Ch12 found 4, Ch13 found 7, and **Ch8
+found 3**. Critically, **2 of Ch8's 3 came from direction 2 only** (source ->
+inventory) and were structurally invisible to direction 1, because a row that
+was never created cannot be reported as missing.
 
 This is a per-chapter tracker; it is the detail layer under the repo-wide
 `CHAPTER_TRACKER.md` and `CHAPTER_STATUS.md` roll-ups. Where those disagree with

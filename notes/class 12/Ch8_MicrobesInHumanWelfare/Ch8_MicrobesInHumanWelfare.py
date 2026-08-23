@@ -315,8 +315,12 @@ story.append(body(
 story.append(keyterm(
     "<b>Antibiotics</b> are <b>chemical substances</b>, which are <b>produced by some microbes</b> "
     "and <b>can kill or retard the growth of other (disease-causing) microbes</b>."))
-# F056, F057, F058, F059, F060, F061 - the Penicillin story as a flow
+# F055a, F056, F057, F058, F059, F060, F061 - the Penicillin story as a flow
+# [VERIFICATION FIX] Pass 3(b) direction 2 (D1): the NCERT antecedent sentence
+# "You are familiar with the commonly used antibiotic Penicillin." had no inventory
+# row at all, so Penicillin entered the notes unannounced. Row F055a added.
 story.append(body(
+    "You are <b>familiar with the commonly used antibiotic Penicillin</b>. "
     "<b>Penicillin was the first antibiotic to be discovered</b>, and it was a <b>chance "
     "discovery</b>:"))
 story.append(process_flow([
@@ -413,11 +417,18 @@ story.append(body(
     "<b>Large quantities of waste water are generated everyday in cities and towns</b>. A "
     "<b>major component</b> of this waste water is <b>human excreta</b>."))
 story.append(keyterm("This <b>municipal waste-water</b> is also called <b>sewage</b>."))
+# [VERIFICATION FIX] Pass 3(b) direction 2 (D2): the NCERT sentence that poses the
+# disposal problem - "Have you ever wondered where this huge quantity of sewage or
+# urban waste water is disposed off daily?", with its "you can understand why" nudge
+# - had no inventory row, so the section stated the treatment before the problem.
+# Row F085a added.
 story.append(body(
     "Sewage <b>contains large amounts of organic matter and microbes</b>. <b>Many of which are "
-    "pathogenic</b>. This <b>cannot be discharged into natural water bodies</b> like rivers and "
-    "streams <b>directly</b>. <b>Before disposal, hence, sewage is treated in sewage treatment "
-    "plants (STPs) to make it less polluting</b>."))
+    "pathogenic</b>. It is worth wondering <b>where this huge quantity of sewage or urban waste "
+    "water is disposed off daily</b>: it <b>cannot be discharged into natural water bodies</b> "
+    "like rivers and streams <b>directly</b> - and you can understand why, because that organic "
+    "matter and those pathogens would go straight into the river. <b>Before disposal, hence, "
+    "sewage is treated in sewage treatment plants (STPs) to make it less polluting</b>."))
 # F088, F089
 story.append(body(
     "<b>Treatment of waste water is done by the heterotrophic microbes naturally present in the "
@@ -836,8 +847,15 @@ story.append(gap())
 # rows back as the Q11 answer, so a page break between them strands the NOTE on a page
 # of its own with the values it discusses overleaf (Pass 3(a) layout defect).
 story.append(KeepTogether([
-    body("<b>Exercise Q11 data (reproduce these values exactly).</b> Three samples of waste water "
-         "were collected before water treatment, and their <b>BOD</b> recorded as follows:"),
+    # [VERIFICATION FIX] Pass 3(b) direction 1 (D3): the lead-in said the three samples
+    # "were collected before water treatment", which is not what Q11 says and
+    # contradicts this table's own sample B (secondary effluent, already treated).
+    # NCERT: river water, untreated sewage water, and secondary effluent discharged
+    # from a sewage treatment plant, all subjected to the BOD test.
+    body("<b>Exercise Q11 data (reproduce these values exactly).</b> Three water samples - "
+         "<b>river water</b>, <b>untreated sewage water</b> and <b>secondary effluent "
+         "discharged from a sewage treatment plant</b> - were subjected to the <b>BOD</b> test "
+         "and labelled A, B and C, with the values recorded as follows:"),
     data_table([
         ["Sample", "BOD recorded", "Which water it is, by BOD"],
         ["<b>A</b>", "<b>20mg/L</b>", "River water - low BOD, so least polluting potential"],

@@ -1,18 +1,20 @@
 # Frozen Inventory — Chapter 8: Microbes in Human Welfare (Class XII)
 
-Source: `Chapter/class 12/Chapter 8 - Microbes in Human Welfare.pdf` (12 pages, page box 568.8 x 777.6 pt) | Frozen: 2026-08-22 | Rows: 207 (`F001`..`F207`, contiguous)
+Source: `Chapter/class 12/Chapter 8 - Microbes in Human Welfare.pdf` (12 pages, page box 568.8 x 777.6 pt) | Frozen: 2026-08-22 | Rows: 209 (`F001`..`F207` contiguous, plus `F055a` and `F085a` added during Pass 3)
 
 Tick legend: `x` = written into the script and verified present in the generated PDF.
 
-**Status: Pass 1 complete, Gate 1 green. Pass 2 (script) not yet started.**
+**Status: Pass 1, Pass 2 and Pass 3 complete. Gate 1, Gate 2 and Gate 3 all green (Gate 3 closed 2026-08-23).**
+
+> **Two rows were added during Pass 3(b) direction 2 and are real Pass 1 gaps, not back-dated into the freeze.** `F055a` (§8.2.2, source p. 4) and `F085a` (§8.3, source p. 5) are NCERT sentences that the 1-Z freeze never created a row for, so direction 1 was structurally incapable of finding them — exactly the Ch9-D9 antecedent class the command prompt warns about. They carry the `a` suffix so the frozen `F001`..`F207` numbering is untouched and the additions stay visible. See the defect register below.
 
 ## Header counts (all machine-derived — see "Count derivation" at the foot of this file)
 
 | Quantity | Value |
 |---|---|
-| Total rows | 207 |
-| ID range | `F001`..`F207`, contiguous, no gaps or duplicates |
-| Facts-table rows | 198 (`F001`..`F198`) |
+| Total rows | 209 |
+| ID range | `F001`..`F207` contiguous, no gaps or duplicates, plus the Pass 3 rows `F055a` and `F085a` |
+| Facts-table rows | 200 (`F001`..`F198` + `F055a` + `F085a`) |
 | Figure-label-matrix rows | 9 (`F199`..`F207`) — one per asset |
 | Individual in-figure labels parsed | 17 |
 | Heading rows (`Type: heading`) | 15 |
@@ -84,6 +86,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F053 | 8.2.2 | opener | "Antibiotics produced by microbes are regarded as one of the most significant discoveries of the twentieth century and have greatly contributed towards the welfare of the human society." | x |
 | F054 | 8.2.2 | term | "Anti is a Greek word that means 'against', and bio means 'life', together they mean 'against life' (in the context of disease causing organisms); whereas with reference to human beings, they are 'pro life' and not against." | x |
 | F055 | 8.2.2 | term | "Antibiotics are chemical substances, which are produced by some microbes and can kill or retard the growth of other (disease-causing) microbes." | x |
+| F055a | 8.2.2 | fact | "You are familiar with the commonly used antibiotic Penicillin." | x |
 | F056 | 8.2.2 | fact | "Penicillin was the first antibiotic to be discovered, and it was a chance discovery" | x |
 | F057 | 8.2.2 | name | "Alexander Fleming while working on Staphylococci bacteria, once observed a mould growing in one of his unwashed culture plates around which Staphylococci could not grow." | x |
 | F058 | 8.2.2 | name | "He found out that it was due to a chemical produced by the mould and he named it Penicillin after the mould Penicillium notatum." | x |
@@ -114,6 +117,7 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F083 | 8.3 | fact | "A major component of this waste water is human excreta." | x |
 | F084 | 8.3 | term | "This municipal waste-water is also called sewage." | x |
 | F085 | 8.3 | fact | "It contains large amounts of organic matter and microbes. Many of which are pathogenic." | x |
+| F085a | 8.3 | question | "Have you ever wondered where this huge quantity of sewage or urban waste water is disposed off daily?" (with the trailing nudge "- you can understand why" that closes the next sentence) | x |
 | F086 | 8.3 | fact | "This cannot be discharged into natural water bodies like rivers and streams directly" | x |
 | F087 | 8.3 | term | "Before disposal, hence, sewage is treated in sewage treatment plants (STPs) to make it less polluting." | x |
 | F088 | 8.3 | fact | "Treatment of waste water is done by the heterotrophic microbes naturally present in the sewage." | x |
@@ -446,7 +450,13 @@ length of the ID list, and nothing in this census is tallied into it.
 
 Every number in the header table was produced by re-parsing this finished file, not
 by hand tally, and the same parse asserts `F001..F207` contiguous with no gaps or
-duplicates and no `Type` value outside the normalized vocabulary. The label count
+duplicates, the two Pass 3 rows `F055a`/`F085a` sitting outside that base range, and
+no `Type` value outside the normalized vocabulary. Re-parsed after the Pass 3 edits
+(2026-08-23): **200 Facts rows, 9 label rows, 209 total, 0 unticked, 0 duplicates**,
+type census `fact 97, name 29, term 19, heading 15, opener 14, caption 8, question 7,
+crossref 6, number 5`. `check_pdf.py`'s check-7 parser matches `[a-z]?\d{2,}` on the
+ID cell, so the suffixed rows are counted and gated like any other row — the linter
+reports 200/200 ticked, not 198. The label count
 was additionally produced by running `check_pdf.py`'s own `_extract_labels` against
 this file, confirming 17 labels across 5 parsed figure rows, no doubling, and no
 phantom `Fig #` row from a markdown separator. The parser sees **5** figure rows,
@@ -463,7 +473,7 @@ to all live restatements in one edit and the parse re-run.
 
 | Criterion | State |
 |---|---|
-| Every fact has a Facts row | yes — 198 rows, `F001`..`F198` |
+| Every fact has a Facts row | yes as of Pass 3 — **200 rows**: `F001`..`F198` frozen in 1-Z, plus `F055a` and `F085a` added in Pass 3(b) direction 2. At Gate 1 this criterion read "yes — 198 rows"; that claim was **wrong**, and only the source-to-inventory direction could show it |
 | Every in-figure label has a matrix row, harvested by opening each rendered asset | yes — 9 rows `F199`..`F207`, 17 labels; harvest was done in 1-F by opening assets, and re-confirmed in 1-Z for `fig_8_2a` and `fig_8_8` |
 | Inventory validated by running `check_pdf.py`'s `_extract_labels` | yes — 17 labels across 5 parsed figure rows (9 matrix rows; 4 unlabelled rows contribute 0 by design) / no doubling / no phantom rows |
 | Every header count matches a re-parse; IDs contiguous; `Type` normalized | yes |
@@ -477,9 +487,26 @@ to all live restatements in one edit and the parse re-run.
 
 ---
 
-## Remaining work for this chapter
+## Pass 3 defect register — session 3-B (Gate 3 close, 2026-08-23)
 
-1. Pass 2 — write `Ch8_MicrobesInHumanWelfare.py` importing `neet_template.py`,
-   in Content Order, ticking rows in this file as each block is written.
-2. Gate 2 — `check_pdf.py` green.
-3. Pass 3 — bidirectional content cross-check plus the visual render check.
+Three defects found and fixed. Direction 1 (inventory -> script) found one; direction 2
+(source PDF -> inventory) found two that direction 1 **could not** find, because a row
+that does not exist cannot be reported as missing.
+
+| # | Class | Where | Defect | Fix |
+|---|---|---|---|---|
+| D1 | UNINVENTORIED (Ch9-D9 antecedent class) | §8.2.2, source p. 4 | NCERT opens the Penicillin story with "You are familiar with the commonly used antibiotic Penicillin." The 1-Z freeze created no row for it, so the notes jumped straight to "Penicillin was the first antibiotic to be discovered" — the chapter's most famous drug entered the notes unannounced, with no sentence introducing it | Row `F055a` added; sentence restored ahead of `F056` in the 8.2.2 flow |
+| D2 | UNINVENTORIED (rhetorical-question class) | §8.3, source p. 5 | NCERT poses the problem before the solution: "Have you ever wondered where this huge quantity of sewage or urban waste water is disposed off daily?", then answers it, closing with "- you can understand why". No row existed, so the notes asserted that sewage is treated in STPs without ever posing the disposal problem that motivates the whole section | Row `F085a` added (`Type: question`, the 7th); question and its nudge restored into the 8.3 opener block |
+| D3 | DRIFTED — internal contradiction | Exercises appendix, Q11 lead-in | The lead-in claimed the three samples "were collected before water treatment". Q11 says no such thing, and it contradicts the table's own sample B, which the same block identifies as *secondary effluent, already treated*. A student reading both would have to believe the treated sample was collected before treatment | Lead-in rewritten to NCERT's actual framing: river water, untreated sewage water, and secondary effluent discharged from a sewage treatment plant, labelled A, B and C |
+
+Every fix is marked `[VERIFICATION FIX]` in the script with the direction and defect ID
+that produced it. Nothing was reworded for taste — D1 and D2 restore sentences, D3
+removes a false statement.
+
+**What the two directions cost and returned.** Direction 1 read all 209 rows against
+the script and returned 1 defect. Direction 2 re-read the 12-page source text layer
+against the inventory and returned 2 — both invisible to direction 1 by construction,
+and both in the class the command prompt names (a defining or motivating sentence that
+the notes read fine without, until you notice the term arrived undefined). The
+single-direction check would have shipped this chapter with 2 open defects and a Gate 1
+checklist asserting "every fact has a Facts row".
