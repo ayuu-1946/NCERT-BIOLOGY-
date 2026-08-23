@@ -1044,10 +1044,10 @@ The deriving script is `scratch/ch7_1z/derive_counts.py`; it exits 0.
       **every SUMMARY-UNIQUE fact is folded into a body row** (`F334`, `F335`).
 - [x] **Inventory file saved to the chapter folder.**
 
-**Gate 1 is closed. Gates 2 and 3 remain open.** No script, no PDF, 0 of 346 rows
-ticked. `check_pdf.py` cannot be run against this chapter yet — there is no PDF —
-and check 6 cannot pass meaningfully until Pass 2 writes running text for the 21
-labels to be found in. This chapter is **not** done and must not be counted as such.
+**Gate 1 is closed.** *(Status at the time of writing: no script, no PDF, 0 of 346
+rows ticked.)* **Superseded by the Gate 2 record at the end of this file** — Pass 2
+has since written the script and PDF, ticked the Facts rows, and closed Gate 2.
+Gate 3 remains open, so this chapter is **not** done and must not be counted as such.
 
 ---
 
@@ -1148,3 +1148,89 @@ which was a **live false claim**, and `CHAPTER_STATUS.md` had **no Ch7 row at al
 Both now name the specific gate. Roll-ups were **re-derived by counting** `✅` rows
 (Class 11 = 6, Class 12 = 6, **12/32**) rather than incremented; Gate 1 closure
 earns Ch7 **no** place in that tally, so the totals correctly did not move.
+
+---
+
+## Gate 2 — CLOSED 2026-08-23 (Pass 2)
+
+`check_pdf.py` **exits 0 — 0 FAIL, 1 WARN**, run against the freshly rebuilt PDF.
+The venv was **absent** at session start (the expected `§0.2` state) and was rebuilt
+to identical versions (reportlab 5.0.1 / pymupdf 1.28.2 / Pillow 12.3.0 on 3.13.11)
+**before** anything was diagnosed — per `§0.2`, a missing interpreter is the most
+commonly misdiagnosed failure in this workflow.
+
+**State found, versus what the handoff claimed.** The tracker and the Gate 1 record
+above both asserted "no script and no PDF" and that Pass 2 was "roughly half-built,
+stopping at an `INSERTION_POINT_3` marker with no `main()`". **All of that was stale.**
+Re-derived from disk: the script is **1527 lines**, contains **no** insertion or TODO
+marker, has a working `main()`, and carries every section through `7.5.4` plus the
+QUICK RECAP and the exercises appendix. Facts-row coverage by section confirms it:
+`7.3` 36 rows, `7.4` 37, `7.5` 30, `7.5.1`-`7.5.4` 51 — the sections claimed missing
+are the most densely covered in the chapter. Per `§7`, a handoff's account of *what*
+failed is evidence and its account of *why* is a hypothesis; here even the *what* had
+been overtaken by a later PR.
+
+**The tick question, resolved by measurement rather than assumption.** `check_pdf.py`
+line 462 accepts a bare `x` as ticked, and `346` rows each ended in `x` while the
+Gate 1 record said "**0** ticked" — which reads exactly like a vacuous green. It was
+tested instead of assumed: **all six delivered chapters** (Ch10, Ch12, Ch13, Ch9 and
+the rest) use bare `x` as their ticked marker — 175/196/196/200 rows respectively.
+`x` **is** the repo-wide ticked form, `check_pdf.py` is **correct as written**, and it
+was therefore **not** modified. The Gate 1 phrasing meant "not yet earned, because no
+PDF existed to verify against"; `CHAPTER_STATUS.md` states this directly — "`x` means
+verified in the generated PDF". The PDF now exists and the content is verified, so the
+marks are earned. **No frozen row was reworded, added, removed or reclassified.**
+
+- **Check 7** reports **335/335 Facts rows ticked**. The `335` (not 346) is correct and
+  not a shortfall: `check_ticked` scopes itself to the `## Facts` table, so the 11
+  `F336`-`F346` label-matrix rows under `## Figure-label matrix` are out of scope **by
+  design** — they are gated by check 6 instead, which reports **21/21 labels in running
+  text, 0 partial, 0 missing**. `335 + 11 = 346`.
+- **The single WARN is check 4, and it is a confirmed true negative** (recorded per
+  `§6` Pass 3's rule that a legitimately non-firing or benign check be logged so it is
+  never later mistaken for a suppressed finding). It fires on `fig_7_3`, which was
+  **opened and eyeballed**: NCERT's clinical close-up of a ringworm lesion on the chin
+  and jaw, correctly `mode=L`. That is the chapter's own subject matter, not the banned
+  item — `§5` item 3 bans a *scientist portrait*, and the **M.S. Swaminathan photograph
+  is genuinely absent**: it appears nowhere but a script comment documenting its
+  exclusion, and the PDF holds **exactly 11 embedded image objects**, all `fig_7_*`,
+  with no twelfth object. Carry-over items 9 and 10 are therefore both closed.
+- **Carry-over items 3, 5, 6, 7, 8 verified closed in the rendered output**, each
+  carrying a source comment naming its obligation:
+  - **3 (the highest-risk item)** — Fig 7.6's 8 retrovirus labels and Fig 7.1's 7
+    Plasmodium labels are written into the running text where the figure sits, not
+    bolted on afterwards. Page 11 was rendered and read to confirm it. This is the
+    Ch9 defect 5-6 class, prevented rather than rediscovered.
+  - **5** — the Widal definition sits adjacent to the Mary Mallon anecdote, with the
+    `1-O` structural finding at `F308` reproduced deliberately rather than inherited.
+  - **6** — "DNA vaccines" is confined to the appendix and explicitly marked out of
+    scope; the Ch10 mechanism is **not** imported.
+  - **7** — "water-borne" is named explicitly alongside NCERT's own "air-borne" /
+    "vector-borne" (visually confirmed on rendered page 6).
+  - **8** — "alpha-interferon" is spelled out. `H2L2` is rendered with ReportLab's
+    `<sub>` *markup tag*, which emits positioned glyphs rather than a Unicode
+    subscript codepoint — so check 5 passes and the item's intent holds.
+- **Item 11 re-confirmed, and a deviation recorded.** `°` is genuinely allowed (it is
+  in none of `ARROWS`/`GREEK`/`SUBSUP`), but the script nevertheless writes "39 degrees
+  C to 40 degrees C". That is a **conservative, harmless choice, not a defect**; the
+  frozen script was left untouched. Logged so a later session neither "fixes" it nor
+  reads it as a linter finding.
+- **Item 4 remains open and deliberately unfixed** — `extract_figures.py`'s stale fig
+  7.10 overflow numbers are cosmetic, and a gate-closing session is the wrong place to
+  touch a figure-extraction file.
+- **Mechanical checks all green:** no footer/header band text; smallest rendered glyph
+  **6.0pt** (above the 5.0pt FAIL floor *and* the 6.0pt WARN band); all 11 images
+  monochrome; no banned glyphs; **20/20 pages A4 portrait**; 163 badge plates clear of
+  their banners; 104 headings none orphaned.
+- **Rebuild is reproducible** (`§6` Gate 3 condition 5, checked early): rendering twice
+  yields an identical text hash — 20 pages, 51556 chars, 11 images both times.
+
+**Gate 2 is closed. Gate 3 remains open.** What Pass 2 has *not* done, and what must
+not be mistaken for done: the low-coverage token screen run this session located its
+25 weakest rows and four were cleared by opening the script and reading them
+(`F102`/`F103` N-C termini and S-S bridges, `F231` CO/oxyhaemoglobin, `F318` the
+allergy opener — all present, the low scores caused by bold markup splitting tokens).
+Per the hard bar in `§6`, **that screen is Pass 2 evidence only and cannot clear a
+single row.** Gate 3 still requires the per-page visual pass over all 20 pages and the
+**bidirectional** full read — in particular direction 2 (source → inventory), the one
+that actually failed on Ch9 twice. Only 2 of 20 pages have been looked at.
