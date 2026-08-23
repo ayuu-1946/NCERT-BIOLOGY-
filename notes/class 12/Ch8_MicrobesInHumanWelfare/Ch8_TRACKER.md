@@ -1,6 +1,6 @@
 # Ch8 Microbes in Human Welfare (Class 12) — Chapter Tracker
 
-**Status: ✅ DONE — All three passes COMPLETE. **GATE 1 GREEN** (frozen inventory, now 209 rows: `F001`..`F207` from the 1-Z freeze plus `F055a` and `F085a` added by Pass 3). **GATE 2 GREEN** (`check_pdf.py` exit 0, 0 fail / 1 inspected WARN, **200/200 Facts rows ticked**, 12-page A4 PDF, deterministic rebuild). **GATE 3 GREEN** (bidirectional read done both directions; 3 defects found and fixed; visual render check done on the reflowed pages). This chapter now enters the Done tally.**
+**Status: ✅ DONE — All three passes COMPLETE. **GATE 1 GREEN** (frozen inventory, now 209 rows: `F001`..`F207` from the 1-Z freeze plus `F055a` and `F085a` added by Pass 3). **GATE 2 GREEN** (`check_pdf.py` exit 0, 0 fail / 1 inspected WARN, **200/200 Facts rows ticked**, 12-page A4 PDF, **content-deterministic** rebuild — same text SHA-256, timestamps aside). **GATE 3 GREEN** (bidirectional read done both directions; 3 defects found and fixed; visual render check done on the reflowed pages). This chapter now enters the Done tally.**
 
 **Gate 3 confirmed the rule again.** Gate 2 was green on a PDF that was missing
 two NCERT sentences and contained one self-contradicting statement. Gate 2 is a
@@ -86,21 +86,32 @@ tail — the prose sweep runs **pp. 3–11**.
 | # | Session | Scope | State | Sole deliverable |
 |---|---|---|---|---|
 | 1 | `1-F` | **whole chapter** figures | ✅ **done** | 9 verified mono assets + `extract_figures.py` with hand-pinned rects + figure manifest + label matrix — **9 assets / 17 labels** |
-| 2 | `1-S` | prose facts, steps 1–3 | ✅ **done** | prose/caption/term/name/number/question/crossref rows — **169 rows** (198 Facts rows minus 15 heading, 14 opener) |
+| 2 | `1-S` | prose facts, steps 1–3 | ✅ **done** | prose/caption/term/name/number/question/crossref rows — **169 rows** (the 198 Facts rows *at the freeze* minus 15 heading, 14 opener) |
 | 3 | `1-H` | headings only | ✅ **done** | heading rows — **15** (9 numbered + 6 unnumbered) |
 | 4 | `1-O` | section openers only | ✅ **done** | opener rows — **14** |
 | 5 | `1-Z` | steps 7–9, freeze | ✅ **done** | 4 exercise-gap terms, 18 summary sentences classified (16 BODY-PRESENT / 2 SUMMARY-UNIQUE), inventory frozen at **207 rows** |
+| 6 | Pass 2 | script + PDF, Gate 2 | ✅ **done** | `Ch8_MicrobesInHumanWelfare.py` + 12-page PDF, 198/198 Facts rows ticked, `check_pdf.py` exit 0 (0 fail / 1 inspected WARN) |
+| 7 | Pass 3 session 1 | 3(a) visual + 3(b) direction 1 | ✅ **done** | 12/12 PDF pages and 9/9 assets inspected; all 207 rows checked present-and-faithful in the PDF |
+| 8 | Pass 3 session 2 | 3(b) direction 2, Gate 3 | ✅ **done** | source pp. 3–11 read start to finish under the grep prohibition; **3 defects found and fixed**; 2 rows added (`F055a`, `F085a`) → **209 rows / 200 Facts**; Gate 3 CLOSED |
+| 9 | Closure | atomic doc reconciliation | ✅ **done** | Gate 2 re-verified from disk (200/200 ticked, exit 0); all three trackers brought onto the post-Pass-3 counts in one edit |
 
-**All five sessions ran and each reported its own machine-derived count**, which
+**All nine sessions ran and each reported its own machine-derived count**, which
 is itself a Gate 1 criterion. Every count above was re-parsed from the finished
 inventory file, not tallied by hand — see "Gate 1 validation" below.
+
+**Row counts moved at Pass 3 and the ledger says so on purpose.** Sessions 1–6
+worked against a **207-row / 198-Facts** inventory; direction 2 then found two
+genuinely uninventoried NCERT sentences, so the live counts are **209 rows /
+200 Facts** from session 8 onward. Historical rows above are left at the numbers
+that were true when they ran, and are marked *at the freeze* where they restate a
+total. Anything describing the **current** state reads 209/200.
 
 ---
 
 ## 3. What is actually on disk
 
     notes/class 12/Ch8_MicrobesInHumanWelfare/
-      Ch8_MicrobesInHumanWelfare_inventory.md   FROZEN — 207 rows F001..F207, 198/198 Facts rows TICKED
+      Ch8_MicrobesInHumanWelfare_inventory.md   FROZEN — 209 rows (F001..F207 + F055a + F085a), 200/200 Facts rows TICKED
       Ch8_MicrobesInHumanWelfare.py             51,656 B — the Pass 2 script
       Ch8_MicrobesInHumanWelfare.pdf            2,020,000 B — 12 pp A4, 9 embedded mono images
       Ch8_TRACKER.md                            this file
@@ -145,7 +156,7 @@ Re-derived this session, not recalled:
 | Split figures | **Figure 8.2 → 2 assets** (`a`+`b` panels together; `c` separate) |
 | Unnumbered/bonus plates | **0** — none exist in this chapter, so the denominator is 9 everywhere |
 | Vector vs raster | 1 vector schematic (8.8); 8 raster/micrograph plates |
-| Facts rows | **198** (`F001`..`F198`) + **9** figure-label rows (`F199`..`F207`) = **207** |
+| Facts rows | **200** (`F001`..`F198` + `F055a` + `F085a`) + **9** figure-label rows (`F199`..`F207`) = **209** — was 198 + 9 = 207 until the two Pass 3 additions |
 
 Re-derive with:
 
@@ -247,8 +258,8 @@ the output of re-parsing the finished inventory file.
 
 | Criterion | Result |
 |---|---|
-| Total rows / ID contiguity | 207 rows, `F001`..`F207`, contiguous, 0 duplicates |
-| Facts vs matrix split | 198 + 9 |
+| Total rows / ID contiguity | 207 rows, `F001`..`F207`, contiguous, 0 duplicates *(at the freeze; **209** now, `F055a`/`F085a` added at Pass 3)* |
+| Facts vs matrix split | 198 + 9 *(at the freeze; **200 + 9** now)* |
 | `check_pdf.py._extract_labels` run against the inventory | **17 labels across 5 figure rows**; **no doubling**; **no phantom `Fig #` row** |
 | Heading rows | 15 = 9 numbered + 6 unnumbered |
 | Opener rows | 14 |
@@ -267,7 +278,8 @@ same known-good versions: reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0,
 numpy 2.5.2 on CPython 3.13.
 
 All 14 machine criteria re-ran **PASS** — 207 rows, `F001`..`F207` contiguous,
-0 duplicates, 198 facts + 9 matrix rows, 15 heading / 14 opener / 8 caption rows,
+0 duplicates, 198 facts + 9 matrix rows (**the pre-Pass-3 state; 209 rows / 200
+facts after `F055a` and `F085a`**), 15 heading / 14 opener / 8 caption rows,
 `Type` vocabulary 10 values all lowercase, 17 labels across 5 parsed figure rows,
 no doubling, no phantom `Fig #` row, all rows unticked. The 9 numbered in-body
 banners were re-derived from the source PDF independently and match the section
@@ -349,7 +361,7 @@ exercise-gap NOTE boxes are visibly marked as beyond the body text.
 | 4 | No person photograph | **WARN** — 9 heuristic hits, all inspected; see below |
 | 5 | Banned glyphs | **PASS** — no Unicode arrows, sub/superscripts, Greek or emoji |
 | 6 | Figure-label coverage | **PASS** — **17/17** labels fully in text, 0 partial, 0 missing |
-| 7 | Frozen inventory ticked | **PASS** — all **198** Facts rows ticked |
+| 7 | Frozen inventory ticked | **PASS** — all **198** Facts rows ticked at Gate 2; **200/200** on the post-Pass-3 rebuild, re-verified from disk at the closure session |
 | 8 | Page geometry | **PASS** — all **12** pages A4 portrait 595x842pt |
 | 9 | Orphaned headings | **PASS** — **37** banner headings all followed by content |
 | 10 | Badge/banner collision | **PASS** — **88** filled plates all clear of neighbours |
@@ -407,47 +419,73 @@ All six were satisfied. Gate 2 is closed.
 
 ---
 
-## 7. NEXT SESSION — Pass 3, the bidirectional read
+## 7. Gate 3 — how it was judged (CLOSED, green)
 
-**Gate 2 is green, so Pass 3 may begin.** It has two halves and **3(b) is the
-one that finds defects**:
+**Pass 3 is complete and Gate 3 is GREEN. There is no next session for this
+chapter.** This section used to be a forward-looking "NEXT SESSION" brief; it was
+rewritten at closure because a stale instruction is more dangerous than a stale
+number — numbers get re-derived, instructions get obeyed.
 
-**3(a) visual render check.** Open all **12 PDF pages** and all **9 assets** and
-look at them. Check for clipped badges, orphaned captions, plates colliding with
-banners, and figures rendered at unreadable scale. `check_pdf.py` checks 9 and 10
-catch only the mechanical subset of this.
+### 3(a) visual render check — done
 
-**3(b) bidirectional content cross-check.** Two directions, both required:
+All **12 PDF pages** and all **9 assets** were opened and looked at. No clipped
+badges, no orphaned captions, no plate/banner collisions, no figure rendered at
+unreadable scale. `check_pdf.py` checks 9 and 10 cover only the mechanical subset
+and were green independently (37 banners followed by content, 88 plates clear).
 
-- **Direction 1** — every one of the 207 inventory rows is present in the PDF and
-  says what the row says. A ticked box only proves someone believed they wrote it.
-- **Direction 2** — every sentence of the **source PDF, pp. 3–11, read start to
-  finish**, is accounted for by some row. This is the direction that finds
-  **UNINVENTORIED** content, and it is where Ch12 and Ch13 found most of their
-  defects.
+### 3(b) bidirectional content cross-check — done, both directions
 
-**Direction 2 may not be cleared with grep.** Ch12's first two Gate 3 passes were
-**withdrawn as premature** for exactly that reason and the third was run under an
-explicit grep prohibition. Read the pages; record a per-section reading claim.
+- **Direction 1** — all **207** then-existing inventory rows were confirmed
+  present in the PDF *and* saying what the row says. A ticked box only proves
+  someone believed they wrote it, so each was read.
+- **Direction 2** — the **source PDF, pp. 3–11, read start to finish** under an
+  explicit **grep prohibition**, with a per-section reading claim recorded. This
+  is the direction that found every defect below, as it did in Ch12 and Ch13.
 
-Binding rules for that session:
+### The 3 confirmed defects, all fixed
 
-1. **Rebuild `/vercel/share/neetenv` first** (§0.2). It is reliably absent.
-2. **Re-run `check_pdf.py "notes/class 12/Ch8_MicrobesInHumanWelfare"`** — folder
-   argument, single positional. Confirm it is still 0 fail / 1 WARN before starting,
-   and again after any fix.
-3. **The check-4 WARN stays.** It is inspected and accepted (see §6). Do not
-   remove `fig_8_5` and do not reword rows to dodge the grep.
-4. **A defect found in Pass 3 is fixed by adding an `a`-suffixed row** (`F123a`
-   style, as Ch9/Ch13 did) — never by renumbering the frozen block. Fix every
-   restatement of every affected count in the same edit, then re-run the parse.
-5. **Rebuild the PDF after any script edit** and re-run the checker. Ch12 verified
-   reproducibility by rebuilding three times and comparing the text SHA-256; do the
-   same here if any fix lands.
-6. **Atomic closure (§7 rule 8):** whatever Pass 3 concludes must be written into
-   this file, `CHAPTER_TRACKER.md` **and** `CHAPTER_STATUS.md` in the same session.
+| # | Kind | What was wrong | Fix |
+|---|---|---|---|
+| D1 | **UNINVENTORIED** | the household-scale curd/idli/dosa framing sentence was never inventoried | row **`F055a`** added, prose written into §8.1 |
+| D2 | **UNINVENTORIED** | NCERT's sewage-disposal question ("where is this huge quantity of sewage … disposed off daily?") plus its "you can understand why" nudge | row **`F085a`** added, rendered as prose in §8.3 |
+| D3 | **DRIFTED** | the Exercise-Q11 lead-in said the samples were "collected before water treatment", which contradicts the table's own secondary-effluent row | lead-in rewritten to match the data |
 
-Then Gate 3 → deliver. The chapter enters the Done tally **only** after 3(b).
+0 MISSING · 0 FABRICATED. **Both additions are a real Pass 1 gap and are logged
+as such — never back-dated into the freeze.** They took the inventory from 207 to
+**209 rows** and the Facts count from 198 to **200**. Both are the same family
+Ch13 hit seven times: NCERT's rhetorical questions and framing sentences, which
+read as connective tissue and get skipped by a sweep looking for facts.
+
+### Post-fix verification
+
+- `check_pdf.py "notes/class 12/Ch8_MicrobesInHumanWelfare"` → **exit 0, 0 fail,
+  1 WARN**, the same inspected check-4 portrait WARN as §6. Re-run **from disk at
+  the closure session**, not trusted from the handoff.
+- **200/200 Facts rows ticked** on the post-fix rebuild (re-parsed, not recalled).
+- All three fixes re-confirmed in the rebuilt PDF's text layer, and pages 5, 6 and
+  12 — the three that reflowed — re-rendered and re-inspected.
+- **Reproducibility:** rebuilt twice more; both builds give the **same 12 pages,
+  same page count and the same text-layer SHA-256** (`1fb7a3b1…`) as the committed
+  PDF, at an identical file size. Only the embedded PDF timestamps/IDs differ, so
+  the build is **content-deterministic, not byte-deterministic** — a rebuild will
+  always show as a modified binary in `git status`. That is expected; do not chase
+  it as a defect.
+
+### Standing facts for anyone who reopens this chapter
+
+1. The **check-4 WARN is permanent and accepted** (§6). Do not remove `fig_8_5`
+   and do not reword `F050`/`F203`–`F206` to dodge the grep.
+2. The live counts are **209 rows / 200 Facts / 9 figure-label matrix rows**.
+   Anything still saying 207/198 is describing the pre-Pass-3 freeze and should
+   say so explicitly.
+3. The asset denominator is **9 assets / 8 figure numbers** (8.2 is split). Report
+   either one with its basis.
+4. If a further defect ever surfaces, add an `a`-suffixed row, fix **every**
+   restatement of **every** affected count in the same edit, re-run the parse, and
+   reconcile this file, `CHAPTER_TRACKER.md` and `CHAPTER_STATUS.md` together.
+
+**Gate 3 is closed. All three gates are green, so the chapter is delivered and
+now counts in the Done tally.**
 
 ---
 
