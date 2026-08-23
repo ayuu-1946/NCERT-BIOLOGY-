@@ -377,6 +377,65 @@ obligations, not label-coverage obligations.
 | F274 | 7.5.4 | prevention | "Seeking help from parents and peers - Help from parents and peers should be sought immediately so that they can guide appropriately. Help may even be sought from close and trusted friends. Besides getting proper advise to sort out their problems, this would help young to vent their feelings of anxiety and guilt." | |
 | F275 | 7.5.4 | prevention | "Looking for danger signs - Alert parents and teachers need to look for and identify the danger signs discussed above. Even friends, if they find someone using drugs or alcohol, should not hesitate to bring this to the notice of parents or teacher in the best interests of the person concerned. Appropriate measures would then be required to diagnose the malady and the underlying causes. This would help in initiating proper remedial steps or treatment." | |
 | F276 | 7.5.4 | prevention | "Seeking professional and medical help - A lot of help is available in the form of highly qualified psychologists, psychiatrists, and de-addiction and rehabilitation programmes to help individuals who have unfortunately got in the quagmire of drug/alcohol abuse. With such help, the affected individual with sufficient efforts and will power, can get rid of the problem completely and lead a perfectly normal and healthy life." | |
+| F277 | chapter | heading | "CHAPTER 7" / "HUMAN HEALTH AND DISEASE" | |
+| F278 | 7.1 | heading | "7.1 COMMON DISEASES IN HUMANS" | |
+| F279 | 7.1 | heading | "Widal test" | |
+| F280 | 7.2 | heading | "7.2 IMMUNITY" | |
+| F281 | 7.2.1 | heading | "7.2.1 Innate Immunity" | |
+| F282 | 7.2.1 | heading | "(i) Physical barriers" | |
+| F283 | 7.2.1 | heading | "(ii) Physiological barriers" | |
+| F284 | 7.2.1 | heading | "(iii) Cellular barriers" | |
+| F285 | 7.2.1 | heading | "(iv) Cytokine barriers" | |
+| F286 | 7.2.2 | heading | "7.2.2 Acquired Immunity" | |
+| F287 | 7.2.3 | heading | "7.2.3 Active and Passive Immunity" | |
+| F288 | 7.2.4 | heading | "7.2.4 Vaccination and Immunisation" | |
+| F289 | 7.2.5 | heading | "7.2.5 Allergies" | |
+| F290 | 7.2.6 | heading | "7.2.6 Auto Immunity" | |
+| F291 | 7.2.7 | heading | "7.2.7 Immune System in the Body" | |
+| F292 | 7.2.7 | heading | "Lymphoid organs" | |
+| F293 | 7.3 | heading | "7.3 AIDS" | |
+| F294 | 7.3 | heading | "Prevention of AIDS" | |
+| F295 | 7.4 | heading | "7.4 CANCER" | |
+| F296 | 7.4 | heading | "Causes of cancer" | |
+| F297 | 7.4 | heading | "Cancer detection and diagnosis" | |
+| F298 | 7.4 | heading | "Treatment of cancer" | |
+| F299 | 7.5 | heading | "7.5 DRUGS AND ALCOHOL ABUSE" | |
+| F300 | 7.5.1 | heading | "7.5.1 Adolescence and Drug/Alcohol Abuse" | |
+| F301 | 7.5.2 | heading | "7.5.2 Addiction and Dependence" | |
+| F302 | 7.5.3 | heading | "7.5.3 Effects of Drug/Alcohol Abuse" | |
+| F303 | 7.5.4 | heading | "7.5.4 Prevention and Control" | |
+| F304 | summary | heading | "SUMMARY" | |
+| F305 | exercises | heading | "EXERCISES" | |
+| F306 | 7.0 intro | opener | "The term health is very frequently used by everybody. How do we define it?" | |
+| F307 | 7.1 | opener | "A wide range of organisms belonging to bacteria, viruses, fungi, protozoans, helminths, etc., could cause diseases in man." | |
+| F308 | 7.1 | opener | "Widal test : A classic case in medicine, that of Mary Mallon nicknamed Typhoid Mary, is worth mentioning here." | |
+| F309 | 7.2 | opener | "Everyday we are exposed to large number of infectious agents." | |
+| F310 | 7.2.1 | opener | "Innate immunity is non-specific type of defence, that is present at the time of birth." | |
+| F311 | 7.2.1 | opener | "Physical barriers : Skin on our body is the main barrier which prevents entry of the micro-organisms." | |
+| F312 | 7.2.1 | opener | "Physiological barriers : Acid in the stomach, saliva in the mouth, tears from eyes-all prevent microbial growth." | |
+| F313 | 7.2.1 | opener | "Cellular barriers : Certain types of leukocytes (WBC) of our body like polymorpho-nuclear leukocytes (PMNL-neutrophils) and monocytes and natural killer (type of lymphocytes) in the blood as well as macrophages in tissues can phagocytose and destroy microbes." | |
+| F314 | 7.2.1 | opener | "Cytokine barriers : Virus-infected cells secrete proteins called interferons which protect non-infected cells from further viral infection." | |
+| F315 | 7.2.2 | opener | "Acquired immunity, on the other hand is pathogen specific." | |
+| F316 | 7.2.3 | opener | "When a host is exposed to antigens, which may be in the form of living or dead microbes or other proteins, antibodies are produced in the host body." | |
+| F317 | 7.2.4 | opener | "The principle of immunisation or vaccination is based on the property of 'memory' of the immune system." | |
+| F318 | 7.2.5 | opener | "When you have gone to a new place and suddenly you started sneezing, wheezing for no explained reason, and when you went away, your symptoms dissappeared." | |
+| F319 | 7.2.6 | opener | "Memory-based acquired immunity evolved in higher vertebrates based on the ability to differentiate foreign organisms (e.g., pathogens) from self-cells." | |
+| F320 | 7.2.7 | opener | "The human immune system consists of lymphoid organs, tissues, cells and soluble molecules like antibodies." | |
+| F321 | 7.2.7 | opener | "Lymphoid organs: These are the organs where origin and/or maturation and proliferation of lymphocytes occur." | |
+| F322 | 7.3 | opener | "The word AIDS stands for Acquired Immuno Deficiency Syndrome." | |
+| F323 | 7.3 | opener | "Prevention of AIDS : As AIDS has no cure, prevention is the best option." | |
+| F324 | 7.4 | opener | "Cancer is one of the most dreaded diseases of human beings and is a major cause of death all over the globe." | |
+| F325 | 7.4 | opener | "Causes of cancer : Transformation of normal cells into cancerous neoplastic cells may be induced by physical, chemical or biological agents." | |
+| F326 | 7.4 | opener | "Cancer detection and diagnosis : Early detection of cancers is essential as it allows the disease to be treated successfully in many cases." | |
+| F327 | 7.4 | opener | "Treatment of cancer : The common approaches for treatment of cancer are surgery, radiation therapy and immunotherapy." | |
+| F328 | 7.5 | opener | "Surveys and statistics show that use of drugs and alcohol has been on the rise especially among the youth." | |
+| F329 | 7.5.1 | opener | "Adolescence means both 'a period' and 'a process' during which a child becomes mature in terms of his/her attitudes and beliefs for effective participation in society." | |
+| F330 | 7.5.2 | opener | "Because of the perceived benefits, drugs are frequently used repeatedly." | |
+| F331 | 7.5.3 | opener | "The immediate adverse effects of drugs and alcohol abuse are manifested in the form of reckless behaviour, vandalism and violence." | |
+| F332 | 7.5.4 | opener | "The age-old adage of 'prevention is better than cure' holds true here also." | |
+| F333 | summary | opener | "Health is not just the absence of disease. It is a state of complete physical, mental, social and psychological well-being." | |
+| F334 | intro | term | "It is a state of complete physical, mental, social and psychological well-being." (SUMMARY-UNIQUE: the summary's definition of health adds "psychological" to the body's "physical, mental and social" at F006) | |
+| F335 | 7.1 | example | "Diseases like typhoid, cholera, pneumonia, fungal infections of skin, malaria and many others are a major cause of distress to human beings." (SUMMARY-UNIQUE: cholera is named as a human disease only in the summary) | |
 
 ### Session 1-S row count (machine-derived)
 
@@ -436,6 +495,162 @@ neighbouring row and would have lost:
 - the two **CT vs MRI** mechanism sentences kept apart (F196, F197), since the
   chapter distinguishes X-ray-based 3-D imaging from non-ionising magnetic imaging
   and a merged row would blur exactly the contrast being tested
+
+## Structural census — session 1-H (heading sweep)
+
+Rows `F277`-`F305`, `Type: heading`. This session walked the chapter's **skeleton
+only**, ignoring prose entirely, per `§6` step 4.
+
+**Count, derived from the list below: 16 numbered + the 13 unnumbered IDs listed
+= 29 heading rows.** `16 + 13 = 29`, which is the number this section's row block
+contains and the number the header states.
+
+### The 16 numbered headings
+
+Machine-derived from the source PDF by font/size class, not read off the page:
+the 5 top-level headings are the only `Bookman-Demi 14.0` lines matching `^7\.\d`,
+and the 11 sub-headings are the only `Bookman-Demi 12.0` lines matching
+`^7\.\d+\.\d+`.
+
+- 5 top-level: `F278` (7.1), `F280` (7.2), `F293` (7.3), `F295` (7.4), `F299` (7.5)
+- 11 sub-level: `F281` (7.2.1), `F286` (7.2.2), `F287` (7.2.3), `F288` (7.2.4),
+  `F289` (7.2.5), `F290` (7.2.6), `F291` (7.2.7), `F300` (7.5.1), `F301` (7.5.2),
+  `F302` (7.5.3), `F303` (7.5.4)
+
+Note that 7.1 and 7.3 have **no** numbered sub-sections in this chapter, and 7.4
+has none either — their internal structure is carried entirely by the unnumbered
+run-in headings below. That asymmetry is why the unnumbered sweep matters here
+more than in a chapter with uniform numbering.
+
+### The 13 unnumbered headings
+
+`F277`, `F279`, `F282`, `F283`, `F284`, `F285`, `F292`, `F294`, `F296`, `F297`,
+`F298`, `F304`, `F305`.
+
+These break into four typographic classes, and **two of the four are invisible to
+the obvious detection method** — recorded here because a future session that
+re-derives this census with a naive "bold line" sweep will silently get 11:
+
+1. **Chapter title plate** — `F277` (`AvantGarde-Book` 26/30 pt, page 3).
+2. **Bold run-in heads ending in a colon** (`Bookman-Demi 10.5`, line-initial):
+   `F279` "Widal test", `F292` "Lymphoid organs", `F294` "Prevention of AIDS",
+   `F296` "Causes of cancer", `F297` "Cancer detection and diagnosis",
+   `F298` "Treatment of cancer". Six rows. These are the structural spine of 7.4,
+   which has no numbered sub-sections at all.
+3. **The four innate-immunity barrier heads** (`F282`-`F285`) — and here the
+   source is **typographically inconsistent**: `(i) Physical barriers`,
+   `(ii) Physiological barriers` and `(iii) Cellular barriers` are set in
+   `Bookman-LightItalic` (regular weight, italic) with only the following colon in
+   `Bookman-Demi`, while `(iv) Cytokine barriers` is set in `Bookman-DemiItalic`
+   (bold italic). All four are the same structural level and each gets a row. A
+   bold-only sweep finds (iv) and drops (i)-(iii) — exactly the Ch9 D4 failure
+   mode, and the single most losable heading set in this chapter.
+4. **Back-matter heads** — `F304` "SUMMARY" (`Bookman-Demi 13.0`, page 21) and
+   `F305` "EXERCISES" (`AvantGarde-Book 30.0`, page 22). Neither is `Bookman-Demi
+   10.5` or `12.0`, so neither appears in a numbered-heading sweep.
+
+### Heading classes deliberately excluded
+
+- **Running heads** — "BIOLOGY" (verso) and "HUMAN HEALTH AND DISEASE" (recto),
+  `AvantGarde-Demi 8.0` on every page. Page furniture, not structure.
+- **Page numbers** — 130-148, `AvantGarde-Book 14.0` in the corner tab.
+- **Figure caption labels** — "Figure 7.1" etc. are `Bookman-Demi 9.5` and so are
+  caught by a bold sweep, but captions live in the Figure manifest, not here.
+- **Unit front matter** — page 1's "Chapter 7" / "Chapter 8" contents list
+  (`AvantGarde-Demi 10.0`) and page 2's Swaminathan profile belong to the unit,
+  consistent with 1-S's recorded exclusion of the same two pages.
+- **Bold key terms mid-sentence** — `pathogens`, `typhoid`, `interferons`,
+  `metastasis`, `Opioids`, `Cannabinoids` and ~30 others are `Bookman-Demi 10.5`
+  emphasis *inside* a sentence, not line-initial heads. They are already
+  inventoried as `term` rows by 1-S. Counting them as headings would have inflated
+  this census by roughly a factor of two; the line-initial + colon test is what
+  separates the two populations.
+
+---
+
+## Opener census — session 1-O (section-opener sweep)
+
+Rows `F306`-`F333`, `Type: opener`. This session read **first sentences only**,
+ignoring headings entirely, per `§6` step 5.
+
+**Count, derived from the list below: 1 chapter-intro + 5 top-level + 11
+sub-level + 10 unnumbered run-in + 1 summary = 28 opener rows.**
+`1 + 5 + 11 + 10 + 1 = 28`, matching the row block above and the header.
+
+Openers were located **mechanically**, not from memory: each heading's `(page, y)`
+coordinate from the 1-H sweep was used to slice the text immediately following it
+within the same column, so an opener is whatever the source puts there. This
+matters because three of the run-in openers begin *on the heading line itself*
+and a naive "line after the heading" rule silently returns the sentence's second
+half — the first extraction attempt returned "prevents entry of the
+micro-organisms." for `F311` before the anchor was moved onto the heading line.
+
+### Roll-call against the 29 heading rows
+
+| Heading row | Opener row |
+|---|---|
+| `F277` chapter title plate | *(no prose body — see exclusions)* |
+| — chapter intro prose, p4 | `F306` |
+| `F278` 7.1 | `F307` |
+| `F279` Widal test | `F308` |
+| `F280` 7.2 | `F309` |
+| `F281` 7.2.1 | `F310` |
+| `F282` (i) Physical barriers | `F311` |
+| `F283` (ii) Physiological barriers | `F312` |
+| `F284` (iii) Cellular barriers | `F313` |
+| `F285` (iv) Cytokine barriers | `F314` |
+| `F286` 7.2.2 | `F315` |
+| `F287` 7.2.3 | `F316` |
+| `F288` 7.2.4 | `F317` |
+| `F289` 7.2.5 | `F318` |
+| `F290` 7.2.6 | `F319` |
+| `F291` 7.2.7 | `F320` |
+| `F292` Lymphoid organs | `F321` |
+| `F293` 7.3 | `F322` |
+| `F294` Prevention of AIDS | `F323` |
+| `F295` 7.4 | `F324` |
+| `F296` Causes of cancer | `F325` |
+| `F297` Cancer detection and diagnosis | `F326` |
+| `F298` Treatment of cancer | `F327` |
+| `F299` 7.5 | `F328` |
+| `F300` 7.5.1 | `F329` |
+| `F301` 7.5.2 | `F330` |
+| `F302` 7.5.3 | `F331` |
+| `F303` 7.5.4 | `F332` |
+| `F304` SUMMARY | `F333` |
+| `F305` EXERCISES | *(no prose body — see exclusions)* |
+
+The table has 30 rows: 28 heading/opener pairings plus the un-paired `F277` and
+`F305`, and one opener (`F306`) with no heading of its own. `29 - 2 + 1 = 28`.
+
+### Openers deliberately excluded, and why
+
+- **`F277` (chapter title plate) and `F305` (EXERCISES)** have no opening
+  *sentence*. The title plate is a display heading followed directly by the
+  chapter's intro prose, which is inventoried as `F306` in its own right; EXERCISES
+  is followed by a numbered question, not a sentence that defines anything. An
+  opener row for either would be an artifact of the sweep, not a fact of the book.
+- **`F306` has no heading row** because the chapter's intro prose on p4 sits under
+  the title plate with no heading of its own. `§6` step 5 asks for the first
+  sentence of every *section*; this prose is a section by content even though it is
+  unheaded, and 1-S did not inventory it (openers were out of scope there), so
+  omitting it here would lose the chapter's own definition of "health" entirely.
+
+### Structural finding — `F308`'s opener does not define its own heading
+
+Worth recording explicitly, because it is the inverse of the Ch9 D9 failure that
+motivated this sweep. `§6` warns to watch for a section whose opening sentence
+defines a word in its own heading. Here the **"Widal test"** run-in head is
+followed by an opener that pivots immediately to Mary Mallon and never says what
+a Widal test is — the definition ("...confirmed by the Widal test.") sits in the
+prose *above* the heading, already inventoried by 1-S as a `diagnosis` row.
+
+This is a **finding, not a row** (`§6` step 10: "a structural finding is not a
+row"), so it is deliberately not counted in the 28. **Pass 2 obligation:** the
+notes must keep the Widal-test definition adjacent to the Typhoid Mary anecdote
+rather than reproducing NCERT's split, which reads as a non-sequitur.
+
+---
 
 ## Figure manifest
 
@@ -528,23 +743,32 @@ between them. Every label is baked into the artwork.
 
 | ID | Fig # | Type | Label row wording | Ticked |
 |----|-------|------|-------------------|--------|
-| — | Fig 7.1 | label | Figure labels: "Sporozoites"; "Salivary glands"; "Mosquito Host"; "Human Host"; "Gametocytes"; "Male"; "Female" | x |
-| — | Fig 7.2 | label | No in-figure labels — unlabelled illustration of a seated man with elephantiasis of the lower limbs | x |
-| — | Fig 7.3 | label | No in-figure labels — unlabelled photograph of a ringworm lesion on the chin and jaw | x |
-| — | Fig 7.4 | label | Figure labels: "Antigen binding site"; "Light chain"; "Heavy chain" | x |
-| — | Fig 7.5 | label | Figure labels: "Lymph nodes"; "Thymus"; "Lymphatic vessels" | x |
-| — | Fig 7.6 | label | Figure labels: "Retrovirus"; "Viral RNA core"; "Viral protein coat"; "Animal cell"; "Plasma membrane"; "Cytoplasm"; "Nucleus"; "DNA" | x |
-| — | Fig 7.7 | label | No descriptive callouts — skeletal formula bearing only atom/group symbols (HO, O, H, N, CH3) | x |
-| — | Fig 7.8 | label | No in-figure labels — unlabelled illustration of an opium poppy plant | x |
-| — | Fig 7.9 | label | No descriptive callouts — skeletal formula bearing only atom/group symbols (OH, O, H) | x |
-| — | Fig 7.10 | label | No in-figure labels — unlabelled framed illustration of a Cannabis sativa leaf | x |
-| — | Fig 7.11 | label | No in-figure labels — unlabelled illustration of a flowering Datura branch | x |
+| F336 | Fig 7.1 | label | Figure labels: "Sporozoites"; "Salivary glands"; "Mosquito Host"; "Human Host"; "Gametocytes"; "Male"; "Female" | |
+| F337 | Fig 7.2 | label | No in-figure labels — unlabelled illustration of a seated man with elephantiasis of the lower limbs | |
+| F338 | Fig 7.3 | label | No in-figure labels — unlabelled photograph of a ringworm lesion on the chin and jaw | |
+| F339 | Fig 7.4 | label | Figure labels: "Antigen binding site"; "Light chain"; "Heavy chain" | |
+| F340 | Fig 7.5 | label | Figure labels: "Lymph nodes"; "Thymus"; "Lymphatic vessels" | |
+| F341 | Fig 7.6 | label | Figure labels: "Retrovirus"; "Viral RNA core"; "Viral protein coat"; "Animal cell"; "Plasma membrane"; "Cytoplasm"; "Nucleus"; "DNA" | |
+| F342 | Fig 7.7 | label | No descriptive callouts — skeletal formula bearing only atom/group symbols (HO, O, H, N, CH3) | |
+| F343 | Fig 7.8 | label | No in-figure labels — unlabelled illustration of an opium poppy plant | |
+| F344 | Fig 7.9 | label | No descriptive callouts — skeletal formula bearing only atom/group symbols (OH, O, H) | |
+| F345 | Fig 7.10 | label | No in-figure labels — unlabelled framed illustration of a Cannabis sativa leaf | |
+| F346 | Fig 7.11 | label | No in-figure labels — unlabelled illustration of a flowering Datura branch | |
 
 **Parsed label total: 21** (7 + 3 + 3 + 8), across 4 labelled assets. The seven
 non-`Figure labels` rows contribute 0 and are invisible to the parser by design.
 
-`F###` IDs are left as `—` because the Facts table does not exist yet; session 1-S
-must assign them and 1-Z must reconcile this matrix against them.
+**IDs assigned by session 1-Z: `F336`-`F346`**, continuing the single `F###`
+sequence so the whole inventory is contiguous `F001..F346`. 1-F had left them as
+`—` because the Facts table did not exist yet.
+
+1-Z also **reset the `Ticked` column on these 11 rows from `x` to empty.** 1-F had
+marked them `x`, but the tick legend at the top of this file defines `x` as
+"written into the script and verified present in the generated PDF" — and no
+script exists. The ticks were premature bookkeeping, not verification, and
+`check_pdf.py`'s check 7 counts Facts-section rows, so leaving them ticked would
+have contributed a false green to Gate 2 rather than to Gate 1. They are ticked
+during Pass 2, with every other row.
 
 ### Labels deliberately NOT quoted, and the obligations they create
 
