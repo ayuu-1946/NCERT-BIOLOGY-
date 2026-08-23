@@ -94,8 +94,9 @@ tail — the prose sweep runs **pp. 3–11**.
 | 7 | Pass 3 session 1 | 3(a) visual + 3(b) direction 1 | ✅ **done** | 12/12 PDF pages and 9/9 assets inspected; all 207 rows checked present-and-faithful in the PDF |
 | 8 | Pass 3 session 2 | 3(b) direction 2, Gate 3 | ✅ **done** | source pp. 3–11 read start to finish under the grep prohibition; **3 defects found and fixed**; 2 rows added (`F055a`, `F085a`) → **209 rows / 200 Facts**; Gate 3 CLOSED |
 | 9 | Closure | atomic doc reconciliation | ✅ **done** | Gate 2 re-verified from disk (200/200 ticked, exit 0); all three trackers brought onto the post-Pass-3 counts in one edit |
+| 10 | Gate 1 re-derivation (2026-08-24) | audit only — no content authority | ✅ **done** | venv rebuilt (absent again at session start); `scratch/ch8_gate1_reaudit/audit.py` re-parsed every Gate 1 number from the frozen file, trusting nothing written in it — **52 / 52 assertions green, 0 corrections to this chapter**; `check_pdf.py` re-run from disk (0 fail / 1 inspected WARN, 200/200 ticked, 17/17 labels in text). One defect found **outside** the chapter: `CHAPTER_TRACKER.md`'s Class 12 footer read 5 / 13 against a machine-counted 6 / 13 — fixed |
 
-**All nine sessions ran and each reported its own machine-derived count**, which
+**All nine build sessions ran and each reported its own machine-derived count**, which
 is itself a Gate 1 criterion. Every count above was re-parsed from the finished
 inventory file, not tallied by hand — see "Gate 1 validation" below.
 
@@ -299,18 +300,94 @@ against the finished file. **No frozen row was touched and no count of rows,
 headings, openers, labels or assets changed** — the underlying inventory was
 correct throughout; only its description of the parser's output was wrong.
 
-Re-derive with:
+### Gate 1 re-derivation #2 (2026-08-24) — post-Pass-3 state, clean
+
+The re-validation above ran against the **pre-Pass-3** inventory (207 rows / 198
+Facts, all rows unticked). It has now been re-run against the **current** file, so
+the post-Pass-3 counts are independently verified too and no criterion rests on a
+verdict carried forward across the Pass 3 edits.
+
+Audit: `scratch/ch8_gate1_reaudit/audit.py`, written fresh rather than reused, and
+deliberately structured as *derived vs claimed* on every line so a green run is
+evidence and not a restatement. It imports `check_pdf.py`'s real `_extract_labels`
+instead of reimplementing it. `/vercel/share/neetenv` was **absent again** at
+session start — the third consecutive session to find it gone, which is the
+expected state, not an anomaly — and was rebuilt first, before any diagnosis
+(reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0 on CPython 3.13.11).
+
+**Result: 52 / 52 assertions PASS, zero corrections to this chapter.** Verified
+independently: 200 Facts + 9 matrix = 209 rows; `F001`..`F207` contiguous, zero
+gaps, zero duplicates; `F055a`/`F085a` the only suffixed IDs; **0 unticked**; type
+census `fact 97, name 29, term 19, heading 15, opener 14, label 9, caption 8,
+question 7, crossref 6, number 5` — **10 values summing to 209**, all inside the
+lowercase vocabulary, and **it must be quoted whole**: the nine Facts-table types sum
+to 200 and the 9 `label` rows (`F199`..`F207`) are the balance, so dropping `label`
+makes the census silently contradict the 209 row total (this session's first writeup
+did exactly that; caught by the self-check below and corrected); 17 labels
+across 5 parsed figure rows with no doubling and no phantom `Fig #` row, and the
+per-figure distribution `8.1:2, 8.2(a):6, 8.2(c):1, 8.3:1, 8.8:7` matching the
+matrix row by row; 18 summary sentences (16 + 2) with `F195`/`F196` confirmed to
+exist as real rows; 4 exercise-gap terms each with a home; 9 manifest rows all
+`Mono: yes`/`Verified: yes`, filenames matching the 9 PNGs on disk, all `mode=L`.
+Both censuses were checked against *their own lists and the rows*: heading
+`9 + 6 = 15` and opener `14`, with every census ID confirmed to be a real row of
+that type in both directions (no census-only IDs, no row-only IDs). `check_pdf.py`
+re-run from disk: 0 fail, 1 accepted WARN, 200/200 ticked, 17/17 labels in text.
+
+**The Ch12 label trap is documented in this chapter and did not fire.** Executing
+the parser is the only way to know that, and it was executed — a warning carried
+forward describes a risk, never a finding.
+
+**The one defect found was outside this chapter.** `CHAPTER_TRACKER.md`'s Class 12
+footer read "5 / 13" while its own header read "6/13"; counting the ✅ rows returns
+**6**, so Ch8's own closure had been recorded in the header and in its row but never
+propagated to the footer. Fixed with the corrected value plus a history note, and
+the roll-ups were re-derived by parsing rows per class section rather than
+incremented: Class 11 **6 / 19**, Class 12 **6 / 13**, total **12 / 32**. This is
+exactly the silent-drift class the closure rules predict, and it appeared without
+anyone touching Ch8.
+
+**A second defect was found in this file itself, in the re-derivation recipe below.**
+The snippet previously filtered IDs with `re.fullmatch(r"F\d{3}", r[0])`, which
+**silently drops `F055a` and `F085a`** — the two rows Pass 3 added. Run against the
+current inventory it printed `rows 207 ... contiguous True` and a census of
+`fact 96, question 6`, i.e. it under-reported the frozen chapter by exactly the two
+Pass 3 rows **while looking clean**, because 207 consecutive plain IDs really are
+contiguous. A future session trusting this documented command would have concluded the
+inventory was over-counted and "corrected" 209 → 207, deleting real NCERT content that
+direction 2 had to read the source start-to-finish to find. The regex is now
+`F\d{3}[a-z]?` and the suffixed IDs are asserted present rather than assumed. This is
+the sharpest lesson of the session: **the recipe a tracker hands forward is itself a
+claim, and running it is the only way to know it still matches the file it describes.**
+
+**The same regex bug is latent in two Ch7 scratch scripts** —
+`scratch/ch7_1o/verify_verbatim.py:124` and `scratch/ch7_1z/derive_counts.py:41` both
+match `F\d{3}` with no suffix branch. Ch7's inventory currently holds **346 rows and
+zero suffixed IDs**, so they are correct *today* and were left alone (they are scratch
+aids, not deliverables, and Ch7 is mid-Pass-1). But Ch7 has not run Pass 3, and Pass 3
+is exactly what mints suffixed IDs — Ch8 gained `F055a`/`F085a` that way. **Whoever
+runs Ch7's Pass 3 must widen both regexes to `F\d{3}[a-z]?` before trusting either
+script's counts**, or Ch7 will under-report its inventory the same way and look clean
+doing it.
+
+Re-derive with (verified against the current 209-row file, not transcribed):
 
     /vercel/share/neetenv/bin/python - <<'EOF'
-    import re, importlib.util, collections
+    import re, collections
     p="notes/class 12/Ch8_MicrobesInHumanWelfare/Ch8_MicrobesInHumanWelfare_inventory.md"
     txt=open(p).read()
     rows=[[c.strip() for c in l.strip().strip("|").split("|")]
           for l in txt.splitlines() if l.strip().startswith("|")]
-    rows=[r for r in rows if len(r)>=4 and re.fullmatch(r"F\d{3}", r[0])]
-    n=sorted(int(r[0][1:]) for r in rows)
-    print("rows", len(rows), "contiguous", n==list(range(1,len(n)+1)))
-    print(collections.Counter(r[2] for r in rows))
+    # F\d{3}[a-z]? — the [a-z]? is load-bearing: F055a and F085a are real rows.
+    rows=[r for r in rows if len(r)>=4 and re.fullmatch(r"F\d{3}[a-z]?", r[0])]
+    ids=[r[0] for r in rows]
+    n=sorted(int(r[0][1:4]) for r in rows)
+    print("rows", len(rows), "(expect 209)")
+    print("suffixed present:", [i for i in ids if not i[-1].isdigit()], "(expect F055a, F085a)")
+    print("contiguous:", sorted(set(n))==list(range(1,208)), "(expect True over F001..F207)")
+    print("ticked:", sum(1 for r in rows if r[-1].strip()=="x"), "/", len(rows))
+    c=collections.Counter(r[2] for r in rows)
+    print(c, "sum", sum(c.values()), "(expect 209 over 10 types, incl. label 9)")
     s=importlib.util.spec_from_file_location("cp","check_pdf.py")
     cp=importlib.util.module_from_spec(s); s.loader.exec_module(cp)
     labs=cp._extract_labels(txt)

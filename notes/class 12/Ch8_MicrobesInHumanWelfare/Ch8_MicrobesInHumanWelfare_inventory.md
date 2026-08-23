@@ -467,6 +467,56 @@ Counts are restated in exactly three places in this file — the header table, t
 two census sections, and the Gate 1 checklist below. Any correction must be applied
 to all live restatements in one edit and the parse re-run.
 
+**Independent Gate 1 re-derivation (2026-08-24) — no numbers changed.** Per the Gate 1
+Closure rule that a predecessor's findings are claims to re-derive rather than results
+to apply, every count above was re-parsed from this file by a fresh audit that trusted
+nothing written in it: `scratch/ch8_gate1_reaudit/audit.py`, run as
+`/vercel/share/neetenv/bin/python scratch/ch8_gate1_reaudit/audit.py`. The venv was
+**absent at session start** (§0.2 — it never survives a session boundary) and was
+rebuilt before anything was diagnosed. Result: **52 / 52 assertions green, zero
+corrections needed** (assertion count itself machine-counted from the run, not stated
+by hand). Reproduced independently: 200 Facts rows, 9 matrix rows, 209
+total, `F001..F207` contiguous with zero gaps and zero duplicates, `F055a`/`F085a` the
+only suffixed IDs, 0 unticked, and the type census below, with every `Type` value inside
+the normalized lowercase vocabulary. The census is **10 values summing to 209**, and it
+must be quoted whole — the Facts-table nine sum to 200 and the 9 `label` rows are the
+balance, so quoting the nine alone silently contradicts the 209 total:
+
+| Type | Rows | Table |
+|---|---|---|
+| fact | 97 | Facts |
+| name | 29 | Facts |
+| term | 19 | Facts |
+| heading | 15 | Facts |
+| opener | 14 | Facts |
+| caption | 8 | Facts |
+| question | 7 | Facts |
+| crossref | 6 | Facts |
+| number | 5 | Facts |
+| **label** | **9** | **Figure-label matrix (`F199`..`F207`)** |
+| **total** | **209** | |
+
+Also reproduced: 18 summary sentences (16 + 2), 4 exercise-gap
+terms each with a home, 9 manifest rows all `Mono: yes`/`Verified: yes` matching 9
+PNGs on disk all in `PIL` mode `L`, and both censuses equal to the length of their own
+ID lists *and* to the row-derived counts (heading `9 + 6 = 15`, opener `14`), with every
+census ID confirmed to be a real row of that type. `check_pdf.py`'s own
+`_extract_labels` was re-run against this file: **17 labels across 5 parsed figure
+rows, no doubling, no phantom `Fig #` row**, with `F203`-`F206` invisible to the parser
+as designed — the Ch12 trap is documented here but **did not fire**, confirmed by
+execution rather than inherited as a finding.
+
+**Two defects were found, both outside the frozen rows.** (1) `CHAPTER_TRACKER.md`'s
+Class 12 footer read "5 / 13" against a machine-counted **6 / 13** — Ch8's own closure
+never propagated to it. (2) More dangerous: the re-derivation recipe documented in
+`Ch8_TRACKER.md` filtered row IDs with `F\d{3}`, which **silently drops `F055a` and
+`F085a`**. Run as written it reported `rows 207 ... contiguous True` with a census of
+`fact 96, question 6` — under-counting this chapter by exactly the two rows Pass 3
+added, while looking clean, because 207 consecutive plain IDs genuinely are contiguous.
+A future session trusting that command would have "corrected" 209 → 207 and deleted
+real NCERT content. The recipe now uses `F\d{3}[a-z]?` and asserts the suffixed IDs are
+present. **Neither defect touched a frozen row, and no inventory count changed.**
+
 ---
 
 ## Gate 1 checklist

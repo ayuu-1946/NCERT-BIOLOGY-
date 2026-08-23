@@ -24,7 +24,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 
 **Closure note — what the last session left open.** The 3(b) audit session ended before it could update the two tracker documents, so the inventory said "Gate 3 CLOSED" while both trackers still said "3(b) not started". Under Gate 3(b) rule 2 that disagreement **is itself the defect**, so the closure session re-derived every claim from the artefacts (fix presence and verbatim wording against the source, the `VERIFICATION FIX` audit trail, a machine re-parse giving 196/196 ticked, a fresh linter run, a byte-comparable rebuild, and an 11/11 visual re-inspection) **before** touching any status file, then reconciled all three in one operation per rule 8.
 
-**Count-derivation note (re-confirmed at the latest Ch5 session):** the roll-up is **re-derived by counting the ✅ rows, never incremented** — `awk` over the unit tables returns 11 Done (Class 11: 6, Class 12: 5), matching both section footers, and Ch5's **▶️** row is deliberately excluded because Gate 1 closure is not chapter completion. Its 646 frozen inventory rows do **not** move this tally.
+**Count-derivation note (method; figures re-derived 2026-08-24):** the roll-up is **re-derived by counting the ✅ rows, never incremented** — `awk` over the unit tables returns **12 Done (Class 11: 6, Class 12: 6)**, matching both section footers, and Ch5's **▶️** row is deliberately excluded because Gate 1 closure is not chapter completion. Its 646 frozen inventory rows do **not** move this tally. *(This note read "11 Done (Class 11: 6, Class 12: 5)" until 2026-08-24, when it was re-run — see the correction note under the Class 12 footer. The method was right; the cached output was stale.)*
 
 **Count-correction note (closure session):** the roll-up was **re-derived by counting the ✅ rows, not by incrementing** — `grep -c` returns 11 Done overall, Class 11 6/19 and Class 12 5/13, matching the section footers. The earlier note below records the same lesson from the previous drift.
 
@@ -122,4 +122,6 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | 12. Ecosystem | ✅ Done |
 | 13. Biodiversity and Conservation | ✅ Done |
 
-**Class 12 total: 5 / 13 done** — Units IX and X are both complete
+**Class 12 total: 6 / 13 done** — Units IX and X are both complete
+
+**Count-correction note (2026-08-24, Ch8 Gate 1 re-derivation session):** this footer previously read "5 / 13" while the document header read "Class 12: 6/13". Counting the ✅ rows in the table above returns **6** (Ch8, Ch9, Ch10, Ch11, Ch12, Ch13), so the header was right and this footer was a stale increment — Ch8's closure was recorded in the header and in its own row but never propagated here. Re-derived by machine (`grep`/parse of the ✅ rows per class section), never incremented: Class 11 **6 / 19**, Class 12 **6 / 13**, total **12 / 32**.
