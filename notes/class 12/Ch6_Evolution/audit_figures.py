@@ -42,7 +42,16 @@ DPI = 150
 Z = DPI / 72
 BAND = 8.0
 DARK = 110
-BAND_TOL = 40     # px at 150 dpi before a band counts as a hit
+BAND_TOL = 12     # px at 150 dpi before a band counts as a hit
+# 12, not the skill's 40. Two real defects in this chapter sat UNDER 40 and
+# passed the gate clean, then had to be caught by eye on the contact sheet:
+#   fig_6_4b -- the "(b)" panel label (~9 dark px/row) sliced in half;
+#   fig_6_10 -- the leading "C" of the "Carboniferous" era label (~55px at
+#               200 dpi, i.e. ~31px at 150) shaved off the left edge.
+# A clipped 8pt label is a small ink cluster by construction, so a 40px floor
+# is blind to exactly the defect class that survives every other check here.
+# The cost of 12 is more chatter from neighbouring prose, which EXPLAINED
+# already triages by name.
 
 # Slack tolerances, in points.
 #
@@ -86,7 +95,10 @@ EXPLAINED = {
              "T": "body prose line above the panel"},
     "6_9":  {"T": "page-furniture leaf/branch graphic"},
     "6_10": {"T": "page-furniture leaf/branch graphic"},
-    "6_11": {"L": "watermark text", "B": "caption band 'Figure 6.11 ...'"},
+    "6_11": {"L": "watermark text",
+             "T": "page-furniture leaf/branch graphic in the top-right corner "
+                  "(ink x 488-496, y 70-97; artwork starts y=106)",
+             "B": "caption band 'Figure 6.11 ...'"},
     "6_2":  {},
     "6_6":  {},
 }
