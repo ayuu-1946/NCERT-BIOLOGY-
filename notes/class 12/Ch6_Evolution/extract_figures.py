@@ -50,19 +50,26 @@ FIGS = [
     # whitespace, so y1=515 trims to the artwork. Edge-bands clean.
     ("6_2", 5, (89, 110, 540, 515)),
 
-    # p6: homologous organs (a) Plants. Figure sits to the RIGHT of a prose
-    # column -- the classic failure this skill exists to prevent. Column
-    # profile over y100-280 shows a zero-ink gutter at x=377-389, so prose
-    # ends x~373 and figure ink starts x=393. Ink 394.9-517.3 x 106.2-272.2;
-    # x0=392 keeps the Bougainvillea stem and the "(a)" label, which an
-    # earlier x0=415 pin sliced off.
-    ("6_3a", 6, (392, 103, 522, 278)),
+    # p6: homologous organs (a) Plants -- Bougainvillea (w/ Thorn) + Cucurbita
+    # (w/ Tendril). Figure sits to the RIGHT of a prose column -- the classic
+    # failure this skill exists to prevent. The figure is WIDE: it spans the
+    # full text-block width, NOT just the right half. Prose ends x~260 with a
+    # gutter at x=262-278; per-10pt column profile over the artwork rows shows
+    # figure ink from x~280 (Bougainvillea stem/Thorn label) out to x~517
+    # (Cucurbita). An earlier x0=392 pin sliced the entire Bougainvillea +
+    # Thorn panel off, leaving only Cucurbita. x0=272 clears the gutter and
+    # keeps both plants and the "(a)" label; y106-242 art + label below.
+    ("6_3a", 6, (272, 103, 522, 278)),
 
     # p6: homologous organs (b) Animals -- Man/Cheetah/Whale/Bat + forelimbs.
-    # Same gutter as 6_3a on the left. Row profile: "(b)" label at y=552-560,
-    # caption band starts y=572, so y1=566 keeps the label and drops the
-    # caption. Ink 394.9-530.3 x 296.3-(579.6 incl. caption).
-    ("6_3b", 6, (392, 288, 535, 566)),
+    # Same wide span as 6_3a. Forelimb-row column profile shows FOUR ink
+    # clusters: x280-320 (Man), x330-360 (Cheetah), x390-420 (Whale),
+    # x450-505 (Bat). An earlier x0=392 pin cut off Man and Cheetah entirely,
+    # leaving only Whale + Bat. x0=272 clears the prose gutter and keeps all
+    # four animals and their forelimb skeletons. Row profile: "(b)" label at
+    # y=552-560, caption band starts y=572, so y1=566 keeps the label and
+    # drops the caption. Right edge to x=535 keeps the full Bat wing.
+    ("6_3b", 6, (272, 288, 535, 566)),
 
     # p7: moth (a) unpolluted -- raster photo panel. Ink 78.2-308.2 x
     # 104.6-231.4 incl. the "(a)" label. Right band hit is panel (b) next
