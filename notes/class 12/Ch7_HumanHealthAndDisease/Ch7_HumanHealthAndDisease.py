@@ -94,10 +94,11 @@ story += title_block("Human Health and Disease")
 # ======================================================================================
 # F277 - the chapter title plate, carried as the opener banner
 story.append(heading("Ch 7", "HUMAN HEALTH AND DISEASE - Chapter Opener", 1))
-# F306 (opener)
+# F306 (opener) - [FILLER TRIM, point 1] dropped the throat-clearing "so it has to be
+# defined precisely before anything else..." clause; the fact (the term is used loosely)
+# stands on its own.
 story.append(body(
-    "The term <b>health</b> is very frequently used by everybody, so it has to be defined "
-    "precisely before anything else in this chapter can be built on it."))
+    "The term <b>health</b> is very frequently used by everybody."))
 story.append(gap())
 
 story.append(heading("7.0", "How the idea of health was arrived at", 2))
@@ -177,7 +178,7 @@ story.append(body(
     "which are <b>easily transmitted from one person to another</b> are called <b>infectious "
     "diseases</b>."))
 story.append(data_table([
-    ["Group", "What it means", "NCERT's own points"],
+    ["Group", "What it means", "Additional notes"],
     ["Infectious diseases",
      "Easily transmitted from one person to another.",
      "Very common - <b>every one of us suffers from these at sometime or other</b>. Some, "
@@ -233,13 +234,15 @@ story.append(gap())
 # prose above the heading. The definition is repeated here so the anecdote does not read
 # as a non-sequitur (inventory Pass 2 obligation).
 story.append(heading("7.1b", "Widal test", 3))
+# [FILLER TRIM, point 1] cut "(stated in the prose above)" and the redundant lead-in
+# sentence ("Under this same heading NCERT places a classic case in medicine:") - the
+# note below already introduces the case, so nothing needs to announce it twice.
 story.append(body(
-    "The <b>Widal test</b> is the test that <b>confirms typhoid fever</b> (stated in the prose "
-    "above). Under this same heading NCERT places a classic case in medicine:"))
+    "The <b>Widal test</b> is the test that <b>confirms typhoid fever</b>."))
 # F026
 story.append(note(
-    "A classic case in medicine, that of <b>Mary Mallon</b> nicknamed <b>Typhoid Mary</b>, is worth "
-    "mentioning here. She was a <b>cook by profession</b> and was a <b>typhoid carrier</b> who "
+    "A <b>classic case in medicine</b> is that of <b>Mary Mallon</b>, nicknamed <b>Typhoid "
+    "Mary</b>. She was a <b>cook by profession</b> and was a <b>typhoid carrier</b> who "
     "continued to <b>spread typhoid for several years</b> through the <b>food she prepared</b>."))
 story.append(gap())
 
@@ -425,7 +428,7 @@ story.append(body(
     "These measures are <b>particularly essential where the infectious agents are transmitted "
     "through food and water</b> - such as <b>typhoid</b>, <b>amoebiasis</b> and <b>ascariasis</b>. "
     "Because they travel in contaminated food and water, these three are exactly the diseases that "
-    "a question calls <b>water-borne</b>; NCERT's own wording for the other two routes is "
+    "a question calls <b>water-borne</b>; the chapter calls the other two routes "
     "<b>air-borne</b> and <b>vector-borne</b>."))
 # F070
 story.append(b1(
@@ -472,10 +475,11 @@ story.append(gap())
 # ======================================================================================
 story.append(heading("7.2", "IMMUNITY", 1))
 # F309 (opener), F079
+# [FILLER TRIM, point 3] "This is due to the fact that" -> "Because"
 story.append(body(
     "<b>Everyday we are exposed to a large number of infectious agents.</b> However, <b>only a few "
-    "of these exposures result in disease</b>. Why? This is due to the fact that the <b>body is "
-    "able to defend itself from most of these foreign agents</b>."))
+    "of these exposures result in disease</b>. Why? Because the <b>body is able to defend itself "
+    "from most of these foreign agents</b>."))
 # F080, F081
 story.append(keyterm(
     "This <b>overall ability of the host to fight the disease-causing organisms, conferred by the "
@@ -521,7 +525,7 @@ story.append(body(
     "which <b>protect non-infected cells from further viral infection</b>."))
 story.append(gap())
 story.append(memory_aid(
-    "The four innate barriers in NCERT's own order read <b>P-P-C-C</b>: <b>P</b>hysical, "
+    "The four innate barriers, in the order the chapter presents them, read <b>P-P-C-C</b>: <b>P</b>hysical, "
     "<b>P</b>hysiological, <b>C</b>ellular, <b>C</b>ytokine - skin first, then secretions, then "
     "cells, then the proteins cells secrete."))
 story.append(gap())
@@ -537,7 +541,8 @@ story.append(body(
     "When our body encounters a pathogen for the <b>first time</b> it produces a response called "
     "<b>primary response</b>, which is of <b>low intensity</b>. <b>Subsequent encounter with the "
     "same pathogen</b> elicits a <b>highly intensified secondary or anamnestic response</b>. This "
-    "is ascribed to the fact that our body <b>appears to have memory of the first encounter</b>."))
+    # [FILLER TRIM, point 3] "ascribed to the fact that" -> "because"
+    "is because our body <b>appears to have memory of the first encounter</b>."))
 # F091, F092, F093
 story.append(body(
     "The <b>primary and secondary immune responses</b> are carried out with the help of <b>two "
@@ -1285,10 +1290,10 @@ story.append(body(
     "<b>With repeated use of drugs, the tolerance level of the receptors present in our body "
     "increases.</b> Consequently the <b>receptors respond only to higher doses of drugs or "
     "alcohol</b>, <b>leading to greater intake and addiction</b>."))
-# F247, F248
+# F247, F248 - [FILLER TRIM, point 2] cut the "It should be clearly borne in mind that..."
+# hedge; the fact reads just as firmly stated directly.
 story.append(b1(
-    "It should be <b>clearly borne in mind that use of these drugs even once, can be a fore-runner "
-    "to addiction</b>."))
+    "<b>Even a single use of these drugs can be a fore-runner to addiction.</b>"))
 story.append(b1(
     "The <b>addictive potential of drugs and alcohol pull the user into a vicious circle</b>, "
     "leading to their <b>regular use (abuse) from which he/she may not be able to get out</b>. In "
@@ -1506,8 +1511,8 @@ story.append(gap())
 story.append(heading("App. 2", "\"DNA vaccines\" and \"a suitable gene\"", 3))
 story.append(body(
     "The exercise asking about <b>DNA vaccines</b> and injecting <b>a suitable gene</b> uses two "
-    "terms that <b>do not occur anywhere in this chapter</b>. NCERT's own wording for that question "
-    "is <b>\"Discuss with your teacher\"</b>, which concedes the point."))
+    "terms that <b>do not occur anywhere in this chapter</b>. The chapter's own answer to that "
+    "question is <b>\"Discuss with your teacher\"</b>, which concedes the point."))
 story.append(body("<b>What this chapter does support:</b>"))
 story.append(b1(
     "<b>Recombinant DNA technology</b> has allowed the <b>production of antigenic polypeptides of "
