@@ -1,76 +1,72 @@
-Source: Chapter/class 12/Chapter 2 - Human Reproduction.pdf | Source pages: 15 | Frozen: 2026-08-30 | Rows: 14 Facts rows + 7 summary classification + 8 exercise-gap terms + 14 figures
+# Ch2 Human Reproduction — Figure Inventory
 
-Tick legend: `x` = figure-label census recorded in the extraction documentation and verified against the emitted asset.
+## Figure extraction status
 
-## Facts
+**Source PDF:** `Chapter/class 12/Chapter 2 - Human Reproduction.pdf`
+**Figure census:** 12 numbered source figures, represented by 14 assets because Figures 2.1 and 2.3 each contain two labeled source panels.
+**Extraction status:** Complete for the figure-extraction scope. All 14 assets were freshly regenerated after the previous chapter work was deleted, rendered at 300 dpi, converted to true grayscale (`mode=L`) with autocontrast, and visually reviewed using the fresh 4× source grids and final contact sheet.
+**Extraction script:** `extract_figures.py`
+**Audit record:** `Ch2_figure_audit.md`
 
-| ID | Section | Type | Exact original wording | Ticked |
-|----|---------|------|------------------------|--------|
-| F001 | Fig 2.1(a) | Figure labels | Figure labels: "Ureter"; "Seminal vesicle"; "Urinary bladder"; "Vas deferens"; "Prostate"; "Penis"; "Urethra"; "Glans penis"; "Foreskin"; "Testis"; "Scrotum"; "Ejaculatory duct"; "Rectum"; "Anus"; "Bulbourethral gland" | x |
-| F002 | Fig 2.1(b) | Figure labels | Figure labels: "Ureter"; "Vas deferens"; "Epididymis"; "Vasa efferentia"; "Rete testis"; "Testicular lobules"; "Glans penis"; "Foreskin"; "Urinary bladder"; "Seminal vesicle"; "Prostate"; "Bulbourethral gland"; "Urethra"; "Testis" | x |
-| F003 | Fig 2.2 | Figure labels | Figure labels: "Interstitial cells"; "Spermatogonia"; "Spermatozoa"; "Sertoli cells" | x |
-| F004 | Fig 2.3(a) | Figure labels | Figure (a) labels: "Uterus"; "Urinary Bladder"; "Pubic symphysis"; "Urethra"; "Clitoris"; "Labium minora"; "Labium majora"; "Vaginal orifice"; "Cervix"; "Rectum"; "Vagina"; "Anus" | x |
-| F005 | Fig 2.3(b) | Figure labels | Figure (b) labels: "Uterine fundus"; "Uterine cavity"; "Endometrium"; "Myometrium"; "Perimetrium"; "Isthmus"; "Ampulla"; "Infundibulum"; "Fallopian tube"; "Ovary"; "Fimbriae"; "Cervix"; "Cervical canal"; "Vagina" | x |
-| F006 | Fig 2.4 | Figure labels | Figure labels: "Mammary lobe"; "Mammary alveolus"; "Mammary duct"; "Ampulla"; "Lactiferous duct"; "Nipple"; "Areola"; "Fat"; "Rib"; "Muscles between ribs"; "Pectoralis major muscle" | x |
-| F007 | Fig 2.5 | Figure labels | Figure labels: "Spermatozoa"; "Spermatid"; "Secondary spermatocyte"; "Primary spermatocyte"; "Sertoli cell"; "Spermatogonium" | x |
-| F008 | Fig 2.6 | Figure labels | Figure labels: "Plasma membrane"; "Acrosome"; "Nucleus containing chromosomal material"; "Head"; "Neck"; "Middle piece"; "Mitochondria (energy source for swimming)"; "Tail" | x |
-| F009 | Fig 2.7 | Figure labels | Figure labels: "Blood vessels"; "Primary follicle"; "Tertiary follicle Showing antrum"; "Graafian follicle"; "Secondary oocyte"; "Corpus luteum" | x |
-| F010 | Fig 2.8 | Figure labels | Figure labels: "Spermatogonia"; "Mitosis differentiation"; "Primary spermatocytes"; "1st meiotic division"; "Secondary spermatocytes"; "2nd meiotic division"; "Spermatids"; "Differentiation"; "Spermatozoa"; "CHROMOSOME NUMBER PER CELL"; "46"; "23"; "Oogonia"; "Fetal life"; "Birth"; "Childhood"; "Puberty"; "Adult reproductive life"; "Primary oocyte"; "1st meiotic division (completed prior to ovulation)"; "Secondary oocyte"; "First polar body"; "Second polar body"; "Ovum" | x |
-| F011 | Fig 2.9 | Figure labels | Figure labels: "Pituitary hormone levels"; "FSH"; "LH"; "Ovarian events"; "Developing follicle"; "Mature follicle"; "Developing corpus luteum"; "Regressing corpus luteum"; "Ovulation"; "Ovarian hormone levels"; "Estrogen"; "Progesterone"; "Uterine events"; "Menses"; "Days"; "Menstruation"; "Follicular phase (Proliferative phase)"; "Luteal phase (Secretory phase)"; "Next cycle begins" | x |
-| F012 | Fig 2.10 | Figure labels | Figure labels: "Sperm"; "Zona pellucida"; "Ovum"; "Cells of the corona radiata"; "Perivitelline space" | x |
-| F013 | Fig 2.11 | Figure labels | Figure labels: "Morula"; "Blastocyst"; "Implantation" | x |
-| F014 | Fig 2.12 | Figure labels | Figure labels: "Placental villi"; "Umbilical cord with its vessels"; "Cavity of uterus"; "Yolk sac"; "Embryo"; "Plug of mucus in cervix" | x |
-
-## Summary classification
-
-| ID | Classification | Coverage |
-|----|----------------|----------|
-| S001 | Male reproductive system | Testis, ducts, glands, penis and sperm structure |
-| S002 | Female reproductive system | Ovaries, oviducts, uterus, vagina and mammary glands |
-| S003 | Gametogenesis | Spermatogenesis and oogenesis |
-| S004 | Menstrual cycle | Ovarian and uterine events with hormone changes |
-| S005 | Fertilisation and implantation | Sperm-ovum interaction, cleavage and implantation |
-| S006 | Pregnancy and embryonic development | Placenta, foetal development and endocrine support |
-| S007 | Parturition and lactation | Delivery and milk secretion |
-
-## Exercise-gap terms
-
-| Term | Covered in chapter |
-|------|--------------------|
-| Gametogenesis | yes |
-| Spermatogenesis | yes |
-| Oogenesis | yes |
-| Menstrual cycle | yes |
-| Ovulation | yes |
-| Fertilisation | yes |
-| Implantation | yes |
-| Placenta | yes |
+The source chapter contains 15 PDF pages. Figure-bearing artwork occurs on PDF pages 2–12. Page 1 contains references to Figure 2.1 but no figure artwork, so it is excluded from the asset census.
 
 ## Figure manifest
 
-| Figure number | Verbatim caption | Asset file | Source page | Mono | Verified |
-|---------------|------------------|------------|-------------|------|----------|
-| 2.1(a) | Diagrammatic sectional view of male pelvis showing reproductive system | assets/fig_2_1a.png | 2 | yes | yes |
-| 2.1(b) | Diagrammatic view of male reproductive system (part of testis is open to show inner details) | assets/fig_2_1b.png | 2 | yes | yes |
-| 2.2 | Diagrammatic sectional view of seminiferous tubule (enlarged) | assets/fig_2_2.png | 3 | yes | yes |
-| 2.3(a) | Diagrammatic sectional view of female pelvis showing reproductive system | assets/fig_2_3a.png | 4 | yes | yes |
-| 2.3(b) | Diagrammatic sectional view of the female reproductive system | assets/fig_2_3b.png | 4 | yes | yes |
-| 2.4 | A diagrammatic sectional view of Mammary gland | assets/fig_2_4.png | 5 | yes | yes |
-| 2.5 | Diagrammatic sectional view of a seminiferous tubule (enlarged) | assets/fig_2_5.png | 6 | yes | yes |
-| 2.6 | Structure of a sperm | assets/fig_2_6.png | 7 | yes | yes |
-| 2.7 | Diagrammatic Section view of ovary | assets/fig_2_7.png | 8 | yes | yes |
-| 2.8 | Schematic representation of (a) Spermatogenesis; (b) Oogenesis | assets/fig_2_8.png | 8 | yes | yes |
-| 2.9 | Diagrammatic presentation of various events during a menstrual cycle | assets/fig_2_9.png | 9 | yes | yes |
-| 2.10 | Ovum surrounded by few sperms | assets/fig_2_10.png | 10 | yes | yes |
-| 2.11 | Transport of ovum, fertilisation and passage of growing embryo through fallopian tube | assets/fig_2_11.png | 11 | yes | yes |
-| 2.12 | The human foetus within the uterus | assets/fig_2_12.png | 12 | yes | yes |
+| Figure | Verbatim source caption | PDF page | Asset | Status |
+|---|---|---:|---|---|
+| 2.1a | Diagrammatic sectional view of male pelvis showing reproductive system | 2 | `assets/fig_2_1a.png` | Extracted, grayscale, visually verified |
+| 2.1b | Diagrammatic view of male reproductive system (part of testis is open to show inner details) | 2 | `assets/fig_2_1b.png` | Extracted, grayscale, visually verified |
+| 2.2 | Diagrammatic sectional view of seminiferous tubule | 3 | `assets/fig_2_2.png` | Extracted, grayscale, visually verified |
+| 2.3a | Diagrammatic sectional view of female pelvis showing reproductive system | 4 | `assets/fig_2_3a.png` | Extracted, grayscale, visually verified |
+| 2.3b | Diagrammatic sectional view of the female reproductive system | 4 | `assets/fig_2_3b.png` | Extracted, grayscale, visually verified |
+| 2.4 | A diagrammatic sectional view of Mammary gland | 5 | `assets/fig_2_4.png` | Extracted, grayscale, visually verified |
+| 2.5 | Diagrammatic sectional view of a seminiferous tubule (enlarged) | 6 | `assets/fig_2_5.png` | Extracted, grayscale, visually verified |
+| 2.6 | Structure of a sperm | 7 | `assets/fig_2_6.png` | Extracted, grayscale, visually verified |
+| 2.7 | Diagrammatic Section view of ovary | 8 | `assets/fig_2_7.png` | Extracted, grayscale, visually verified |
+| 2.8 | Schematic representation of (a) Spermatogenesis; (b) Oogenesis | 8 | `assets/fig_2_8.png` | Extracted as one complete shared-annotation asset, grayscale, visually verified |
+| 2.9 | Diagrammatic presentation of various events during a menstrual cycle | 9 | `assets/fig_2_9.png` | Extracted, grayscale, visually verified |
+| 2.10 | Ovum surrounded by few sperms | 10 | `assets/fig_2_10.png` | Extracted, grayscale, visually verified |
+| 2.11 | Transport of ovum, fertilisation and passage of growing embryo through fallopian tube | 11 | `assets/fig_2_11.png` | Extracted as one connected multi-stage asset, grayscale, visually verified |
+| 2.12 | The human foetus within the uterus | 12 | `assets/fig_2_12.png` | Extracted, grayscale, visually verified |
 
-## Extraction record and audit trail
+## Figure-label matrix
 
-The authoritative source was retained in place at `Chapter/class 12/Chapter 2 - Human Reproduction.pdf`; it contains 15 pages and was not modified. Figure-bearing pages p2-p12 were rendered with the canonical 440 dpi, 5 PDF-point grid and 20-point coordinate labels. Rectangles were hand-pinned from the overlays and cross-checked against caption positions. Each crop was rendered at 300 dpi, converted with `Image.convert("L")`, and autocontrasted with `ImageOps.autocontrast(cutoff=1)`. The first visual review identified caption/page-furniture bleed in `fig_2_1a.png` and `fig_2_1b.png`; both rectangles were repinned and all assets regenerated. This chapter folder intentionally contains no replacement chapter PDF; it is an extraction-only deliverable.
+The labels below were checked against the rendered figure assets during the fresh visual review. They are the in-figure labels that should be represented in the chapter’s running text or explicitly referenced in its figure discussion.
 
-The combined multi-panel figures 2.8 and 2.11 were intentionally preserved as complete assets because their panels share central annotations or connected transport artwork. Existing NCERT caption strips were excluded from the final figure crops and are represented in the manifest and running text. No person photograph was extracted.
+| Figure | In-figure labels verified in asset |
+|---|---|
+| 2.1a | Ureter; Seminal vesicle; Urinary bladder; Vas deferens; Prostate; Penis; Urethra; Glans penis; Foreskin; Testis; Scrotum; Ejaculatory duct; Rectum; Anus; Bulbourethral gland |
+| 2.1b | Ureter; Vas deferens; Epididymis; Vasa efferentia; Rete testis; Testicular lobules; Glans penis; Foreskin; Urinary bladder; Seminal vesicle; Prostate; Bulbourethral gland; Urethra; Testis |
+| 2.2 | Interstitial cells; Spermatogonia; Spermatozoa; Sertoli cells |
+| 2.3a | Uterus; Urinary Bladder; Pubic symphysis; Urethra; Clitoris; Labium minora; Labium majora; Vaginal orifice; Cervix; Rectum; Vagina; Anus |
+| 2.3b | Uterine fundus; Uterine cavity; Endometrium; Myometrium; Perimetrium; Isthmus; Ampulla; Infundibulum; Fallopian tube; Ovary; Fimbriae; Cervix; Cervical canal; Vagina |
+| 2.4 | Mammary lobe; Mammary alveolus; Mammary duct; Ampulla; Lactiferous duct; Nipple; Areola; Fat; Rib; Muscles between ribs; Pectoralis major muscle |
+| 2.5 | Spermatozoa; Spermatid; Secondary spermatocyte; Primary spermatocyte; Sertoli cell; Spermatogonium |
+| 2.6 | Plasma membrane; Acrosome; Nucleus containing chromosomal material; Head; Neck; Middle piece; Mitochondria (energy source for swimming); Tail |
+| 2.7 | Blood vessels; Primary follicle; Tertiary follicle Showing antrum; Graafian follicle; Secondary oocyte; Corpus luteum |
+| 2.8 | Spermatogonia; Mitosis differentiation; Primary spermatocytes; 1st meiotic division; Secondary spermatocytes; 2nd meiotic division; Spermatids; Differentiation; Spermatozoa; CHROMOSOME NUMBER PER CELL; 46; 23; Oogonia; Fetal life; Birth; Childhood; Puberty; Adult reproductive life; Primary oocyte; 1st meiotic division (completed prior to ovulation); Secondary oocyte; First polar body; Second polar body; Ovum |
+| 2.9 | Pituitary hormone levels; FSH; LH; Ovarian events; Developing follicle; Mature follicle; Developing corpus luteum; Regressing corpus luteum; Ovulation; Ovarian hormone levels; Estrogen; Progesterone; Uterine events; Menses; Days; Menstruation; Follicular phase (Proliferative phase); Luteal phase (Secretory phase); Next cycle begins |
+| 2.10 | Sperm; Zona pellucida; Ovum; Cells of the corona radiata; Perivitelline space |
+| 2.11 | Morula; Blastocyst; Implantation |
+| 2.12 | Placental villi; Umbilical cord with its vessels; Cavity of uterus; Yolk sac; Embryo; Plug of mucus in cervix |
 
-## Gate 1
+## Crop and audit notes
 
-Figure count: 14. Figure-label row count: 14. Label count: 147 as parser-derived from the 14 figure-label rows and visually harvested from the emitted assets. Monochrome status: yes, all emitted PNGs are mode `L`. Verification status: yes for the corrected asset set; extraction-only validation used the inventory label parser plus asset mode/dimension checks because `check_pdf.py` requires a generated chapter PDF, which is outside the requested scope. Limitations: source artwork contains the publisher’s faint watermark as part of the supplied PDF; no source content was redrawn or altered.
+The rectangles in `extract_figures.py` were freshly checked against the canonical 4× grid overlays in `scratch/ch2_figs/grid_4x/`. Captions and page-number furniture were excluded wherever the source layout allowed. Figures 2.1 and 2.3 were split into their separately labeled `(a)` and `(b)` panels. Figures 2.8 and 2.11 remain complete single assets because their panels or stages share central annotations and connected artwork.
+
+Some source pages place vector labels beside or over the prose columns, so the text-layer check can report zero words or grazing for otherwise correct artwork. The final audit records these source-layout exceptions explicitly; visual review, drawing extent checks, and border-band checks were also completed.
+
+## Reproducibility
+
+Run from the repository root:
+
+```bash
+/vercel/share/neetenv/bin/python 'notes/class 12/Ch2_HumanReproduction/extract_figures.py'
+/vercel/share/neetenv/bin/python scratch/audit_human_reproduction_figures.py
+```
+
+## References
+
+[1]: `../../../../Chapter/class 12/Chapter 2 - Human Reproduction.pdf` "NCERT Biology, Class 12, Chapter 2: Human Reproduction"
+[2]: `../../../../SUPREME COMMAND PROMPT.md` "Repository SUPREME COMMAND prompt"
+[3]: `../../../../skills/ncert-figure-extraction/SKILL.md` "ncert-figure-extraction workflow"

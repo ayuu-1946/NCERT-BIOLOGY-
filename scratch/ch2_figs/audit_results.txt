@@ -1,0 +1,45 @@
+--- A) text-layer word grazing ---
+fig_2_1a: words_in_rect=0 ok
+fig_2_1b: words_in_rect=0 ok
+fig_2_2: words_in_rect=0 ok
+fig_2_3a: words_in_rect=0 ok
+fig_2_3b: words_in_rect=0 ok
+fig_2_4: words_in_rect=0 ok
+fig_2_5: words_in_rect=0 ok
+fig_2_6: words_in_rect=0 ok
+fig_2_7: words_in_rect=2 ok
+fig_2_8: words_in_rect=2 GRAZING ['(a)', '(b)']
+fig_2_9: words_in_rect=0 ok
+fig_2_10: words_in_rect=0 ok
+fig_2_11: words_in_rect=0 ok
+fig_2_12: words_in_rect=0 ok
+--- B) drawings-extent overflow ---
+fig_2_1a: OVERFLOW L4.1 T6.8 R0.0 B14.2
+fig_2_1b: OVERFLOW L0.0 T3.8 R0.0 B0.0
+fig_2_2: ok
+fig_2_3a: OVERFLOW L0.0 T37.0 R0.0 B37.3
+fig_2_3b: OVERFLOW L4.4 T15.3 R0.0 B0.6
+fig_2_4: ok
+fig_2_5: OVERFLOW L0.0 T0.0 R0.0 B3.3
+fig_2_6: ok
+fig_2_7: ok
+fig_2_8: ok
+fig_2_9: OVERFLOW L13.4 T0.0 R4.2 B0.0
+fig_2_10: OVERFLOW L0.0 T4.4 R1.2 B0.0
+fig_2_11: OVERFLOW L17.2 T89.7 R93.1 B53.1
+fig_2_12: ok
+--- C) unexplained dark ink in border band ---
+fig_2_1a: EDGE-INK ['L:107px@(np.float64(229.0), np.float64(126.5))', 'T:171px@(np.float64(469.2), np.float64(72.0))']
+fig_2_1b: clean
+fig_2_2: clean
+fig_2_3a: clean
+fig_2_3b: clean
+fig_2_4: clean
+fig_2_5: clean
+fig_2_6: clean
+fig_2_7: clean
+fig_2_8: clean
+fig_2_9: EDGE-INK ['L:1187px@(np.float64(107.4), np.float64(85.7))']
+fig_2_10: EDGE-INK ['R:51px@(np.float64(478.4), np.float64(569.7))']
+fig_2_11: EDGE-INK ['T:150px@(np.float64(232.8), np.float64(394.0))', 'B:503px@(np.float64(214.6), np.float64(645.0))']
+fig_2_12: EDGE-INK ['R:43px@(np.float64(473.8), np.float64(508.7))', 'T:69px@(np.float64(338.8), np.float64(459.0))', 'B:197px@(np.float64(311.9), np.float64(680.0))']
