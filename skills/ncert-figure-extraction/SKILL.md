@@ -106,6 +106,30 @@ img.save(f"scratch/ch{N}_figs/grid/p{pno:02d}.png")
 
 ### 2. Read each figure's rect off its grid image — and cross-check numerically
 
+#### High-density refinement and completeness rule
+
+When a first-pass crop is incomplete or when labels sit close to a boundary, use a **4× grid refinement** before repinning: render at approximately **440 dpi** and draw gridlines every **5 PDF points**, with coordinate labels at 20-point intervals. This is four times finer than the baseline 110-dpi render with 20-point grid spacing. The finer grid improves coordinate precision, but it does not replace visual judgment: the rectangle must include the complete figure, including every panel, arrow, in-figure label, terminal mark, bracket, and leader line. Stop the crop before the caption or neighboring prose unless the chapter convention explicitly embeds captions.
+
+After every extraction run, **open every emitted PNG individually**, not only a contact sheet. Compare each image against the source grid page and confirm that no panel, label, arrow, charge mark, bracket, or outer edge is missing. A passing mechanical audit is insufficient when the wrong region was selected or when a multi-panel figure was mistaken for a single panel. If any element is absent, return to the 4× overlay, repin the rectangle, regenerate, rerun all three audits, and eyeball the corrected PNG again. Record the correction in the chapter inventory or audit notes.
+
+Example 4× grid renderer:
+
+```python
+DPI = 440                 # 4x the baseline 110-dpi render
+STEP = 5                  # 5 PDF points, 4x finer than the 20-point grid
+for x in range(0, int(page.rect.width) + 1, STEP):
+    d.line([(x*z, 0), (x*z, img.height)], fill=(175, 215, 255), width=1)
+    if x % 20 == 0:
+        d.text((x*z + 2, 2), str(x), fill=(220, 0, 0))
+for y in range(0, int(page.rect.height) + 1, STEP):
+    d.line([(0, y*z), (img.width, y*z)], fill=(175, 215, 255), width=1)
+    if y % 20 == 0:
+        d.text((2, y*z + 2), str(y), fill=(220, 0, 0))
+```
+
+The refinement is especially important for multi-panel diagrams. For example, a crop that captures only the upper state of a two-panel figure may pass a word-grazing check while silently omitting the lower state. Use the source page’s text-layer coordinates and drawing extents to locate the true bottom of the artwork, then leave a small margin before the caption.
+
+
 `view` each grid page and trace the figure's outermost ink (artwork +
 in-image labels + caption line if you're including it) as `(x0, y0, x1, y1)`
 in PDF points.
