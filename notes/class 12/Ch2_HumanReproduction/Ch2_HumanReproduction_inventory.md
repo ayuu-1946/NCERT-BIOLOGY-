@@ -1,25 +1,25 @@
 Source: Chapter/class 12/Chapter 2 - Human Reproduction.pdf | Source pages: 15 | Frozen: 2026-08-30 | Rows: 14 Facts rows + 7 summary classification + 8 exercise-gap terms + 14 figures
 
-Tick legend: `x` = written into the script and verified present in the generated PDF.
+Tick legend: `x` = figure-label census recorded in the extraction documentation and verified against the emitted asset.
 
 ## Facts
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
-| F001 | 2.1 | Figure labels | Figure labels: "Ureter"; "Seminal vesicle"; "Urinary bladder"; "Vas deferens"; "Prostate"; "Penis"; "Urethra"; "Glans penis"; "Foreskin"; "Testis"; "Scrotum"; "Ejaculatory duct"; "Rectum"; "Anus"; "Bulbourethral gland" | x |
-| F002 | 2.1 | Figure labels | Figure labels: "Ureter"; "Vas deferens"; "Epididymis"; "Vasa efferentia"; "Rete testis"; "Testicular lobules"; "Glans penis"; "Foreskin"; "Urinary bladder"; "Seminal vesicle"; "Prostate"; "Bulbourethral gland"; "Urethra"; "Testis" | x |
-| F003 | 2.1 | Figure labels | Figure labels: "Interstitial cells"; "Spermatogonia"; "Spermatozoa"; "Sertoli cells" | x |
-| F004 | 2.2 | Figure labels | Figure (a) labels: "Uterus"; "Urinary Bladder"; "Pubic symphysis"; "Urethra"; "Clitoris"; "Labium minora"; "Labium majora"; "Vaginal orifice"; "Cervix"; "Rectum"; "Vagina"; "Anus" | x |
-| F005 | 2.2 | Figure labels | Figure (b) labels: "Uterine fundus"; "Uterine cavity"; "Endometrium"; "Myometrium"; "Perimetrium"; "Isthmus"; "Ampulla"; "Infundibulum"; "Fallopian tube"; "Ovary"; "Fimbriae"; "Cervix"; "Cervical canal"; "Vagina" | x |
-| F006 | 2.2 | Figure labels | Figure labels: "Mammary lobe"; "Mammary alveolus"; "Mammary duct"; "Ampulla"; "Lactiferous duct"; "Nipple"; "Areola"; "Fat"; "Rib"; "Muscles between ribs"; "Pectoralis major muscle" | x |
-| F007 | 2.3 | Figure labels | Figure labels: "Spermatozoa"; "Spermatid"; "Secondary spermatocyte"; "Primary spermatocyte"; "Sertoli cell"; "Spermatogonium" | x |
-| F008 | 2.3 | Figure labels | Figure labels: "Plasma membrane"; "Acrosome"; "Nucleus containing chromosomal material"; "Head"; "Neck"; "Middle piece"; "Mitochondria (energy source for swimming)"; "Tail" | x |
-| F009 | 2.3 | Figure labels | Figure labels: "Blood vessels"; "Primary follicle"; "Tertiary follicle Showing antrum"; "Graafian follicle"; "Secondary oocyte"; "Corpus luteum" | x |
-| F010 | 2.3 | Figure labels | Figure labels: "Spermatogonia"; "Mitosis differentiation"; "Primary spermatocytes"; "1st meiotic division"; "Secondary spermatocytes"; "2nd meiotic division"; "Spermatids"; "Differentiation"; "Spermatozoa"; "CHROMOSOME NUMBER PER CELL"; "46"; "23"; "Oogonia"; "Fetal life"; "Birth"; "Childhood"; "Puberty"; "Adult reproductive life"; "Primary oocyte"; "1st meiotic division (completed prior to ovulation)"; "Secondary oocyte"; "First polar body"; "Second polar body"; "Ovum" | x |
-| F011 | 2.4 | Figure labels | Figure labels: "Pituitary hormone levels"; "FSH"; "LH"; "Ovarian events"; "Developing follicle"; "Mature follicle"; "Developing corpus luteum"; "Regressing corpus luteum"; "Ovulation"; "Ovarian hormone levels"; "Estrogen"; "Progesterone"; "Uterine events"; "Menses"; "Days"; "Menstruation"; "Follicular phase (Proliferative phase)"; "Luteal phase (Secretory phase)"; "Next cycle begins" | x |
-| F012 | 2.5 | Figure labels | Figure labels: "Sperm"; "Zona pellucida"; "Ovum"; "Cells of the corona radiata"; "Perivitelline space" | x |
-| F013 | 2.5 | Figure labels | Figure labels: "Morula"; "Blastocyst"; "Implantation" | x |
-| F014 | 2.6 | Figure labels | Figure labels: "Placental villi"; "Umbilical cord with its vessels"; "Cavity of uterus"; "Yolk sac"; "Embryo"; "Plug of mucus in cervix" | x |
+| F001 | Fig 2.1(a) | Figure labels | Figure labels: "Ureter"; "Seminal vesicle"; "Urinary bladder"; "Vas deferens"; "Prostate"; "Penis"; "Urethra"; "Glans penis"; "Foreskin"; "Testis"; "Scrotum"; "Ejaculatory duct"; "Rectum"; "Anus"; "Bulbourethral gland" | x |
+| F002 | Fig 2.1(b) | Figure labels | Figure labels: "Ureter"; "Vas deferens"; "Epididymis"; "Vasa efferentia"; "Rete testis"; "Testicular lobules"; "Glans penis"; "Foreskin"; "Urinary bladder"; "Seminal vesicle"; "Prostate"; "Bulbourethral gland"; "Urethra"; "Testis" | x |
+| F003 | Fig 2.2 | Figure labels | Figure labels: "Interstitial cells"; "Spermatogonia"; "Spermatozoa"; "Sertoli cells" | x |
+| F004 | Fig 2.3(a) | Figure labels | Figure (a) labels: "Uterus"; "Urinary Bladder"; "Pubic symphysis"; "Urethra"; "Clitoris"; "Labium minora"; "Labium majora"; "Vaginal orifice"; "Cervix"; "Rectum"; "Vagina"; "Anus" | x |
+| F005 | Fig 2.3(b) | Figure labels | Figure (b) labels: "Uterine fundus"; "Uterine cavity"; "Endometrium"; "Myometrium"; "Perimetrium"; "Isthmus"; "Ampulla"; "Infundibulum"; "Fallopian tube"; "Ovary"; "Fimbriae"; "Cervix"; "Cervical canal"; "Vagina" | x |
+| F006 | Fig 2.4 | Figure labels | Figure labels: "Mammary lobe"; "Mammary alveolus"; "Mammary duct"; "Ampulla"; "Lactiferous duct"; "Nipple"; "Areola"; "Fat"; "Rib"; "Muscles between ribs"; "Pectoralis major muscle" | x |
+| F007 | Fig 2.5 | Figure labels | Figure labels: "Spermatozoa"; "Spermatid"; "Secondary spermatocyte"; "Primary spermatocyte"; "Sertoli cell"; "Spermatogonium" | x |
+| F008 | Fig 2.6 | Figure labels | Figure labels: "Plasma membrane"; "Acrosome"; "Nucleus containing chromosomal material"; "Head"; "Neck"; "Middle piece"; "Mitochondria (energy source for swimming)"; "Tail" | x |
+| F009 | Fig 2.7 | Figure labels | Figure labels: "Blood vessels"; "Primary follicle"; "Tertiary follicle Showing antrum"; "Graafian follicle"; "Secondary oocyte"; "Corpus luteum" | x |
+| F010 | Fig 2.8 | Figure labels | Figure labels: "Spermatogonia"; "Mitosis differentiation"; "Primary spermatocytes"; "1st meiotic division"; "Secondary spermatocytes"; "2nd meiotic division"; "Spermatids"; "Differentiation"; "Spermatozoa"; "CHROMOSOME NUMBER PER CELL"; "46"; "23"; "Oogonia"; "Fetal life"; "Birth"; "Childhood"; "Puberty"; "Adult reproductive life"; "Primary oocyte"; "1st meiotic division (completed prior to ovulation)"; "Secondary oocyte"; "First polar body"; "Second polar body"; "Ovum" | x |
+| F011 | Fig 2.9 | Figure labels | Figure labels: "Pituitary hormone levels"; "FSH"; "LH"; "Ovarian events"; "Developing follicle"; "Mature follicle"; "Developing corpus luteum"; "Regressing corpus luteum"; "Ovulation"; "Ovarian hormone levels"; "Estrogen"; "Progesterone"; "Uterine events"; "Menses"; "Days"; "Menstruation"; "Follicular phase (Proliferative phase)"; "Luteal phase (Secretory phase)"; "Next cycle begins" | x |
+| F012 | Fig 2.10 | Figure labels | Figure labels: "Sperm"; "Zona pellucida"; "Ovum"; "Cells of the corona radiata"; "Perivitelline space" | x |
+| F013 | Fig 2.11 | Figure labels | Figure labels: "Morula"; "Blastocyst"; "Implantation" | x |
+| F014 | Fig 2.12 | Figure labels | Figure labels: "Placental villi"; "Umbilical cord with its vessels"; "Cavity of uterus"; "Yolk sac"; "Embryo"; "Plug of mucus in cervix" | x |
 
 ## Summary classification
 
@@ -67,10 +67,10 @@ Tick legend: `x` = written into the script and verified present in the generated
 
 ## Extraction record and audit trail
 
-The authoritative source was retained in place at `Chapter/class 12/Chapter 2 - Human Reproduction.pdf`; it contains 15 pages and was not modified. Figure-bearing pages p2-p12 were rendered with the canonical 440 dpi, 5 PDF-point grid and 20-point coordinate labels. Rectangles were hand-pinned from the overlays and cross-checked against caption positions. Each crop was rendered at 300 dpi, converted with `Image.convert("L")`, and autocontrasted with `ImageOps.autocontrast(cutoff=1)`. The first individual visual verification identified caption/page-furniture bleed in `fig_2_1a.png` and `fig_2_1b.png`; both rectangles were repinned and all assets regenerated.
+The authoritative source was retained in place at `Chapter/class 12/Chapter 2 - Human Reproduction.pdf`; it contains 15 pages and was not modified. Figure-bearing pages p2-p12 were rendered with the canonical 440 dpi, 5 PDF-point grid and 20-point coordinate labels. Rectangles were hand-pinned from the overlays and cross-checked against caption positions. Each crop was rendered at 300 dpi, converted with `Image.convert("L")`, and autocontrasted with `ImageOps.autocontrast(cutoff=1)`. The first visual review identified caption/page-furniture bleed in `fig_2_1a.png` and `fig_2_1b.png`; both rectangles were repinned and all assets regenerated. This chapter folder intentionally contains no replacement chapter PDF; it is an extraction-only deliverable.
 
 The combined multi-panel figures 2.8 and 2.11 were intentionally preserved as complete assets because their panels share central annotations or connected transport artwork. Existing NCERT caption strips were excluded from the final figure crops and are represented in the manifest and running text. No person photograph was extracted.
 
 ## Gate 1
 
-Figure count: 14. Figure-label row count: 14. Label count: 149 as visually harvested and recorded above. Monochrome status: yes, all emitted PNGs are mode `L`. Verification status: yes for the corrected asset set, subject to final individual image opening and parser gate. Limitations: source artwork contains the publisher’s faint watermark as part of the supplied PDF; no source content was redrawn or altered.
+Figure count: 14. Figure-label row count: 14. Label count: 147 as parser-derived from the 14 figure-label rows and visually harvested from the emitted assets. Monochrome status: yes, all emitted PNGs are mode `L`. Verification status: yes for the corrected asset set; extraction-only validation used the inventory label parser plus asset mode/dimension checks because `check_pdf.py` requires a generated chapter PDF, which is outside the requested scope. Limitations: source artwork contains the publisher’s faint watermark as part of the supplied PDF; no source content was redrawn or altered.

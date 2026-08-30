@@ -1,0 +1,6 @@
+inventory_label_rows= 147
+inventory_label_count= 147
+facts_ids= F001,F002,F003,F004,F005,F006,F007,F008,F009,F010,F011,F012,F013,F014
+asset_count= 14
+all_assets_mode=L_and_dimensions_ok=yes
+chapter_pdf_present= False
