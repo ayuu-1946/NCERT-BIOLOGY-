@@ -1,0 +1,21 @@
+--- A) text-layer word grazing ---
+fig_14_1: words_in_rect=17 ok
+fig_14_2a: words_in_rect=0 ok
+fig_14_2b: words_in_rect=0 ok
+fig_14_3: words_in_rect=0 ok
+fig_14_4: words_in_rect=0 ok
+fig_14_5: words_in_rect=17 ok
+--- B) drawings-extent overflow ---
+fig_14_1: ok
+fig_14_2a: ok
+fig_14_2b: ok
+fig_14_3: ok
+fig_14_4: OVERFLOW L0.0 T0.0 R0.0 B8.7
+fig_14_5: ok
+--- C) unexplained dark ink in border band ---
+fig_14_1: clean
+fig_14_2a: clean
+fig_14_2b: clean
+fig_14_3: clean
+fig_14_4: clean
+fig_14_5: clean
