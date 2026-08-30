@@ -15,14 +15,13 @@ RENDER_DPI = 440
 FIGS = [
     # p3: neuron labels/artwork; top starts below the running header/page number,\n    # right edge leaves a small margin beyond the outer branch, caption begins at y=464.
     ("18_1", 3, (60, 84, 270, 452)),
-    # p4: vector axon diagram; figure labels begin at y=112 and the visible\n    # axon ends near x=368/y=196; top excludes the running header/page number.
-    ("18_2", 4, (90, 104, 420, 205)),
+    # p4: vector two-panel axon diagram; artwork extends through y=307,\n    # including the lower arrows and B label; caption begins at y=316.
+    ("18_2", 4, (80, 104, 440, 312)),
     # p5: boxed synapse artwork; get_drawings extent x=154.7..477.6 y=447.0..683.4;
     # box includes right-side labels and stops before caption near y=690.
     ("18_3", 5, (150, 442, 486, 687)),
-    # p6: raster brain plate; no usable vector drawings; box follows visible ink,
-    # includes all labels, and stops before caption at y=696.8.
-    ("18_4", 6, (80, 425, 490, 692)),
+    # p6: raster brain plate; y=420 starts below the preceding body-text line;\n    # x=60 preserves the left bracket and all Forebrain/Hindbrain/Spinal cord labels.
+    ("18_4", 6, (60, 420, 510, 692)),
 ]
 
 def main():
