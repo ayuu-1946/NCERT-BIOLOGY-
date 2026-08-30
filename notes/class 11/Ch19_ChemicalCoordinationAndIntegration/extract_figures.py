@@ -24,10 +24,10 @@ FIGS = [
     # p6: the two adrenal subfigures are interleaved horizontally; a single
     # combined crop preserves both complete panels, labels, and connector.
     ("19_4", 6, (135, 235, 520, 518)),
-    # p10: protein-hormone mechanism panel (a); vector plate x=74.8..530.4 y=371.0..623.7.
-    ("19_5a", 10, (68, 365, 536, 638)),
-    # p11: steroid-hormone mechanism panel (b); vector plate x=40.2..481.5 y=88.0..419.4.
-    ("19_5b", 11, (34, 82, 488, 446)),
+    # p10: protein-hormone mechanism panel (a), cropped to the existing box border.
+    ("19_5a", 10, (74, 370, 531, 624)),
+    # p11: steroid-hormone mechanism panel (b), cropped to the existing box border.
+    ("19_5b", 11, (39, 87, 483, 421)),
 ]
 
 def main():

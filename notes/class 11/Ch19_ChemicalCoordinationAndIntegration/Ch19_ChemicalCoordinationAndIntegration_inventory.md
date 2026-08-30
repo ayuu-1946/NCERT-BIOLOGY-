@@ -18,4 +18,4 @@ The reproducible extractor is `extract_figures.py`. The 4× grid renderer is `sc
 
 Figure 19.4 is intentionally delivered as one combined asset because its two panels are interleaved horizontally: a rectangular crop that isolates either panel cuts the kidney, labels, or connector. The combined crop preserves both complete panels, the connector, all labels, and both panel markers rather than shipping incomplete subfigures.
 
-All seven emitted assets are high-resolution grayscale PNGs (`mode=L`) generated with autocontrast. The final audit reports clean text-layer and border-band checks for Figures 19.1, 19.2, 19.3a, 19.3b, 19.4, 19.5a, and 19.5b; the vector-extent check is not applicable to the raster artwork in Figure 19.4.
+All seven emitted assets are high-resolution grayscale PNGs (`mode=L`) generated with autocontrast. Figures 19.5a and 19.5b are cropped tightly to their existing rectangular box borders; no new box or content alteration was applied. The final audit reports clean text-layer and border-band checks for Figures 19.1, 19.2, 19.3a, 19.3b, 19.4, 19.5a, and 19.5b; the vector-extent check is not applicable to the raster artwork in Figure 19.4.
