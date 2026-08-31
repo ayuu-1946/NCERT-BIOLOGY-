@@ -2,7 +2,7 @@
 
 ## Method
 
-The source PDF was inspected with 110 dpi coordinate grids and the figure rectangles were hand-pinned in PDF points. Crops were rendered at 300 dpi, converted with `Image.convert("L")`, and passed through `ImageOps.autocontrast(cutoff=1)`. This guarantees that emitted PNGs have one grayscale channel and avoids color-dependent print failures.
+The source PDF was inspected with coordinate grids, including a **4× high-density grid (440 dpi render with 5-point spacing)** for the Figure 4.5 refinement, and the figure rectangles were hand-pinned in PDF points. Crops were rendered at 300 dpi, converted with `Image.convert("L")`, and passed through `ImageOps.autocontrast(cutoff=1)`. This guarantees that emitted PNGs have one grayscale channel and avoids color-dependent print failures.
 
 ## Mechanical checks
 
@@ -23,7 +23,7 @@ The reported defects were corrected as follows: Figures 4.18 and 4.19 were shift
 
 ## Visual review record
 
-The final focused review sheet is `scratch/ch4_fix_final_contact.png`; the corrected seven-asset set was inspected at enlarged scale after regeneration. Earlier full contact sheets and audit logs remain in `scratch/` for reproducibility. The final asset set contains all numbered figure plates from 4.1 through 4.24, with multi-part plates preserved as grouped assets where that improves label visibility, plus the explicitly marked unnumbered Vertebrata chart. Captions are documented in the inventory rather than needlessly repeated inside the image assets.
+The final focused review sheet is `scratch/ch4_fix_final_contact.png`; the corrected seven-asset set was inspected at enlarged scale after regeneration. Figure 4.5 is emitted as a compact composite of independently cropped Sycon, Euspongia, and Spongilla subfigures, with a controlled approximately 10 pt inter-panel gap and all `(a)–(c)` markers visible. Earlier full contact sheets and audit logs remain in `scratch/` for reproducibility. The final asset set contains all numbered figure plates from 4.1 through 4.24, with multi-part plates preserved as grouped assets where that improves label visibility, plus the explicitly marked unnumbered Vertebrata chart. Captions are documented in the inventory rather than needlessly repeated inside the image assets.
 
 ## Reproducibility
 

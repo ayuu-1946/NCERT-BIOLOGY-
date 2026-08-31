@@ -22,7 +22,7 @@ FIGURES = [
     ('4_2ab', 2, (58,510,302,681), 'p2 corrected right edge: extends beyond the right cross-section and retains all germ-layer labels and (a)/(b); excludes caption'),
     ('4_3abc', 3, (278,164,532,408), 'p3 coelom/pseudocoelom/acoelomate three-panel diagram; includes headings and (a)/(b)/(c), stops before caption'),
     ('4_4', 4, (58,96,534,342), 'p4 corrected bottom edge: stops below the classification diagram and above the footnote/caption'),
-    ('4_5abc', 4, (58,408,315,672), 'p4 corrected right edge: includes the complete Spongilla artwork and markers; the separate prose strip at x300–315 is scrubbed after rendering'),
+    ('4_5abc', 4, (65,420,315,674), 'p4 4× grid repin: complete Sycon, Euspongia, Spongilla artwork and (a)–(c) markers; prose column begins at x=300 and is masked after rendering'),
     ('4_6ab', 5, (84,204,430,432), 'p5 Cnidaria polyp/medusa plate; includes both forms and (a)/(b), excludes caption'),
     ('4_7', 5, (416,470,510,618), 'p5 cnidoblast diagram; includes complete leader/label structure, excludes caption'),
     ('4_8', 6, (54,96,220,355), 'p6 corrected top edge: includes the complete Pleurobrachia ctenophore tip with compact upper padding'),
@@ -54,13 +54,23 @@ def main():
         pix = page.get_pixmap(clip=rect, dpi=DPI, alpha=False)
         img = Image.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('L')
         img = ImageOps.autocontrast(img, cutoff=1)
-        # Figure 4.5c touches the neighboring prose column in the source layout.
-        # Extend the crop to keep the artwork complete, then remove only the prose strip.
         if fid == '4_5abc':
+            # Compose three clean sub-crops so the neighboring prose column cannot bleed
+            # into the grouped asset. Rectangles are pinned from the 4× page grid.
             k = DPI / 72.0
-            # The prose column begins beyond x=266; the full Spongilla artwork ends
-            # before that boundary. Whiten only the confirmed prose strip.
-            img.paste(255, (int((266-box[0])*k), 0, img.width, img.height))
+            full = page.get_pixmap(dpi=DPI, alpha=False)
+            page_img = Image.frombytes('RGB', (full.width, full.height), full.samples).convert('L')
+            def subcrop(b):
+                return page_img.crop(tuple(int(v*k) for v in b))
+            a = subcrop((65, 420, 155, 570))
+            b = subcrop((160, 420, 290, 570))
+            c = subcrop((80, 565, 292, 682))
+            gap = int(10*k)
+            canvas = Image.new('L', (max(a.width+b.width+gap, c.width), a.height+c.height+gap), 255)
+            canvas.paste(a, (0, 0))
+            canvas.paste(b, (a.width+gap, 0))
+            canvas.paste(c, ((canvas.width-c.width)//2, a.height+gap))
+            img = ImageOps.autocontrast(canvas, cutoff=1)
         out = ASSETS / f'fig_{fid}.png'
         img.save(out)
         print(f'{out.name}: p{pno} rect={tuple(box)} size={img.size} mode={img.mode}')

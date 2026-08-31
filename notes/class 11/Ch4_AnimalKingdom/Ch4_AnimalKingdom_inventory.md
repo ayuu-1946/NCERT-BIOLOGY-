@@ -10,7 +10,7 @@ The assets are rendered from hand-pinned PDF-point rectangles at 300 dpi, conver
 | `fig_4_1b.png` | 2 | Bilateral symmetry | Bilateral guide plane and crab retained |
 | `fig_4_2ab.png` | 2 | Diploblastic / triploblastic germinal layers | Mesoglea, Ectoderm, Endoderm, Mesoderm, `(a)`, `(b)` retained |
 | `fig_4_3abc.png` | 3 | Coelom, pseudocoelom, acoelomate sections | Headings and `(a)`–`(c)` retained |
-| `fig_4_4.png` | 4 | Broad classification of Kingdom Animalia | All taxonomy nodes retained |
+| `fig_4_4.png` | 4 | **Figure 4.4 — Broad classification of Kingdom Animalia based on common fundamental features** | All taxonomy nodes retained; accompanying footnote preserved in documentation: “*Echinodermata exhibits radial or bilateral symmetry depending on the stage.”** |
 | `fig_4_5abc.png` | 4 | Porifera: Sycon, Euspongia, Spongilla | `(a)`–`(c)` retained |
 | `fig_4_6ab.png` | 5 | Cnidaria body forms | Polyp/medusa forms and `(a)`, `(b)` retained |
 | `fig_4_7.png` | 5 | Cnidoblast diagram | Complete diagram retained |
@@ -32,6 +32,10 @@ The assets are rendered from hand-pinned PDF-point rectangles at 300 dpi, conver
 | `fig_4_23abcd.png` | 14 | Bird examples | Neophron, Struthio, Psittacula, Pavo and `(a)`–`(d)` retained |
 | `fig_4_24abcd.png` | 14 | Mammal examples | Ornithorhynchus, Macropus, Pteropus, Balaenoptera and `(a)`–`(d)` retained |
 | `fig_vertebrata_chart.png` | 11 | Bonus unnumbered Vertebrata division chart | All chart nodes retained; explicitly bonus/un-numbered |
+
+## Figure 4.4 caption and footnote
+
+The exact printed caption associated with `fig_4_4.png` is: **“Figure 4.4 Broad classification of Kingdom Animalia based on common fundamental features.”** The exact accompanying footnote is: **“*Echinodermata exhibits radial or bilateral symmetry depending on the stage.”** The footnote is part of the Figure 4.4 documentation and must not be omitted from any notes rewrite.
 
 ## Label matrix and running-text documentation
 
