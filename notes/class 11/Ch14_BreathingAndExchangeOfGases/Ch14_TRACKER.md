@@ -1,6 +1,20 @@
-# Ch14 Breathing and Exchange of Gases — Figure Extraction Tracker
+# Ch14 Breathing and Exchange of Gases — Tracker
 
-## Current status
+## Pass / gate status
+
+**Pass 1: COMPLETE — GATE 1 CLOSED (2026-08-31).**
+- Inventory **FROZEN at 139 rows, `F001`–`F139`, contiguous, 0 gaps, 0 duplicate IDs, 0 ticked** (machine re-parsed from the finished table).
+- Blocks: 107 Facts (`1-S`) + 14 heading (`1-H`) + 12 opener (`1-O`) + 0 summary-unique (`1-Z`) + 6 figure-label matrix (`1-F`) = **139**, equal to the highest ID.
+- Type census (10 lowercase values, machine-derived, sums to 139): `concept` 47 · `definition` 27 · `number` 18 · `heading` 14 · `opener` 12 · `process` 9 · `figure-label` 6 · `example` 3 · `name` 2 · `list` 1.
+- Heading census **10 numbered + 4 unnumbered = 14**; openers **12**.
+- Summary classification **18 sentences = 18 BODY-PRESENT + 0 SUMMARY-UNIQUE** — nothing to fold into the body.
+- Exercise-gap scan: **14 exercises / 3 genuine gaps** (hypoxia definition, high-altitude respiratory effect, sigmoid-curve reason), each with a planned home noted in the inventory.
+- Figure-label matrix machine-checked: `check_pdf.py`'s own `_extract_labels` returns **47 labels across 6 figure rows, no doubling, no phantom `Fig #` row**.
+
+**Pass 2: NOT STARTED** — no `Ch14….py` script and no generated PDF, so `check_pdf.py` (Gate 2) cannot run. This chapter is **excluded from the Done tally.**
+**Pass 3 / Gate 3: NOT STARTED.**
+
+## Current status (figure extraction — completed in a prior task)
 
 **Figure extraction stage:** Complete.  
 **Figure census:** 5 numbered figures → 6 assets, with Figure 14.2 split into `(a)` and `(b)`.  
