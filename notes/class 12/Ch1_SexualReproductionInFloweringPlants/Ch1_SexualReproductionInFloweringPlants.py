@@ -277,7 +277,7 @@ story.append(figure(
     "Fig. 1.5 &mdash; (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore "
     "maturing into a pollen grain. Labelled: vacuoles, nucleus, asymmetric spindle, vegetative "
     "cell, generative cell.",
-    max_width_cm=5.6))
+    max_width_cm=5.0))
 story.append(note(
     "Pollen grains of many species <b>cause severe allergies and bronchial afflictions</b>, "
     "leading to chronic respiratory disorders &mdash; asthma, bronchitis, etc. "
@@ -583,7 +583,7 @@ story.append(figure(
     "fig_1_11.png",
     "Fig. 1.11 &mdash; (a) Pollination by water in <i>Vallisneria</i>; (b) Insect pollination. "
     "Labelled: female flower, stigma, male flower.",
-    max_width_cm=9.0))
+    max_width_cm=8.0))
 story.append(gap())
 story.append(body(
     "<b>Biotic agents (animals).</b> <b>Bees, butterflies, flies, beetles, wasps, ants, "
@@ -823,7 +823,7 @@ story.append(figure(
     "Fig. 1.14 &mdash; (a) A typical dicot embryo; (b) L.S. of an embryo of grass. Labelled: "
     "plumule, cotyledons, hypocotyl, radicle, root cap, scutellum, coleoptile, shoot apex, "
     "epiblast, coleorhiza.",
-    max_width_cm=5.6))
+    max_width_cm=4.9))
 
 # ---- 1.4.3 Seed (F222-F243) ----
 story.append(heading("1.4.3", "Seed", level=2))
