@@ -267,11 +267,19 @@ story.append(b1(
     "filaments <b>partially overlap</b> the free ends of the thick filaments, leaving the "
     "central part of the thick filaments (the <b>'H' zone</b>) free."))
 
+# [VERIFICATION FIX] D3: the sarcomere = central 'A' band + two half 'I' bands framing is a
+# SUMMARY-UNIQUE NCERT fact (inventory Summary classification, fold target 17.2). It was
+# carried only inside the MEMORY AID box, which is labelled "not in NCERT" - i.e. examinable
+# NCERT content was presented as an invented mnemonic. It is now stated in the running text;
+# the box keeps only the invented shortening mnemonic.
+story.append(b1(
+    "Each <b>sarcomere</b> therefore has one central <b>'A' band</b> made of <b>thick myosin "
+    "filaments</b>, and <b>two half 'I' bands</b> made of <b>thin actin filaments</b> on either "
+    "side of it, marked off by <b>'Z' lines</b>."))
+
 story.append(memory_aid(
-    "Each <b>sarcomere</b> = one central <b>'A' band</b> (thick myosin filaments) flanked by "
-    "<b>two half 'I' bands</b> (thin actin filaments), the whole unit marked off by "
-    "<b>'Z' lines</b> at both ends. Mnemonic for what shortens: only the <b>'I'</b> band and "
-    "the <b>'H'</b> zone shrink on contraction - the <b>'A'</b> band never does."))
+    "Mnemonic for what shortens: only the <b>'I'</b> band and the <b>'H'</b> zone shrink on "
+    "contraction - the <b>'A'</b> band never does."))
 
 story.append(figure(
     "fig_17_2.png",
@@ -667,6 +675,268 @@ story.append(note(
     "on the <b>skeletal system</b> (206 bones: axial + appendicular) through <b>joints</b>. "
     "Disorders can strike either the muscular side (myasthenia gravis, muscular dystrophy, "
     "tetany) or the skeletal/joint side (arthritis, osteoporosis, gout)."))
+
+
+# ======================================================================================
+# ---- SUMMARY (Quick Recap, SS5 item 8) ---- F172 (heading F172)
+# [VERIFICATION FIX] D1: the chapter closed on 17.5 with no Quick Recap at all, although
+# inventory row F172 (the NCERT SUMMARY heading) was ticked. Written as a denser rewrite of
+# the NCERT summary (textbook pp. 227-228), not a copy. The recap also carries the summary's
+# "fins ... wings" movement forms (D4), which the body prose never names.
+# ======================================================================================
+story.append(heading("S", "SUMMARY", level=1))
+
+story.append(body(
+    "<b>Movement is an essential feature of all living beings.</b> <b>Protoplasmic streaming, "
+    "ciliary movements</b>, and the <b>movements of fins, limbs, wings</b>, etc., are some of "
+    "the forms exhibited by animals. A <b>voluntary movement that causes the animal to change "
+    "its place is locomotion</b>. Animals move <b>generally</b> in search of food, shelter, "
+    "mate, breeding ground, better climate, or to protect themselves."))
+
+story.append(gap())
+story.append(body(
+    "The cells of the human body exhibit <b>amoeboid, ciliary and muscular</b> movements. "
+    "Locomotion and many other movements require <b>coordinated muscular activity</b>. "
+    "<b>Three types of muscles</b> are present in our body: <b>skeletal</b> muscles are "
+    "attached to skeletal elements and are <b>striated and voluntary</b>; <b>visceral</b> "
+    "muscles, in the inner walls of visceral organs, are <b>nonstriated and involuntary</b>; "
+    "<b>cardiac</b> muscles, the muscles of the heart, are <b>striated, branched and "
+    "involuntary</b>. Muscles possess <b>excitability, contractility, extensibility and "
+    "elasticity</b>, and contribute <b>40-50 per cent</b> of an adult's body weight."))
+
+story.append(gap())
+story.append(body(
+    "The <b>muscle fibre is the anatomical unit</b> of muscle; each fibre holds many "
+    "parallelly arranged <b>myofibrils</b>, and each myofibril many serially arranged "
+    "<b>sarcomeres</b>, which are the <b>functional units</b>. Each sarcomere has a central "
+    "<b>'A' band</b> of thick <b>myosin</b> filaments and <b>two half 'I' bands</b> of thin "
+    "<b>actin</b> filaments on either side, marked by <b>'Z' lines</b>; the <b>'H' zone</b> is "
+    "the part of the thick filament not overlapped by thin filaments. Actin and myosin are "
+    "<b>polymerised proteins with contractility</b>. On a resting actin filament the active "
+    "sites for myosin are <b>masked by troponin</b>. The <b>myosin head contains ATPase</b> "
+    "and carries <b>ATP binding sites</b> and <b>active sites for actin</b>."))
+
+story.append(gap())
+story.append(body(
+    "A <b>motor neuron</b> carries the signal to the muscle fibre, generating an <b>action "
+    f"potential</b> in it; this releases <b>{CAPP}</b> from the <b>sarcoplasmic reticulum</b>. "
+    f"{CAPP} activates actin, which binds the <b>myosin head</b> to form a <b>cross bridge</b>. "
+    "The cross bridges <b>pull the actin filaments</b>, sliding them over the myosin filaments "
+    f"- i.e. <b>contraction</b>, in which the <b>'I' bands shorten while the 'A' bands keep "
+    f"their length</b>. {CAPP} is then <b>returned to the sarcoplasmic reticulum</b>, actin is "
+    "inactivated, the cross bridges are broken and the muscle <b>relaxes</b>. Repeated "
+    "stimulation leads to <b>fatigue</b> (lactic acid from anaerobic glycogen breakdown). "
+    "Muscles are classified as <b>Red and White fibres</b> based primarily on the amount of "
+    "the red-coloured <b>myoglobin</b> pigment in them."))
+
+story.append(gap())
+story.append(body(
+    "<b>Bones and cartilages</b> constitute our skeletal system (<b>206 bones</b>), divisible "
+    "into <b>axial</b> and <b>appendicular</b>. <b>Skull, vertebral column, ribs and "
+    "sternum</b> constitute the axial skeleton (<b>80 bones</b>); <b>limb bones and girdles</b> "
+    "form the appendicular skeleton (<b>30 bones per limb</b>). <b>Three types of joints</b> "
+    "are formed between bones, or between bone and cartilage - <b>fibrous, cartilaginous and "
+    "synovial</b>. <b>Synovial joints allow considerable movement</b> and therefore play a "
+    "significant role in locomotion. Disorders may strike the muscular side (<b>myasthenia "
+    "gravis, muscular dystrophy, tetany</b>) or the skeletal/joint side (<b>arthritis, "
+    "osteoporosis, gout</b>)."))
+
+# ======================================================================================
+# ---- EXERCISES ---- F173 (heading F173)
+# [VERIFICATION FIX] D2: inventory row F173 was ticked and the exercise-gap scan assigned
+# three gaps a home, but the chapter carried no exercise section at all - so Rule 2 ("someone
+# reading only the rewrite can answer every exercise question") was untestable. All ten NCERT
+# exercises (textbook pp. 228-229) are reproduced with worked answers drawn from the chapter
+# text above; the two places where the answer is an application of a stated definition rather
+# than a stated fact are flagged in place, per Rule 5.
+# ======================================================================================
+story.append(heading("E", "EXERCISES", level=1))
+
+story.append(note(
+    "All ten NCERT exercises are reproduced below with worked answers. Every answer is sourced "
+    "from the chapter text above. Where NCERT never states the answer outright but it follows "
+    "from a definition the chapter does give (Exercise 9c, 9d), that is flagged in place."))
+
+story.append(gap())
+story.append(body(
+    "<b>1. Draw the diagram of a sarcomere of skeletal muscle showing different regions.</b>"))
+story.append(body(
+    "<b>Answer.</b> Redraw <b>Figure 17.2(b)</b> above and label: the two bounding <b>'Z' "
+    "lines</b>; the central <b>'A' band</b> (dark, anisotropic, thick myosin filaments) with "
+    "the <b>'M' line</b> in its middle and the <b>'H' zone</b> at its centre (thick filaments "
+    "only); and the <b>'I' bands</b> (light, isotropic, thin actin filaments) on either side, "
+    "each Z line bisecting an 'I' band. One sarcomere = the portion between two successive 'Z' "
+    "lines = one whole 'A' band plus two half 'I' bands."))
+
+story.append(gap())
+story.append(body("<b>2. Define sliding filament theory of muscle contraction.</b>"))
+story.append(body(
+    "<b>Answer.</b> The mechanism of muscle contraction is best explained by the <b>sliding "
+    "filament theory</b>, which states that <b>contraction of a muscle fibre takes place by "
+    "the sliding of the thin filaments over the thick filaments</b>."))
+
+story.append(gap())
+story.append(body("<b>3. Describe the important steps in muscle contraction.</b>"))
+story.append(b1(
+    "A signal from the <b>CNS</b> travels via a <b>motor neuron</b> to the <b>neuromuscular "
+    "junction</b>, releasing <b>Acetyl choline</b>, which generates an <b>action potential</b> "
+    "in the sarcolemma."))
+story.append(b1(
+    f"The action potential spreads through the fibre and releases <b>{CAPP}</b> into the "
+    "sarcoplasm; calcium binds a subunit of <b>troponin</b>, <b>removing the masking</b> of the "
+    "active sites for myosin."))
+story.append(b1(
+    "Using <b>ATP hydrolysis</b>, the <b>myosin head</b> binds the exposed active sites on "
+    "actin to form a <b>cross bridge</b>, which <b>pulls the actin filaments towards the centre "
+    "of the 'A' band</b>; the 'Z' lines are pulled inwards and the <b>sarcomere shortens</b> "
+    "('I' bands reduce, 'A' bands keep their length)."))
+story.append(b1(
+    f"The head releases <b>ADP and {PI}</b>, a <b>new ATP</b> binds, the cross bridge is "
+    "<b>broken</b>, the ATP is hydrolysed again and the cycle repeats, causing further "
+    "<b>sliding</b>."))
+story.append(b1(
+    f"Contraction continues till <b>{CAPP} is pumped back</b> into the sarcoplasmic cisternae, "
+    "the actin filaments are masked again and the 'Z' lines return to their original position - "
+    "<b>relaxation</b>."))
+
+story.append(gap())
+story.append(body(
+    "<b>4. Write true or false. If false change the statement so that it is true.</b>"))
+story.append(b1(
+    "<b>(a) Actin is present in thin filament - TRUE.</b> The light <b>'I' band</b> contains "
+    "actin, and actin filaments are thinner than myosin filaments, hence <b>thin</b> "
+    "filaments."))
+story.append(b1(
+    "<b>(b) H-zone of striated muscle fibre represents both thick and thin filaments - "
+    "FALSE.</b> Corrected: the <b>'H' zone represents only the thick (myosin) filaments</b> - "
+    "it is the central part of the thick filament <b>not overlapped</b> by thin filaments."))
+story.append(b1(
+    "<b>(c) Human skeleton has 206 bones - TRUE.</b> In human beings the skeletal system is "
+    "made of <b>206 bones</b> and a few cartilages."))
+story.append(b1(
+    "<b>(d) There are 11 pairs of ribs in man - FALSE.</b> Corrected: there are <b>12 pairs of "
+    "ribs</b> (7 true + 3 vertebrochondral/false + 2 floating)."))
+story.append(b1(
+    "<b>(e) Sternum is present on the ventral side of the body - TRUE.</b> The sternum is a "
+    "flat bone on the <b>ventral midline of the thorax</b>."))
+
+story.append(gap())
+story.append(body("<b>5. Write the difference between:</b>"))
+
+story.append(body("<b>(a) Actin and Myosin</b>"))
+story.append(data_table([
+    ["Feature", "Actin", "Myosin"],
+    ["Filament", "<b>Thin</b> filament", "<b>Thick</b> filament"],
+    ["Band", "Light <b>'I' (isotropic) band</b>", "Dark <b>'A' (anisotropic) band</b>"],
+    ["Build-up",
+     "Two <b>'F' (filamentous) actins</b> helically wound; each 'F' actin a polymer of "
+     "<b>'G' (globular) actins</b>",
+     "Polymerised protein of many <b>meromyosin</b> monomers (<b>HMM</b> head + short arm, "
+     "<b>LMM</b> tail)"],
+    ["Associated proteins",
+     "<b>Tropomyosin</b> along its length and <b>troponin</b> at regular intervals, which "
+     "masks the myosin-binding sites at rest",
+     "None; the globular head itself is an <b>active ATPase enzyme</b> with <b>ATP binding "
+     "sites</b> and <b>active sites for actin</b>"],
+    ["Role in contraction", "<b>Slides over</b> the thick filament and is pulled inwards",
+     "Forms the <b>cross bridge / cross arm</b> that pulls the actin"],
+], col_widths=[18, 38, 44]))
+
+story.append(gap())
+story.append(body("<b>(b) Red and White muscles</b>"))
+story.append(b1(
+    "<b>Red fibres:</b> <b>high myoglobin</b> (reddish appearance), <b>plenty of "
+    "mitochondria</b>, lower sarcoplasmic reticulum, use stored <b>oxygen</b> for ATP - "
+    "<b>aerobic muscles</b>."))
+story.append(b1(
+    "<b>White fibres:</b> <b>very little myoglobin</b> (pale/whitish), <b>few "
+    "mitochondria</b>, <b>high</b> sarcoplasmic reticulum, depend on the <b>anaerobic</b> "
+    "process for energy."))
+
+story.append(gap())
+story.append(body("<b>(c) Pectoral and Pelvic girdle</b>"))
+story.append(b1(
+    "<b>Pectoral girdle:</b> each half = a <b>clavicle</b> (collar bone, two curvatures) + a "
+    "<b>scapula</b> (triangular flat bone between the second and seventh ribs, bearing the "
+    "<b>spine</b> and <b>acromion</b>). Its <b>glenoid cavity</b> receives the <b>head of the "
+    "humerus</b> to form the <b>shoulder joint</b>, articulating the <b>upper</b> limb."))
+story.append(b1(
+    "<b>Pelvic girdle:</b> two <b>coxal bones</b>, each formed by the fusion of <b>ilium, "
+    "ischium and pubis</b>. The <b>acetabulum</b> at the point of fusion receives the "
+    "<b>femur</b>, articulating the <b>lower</b> limb; the two halves meet ventrally at the "
+    "<b>pubic symphysis</b> (fibrous cartilage)."))
+
+story.append(gap())
+story.append(body("<b>6. Match Column I with Column II:</b>"))
+story.append(data_table([
+    ["Column I", "Column II", "Why"],
+    ["(a) Smooth muscle", "<b>(iv) Involuntary</b>",
+     "Visceral/smooth muscle is not under voluntary control of the nervous system"],
+    ["(b) Tropomyosin", "<b>(ii) Thin filament</b>",
+     "Two tropomyosin filaments run close to the 'F' actins of the thin filament"],
+    ["(c) Red muscle", "<b>(i) Myoglobin</b>",
+     "Red fibres carry a high content of the red oxygen-storing pigment myoglobin"],
+    ["(d) Skull", "<b>(iii) Sutures</b>",
+     "Flat skull bones fuse end-to-end as fibrous joints called sutures to form the cranium"],
+], col_widths=[20, 22, 58]))
+
+story.append(gap())
+story.append(body(
+    "<b>7. What are the different types of movements exhibited by the cells of human "
+    "body?</b>"))
+story.append(body(
+    "<b>Answer.</b> Three main types: <b>amoeboid</b> (macrophages and leucocytes, by "
+    "pseudopodia and microfilaments), <b>ciliary</b> (ciliated epithelium of internal tubular "
+    "organs - trachea, female reproductive tract) and <b>muscular</b> (limbs, jaws, tongue, "
+    "using the contractile property of muscles)."))
+
+story.append(gap())
+story.append(body(
+    "<b>8. How do you distinguish between a skeletal muscle and a cardiac muscle?</b>"))
+story.append(data_table([
+    ["Feature", "Skeletal muscle", "Cardiac muscle"],
+    ["Location", "Closely associated with the <b>skeletal components</b> of the body",
+     "Muscles of the <b>heart</b>"],
+    ["Arrangement", "Bundles of parallel fibres (fascicles) held by fascia",
+     "Many cells assemble in a <b>branching pattern</b>"],
+    ["Appearance", "<b>Striated</b> (striped under the microscope)", "<b>Striated</b>"],
+    ["Regulation", "<b>Voluntary</b> - under nervous control",
+     "<b>Involuntary</b> - the nervous system does not control it directly"],
+    ["Chief role", "<b>Locomotory actions</b> and changes of body posture",
+     "<b>Contraction of the heart</b>"],
+], col_widths=[16, 42, 42]))
+
+story.append(gap())
+story.append(body("<b>9. Name the type of joint between the following:</b>"))
+story.append(b1("<b>(a) atlas/axis - pivot joint.</b>"))
+story.append(b1("<b>(b) carpal/metacarpal of thumb - saddle joint.</b>"))
+story.append(b1(
+    "<b>(c) between phalanges - hinge joint.</b> (Applied answer: NCERT lists the hinge joint "
+    "only as the knee joint; the phalangeal joints allow the same single-plane movement.)"))
+story.append(b1(
+    "<b>(d) femur/acetabulum - ball and socket joint.</b> (Applied answer: NCERT gives the "
+    "humerus/pectoral-girdle joint as its ball-and-socket example and states that the thigh "
+    "bone articulates into the cup-like acetabulum.)"))
+story.append(b1(
+    "<b>(e) between cranial bones - fibrous joint</b> (immovable <b>sutures</b>)."))
+story.append(b1(
+    "<b>(f) between pubic bones in the pelvic girdle - cartilaginous joint</b> - the "
+    "<b>pubic symphysis</b>, which contains fibrous cartilage."))
+
+story.append(gap())
+story.append(body("<b>10. Fill in the blank spaces:</b>"))
+story.append(b1(
+    "<b>(a)</b> All mammals (except a few) have <b>seven (7)</b> cervical vertebrae."))
+story.append(b1(
+    "<b>(b)</b> The number of phalanges in each limb of human is <b>14</b>."))
+story.append(b1(
+    "<b>(c)</b> Thin filament of myofibril contains 2 'F' actins and two other proteins, "
+    "namely <b>tropomyosin</b> and <b>troponin</b>."))
+story.append(b1(
+    f"<b>(d)</b> In a muscle fibre {CAPP} is stored in the <b>sarcoplasmic reticulum</b>."))
+story.append(b1(
+    "<b>(e)</b> <b>11th</b> and <b>12th</b> pairs of ribs are called floating ribs."))
+story.append(b1("<b>(f)</b> The human cranium is made of <b>8</b> bones."))
 
 
 def main():
