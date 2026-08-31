@@ -70,3 +70,7 @@ Run from the repository root:
 [1]: `../../../../Chapter/class 12/Chapter 2 - Human Reproduction.pdf` "NCERT Biology, Class 12, Chapter 2: Human Reproduction"
 [2]: `../../../../SUPREME COMMAND PROMPT.md` "Repository SUPREME COMMAND prompt"
 [3]: `../../../../skills/ncert-figure-extraction/SKILL.md` "ncert-figure-extraction workflow"
+
+## Tight-crop revision
+
+At the user’s request, Figures 2.8, 2.12, 2.1a, 2.3b, 2.3a, 2.11, and 2.1b were tightened to approximately 10 pt padding around meaningful printed ink. Figure 2.8 appeared twice in the request and was processed once. Figure 2.1a received an additional left-edge cleanup to remove adjacent prose while retaining every anatomical label.

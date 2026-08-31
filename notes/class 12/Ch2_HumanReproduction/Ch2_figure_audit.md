@@ -48,3 +48,7 @@ Run from the repository root:
 [1]: `../../../../Chapter/class 12/Chapter 2 - Human Reproduction.pdf` "NCERT Biology, Class 12, Chapter 2: Human Reproduction"
 [2]: `../../../../SUPREME COMMAND PROMPT.md` "Repository SUPREME COMMAND prompt"
 [3]: `../../../../skills/ncert-figure-extraction/SKILL.md` "ncert-figure-extraction workflow"
+
+## User-requested tight-crop revision
+
+The requested assets were re-cropped to remove excess whitespace using approximately 10 pt padding around meaningful printed figure ink: Figures 2.8, 2.12, 2.1a, 2.3b, 2.3a, 2.11, and 2.1b. Figure 2.8 was listed twice and was processed once. Figure 2.1a received an additional left-edge cleanup to remove the adjacent prose strip while preserving all left-side anatomical labels. Final individual checks confirmed the label sets remain strictly visible for Figures 2.3a, 2.3b, 2.8, 2.12, and 2.1a.
