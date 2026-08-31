@@ -28,7 +28,7 @@ fig_11_10: ok
 fig_11_1: EDGE-INK ['B:600px']
 fig_11_2: clean
 fig_11_3a: clean
-fig_11_3b: EDGE-INK ['T:53px', 'B:392px']
+fig_11_3b: EDGE-INK ['T:53px', 'B:194px']
 fig_11_3c: EDGE-INK ['T:398px']
 fig_11_4: clean
 fig_11_5: clean
@@ -41,7 +41,7 @@ fig_11_10: clean
 fig_11_1: mode=L size=(938, 1376) ink_bbox_margins=(np.int64(60), np.int64(5), np.int64(0), np.int64(0))
 fig_11_2: mode=L size=(1834, 793) ink_bbox_margins=(np.int64(31), np.int64(0), np.int64(72), np.int64(16))
 fig_11_3a: mode=L size=(959, 626) ink_bbox_margins=(np.int64(65), np.int64(62), np.int64(20), np.int64(0))
-fig_11_3b: mode=L size=(959, 500) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(19), np.int64(0))
+fig_11_3b: mode=L size=(959, 600) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(19), np.int64(0))
 fig_11_3c: mode=L size=(959, 689) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(21), np.int64(74))
 fig_11_4: mode=L size=(938, 793) ink_bbox_margins=(np.int64(31), np.int64(49), np.int64(0), np.int64(0))
 fig_11_5: mode=L size=(1022, 939) ink_bbox_margins=(np.int64(11), np.int64(75), np.int64(40), np.int64(0))

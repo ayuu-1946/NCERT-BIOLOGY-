@@ -29,7 +29,7 @@ Every asset is rendered at 300 dpi from a hand-pinned PDF rectangle, converted t
 | `fig_11_1.png` | 4 | `(50, 105, 275, 435)` | Four-panel Priestley experiment: bell jars, mouse, candles, plant, arrows, and `(a)`–`(d)` markers. |
 | `fig_11_2.png` | 6 | `(85, 495, 525, 685)` | Chloroplast diagram with the complete oval, internal structures, and labels from Outer membrane through Lipid droplet. |
 | `fig_11_3a.png` | 7 | `(290, 135, 520, 285)` | Absorption spectrum panel with y-axis, curves, Chlorophyll *a*, Chlorophyll *b*, Carotenoids, and `(a)`, ending before the next panel. |
-| `fig_11_3b.png` | 7 | `(290, 300, 520, 420)` | Action spectrum panel with y-axis, curve, and `(b)`, ending before the next panel. |
+| `fig_11_3b.png` | 7 | `(290, 300, 520, 444)` | Reference-matching action-spectrum panel with complete y-axis label, full curve and graph rectangle, pale page background, and `(b)` marker. |
 | `fig_11_3c.png` | 7 | `(290, 430, 520, 595)` | Superimposed action/absorption panel with legend, y-axis, wavelength axis, tick labels, and `(c)`. |
 | `fig_11_4.png` | 8 | `(60, 285, 285, 475)` | Light-harvesting complex: Photon, pigment molecules, reaction centre, primary acceptor, and arrows. |
 | `fig_11_5.png` | 9 | `(280, 100, 525, 325)` | Complete Z scheme: Photosystems II/I, both electron acceptors, both LHCs, electron transport system, ATP/ADP+iP, NADPH/NADP+, water-splitting annotation, and arrows. |
@@ -67,3 +67,8 @@ The mandatory grid renderer is saved at `scratch/render_ch11_grids.py`, and its 
 [1]: https://github.com/ayuu-1946/ncert-figure-extraction "ayuu-1946/ncert-figure-extraction repository"
 [2]: https://github.com/ayuu-1946/NCERT-BIOLOGY- "ayuu-1946/NCERT-BIOLOGY- repository"
 [3]: https://github.com/ayuu-1946/NCERT-BIOLOGY-/blob/main/SUPREME%20COMMAND%20PROMPT.md "NCERT Biology Supreme Command Prompt"
+
+
+### Reference-matching revision — Figure 11.3b
+
+After user review, `fig_11_3b.png` was repinned to `(290, 300, 520, 444)`, producing a 959 × 600 pixel crop with an approximately 1.60:1 aspect ratio, matching the supplied reference framing. This revision retains the complete vertical axis label, graph rectangle, plotted curve, cream/pale background, watermark, and `(b)` marker while removing the neighboring-panel fragment. The targeted source regeneration remains reproducible with `scratch/regenerate_target_figures.py`.
