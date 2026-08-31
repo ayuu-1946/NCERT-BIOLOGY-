@@ -106,7 +106,7 @@ Type vocabulary (normalized, lowercase, no other value appears in the `Type` col
 | F080 | 15.1.3.2 | definition | "This condition is called erythroblastosis foetalis." | x |
 | F081 | 15.1.3.2 | concept | "This can be avoided by administering anti-Rh antibodies to the mother immediately after the delivery of the first child." | x |
 | F082 | 15.1.4 | heading | "15.1.4 Coagulation of Blood" | x |
-| F083 | 15.1.4 | opener | "You know that when you cut your finger or hurt yourself, your wound does not continue to bleed for a long time; usually the blood stops flowing after sometime." | x |
+| F083 | 15.1.4 | opener | "You know that when you cut your finger or hurt yourself, your wound does not continue to bleed for a long time; usually the blood stops flowing after sometime. Do you know why?" (the trailing rhetorical hook was folded into this opener at Gate 3(b) — see the Gate 3(b) record) | x |
 | F084 | 15.1.4 | concept | "Blood exhibits coagulation or clotting in response to an injury or trauma." | x |
 | F085 | 15.1.4 | concept | "This is a mechanism to prevent excessive loss of blood from the body." | x |
 | F086 | 15.1.4 | concept | "You would have observed a dark reddish brown scum formed at the site of a cut or an injury over a period of time." | x |
@@ -373,7 +373,23 @@ Pass 2 wrote the chapter script linearly from the frozen inventory in Content Or
 - [x] **`check_pdf.py` green — 10 of 10 PASS, 0 fail, 0 warn.** Checks: 1 footer/header band · 2 legibility floor (smallest text 6.0pt) · 3 grayscale-only images (4/4 monochrome) · 4 no person photograph · 5 banned glyphs · 6 figure-label coverage 43/43 · 7 inventory fully ticked 241/241 · 8 A4 portrait geometry (11/11 pages) · 9 no orphaned headings (70 banners) · 10 no badge-plate collisions (154 plates).
 - [x] **`verify_inventory.py` green** — re-parses this file and asserts every header count, including the updated `245 of 245` ticked claim, against a fresh parse.
 
-**Gate 2: CLOSED.** Gate 3 (Pass 3 — the independent line-by-line read of the built PDF against the source, and the tracker/README completion tally) is **OPEN** and has not started. This chapter must not appear in any completion tally until Gate 3 closes.
+**Gate 2: CLOSED.** Gate 3 (Pass 3) opened after this line. Pass 3 is run in two parts: **3(a)** the visual render check (below, now CLOSED) and **3(b)** the independent line-by-line read of the built PDF against the source plus the tracker/README completion tally (still OPEN). This chapter must not appear in any completion tally until Gate 3(b) closes.
+
+## Gate 3(a) checklist — visual render pass
+
+Environment rebuilt first per §0.2 (the venv is ephemeral): `/vercel/share/neetenv` recreated, `pymupdf` reinstalled, PDF regenerated from `Ch15_BodyFluidsAndCirculation.py`. Reproducibility confirmed by a fresh parse — **11 pages, 30,707 text chars, 4 embedded images** — and both verifiers re-run green on the rebuilt artifact before the render check began.
+
+- [x] **Both Gate-2 verifiers re-confirmed green on the rebuilt PDF** — `check_pdf.py` 10/10 PASS (0 fail, 0 warn); `verify_inventory.py` green (245/245 ticked claim re-asserted against a fresh parse).
+- [x] **All 11 pages rendered and inspected individually** — pages rendered to PNG and read one by one; no page skipped.
+- [x] **Page geometry clean on every page** — 11/11 A4 portrait, no text overflow past the type block, no clipping at any margin, no blank or half-empty runaway page.
+- [x] **All 4 figures render correctly** — Fig 15.1 (formed elements, p2), Fig 15.2 (heart section, p6), Fig 15.3 (ECG trace, p8), Fig 15.4 (circulation schematic, p9): each boxed with a thin border, correct aspect ratio (no squash/stretch), italic caption beneath, and immediately followed by its verbatim callout NOTE.
+- [x] **Cross-page style consistency verified** — H1 section banners (15.1–15.6, Summary, Exercises), H2 sub-banners, and H3 light-grey strips are pixel-consistent across all pages; NOTE boxes (grey, double-rule) and MEMORY-AID boxes (dashed border, star) render identically wherever they appear.
+- [x] **Process-flow blocks render and split cleanly across page breaks** — the triangular step badges and their continuous left rule align on every step; the coagulation cascade (p4), the 9-step cardiac cycle (splits 6→7), the ECG P/QRS/T flow (p8) and the double-circulation pair (p8) all break across boundaries without an orphaned badge or a broken rule.
+- [x] **Tables render with header intact and repeat on continuation** — WBC table (p2), blood-group table (p3), 2/3/4-chamber table (p5), blood-vs-lymph table (p4) and the two-page Exercises table all show the dark header row + zebra striping; the Exercises table repeats its `# / Exercise question / Answered in` header at the top of p11.
+- [x] **Sub/superscripts render visibly at legible size** — O₂, CO₂, mm⁻³, min⁻¹, Na⁺, Ca⁺⁺, Mg⁺⁺, HCO₃⁻, Cl⁻ all appear as true raised/lowered glyphs, none dropped to the illegibility floor (consistent with check 2 reporting 0 warn).
+- [x] **No footer/header band, no page numbers** — consistent with check 1; confirmed visually on every page.
+
+**Gate 3(a): CLOSED.** No layout defect found; the built PDF is a faithful visual render. **Gate 3(b) is OPEN and has not started** — the independent line-by-line content read against the source and the tracker/README tally remain to be done. Per §6, this chapter stays out of every completion tally until Gate 3(b) closes.
 
 ## References
 
