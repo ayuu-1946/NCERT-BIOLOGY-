@@ -106,7 +106,7 @@ Type vocabulary (normalized, lowercase, no other value appears in the `Type` col
 | F080 | 15.1.3.2 | definition | "This condition is called erythroblastosis foetalis." | x |
 | F081 | 15.1.3.2 | concept | "This can be avoided by administering anti-Rh antibodies to the mother immediately after the delivery of the first child." | x |
 | F082 | 15.1.4 | heading | "15.1.4 Coagulation of Blood" | x |
-| F083 | 15.1.4 | opener | "You know that when you cut your finger or hurt yourself, your wound does not continue to bleed for a long time; usually the blood stops flowing after sometime." | x |
+| F083 | 15.1.4 | opener | "You know that when you cut your finger or hurt yourself, your wound does not continue to bleed for a long time; usually the blood stops flowing after sometime. Do you know why?" (the trailing rhetorical hook was folded into this opener at Gate 3(b) — see the Gate 3(b) record) | x |
 | F084 | 15.1.4 | concept | "Blood exhibits coagulation or clotting in response to an injury or trauma." | x |
 | F085 | 15.1.4 | concept | "This is a mechanism to prevent excessive loss of blood from the body." | x |
 | F086 | 15.1.4 | concept | "You would have observed a dark reddish brown scum formed at the site of a cut or an injury over a period of time." | x |

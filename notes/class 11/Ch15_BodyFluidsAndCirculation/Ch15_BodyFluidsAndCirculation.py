@@ -325,13 +325,16 @@ story.append(note(
 
 # ======================================================================================
 # ---- 15.1.4 Coagulation of Blood ---- F082-F094 (heading F082, opener F083)
+# [VERIFICATION FIX Gate 3(b)] opener F083 now carries NCERT's rhetorical hook
+# "Do you know why?" verbatim - it was the one direction-2 UNINVENTORIED sentence
+# (a contentless discourse marker in F083's own opening breath, not a new fact).
 # ======================================================================================
 story.append(heading("15.1.4", "Coagulation of Blood", 2))
 story.append(body(
     "When you <b>cut your finger or hurt yourself</b>, your wound <b>does not continue to "
-    "bleed for a long time</b>; usually the blood <b>stops flowing after sometime</b>. Blood "
-    "exhibits <b>coagulation or clotting</b> in response to an <b>injury or trauma</b>. This "
-    "is a mechanism to <b>prevent excessive loss of blood</b> from the body."))
+    "bleed for a long time</b>; usually the blood <b>stops flowing after sometime</b>. Do you "
+    "know why? Blood exhibits <b>coagulation or clotting</b> in response to an <b>injury or "
+    "trauma</b>. This is a mechanism to <b>prevent excessive loss of blood</b> from the body."))
 story.append(body(
     "You would have observed a <b>dark reddish brown scum</b> formed at the site of a cut or "
     "an injury over a period of time."))
