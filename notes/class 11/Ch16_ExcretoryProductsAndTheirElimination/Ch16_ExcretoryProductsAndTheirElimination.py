@@ -107,7 +107,9 @@ story += title_block("Excretory Products and their Elimination")
 
 story.append(body(
     "Animals accumulate <b>ammonia, urea, uric acid, carbon dioxide, water</b> and ions "
-    f"like {NA}, {K}, {CL}, phosphate and sulphate, either as by-products of their own "
+    # [GATE 3(b) FIX - D3] F002 ends its ion list with "etc." - the list is explicitly
+    # non-exhaustive. Dropping it silently promoted an open list to a closed one.
+    f"like {NA}, {K}, {CL}, phosphate, sulphate and others, either as by-products of their own "
     "metabolic activities or by other means such as excess ingestion. These substances "
     "have to be removed totally or partially, because allowing them to build up would "
     "poison the body fluids. This chapter deals with the mechanisms of elimination of "
@@ -388,9 +390,17 @@ story.append(b1(
     "why cortical nephrons cannot concentrate urine strongly."))
 
 story.append(gap())
+# [GATE 3(b) FIX - D1] Caption printed "duct and tubules"; the source draws "duct and
+# tubule" (SINGULAR). Confirmed twice: page-3 text layer and a 400 dpi render of the
+# caption band. Frozen row F167 and the inventory figure manifest both carry the same
+# Pass 1 eye-slip; under SS7 rule 5 frozen rows are NOT reworded, so the row stays as
+# frozen and the correction is logged in the inventory's Pass 3(b) findings section.
+# verify_inventory.py check [6] now asserts every caption against the source text layer,
+# so this class of drift can never be silent again (it previously checked caption NUMBERS
+# only, which is why 39 green checks missed a wrong caption).
 story.append(figure("fig_16_3.png",
                     "Figure 16.3 A diagrammatic representation of a nephron showing blood "
-                    "vessels, duct and tubules"))
+                    "vessels, duct and tubule"))
 
 story.append(note(
     "<b>Figure 16.3 labels, verbatim:</b> \"Afferent arteriole\"; \"Efferent arteriole\"; "
@@ -570,7 +580,7 @@ story.append(data_table([
      f"Glucose, amino acids, {NA} (active); nitrogenous wastes and water (passive); "
      "about <b>99%</b> of the filtrate"],
     ["<b>Secretion</b>", "Blood/tubular cells into the tubule",
-     f"PCT, DCT, collecting duct", f"{H}, {K}, {NH3}; maintains ionic and acid-base balance"],
+     "PCT, DCT, collecting duct", f"{H}, {K}, {NH3}; maintains ionic and acid-base balance"],
 ], col_widths=[19, 24, 22, 35]))
 
 story.append(gap())
@@ -859,10 +869,15 @@ story.append(note(
 
 story.append(heading("16.5", "REGULATION OF KIDNEY FUNCTION", level=1))
 
+# [GATE 3(b) FIX - D2] The hedge was misassigned. F109 reads "...involving the
+# hypothalamus, JGA and to a certain extent, the heart" - NCERT qualifies only the HEART
+# with "to a certain extent"; the hypothalamus and JGA are named flatly. The previous
+# wording hedged the JGA as well and then added a second "to some extent", understating
+# the JGA, which 16.5b then spends a full RAAS cascade on. Restored to source emphasis.
 story.append(body(
     "The functioning of the kidneys is efficiently monitored and regulated by <b>hormonal "
-    "feedback mechanisms</b> involving the <b>hypothalamus</b>, and to a certain extent the "
-    "<b>JGA</b> and, to some extent, the <b>heart</b>."))
+    "feedback mechanisms</b> involving the <b>hypothalamus</b>, the <b>JGA</b> and, to a "
+    "certain extent, the <b>heart</b>."))
 
 story.append(gap())
 story.append(heading("16.5a", "ADH and the Osmoreceptor Loop", level=2))
