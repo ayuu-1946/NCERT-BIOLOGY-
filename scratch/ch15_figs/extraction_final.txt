@@ -1,0 +1,4 @@
+fig_15_1: page 2 rect=(60, 580, 535, 688) size=(1980, 451) mode=L -> notes/class 11/Ch15_BodyFluidsAndCirculation/assets/fig_15_1.png
+fig_15_2: page 6 rect=(130, 390, 525, 690) size=(1647, 1250) mode=L -> notes/class 11/Ch15_BodyFluidsAndCirculation/assets/fig_15_2.png
+fig_15_3: page 9 rect=(274, 98, 522, 210) size=(1034, 467) mode=L -> notes/class 11/Ch15_BodyFluidsAndCirculation/assets/fig_15_3.png
+fig_15_4: page 10 rect=(126, 168, 476, 410) size=(1459, 1009) mode=L -> notes/class 11/Ch15_BodyFluidsAndCirculation/assets/fig_15_4.png

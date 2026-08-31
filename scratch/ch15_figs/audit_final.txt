@@ -1,0 +1,16 @@
+--- A) text-layer word grazing ---
+fig_15_1: words_in_rect=12 ok
+fig_15_2: words_in_rect=0 ok
+fig_15_3: words_in_rect=0 ok
+fig_15_4: words_in_rect=0 ok
+--- B) drawings-extent overflow ---
+fig_15_1: ok
+fig_15_2: ok
+fig_15_3: ok
+fig_15_4: ok
+--- C) unexplained dark ink in border band ---
+fig_15_1: clean
+fig_15_2: clean
+fig_15_3: clean
+fig_15_4: clean
+CONTACT /home/ubuntu/NCERT-BIOLOGY-/scratch/ch15_figs/contact_sheet_final.png
