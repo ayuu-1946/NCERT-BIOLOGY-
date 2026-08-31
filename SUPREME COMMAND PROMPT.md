@@ -430,6 +430,8 @@ Both box types (exported as `note()` / `memory_aid()`) keep the `NOTE_BG` fill a
 >
 > Invoke it by name (`in-repo-ncert-figure-extraction`) or read the file directly. Triggers: extracting a chapter's figures, re-extracting after bad crops, any *"figures came out wrong/cropped/useless"* report.
 
+**Mandatory grid standard for every chapter update:** Before pinning or revising any figure rectangle, render every artwork page at **440 dpi** with coordinate gridlines every **5 PDF points** and coordinate labels every 20 points. This 4× high-density grid is required for all new chapters, all re-extractions, and all crop-defect fixes; the older 110 dpi / 20-point grid is not sufficient for production decisions. Save the grids under `scratch/ch<N>_figs/grid_4x/`, inspect them, and record any repinning in the inventory or audit notes.
+
 **Step 1 — Locate and extract (Pass 1 session **1-F**, before writing the script — figures get a session to themselves and share it with no other step; see §6 Pass 1):**
 1. **Follow `skills/ncert-figure-extraction/SKILL.md`.** In outline: open the source chapter PDF with `pymupdf` and render a **high-resolution clip of each figure's hand-pinned bounding box — `page.get_pixmap(clip=rect, dpi=300)`**. A clipped render survives vector diagrams and mixed text/graphic figures that a raw embedded-image extraction can miss or mangle. Only use embedded-object extraction when the figure is genuinely a single raster image and the clip render is worse. **Every rect must clear the skill's three-part crop audit before it is accepted.**
 2. Save each figure to `assets/fig_<ch>_<n>.png` per the naming rule in §0.5.

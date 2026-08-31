@@ -79,12 +79,9 @@ Locate:
 
 ## Workflow
 
-### 1. Render grid overlays for every artwork page
+### 1. Render mandatory high-density grid overlays for every artwork page
 
-For each page listed in the inventory as containing a figure, render it at
-~110 dpi with a coordinate grid (light gridlines every 20pt, labeled with
-point values every 40pt on both axes) burned into the image. Save to
-`scratch/ch<N>_figs/grid/p<NN>.png`.
+For **every chapter update, new extraction, re-extraction, and crop-defect fix**, render each page listed in the inventory as containing a figure at **440 dpi** with coordinate gridlines every **5 PDF points** and coordinate labels every **20 PDF points** on both axes. This 4× high-density grid is mandatory for production pinning; the former ~110 dpi / 20-point grid is reference-only and must not be used to make final crop decisions. Save the mandatory grids to `scratch/ch<N>_figs/grid_4x/p<NN>.png`.
 
 ```python
 import pymupdf
@@ -106,9 +103,9 @@ img.save(f"scratch/ch{N}_figs/grid/p{pno:02d}.png")
 
 ### 2. Read each figure's rect off its grid image — and cross-check numerically
 
-#### High-density refinement and completeness rule
+#### Mandatory high-density completeness rule
 
-When a first-pass crop is incomplete or when labels sit close to a boundary, use a **4× grid refinement** before repinning: render at approximately **440 dpi** and draw gridlines every **5 PDF points**, with coordinate labels at 20-point intervals. This is four times finer than the baseline 110-dpi render with 20-point grid spacing. The finer grid improves coordinate precision, but it does not replace visual judgment: the rectangle must include the complete figure, including every panel, arrow, in-figure label, terminal mark, bracket, and leader line. Stop the crop before the caption or neighboring prose unless the chapter convention explicitly embeds captions.
+Use the **440 dpi / 5-point grid** before every initial pinning and every repinning. The finer grid improves coordinate precision, but it does not replace visual judgment: the rectangle must include the complete figure, including every panel, arrow, in-figure label, terminal mark, bracket, and leader line. Stop the crop before the caption or neighboring prose unless the chapter convention explicitly embeds captions.
 
 After every extraction run, **open every emitted PNG individually**, not only a contact sheet. Compare each image against the source grid page and confirm that no panel, label, arrow, charge mark, bracket, or outer edge is missing. A passing mechanical audit is insufficient when the wrong region was selected or when a multi-panel figure was mistaken for a single panel. If any element is absent, return to the 4× overlay, repin the rectangle, regenerate, rerun all three audits, and eyeball the corrected PNG again. Record the correction in the chapter inventory or audit notes.
 
