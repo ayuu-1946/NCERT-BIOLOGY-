@@ -844,7 +844,7 @@ story.append(note(
     "as an indirect role: it builds the gradient that the collecting duct spends."))
 
 # ======================================================================================
-# ---- 16.5 REGULATION OF KIDNEY FUNCTION ---- F108-F123 (heading F108, opener F109)
+# ---- 16.5 REGULATION OF KIDNEY FUNCTION ---- F108-F126 (heading F108, opener F109)
 # ======================================================================================
 
 story.append(heading("16.5", "REGULATION OF KIDNEY FUNCTION", level=1))
@@ -970,7 +970,7 @@ story.append(memory_aid(
     "wrong."))
 
 # ======================================================================================
-# ---- 16.6 MICTURITION ---- F124-F134 (heading F124, opener F125)
+# ---- 16.6 MICTURITION ---- F127-F138 (heading F127, opener F128)
 # ======================================================================================
 
 story.append(heading("16.6", "MICTURITION", level=1))
@@ -1034,7 +1034,7 @@ story.append(memory_aid(
     "the kidney is reporting a metabolic problem elsewhere."))
 
 # ======================================================================================
-# ---- 16.7 ROLE OF OTHER ORGANS IN EXCRETION ---- F135-F142 (heading F135, opener F136)
+# ---- 16.7 ROLE OF OTHER ORGANS IN EXCRETION ---- F139-F149 (heading F139, opener F140)
 # ======================================================================================
 
 story.append(heading("16.7", "ROLE OF OTHER ORGANS IN EXCRETION", level=1))
@@ -1078,7 +1078,7 @@ story.append(memory_aid(
     "that also carries a little <b>urea</b>."))
 
 # ======================================================================================
-# ---- 16.8 DISORDERS OF THE EXCRETORY SYSTEM ---- F143-F158 (heading F143, opener F144)
+# ---- 16.8 DISORDERS OF THE EXCRETORY SYSTEM ---- F150-F164 (heading F150, opener F151)
 # ======================================================================================
 
 story.append(heading("16.8", "DISORDERS OF THE EXCRETORY SYSTEM", level=1))
@@ -1105,6 +1105,12 @@ story.append(process_flow([
     "The <b>cleared blood is pumped back to the body through a vein</b> after adding "
     "<b>anti-heparin</b> to it.",
 ]))
+
+story.append(gap())
+# [VERIFICATION FIX] F159 was MISSING from the built PDF - NCERT's closing sentence on
+# haemodialysis. Restored verbatim in meaning (Rule 1: zero information loss).
+story.append(body(
+    "<b>This method is a boon for thousands of uremic patients all over the world.</b>"))
 
 story.append(gap())
 story.append(note(
@@ -1152,7 +1158,7 @@ story.append(memory_aid(
     "correction."))
 
 # ======================================================================================
-# ---- SUMMARY ---- F159-F165 (heading F159)
+# ---- SUMMARY ---- F171 (heading F171); figure-caption rows F165-F170 sit in their figure blocks
 # ======================================================================================
 
 story.append(heading("S", "SUMMARY", level=1))
@@ -1209,7 +1215,7 @@ story.append(body(
     "liver</b> also assist in excretion."))
 
 # ======================================================================================
-# ---- EXERCISES ---- F166-F172 (heading F166)
+# ---- EXERCISES ---- F172 (heading F172)
 # Source numbering reproduced verbatim, including the duplicated "(d)" in Exercise 7
 # (rows F169/F170) - see inventory exercise-gap notes.
 # ======================================================================================
