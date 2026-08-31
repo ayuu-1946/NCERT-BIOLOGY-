@@ -1,0 +1,54 @@
+A) text-layer word grazing
+fig_7_1: words_in_rect=59 GRAZING ['(d)', 'Columnar', 'cells', 'bearing', 'cilia']
+fig_7_2: words_in_rect=25 GRAZING ['get', 'glandular', 'are', 'consisting', 'cells', 'multicellular,', '(salivary', 'pouring', 'divided', 'exocrine', '(b)', 'Multicellular']
+fig_7_3: words_in_rect=7 ok
+fig_7_4: words_in_rect=28 ok
+fig_7_5: words_in_rect=15 GRAZING ['(b)', 'Dense', 'irregular']
+fig_7_6: words_in_rect=41 GRAZING ['bones', 'connective', 'and', 'are', 'them', 'embryos', 'present', 'bones', 'rich', 'its', 'structural', 'softer', 'present', 'the', 'They', 'to', 'is', 'red', '(Figure', 'the', 'about', '7.1.3', 'Each', '(b)', 'Bone', '(c)', 'Blood']
+fig_7_7: words_in_rect=31 GRAZING ['Junction', 'between', 'adjacent', 'Nucleus', 'Striations', 'tissue']
+fig_7_8: words_in_rect=24 GRAZING ['to', 'contract,', 'its', 'neighbours', 'are', 'over', 'changing', 'of', 'body.', 'stimulated,']
+fig_7_14: words_in_rect=25 GRAZING ['(tergites', 'dorsally', 'and', 'sternites', 'ventrally)', 'that', 'are', 'joined', 'to', 'each', 'other', 'by', 'thin']
+fig_7_15: words_in_rect=45 GRAZING ['bears', 'a', 'pair', 'of', 'jointed', 'filamentous', 'structures', 'called', 'anal', 'cerci.']
+fig_7_16: words_in_rect=24 GRAZING ['Rectum']
+fig_7_17: words_in_rect=10 GRAZING ['Anterior', 'Alary', 'Chambers', 'heart', 'system']
+fig_7_18: words_in_rect=54 GRAZING ['Spermatheca', 'gonapophyses', 'Figure']
+fig_7_19: words_in_rect=13 ok
+fig_7_20: words_in_rect=30 GRAZING ['Figure', 'showing', 'Intestine', 'Rectum', 'Cloaca', 'Urinary', 'bladder', 'Gall', 'bladder', 'Lung', 'Cloacal']
+fig_7_21: words_in_rect=22 GRAZING ['duct']
+fig_7_22: words_in_rect=39 GRAZING ['and', 'of', 'well-organised', 'aggregations', 'of', 'skull.', 'unit).', 'tympanum', 'of', 'female', 'organs', '(Figure', 'part', 'called', 'in', 'the', 'Bidder’s', 'the', 'kidneys', 'small,', 'faecal', 'pair', 'situated', 'functional', 'arising']
+B) drawings-extent overflow
+fig_7_1: ok
+fig_7_2: ok
+fig_7_3: ok
+fig_7_4: ok
+fig_7_5: ok
+fig_7_6: ok
+fig_7_7: ok
+fig_7_8: no drawings (raster figure)
+fig_7_14: no drawings (raster figure)
+fig_7_15: ok
+fig_7_16: ok
+fig_7_17: ok
+fig_7_18: OVERFLOW L0.0 T11.0 R0.0 B0.0
+fig_7_19: ok
+fig_7_20: ok
+fig_7_21: ok
+fig_7_22: no drawings (raster figure)
+C) unexplained dark ink in border band
+fig_7_1: clean
+fig_7_2: clean
+fig_7_3: clean
+fig_7_4: clean
+fig_7_5: clean
+fig_7_6: clean
+fig_7_7: clean
+fig_7_8: clean
+fig_7_14: clean
+fig_7_15: clean
+fig_7_16: clean
+fig_7_17: clean
+fig_7_18: clean
+fig_7_19: EDGE-INK ['L:179px@(np.float64(83.8), np.float64(534.7))']
+fig_7_20: clean
+fig_7_21: clean
+fig_7_22: clean
