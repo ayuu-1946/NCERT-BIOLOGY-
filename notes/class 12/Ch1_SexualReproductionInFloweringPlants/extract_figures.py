@@ -34,7 +34,7 @@ import os
 import sys
 
 import pymupdf
-from PIL import Image, ImageOps, ImageDraw
+from PIL import Image, ImageOps
 
 SRC = "Chapter/class 12/Chapter 1 - Sexual Reproduction in Flowering Plants.pdf"
 OUT_DIR = "notes/class 12/Ch1_SexualReproductionInFloweringPlants/assets"
@@ -59,10 +59,10 @@ FIGS = [
     # p7: three SEM photos in one row under a single caption (no (a)/(b)/(c)
     # sub-labels, so not split). x1=428 stops well short of fig 1.5's (a)
     # tetrad circle, which starts at x~448.
-    ("1_4", 7, (56, 96, 420, 252)),
-    # p7: whole 1.5 plate retained as a reference crop, with the left edge
-    # inside the gutter so no 1.4 prose/label bleeds into the asset.
-    ("1_5", 7, (368, 136, 546, 625)),
+    ("1_4", 7, (56, 96, 428, 252)),
+    # p7: right-column stack, shares the page with 1.4. x0=368 sits between
+    # the body text (ends x~360) and the "Generative cell" label (x~375).
+    ("1_5", 7, (368, 143, 543, 630)),
     # p8: full-width photo band. Caption is centred at y~360-372.
     ("1_6", 8, (76, 183, 560, 378)),
     # p9: four panels (a)-(d). NOT split -- (b)'s "Syncarpous ovary" label is
@@ -79,8 +79,8 @@ FIGS = [
     # p13: RIGHT-side figure. x0=295 clears the left text column (ends x~283).
     # y0=105 keeps the magnifier circle that overlaps the text column's edge.
     ("1_10", 13, (295, 105, 545, 472)),
-    # p14: LEFT column. The full plate stays available as a reference crop;
-    # split assets below are used in the compact PDF layout.
+    # p14: LEFT column. The (a) panel's pale blue background ends at x~367 and
+    # the right text column starts at x~393, so x1=372 sits in the gutter.
     ("1_11", 14, (76, 101, 372, 620)),
     # p16: full-width plate, five panels. Caption is four lines, y~484-543.
     ("1_12", 16, (76, 98, 558, 548)),
@@ -101,14 +101,8 @@ FIGS = [
     ("1_9b", 12, (110, 258, 254, 403)),
     ("1_9c", 12, (74, 404, 292, 660)),
     # 1.11: (a) line drawing on a pale blue field, (b) photo below it.
-    # x/y margins are pinned from the 440 dpi grid; all labels and both panel
-    # markers remain inside the crops, while the right prose column is excluded.
-    ("1_11a", 14, (76, 95, 365, 327)),
-    ("1_11b", 14, (76, 333, 320, 575)),
-    # 1.5: (a) tetrad at top, (b) maturation series below. The label column
-    # for panel (b) is intentionally included; do not tighten x0 past 340.
-    ("1_5a", 7, (420, 130, 546, 255)),
-    ("1_5b", 7, (340, 252, 546, 560)),
+    ("1_11a", 14, (94, 103, 372, 335)),
+    ("1_11b", 14, (95, 336, 315, 585)),
     # 1.12: five panels, two rows, each self-labelled.
     ("1_12a", 16, (78, 103, 222, 330)),
     ("1_12b", 16, (250, 103, 376, 330)),
@@ -132,18 +126,9 @@ def main():
         clip = pymupdf.Rect(*rect) & page.rect
         pix = page.get_pixmap(clip=clip, dpi=RENDER_DPI)
         img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
-        # v6 print-hardening: every embedded figure is true monochrome.
-        # Autocontrast keeps fine labels and leader lines legible after conversion.
-        img = ImageOps.autocontrast(img.convert("L"), cutoff=0.5)
-        # The raster scan places adjacent prose/caption fragments inside the
-        # narrow panel gutter. Erase only those outside-figure fragments after
-        # the hand-pinned crop; all artwork and in-figure labels remain intact.
-        if fid == "1_5b":
-            d = ImageDraw.Draw(img)
-            d.rectangle((0, 0, 170, 75), fill=255)       # prose above panel
-        elif fid == "1_11a":
-            d = ImageDraw.Draw(img)
-            d.rectangle((1080, 0, img.width, img.height), fill=255)  # right prose column
+        # Colour is load-bearing in this chapter (stained sections, photos),
+        # so keep RGB and only lift contrast slightly.
+        img = ImageOps.autocontrast(img, cutoff=0.5)
         out = os.path.join(OUT_DIR, f"fig_{fid}.png")
         img.save(out)
         print(f"fig_{fid}: p{pno} {rect} {img.size} mode={img.mode} -> {out}")
