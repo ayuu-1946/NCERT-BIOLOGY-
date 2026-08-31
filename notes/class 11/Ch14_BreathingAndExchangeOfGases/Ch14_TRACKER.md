@@ -19,7 +19,15 @@
 - Exercise gaps closed in a **Terms Used in the Exercises** appendix (Ex 9 high altitude, Ex 11 sigmoidal reason, Ex 12 hypoxia, plus the Ex 14 per-hour derivation), all derived strictly from chapter content. The freeze was **not** back-dated; no `a`-suffixed rows were added.
 - Only one render/lint cycle was needed for content — the first run's single FAIL was check 7 (rows not yet ticked), the expected bookkeeping step.
 
-**Pass 3 / Gate 3: NOT STARTED** — hard stop taken at the close of Gate 2 by instruction. The chapter is **not yet in the Done tally**; it needs the Pass 3 bidirectional full read before delivery.
+**Pass 3: COMPLETE — GATE 3 CLOSED (2026-08-31). CHAPTER DONE.**
+- Venv was **absent at session start** (expected §0.2 state); rebuilt to the §0.3 reference versions before any diagnosis.
+- **Reproducibility checked first:** committed PDF fingerprinted, regenerated from the script, re-fingerprinted — **9 pages / 23,863 chars / 6 images, identical.**
+- **One confirmed defect, D1 (audit-trail):** Gate 2's inherited claim of "0 warn, green under `--strict`" was **false when re-tested** — `--strict` returned WARN/exit 1 because the verdict table pasted into the inventory contains the words *portrait*/*photograph*, which check 4 scans for in any table row. The act of documenting Gate 2 invalidated its own claim. Fixed by rewording two cells (**metadata only — no Facts row, caption or asset touched**); `--strict` now genuinely **exit 0, 0 fail / 0 warn**.
+- **`check_pdf.py` was deliberately NOT modified.** The same words appear in 12 other inventories, and in Ch11 (RAMDEO MISRA) and Ch1 (ERNST MAYR) they are **real content rows** where check 4 firing is intended. Editing the shared frozen linter would have blinded every chapter with an actual scientist profile.
+- **Pass 3(a): 9/9 pages inspected** at 125 dpi and at 300 dpi 1-bit. No overflow/clipping/orphan; no figure squashed (all 6 drawn aspect ratios match source to 3 dp); font canon holds at **only the four Times base-14 faces**; smallest span **6.0pt**; NOTE vs MEMORY AID still distinguishable at 1-bit.
+- **Pass 3(b): full read, both directions, 11 section-pair reading claims** naming source pages against script blocks. All NCERT headings map one-to-one to script blocks; every section's antecedent sentence and every heading-word definition verified. **0 MISSING · 0 FABRICATED · 0 DRIFTED · 0 UNINVENTORIED** — no row added, freeze intact.
+- **4 false positives documented** (not discarded): the `pO2`/`pCO2` misread of a page image, the "missing" Fig 14.2(b) that `KeepTogether` moved to p4, the ALFONSO CORTI unit-divider profile (Ch18's, not Ch14's), and NCERT's own `(Figure 14.4)` typo which the notes handle correctly.
+- **3 carry-overs** logged (C1 p3 whitespace — do not "fix"; C2 never spell check-4 trigger words in an inventory table row; C3 keep subscripts as tags).
 
 ## Current status (figure extraction — completed in a prior task)
 
