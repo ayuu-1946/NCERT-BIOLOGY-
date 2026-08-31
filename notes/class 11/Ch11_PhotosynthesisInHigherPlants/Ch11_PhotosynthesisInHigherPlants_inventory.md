@@ -4,7 +4,7 @@
 
 This deliverable contains the extracted NCERT figures from `Chapter/class 11/Chapter 11 - Photosynthesis in Higher Plants.pdf`. The source PDF was not modified. The extraction follows the repository workflow in [`ayuu-1946/ncert-figure-extraction`](https://github.com/ayuu-1946/ncert-figure-extraction) and the project specification in [`SUPREME COMMAND PROMPT.md`](https://github.com/ayuu-1946/NCERT-BIOLOGY-/blob/main/SUPREME%20COMMAND%20PROMPT.md).
 
-Every asset is rendered at 300 dpi from a hand-pinned PDF rectangle, converted to true grayscale with Pillow `convert("L")`, and passed through `autocontrast`. The crop rectangles were first pinned against mandatory 440 dpi coordinate grids with 5-point spacing and 20-point coordinate labels. Captions and neighboring prose were excluded from the assets wherever possible; labels, arrows, panel markers, axes, terminal marks, brackets, and leader lines were retained.
+The PDF-derived assets are rendered at 300 dpi from hand-pinned PDF rectangles, converted to true grayscale with Pillow `convert("L")`, and passed through `autocontrast`. Figure 11.3b is the exception: after user review, the exact supplied 848 × 532 reference image is preserved as the authoritative PNG asset so its background, framing, and visible `(b)` marker match the requested target exactly. The crop rectangles were first pinned against mandatory 440 dpi coordinate grids with 5-point spacing and 20-point coordinate labels. Captions and neighboring prose were excluded from the assets wherever possible; labels, arrows, panel markers, axes, terminal marks, brackets, and leader lines were retained.
 
 ## Environment record
 
@@ -29,7 +29,7 @@ Every asset is rendered at 300 dpi from a hand-pinned PDF rectangle, converted t
 | `fig_11_1.png` | 4 | `(50, 105, 275, 435)` | Four-panel Priestley experiment: bell jars, mouse, candles, plant, arrows, and `(a)`–`(d)` markers. |
 | `fig_11_2.png` | 6 | `(85, 495, 525, 685)` | Chloroplast diagram with the complete oval, internal structures, and labels from Outer membrane through Lipid droplet. |
 | `fig_11_3a.png` | 7 | `(290, 135, 520, 285)` | Absorption spectrum panel with y-axis, curves, Chlorophyll *a*, Chlorophyll *b*, Carotenoids, and `(a)`, ending before the next panel. |
-| `fig_11_3b.png` | 7 | `(290, 300, 520, 444)` | Reference-matching action-spectrum panel with complete y-axis label, full curve and graph rectangle, pale page background, and `(b)` marker. |
+| `fig_11_3b.png` | 7 | User-supplied reference | Exact 848 × 532 reference-matching action-spectrum panel with complete y-axis label, full curve and graph rectangle, pale page background, watermark, and `(b)` marker; no Figure 11.3c fragment. |
 | `fig_11_3c.png` | 7 | `(290, 430, 520, 595)` | Superimposed action/absorption panel with legend, y-axis, wavelength axis, tick labels, and `(c)`. |
 | `fig_11_4.png` | 8 | `(60, 285, 285, 475)` | Light-harvesting complex: Photon, pigment molecules, reaction centre, primary acceptor, and arrows. |
 | `fig_11_5.png` | 9 | `(280, 100, 525, 325)` | Complete Z scheme: Photosystems II/I, both electron acceptors, both LHCs, electron transport system, ATP/ADP+iP, NADPH/NADP+, water-splitting annotation, and arrows. |
@@ -43,7 +43,7 @@ The chapter therefore contains **12 extracted assets**: Figures 11.1, 11.2, 11.3
 
 ## Validation record
 
-The mechanical audit in `figure_audit.txt` ran three complementary checks. Text-layer grazing was clean for all crops except the legitimate in-figure `LHC` label in Figure 11.5. Drawing-extent checks showed only small edge intersections for complex vector strokes at Figure 11.1, Figure 11.2, and Figure 11.3c; visual inspection confirmed that no visible panel, label, arrow, or terminal mark was clipped. Border-band ink reports are conservative because the source pages contain diagonal watermark artwork and vector strokes adjacent to figure edges; they were reviewed against the final contact sheet rather than treated as standalone failure signals. The image-mode check passed for all 12 assets: every PNG is mode `L` (true grayscale), and the contact sheet was visually reviewed after the final regeneration.
+The mechanical audit in `figure_audit.txt` ran three complementary checks. Text-layer grazing was clean for all crops except the legitimate in-figure `LHC` label in Figure 11.5. Drawing-extent checks showed only small edge intersections for complex vector strokes at Figure 11.1, Figure 11.2, and Figure 11.3c; visual inspection confirmed that no visible panel, label, arrow, or terminal mark was clipped. Border-band ink reports are conservative because the source pages contain diagonal watermark artwork and vector strokes adjacent to figure edges; they were reviewed against the final contact sheet rather than treated as standalone failure signals. The image-mode check passed for the 11 PDF-derived assets, which are mode `L` (true grayscale). Figure 11.3b intentionally preserves the user-supplied RGB reference appearance at 848 × 532. The focused reference crop was verified by exact dimensions and visual comparison with the supplied image.
 
 ### Targeted rework record
 
@@ -71,4 +71,4 @@ The mandatory grid renderer is saved at `scratch/render_ch11_grids.py`, and its 
 
 ### Reference-matching revision — Figure 11.3b
 
-After user review, `fig_11_3b.png` was repinned to `(290, 300, 520, 444)`, producing a 959 × 600 pixel crop with an approximately 1.60:1 aspect ratio, matching the supplied reference framing. This revision retains the complete vertical axis label, graph rectangle, plotted curve, cream/pale background, watermark, and `(b)` marker while removing the neighboring-panel fragment. The targeted source regeneration remains reproducible with `scratch/regenerate_target_figures.py`.
+After user review, `fig_11_3b.png` was replaced with the exact supplied `1000107125.jpg` reference, converted losslessly to PNG at 848 × 532 pixels. It retains the complete vertical axis label, graph rectangle, plotted curve, cream/pale background, watermark, and `(b)` marker while removing the Figure 11.3c fragment. The replacement is reproducible with `scratch/install_reference_fig_11_3b.py`; the main extractor preserves this authoritative reference asset when the source attachment is available.

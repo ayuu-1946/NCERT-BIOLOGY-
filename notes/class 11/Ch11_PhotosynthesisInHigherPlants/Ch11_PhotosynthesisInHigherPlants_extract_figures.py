@@ -33,6 +33,10 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     doc = pymupdf.open(SRC)
     for fid, pno, rect in FIGS:
+        if fid == "11_3b" and os.path.exists(os.path.join(OUT_DIR, "fig_11_3b.png")):
+            # The user-supplied reference is authoritative; do not overwrite it.
+            print("fig_11_3b: preserved authoritative reference asset")
+            continue
         page = doc[pno - 1]
         clip = pymupdf.Rect(*rect) & page.rect
         pix = page.get_pixmap(clip=clip, dpi=RENDER_DPI, alpha=False)
