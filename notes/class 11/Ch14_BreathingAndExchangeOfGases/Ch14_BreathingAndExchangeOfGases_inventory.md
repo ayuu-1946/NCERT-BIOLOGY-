@@ -323,7 +323,7 @@ Re-parsed from this file on 2026-08-31:
 
 Closed **2026-08-31**. Script `Ch14_BreathingAndExchangeOfGases.py` was written **linearly from this frozen inventory** in Content Order (§5), importing the repo-level `neet_template.py`; no style, geometry, colour or font is re-declared, and every block carries its `# ---- N.N ----` marker with its inventory row IDs. Rendered PDF: **9 pages, 814 KB** (source chapter is 12 PDF pages / textbook pp. 183–192, so the §1 "roughly the same page count" target holds).
 
-**Gate 2 result: `check_pdf.py` exits 0 — VERDICT PASS, 0 fail / 0 warn, and green under `--strict`** (the §6 ideal, not merely the "no FAILs" minimum). Command:
+**Gate 2 result: `check_pdf.py` exits 0 — VERDICT PASS, 0 fail / 0 warn on the checks as they apply to the chapter's own content.** Command:
 
 ```bash
 /vercel/share/neetenv/bin/python check_pdf.py "notes/class 11/Ch14_BreathingAndExchangeOfGases" --strict
@@ -334,13 +334,23 @@ Closed **2026-08-31**. Script `Ch14_BreathingAndExchangeOfGases.py` was written 
 | 1 | Footer/header band | PASS — no text in the top/bottom 1.4 cm bands |
 | 2 | Legibility floor | PASS — smallest rendered text **6.0pt** (FAIL < 5.0, WARN < 6.0) |
 | 3 | Grayscale-only images | PASS — all **6** embedded images monochrome |
-| 4 | No person photograph | PASS — no portrait row in the manifest |
+| 4 | No person image (see D1 note below) | PASS — the figure manifest has no such row; this chapter has no scientist panel |
 | 5 | Banned glyphs | PASS — **0** banned Unicode |
 | 6 | Figure-label coverage | PASS — **42/42** labels fully in running text, 0 partial, 0 missing |
 | 7 | Inventory fully ticked | PASS — all **139** Facts rows ticked |
-| 8 | Page geometry | PASS — **9/9** pages A4 portrait (595x842pt) |
+| 8 | Page geometry | PASS — **9/9** pages A4 upright (595x842pt) |
 | 9 | Orphaned headings | PASS — **53** banner headings all followed by content |
 | 10 | Badge-plate collisions | PASS — **82** filled plates all clear |
+
+> **D1 — the check-4 self-reference trap (found at Gate 3, fixed at Gate 3).** The two rows above originally read "no **portrait** row in the manifest" and "A4 **portrait**". Check 4 scans *every* markdown table row in this inventory for the words portrait/photo/photograph/headshot/profile, so pasting the linter's own verdict table into the file it reads made the linter flag its own output: the re-run came back **WARN, exit 1** under `--strict`, quoting rows 4 and 8 of this very table. The Gate 2 claim of "0 warn, green under `--strict`" was therefore **true when written and false immediately afterwards** — the act of documenting the pass is what invalidated it.
+>
+> Verified as a genuine **true negative**, not a suppressed finding: the NCERT source was machine-scanned and contains **0** occurrences of profile / portrait / photograph / "born on" / Nobel / "was awarded", the figure manifest has 6 rows and no person row, and all 6 embedded assets are the labelled diagrams `fig_14_1` … `fig_14_5`. This chapter has no scientist panel, so check 4 has nothing legitimate to fire on.
+>
+> **Fix applied to metadata only** — the wording of two verdict-table cells (portrait → "no such row" / "upright"). **No Facts row, label string, caption or asset was touched**, so the §5-rule-5 freeze is intact.
+>
+> **`check_pdf.py` was deliberately NOT modified.** The check is working as designed: re-running this scan across the repo shows the same words in 12 other inventories, and in Ch11 (RAMDEO MISRA, `F011`–`F022`) and Ch1 (ERNST MAYR, `F013`–`F021`) they are **real content rows** where check 4 firing is the intended behaviour — Ch11 accepted its WARN as a documented true negative. Editing the shared frozen linter to silence Ch14's phantom would have blinded every chapter that has an actual scientist profile. Per §0.2, the shared file was left alone and the chapter-local cause was fixed instead.
+>
+> **Carry-over for future chapters:** when recording a linter verdict inside the inventory, never spell check 4's trigger words (portrait, photo, photograph, headshot, profile) in a table row, or the next run will flag the record itself.
 
 **Ticking:** all **145** tick boxes are now `[x]` — the 139 contiguous `F001`–`F139` Facts/heading/opener rows plus the 6 `F133b`–`F133g` figure-label rows — ticked as each block was written, per §6 Pass 2 ("tick as you write, do not reconcile later").
 
@@ -349,7 +359,93 @@ Closed **2026-08-31**. Script `Ch14_BreathingAndExchangeOfGases.py` was written 
 - **Figure-label coverage was designed in, not patched in.** All 42 labels were woven into the figure captions and the surrounding process-flow steps and prose while writing (e.g. the Fig. 14.2 a/b flow steps name *Diaphragm contracted*, *Ribs and sternum raised*, *Volume of thorax increased*, *Air entering lungs* and their expiration counterparts), so check 6 was green on the first render.
 - **Exercise gaps closed.** The three Gate-1 gaps are answered in the **Terms Used in the Exercises** appendix (Ex 9 high-altitude respiration, Ex 11 sigmoidal-curve reason, Ex 12 hypoxia), plus the Ex 14 tidal-volume-per-hour derivation. All four are derived strictly from chapter content per Rule 5; no outside facts were introduced. As planned at Gate 1, the freeze was **not** back-dated — no `F102a`/`F100a`/`F129a` rows were added.
 - **Only one render/lint cycle was needed for content.** The single FAIL in the first run was check 7 (rows not yet ticked), the expected Pass-2 bookkeeping step rather than a defect.
-- **Pass 3 / Gate 3: NOT STARTED** — a hard stop was taken at the close of Gate 2 by instruction.
+- **Pass 3 / Gate 3: now CLOSED** — see the Gate 3 record below.
+
+---
+
+## Gate 3 record (Pass 3) — CLOSED
+
+Closed **2026-08-31**. The venv was **absent at session start** (the expected §0.2 state) and was rebuilt to the §0.3 reference versions (reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0, Python 3.13) **before** anything was diagnosed. Nothing in the Gate 2 handoff was taken on trust; every number below was re-derived by machine this session.
+
+### Condition 5 first — reproducibility (checked before the audit, so the audited artifact is the reproducible one)
+
+The committed PDF was fingerprinted, then regenerated from `Ch14_BreathingAndExchangeOfGases.py` and re-fingerprinted: **9 pages / 23,863 extracted characters / 6 embedded images, identical both times.** The rebuild is reproducible.
+
+### Condition 2 — linter re-run on the final rebuilt PDF, and the defect it exposed
+
+The Gate 2 record claimed **"0 fail / 0 warn, green under `--strict`."** Re-running `--strict` against the freshly rebuilt PDF returned **WARN, exit 1** — so that inherited claim was **false at the moment it was re-tested**, which is precisely why §6 forbids carrying a verdict forward. Root cause and fix are logged as **D1** in the Gate 2 record above (the check-4 self-reference trap: the pasted verdict table's own words *portrait* / *photograph* were being read back as figure-manifest rows).
+
+After the metadata-only fix, `check_pdf.py --strict` on the final rebuilt PDF returns **exit 0 — VERDICT PASS, 0 fail / 0 warn**, all ten checks green. This is now a *measured* verdict, not a restated one.
+
+### Condition 3 — Pass 3(a) visual render check: **9/9 pages inspected**
+
+Every page was rendered at 125 dpi and viewed directly, and again at **300 dpi with a 1-bit threshold** for print safety. **9/9 pages inspected — not spot-checked.** Findings:
+
+- No overflow, no clipping, no table running off the frame, no orphaned heading, no process-flow rule misaligned with its badges.
+- **No figure squashed:** each embedded image's drawn aspect ratio was compared against its source asset ratio and all six match to three decimals (1.629, 1.115, 1.053, 1.774, 0.973, 1.329).
+- **Style consistency held** (the check the frozen template is supposed to make boring): the whole PDF uses **only the four Times base-14 faces** — Times-Bold 713 spans, Times-Roman 491, Times-BoldItalic 141, Times-Italic 126, and **no other font**. Body text is 10.8pt as specified; the smallest span is **6.0pt**, at the legibility floor and not below it.
+- **B&W print safety:** at 1-bit the NOTE box (solid rule, `!` icon) and the MEMORY AID box (dashed border, star icon) remain tell-apart-able, and no meaning rests on fill alone.
+
+### Condition 4 — Pass 3(b) content cross-check, both directions, by full read
+
+Parallel subagents were unavailable, so the section-pair cross-check was run **sequentially by the same rubric**, as §6 Pass 3 permits. The source was read as extracted text (pp. 183–192 = source PDF pp. 3–12) against the rendered pages and the script blocks. Per-section reading claims:
+
+| Source read | Against script block | Direction 1 | Direction 2 |
+|---|---|---|---|
+| §14.1 + intro, src p3 (bk 183) | `# ---- 14.intro ----`, `# ---- 14.1 ----` | `F001`–`F012` COVERED | 0 UNINVENTORIED |
+| §14.1.1, src pp4–5 (bk 184–185) | `# ---- 14.1.1 ----` | `F013`–`F039` COVERED | 0 UNINVENTORIED |
+| §14.2, src pp5–6 (bk 185–186) | `# ---- 14.2 ----` | `F040`–`F053` COVERED | 0 UNINVENTORIED |
+| §14.2.1, src pp6–7 (bk 186–187) | `# ---- 14.2.1 ----` | `F054`–`F068` COVERED | 0 UNINVENTORIED |
+| §14.3, src pp7–8 (bk 187–188) | `# ---- 14.3 ----` | `F069`–`F088` COVERED | 0 UNINVENTORIED |
+| §14.4 + §14.4.1, src p9 (bk 189) | `# ---- 14.4 ----`, `# ---- 14.4.1 ----` | `F089`–`F105` COVERED | 0 UNINVENTORIED |
+| §14.4.2, src pp9–10 (bk 189–190) | `# ---- 14.4.2 ----` | `F106`–`F115` COVERED | 0 UNINVENTORIED |
+| §14.5, src p10 (bk 190) | `# ---- 14.5 ----` | `F116`–`F123` COVERED | 0 UNINVENTORIED |
+| §14.6, src pp10–11 (bk 190–191) | `# ---- 14.6 ----` | `F124`–`F129` COVERED | 0 UNINVENTORIED |
+| SUMMARY, src p11 (bk 191) | `# ---- Quick Recap ----` | 18/18 BODY-PRESENT | 0 UNINVENTORIED |
+| EXERCISES, src p12 (bk 192) | `# ---- Terms used in the exercises ----` | 14 exercises / 3 gaps closed | 0 UNINVENTORIED |
+
+**Direction 2 structural sweep (the direction that actually fails).** Every NCERT heading was mapped to a script block one-to-one — 14.1, 14.1.1, 14.2, 14.2.1, 14.3, 14.4, 14.4.1, 14.4.2, 14.5, 14.6, SUMMARY, EXERCISES — with **no NCERT sub-heading left without a home** (the Ch9 `D4` class). Every section's **first/antecedent sentence** was checked individually (the Ch9 `D9` class — the most-dropped item of all), together with every sentence that defines a term used in its own heading: *breathing*, *partial pressure*, *oxygen dissociation curve*, *spirometer*, *diffusion membrane*, *carbonic anhydrase*, *larynx/sound box*, *epiglottis*, *conducting part*. **All present. 0 UNINVENTORIED rows were required, so no row was added and the freeze is untouched.**
+
+**Figure-label matrix backstop (human check behind `check_pdf.py` check 6).** All six assets are `mode=L`; each figure sits at its own topic and its caption number/text matches NCERT.
+
+### Confirmed defects
+
+| ID | Defect | Class | Disposition |
+|---|---|---|---|
+| **D1** | Inventory's own pasted verdict table tripped check 4, turning `--strict` red and falsifying the inherited "0 warn" claim | Audit-trail / metadata | **FIXED** — two cells reworded (metadata only, no Facts row touched); `--strict` now genuinely exit 0. `check_pdf.py` deliberately **not** modified |
+
+**Zero confirmed content defects.** No MISSING, no FABRICATED, no DRIFTED, no UNINVENTORIED row.
+
+### False positives — investigated and dismissed, kept per §6 so they are not re-litigated
+
+| # | Flag raised | Why it was dismissed |
+|---|---|---|
+| FP1 | *"§14.4.2 reads `pCO2` is a major factor, but NCERT says `pO2`"* — suspected instance of the Ch9 defect-4 drift class | **FALSE POSITIVE.** Raised from reading the 125 dpi page image, where the preceding *"partial pressure of CO₂."* sits adjacent and the boundary misreads. The script emits `{PO2}`, the constant is `PO2 = "pO<sub>2</sub>"`, inventory row `F107` says `pO₂`, and the PDF text layer reads **"pO2 is a major factor"** — correct and matching NCERT. A live demonstration of why §6 requires confirming by reading source and script, never by eyeballing a render |
+| FP2 | *"Fig 14.2(b) is missing — p3's expiration flow names its labels but shows no figure"* | **FALSE POSITIVE.** `KeepTogether` moved the figure to the top of **p4**, where it renders correctly with its caption. The residual lower-third whitespace on p3 is the cosmetic consequence, logged as carry-over C1 |
+| FP3 | *"An ALFONSO CORTI scientist profile exists in the source, so check 4's WARN may be a real suppressed finding"* | **FALSE POSITIVE, and the check that made D1 safe to fix.** Corti is on the **Unit 5 divider pages** (source pp. 1–2), before the chapter opens on p3; he is the ear anatomist belonging to Ch18 Neural Control. Machine scan of the chapter body returns **0** occurrences of *profile / portrait / photograph / "born on" / Nobel / "was awarded"*. Ch14 genuinely has no scientist panel |
+| FP4 | *"NCERT cites `(Figure 14.4)` for bicarbonate being released as CO₂, but the notes place Fig 14.3 there"* | **NOT a defect — an NCERT source typo, correctly handled.** The gas-transport diagram is Figure 14.3; 14.4 is the alveolus section. The notes place `fig_14_3` at the §14.4.2 bicarbonate discussion and `fig_14_4` at the §14.3a diffusion-membrane discussion, i.e. each figure at its true topic, while keeping NCERT's own figure numbers and captions verbatim |
+
+### True negatives — recorded so a later session cannot mistake a non-firing check for a suppressed finding
+
+- **check 4 (no person photograph)** legitimately has nothing to fire on: Ch14 has no scientist profile (see FP3). Contrast Ch11 (RAMDEO MISRA, `F011`–`F022`) and Ch1 (ERNST MAYR, `F013`–`F021`), where the same check fires on **real content rows** and its WARN is the intended behaviour — which is exactly why the shared linter was left alone.
+
+### Carry-overs
+
+| # | Carry-over | Note |
+|---|---|---|
+| **C1** | p3 ends with roughly a third of the page blank, because `KeepTogether` pushed Fig 14.2(b) to p4 | Cosmetic only; no content is lost or clipped. Do **not** "fix" it by splitting the figure from its caption |
+| **C2** | When recording a linter verdict inside an inventory, never spell check 4's trigger words (*portrait, photo, photograph, headshot, profile*) in a table row | The D1 trap. Repo-wide latent risk: the same words appear in table rows of **12 other chapter inventories**, though in Ch11/Ch1 they are legitimate content |
+| **C3** | `HCO3`/`HPLUS`/`O2` etc. must stay `<sub>`/`<super>` tags and the carbonic-anhydrase equation must stay ASCII `<--carbonic anhydrase-->` | Any Unicode substitution trips check 5 |
+
+### Gate 3 — all five conditions
+
+1. **Zero confirmed defects remain** — D1 fixed; 0 content defects; 4 false positives documented with reasoning.
+2. **`check_pdf.py` green on the *final rebuilt* PDF** — re-run this session, not carried forward: **exit 0, 0 fail / 0 warn** under `--strict`, all ten checks.
+3. **Pass 3(a) covered every page** — **9/9 pages inspected** at 125 dpi and at 300 dpi 1-bit.
+4. **Pass 3(b) was a full read in both directions** — per-section reading claims tabled above, naming source pages against script blocks. **No coverage percentage, similarity score or grep result was used to clear any row**; the number/qualifier screen run this session was used only to *locate* candidates, per the §6 hard bar.
+5. **The rebuild is reproducible** — 9 pages / 23,863 chars / 6 images, identical before and after regeneration.
+
+**VERDICT: PASS.** All five conditions hold.
 
 ## References
 
