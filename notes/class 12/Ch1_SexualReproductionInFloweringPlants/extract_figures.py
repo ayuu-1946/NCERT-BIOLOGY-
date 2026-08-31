@@ -101,8 +101,15 @@ FIGS = [
     ("1_9b", 12, (110, 258, 254, 403)),
     ("1_9c", 12, (74, 404, 292, 660)),
     # 1.11: (a) line drawing on a pale blue field, (b) photo below it.
-    ("1_11a", 14, (94, 103, 372, 335)),
-    ("1_11b", 14, (95, 336, 315, 585)),
+    # p14 target repin: retain all in-figure labels, stop before prose/caption.
+    ("1_11a", 14, (74, 84, 340, 324)),
+    ("1_11b", 14, (74, 330, 288, 570)),
+    # p7 target repin: Figure 1.5b is split because its upper stage shares a
+    # y-band with the preceding paragraph. The lower crop retains all five
+    # labels and the `(b)` marker without the caption.
+    ("1_5a", 7, (440, 125, 546, 230)),
+    ("1_5b_top", 7, (430, 235, 546, 300)),
+    ("1_5b_lower", 7, (348, 298, 546, 560)),
     # 1.12: five panels, two rows, each self-labelled.
     ("1_12a", 16, (78, 103, 222, 330)),
     ("1_12b", 16, (250, 103, 376, 330)),
@@ -126,9 +133,8 @@ def main():
         clip = pymupdf.Rect(*rect) & page.rect
         pix = page.get_pixmap(clip=clip, dpi=RENDER_DPI)
         img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
-        # Colour is load-bearing in this chapter (stained sections, photos),
-        # so keep RGB and only lift contrast slightly.
-        img = ImageOps.autocontrast(img, cutoff=0.5)
+        # The chapter PDF requires true monochrome embedded assets.
+        img = ImageOps.autocontrast(img.convert("L"), cutoff=1)
         out = os.path.join(OUT_DIR, f"fig_{fid}.png")
         img.save(out)
         print(f"fig_{fid}: p{pno} {rect} {img.size} mode={img.mode} -> {out}")

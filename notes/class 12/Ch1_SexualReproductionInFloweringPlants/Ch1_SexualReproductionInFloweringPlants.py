@@ -50,7 +50,9 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, Table, TableStyle, Image as RLImage, KeepTogether  # noqa: E402
+from reportlab.lib.units import cm  # noqa: E402
+from reportlab.lib import colors  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch1_SexualReproductionInFloweringPlants.pdf")
@@ -59,6 +61,50 @@ OUT_PDF = os.path.join(HERE, "Ch1_SexualReproductionInFloweringPlants.pdf")
 def figure(asset_name, caption_text, max_width_cm=15.9):
     """Chapter-local binding of the shared figure() helper (§0.6)."""
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+
+
+def compact_figure_pair(left_asset, right_assets, caption_text, total_width_cm=15.9):
+    """Two figure panels side-by-side with 5 pt cell padding (10 pt total).
+
+    The right panel may be a list of source-extracted assets, which are stacked
+    vertically without altering their pixels. This keeps labels visible while
+    avoiding the large blank area produced by full-page plate crops.
+    """
+    cell_w = total_width_cm * cm / 2.0
+    def img_flow(asset_name):
+        path = os.path.join(ASSETS, asset_name)
+        from PIL import Image as PILImage
+        with PILImage.open(path) as im:
+            w, h = im.size
+        max_w = cell_w - 10
+        natural_w = w / 300.0 * 2.54 * cm
+        # Figure 1.5a is a small source panel; enlarging it within its own
+        # half-cell removes the large blank region while retaining all pixels.
+        width = max_w if asset_name == "fig_1_5a.png" else min(max_w, natural_w)
+        height = width * h / w
+        return RLImage(path, width=width, height=height)
+    left = Table([[img_flow(left_asset)]], colWidths=[cell_w])
+    right_rows = [[img_flow(a)] for a in right_assets]
+    right = Table(right_rows, colWidths=[cell_w])
+    for t in (left, right):
+        t.setStyle(TableStyle([
+            ("BOX", (0, 0), (-1, -1), 0.5, colors.HexColor("#555555")),
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 5),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+            ("TOPPADDING", (0, 0), (-1, -1), 5),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ]))
+    row = Table([[left, right]], colWidths=[cell_w, cell_w])
+    row.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    return KeepTogether([row, Paragraph(caption_text, STYLES["Caption"])])
 
 
 def body(text):
@@ -272,12 +318,12 @@ story.append(body(
     "microspore and its <b>nucleus</b>, the <b>asymmetric spindle</b> of the unequal division "
     "that follows, and the resulting <b>vegetative cell</b> and <b>generative cell</b> of the "
     "mature 2-celled pollen grain."))
-story.append(figure(
-    "fig_1_5.png",
+story.append(compact_figure_pair(
+    "fig_1_5a.png",
+    ["fig_1_5b_top.png", "fig_1_5b_lower.png"],
     "Fig. 1.5 &mdash; (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore "
     "maturing into a pollen grain. Labelled: vacuoles, nucleus, asymmetric spindle, vegetative "
-    "cell, generative cell.",
-    max_width_cm=5.0))
+    "cell, generative cell."))
 story.append(note(
     "Pollen grains of many species <b>cause severe allergies and bronchial afflictions</b>, "
     "leading to chronic respiratory disorders &mdash; asthma, bronchitis, etc. "
@@ -579,11 +625,11 @@ story.append(body(
     "In the water-pollination panel of the figure below, the <b>female flower</b> of "
     "<i>Vallisneria</i> is labelled at the water surface with its <b>stigma</b> exposed, and "
     "the released <b>male flower</b> is labelled floating towards it."))
-story.append(figure(
-    "fig_1_11.png",
+story.append(compact_figure_pair(
+    "fig_1_11a.png",
+    ["fig_1_11b.png"],
     "Fig. 1.11 &mdash; (a) Pollination by water in <i>Vallisneria</i>; (b) Insect pollination. "
-    "Labelled: female flower, stigma, male flower.",
-    max_width_cm=8.0))
+    "Labelled: female flower, stigma, male flower."))
 story.append(gap())
 story.append(body(
     "<b>Biotic agents (animals).</b> <b>Bees, butterflies, flies, beetles, wasps, ants, "

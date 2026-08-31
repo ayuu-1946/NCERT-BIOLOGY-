@@ -13,7 +13,7 @@ Row-type census (machine-derived from the `## Facts` table by re-parsing the fin
 - fact rows: 103
 - Total Facts rows: 255 (F001..F255, contiguous, no gaps or duplicates); 26 + 24 + 12 + 15 + 17 + 58 + 103 = 255
 
-Figures: 15 numbered NCERT figures (Fig 1.1–1.15), extracted to 29 assets (whole plates + cleanly separable sub-panels). All assets `mode=L` (true monochrome). Labels below were harvested by OPENING each rendered asset (§4.4 Step 1), not by text extraction — the source PDF is a raster scan with an empty text layer, so a text-only harvest would have returned zero labels and passed check 6 vacuously.
+Figures: 15 numbered NCERT figures (Fig 1.1–1.15), extracted to 30 assets (whole plates + cleanly separable sub-panels). All assets `mode=L` (true monochrome). Labels below were harvested by OPENING each rendered asset (§4.4 Step 1), not by text extraction — the source PDF is a raster scan with an empty text layer, so a text-only harvest would have returned zero labels and passed check 6 vacuously.
 
 ## Facts
 | ID | Section | Type | Exact original wording | Ticked |
@@ -316,19 +316,19 @@ Summary sentences scanned: 15 (2 SUMMARY-UNIQUE folded to F252/F253; 13 BODY-PRE
 | 1.2 | (a) A typical stamen; (b) three–dimensional cut section of an anther | assets/fig_1_2.png | 4 | yes | yes |
 | 1.3 | (a) Transverse section of a young anther; (b) Enlarged view of one microsporangium showing wall layers; (c) A mature dehisced anther | assets/fig_1_3.png | 5 | yes | yes |
 | 1.4 | Scanning electron micrographs of a few pollen grains | assets/fig_1_4.png | 6 | yes | yes |
-| 1.5 | (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore maturing into a pollen grain | assets/fig_1_5.png | 6 | yes | yes |
+| 1.5 | (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore maturing into a pollen grain | assets/fig_1_5a.png + assets/fig_1_5b_top.png + assets/fig_1_5b_lower.png | 6 | yes | yes |
 | 1.6 | Pollen products | assets/fig_1_6.png | 7 | yes | yes |
 | 1.7 | (a) A dissected flower of Hibiscus showing pistil; (b) Multicarpellary, syncarpous pistil of Papaver; (c) A multicarpellary, apocarpous gynoecium of Michelia; (d) A diagrammatic view of a typical anatropous ovule | assets/fig_1_7.png | 8 | yes | yes |
 | 1.8 | (a) Parts of the ovule showing a large megaspore mother cell, a dyad and a tetrad of megaspores; (b) 2, 4, and 8-nucleate stages of embryo sac and a mature embryo sac; (c) A diagrammatic representation of the mature embryo sac | assets/fig_1_8.png | 9 | yes | yes |
 | 1.9 | (a) Self-pollinated flowers; (b) Cross pollinated flowers; (c) Cleistogamous flowers | assets/fig_1_9.png | 11 | yes | yes |
 | 1.10 | A wind-pollinated plant showing compact inflorecence and well-exposed stamens | assets/fig_1_10.png | 12 | yes | yes |
-| 1.11 | (a) Pollination by water in Vallisneria; (b) Insect pollination | assets/fig_1_11.png | 13 | yes | yes |
+| 1.11 | (a) Pollination by water in Vallisneria; (b) Insect pollination | assets/fig_1_11a.png + assets/fig_1_11b.png | 13 | yes | yes |
 | 1.12 | (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of male gametes into a synergid and the movements of the sperms | assets/fig_1_12.png | 15 | yes | yes |
 | 1.13 | (a) Fertilised embryo sac showing zygote and Primary Endosperm Nucleus (PEN); (b) Stages in embryo development in a dicot | assets/fig_1_13.png | 17 | yes | yes |
 | 1.14 | (a) A typical dicot embryo; (b) L.S. of an embryo of grass | assets/fig_1_14.png | 18 | yes | yes |
 | 1.15 | (a) Structure of some seeds. (b) False fruits of apple and strawberry | assets/fig_1_15.png | 20 | yes | yes |
 
-Sub-panel assets (cleanly separable panels, same source figures): fig_1_9a, fig_1_9b, fig_1_9c, fig_1_11a, fig_1_11b, fig_1_12a, fig_1_12b, fig_1_12c, fig_1_12d, fig_1_12e, fig_1_14a, fig_1_14b, fig_1_15a, fig_1_15b. Total assets on disk: 29, all `mode=L`. Plates 1.2, 1.3, 1.7, 1.8, 1.13 are deliberately NOT split (panels share label columns or are joined by flow arrows). The p2 Panchanan Maheshwari portrait and the p3 decorative chapter plate are deliberately NOT extracted (no person photograph is embedded — satisfies check 4).
+Sub-panel assets (cleanly separable panels, same source figures): fig_1_5a, fig_1_5b_top, fig_1_5b_lower, fig_1_9a, fig_1_9b, fig_1_9c, fig_1_11a, fig_1_11b, fig_1_12a, fig_1_12b, fig_1_12c, fig_1_12d, fig_1_12e, fig_1_14a, fig_1_14b, fig_1_15a, fig_1_15b. Total assets on disk: 30, all `mode=L`. Plates 1.2, 1.3, 1.7, 1.8, 1.13 are deliberately NOT split (panels share label columns or are joined by flow arrows). The p2 Panchanan Maheshwari portrait and the p3 decorative chapter plate are deliberately NOT extracted (no person photograph is embedded — satisfies check 4).
 
 ## Count derivation (machine-verified, §6 step 10)
 All counts below were derived by re-parsing the finished `## Facts` table with a script (importing `check_pdf.py`'s own `_extract_labels`), not tallied by hand; ID contiguity F001..F255 asserted (no gaps, no duplicates).
