@@ -1,0 +1,1216 @@
+file=Chapter/class 11/Chapter 12 - Respiration in Plants.pdf
+pages=13
+
+=== PAGE 1 size=571.7x780.5 text_chars=1924 words=311 drawings=10 ===
+HITS:
+RESPIRATION IN PLANTS
+RESPIRATION IN PLANTS
+12.2 Glycolysis
+12.3 Fermentation
+Respiration
+TEXT:
+RESPIRATION IN PLANTS
+153
+All of us breathe to live, but why is breathing so essential to life? What
+happens when we breathe? Also, do all living organisms, including plants
+and microbes, breathe? If so, how?
+All living organisms need energy for carrying out daily life activities,
+be it absorption, transport, movement, reproduction or even breathing.
+Where does all this energy come from? We know we eat food for energy –
+but how is this energy taken from food?  How is this energy utilised? Do
+all foods give the same amount of energy? Do plants ‘eat’? Where do plants
+get their energy from? And micro-organisms – for their energy
+requirements, do they eat ‘food’?
+You may wonder at the several questions raised above – they may
+seem to be very disconnected.  But in reality, the process of breathing is
+very much connected to the process of release of energy from food.  Let us
+try and understand how this happens.
+All the energy required for ‘life’ processes is obtained by oxidation of
+some macromolecules that we call ‘food’. Green plants and cyanobacteria
+can prepare their own food; by the process of photosynthesis they trap
+light energy and convert it into chemical energy that is stored in the bonds
+of carbohydrates like glucose, sucrose and starch.  We must remember
+that in green plants too, not all cells, tissues and organs photosynthesise;
+only cells containing chloroplasts, that are most often located in the
+superficial layers, carry out photosynthesis.  Hence, even in green plants
+all other organs, tissues and cells that are non-green, need food for
+oxidation. Hence, food has to be translocated to all non-green parts.
+Animals are heterotrophic, i.e., they obtain food from plants
+RESPIRATION IN PLANTS
+CHAPTER  12
+12.1 Do Plants
+Breathe?
+12.2 Glycolysis
+12.3 Fermentation
+12.4 Aerobic
+Respiration
+12.5 The
+Respiratory
+Balance Sheet
+12.6 Amphibolic
+Pathway
+12.7 Respiratory
+Quotient
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=1
+  477.8 48.8 512.8 84.8 35.0 36.0
+
+=== PAGE 2 size=571.7x780.5 text_chars=2875 words=463 drawings=10 ===
+HITS:
+photosynthesis. This chapter deals with cellular respiration or the
+amount of energy is called respiration.  The compounds that are oxidised
+respiration is not (or rather cannot be) used directly but is used to
+respiration is used as precursors for biosynthesis of other molecules in
+O2 for respiration to occur and they also give out CO2.  Hence, plants have
+TEXT:
+154
+BIOLOGY
+directly (herbivores) or indirectly (carnivores). Saprophytes like fungi are
+dependent on dead and decaying matter.  What is important to recognise
+is that ultimately all the food that is respired for life processes comes from
+photosynthesis. This chapter deals with cellular respiration or the
+mechanism of breakdown of food materials within the cell to release
+energy, and the trapping of this energy for synthesis of ATP.
+Photosynthesis, of course, takes place within the chloroplasts (in the
+eukaryotes), whereas the breakdown of complex molecules to yield energy
+takes place in the cytoplasm and in the mitochondria  (also only in
+eukaryotes).  The breaking of the C-C bonds of complex compounds
+through oxidation within the cells, leading to release of considerable
+amount of energy is called respiration.  The compounds that are oxidised
+during this process are known as respiratory substrates. Usually
+carbohydrates are oxidised to release energy, but proteins, fats and even
+organic acids can be used as respiratory substances in some plants, under
+certain conditions.  During oxidation within a cell, all the energy contained
+in respiratory substrates is not released free into the cell, or in a single
+step. It is released in a series of slow step-wise reactions controlled by
+enzymes, and it is trapped as chemical energy in the form of ATP.  Hence,
+it is important to understand that the energy released by oxidation in
+respiration is not (or rather cannot be) used directly but is used to
+synthesise ATP, which is broken down whenever (and wherever) energy
+needs to be utilised. Hence, ATP acts as the energy currency of the cell.
+This energy trapped in ATP is utilised in various energy-requiring
+processes of the organisms, and the carbon skeleton produced during
+respiration is used as precursors for biosynthesis of other molecules in
+the cell.
+12.1
+DO PLANTS BREATHE?
+Well, the answer to this question is not quite so direct.  Yes, plants require
+O2 for respiration to occur and they also give out CO2.  Hence, plants have
+systems in place that ensure the availability of O2.  Plants, unlike animals,
+have no specialised organs for gaseous exchange but they have stomata
+and lenticels for this purpose. There are several reasons why plants can
+get along without respiratory organs. First, each plant part takes care of
+its own gas-exchange needs.  There is very little transport of gases from
+one plant part to another.  Second, plants do not present great demands
+for gas exchange.  Roots, stems and leaves respire at rates far lower than
+animals do. Only during photosynthesis are large volumes of gases
+exchanged and, each leaf is well adapted to take care of its own needs
+during these periods. When cells photosynthesise, availability of O2 is not
+a problem in these cells since O2 is released within the cell.  Third, the
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=1
+  57.8 48.8 92.8 84.8 35.0 36.0
+
+=== PAGE 3 size=571.7x780.5 text_chars=2845 words=494 drawings=11 ===
+HITS:
+RESPIRATION IN PLANTS
+synthesis.  How this is done is, essentially, the story of respiration.
+During the process of respiration, oxygen is utilised, and carbon
+of glucose to pyruvic acid is called glycolysis.
+GLYCOLYSIS
+The term glycolysis has originated from the Greek words, glycos for sugar,
+and lysis for splitting.  The scheme of glycolysis was given by Gustav
+EMP pathway. In anaerobic organisms, it is the only process in respiration.
+Glycolysis occurs in the cytoplasm of the cell and is present in all living
+TEXT:
+RESPIRATION IN PLANTS
+155
+distance that gases must diffuse even in large, bulky plants is not great.
+Each living cell in a plant is located quite close to the surface of the plant.
+‘This is true for leaves’, you may ask, ‘but what about thick, woody stems
+and roots?’ In stems, the ‘living’ cells are organised in thin layers inside
+and beneath the bark. They also have openings called lenticels. The cells
+in the interior are dead and provide only mechanical support. Thus, most
+cells of a plant have at least a part of their surface in contact with air. This
+is also facilitated by the loose packing of parenchyma cells in leaves, stems
+and roots, which provide an interconnected network of air spaces.
+The complete combustion of glucose, which produces CO2 and H2O
+as end products, yields energy most of which is given out as heat.
+C H O
+O
+CO
+H O
+Energy
+6
+12
+6
+2
+2
+2
+6
+6
+6
++
+→
+
++
++
+If this energy is to be useful to the cell, it should be able to utilise it to
+synthesise other molecules that the cell requires.  The strategy that the
+plant cell uses is to catabolise the glucose molecule in such a way that
+not all the liberated energy goes out as heat.  The key is to oxidise glucose
+not in one step but in several small steps enabling some steps to be just
+large enough such that the energy released can be coupled to ATP
+synthesis.  How this is done is, essentially, the story of respiration.
+During the process of respiration, oxygen is utilised, and carbon
+dioxide, water and energy are released as products. The combustion
+reaction requires oxygen. But some cells live where oxygen may or may
+not be available. Can you think of such situations (and organisms) where
+O2 is not available?   There are sufficient reasons to believe that the first
+cells on this planet lived in an atmosphere that lacked oxygen.  Even
+among present-day living organisms, we know of several that are adapted
+to anaerobic conditions.  Some of these organisms are facultative
+anaerobes, while in others the requirement for anaerobic condition is
+obligate.  In any case, all living organisms retain the enzymatic machinery
+to partially oxidise glucose without the help of oxygen.  This breakdown
+of glucose to pyruvic acid is called glycolysis.
+12.2
+GLYCOLYSIS
+The term glycolysis has originated from the Greek words, glycos for sugar,
+and lysis for splitting.  The scheme of glycolysis was given by Gustav
+Embden, Otto Meyerhof, and J. Parnas, and is often referred to as the
+EMP pathway. In anaerobic organisms, it is the only process in respiration.
+Glycolysis occurs in the cytoplasm of the cell and is present in all living
+organisms.  In this process, glucose undergoes partial oxidation to form
+two molecules of pyruvic acid. In plants, this glucose is derived from
+sucrose, which is the end product of photosynthesis, or from storage
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=2
+  477.8 48.8 512.8 84.8 35.0 36.0
+  39.8 256.7 399.6 279.7 359.8 23.0
+
+=== PAGE 4 size=571.7x780.5 text_chars=2800 words=425 drawings=10 ===
+HITS:
+steps of glycolysis are depicted in Figure 12.1.
+In glycolysis, a chain of ten reactions, under the
+the steps of glycolysis, please note the steps at
+glycolysis. What is the metabolic fate of
+Figure 12.1   Steps of glycolysis
+TEXT:
+156
+BIOLOGY
+carbohydrates. Sucrose is converted into glucose
+and fructose by the enzyme, invertase, and these
+two monosaccharides readily enter the glycolytic
+pathway. Glucose and fructose are
+phosphorylated to give rise to glucose-6-
+phosphate by the activity of the enzyme
+hexokinase. This phosphorylated form of
+glucose then isomerises to produce fructose-6-
+phosphate. Subsequent steps of metabolism of
+glucose and fructose are same.  The various
+steps of glycolysis are depicted in Figure 12.1.
+In glycolysis, a chain of ten reactions, under the
+control of different enzymes, takes place to
+produce pyruvate from glucose. While studying
+the steps of glycolysis, please note the steps at
+which utilisation or synthesis of ATP or (in this
+case) NADH + H+ take place.
+ATP is utilised at two steps: first in the
+conversion of glucose into glucose 6-phosphate
+and second in the conversion of fructose
+6-phosphate to fructose 1, 6-bisphosphate.
+The fructose 1, 6-bisphosphate is split
+into dihydroxyacetone phosphate and
+3-phosphoglyceraldehyde (PGAL). We find
+that there is one step where NADH + H+ is
+formed 
+from 
+NAD+; 
+this 
+is 
+when
+3-phosphoglyceraldehyde (PGAL) is converted
+to 1, 3-bisphosphoglycerate (BPGA).  Two
+redox-equivalents are removed (in the form of
+two hydrogen atoms) from PGAL and transferred
+to a molecule of NAD+. PGAL is oxidised and
+with inorganic phosphate to get converted into
+BPGA. The conversion of BPGA to
+3-phosphoglyceric acid (PGA), is also an energy
+yielding process; this energy is trapped by the
+formation of ATP.  Another ATP is synthesised
+during the conversion of PEP to pyruvic acid.
+Can you then calculate how many ATP
+Can you then calculate how many ATP
+Can you then calculate how many ATP
+Can you then calculate how many ATP
+Can you then calculate how many ATP
+molecules are directly synthesised in this
+molecules are directly synthesised in this
+molecules are directly synthesised in this
+molecules are directly synthesised in this
+molecules are directly synthesised in this
+pathway from one glucose molecule?
+pathway from one glucose molecule?
+pathway from one glucose molecule?
+pathway from one glucose molecule?
+pathway from one glucose molecule?
+Pyruvic acid is then the key product of
+glycolysis. What is the metabolic fate of
+pyruvate?  This depends on the cellular need.
+Glucose
+(6C)
+Glucose-6-phosphate
+(6C)
+Fructose-6-phosphate
+(6C)
+Fructose1, 6-bisphosphate
+(6C)
+Triose phosphate
+(glyceraldehyde-3-phosphate)
+(3C)
+Triose phosphate
+(Dihydroxy acetone
+phosphate)
+(3C)
+2 × Triose bisphosphate
+(1,3 bisphosphoglyceric acid)
+(3C)
+2 × Triose phosphate
+(3-phosphoglyceric acid)
+(3C)
+2 × 2-phosphoglycerate
+2 × phosphoenolpyruvate
+2 × Pyruvic acid
+(3C)
+ADP
+ATP
+ADP
+ATP
+ADP
+ATP
+ADP
+NADH+H+
+NAD+
+H2O
+ATP
+Figure 12.1   Steps of glycolysis
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=1
+  57.8 48.8 92.8 84.8 35.0 36.0
+
+=== PAGE 5 size=571.7x780.5 text_chars=2493 words=385 drawings=180 ===
+HITS:
+RESPIRATION IN PLANTS
+produced by glycolysis.  These are lactic acid fermentation, alcoholic
+fermentation and aerobic respiration. Fermentation takes place under
+adopt Krebs’ cycle which is also called as aerobic respiration. This requires
+FERMENTATION
+In fermentation, say by yeast, the incomplete oxidation of glucose is
+achieved under anaerobic conditions by sets of reactions where pyruvic
+steps involved are shown in Figure 12.2. In animal cells also, like muscles
+during exercise, when oxygen is inadequate for cellular respiration pyruvic
+fermentation not much energy is released; less
+glycolysis) when one molecule of glucose is
+Figure 12.2 Major pathways of anaerobic
+respiration
+TEXT:
+RESPIRATION IN PLANTS
+157
+There are three major ways in which different cells handle pyruvic acid
+produced by glycolysis.  These are lactic acid fermentation, alcoholic
+fermentation and aerobic respiration. Fermentation takes place under
+anaerobic conditions in many prokaryotes and unicellular eukaryotes.
+For the complete oxidation of glucose to CO2 and H2O, however, organisms
+adopt Krebs’ cycle which is also called as aerobic respiration. This requires
+O2 supply.
+12.3
+FERMENTATION
+In fermentation, say by yeast, the incomplete oxidation of glucose is
+achieved under anaerobic conditions by sets of reactions where pyruvic
+acid is converted to CO2 and ethanol. The enzymes, pyruvic acid
+decarboxylase and alcohol dehydrogenase catalyse these reactions. Other
+organisms like some bacteria produce lactic acid from pyruvic acid.  The
+steps involved are shown in Figure 12.2. In animal cells also, like muscles
+during exercise, when oxygen is inadequate for cellular respiration pyruvic
+acid is reduced to lactic acid by lactate dehydrogenase.  The reducing
+agent is NADH+H+  which is reoxidised to NAD+
+in both the processes.
+In both lactic acid and alcohol
+fermentation not much energy is released; less
+than seven per cent of the energy in glucose is
+released and not all of it is trapped as high
+energy bonds of ATP.  Also, the processes are
+hazardous – either acid or alcohol is produced.
+What is the net ATPs that is synthesised
+(calculate how many ATP are synthesised and
+deduct the number of ATP utilised during
+glycolysis) when one molecule of glucose is
+fermented to alcohol or lactic acid?  Yeasts
+poison themselves to death when the
+concentration of alcohol reaches about 13 per
+cent. What then would be 
+What then would be 
+What then would be 
+What then would be 
+What then would be the 
+the 
+the 
+the 
+the maximum
+maximum
+maximum
+maximum
+maximum
+concentration of alcohol in beverages that
+concentration of alcohol in beverages that
+concentration of alcohol in beverages that
+concentration of alcohol in beverages that
+concentration of alcohol in beverages that
+are naturally fermented?
+are naturally fermented?
+are naturally fermented?
+are naturally fermented?
+are naturally fermented? How do you think
+alcoholic beverages of alcohol content greater
+than this concentration are obtained?
+What then is the process by which
+organisms can carry out complete oxidation of
+glucose and extract the energy stored to
+Figure 12.2 Major pathways of anaerobic
+respiration
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=169
+  477.8 48.8 512.8 84.8 35.0 36.0
+  281.7 396.1 512.8 642.6 231.2 246.5
+  281.7 396.1 512.8 642.6 231.2 246.5
+  321.5 406.2 328.5 413.0 7.0 6.8
+  328.9 406.0 331.4 412.8 2.5 6.8
+  331.8 408.2 337.8 412.9 6.0 4.7
+  338.4 408.1 342.8 412.9 4.4 4.8
+  343.3 408.1 348.0 412.9 4.6 4.8
+  348.7 408.1 352.9 412.9 4.2 4.8
+  353.6 408.1 357.9 412.9 4.3 4.8
+  304.1 459.3 311.0 466.1 7.0 6.8
+  311.4 459.1 314.0 465.9 2.5 6.8
+  313.9 461.3 319.3 468.2 5.4 6.8
+  319.6 461.2 324.0 466.0 4.4 4.8
+  324.5 461.2 328.9 466.0 4.3 4.8
+  329.3 461.2 333.4 465.9 4.1 4.7
+  333.6 461.2 338.9 466.0 5.2 4.8
+  339.0 459.1 341.5 465.9 2.5 6.8
+  342.0 459.1 347.3 466.0 5.3 6.9
+  347.9 461.2 352.2 466.0 4.3 4.8
+  352.7 459.1 358.6 465.9 5.9 6.8
+  358.5 461.3 364.0 468.2 5.4 6.8
+  364.2 459.1 369.5 466.0 5.3 6.9
+  370.1 461.2 374.5 466.0 4.3 4.8
+  310.4 470.5 315.5 477.3 5.1 6.8
+  316.4 474.4 319.2 474.9 2.8 0.6
+  320.0 470.7 325.5 477.1 5.5 6.5
+  325.8 470.3 331.7 477.1 5.9 6.8
+  332.2 472.4 336.9 477.2 4.6 4.8
+  337.6 472.4 341.8 477.2 4.2 4.8
+  342.3 472.4 347.7 479.3 5.3 6.9
+  348.2 470.3 354.1 477.1 5.9 6.8
+  354.6 472.4 359.9 477.2 5.2 4.8
+  360.0 470.8 363.5 477.2 3.5 6.4
+  363.8 472.4 368.1 477.2 4.3 4.8
+  295.1 542.4 300.2 549.2 5.1 6.8
+  301.1 546.3 303.9 546.8 2.9 0.6
+  304.7 542.6 310.2 549.0 5.5 6.5
+  310.5 542.2 316.4 549.0 5.9 6.8
+  316.9 544.3 321.6 549.1 4.6 4.8
+  322.3 544.3 326.5 549.1 4.2 4.8
+  327.0 544.3 332.4 551.2 5.3 6.9
+  332.9 542.2 338.8 549.0 5.9 6.8
+  339.4 544.3 344.0 549.1 4.6 4.8
+  344.5 543.7 349.5 551.4 5.0 7.7
+  349.6 542.2 352.2 549.0 2.5 6.8
+  352.1 544.4 357.5 551.3 5.4 6.8
+  357.8 544.3 362.2 549.1 4.4 4.8
+  362.7 544.3 367.1 549.1 4.3 4.8
+  367.5 544.3 371.6 549.0 4.1 4.7
+  371.7 542.8 374.2 549.0 2.5 6.2
+  374.7 544.3 379.1 549.1 4.4 4.8
+  327.7 555.5 333.0 560.3 5.2 4.8
+  333.3 555.6 337.7 560.3 4.4 4.8
+  338.1 554.0 340.6 560.3 2.5 6.2
+  341.1 553.4 346.3 560.3 5.3 6.9
+  372.3 492.7 378.9 499.2 6.6 6.5
+  378.7 492.7 385.8 499.2 7.1 6.5
+  385.8 492.7 392.7 499.2 6.9 6.5
+  393.4 492.0 395.8 494.4 2.4 2.4
+  373.5 530.8 380.1 537.3 6.6 6.5
+  379.9 530.8 387.0 537.3 7.1 6.5
+  387.0 530.8 393.9 537.3 6.9 6.5
+  394.6 530.8 401.6 537.3 7.0 6.5
+  402.4 532.4 407.2 537.2 4.8 4.8
+  407.9 530.8 414.9 537.3 7.0 6.5
+  415.5 530.1 417.8 532.5 2.4 2.4
+  425.0 466.2 430.7 472.7 5.7 6.5
+  430.7 468.0 436.0 472.8 5.2 4.8
+  436.3 468.0 440.7 472.8 4.4 4.8
+  441.1 466.4 444.5 472.8 3.5 6.4
+  444.7 466.5 447.2 472.7 2.5 6.2
+  447.7 468.0 452.1 472.8 4.4 4.8
+  425.0 479.2 430.3 484.0 5.2 4.8
+  430.6 479.2 435.0 484.0 4.4 4.8
+  435.4 477.7 437.9 483.9 2.5 6.2
+  438.4 477.1 443.6 484.0 5.3 6.9
+  422.3 555.2 427.8 561.7 5.5 6.5
+  427.6 557.1 433.1 563.9 5.4 6.8
+  433.2 557.0 437.2 561.7 4.1 4.7
+  437.4 557.1 443.4 561.8 6.0 4.7
+  443.4 557.1 448.7 561.7 5.3 4.6
+  448.8 555.5 451.3 561.7 2.5 6.2
+  451.8 557.0 456.2 561.8 4.4 4.8
+  429.9 568.2 435.2 573.0 5.2 4.8
+  435.4 568.2 439.8 573.0 4.4 4.8
+  440.2 566.7 442.8 572.9 2.5 6.2
+  443.2 566.1 448.5 573.0 5.3 6.9
+  305.8 609.2 311.4 615.6 5.5 6.5
+  311.6 608.8 317.5 615.6 5.9 6.8
+  318.1 611.0 322.7 615.7 4.6 4.8
+  323.4 611.0 327.7 615.7 4.2 4.8
+  328.2 611.0 333.5 617.8 5.4 6.9
+  334.0 608.8 340.0 615.6 5.9 6.8
+  340.5 611.0 345.1 615.7 4.6 4.8
+  345.8 610.9 350.1 615.7 4.3 4.8
+  350.6 611.0 356.6 615.6 6.0 4.7
+  357.0 611.0 361.7 615.7 4.6 4.8
+  362.2 608.8 364.7 615.6 2.5 6.8
+  307.2 620.4 312.7 626.9 5.5 6.5
+
+=== PAGE 6 size=571.7x780.5 text_chars=2357 words=376 drawings=11 ===
+HITS:
+and this requires O2. Aerobic respiration is the process that leads to a
+This type of respiration is most common in higher organisms. We will
+AEROBIC RESPIRATION
+For aerobic respiration to take place within the mitochondria, the final
+product of glycolysis, pyruvate is transported from the cytoplasm into
+the mitochondria.  The crucial events in aerobic respiration are:
+molecule during glycolysis).
+The acetyl CoA then enters a cyclic pathway, tricarboxylic acid cycle,
+more commonly called as Krebs’ cycle after the scientist Hans Krebs who
+12.4.1 Tricarboxylic Acid Cycle
+The TCA cycle starts with the condensation of acetyl group with oxaloacetic
+acid (OAA) and water to yield citric acid (Figure 12.3). The reaction is
+TEXT:
+158
+BIOLOGY
+synthesise a larger number of ATP molecules needed for cellular
+metabolism?  In eukaryotes these steps take place within the mitochondria
+and this requires O2. Aerobic respiration is the process that leads to a
+complete oxidation of organic substances in the presence of oxygen, and
+releases CO2, water and a large amount of energy present in the substrate.
+This type of respiration is most common in higher organisms. We will
+look at these processes in the next section.
+12.4
+AEROBIC RESPIRATION
+For aerobic respiration to take place within the mitochondria, the final
+product of glycolysis, pyruvate is transported from the cytoplasm into
+the mitochondria.  The crucial events in aerobic respiration are:
+•
+The complete oxidation of pyruvate by the stepwise removal of all
+the hydrogen atoms, leaving three molecules of CO2.
+•
+The passing on of the electrons removed as part of the hydrogen
+atoms to molecular O2  with simultaneous synthesis of ATP.
+What is interesting to note is that the first process takes place in the
+matrix of the mitochondria while the second process is located on the
+inner membrane of the mitochondria.
+Pyruvate, which is formed by the glycolytic catabolism of carbohydrates
+in the cytosol, after it enters mitochondrial matrix undergoes oxidative
+decarboxylation by a complex set of reactions catalysed by pyruvic
+dehydrogenase. The reactions catalysed by pyruvic dehydrogenase require
+the participation of several coenzymes, including NAD+ and  Coenzyme A.
+Pyruvic acid
+CoA
+NAD
+Mg
+Pyruvate dehydrogenase
++
++
+
+→
+
++
++
+2
+
++
++
++
++
+Acetyl CoA
+CO
+NADH
+H
+2
+During this process, two molecules of NADH are produced from the
+metabolism of two molecules of pyruvic acid (produced from one glucose
+molecule during glycolysis).
+The acetyl CoA then enters a cyclic pathway, tricarboxylic acid cycle,
+more commonly called as Krebs’ cycle after the scientist Hans Krebs who
+first elucidated it.
+12.4.1 Tricarboxylic Acid Cycle
+The TCA cycle starts with the condensation of acetyl group with oxaloacetic
+acid (OAA) and water to yield citric acid (Figure 12.3). The reaction is
+catalysed by the enzyme citrate synthase and a molecule of CoA is released.
+Citrate is then isomerised to isocitrate.  It is followed by two successive
+steps of decarboxylation, leading to the formation of α-ketoglutaric acid
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=2
+  57.8 48.8 92.8 84.8 35.0 36.0
+  58.7 480.4 531.8 510.5 473.1 30.1
+
+=== PAGE 7 size=571.7x780.5 text_chars=2320 words=410 drawings=29 ===
+HITS:
+RESPIRATION IN PLANTS
+of citric acid cycle, succinyl-CoA is oxidised to
+OAA allowing the cycle to continue. During the
+Also there are three points in the cycle where
+cycle requires the continued replenishment of
+oxaloacetic acid, the first member of the cycle.
+phase of respiration may be written as follows:
+synthesised besides just two molecules of ATP in TCA cycle.  You may be
+wondering why we have been discussing respiration at all – neither O2
+is synthesised? Let us now understand the role of O2 in respiration and
+12.4.2 Electron Transport System (ETS) and Oxidative
+is called the electron transport system (ETS) (Figure 12.4) and it is
+Figure 12.3   The Citric acid cycle
+CITRIC ACID CYCLE
+TEXT:
+RESPIRATION IN PLANTS
+159
+Pyruvic acid
+NAD
+FAD
+H O
+ADP
+Pi
+Mitochondrial Matrix
++
++
++
++
++
+
+→
+
++
++
+4
+2
+2
+
++
++
++
+3
+4
+4
+2
+CO
+NADH
+H
+and then succinyl-CoA.  In the remaining steps
+of citric acid cycle, succinyl-CoA is oxidised to
+OAA allowing the cycle to continue. During the
+conversion of succinyl-CoA to succinic acid a
+molecule of GTP is synthesised. This is a
+substrate level phosphorylation.  In a coupled
+reaction GTP is converted to GDP with the
+simultaneous synthesis of ATP from ADP.
+Also there are three points in the cycle where
+NAD+ is reduced to NADH + H+ and one point
+where FAD+ is reduced to FADH2. The
+continued oxidation of acetyl CoA via the TCA
+cycle requires the continued replenishment of
+oxaloacetic acid, the first member of the cycle.
+In addition it also requires regeneration of
+NAD+ and FAD+ from NADH and FADH2
+respectively. The summary equation for this
+phase of respiration may be written as follows:
++
++
+2
+FADH
+ATP
+We have till now seen that glucose has been broken down to release
+CO2 and eight molecules of NADH + H+ and two of  FADH2 have been
+synthesised besides just two molecules of ATP in TCA cycle.  You may be
+wondering why we have been discussing respiration at all – neither O2
+has come into the picture nor the promised large number of ATP has yet
+been synthesised. Also what is the role of the NADH + H+ and FADH2 that
+is synthesised? Let us now understand the role of O2 in respiration and
+how ATP is synthesised.
+12.4.2 Electron Transport System (ETS) and Oxidative
+Phosphorylation
+The following steps in the respiratory process are to release and utilise
+the energy stored in NADH+H+ and FADH2.  This is accomplished when
+they are oxidised through the electron transport system and the electrons
+are passed on to O2 resulting in the formation of H2O.  The metabolic
+pathway through which the electron passes from one carrier to another,
+is called the electron transport system (ETS) (Figure 12.4) and it is
+present in the inner mitochondrial membrane. Electrons from NADH
+Figure 12.3   The Citric acid cycle
+Pyruvate
+(3C)
+Acetyl coenzyme A
+(2C)
+Citric acid
+(6C)
+Oxaloacetic acid
+(4C)
+CO2
+NAD+
+NADH+H+
+NADH+H+
+NAD+
+NAD+
+CO2
+CITRIC ACID CYCLE
+α-ketoglutaric acid
+(5C)
+NADH+H+
+GDP
+GTP
+Succinic acid
+(4C)
+Malic acid
+(4C)
+FADH2
+FAD+
+CoA
+NAD+
+NADH+H+
+CO2
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=19
+  477.8 48.8 512.8 84.8 35.0 36.0
+  40.7 395.8 513.8 440.8 473.1 45.0
+  385.5 122.5 402.8 137.4 17.3 14.9
+  402.0 133.5 409.3 141.3 7.3 7.9
+  390.2 141.5 405.8 148.8 15.6 7.2
+  405.0 144.8 412.3 152.7 7.3 7.9
+  369.7 123.7 384.3 132.8 14.6 9.1
+  380.8 130.0 388.2 138.0 7.4 8.1
+  327.6 208.0 458.5 309.2 130.9 101.3
+  324.3 280.1 343.2 298.5 18.9 18.5
+  320.5 282.0 324.7 285.8 4.2 3.8
+  447.3 219.4 466.5 235.4 19.3 16.0
+  466.4 232.4 470.4 236.3 4.0 3.9
+  441.1 274.6 462.4 292.5 21.3 18.0
+  459.2 290.6 463.4 294.5 4.2 3.8
+  422.9 292.2 446.5 313.1 23.6 21.0
+  438.1 311.4 442.5 315.1 4.4 3.7
+  440.4 208.7 458.9 215.1 18.5 6.4
+  458.4 211.7 462.6 215.6 4.2 3.8
+
+=== PAGE 8 size=571.7x780.5 text_chars=2075 words=331 drawings=10 ===
+HITS:
+during citric acid cycle are oxidised by
+succinate in the citric acid cycle. The
+respiration takes place only in the
+production of proton gradient required for phosphorylation, in respiration
+Figure 12.4 Electron Transport System (ETS)
+TEXT:
+160
+BIOLOGY
+produced in the mitochondrial matrix
+during citric acid cycle are oxidised by
+an NADH dehydrogenase (complex I),
+and electrons are then transferred to
+ubiquinone located within the inner
+membrane. Ubiquinone also receives
+reducing equivalents via FADH2 (complex
+II) that is generated during oxidation of
+succinate in the citric acid cycle. The
+reduced ubiquinone (ubiquinol) is then
+oxidised with the transfer of electrons to
+cytochrome c via cytochrome bc1
+complex (complex III). Cytochrome c is a
+small protein attached to the outer
+surface of the inner membrane and acts
+as a mobile carrier for transfer of
+electrons between complex III and IV.
+Complex IV refers to cytochrome c
+oxidase complex containing cytochromes
+a and a3, and two copper centres.
+When the electrons pass from one
+carrier to another via complex I to IV in
+the electron transport chain, they are
+coupled to ATP synthase (complex V) for
+the production of ATP from ADP and
+inorganic phosphate. The number of ATP
+molecules synthesised depends on the
+nature of the electron donor. Oxidation
+of one molecule of NADH gives rise to 3
+molecules of ATP, while that of one
+molecule of FADH2 produces 2 molecules
+of ATP. Although the aerobic process of
+respiration takes place only in the
+presence of oxygen, the role of oxygen is
+limited to the terminal stage of the
+process.  Yet, the presence of oxygen is
+vital, since it drives the whole process by removing hydrogen from the
+system. Oxygen acts as the final hydrogen acceptor. Unlike
+photophosphorylation where it is the light energy that is utilised for the
+production of proton gradient required for phosphorylation, in respiration
+it is the energy of oxidation-reduction utilised for the same process. It is
+for this reason that the process is called oxidative phosphorylation.
+You have already studied about the mechanism of membrane-linked
+ATP synthesis as explained by chemiosmotic hypothesis in the earlier
+chapter.  As mentioned earlier, the energy released during the electron
+Figure 12.4 Electron Transport System (ETS)
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=1
+  57.8 48.8 92.8 84.8 35.0 36.0
+
+=== PAGE 9 size=571.7x780.5 text_chars=2088 words=338 drawings=10 ===
+HITS:
+RESPIRATION IN PLANTS
+and F0 (Figure 12.5).  The F1 headpiece is a
+substrate forming the next and with glycolysis, TCA cycle and
+ETS pathway following one after another.
+The NADH synthesised in glycolysis is transferred into the
+molecules during aerobic respiration of one molecule of glucose.
+Figure 12.5  Diagramatic presentation of ATP
+TEXT:
+RESPIRATION IN PLANTS
+161
+transport system is utilised in synthesising ATP
+with the help of ATP synthase (complex V).  This
+complex consists of two major components, F1
+and F0 (Figure 12.5).  The F1 headpiece is a
+peripheral membrane protein complex and
+contains the site for synthesis of ATP from ADP
+and inorganic phosphate. F0 is an integral
+membrane protein complex that forms the
+channel through which protons cross the inner
+membrane.  The passage of protons through
+the channel is coupled to the catalytic site of
+the F1 component for the production of ATP.
+For each ATP produced, 4H+ pass through F0
+from the intermembrane space to the matrix
+down the electrochemical proton gradient.
+12.5 THE RESPIRATORY BALANCE SHEET
+It is possible to make calculations of the net gain of ATP for every
+glucose molecule  oxidised; but in reality this can remain only a
+theoretical exercise. These calculations can be made only on certain
+assumptions that:
+•
+There is a sequential, orderly pathway functioning, with one
+substrate forming the next and with glycolysis, TCA cycle and
+ETS pathway following one after another.
+•
+The NADH synthesised in glycolysis is transferred into the
+mitochondria and undergoes oxidative phosphorylation.
+•
+None of the intermediates in the pathway are utilised to synthesise
+any other compound.
+•
+Only glucose is being respired – no other alternative substrates
+are entering in the pathway at any of the intermediary stages.
+But this kind of assumptions are not really valid in a living system;
+all pathways work simultaneously and do not take place one after
+another; substrates enter the pathways and are withdrawn from it as
+and when necessary; ATP is utilised as and when needed;  enzymatic
+rates are controlled by multiple means.  Yet, it is useful to do this
+exercise to appreciate the beauty and efficiency of the living system in
+extraction and storing energy. Hence, there can be a net gain of 38 ATP
+molecules during aerobic respiration of one molecule of glucose.
+Figure 12.5  Diagramatic presentation of ATP
+synthesis in mitochondria
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=1
+  477.8 48.8 512.8 84.8 35.0 36.0
+
+=== PAGE 10 size=571.7x780.5 text_chars=2693 words=428 drawings=10 ===
+HITS:
+Now let us  compare  fermentation and aerobic respiration:
+• Fermentation accounts for only a partial breakdown of glucose
+whereas in aerobic respiration it is completely degraded to CO2 and
+• In fermentation there is a net gain of only two molecules of ATP for
+• NADH is oxidised to NAD+ rather slowly in fermentation, however
+the reaction is very vigorous in case of aerobic respiration.
+Glucose is the favoured substrate for respiration.  All carbohydrates are
+usually first converted into glucose before they are used for respiration.
+then they do not enter the respiratory pathway at the first step. See Figure
+on their structure would enter the pathway at some stage within the Krebs’
+cycle or even as pyruvate or acetyl CoA.
+Since respiration involves breakdown of substrates, the respiratory
+TEXT:
+162
+BIOLOGY
+Now let us  compare  fermentation and aerobic respiration:
+• Fermentation accounts for only a partial breakdown of glucose
+whereas in aerobic respiration it is completely degraded to CO2 and
+H2O.
+• In fermentation there is a net gain of only two molecules of ATP for
+each molecule of glucose degraded to pyruvic acid whereas many
+more molecules of ATP are generated under aerobic conditions.
+• NADH is oxidised to NAD+ rather slowly in fermentation, however
+the reaction is very vigorous in case of aerobic respiration.
+12.6
+AMPHIBOLIC PATHWAY
+Glucose is the favoured substrate for respiration.  All carbohydrates are
+usually first converted into glucose before they are used for respiration.
+Other substrates can also be respired, as has been mentioned earlier, but
+then they do not enter the respiratory pathway at the first step. See Figure
+12.6 to see the points of entry of different substrates in the respiratory
+pathway. Fats would need to be broken down into glycerol and fatty acids
+first. If fatty acids were to be respired they would first be degraded to
+acetyl CoA and enter the pathway. Glycerol would enter the pathway
+after being converted to PGAL. The proteins would be degraded by
+proteases and the individual amino acids (after deamination) depending
+on their structure would enter the pathway at some stage within the Krebs’
+cycle or even as pyruvate or acetyl CoA.
+Since respiration involves breakdown of substrates, the respiratory
+process has traditionally been considered a catabolic process and the
+respiratory pathway as a catabolic pathway.  But is this understanding
+correct?  We have discussed above, at which points in the respiratory
+pathway different substrates would enter if they were to be respired and
+used to derive energy. What is important to recognise is that it is these very
+compounds that would be withdrawn from the respiratory pathway for the
+synthesis of the said substrates. Hence, fatty acids would be broken down
+to acetyl CoA before entering the respiratory pathway when it is used as a
+substrate. But when the organism needs to synthesise fatty acids, acetyl
+CoA would be withdrawn from the respiratory pathway for it. Hence, the
+respiratory pathway comes into the picture both during breakdown and
+synthesis of fatty acids. Similarly, during breakdown and synthesis of
+protein too, respiratory intermediates form the link. Breaking down
+processes within the living organism is catabolism, and synthesis is
+anabolism.  Because the respiratory pathway is involved in both anabolism
+and catabolism, it would hence be better to consider the respiratory pathway
+as an amphibolic pathway rather than as a catabolic one.
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=1
+  57.8 48.8 92.8 84.8 35.0 36.0
+
+=== PAGE 11 size=571.7x780.5 text_chars=823 words=131 drawings=270 ===
+HITS:
+RESPIRATION IN PLANTS
+Let us now look at another aspect of respiration. As you know, during
+aerobic respiration, O2 is consumed and CO2 is released. The ratio of the
+volume of CO2 evolved to the volume of O2 consumed in respiration is
+substrate used during respiration.
+Figure 12.6 Interrelationship among metabolic pathways showing respiration
+TEXT:
+RESPIRATION IN PLANTS
+163
+12.7
+RESPIRATORY QUOTIENT
+Let us now look at another aspect of respiration. As you know, during
+aerobic respiration, O2 is consumed and CO2 is released. The ratio of the
+volume of CO2 evolved to the volume of O2 consumed in respiration is
+called the respiratory quotient (RQ) or respiratory ratio.
+RQ
+volumeof CO evolved
+volumeof O consumed
+=
+2
+2
+The respiratory quotient depends upon the type of respiratory
+substrate used during respiration.
+When carbohydrates are used as substrate and are completely
+oxidised, the RQ will be 1, because equal amounts of CO2 and O2 are
+evolved and consumed, respectively, as shown in the equation below :
+Figure 12.6 Interrelationship among metabolic pathways showing respiration
+mediated breakdown of different organic molecules to CO2 and H20
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=243
+  477.8 48.8 512.8 84.8 35.0 36.0
+  127.7 591.0 312.8 630.0 185.1 39.0
+  47.2 102.4 506.2 456.3 459.0 353.9
+  47.2 102.4 506.2 456.3 459.0 353.9
+  147.5 149.3 154.1 156.5 6.5 7.2
+  154.3 151.3 160.1 156.6 5.8 5.3
+  160.2 149.5 164.1 156.6 3.9 7.1
+  164.4 151.3 169.1 156.6 4.7 5.3
+  264.2 149.2 271.1 156.7 6.9 7.5
+  271.8 151.4 277.6 156.6 5.8 5.3
+  277.8 151.4 282.3 156.5 4.5 5.2
+  282.2 149.0 288.3 156.6 6.1 7.6
+  289.1 151.4 294.2 156.6 5.1 5.3
+  294.8 149.0 301.3 156.5 6.5 7.5
+  301.3 151.5 307.3 159.0 6.0 7.6
+  307.6 149.0 313.4 156.6 5.8 7.6
+  313.9 151.4 318.4 156.5 4.5 5.2
+  318.7 151.4 324.5 156.6 5.8 5.3
+  324.6 149.5 328.5 156.6 3.9 7.1
+  328.8 151.4 333.6 156.6 4.8 5.3
+  334.3 151.4 339.0 156.6 4.7 5.3
+  263.8 183.2 270.2 190.7 6.4 7.5
+  270.7 183.7 273.5 190.5 2.8 6.9
+  273.8 185.4 283.3 190.5 9.6 5.2
+  283.7 185.4 289.6 192.9 5.9 7.6
+  290.2 183.0 293.0 190.5 2.8 7.5
+  293.5 185.4 298.3 190.6 4.8 5.3
+  302.4 185.4 307.1 190.6 4.7 5.3
+  307.6 185.5 314.3 190.6 6.6 5.2
+  314.7 184.6 320.2 193.1 5.5 8.5
+  320.6 185.4 326.4 190.6 5.8 5.3
+  326.5 185.4 331.0 190.5 4.5 5.2
+  331.3 185.4 336.0 190.6 4.7 5.3
+  269.3 197.5 274.0 202.8 4.8 5.3
+  275.3 201.4 276.6 202.8 1.3 1.4
+  277.9 196.8 283.4 205.3 5.5 8.5
+  284.3 201.4 285.7 202.8 1.3 1.4
+  290.5 195.4 298.2 202.9 7.7 7.5
+  298.7 195.2 301.5 202.7 2.8 7.5
+  301.8 197.6 308.5 202.8 6.6 5.2
+  309.2 197.5 314.0 202.8 4.8 5.3
+  314.6 197.5 319.8 202.8 5.1 5.3
+  320.5 197.5 325.2 202.8 4.7 5.3
+  326.0 197.5 330.7 202.8 4.8 5.3
+  419.4 183.5 427.3 190.6 7.9 7.1
+  427.1 185.4 436.7 190.6 9.6 5.2
+  437.0 183.8 439.9 190.6 2.8 6.9
+  440.2 185.4 446.8 190.6 6.6 5.2
+  447.3 185.4 452.4 190.7 5.1 5.3
+  456.5 185.4 462.3 190.7 5.8 5.3
+  462.6 185.4 467.5 190.7 4.8 5.3
+  467.9 183.8 470.7 190.6 2.8 6.9
+  471.2 183.1 477.1 190.7 5.8 7.6
+  477.8 185.4 482.5 190.7 4.7 5.3
+  245.7 220.4 253.4 227.9 7.7 7.5
+  253.9 220.2 256.7 227.7 2.8 7.5
+  257.0 222.6 263.7 227.8 6.6 5.2
+  264.4 222.5 269.2 227.8 4.8 5.3
+  269.8 222.5 275.0 227.8 5.1 5.3
+  275.7 222.5 280.4 227.8 4.7 5.3
+  281.2 222.5 285.9 227.8 4.8 5.3
+  290.1 220.4 295.8 227.9 5.7 7.5
+  296.6 224.6 299.8 225.2 3.2 0.6
+  300.5 222.5 306.4 230.1 5.9 7.6
+  307.0 220.2 313.6 227.7 6.5 7.5
+  314.1 222.5 319.3 227.8 5.1 5.3
+  320.0 222.5 324.7 227.8 4.7 5.3
+  325.3 222.5 331.2 230.1 5.9 7.6
+  331.8 220.2 338.4 227.7 6.5 7.5
+  338.9 222.5 344.7 227.8 5.8 5.3
+  344.8 220.7 348.7 227.8 3.9 7.1
+  349.0 222.5 353.8 227.8 4.8 5.3
+  314.7 352.8 320.8 360.0 6.1 7.1
+  320.6 354.9 326.6 362.5 6.0 7.6
+  326.7 354.8 331.2 360.0 4.5 5.2
+  331.4 354.9 338.0 360.1 6.6 5.2
+  338.0 354.9 343.9 360.0 5.9 5.1
+  344.0 353.1 346.8 360.0 2.8 6.9
+  347.3 354.8 352.1 360.1 4.8 5.3
+  356.1 354.8 361.9 360.1 5.8 5.3
+  362.2 354.8 367.0 360.1 4.8 5.3
+  367.5 353.1 370.3 360.0 2.8 6.9
+  370.8 352.5 376.6 360.1 5.8 7.6
+  315.1 378.6 323.0 385.7 7.9 7.1
+  323.0 380.6 327.9 385.8 4.8 5.3
+  328.5 380.6 333.2 385.8 4.8 5.3
+  333.8 378.7 337.6 385.8 3.9 7.1
+  337.3 380.7 343.3 388.2 6.0 7.6
+  343.4 378.2 346.2 385.7 2.8 7.5
+  350.2 378.4 357.1 385.9 6.9 7.5
+  357.9 380.6 363.0 385.8 5.1 5.3
+  363.0 378.6 370.9 385.7 7.9 7.1
+  396.4 432.8 403.3 440.3 6.9 7.5
+  404.2 432.8 411.7 440.3 7.5 7.5
+  412.4 438.6 415.2 442.3 2.8 3.7
+  275.4 411.1 283.2 418.3 7.7 7.1
+  287.2 411.0 294.7 418.5 7.5 7.5
+  283.7 416.7 286.5 420.4 2.8 3.7
+  64.5 188.4 71.0 195.6 6.5 7.2
+  71.3 190.4 77.1 195.7 5.8 5.3
+
+=== PAGE 12 size=571.7x780.5 text_chars=2099 words=375 drawings=15 ===
+HITS:
+When fats are used in respiration, the RQ is less than 1. Calculations
+to the release of a lot of energy is called cellular respiration. Glucose is the
+favoured substrate for respiration. Fats and proteins can also be broken down to
+yield energy. The initial stage of cellular respiration takes place in the cytoplasm.
+into two molecules of pyruvic acid. This process is called glycolysis. The fate of the
+conditions either lactic acid fermentation or alcohol fermentation occurs.
+Fermentation takes place under anaerobic conditions in many prokaryotes,
+respiration occurs  in the presence of oxygen. Pyruvic acid is transported into the
+CoA then enters the tricarboxylic acid pathway or Krebs’ cycle operating in the
+matrix of the mitochondria. NADH + H+ and FADH2 are generated in the Krebs’
+cycle. The energy in these molecules as well as that in the NADH + H+ synthesised
+during glycolysis are used to synthesise ATP. This is accomplished through a
+TEXT:
+164
+BIOLOGY
+C H O
+O
+CO
+H O
+Energy
+6
+12
+6
+2
+2
+2
+6
+6
+6
++
+→
+
++
++
+RQ
+CO
+O
+=
+=
+6
+6
+1 0
+2
+2
+.
+When fats are used in respiration, the RQ is less than 1. Calculations
+for a fatty acid, tripalmitin, if used as a substrate is shown:
+2
+145
+102
+98
+51
+98
+6
+2
+2
+2
+(
+)
+C H O
+O
+CO
+H O
+energy
++
+→
+
++
++
+        Tripalmitin
+RQ
+CO
+O
+=
+=
+102
+145
+0 7
+2
+2
+.
+When proteins are respiratory substrates the ratio would be about
+0.9.
+What is important to recognise is that in living organisms, respiratory
+substrates are often more than one; pure proteins or fats are never
+used as respiratory substrates.
+SUMMARY
+Plants unlike animals have no special systems for breathing or gaseous exchange.
+Stomata and lenticels allow gaseous exchange by diffusion. Almost all living cells
+in a plant have their surfaces exposed to air.
+The breaking of C-C bonds of complex organic molecules by oxidation leading
+to the release of a lot of energy is called cellular respiration. Glucose is the
+favoured substrate for respiration. Fats and proteins can also be broken down to
+yield energy. The initial stage of cellular respiration takes place in the cytoplasm.
+Each glucose molecule is broken through a series of enzyme catalysed reactions
+into two molecules of pyruvic acid. This process is called glycolysis. The fate of the
+pyruvate depends on the availability of oxygen and the organism. Under anaerobic
+conditions either lactic acid fermentation or alcohol fermentation occurs.
+Fermentation takes place under anaerobic conditions in many prokaryotes,
+unicellular eukaryotes and in germinating seeds. In eukaryotic organisms aerobic
+respiration occurs  in the presence of oxygen. Pyruvic acid is transported into the
+mitochondria where it is converted into acetyl CoA with the release of CO2. Acetyl
+CoA then enters the tricarboxylic acid pathway or Krebs’ cycle operating in the
+matrix of the mitochondria. NADH + H+ and FADH2 are generated in the Krebs’
+cycle. The energy in these molecules as well as that in the NADH + H+ synthesised
+during glycolysis are used to synthesise ATP. This is accomplished through a
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=4
+  57.8 48.8 92.8 84.8 35.0 36.0
+  168.8 446.5 419.6 697.3 250.8 250.8
+  173.0 205.8 531.8 280.8 358.8 75.0
+  173.0 107.8 531.8 167.8 358.8 60.0
+
+=== PAGE 13 size=571.7x780.5 text_chars=1478 words=223 drawings=10 ===
+HITS:
+RESPIRATION IN PLANTS
+system of electron carriers called electron transport system (ETS) located on the
+and it gets reduced to water.
+substance used during respiration.
+(a) Respiration and Combustion
+(b) Glycolysis and Krebs’ cycle
+(c) Aerobic respiration and Fermentation
+Give the schematic representation of glycolysis?
+What are the main steps in aerobic respiration? Where does it take place?
+Give the schematic representation of an overall view of Krebs’ cycle.
+Explain ETS.
+(a) Aerobic respiration and Anaerobic respiration
+(b) Glycolysis and Fermentation
+(c) Glycolysis and Citric acid Cycle
+What is the significance of step-wise release of energy in respiration?
+TEXT:
+RESPIRATION IN PLANTS
+165
+system of electron carriers called electron transport system (ETS) located on the
+inner membrane of the mitochondria. The electrons, as they move through the
+system, release enough energy that are trapped to synthesise ATP. This is called
+oxidative phosphorylation. In this process O2 is the ultimate acceptor of electrons
+and it gets reduced to water.
+The respiratory pathway is an amphibolic pathway as it involves both anabolism
+and catabolism. The respiratory quotient depends upon the type of respiratory
+substance used during respiration.
+EXERCISES
+1.
+Differentiate between
+(a) Respiration and Combustion
+(b) Glycolysis and Krebs’ cycle
+(c) Aerobic respiration and Fermentation
+2.
+What are respiratory substrates? Name the most common respiratory substrate.
+3.
+Give the schematic representation of glycolysis?
+4.
+What are the main steps in aerobic respiration? Where does it take place?
+5.
+Give the schematic representation of an overall view of Krebs’ cycle.
+6.
+Explain ETS.
+7.
+Distinguish between the following:
+(a) Aerobic respiration and Anaerobic respiration
+(b) Glycolysis and Fermentation
+(c) Glycolysis and Citric acid Cycle
+8.
+What are the assumptions made during the calculation of net gain of ATP?
+9.
+Discuss “The respiratory pathway is an amphibolic pathway.”
+10.
+Define RQ. What is its value for fats?
+11.
+What is oxidative phosphorylation?
+12.
+What is the significance of step-wise release of energy in respiration?
+Reprint 2026-27
+
+DRAWING_EXTENTS_CANDIDATES=1
+  477.8 48.8 512.8 84.8 35.0 36.0

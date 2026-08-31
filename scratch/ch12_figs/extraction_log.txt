@@ -1,0 +1,6 @@
+fig_12_1: page=4 rect=(54, 149, 296, 584) size=(1009, 1814) mode=L -> notes/class 11/Ch12_RespirationInPlants/assets/fig_12_1.png
+fig_12_2: page=5 rect=(275, 389, 520, 648) size=(1022, 1080) mode=L -> notes/class 11/Ch12_RespirationInPlants/assets/fig_12_2.png
+fig_12_3: page=7 rect=(274, 97, 516, 328) size=(1009, 963) mode=L -> notes/class 11/Ch12_RespirationInPlants/assets/fig_12_3.png
+fig_12_4: page=8 rect=(51, 77, 327, 541) size=(1151, 1935) mode=L -> notes/class 11/Ch12_RespirationInPlants/assets/fig_12_4.png
+fig_12_5: page=9 rect=(283, 124, 472, 299) size=(788, 730) mode=L -> notes/class 11/Ch12_RespirationInPlants/assets/fig_12_5.png
+fig_12_6: page=11 rect=(41, 96, 512, 462) size=(1964, 1525) mode=L -> notes/class 11/Ch12_RespirationInPlants/assets/fig_12_6.png

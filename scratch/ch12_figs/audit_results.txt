@@ -1,0 +1,28 @@
+--- A) text-layer word grazing ---
+fig_12_1: words_in_rect=56 ok
+fig_12_2: words_in_rect=0 ok
+fig_12_3: words_in_rect=40 ok
+fig_12_4: words_in_rect=0 ok
+fig_12_5: words_in_rect=0 ok
+fig_12_6: words_in_rect=0 ok
+--- B) drawings-extent overflow ---
+fig_12_1: no drawings (raster or artwork-as-image)
+fig_12_2: ok
+fig_12_3: ok
+fig_12_4: no drawings (raster or artwork-as-image)
+fig_12_5: no drawings (raster or artwork-as-image)
+fig_12_6: ok
+--- C) unexplained dark ink in border band ---
+fig_12_1: clean
+fig_12_2: clean
+fig_12_3: clean
+fig_12_4: clean
+fig_12_5: clean
+fig_12_6: clean
+--- D) grayscale and files ---
+fig_12_1: mode=L size=(1009, 1814)
+fig_12_2: mode=L size=(1022, 1080)
+fig_12_3: mode=L size=(1009, 963)
+fig_12_4: mode=L size=(1151, 1935)
+fig_12_5: mode=L size=(788, 730)
+fig_12_6: mode=L size=(1964, 1525)
