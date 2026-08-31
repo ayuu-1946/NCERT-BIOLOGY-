@@ -134,14 +134,20 @@ def main() -> int:
     spec = importlib.util.spec_from_file_location("cp", REPO / "check_pdf.py")
     cp = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(cp)
+    # _extract_labels returns a flat list[(fig_id, label)], not a dict.
     parsed = cp._extract_labels(inv)
     check(
         bool(parsed),
         "check_pdf._extract_labels() finds a non-empty matrix (guards the silent-WARN trap)",
     )
     check(
-        sum(len(v) for v in parsed.values()) == EXP_LABEL_TOTAL,
-        f"check_pdf parses {EXP_LABEL_TOTAL} labels (got {sum(len(v) for v in parsed.values())})",
+        len(parsed) == EXP_LABEL_TOTAL,
+        f"check_pdf parses {EXP_LABEL_TOTAL} labels (got {len(parsed)})",
+    )
+    parsed_figs = sorted({fig for fig, _ in parsed})
+    check(
+        len(parsed_figs) == EXP_FIGURES,
+        f"check_pdf parses {EXP_FIGURES} distinct figure rows, no phantoms (got {parsed_figs})",
     )
 
     print("[5] encoding hygiene")
