@@ -1,0 +1,24 @@
+--- A) text-layer word grazing ---
+fig_6_1: words_in_rect=9 ok
+fig_6_2: words_in_rect=0 ok
+fig_6_3: words_in_rect=22 ok
+fig_6_4: words_in_rect=0 ok
+fig_6_5: words_in_rect=0 ok
+--- B) drawings-extent overflow ---
+fig_6_1: ok
+fig_6_2: ok
+fig_6_3: ok
+fig_6_4: no drawings (raster figure)
+fig_6_5: ok
+--- C) unexplained dark ink in border band ---
+fig_6_1: clean
+fig_6_2: clean
+fig_6_3: clean
+fig_6_4: clean
+fig_6_5: clean
+--- D) emitted image mode and existence ---
+fig_6_1: exists=True mode=L channels=1 size=(1959, 463)
+fig_6_2: exists=True mode=L channels=1 size=(834, 1676)
+fig_6_3: exists=True mode=L channels=1 size=(1022, 2000)
+fig_6_4: exists=True mode=L channels=1 size=(2063, 1938)
+fig_6_5: exists=True mode=L channels=1 size=(1105, 1688)
