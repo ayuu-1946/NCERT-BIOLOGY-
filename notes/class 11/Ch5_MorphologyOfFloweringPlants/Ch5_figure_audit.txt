@@ -1,0 +1,72 @@
+--- A) text-layer word grazing ---
+fig_5_1: words_in_rect=16 ok
+fig_5_2: words_in_rect=10 GRAZING ['Laterals']
+fig_5_3: words_in_rect=0 ok
+fig_5_4: words_in_rect=8 ok
+fig_5_5: words_in_rect=1 ok
+fig_5_6: words_in_rect=7 ok
+fig_5_7: words_in_rect=0 ok
+fig_5_8: words_in_rect=4 GRAZING ['Figure', '5.8', 'Cymose', 'inflorescence']
+fig_5_9: words_in_rect=4 GRAZING ['(a)', '(b)', '(c)', '(d)']
+fig_5_10: words_in_rect=15 GRAZING ['aestivation.', 'The', 'main', 'types', 'of', 'aestivation', 'are', 'valvate,', 'twisted,', 'imbricate']
+fig_5_11: words_in_rect=4 ok
+fig_5_12: words_in_rect=23 GRAZING ['Figure']
+fig_5_13: words_in_rect=13 ok
+fig_5_14: words_in_rect=7 ok
+fig_5_15: words_in_rect=21 ok
+fig_5_16: words_in_rect=12 ok
+fig_5_17: words_in_rect=18 GRAZING ['Figure', '5.17', 'Solanum', 'nigrum', '(makoi)', 'plant', ':', '(a)', 'Flowering', 'twig', '(b)', 'Flower']
+--- B) drawings-extent overflow ---
+fig_5_1: ok
+fig_5_2: ok
+fig_5_3: OVERFLOW L1.0 T0.0 R0.0 B4.7
+fig_5_4: ok
+fig_5_5: ok
+fig_5_6: no drawings (raster/text image)
+fig_5_7: no drawings (raster/text image)
+fig_5_8: OVERFLOW L0.0 T4.7 R0.5 B17.1
+fig_5_9: no drawings (raster/text image)
+fig_5_10: ok
+fig_5_11: no drawings (raster/text image)
+fig_5_12: OVERFLOW L22.1 T0.0 R0.0 B0.0
+fig_5_13: ok
+fig_5_14: OVERFLOW L0.0 T0.0 R20.1 B0.0
+fig_5_15: ok
+fig_5_16: OVERFLOW L0.0 T0.0 R5.7 B0.0
+fig_5_17: ok
+--- C) unexplained dark ink in border band ---
+fig_5_1: clean
+fig_5_2: clean
+fig_5_3: EDGE-INK ['R:49px@(np.float64(505.5), np.float64(174.7))']
+fig_5_4: clean
+fig_5_5: EDGE-INK ['T:153px@(np.float64(225.1), np.float64(510.9))']
+fig_5_6: clean
+fig_5_7: clean
+fig_5_8: clean
+fig_5_9: clean
+fig_5_10: clean
+fig_5_11: clean
+fig_5_12: clean
+fig_5_13: clean
+fig_5_14: clean
+fig_5_15: clean
+fig_5_16: clean
+fig_5_17: clean
+--- D) file mode / dpi ---
+fig_5_1: mode=L dpi=(299.9994, 299.9994) size=(988, 1293)
+fig_5_2: mode=L dpi=(299.9994, 299.9994) size=(1988, 1021)
+fig_5_3: mode=L dpi=(299.9994, 299.9994) size=(889, 855)
+fig_5_4: mode=L dpi=(299.9994, 299.9994) size=(972, 1418)
+fig_5_5: mode=L dpi=(299.9994, 299.9994) size=(975, 564)
+fig_5_6: mode=L dpi=(299.9994, 299.9994) size=(960, 1042)
+fig_5_7: mode=L dpi=(299.9994, 299.9994) size=(1001, 1126)
+fig_5_8: mode=L dpi=(299.9994, 299.9994) size=(951, 626)
+fig_5_9: mode=L dpi=(299.9994, 299.9994) size=(1888, 750)
+fig_5_10: mode=L dpi=(299.9994, 299.9994) size=(1950, 501)
+fig_5_11: mode=L dpi=(299.9994, 299.9994) size=(1460, 876)
+fig_5_12: mode=L dpi=(299.9994, 299.9994) size=(592, 2709)
+fig_5_13: mode=L dpi=(299.9994, 299.9994) size=(1322, 730)
+fig_5_14: mode=L dpi=(299.9994, 299.9994) size=(988, 584)
+fig_5_15: mode=L dpi=(299.9994, 299.9994) size=(1721, 1063)
+fig_5_16: mode=L dpi=(299.9994, 299.9994) size=(751, 1105)
+fig_5_17: mode=L dpi=(299.9994, 299.9994) size=(1555, 980)
