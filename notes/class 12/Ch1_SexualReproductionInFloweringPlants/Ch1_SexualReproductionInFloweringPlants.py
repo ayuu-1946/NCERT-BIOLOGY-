@@ -46,11 +46,11 @@ while _probe != os.path.dirname(_probe):
     _probe = os.path.dirname(_probe)
 
 from neet_template import (  # noqa: E402
-    STYLES,
+    STYLES, FRAME_WIDTH, GRID_LINE, cm,
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, Image as RLImage, Table, TableStyle, KeepTogether  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch1_SexualReproductionInFloweringPlants.pdf")
@@ -59,6 +59,43 @@ OUT_PDF = os.path.join(HERE, "Ch1_SexualReproductionInFloweringPlants.pdf")
 def figure(asset_name, caption_text, max_width_cm=15.9):
     """Chapter-local binding of the shared figure() helper (§0.6)."""
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+
+
+def figure_pair(asset_a, asset_b, caption_text, max_height_pt=180):
+    """Compact two-panel figure block with 5 pt cell padding (10 pt total).
+
+    Images are scaled only down from their 300 dpi extraction size, preserving
+    every panel label/leader line while avoiding the tall whitespace of a
+    single vertical plate. The caption remains shared and verbatim below.
+    """
+    paths = [os.path.join(ASSETS, name) for name in (asset_a, asset_b)]
+    images = []
+    cell_width = (FRAME_WIDTH - 15) / 2.0
+    for path in paths:
+        if not os.path.exists(path):
+            raise FileNotFoundError(path)
+        from PIL import Image as PILImage
+        with PILImage.open(path) as im:
+            px_w, px_h = im.size
+            if im.mode != "L":
+                raise RuntimeError(f"FIGURE NOT MONOCHROME: {path}")
+        scale = min(cell_width / px_w, max_height_pt / px_h)
+        width = px_w * scale
+        height = px_h * scale
+        images.append(RLImage(path, width=width, height=height))
+    panel_table = Table([[images[0], images[1]]], colWidths=[cell_width, cell_width])
+    panel_table.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("INNERGRID", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    panel_table.hAlign = "CENTER"
+    return KeepTogether([panel_table, Paragraph(caption_text, STYLES["Caption"])])
 
 
 def body(text):
@@ -272,12 +309,12 @@ story.append(body(
     "microspore and its <b>nucleus</b>, the <b>asymmetric spindle</b> of the unequal division "
     "that follows, and the resulting <b>vegetative cell</b> and <b>generative cell</b> of the "
     "mature 2-celled pollen grain."))
-story.append(figure(
-    "fig_1_5.png",
+story.append(figure_pair(
+    "fig_1_5a.png", "fig_1_5b.png",
     "Fig. 1.5 &mdash; (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore "
     "maturing into a pollen grain. Labelled: vacuoles, nucleus, asymmetric spindle, vegetative "
     "cell, generative cell.",
-    max_width_cm=5.0))
+    max_height_pt=240))
 story.append(note(
     "Pollen grains of many species <b>cause severe allergies and bronchial afflictions</b>, "
     "leading to chronic respiratory disorders &mdash; asthma, bronchitis, etc. "
@@ -579,11 +616,11 @@ story.append(body(
     "In the water-pollination panel of the figure below, the <b>female flower</b> of "
     "<i>Vallisneria</i> is labelled at the water surface with its <b>stigma</b> exposed, and "
     "the released <b>male flower</b> is labelled floating towards it."))
-story.append(figure(
-    "fig_1_11.png",
+story.append(figure_pair(
+    "fig_1_11a.png", "fig_1_11b.png",
     "Fig. 1.11 &mdash; (a) Pollination by water in <i>Vallisneria</i>; (b) Insect pollination. "
     "Labelled: female flower, stigma, male flower.",
-    max_width_cm=8.0))
+    max_height_pt=190))
 story.append(gap())
 story.append(body(
     "<b>Biotic agents (animals).</b> <b>Bees, butterflies, flies, beetles, wasps, ants, "
