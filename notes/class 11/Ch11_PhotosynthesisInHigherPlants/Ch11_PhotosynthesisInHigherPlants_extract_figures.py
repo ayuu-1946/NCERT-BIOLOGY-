@@ -17,11 +17,11 @@ RENDER_DPI = 300
 FIGS = [
     ("11_1", 4, (50, 105, 275, 435)),   # p4: 2x2 plate; x kept before prose column, bottom above caption y~389
     ("11_2", 6, (85, 495, 525, 685)),   # p6: chloroplast oval + all right labels; bottom above caption y~625
-    ("11_3a", 7, (290, 135, 520, 300)),  # p7: top absorption graph; includes pigment labels and axes
-    ("11_3b", 7, (290, 300, 520, 435)), # p7: middle action-spectrum graph; includes y-axis and curve
+    ("11_3a", 7, (290, 135, 520, 285)),  # p7: top absorption graph; includes pigment labels and axes
+    ("11_3b", 7, (290, 300, 520, 420)), # p7: middle action-spectrum graph; includes y-axis and curve
     ("11_3c", 7, (290, 430, 520, 595)), # p7: bottom superimposed graph; includes legend and wavelength axis
     ("11_4", 8, (60, 285, 285, 475)),   # p8: light-harvesting complex; right edge before prose, bottom above caption
-    ("11_5", 9, (280, 100, 525, 290)),   # p9: Z scheme; right-column diagram, caption begins below y~265
+    ("11_5", 9, (280, 100, 525, 325)),   # p9: Z scheme; right-column diagram, caption begins below y~265
     ("11_6", 10, (60, 105, 275, 305)),   # p10: cyclic photophosphorylation; left-column diagram, caption below
     ("11_7", 11, (70, 90, 505, 395)),   # p11: complete chemiosmosis diagram; bottom above caption y~350
     ("11_8", 14, (105, 100, 480, 515)),  # p14: Calvin cycle; includes all stage labels/arrows, caption below

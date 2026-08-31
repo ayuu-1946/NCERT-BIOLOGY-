@@ -1,0 +1,3 @@
+fig_11_3a: p7 (290, 135, 520, 285) (959, 626) mode=L -> /home/ubuntu/ncert-figure-work/NCERT-BIOLOGY-/notes/class 11/Ch11_PhotosynthesisInHigherPlants/assets/fig_11_3a.png
+fig_11_3b: p7 (290, 300, 520, 420) (959, 500) mode=L -> /home/ubuntu/ncert-figure-work/NCERT-BIOLOGY-/notes/class 11/Ch11_PhotosynthesisInHigherPlants/assets/fig_11_3b.png
+fig_11_5: p9 (280, 100, 525, 325) (1022, 939) mode=L -> /home/ubuntu/ncert-figure-work/NCERT-BIOLOGY-/notes/class 11/Ch11_PhotosynthesisInHigherPlants/assets/fig_11_5.png
