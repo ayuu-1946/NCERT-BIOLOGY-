@@ -11,7 +11,7 @@ Protocol: normal 3-pass workflow (§6). Pass 1 sessions: `1-F` (figures, run as 
 | ID range | `F001`-`F178` (contiguous, 0 gaps, 0 duplicate IDs) |
 | Ticked rows | 0 of 178 (Pass 2 not started) |
 | Heading rows (`Type: heading`) | 15 |
-| Opener rows (`Type: opener`) | 13 |
+| Opener rows (`Type: opener`) | 12 |
 | Numbered figures / assets | 6 / 6 |
 | In-figure labels catalogued | 76 (12 + 9 + 11 + 4 + 16 + 24) |
 | Summary sentences classified | 22 = 18 BODY-PRESENT + 4 SUMMARY-UNIQUE (all 4 folded) |
@@ -21,64 +21,66 @@ Tick legend: `x` = written into the script and verified present in the generated
 
 Type vocabulary (normalized, lowercase, no other value appears in the `Type` column): `caption`, `concept`, `definition`, `disorder`, `example`, `figure-label`, `heading`, `list`, `number`, `opener`, `process`, `question`.
 
-Source-typo policy: the source contains "characterestic", "discorders", "membrance", "ofthe Filtrate" (running head, p5) and numbers Exercise 7 with `(d)` **twice** (no `(e)`). All are transcribed verbatim below and must be reproduced as-is in quoted rows; the rewrite prose may use correct spelling.
+Source-typo policy: the source contains "characterestic", "discorders", "membrance", "alongwith" (one word, F042), "ofthe Filtrate" (running head, p5), a stray period in "(Figure. 16.6)" and numbers Exercise 7 with `(d)` **twice** (no `(e)`). All are transcribed verbatim below and must be reproduced as-is in quoted rows; the rewrite prose may use correct spelling.
+
+Verbatim-fidelity gate (added at Gate 1 closure): `verify_inventory.py` check `[7]` now re-extracts the source PDF text and asserts a set of typo-bearing and caption strings appear **exactly** as this file quotes them. Two rows had been silently normalized to correct English at the freeze and would otherwise have shipped as false "verbatim" quotes: **F042** read "along with" against a source "alongwith", and **F167** pluralised the last word of Figure 16.3's caption against a source that ends "duct and tubule" (singular). Both are corrected below. This is a content-drift class that no count check can see, so it is now gated by string comparison against the PDF.
 
 ## Facts
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
-| F001 | title | heading | Chapter title plate: 'EXCRETORY PRODUCTS AND THEIR ELIMINATION' with 'CHAPTER 16' (no opening sentence of its own) | |
-| F002 | intro | opener | "Animals accumulate ammonia, urea, uric acid, carbon dioxide, water and ions like Na+, K+, Cl-, phosphate, sulphate, etc., either by metabolic activities or by other means like excess ingestion." | |
-| F003 | intro | concept | "These substances have to be removed totally or partially." | |
-| F004 | intro | concept | "In this chapter, you will learn the mechanisms of elimination of these substances with special emphasis on common nitrogenous wastes." | |
-| F005 | intro | concept | "Ammonia, urea and uric acid are the major forms of nitrogenous wastes excreted by the animals." | |
-| F006 | intro | concept | "Ammonia is the most toxic form and requires large amount of water for its elimination, whereas uric acid, being the least toxic, can be removed with a minimum loss of water." | |
-| F007 | intro | definition | "The process of excreting ammonia is Ammonotelism." | |
-| F008 | intro | example | "Many bony fishes, aquatic amphibians and aquatic insects are ammonotelic in nature." (source sets "ammonotelic" five times over-struck as a bold artefact) | |
-| F009 | intro | concept | "Ammonia, as it is readily soluble, is generally excreted by diffusion across body surfaces or through gill surfaces (in fish) as ammonium ions." | |
-| F010 | intro | concept | "Kidneys do not play any significant role in its removal." | |
-| F011 | intro | concept | "Terrestrial adaptation necessitated the production of lesser toxic nitrogenous wastes like urea and uric acid for conservation of water." | |
-| F012 | intro | example | "Mammals, many terrestrial amphibians and marine fishes mainly excrete urea and are called ureotelic animals." (source sets "ureotelic" five times over-struck) | |
-| F013 | intro | process | "Ammonia produced by metabolism is converted into urea in the liver of these animals and released into the blood which is filtered and excreted out by the kidneys." | |
-| F014 | intro | concept | "Some amount of urea may be retained in the kidney matrix of some of these animals to maintain a desired osmolarity." | |
-| F015 | intro | example | "Reptiles, birds, land snails and insects excrete nitrogenous wastes as uric acid in the form of pellet or paste with a minimum loss of water and are called uricotelic animals." (source sets "uricotelic" five times over-struck) | |
-| F016 | intro | list | Chapter contents panel (p. 205 margin), title-case in the source: "16.1 Human Excretory System"; "16.2 Urine Formation"; "16.3 Function of the Tubules"; "16.4 Mechanism of Concentration of the Filtrate"; "16.5 Regulation of Kidney Function"; "16.6 Micturition"; "16.7 Role of other Organs in Excretion"; "16.8 Disorders of the Excretory System" | |
-| F017 | intro | concept | "A survey of animal kingdom presents a variety of excretory structures." | |
-| F018 | intro | concept | "In most of the invertebrates, these structures are simple tubular forms whereas vertebrates have complex tubular organs called kidneys." | |
-| F019 | intro | concept | "Some of these structures are mentioned here." | |
-| F020 | intro | example | "Protonephridia or flame cells are the excretory structures in Platyhelminthes (Flatworms, e.g., Planaria), rotifers, some annelids and the cephalochordate - Amphioxus." | |
-| F021 | intro | concept | "Protonephridia are primarily concerned with ionic and fluid volume regulation, i.e., osmoregulation." | |
-| F022 | intro | example | "Nephridia are the tubular excretory structures of earthworms and other annelids." | |
-| F023 | intro | concept | "Nephridia help to remove nitrogenous wastes and maintain a fluid and ionic balance." | |
-| F024 | intro | example | "Malpighian tubules are the excretory structures of most of the insects including cockroaches." | |
-| F025 | intro | concept | "Malpighian tubules help in the removal of nitrogenous wastes and osmoregulation." | |
-| F026 | intro | example | "Antennal glands or green glands perform the excretory function in crustaceans like prawns." | |
-| F027 | 16.1 | heading | "16.1 HUMAN EXCRETORY SYSTEM" | |
-| F028 | 16.1 | opener | "In humans, the excretory system consists of a pair of kidneys, one pair of ureters, a urinary bladder and a urethra (Figure 16.1)." | |
-| F029 | 16.1 | concept | "Kidneys are reddish brown, bean shaped structures situated between the levels of last thoracic and third lumbar vertebra close to the dorsal inner wall of the abdominal cavity." | |
-| F030 | 16.1 | number | "Each kidney of an adult human measures 10-12 cm in length, 5-7 cm in width, 2-3 cm in thickness with an average weight of 120-170 g." | |
-| F031 | 16.1 | concept | "Towards the centre of the inner concave surface of the kidney is a notch called hilum through which ureter, blood vessels and nerves enter." | |
-| F032 | 16.1 | concept | "Inner to the hilum is a broad funnel shaped space called the renal pelvis with projections called calyces." | |
-| F033 | 16.1 | concept | "The outer layer of kidney is a tough capsule." | |
-| F034 | 16.1 | concept | "Inside the kidney, there are two zones, an outer cortex and an inner medulla." | |
-| F035 | 16.1 | concept | "The medulla is divided into a few conical masses (medullary pyramids) projecting into the calyces (sing.: calyx)." | |
-| F036 | 16.1 | concept | "The cortex extends in between the medullary pyramids as renal columns called Columns of Bertini." | |
-| F037 | 16.1 | number | "Each kidney has nearly one million complex tubular structures called nephrons (Figure 16.3), which are the functional units." | |
-| F038 | 16.1 | concept | "Each nephron has two parts - the glomerulus and the renal tubule." | |
-| F039 | 16.1 | definition | "Glomerulus is a tuft of capillaries formed by the afferent arteriole - a fine branch of renal artery." | |
-| F040 | 16.1 | concept | "Blood from the glomerulus is carried away by an efferent arteriole." | |
-| F041 | 16.1 | concept | "The renal tubule begins with a double walled cup-like structure called Bowman's capsule, which encloses the glomerulus." | |
-| F042 | 16.1 | definition | "Glomerulus along with Bowman's capsule, is called the malpighian body or renal corpuscle (Figure 16.4)." | |
-| F043 | 16.1 | concept | "The tubule continues further to form a highly coiled network - proximal convoluted tubule (PCT)." | |
-| F044 | 16.1 | concept | "A hairpin shaped Henle's loop is the next part of the tubule which has a descending and an ascending limb." | |
-| F045 | 16.1 | concept | "The ascending limb continues as another highly coiled tubular region called distal convoluted tubule (DCT)." | |
-| F046 | 16.1 | concept | "The DCTs of many nephrons open into a straight tube called collecting duct, many of which converge and open into the renal pelvis through medullary pyramids in the calyces." | |
-| F047 | 16.1 | concept | "The Malpighian corpuscle, PCT and DCT of the nephron are situated in the cortical region of the kidney whereas the loop of Henle dips into the medulla." | |
-| F048 | 16.1 | definition | "In majority of nephrons, the loop of Henle is too short and extends only very little into the medulla. Such nephrons are called cortical nephrons." | |
-| F049 | 16.1 | definition | "In some of the nephrons, the loop of Henle is very long and runs deep into the medulla. These nephrons are called juxta medullary nephrons." | |
-| F050 | 16.1 | concept | "The efferent arteriole emerging from the glomerulus forms a fine capillary network around the renal tubule called the peritubular capillaries." | |
-| F051 | 16.1 | concept | "A minute vessel of this network runs parallel to the Henle's loop forming a 'U' shaped vasa recta." | |
-| F052 | 16.1 | concept | "Vasa recta is absent or highly reduced in cortical nephrons." | |
+| F001 | title | heading | Chapter title plate: 'EXCRETORY PRODUCTS AND THEIR ELIMINATION' with 'CHAPTER 16' (no opening sentence of its own) | x |
+| F002 | intro | opener | "Animals accumulate ammonia, urea, uric acid, carbon dioxide, water and ions like Na+, K+, Cl-, phosphate, sulphate, etc., either by metabolic activities or by other means like excess ingestion." | x |
+| F003 | intro | concept | "These substances have to be removed totally or partially." | x |
+| F004 | intro | concept | "In this chapter, you will learn the mechanisms of elimination of these substances with special emphasis on common nitrogenous wastes." | x |
+| F005 | intro | concept | "Ammonia, urea and uric acid are the major forms of nitrogenous wastes excreted by the animals." | x |
+| F006 | intro | concept | "Ammonia is the most toxic form and requires large amount of water for its elimination, whereas uric acid, being the least toxic, can be removed with a minimum loss of water." | x |
+| F007 | intro | definition | "The process of excreting ammonia is Ammonotelism." | x |
+| F008 | intro | example | "Many bony fishes, aquatic amphibians and aquatic insects are ammonotelic in nature." (source sets "ammonotelic" five times over-struck as a bold artefact) | x |
+| F009 | intro | concept | "Ammonia, as it is readily soluble, is generally excreted by diffusion across body surfaces or through gill surfaces (in fish) as ammonium ions." | x |
+| F010 | intro | concept | "Kidneys do not play any significant role in its removal." | x |
+| F011 | intro | concept | "Terrestrial adaptation necessitated the production of lesser toxic nitrogenous wastes like urea and uric acid for conservation of water." | x |
+| F012 | intro | example | "Mammals, many terrestrial amphibians and marine fishes mainly excrete urea and are called ureotelic animals." (source sets "ureotelic" five times over-struck) | x |
+| F013 | intro | process | "Ammonia produced by metabolism is converted into urea in the liver of these animals and released into the blood which is filtered and excreted out by the kidneys." | x |
+| F014 | intro | concept | "Some amount of urea may be retained in the kidney matrix of some of these animals to maintain a desired osmolarity." | x |
+| F015 | intro | example | "Reptiles, birds, land snails and insects excrete nitrogenous wastes as uric acid in the form of pellet or paste with a minimum loss of water and are called uricotelic animals." (source sets "uricotelic" five times over-struck) | x |
+| F016 | intro | list | Chapter contents panel (p. 205 margin), title-case in the source: "16.1 Human Excretory System"; "16.2 Urine Formation"; "16.3 Function of the Tubules"; "16.4 Mechanism of Concentration of the Filtrate"; "16.5 Regulation of Kidney Function"; "16.6 Micturition"; "16.7 Role of other Organs in Excretion"; "16.8 Disorders of the Excretory System" | x |
+| F017 | intro | concept | "A survey of animal kingdom presents a variety of excretory structures." | x |
+| F018 | intro | concept | "In most of the invertebrates, these structures are simple tubular forms whereas vertebrates have complex tubular organs called kidneys." | x |
+| F019 | intro | concept | "Some of these structures are mentioned here." | x |
+| F020 | intro | example | "Protonephridia or flame cells are the excretory structures in Platyhelminthes (Flatworms, e.g., Planaria), rotifers, some annelids and the cephalochordate - Amphioxus." | x |
+| F021 | intro | concept | "Protonephridia are primarily concerned with ionic and fluid volume regulation, i.e., osmoregulation." | x |
+| F022 | intro | example | "Nephridia are the tubular excretory structures of earthworms and other annelids." | x |
+| F023 | intro | concept | "Nephridia help to remove nitrogenous wastes and maintain a fluid and ionic balance." | x |
+| F024 | intro | example | "Malpighian tubules are the excretory structures of most of the insects including cockroaches." | x |
+| F025 | intro | concept | "Malpighian tubules help in the removal of nitrogenous wastes and osmoregulation." | x |
+| F026 | intro | example | "Antennal glands or green glands perform the excretory function in crustaceans like prawns." | x |
+| F027 | 16.1 | heading | "16.1 HUMAN EXCRETORY SYSTEM" | x |
+| F028 | 16.1 | opener | "In humans, the excretory system consists of a pair of kidneys, one pair of ureters, a urinary bladder and a urethra (Figure 16.1)." | x |
+| F029 | 16.1 | concept | "Kidneys are reddish brown, bean shaped structures situated between the levels of last thoracic and third lumbar vertebra close to the dorsal inner wall of the abdominal cavity." | x |
+| F030 | 16.1 | number | "Each kidney of an adult human measures 10-12 cm in length, 5-7 cm in width, 2-3 cm in thickness with an average weight of 120-170 g." | x |
+| F031 | 16.1 | concept | "Towards the centre of the inner concave surface of the kidney is a notch called hilum through which ureter, blood vessels and nerves enter." | x |
+| F032 | 16.1 | concept | "Inner to the hilum is a broad funnel shaped space called the renal pelvis with projections called calyces." | x |
+| F033 | 16.1 | concept | "The outer layer of kidney is a tough capsule." | x |
+| F034 | 16.1 | concept | "Inside the kidney, there are two zones, an outer cortex and an inner medulla." | x |
+| F035 | 16.1 | concept | "The medulla is divided into a few conical masses (medullary pyramids) projecting into the calyces (sing.: calyx)." | x |
+| F036 | 16.1 | concept | "The cortex extends in between the medullary pyramids as renal columns called Columns of Bertini." | x |
+| F037 | 16.1 | number | "Each kidney has nearly one million complex tubular structures called nephrons (Figure 16.3), which are the functional units." | x |
+| F038 | 16.1 | concept | "Each nephron has two parts - the glomerulus and the renal tubule." | x |
+| F039 | 16.1 | definition | "Glomerulus is a tuft of capillaries formed by the afferent arteriole - a fine branch of renal artery." | x |
+| F040 | 16.1 | concept | "Blood from the glomerulus is carried away by an efferent arteriole." | x |
+| F041 | 16.1 | concept | "The renal tubule begins with a double walled cup-like structure called Bowman's capsule, which encloses the glomerulus." | x |
+| F042 | 16.1 | definition | "Glomerulus alongwith Bowman's capsule, is called the malpighian body or renal corpuscle (Figure 16.4)." (source sets "alongwith" as one word - a source typo; the chapter's only "along with" is F143's, machine-verified) | x |
+| F043 | 16.1 | concept | "The tubule continues further to form a highly coiled network - proximal convoluted tubule (PCT)." | x |
+| F044 | 16.1 | concept | "A hairpin shaped Henle's loop is the next part of the tubule which has a descending and an ascending limb." | x |
+| F045 | 16.1 | concept | "The ascending limb continues as another highly coiled tubular region called distal convoluted tubule (DCT)." | x |
+| F046 | 16.1 | concept | "The DCTs of many nephrons open into a straight tube called collecting duct, many of which converge and open into the renal pelvis through medullary pyramids in the calyces." | x |
+| F047 | 16.1 | concept | "The Malpighian corpuscle, PCT and DCT of the nephron are situated in the cortical region of the kidney whereas the loop of Henle dips into the medulla." | x |
+| F048 | 16.1 | definition | "In majority of nephrons, the loop of Henle is too short and extends only very little into the medulla. Such nephrons are called cortical nephrons." | x |
+| F049 | 16.1 | definition | "In some of the nephrons, the loop of Henle is very long and runs deep into the medulla. These nephrons are called juxta medullary nephrons." | x |
+| F050 | 16.1 | concept | "The efferent arteriole emerging from the glomerulus forms a fine capillary network around the renal tubule called the peritubular capillaries." | x |
+| F051 | 16.1 | concept | "A minute vessel of this network runs parallel to the Henle's loop forming a 'U' shaped vasa recta." | x |
+| F052 | 16.1 | concept | "Vasa recta is absent or highly reduced in cortical nephrons." | x |
 | F053 | 16.2 | heading | "16.2 URINE FORMATION" | |
 | F054 | 16.2 | opener | "Urine formation involves three main processes namely, glomerular filtration, reabsorption and secretion, that takes place in different parts of the nephron." | |
 | F055 | 16.2 | process | "The first step in urine formation is the filtration of blood, which is carried out by the glomerulus and is called glomerular filtration." | |
@@ -191,10 +193,10 @@ Source-typo policy: the source contains "characterestic", "discorders", "membran
 | F162 | 16.8 | concept | "Modern clinical procedures have increased the success rate of such a complicated technique." | |
 | F163 | 16.8 | disorder | "Renal calculi: Stone or insoluble mass of crystallised salts (oxalates, etc.) formed within the kidney." | |
 | F164 | 16.8 | disorder | "Glomerulonephritis: Inflammation of glomeruli of kidney." | |
-| F165 | figures | caption | "Figure 16.1 Human Urinary system" | |
-| F166 | figures | caption | "Figure 16.2 Longitudinal section (Diagrammatic) of Kidney" | |
-| F167 | figures | caption | "Figure 16.3 A diagrammatic representation of a nephron showing blood vessels, duct and tubules" | |
-| F168 | figures | caption | "Figure 16.4 Malpighian body (renal corpuscle)" | |
+| F165 | figures | caption | "Figure 16.1 Human Urinary system" | x |
+| F166 | figures | caption | "Figure 16.2 Longitudinal section (Diagrammatic) of Kidney" | x |
+| F167 | figures | caption | "Figure 16.3 A diagrammatic representation of a nephron showing blood vessels, duct and tubule" (caption ends "tubule", singular - machine-verified; the plural form appears nowhere in the source) | x |
+| F168 | figures | caption | "Figure 16.4 Malpighian body (renal corpuscle)" | x |
 | F169 | figures | caption | "Figure 16.5 Reabsorption and secretion of major substances at different parts of the nephron (Arrows indicate direction of movement of materials.)" | |
 | F170 | figures | caption | "Figure 16.6 Diagrammatic representation of a nephron and vasa recta showing counter current mechanisms" (caption sets "mechanisms" plural) | |
 | F171 | summary | heading | "SUMMARY" | |
@@ -208,10 +210,10 @@ Apostrophes are recorded exactly as drawn. The source is inconsistent: Figure 16
 
 | ID | Fig # | Type | In-figure labels, verbatim - one row per figure, every callout listed | Ticked |
 |----|-------|------|------------------------------------------------------------------|--------|
-| F173 | Fig 16.1 | figure-label | Figure labels: "Inferior vena cava"; "Adrenal gland"; "Renal artery"; "Renal vein"; "Pelvis"; "Kidney"; "Medulla"; "Cortex"; "Dorsal aorta"; "Ureter"; "Urinary bladder"; "Urethra" | |
-| F174 | Fig 16.2 | figure-label | Figure labels: "Medullary pyramid"; "Renal column"; "Calyx"; "Renal artery"; "Renal vein"; "Renal pelvis"; "Ureter"; "Cortex"; "Renal capsule" | |
-| F175 | Fig 16.3 | figure-label | Figure labels: "Afferent arteriole"; "Efferent arteriole"; "Glomerulus"; "Bowman's capsule"; "Proximal convoluted tubule"; "Distal convoluted tubule"; "Descending limb of loop of Henle"; "Ascending limb of loop of Henle"; "Henle's loop"; "Vasa recta"; "Collecting duct" | |
-| F176 | Fig 16.4 | figure-label | Figure labels: "Afferent arteriole"; "Efferent arteriole"; "Bowman's capsule"; "Proximal convoluted tubule" | |
+| F173 | Fig 16.1 | figure-label | Figure labels: "Inferior vena cava"; "Adrenal gland"; "Renal artery"; "Renal vein"; "Pelvis"; "Kidney"; "Medulla"; "Cortex"; "Dorsal aorta"; "Ureter"; "Urinary bladder"; "Urethra" | x |
+| F174 | Fig 16.2 | figure-label | Figure labels: "Medullary pyramid"; "Renal column"; "Calyx"; "Renal artery"; "Renal vein"; "Renal pelvis"; "Ureter"; "Cortex"; "Renal capsule" | x |
+| F175 | Fig 16.3 | figure-label | Figure labels: "Afferent arteriole"; "Efferent arteriole"; "Glomerulus"; "Bowman's capsule"; "Proximal convoluted tubule"; "Distal convoluted tubule"; "Descending limb of loop of Henle"; "Ascending limb of loop of Henle"; "Henle's loop"; "Vasa recta"; "Collecting duct" | x |
+| F176 | Fig 16.4 | figure-label | Figure labels: "Afferent arteriole"; "Efferent arteriole"; "Bowman's capsule"; "Proximal convoluted tubule" | x |
 | F177 | Fig 16.5 | figure-label | Figure labels: "Proximal convoluted tubule"; "Distal convoluted tubule"; "Cortex"; "Medulla"; "HCO3-"; "NaCl"; "Nutrients"; "H2O"; "K+"; "H+"; "NH3"; "Descending limb of loop of Henle"; "Thick segment of ascending limb"; "Thin segment of ascending limb"; "Collecting duct"; "Urea" | |
 | F178 | Fig 16.6 | figure-label | Figure labels: "Afferent arteriole"; "Efferent arteriole"; "Bowman's capsule"; "Glomerulus"; "Cortex"; "Outer medulla"; "Inner medulla"; "H2O"; "NaCl"; "Urea"; "Vasa recta"; "Nephron"; "300 mOsmolL-1"; "600 mOsmolL-1"; "900 mOsmolL-1"; "1200 mOsmolL-1"; "200"; "300"; "400"; "600"; "800"; "900"; "1000"; "1200" | |
 
@@ -265,7 +267,7 @@ Extraction, monochrome conversion and per-asset visual verification were complet
 |---|---|---|---|---|---|
 | 16.1 | Human Urinary system | `assets/fig_16_1.png` | 2 | yes | yes |
 | 16.2 | Longitudinal section (Diagrammatic) of Kidney | `assets/fig_16_2.png` | 3 | yes | yes |
-| 16.3 | A diagrammatic representation of a nephron showing blood vessels, duct and tubules | `assets/fig_16_3.png` | 3 | yes | yes |
+| 16.3 | A diagrammatic representation of a nephron showing blood vessels, duct and tubule | `assets/fig_16_3.png` | 3 | yes | yes |
 | 16.4 | Malpighian body (renal corpuscle) | `assets/fig_16_4.png` | 4 | yes | yes |
 | 16.5 | Reabsorption and secretion of major substances at different parts of the nephron (Arrows indicate direction of movement of materials.) | `assets/fig_16_5.png` | 6 | yes | yes |
 | 16.6 | Diagrammatic representation of a nephron and vasa recta showing counter current mechanisms | `assets/fig_16_6.png` | 7 | yes | yes |
@@ -282,12 +284,18 @@ Run-in headings (bold, colon-terminated, inside 16.3), in source order: Proximal
 Unnumbered headings, in source order: the chapter title plate · SUMMARY · EXERCISES.
 The chapter has no `16.N.N` sub-numbered headings — unlike Ch15, its second level is carried entirely by the four run-in heads in 16.3. `Renal calculi:` and `Glomerulonephritis:` are **not** counted as headings; they are colon-led definition entries carried by `disorder`-type rows F163-F164. No numbered TABLE exists in this chapter.
 
-**Opener census — 13 rows.** One opener per headed section plus the unheaded chapter-intro prose, minus the three headings that have no opening sentence of their own — the title plate, SUMMARY, and EXERCISES: 15 - 3 + 1 = 13. Sections with an opener: intro · 16.1 · 16.2 · 16.3 (PCT run-in) · Henle's Loop · DCT · Collecting Duct · 16.4 · 16.5 · 16.6 · 16.7 · 16.8. That is 12 headed openers plus the intro = 13. Note 16.3's own opener is the PCT run-in's first sentence, as the numbered head is followed immediately by the run-in head with no prose between them.
+**Opener census — 12 rows = 11 headed openers + 1 unheaded chapter intro.**
+Headed openers, one per section, in source order and by ID: 16.1 `F028` · 16.2 `F054` · 16.3/PCT run-in `F076` · Henle's Loop `F080` · DCT `F087` · Collecting Duct `F090` · 16.4 `F095` · 16.5 `F109` · 16.6 `F128` · 16.7 `F140` · 16.8 `F151`. That is 11 IDs. Plus the unheaded chapter-intro opener `F002` = 12.
+Reconciled against the 15 heading rows: **four** heading rows have no opening sentence of their own, not three — the title plate, SUMMARY, EXERCISES, **and the numbered head "16.3 FUNCTION OF THE TUBULES"**, because 16.3 is followed immediately by the PCT run-in head with no prose between them, so 16.3's first sentence *is* the PCT opener `F076` and is not double-counted. Hence 15 - 4 + 1 = 12, matching the ID list above.
+
+*Correction record (Gate 1 closure session).* This census previously asserted 13 rows via `15 - 3 + 1`, while its own adjacent list named 12 sections and the table has always held exactly 12 `opener` rows. Per §6 step 10 the number was the suspect, not the list: the arithmetic omitted 16.3 from the "no opener of its own" set even though the sentence right after it stated that fact. No row was added, removed or reclassified — only the four restatements of the count (header table, this census, the type census, Gate 1 checklist item 4) were corrected to 12.
 
 **Figure census — 6 numbered figures, 6 assets, 6 caption rows (F165-F170), 6 label rows (F173-F178), 7 in-text call-outs.**
 Call-outs, in source order: (Figure 16.1) · (Figure 16.2) · (Figure 16.3) · (Figure 16.4) · (Figure 16.5) · (Figure 16.5) · (Figure. 16.6). Figure 16.5 is called out twice — in 16.2 and again in 16.3 (Collecting Duct) — so call-outs (7) exceed figures (6) by exactly one. The final call-out carries a source typo, a stray period in "Figure.".
 
-**Type census — 172 Facts rows by type:** concept 84 · process 20 · number 15 · heading 15 · opener 13 · definition 13 · example 8 · caption 6 · disorder 2 · list 1 · question 1. Plus 6 `figure-label` rows in the matrix = 178 total.
+**Type census — 172 Facts rows by type:** concept 82 · process 19 · heading 15 · number 13 · definition 12 · opener 12 · example 9 · caption 6 · disorder 2 · list 1 · question 1. That list sums to 172. Plus 6 `figure-label` rows in the matrix = 178 total.
+
+*Correction record (Gate 1 closure session).* Six of these eleven values were wrong at the freeze — the row set was never wrong. The frozen values read `concept 84 · process 20 · number 15 · opener 13 · definition 13 · example 8`, which sums to 174 against a 172-row table, so the census contradicted the total stated in its own sentence. Re-parsing the finished table gives the values above; `heading 15`, `caption 6`, `disorder 2`, `list 1` and `question 1` were already correct. The `Type` column uses only the eleven normalized lowercase values above and no others (machine-asserted, 0 non-lowercase values).
 
 ## Gate 1 checklist
 
@@ -296,7 +304,7 @@ Call-outs, in source order: (Figure 16.1) · (Figure 16.2) · (Figure 16.3) · (
 | 1 | Chapter read start to finish before any row was written | done — session `1-S`, full 12-page read |
 | 2 | Every sentence-level fact captured as its own row | done — 172 Facts rows |
 | 3 | All 8 numbered headings + 4 run-in + 3 unnumbered captured | done — 15 heading rows, machine-confirmed contiguous 16.1-16.8 |
-| 4 | Every section's opening sentence captured | done — 13 opener rows, census reconciles 15-3+1 |
+| 4 | Every section's opening sentence captured | done — 12 opener rows, census reconciles 15 - 4 + 1 = 12 against its own ID list |
 | 5 | All 6 captions transcribed verbatim | done — F165-F170; Fig 16.6 "mechanisms" plural confirmed against the PDF |
 | 6 | In-figure labels harvested by opening each asset, not the text layer | done — 76 labels, all 6 assets opened at full size this session |
 | 7 | Label matrix present in exactly one place, parseable by `check_pdf._extract_labels` | done — asserted by `verify_inventory.py` check [4]; a 0-label parse now fails the build |
@@ -305,7 +313,24 @@ Call-outs, in source order: (Figure 16.1) · (Figure 16.2) · (Figure 16.3) · (
 | 10 | Exercises scanned, genuine gaps assigned a home | done — 12 scanned, 4 gaps, 17 non-gaps recorded |
 | 11 | No Unicode sub/superscripts or U+FFFD in this file | done — asserted by `verify_inventory.py` check [5] |
 | 12 | All counts machine-derived, not hand-tallied | done — `verify_inventory.py` re-parses the PDF and this file and exits non-zero on drift |
-| 13 | All rows unticked at freeze | done — 0 of 178 ticked |
+| 13 | All rows unticked at freeze | done — 0 of 178 ticked at the freeze; Pass 2 ticks only what `check_pdf.py` confirms |
+| 14 | Every count restated in prose re-derived from the table | **done at closure — 7 corrections.** Opener count was 13 against 12 real rows (4 restatements); the Type census had 6 wrong values summing to 174 against 172 rows. Rows were never wrong; only the numbers were. Now machine-gated by `verify_inventory.py` check `[5]` |
+| 15 | Quoted rows are genuinely verbatim, not silently corrected | **done at closure — 2 defects fixed in 4 places.** F042 "along with" -> "alongwith"; F167 + the figure-manifest caption row pluralised Fig 16.3's final word. Now machine-gated by check `[6]`, including negative assertions |
+| 16 | `verify_inventory.py` itself actually runs to completion | **done at closure — 1 defect fixed.** Check `[4]` called `.values()` on `_extract_labels`, which returns a flat `list[tuple]`; it raised `AttributeError` *after* printing only `ok` lines, so a crash read as a pass on a skim. `check_pdf.py` was confirmed correct and left untouched |
+
+**GATE 1: CLOSED.** `verify_inventory.py` exits 0 with **76 of 76 checks passing** (up from 46, of which the last was unreachable). The gate was confirmed non-vacuous by mutating a count and observing the expected FAIL, then restoring. Environment: `/vercel/share/neetenv` rebuilt this session per §0.2 — it does not survive a session boundary.
+
+**Gate 1 closed is NOT chapter closed.** Per §6, Ch16 at this moment has: a green Gate 1, **no chapter PDF**, a chapter script covering **§16.1 only**, and **0 of 178 rows ticked**. Gates 2 and 3 are correctly blocked and no claim is made about either. Ch16 must not appear in any "Done" or "Complete" tally on the strength of this gate.
+
+### Pass 1 session ledger (Gate 1 criterion: each session ran and reported its own machine-derived count)
+
+| Session | Scope | Machine-derived deliverable |
+|---|---|---|
+| `1-F` | Figures — extraction, mono conversion, per-asset visual verification, label harvest | 6 assets, all `mode=L`; **76 labels** across 6 matrix rows (12+9+11+4+16+24), harvested by opening each rendered asset |
+| `1-S` | Full source read, then Facts sweep, then independent hunting sweep | Facts rows for the prose body |
+| `1-H` | Heading sweep, prose ignored | **15 heading rows** = 8 numbered + 4 run-in + 3 unnumbered |
+| `1-O` | Opener sweep, headings ignored | **12 opener rows** = 11 headed + 1 unheaded intro (corrected from a hand-tallied 13 at closure) |
+| `1-Z` | Exercise-gap scan, summary classification, freeze, machine-derived counts | 178 rows `F001`-`F178` contiguous; 22 summary sentences (18 + 4 folded); 12 exercises, 4 genuine gaps |
 
 ## References
 
