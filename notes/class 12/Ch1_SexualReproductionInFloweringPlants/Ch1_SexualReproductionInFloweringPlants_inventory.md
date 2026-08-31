@@ -320,12 +320,12 @@ Summary sentences scanned: 15 (2 SUMMARY-UNIQUE folded to F252/F253; 13 BODY-PRE
 | 1.6 | Pollen products | assets/fig_1_6.png | 7 | yes | yes |
 | 1.7 | (a) A dissected flower of Hibiscus showing pistil; (b) Multicarpellary, syncarpous pistil of Papaver; (c) A multicarpellary, apocarpous gynoecium of Michelia; (d) A diagrammatic view of a typical anatropous ovule | assets/fig_1_7.png | 8 | yes | yes |
 | 1.8 | (a) Parts of the ovule showing a large megaspore mother cell, a dyad and a tetrad of megaspores; (b) 2, 4, and 8-nucleate stages of embryo sac and a mature embryo sac; (c) A diagrammatic representation of the mature embryo sac | assets/fig_1_8.png | 9 | yes | yes |
-| 1.9 | (a) Self-pollinated flowers; (b) Cross pollinated flowers; (c) Cleistogamous flowers | assets/fig_1_9.png | 11 | yes | yes |
+| 1.9 | (a) Self-pollinated flowers; (b) Cross pollinated flowers; (c) Cleistogamous flowers | assets/fig_1_9a.png + assets/fig_1_9b.png + assets/fig_1_9c.png | 11 | yes | yes |
 | 1.10 | A wind-pollinated plant showing compact inflorecence and well-exposed stamens | assets/fig_1_10.png | 12 | yes | yes |
 | 1.11 | (a) Pollination by water in Vallisneria; (b) Insect pollination | assets/fig_1_11a.png + assets/fig_1_11b.png | 13 | yes | yes |
-| 1.12 | (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of male gametes into a synergid and the movements of the sperms | assets/fig_1_12.png | 15 | yes | yes |
+| 1.12 | (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of male gametes into a synergid and the movements of the sperms | assets/fig_1_12a.png + assets/fig_1_12b.png + assets/fig_1_12c.png + assets/fig_1_12d.png + assets/fig_1_12e.png | 15 | yes | yes |
 | 1.13 | (a) Fertilised embryo sac showing zygote and Primary Endosperm Nucleus (PEN); (b) Stages in embryo development in a dicot | assets/fig_1_13.png | 17 | yes | yes |
-| 1.14 | (a) A typical dicot embryo; (b) L.S. of an embryo of grass | assets/fig_1_14.png | 18 | yes | yes |
+| 1.14 | (a) A typical dicot embryo; (b) L.S. of an embryo of grass | assets/fig_1_14a.png + assets/fig_1_14b.png | 18 | yes | yes |
 | 1.15 | (a) Structure of some seeds. (b) False fruits of apple and strawberry | assets/fig_1_15.png | 20 | yes | yes |
 
 Sub-panel assets (cleanly separable panels, same source figures): fig_1_5a, fig_1_5b_top, fig_1_5b_lower, fig_1_9a, fig_1_9b, fig_1_9c, fig_1_11a, fig_1_11b, fig_1_12a, fig_1_12b, fig_1_12c, fig_1_12d, fig_1_12e, fig_1_14a, fig_1_14b, fig_1_15a, fig_1_15b. Total assets on disk: 30, all `mode=L`. Plates 1.2, 1.3, 1.7, 1.8, 1.13 are deliberately NOT split (panels share label columns or are joined by flow arrows). The p2 Panchanan Maheshwari portrait and the p3 decorative chapter plate are deliberately NOT extracted (no person photograph is embedded — satisfies check 4).
@@ -339,3 +339,10 @@ All counts below were derived by re-parsing the finished `## Facts` table with a
 - opener rows (Type=opener): 24.
 - figure-label rows (Type=figure, wording begins "Figure labels:"): 12 (F011, F028, F037, F064, F085, F102, F137, F165, F191, F219, F221, F243).
 - Photographic/product plates with a caption row but intentionally NO label row: Fig 1.4 (F062), Fig 1.6 (F066), Fig 1.10 (F153).
+
+
+## Supplied reference-asset audit (2026-08-31)
+
+The supplied `Screenshots.zip` was extracted and audited before placement. The complete reference dimensions were: Figure 1.11(a) 828×664, Figure 1.11(b) 599×710, Figure 1.12(c) 758×1075, Figure 1.12(d) 350×253, Figure 1.12(e) 298×278, Figure 1.14(a) 300×397, Figure 1.14(b) 284×501, Figure 1.9(a)/(b) composite 298×567, Figure 1.9(c) 413×504, and Figure 1.5(b) supplied lower-stage reference 661×646. Supplied RGB references were converted to true-monochrome PNGs without masking or label reconstruction. The Figure 1.9 composite was split only at its visible panel gap; Figure 1.5b lower was restored from the NCERT source scan because the supplied reference omitted the required `Vacuoles` and `Nucleus` labels.
+
+The final PDF places Figures 1.5, 1.9, 1.11, 1.12, and 1.14 in horizontal panel rows with 5 pt internal cell padding. Tall panels retain their aspect ratios; no crop is stretched to force a landscape shape. Final verification was performed on the rendered PDF pages containing each target figure.

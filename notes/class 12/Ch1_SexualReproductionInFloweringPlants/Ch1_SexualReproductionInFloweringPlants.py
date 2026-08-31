@@ -63,14 +63,14 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
 
-def compact_figure_pair(left_asset, right_assets, caption_text, total_width_cm=15.9):
-    """Two figure panels side-by-side with 5 pt cell padding (10 pt total).
+def compact_figure_row(columns, caption_text, total_width_cm=15.9):
+    """Place source-preserving figure panels horizontally with 5 pt padding.
 
-    The right panel may be a list of source-extracted assets, which are stacked
-    vertically without altering their pixels. This keeps labels visible while
-    avoiding the large blank area produced by full-page plate crops.
+    Each column is either an asset name or a list of asset names to stack
+    vertically inside that column. Pixels are never masked or reconstructed.
     """
-    cell_w = total_width_cm * cm / 2.0
+    n = len(columns)
+    cell_w = total_width_cm * cm / n
     def img_flow(asset_name):
         path = os.path.join(ASSETS, asset_name)
         from PIL import Image as PILImage
@@ -78,16 +78,14 @@ def compact_figure_pair(left_asset, right_assets, caption_text, total_width_cm=1
             w, h = im.size
         max_w = cell_w - 10
         natural_w = w / 300.0 * 2.54 * cm
-        # Figure 1.5a is a small source panel; enlarging it within its own
-        # half-cell removes the large blank region while retaining all pixels.
-        width = max_w if asset_name == "fig_1_5a.png" else min(max_w, natural_w)
+        width = min(max_w, natural_w)
         height = width * h / w
         return RLImage(path, width=width, height=height)
-    left = Table([[img_flow(left_asset)]], colWidths=[cell_w])
-    right_rows = [[img_flow(a)] for a in right_assets]
-    right = Table(right_rows, colWidths=[cell_w])
-    for t in (left, right):
-        t.setStyle(TableStyle([
+    cells = []
+    for col in columns:
+        names = [col] if isinstance(col, str) else col
+        inner = Table([[img_flow(name)] for name in names], colWidths=[cell_w])
+        inner.setStyle(TableStyle([
             ("BOX", (0, 0), (-1, -1), 0.5, colors.HexColor("#555555")),
             ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
             ("ALIGN", (0, 0), (-1, -1), "CENTER"),
@@ -96,7 +94,8 @@ def compact_figure_pair(left_asset, right_assets, caption_text, total_width_cm=1
             ("TOPPADDING", (0, 0), (-1, -1), 5),
             ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
         ]))
-    row = Table([[left, right]], colWidths=[cell_w, cell_w])
+        cells.append(inner)
+    row = Table([cells], colWidths=[cell_w] * n)
     row.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
         ("LEFTPADDING", (0, 0), (-1, -1), 0),
@@ -318,9 +317,8 @@ story.append(body(
     "microspore and its <b>nucleus</b>, the <b>asymmetric spindle</b> of the unequal division "
     "that follows, and the resulting <b>vegetative cell</b> and <b>generative cell</b> of the "
     "mature 2-celled pollen grain."))
-story.append(compact_figure_pair(
-    "fig_1_5a.png",
-    ["fig_1_5b_top.png", "fig_1_5b_lower.png"],
+story.append(compact_figure_row(
+    ["fig_1_5a.png", ["fig_1_5b_top.png", "fig_1_5b_lower.png"]],
     "Fig. 1.5 &mdash; (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore "
     "maturing into a pollen grain. Labelled: vacuoles, nucleus, asymmetric spindle, vegetative "
     "cell, generative cell."))
@@ -539,10 +537,9 @@ story.append(body(
     "Autogamy in such flowers requires <b>synchrony in pollen release and stigma "
     "receptivity</b>, and also, the anthers and the stigma should <b>lie close to each "
     "other</b>."))
-story.append(figure(
-    "fig_1_9a.png",
-    "Fig. 1.9 (a) &mdash; Self-pollinated flowers.",
-    max_width_cm=4.2))
+story.append(compact_figure_row(
+    ["fig_1_9a.png", "fig_1_9b.png", "fig_1_9c.png"],
+    "Fig. 1.9 &mdash; (a) Self-pollinated flowers; (b) Cross-pollinated flowers; (c) Cleistogamous flowers."))
 story.append(body(
     "Some plants produce <b>two kinds of flowers</b>:"))
 story.append(b1(
@@ -555,12 +552,6 @@ story.append(b1(
     "flowers are <b>invariably autogamous</b>, as there is <b>no chance of cross-pollen "
     "landing on the stigma</b>, and they produce <b>assured seed-set even in the absence of "
     "pollinators</b>."))
-story.append(figure(
-    "fig_1_9c.png",
-    "Fig. 1.9 (c) &mdash; Cleistogamous flowers. Labelled: chasmogamous flower, cleistogamous "
-    "flowers &mdash; the same plant bears both kinds.",
-    max_width_cm=7.0))
-
 story.append(heading("1.2.3", "Geitonogamy", level=3))
 story.append(body(
     "<b>Transfer of pollen grains from the anther to the stigma of another flower of the same "
@@ -573,10 +564,7 @@ story.append(body(
     "<b>Transfer of pollen grains from anther to the stigma of a different plant.</b> This is "
     "the <b>only</b> type of pollination which during pollination brings <b>genetically "
     "different types of pollen grains</b> to the stigma."))
-story.append(figure(
-    "fig_1_9b.png",
-    "Fig. 1.9 (b) &mdash; Cross pollinated flowers.",
-    max_width_cm=5.1))
+
 
 # ---- 1.2.3 Agents of Pollination (F138-F165) ----
 story.append(heading("1.2.3", "Agents of Pollination", level=3))
@@ -625,9 +613,8 @@ story.append(body(
     "In the water-pollination panel of the figure below, the <b>female flower</b> of "
     "<i>Vallisneria</i> is labelled at the water surface with its <b>stigma</b> exposed, and "
     "the released <b>male flower</b> is labelled floating towards it."))
-story.append(compact_figure_pair(
-    "fig_1_11a.png",
-    ["fig_1_11b.png"],
+story.append(compact_figure_row(
+    ["fig_1_11a.png", "fig_1_11b.png"],
     "Fig. 1.11 &mdash; (a) Pollination by water in <i>Vallisneria</i>; (b) Insect pollination. "
     "Labelled: female flower, stigma, male flower."))
 story.append(gap())
@@ -732,16 +719,15 @@ story.append(body(
     "the <b>synergid</b> with its <b>filiform apparatus</b>, the <b>egg cell</b> and its "
     "<b>egg nucleus</b> bounded by the <b>plasma membrane</b>, the <b>central cell</b> with "
     "the <b>polar nuclei</b>, and an <b>antipodal</b> cell at the far end."))
-story.append(figure(
-    "fig_1_12.png",
+story.append(compact_figure_row(
+    ["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png", "fig_1_12d.png", "fig_1_12e.png"],
     "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
     "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
     "view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of "
     "male gametes into a synergid and the movements of the sperms, one into the egg and the "
     "other into the central cell. Labelled: pollen tube, antipodal, polar nuclei, egg cell, "
     "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
-    "vegetative nucleus.",
-    max_width_cm=15.5))
+    "vegetative nucleus."))
 story.append(note(
     "<b>Artificial hybridisation</b> is one of the <b>major approaches of crop improvement "
     "programme</b>. Two techniques make sure that only the desired pollen reaches the stigma. "
@@ -864,12 +850,11 @@ story.append(body(
     "in the grass embryo the <b>scutellum</b>, the <b>coleoptile</b> enclosing the "
     "<b>shoot apex</b>, the <b>epiblast</b> lying opposite the scutellum, and the "
     "<b>coleorhiza</b> sheathing the radicle."))
-story.append(figure(
-    "fig_1_14.png",
+story.append(compact_figure_row(
+    ["fig_1_14a.png", "fig_1_14b.png"],
     "Fig. 1.14 &mdash; (a) A typical dicot embryo; (b) L.S. of an embryo of grass. Labelled: "
     "plumule, cotyledons, hypocotyl, radicle, root cap, scutellum, coleoptile, shoot apex, "
-    "epiblast, coleorhiza.",
-    max_width_cm=4.9))
+    "epiblast, coleorhiza."))
 
 # ---- 1.4.3 Seed (F222-F243) ----
 story.append(heading("1.4.3", "Seed", level=2))
