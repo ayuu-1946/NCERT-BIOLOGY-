@@ -17,9 +17,13 @@ The audit script `scratch/audit_ch4_figures.py` runs three complementary checks 
 | E | Labels and part markers remain visible | Visually reviewed using source grids and regenerated contact sheets |
 | F | Excess whitespace controlled | Rectangles use compact approximately 10 pt clearance where layout permits |
 
+## Correction record
+
+The reported defects were corrected as follows: Figures 4.18 and 4.19 were shifted right to remove left-column text bleed; Figure 4.20 was tightened on the right; Figure 4.4 was tightened at the bottom; Figure 4.2 was extended on the right to restore the complete cross-section; Figure 4.5 was extended to retain the full Spongilla artwork and its separate prose strip was removed after rendering; and Figure 4.8 was extended upward to restore the complete Pleurobrachia tip.
+
 ## Visual review record
 
-The full contact sheet is `scratch/ch4_assets_contact_final.png`; the focused review sheet is `scratch/ch4_flagged_contact_final.png`. The final asset set contains all numbered figure plates from 4.1 through 4.24, with multi-part plates preserved as grouped assets where that improves label visibility, plus the explicitly marked unnumbered Vertebrata chart. Captions are documented in the inventory rather than needlessly repeated inside the image assets.
+The final focused review sheet is `scratch/ch4_fix_final_contact.png`; the corrected seven-asset set was inspected at enlarged scale after regeneration. Earlier full contact sheets and audit logs remain in `scratch/` for reproducibility. The final asset set contains all numbered figure plates from 4.1 through 4.24, with multi-part plates preserved as grouped assets where that improves label visibility, plus the explicitly marked unnumbered Vertebrata chart. Captions are documented in the inventory rather than needlessly repeated inside the image assets.
 
 ## Reproducibility
 
