@@ -373,11 +373,11 @@ Pass 2 wrote the chapter script linearly from the frozen inventory in Content Or
 - [x] **`check_pdf.py` green — 10 of 10 PASS, 0 fail, 0 warn.** Checks: 1 footer/header band · 2 legibility floor (smallest text 6.0pt) · 3 grayscale-only images (4/4 monochrome) · 4 no person photograph · 5 banned glyphs · 6 figure-label coverage 43/43 · 7 inventory fully ticked 241/241 · 8 A4 portrait geometry (11/11 pages) · 9 no orphaned headings (70 banners) · 10 no badge-plate collisions (154 plates).
 - [x] **`verify_inventory.py` green** — re-parses this file and asserts every header count, including the updated `245 of 245` ticked claim, against a fresh parse.
 
-**Gate 2: CLOSED.** Gate 3 (Pass 3) opened after this line. Pass 3 is run in two parts: **3(a)** the visual render check (below, now CLOSED) and **3(b)** the independent line-by-line read of the built PDF against the source plus the tracker/README completion tally (still OPEN). This chapter must not appear in any completion tally until Gate 3(b) closes.
+**Gate 2: CLOSED.** Gate 3 (Pass 3) opened after this line and is now closed in both parts: **3(a)** the visual render check and **3(b)** the independent line-by-line read of the built PDF against the source, followed by the roll-up propagation. See the two checklists below and the closure record at the end of this file. *(History: this paragraph read "3(b) ... still OPEN — this chapter must not appear in any completion tally until Gate 3(b) closes" until the 2026-08-31 closure session. That instruction has been discharged, not deleted; the tally now legitimately counts this chapter.)*
 
 ## Gate 3(a) checklist — visual render pass
 
-Environment rebuilt first per §0.2 (the venv is ephemeral): `/vercel/share/neetenv` recreated, `pymupdf` reinstalled, PDF regenerated from `Ch15_BodyFluidsAndCirculation.py`. Reproducibility confirmed by a fresh parse — **11 pages, 30,707 text chars, 4 embedded images** — and both verifiers re-run green on the rebuilt artifact before the render check began.
+Environment rebuilt first per §0.2 (the venv is ephemeral): `/vercel/share/neetenv` recreated, `pymupdf` reinstalled, PDF regenerated from `Ch15_BodyFluidsAndCirculation.py`. Reproducibility confirmed by a fresh parse — **11 pages, 30,724 pymupdf text chars (31,367 pdfplumber), 4 embedded images** — and both verifiers re-run green on the rebuilt artifact before the render check began. *(Corrected 2026-08-31 at closure: this line read "30,707 text chars", a stated count that never matched the artifact. A fresh `pymupdf` parse of the committed PDF returns **30,724**, which is what the Gate 3(b) fingerprint below, the header claims asserted by `verify_inventory.py` (`EXPECT_CHARS`), and `Ch15_TRACKER.md` all carry. No page, image, row or asset changed — a stated count was wrong in one place and is now stated once, consistently.)*
 
 - [x] **Both Gate-2 verifiers re-confirmed green on the rebuilt PDF** — `check_pdf.py` 10/10 PASS (0 fail, 0 warn); `verify_inventory.py` green (245/245 ticked claim re-asserted against a fresh parse).
 - [x] **All 11 pages rendered and inspected individually** — pages rendered to PNG and read one by one; no page skipped.
@@ -423,6 +423,29 @@ Run per §6 Pass 3(b) and the "Gate 3(b) Verification Rules" appendix. Environme
 - The closing transition of §15.3, *"Let us study the human circulatory system."* (source p. 197, immediately before the 15.3.1 heading), has **no inventory row**. It is a pure navigational sentence carrying **no fact** — it is not an antecedent/defining sentence and the very next line is the `15.3.1 Human Circulatory System` banner, which states the same transition structurally. Under the chapter's governing doctrine (§ core: "if both source and output were reduced to a flat list of *facts*, the two lists must match exactly — the prose need not match"), a factless transition is correctly omitted, not a MISSING/UNINVENTORIED defect. **Not a confirmed defect; no row added, no PDF change.** Logged so a later audit does not re-raise it.
 
 **Gate 3(b): CLOSED.** Full read complete in both directions, per-section reading claim stated above, **zero confirmed defects** (0 MISSING / 0 FABRICATED / 0 DRIFTED / 0 UNINVENTORIED; one factless transition considered and correctly dismissed). All five §6 Gate-3 conditions hold: (1) zero confirmed defects; (2) `check_pdf.py` green on the final rebuild; (3) 11/11 pages inspected at 3(a); (4) 3(b) full read in both directions with reading claim, no coverage/grep substitute; (5) rebuild reproducible (identical fingerprint). **VERDICT: PASS.**
+
+## Closure & roll-up propagation record (2026-08-31, documentation session)
+
+Gate 3(b) closed the *content* question; this section closes the *documentation-consistency* half of it (§7 rule 8 / Gate 1 closure rule 2), and records what was re-derived rather than inherited. Every claim below was re-run in this session under a freshly rebuilt `/vercel/share/neetenv` (§0.2 — the venv was absent, as it always is across a session boundary), **before** any status line anywhere was edited.
+
+**Re-derived from the artifacts, not read off a handoff:**
+
+- `check_pdf.py --strict "notes/class 11/Ch15_BodyFluidsAndCirculation"` → **VERDICT PASS, 0 fail, 0 warn**, exit 0. Checks 1–9 green: 43/43 labels in running text · 241/241 Facts rows ticked · 4/4 embedded images monochrome · 11/11 pages A4 portrait · 70 banner headings, none orphaned.
+- `verify_inventory.py` → **ALL CHECKS PASS**: 245 rows (241 Facts + 4 matrix) · `F001`→`F245` contiguous, no dupes · 22 headings = 15 numbered + 7 unnumbered · 20 openers · 5 folded SUMMARY-UNIQUE (`F071`, `F105`, `F111`, `F166`, `F199`) · 245 ticked · 12 normalized lowercase `Type` values · 43 labels across 4 figures (8/14/5/16) · **0 phantom figure rows, 0 duplicate labels** · header claims mismatched: none · artifact claims mismatched: none.
+- **Reproducible rebuild re-confirmed:** the committed PDF was copied aside, regenerated from `Ch15_BodyFluidsAndCirculation.py`, and both parsed — **11 pages / 30,724 chars / 4 images / text SHA-256 prefix `1a49f8f83c7d142b` on both**. The regenerated file was then discarded in favour of the committed one, so the repository carries no timestamp-only binary churn.
+
+**Documentation defect found and fixed in this session (cross-document disagreement *is* the finding — Gate 3(b) rule 2):** a stale **30,707**-char claim survived in two live places — this file's Gate 3(a) preamble and `Ch15_TRACKER.md`'s Gate 3(a) line — while the artifact, the Gate 3(b) fingerprint and `verify_inventory.py`'s `EXPECT_CHARS` all hold **30,724**. Both live copies were corrected with a history note. The rows won; only a stated count moved (§7, Gate 1 closure rule 5).
+
+**Roll-ups re-derived by counting rows, never incremented (Gate 1 closure rule 3):** parsing `CHAPTER_TRACKER.md` per class section returns **Class 11: 8 ✅ · Class 12: 6 ✅ · total 14 / 32** with Chapter 15 marked Done — and the header, the Class 11 section footer and the count-derivation note were all set from that same parse, in this session. `CHAPTER_STATUS.md` gained a Chapter 15 overview row and a detail section carrying the evidence above.
+
+**What this closure does *not* claim:** the bidirectional full read itself was performed and recorded in the Gate 3(b) checklist above; this session **re-derived its machine-checkable conditions (2 and 5) and its documentation consistency**, and did not re-perform the 245-row read. Conditions 1, 3 and 4 stand on the record above them, unaltered.
+
+**Carry-overs (still live, for whoever touches this chapter next):**
+
+1. The source's own misspellings — `primarly`, `medulla oblangata`, `coagulam`, `no enough oxygen`, `1,500,00-3,500,00` — are **verbatim NCERT wording and must never be "corrected"**; each is a frozen row.
+2. Figures 15.2–15.4 carry vector callouts with **no text layer**, so their labels reach check 6 only through the verbatim callout NOTE that follows each figure. Deleting or paraphrasing one of those NOTEs turns check 6 red with no visible cause.
+3. Subscripts/superscripts must stay as `<sub>`/`<super>` tags; a Unicode character would trip check 5.
+4. The factless §15.3 transition *"Let us study the human circulatory system."* was considered and **correctly dismissed** (recorded above) — do not re-raise it as UNINVENTORIED.
 
 ## References
 
