@@ -1,0 +1,52 @@
+--- A) text-layer word grazing ---
+fig_11_1: words_in_rect=2 ok
+fig_11_2: words_in_rect=13 ok
+fig_11_3a: words_in_rect=0 ok
+fig_11_3b: words_in_rect=0 ok
+fig_11_3c: words_in_rect=0 ok
+fig_11_4: words_in_rect=7 ok
+fig_11_5: words_in_rect=20 GRAZING ['LHC']
+fig_11_6: words_in_rect=13 ok
+fig_11_7: words_in_rect=0 ok
+fig_11_8: words_in_rect=23 ok
+fig_11_9: words_in_rect=0 ok
+fig_11_10: words_in_rect=8 ok
+--- B) drawings-extent overflow ---
+fig_11_1: OVERFLOW L0.0 T0.0 R0.0 B7.9
+fig_11_2: OVERFLOW L0.0 T7.0 R0.0 B0.0
+fig_11_3a: ok
+fig_11_3b: ok
+fig_11_3c: OVERFLOW L0.0 T4.9 R0.0 B0.0
+fig_11_4: ok
+fig_11_5: ok
+fig_11_6: ok
+fig_11_7: no drawings (raster figure)
+fig_11_8: no drawings (raster figure)
+fig_11_9: ok
+fig_11_10: ok
+--- C) unexplained dark ink in border band ---
+fig_11_1: EDGE-INK ['B:600px']
+fig_11_2: clean
+fig_11_3a: EDGE-INK ['B:91px']
+fig_11_3b: EDGE-INK ['T:53px', 'B:490px']
+fig_11_3c: EDGE-INK ['T:398px']
+fig_11_4: clean
+fig_11_5: EDGE-INK ['B:120px']
+fig_11_6: clean
+fig_11_7: clean
+fig_11_8: clean
+fig_11_9: EDGE-INK ['B:223px']
+fig_11_10: clean
+--- D) emitted image mode and blank-margin estimate ---
+fig_11_1: mode=L size=(938, 1376) ink_bbox_margins=(np.int64(60), np.int64(5), np.int64(0), np.int64(0))
+fig_11_2: mode=L size=(1834, 793) ink_bbox_margins=(np.int64(31), np.int64(0), np.int64(72), np.int64(16))
+fig_11_3a: mode=L size=(959, 688) ink_bbox_margins=(np.int64(65), np.int64(62), np.int64(20), np.int64(0))
+fig_11_3b: mode=L size=(959, 563) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(19), np.int64(0))
+fig_11_3c: mode=L size=(959, 689) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(21), np.int64(74))
+fig_11_4: mode=L size=(938, 793) ink_bbox_margins=(np.int64(31), np.int64(49), np.int64(0), np.int64(0))
+fig_11_5: mode=L size=(1022, 793) ink_bbox_margins=(np.int64(11), np.int64(75), np.int64(40), np.int64(0))
+fig_11_6: mode=L size=(896, 834) ink_bbox_margins=(np.int64(22), np.int64(63), np.int64(32), np.int64(23))
+fig_11_7: mode=L size=(1814, 1271) ink_bbox_margins=(np.int64(29), np.int64(62), np.int64(15), np.int64(0))
+fig_11_8: mode=L size=(1563, 1730) ink_bbox_margins=(np.int64(71), np.int64(33), np.int64(0), np.int64(0))
+fig_11_9: mode=L size=(1501, 1500) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(136), np.int64(0))
+fig_11_10: mode=L size=(1001, 772) ink_bbox_margins=(np.int64(0), np.int64(32), np.int64(39), np.int64(13))

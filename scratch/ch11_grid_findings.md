@@ -1,0 +1,29 @@
+# Chapter 11 grid findings
+
+The target PDF is `Chapter/class 11/Chapter 11 - Photosynthesis in Higher Plants.pdf` with 22 pages. Figure-bearing pages identified from the text layer are 4, 6, 7, 8, 9, 10, 11, 14, 16, and 19. Page 22 only refers back to Figure 11.10 and contains no new figure plate.
+
+The contact sheet confirms the chapter figure census: Figure 11.1 (four-panel Priestley experiment) on p4; Figure 11.2 (chloroplast) on p6; Figure 11.3a–c (three graph panels) on p7; Figure 11.4 (light-harvesting complex) on p8; Figure 11.5 (Z scheme) on p9; Figure 11.6 (cyclic photophosphorylation) on p10; Figure 11.7 (chemiosmotic ATP synthesis) on p11; Figure 11.8 (Calvin cycle) on p14; Figure 11.9 (Hatch and Slack pathway) on p16; and Figure 11.10 (light-intensity graph) on p19.
+
+Full-resolution inspection of p4 shows Figure 11.1 is a four-panel 2×2 plate at the left side. Its crop must include panels (a), (b), (c), and (d), all bell jars, mice, candles, plant, and arrows, plus the panel markers. It must stop above the caption `Figure 11.1 Priestley’s experiment` and exclude the adjacent prose column to the right and below. The top of the artwork begins near the lower edge of the page furniture, and the bottom is just above the caption.
+
+Production constraints: use the 440 dpi / 5-point grid for every figure page; use compact crops with approximately 10-point safety padding where needed; preserve all labels, arrows, terminal marks, and panel markers; convert output to grayscale with autocontrast; audit text-layer grazing, drawing extents, and 6-point border-band ink; inspect every emitted PNG individually.
+
+Full-resolution p6: Figure 11.2 is a wide chloroplast plate in the lower half, with nine right-side labels (Outer membrane, Inner membrane, Stromal lamella, Grana, Stroma, Ribosomes, Starch granule, Lipid droplet, plus leader lines). The crop must include the entire oval chloroplast and all right-side labels/leader lines, stop above the two-line caption, and exclude the preceding paragraph.
+
+Full-resolution p7: Figure 11.3 is a vertically stacked three-panel graph. Per the skill’s multi-part rule, extract 11.3a, 11.3b, and 11.3c as separate assets. 11.3a includes the three pigment labels and y-axis label; 11.3b includes the action-spectrum curve and y-axis label; 11.3c includes both legend entries, curves, y-axis label, x-axis wavelength label, and 400–700 tick labels. All panel markers (a), (b), and (c) must remain visible. Crops should be tight to each individual panel, with captions excluded from the assets.
+
+Full-resolution p8: Figure 11.4 is a left-column light-harvesting complex diagram. Include the complete photon arrow, pigment-molecule cluster, reaction-centre leader, primary acceptor, and all labels. Exclude the right prose column and the caption line from the crop.
+
+Full-resolution p9: Figure 11.5 is a right-column Z-scheme diagram. Include both Photosystem II and Photosystem I brackets, Light, electron acceptors, both LHCs, electron transport system, ATP/ADP+iP, NADPH/NADP+, water-splitting annotation, arrows, and the complete diagram edge. Exclude the caption and neighboring prose.
+
+Full-resolution p10: Figure 11.6 is a left-column cyclic photophosphorylation diagram. Include Light, Photosystem I bracket, electron acceptor, electron transport system, ADP+iP/ATP labels and curved arrow, Chlorophyll P700, and both dashed/solid transfer arrows. Exclude the caption and all right-column prose.
+
+Full-resolution p11: Figure 11.7 is a large upper-page chemiosmosis diagram. Include the complete thylakoid membrane oval, stroma/lumen labels, PS II/P680, cytochrome b6f, PS I/P700, plastoquinone, plastocyanin, FNR/Fd, NADP+/NADPH, H+ marks, water oxidation, electrochemical gradient arrow, CF0/CF1, ATP synthase, ADP+P_i and ATP. Stop above the caption and exclude the explanatory prose below.
+
+Full-resolution p14: Figure 11.8 is a large centered Calvin-cycle diagram. Include Atmosphere, CO2+H2O, Ribulose-1,5-bisphosphate, Carboxylation, 3-phosphoglycerate, Reduction, ATP/NADPH and return products, Triose phosphate, Sucrose/starch, Regeneration, ADP/ATP, all arrows, and numbered stage circles 1–3. Exclude the caption and prose below.
+
+Full-resolution p16: Figure 11.9 is a large lower-page Hatch and Slack pathway diagram with upper mesophyll and lower bundle-sheath compartments. Include Atmospheric CO2, Mesophyll cell, Bundle sheath cell, plasma membrane, cell wall, plasmodesmata, HCO3−, PEP, fixation, regeneration, transport, C4 acid, decarboxylation, CO2, C3 acid, Calvin-cycle fixation, and all arrows/compartment boundaries. Exclude the caption and preceding prose.
+
+First regenerated contact-sheet review found crop defects: Figure 11.1 included a neighboring prose strip at the far right; Figure 11.2 included preceding prose above the chloroplast; Figure 11.3a–c needed panel-boundary repinning to avoid clipped axes/adjacent panels; Figure 11.4 clipped the lower pigment cluster; Figure 11.5 clipped the left Light node; Figure 11.6 clipped the lower Chlorophyll P700 node; Figure 11.7 clipped the lower ATP-synthase region; Figure 11.8 included page-furniture/header ink at the top and clipped lower labels. These are being corrected by tighter x/y pins while retaining approximately 10-point artwork safety margins.
+
+Final contact-sheet review confirms the main figure regions are correct but identifies remaining edge defects: Figure 11.2 still has one preceding word at the top and omits lower labels; Figure 11.3a–c need small vertical extensions to retain panel markers and the lower x-axis; Figure 11.4 needs a lower extension for the pigment-molecule cluster; Figures 11.5–11.7 need small bottom/left extensions for lower nodes or labels; Figure 11.8 needs a lower extension for `Sucrose, starch`. Figure 11.9 and Figure 11.10 are complete and compact.
