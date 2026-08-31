@@ -23,7 +23,14 @@ FIGS = [
     # x bounds preserve all Z/A/I/H/Sarcomere labels.
     ("17_2", 4, (85, 325, 520, 680)),
     # p5: two-part actin/myosin composition; x=85 preserves left binding-site
-    # labels and x=505 preserves right filament labels; caption is below y=600.
+    # labels and x=505 preserves right filament labels; caption starts y=602.0.
+    # Audit check B reports OVERFLOW L32.3/T55.5/B11.7 here: this is the
+    # documented false positive. The myosin head is drawn as ~1900 stacked
+    # gradient-fill slices whose bounding rects extend behind panel (a), so the
+    # union is meaningless. Verified by pixel scan instead: zero strong ink
+    # (<170) between y=356 and y=383 (panel (a) artwork starts y~384; the ink
+    # above is the meromyosin table), and zero non-word strong ink in either the
+    # left band (x 53-85) or the bottom band (y 595-611). Nothing is clipped.
     ("17_3", 5, (85, 375, 505, 595)),
     # p6: complete four-stage cross-bridge cycle; x=65 preserves the left ATP
     # stage, x=565 reaches the page-safe right margin for the full Myosin head
@@ -44,14 +51,25 @@ FIGS = [
     # label. Text-layer prose words are masked after rendering because the
     # neighboring column overlaps this figure’s left label zone; vector labels
     # remain untouched. x=520 preserves right labels, y=675 stops above caption.
+    # Audit check A reports GRAZING here by design: every grazing word belongs
+    # to the left neighbour prose column (all of them end at x~257.5, so the
+    # x0=240 edge clips them) and every one is whitened by the mask branch
+    # below. Check C is clean; check B reports "no drawings" (raster figure),
+    # so the step-5 eyeball is what actually confirms this rect.
     ("17_8", 9, (240, 425, 520, 675)),
     # p10 upper-left: pectoral girdle and upper arm; x=50 preserves left outline
     # and x=295 preserves right labels, ending just above caption at y=386.
     ("17_9", 10, (50, 75, 295, 382)),
     # p10 lower-left: pelvic girdle and lower limb; x=50 preserves left labels,
-    # x=295 preserves right labels, and y=758 captures the complete foot and
-    # Phalanges label. Caption words below y=667 are masked after rendering.
-    ("17_10", 10, (50, 410, 295, 758)),
+    # x=295 preserves right labels. y1=676 sits ~4pt past the centre-inside
+    # drawings extent (y 425.0-672.3), which is where the foot and the
+    # Phalanges bracket/label actually end. Do NOT push y1 toward the caption:
+    # the earlier y1=758 pinning reached the full-bleed page-footer band at
+    # rect [-19.7, 749.1, 591.4, 800.2], which is vector fill (not a
+    # text-layer word), so the caption mask could not remove it and it shipped
+    # as a solid gray bar across the bottom of the figure frame. Caption words
+    # begin at y=686.2, safely below this rect.
+    ("17_10", 10, (50, 410, 295, 676)),
 ]
 
 def main():
@@ -62,16 +80,16 @@ def main():
         clip = pymupdf.Rect(*rect) & page.rect
         pix = page.get_pixmap(clip=clip, dpi=RENDER_DPI, alpha=False)
         img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
-        if fid in {"17_8", "17_10"}:
+        if fid in {"17_8"}:
             # Remove only text-layer prose/caption words from overlapping
             # regions. Figure labels are vector artwork and remain intact.
+            # 17_10 no longer needs masking: its rect now stops at y=676, above
+            # both the caption (y=686.2) and the page-footer band (y=749.1).
             draw = ImageDraw.Draw(img)
             z = RENDER_DPI / 72
             for w in page.get_text("words"):
                 wr = pymupdf.Rect(*w[:4])
                 if (wr & clip).is_empty:
-                    continue
-                if fid == "17_10" and wr.y0 < 667:
                     continue
                 x0 = max(0, int((wr.x0 - clip.x0) * z) - 2)
                 y0 = max(0, int((wr.y0 - clip.y0) * z) - 2)
