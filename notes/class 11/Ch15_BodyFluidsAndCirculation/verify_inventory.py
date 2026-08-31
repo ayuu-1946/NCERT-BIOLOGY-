@@ -96,10 +96,53 @@ print("phantom figs: %s" % phantom)
 print("dupe labels : %s" % dupes)
 print("header claims mismatched: %s" % (bad or "none"))
 
+# ---- artifact metrics, pinned WITH their extraction method ----------------
+# Gate 3(b) rule 4 (fail loud, not silently-plausible): a bare "N text chars"
+# claim is method-ambiguous and drifts silently. pdfplumber and pymupdf
+# legitimately disagree on this PDF (31,367 vs 30,724) because they join page
+# text differently, so a recorded count is only meaningful next to the reader
+# that produced it. Both are asserted here; a mismatch is a real defect
+# (script or assets changed), never a choice of library.
+PDF = HERE / "Ch15_BodyFluidsAndCirculation.pdf"
+EXPECT_PAGES, EXPECT_IMAGES = 11, 4
+EXPECT_CHARS = {"pdfplumber": 31367, "pymupdf": 30724}
+
+artifact_bad = {}
+if PDF.exists():
+    import pdfplumber
+    import pymupdf
+
+    with pdfplumber.open(PDF) as _p:
+        got_pages = len(_p.pages)
+        got_chars_plumber = len("".join((pg.extract_text() or "") for pg in _p.pages))
+        got_images = sum(len(pg.images) for pg in _p.pages)
+    _d = pymupdf.open(PDF)
+    got_chars_mupdf = len("".join(pg.get_text() for pg in _d))
+    got_portrait = all(pg.rect.width < pg.rect.height for pg in _d)
+    _d.close()
+
+    for name, got, want in (
+        ("pages", got_pages, EXPECT_PAGES),
+        ("images", got_images, EXPECT_IMAGES),
+        ("chars/pdfplumber", got_chars_plumber, EXPECT_CHARS["pdfplumber"]),
+        ("chars/pymupdf", got_chars_mupdf, EXPECT_CHARS["pymupdf"]),
+    ):
+        if got != want:
+            artifact_bad[name] = (want, got)
+    if not got_portrait:
+        artifact_bad["portrait"] = (True, False)
+
+    print("artifact    : %d pages / %d images / %d chars (pdfplumber) / %d chars (pymupdf)"
+          % (got_pages, got_images, got_chars_plumber, got_chars_mupdf))
+    print("artifact mismatched: %s" % (artifact_bad or "none"))
+else:
+    print("artifact    : PDF absent - artifact metrics not checked")
+
 assert not phantom, "phantom figure row(s): %s" % phantom
 assert not dupes, "duplicated labels: %s" % dupes
 assert len(figs) == 4, "expected 4 figure rows, got %d" % len(figs)
 assert not bad, "header claim mismatch: %s" % bad
 assert len(openers) == len(headings) - 3 + 1, "opener census arithmetic broken"
+assert not artifact_bad, "artifact metric mismatch (want, got): %s" % artifact_bad
 print("\nALL CHECKS PASS")
 sys.exit(0)
