@@ -34,189 +34,189 @@ One row per sentence-level fact, in source order. Types: `heading` Â· `opener` Â
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
-| F001 | title | heading | "LOCOMOTION AND MOVEMENT" (chapter title plate) | |
-| F002 | intro | opener | "Movement is one of the significant features of living beings." | |
-| F003 | intro | concept | "Animals and plants exhibit a wide range of movements." | |
-| F004 | intro | example | "Streaming of protoplasm in the unicellular organisms like Amoeba is a simple form of movement." | |
-| F005 | intro | example | "Movement of cilia, flagella and tentacles are shown by many organisms." | |
-| F006 | intro | example | "Human beings can move limbs, jaws, eyelids, tongue, etc." | |
-| F007 | intro | definition | "Some of the movements result in a change of place or location. Such voluntary movements are called locomotion." | |
-| F008 | intro | example | "Walking, running, climbing, flying and swimming are all some forms of locomotory movements." | |
-| F009 | intro | concept | "Locomotory structures need not be different from those affecting other types of movements." | |
-| F010 | intro | example | "For example, in Paramoecium, cilia helps in the movement of food through cytopharynx and in locomotion as well." | |
-| F011 | intro | example | "Hydra can use its tentacles for capturing its prey and also use them for locomotion." | |
-| F012 | intro | example | "We use limbs for changes in body postures and locomotion as well." | |
-| F013 | intro | concept | "The above observations suggest that movements and locomotion cannot be studied separately." | |
-| F014 | intro | concept | "The two may be linked by stating that all locomotions are movements but all movements are not locomotions." | |
-| F015 | intro | concept | "Methods of locomotion performed by animals vary with their habitats and the demand of the situation." | |
-| F016 | intro | concept | "However, locomotion is generally for search of food, shelter, mate, suitable breeding grounds, favourable climatic conditions or to escape from enemies/predators." | |
-| F017 | 17.1 | heading | "17.1 TYPES OF MOVEMENT" | |
-| F018 | 17.1 | opener | "Cells of the human body exhibit three main types of movements, namely, amoeboid, ciliary and muscular." | |
-| F019 | 17.1 | concept | "Some specialised cells in our body like macrophages and leucocytes in blood exhibit amoeboid movement." | |
-| F020 | 17.1 | process | "It is effected by pseudopodia formed by the streaming of protoplasm (as in Amoeba)." | |
-| F021 | 17.1 | concept | "Cytoskeletal elements like microfilaments are also involved in amoeboid movement." | |
-| F022 | 17.1 | concept | "Ciliary movement occurs in most of our internal tubular organs which are lined by ciliated epithelium." | |
-| F023 | 17.1 | process | "The coordinated movements of cilia in the trachea help us in removing dust particles and some of the foreign substances inhaled along with the atmospheric air." | |
-| F024 | 17.1 | process | "Passage of ova through the female reproductive tract is also facilitated by the ciliary movement." | |
-| F025 | 17.1 | concept | "Movement of our limbs, jaws, tongue, etc, require muscular movement." | |
-| F026 | 17.1 | concept | "The contractile property of muscles are effectively used for locomotion and other movements by human beings and majority of multicellular organisms." | |
-| F027 | 17.1 | concept | "Locomotion requires a perfect coordinated activity of muscular, skeletal and neural systems." | |
-| F028 | 17.1 | concept | "In this chapter, you will learn about the types of muscles, their structure, mechanism of their contraction and important aspects of the skeletal system." | |
-| F029 | 17.2 | heading | "17.2 MUSCLE" | |
-| F030 | 17.2 | opener | "You have studied in Chapter 8 that the cilia and flagella are the outgrowths of the cell membrane." | |
-| F031 | 17.2 | example | "Flagellar movement helps in the swimming of spermatozoa, maintenance of water current in the canal system of sponges and in locomotion of Protists like Euglena." | |
-| F032 | 17.2 | definition | "Muscle is a specialised tissue of mesodermal origin." | |
-| F033 | 17.2 | number | "About 40-50 per cent of the body weight of a human adult is contributed by muscles." | |
-| F034 | 17.2 | concept | "They have special properties like excitability, contractility, extensibility and elasticity." | |
-| F035 | 17.2 | concept | "Muscles have been classified using different criteria, namely location, appearance and nature of regulation of their activities." | |
-| F036 | 17.2 | concept | "Based on their location, three types of muscles are identified : (i) Skeletal (ii) Visceral and (iii) Cardiac." | |
-| F037 | 17.2 | concept | "Skeletal muscles are closely associated with the skeletal components of the body." | |
-| F038 | 17.2 | concept | "They have a striped appearance under the microscope and hence are called striated muscles." | |
-| F039 | 17.2 | concept | "As their activities are under the voluntary control of the nervous system, they are known as voluntary muscles too." | |
-| F040 | 17.2 | concept | "They are primarily involved in locomotory actions and changes of body postures." | |
-| F041 | 17.2 | concept | "Visceral muscles are located in the inner walls of hollow visceral organs of the body like the alimentary canal, reproductive tract, etc." | |
-| F042 | 17.2 | concept | "They do not exhibit any striation and are smooth in appearance. Hence, they are called smooth muscles (nonstriated muscle)." | |
-| F043 | 17.2 | concept | "Their activities are not under the voluntary control of the nervous system and are therefore known as involuntary muscles." | |
-| F044 | 17.2 | example | "They assist, for example, in the transportation of food through the digestive tract and gametes through the genital tract." | |
-| F045 | 17.2 | concept | "As the name suggests, Cardiac muscles are the muscles of heart." | |
-| F046 | 17.2 | concept | "Many cardiac muscle cells assemble in a branching pattern to form a cardiac muscle." | |
-| F047 | 17.2 | concept | "Based on appearance, cardiac muscles are striated." | |
-| F048 | 17.2 | concept | "They are involuntary in nature as the nervous system does not control their activities directly." | |
-| F049 | 17.2 | definition | "Each organised skeletal muscle in our body is made of a number of muscle bundles or fascicles held together by a common collagenous connective tissue layer called fascia." | |
-| F050 | 17.2 | concept | "Each muscle bundle contains a number of muscle fibres (Figure 17.1)." | |
-| F051 | 17.2 | definition | "Each muscle fibre is lined by the plasma membrane called sarcolemma enclosing the sarcoplasm." | |
-| F052 | 17.2 | concept | "Muscle fibre is a syncitium as the sarcoplasm contains many nuclei." | |
-| F053 | 17.2 | concept | "The endoplasmic reticulum, i.e., sarcoplasmic reticulum of the muscle fibres is the store house of calcium ions." | |
-| F054 | 17.2 | definition | "A characteristic feature of the muscle fibre is the presence of a large number of parallelly arranged filaments in the sarcoplasm called myofilaments or myofibrils." | |
-| F055 | 17.2 | concept | "Each myofibril has alternate dark and light bands on it." | |
-| F056 | 17.2 | concept | "A detailed study of the myofibril has established that the striated appearance is due to the distribution pattern of two important proteins - Actin and Myosin." | |
-| F057 | 17.2 | definition | "The light bands contain actin and is called I-band or Isotropic band, whereas the dark band called 'A' or Anisotropic band contains myosin." | |
-| F058 | 17.2 | concept | "Both the proteins are arranged as rod-like structures, parallel to each other and also to the longitudinal axis of the myofibrils." | |
-| F059 | 17.2 | concept | "Actin filaments are thinner as compared to the myosin filaments, hence are commonly called thin and thick filaments respectively." | |
-| F060 | 17.2 | definition | "In the centre of each 'I' band is an elastic fibre called 'Z' line which bisects it." | |
-| F061 | 17.2 | concept | "The thin filaments are firmly attached to the 'Z' line." | |
-| F062 | 17.2 | definition | "The thick filaments in the 'A' band are also held together in the middle of this band by a thin fibrous membrane called 'M' line." | |
-| F063 | 17.2 | concept | "The 'A' and 'I' bands are arranged alternately throughout the length of the myofibrils." | |
-| F064 | 17.2 | definition | "The portion of the myofibril between two successive 'Z' lines is considered as the functional unit of contraction and is called a sarcomere (Figure 17.2)." | |
-| F065 | 17.2 | concept | "In a resting state, the edges of thin filaments on either side of the thick filaments partially overlap the free ends of the thick filaments leaving the central part of the thick filaments." | |
-| F066 | 17.2 | definition | "This central part of thick filament, not overlapped by thin filaments is called the 'H' zone." | |
-| F067 | 17.2.1 | heading | "17.2.1 Structure of Contractile Proteins" | |
-| F068 | 17.2.1 | opener | "Each actin (thin) filament is made of two 'F' (filamentous) actins helically wound to each other." | |
-| F069 | 17.2.1 | definition | "Each 'F' actin is a polymer of monomeric 'G' (Globular) actins." | |
-| F070 | 17.2.1 | concept | "Two filaments of another protein, tropomyosin also run close to the 'F' actins throughout its length." | |
-| F071 | 17.2.1 | concept | "A complex protein Troponin is distributed at regular intervals on the tropomyosin." | |
-| F072 | 17.2.1 | process | "In the resting state a subunit of troponin masks the active binding sites for myosin on the actin filaments (Figure 17.3a)." | |
-| F073 | 17.2.1 | concept | "Each myosin (thick) filament is also a polymerised protein." | |
-| F074 | 17.2.1 | definition | "Many monomeric proteins called Meromyosins (Figure 17.3b) constitute one thick filament." | |
-| F075 | 17.2.1 | definition | "Each meromyosin has two important parts, a globular head with a short arm and a tail, the former being called the heavy meromyosin (HMM) and the latter, the light meromyosin (LMM)." | |
-| F076 | 17.2.1 | definition | "The HMM component, i.e.; the head and short arm projects outwards at regular distance and angle from each other from the surface of a polymerised myosin filament and is known as cross arm." | |
-| F077 | 17.2.1 | concept | "The globular head is an active ATPase enzyme and has binding sites for ATP and active sites for actin." | |
-| F078 | 17.2.2 | heading | "17.2.2 Mechanism of Muscle Contraction" | |
-| F079 | 17.2.2 | opener | "Mechanism of muscle contraction is best explained by the sliding filament theory which states that contraction of a muscle fibre takes place by the sliding of the thin filaments over the thick filaments." | |
-| F080 | 17.2.2 | process | "Muscle contraction is initiated by a signal sent by the central nervous system (CNS) via a motor neuron." | |
-| F081 | 17.2.2 | definition | "A motor neuron along with the muscle fibres connected to it constitute a motor unit." | |
-| F082 | 17.2.2 | definition | "The junction between a motor neuron and the sarcolemma of the muscle fibre is called the neuromuscular junction or motor-end plate." | |
-| F083 | 17.2.2 | process | "A neural signal reaching this junction releases a neurotransmitter (Acetyl choline) which generates an action potential in the sarcolemma." | |
-| F084 | 17.2.2 | process | "This spreads through the muscle fibre and causes the release of calcium ions into the sarcoplasm." | |
-| F085 | 17.2.2 | process | "Increase in Ca++ level leads to the binding of calcium with a subunit of troponin on actin filaments and thereby remove the masking of active sites for myosin." | |
-| F086 | 17.2.2 | process | "Utilising the energy from ATP hydrolysis, the myosin head now binds to the exposed active sites on actin to form a cross bridge (Figure 17.4)." | |
-| F087 | 17.2.2 | process | "This pulls the attached actin filaments towards the centre of 'A' band." | |
-| F088 | 17.2.2 | process | "The 'Z' line attached to these actins are also pulled inwards thereby causing a shortening of the sarcomere, i.e., contraction." | |
-| F089 | 17.2.2 | concept | "It is clear from the above steps, that during shortening of the muscle, i.e., contraction, the 'I' bands get reduced, whereas the 'A' bands retain the length (Figure 17.5)." | |
-| F090 | 17.2.2 | process | "The myosin, releasing the ADP and Pi goes back to its relaxed state." | |
-| F091 | 17.2.2 | process | "A new ATP binds and the cross-bridge is broken (Figure 17.4)." | |
-| F092 | 17.2.2 | process | "The ATP is again hydrolysed by the myosin head and the cycle of cross bridge formation and breakage is repeated causing further sliding." | |
-| F093 | 17.2.2 | process | "The process continues till the Ca++ ions are pumped back to the sarcoplasmic cisternae resulting in the masking of actin filaments." | |
-| F094 | 17.2.2 | process | "This causes the return of 'Z' lines back to their original position, i.e., relaxation." | |
-| F095 | 17.2.2 | concept | "The reaction time of the fibres can vary in different muscles." | |
-| F096 | 17.2.2 | process | "Repeated activation of the muscles can lead to the accumulation of lactic acid due to anaerobic breakdown of glycogen in them, causing fatigue." | |
-| F097 | 17.2.2 | definition | "Muscle contains a red coloured oxygen storing pigment called myoglobin." | |
-| F098 | 17.2.2 | concept | "Myoglobin content is high in some of the muscles which gives a reddish appearance. Such muscles are called the Red fibres." | |
-| F099 | 17.2.2 | concept | "These muscles also contain plenty of mitochondria which can utilise the large amount of oxygen stored in them for ATP production. These muscles, therefore, can also be called aerobic muscles." | |
-| F100 | 17.2.2 | concept | "On the other hand, some of the muscles possess very less quantity of myoglobin and therefore, appear pale or whitish. These are the White fibres." | |
-| F101 | 17.2.2 | concept | "Number of mitochondria are also few in them, but the amount of sarcoplasmic reticulum is high. They depend on anaerobic process for energy." | |
-| F102 | 17.3 | heading | "17.3 SKELETAL SYSTEM" | |
-| F103 | 17.3 | opener | "Skeletal system consists of a framework of bones and a few cartilages." | |
-| F104 | 17.3 | concept | "This system has a significant role in movement shown by the body." | |
-| F105 | 17.3 | concept | "Imagine chewing food without jaw bones and walking around without the limb bones." | |
-| F106 | 17.3 | concept | "Bone and cartilage are specialised connective tissues." | |
-| F107 | 17.3 | concept | "The former has a very hard matrix due to calcium salts in it and the latter has slightly pliable matrix due to chondroitin salts." | |
-| F108 | 17.3 | number | "In human beings, this system is made up of 206 bones and a few cartilages." | |
-| F109 | 17.3 | concept | "It is grouped into two principal divisions - the axial and the appendicular skeleton." | |
-| F110 | 17.3 | number | "Axial skeleton comprises 80 bones distributed along the main axis of the body." | |
-| F111 | 17.3 | concept | "The skull, vertebral column, sternum and ribs constitute axial skeleton." | |
-| F112 | 17.3 | number | "The skull (Figure 17.6) is composed of two sets of bones - cranial and facial, that totals to 22 bones." | |
-| F113 | 17.3 | number | "Cranial bones are 8 in number. They form the hard protective outer covering, cranium for the brain." | |
-| F114 | 17.3 | number | "The facial region is made up of 14 skeletal elements which form the front part of the skull." | |
-| F115 | 17.3 | concept | "A single U-shaped bone called hyoid is present at the base of the buccal cavity." | |
-| F116 | 17.3 | concept | "Each middle ear contains three tiny bones - Malleus, Incus and Stapes, collectively called Ear Ossicles." | |
-| F117 | 17.3 | concept | "The skull region articulates with the superior region of the vertebral column with the help of two occipital condyles (dicondylic skull)." | |
-| F118 | 17.3 | number | "Our vertebral column (Figure 17.7) is formed by 26 serially arranged units called vertebrae and is dorsally placed." | |
-| F119 | 17.3 | concept | "It extends from the base of the skull and constitutes the main framework of the trunk." | |
-| F120 | 17.3 | definition | "Each vertebra has a central hollow portion (neural canal) through which the spinal cord passes." | |
-| F121 | 17.3 | concept | "First vertebra is the atlas and it articulates with the occipital condyles." | |
-| F122 | 17.3 | number | "The vertebral column is differentiated into cervical (7), thoracic (12), lumbar (5), sacral (1-fused) and coccygeal (1-fused) regions starting from the skull." | |
-| F123 | 17.3 | concept | "The number of cervical vertebrae are seven in almost all mammals including human beings." | |
-| F124 | 17.3 | concept | "The vertebral column protects the spinal cord, supports the head and serves as the point of attachment for the ribs and musculature of the back." | |
-| F125 | 17.3 | definition | "Sternum is a flat bone on the ventral midline of thorax." | |
-| F126 | 17.3 | number | "There are 12 pairs of ribs." | |
-| F127 | 17.3 | concept | "Each rib is a thin flat bone connected dorsally to the vertebral column and ventrally to the sternum." | |
-| F128 | 17.3 | definition | "It has two articulation surfaces on its dorsal end and is hence called bicephalic." | |
-| F129 | 17.3 | concept | "First seven pairs of ribs are called true ribs. Dorsally, they are attached to the thoracic vertebrae and ventrally connected to the sternum with the help of hyaline cartilage." | |
-| F130 | 17.3 | concept | "The 8th, 9th and 10th pairs of ribs do not articulate directly with the sternum but join the seventh rib with the help of hyaline cartilage. These are called vertebrochondral (false) ribs." | |
-| F131 | 17.3 | concept | "Last 2 pairs (11th and 12th) of ribs are not connected ventrally and are therefore, called floating ribs." | |
-| F132 | 17.3 | concept | "Thoracic vertebrae, ribs and sternum together form the rib cage (Figure 17.8)." | |
-| F133 | 17.3 | definition | "The bones of the limbs along with their girdles constitute the appendicular skeleton." | |
-| F134 | 17.3 | number | "Each limb is made of 30 bones." | |
-| F135 | 17.3 | number | "The bones of the hand (fore limb) are humerus, radius and ulna, carpals (wrist bones - 8 in number), metacarpals (palm bones - 5 in number) and phalanges (digits - 14 in number) (Figure 17.9)." | |
-| F136 | 17.3 | number | "Femur (thigh bone - the longest bone), tibia and fibula, tarsals (ankle bones - 7 in number), metatarsals (5 in number) and phalanges (digits - 14 in number) are the bones of the legs (hind limb) (Figure 17.10)." | |
-| F137 | 17.3 | definition | "A cup shaped bone called patella cover the knee ventrally (knee cap)." | |
-| F138 | 17.3 | concept | "Pectoral and Pelvic girdle bones help in the articulation of the upper and the lower limbs respectively with the axial skeleton." | |
-| F139 | 17.3 | concept | "Each girdle is formed of two halves." | |
-| F140 | 17.3 | concept | "Each half of pectoral girdle consists of a clavicle and a scapula (Figure 17.9)." | |
-| F141 | 17.3 | definition | "Scapula is a large triangular flat bone situated in the dorsal part of the thorax between the second and the seventh ribs." | |
-| F142 | 17.3 | definition | "The dorsal, flat, triangular body of scapula has a slightly elevated ridge called the spine which projects as a flat, expanded process called the acromion." | |
-| F143 | 17.3 | concept | "The clavicle articulates with this." | |
-| F144 | 17.3 | definition | "Below the acromion is a depression called the glenoid cavity which articulates with the head of the humerus to form the shoulder joint." | |
-| F145 | 17.3 | concept | "Each clavicle is a long slender bone with two curvatures. This bone is commonly called the collar bone." | |
-| F146 | 17.3 | concept | "Pelvic girdle consists of two coxal bones (Figure 17.10)." | |
-| F147 | 17.3 | concept | "Each coxal bone is formed by the fusion of three bones - ilium, ischium and pubis." | |
-| F148 | 17.3 | definition | "At the point of fusion of the above bones is a cavity called acetabulum to which the thigh bone articulates." | |
-| F149 | 17.3 | definition | "The two halves of the pelvic girdle meet ventrally to form the pubic symphysis containing fibrous cartilage." | |
-| F150 | 17.4 | heading | "17.4 JOINTS" | |
-| F151 | 17.4 | opener | "Joints are essential for all types of movements involving the bony parts of the body." | |
-| F152 | 17.4 | concept | "Locomotory movements are no exception to this." | |
-| F153 | 17.4 | definition | "Joints are points of contact between bones, or between bones and cartilages." | |
-| F154 | 17.4 | concept | "Force generated by the muscles is used to carry out movement through joints, where the joint acts as a fulcrum." | |
-| F155 | 17.4 | concept | "The movability at these joints vary depending on different factors." | |
-| F156 | 17.4 | concept | "Joints have been classified into three major structural forms, namely, fibrous, cartilaginous and synovial." | |
-| F157 | 17.4 | concept | "Fibrous joints do not allow any movement." | |
-| F158 | 17.4 | example | "This type of joint is shown by the flat skull bones which fuse end-to-end with the help of dense fibrous connective tissues in the form of sutures, to form the cranium." | |
-| F159 | 17.4 | concept | "In cartilaginous joints, the bones involved are joined together with the help of cartilages." | |
-| F160 | 17.4 | example | "The joint between the adjacent vertebrae in the vertebral column is of this pattern and it permits limited movements." | |
-| F161 | 17.4 | definition | "Synovial joints are characterised by the presence of a fluid filled synovial cavity between the articulating surfaces of the two bones." | |
-| F162 | 17.4 | concept | "Such an arragement allows considerable movement." | |
-| F163 | 17.4 | concept | "These joints help in locomotion and many other movements." | |
-| F164 | 17.4 | example | "Ball and socket joint (between humerus and pectoral girdle), hinge joint (knee joint), pivot joint (between atlas and axis), gliding joint (between the carpals) and saddle joint (between carpal and metacarpal of thumb) are some examples." | |
-| F165 | 17.5 | heading | "17.5 DISORDERS OF MUSCULAR AND SKELETAL SYSTEM" | |
-| F166 | 17.5 | disorder | "Myasthenia gravis: Auto immune disorder affecting neuromuscular junction leading to fatigue, weakening and paralysis of skeletal muscle." | |
-| F167 | 17.5 | disorder | "Muscular dystrophy: Progressive degeneration of skeletal muscle mostly due to genetic disorder." | |
-| F168 | 17.5 | disorder | "Tetany: Rapid spasms (wild contractions) in muscle due to low Ca++ in body fluid." | |
-| F169 | 17.5 | disorder | "Arthritis: Inflammation of joints." | |
-| F170 | 17.5 | disorder | "Osteoporosis: Age-related disorder characterised by decreased bone mass and increased chances of fractures. Decreased levels of estrogen is a common cause." | |
-| F171 | 17.5 | disorder | "Gout: Inflammation of joints due to accumulation of uric acid crystals." | |
-| F172 | summary | heading | "SUMMARY" | |
-| F173 | exercises | heading | "EXERCISES" | |
-| F174 | figures | caption | "Figure 17.1 Diagrammatic cross sectional view of a muscle showing muscle bundles and muscle fibres" | |
-| F175 | figures | caption | "Figure 17.2 Diagrammatic representation of (a) anatomy of a muscle fibre showing a sarcomere (b) a sarcomere" | |
-| F176 | figures | caption | "Figure 17.3 (a) An actin (thin) filament (b) Myosin monomer (Meromyosin)" | |
-| F177 | figures | caption | "Figure 17.4 Stages in cross bridge formation, rotation of head and breaking of cross bridge" | |
-| F178 | figures | caption | "Figure 17.5 Sliding-filament theory of muscle contraction (movement of the thin filaments and the relative size of the I band and H zones)" | |
-| F179 | figures | caption | "Figure 17.6 Diagrammatic view of human skull" | |
-| F180 | figures | caption | "Figure 17.7 Vertebral column (right lateral view)" | |
-| F181 | figures | caption | "Figure 17.8 Ribs and rib cage" | |
-| F182 | figures | caption | "Figure 17.9 Right pectoral girdle and upper arm. (frontal view)" | |
-| F183 | figures | caption | "Figure 17.10 Right pelvic girdle and lower limb bones (frontal view)" | |
+| F001 | title | heading | "LOCOMOTION AND MOVEMENT" (chapter title plate) | x |
+| F002 | intro | opener | "Movement is one of the significant features of living beings." | x |
+| F003 | intro | concept | "Animals and plants exhibit a wide range of movements." | x |
+| F004 | intro | example | "Streaming of protoplasm in the unicellular organisms like Amoeba is a simple form of movement." | x |
+| F005 | intro | example | "Movement of cilia, flagella and tentacles are shown by many organisms." | x |
+| F006 | intro | example | "Human beings can move limbs, jaws, eyelids, tongue, etc." | x |
+| F007 | intro | definition | "Some of the movements result in a change of place or location. Such voluntary movements are called locomotion." | x |
+| F008 | intro | example | "Walking, running, climbing, flying and swimming are all some forms of locomotory movements." | x |
+| F009 | intro | concept | "Locomotory structures need not be different from those affecting other types of movements." | x |
+| F010 | intro | example | "For example, in Paramoecium, cilia helps in the movement of food through cytopharynx and in locomotion as well." | x |
+| F011 | intro | example | "Hydra can use its tentacles for capturing its prey and also use them for locomotion." | x |
+| F012 | intro | example | "We use limbs for changes in body postures and locomotion as well." | x |
+| F013 | intro | concept | "The above observations suggest that movements and locomotion cannot be studied separately." | x |
+| F014 | intro | concept | "The two may be linked by stating that all locomotions are movements but all movements are not locomotions." | x |
+| F015 | intro | concept | "Methods of locomotion performed by animals vary with their habitats and the demand of the situation." | x |
+| F016 | intro | concept | "However, locomotion is generally for search of food, shelter, mate, suitable breeding grounds, favourable climatic conditions or to escape from enemies/predators." | x |
+| F017 | 17.1 | heading | "17.1 TYPES OF MOVEMENT" | x |
+| F018 | 17.1 | opener | "Cells of the human body exhibit three main types of movements, namely, amoeboid, ciliary and muscular." | x |
+| F019 | 17.1 | concept | "Some specialised cells in our body like macrophages and leucocytes in blood exhibit amoeboid movement." | x |
+| F020 | 17.1 | process | "It is effected by pseudopodia formed by the streaming of protoplasm (as in Amoeba)." | x |
+| F021 | 17.1 | concept | "Cytoskeletal elements like microfilaments are also involved in amoeboid movement." | x |
+| F022 | 17.1 | concept | "Ciliary movement occurs in most of our internal tubular organs which are lined by ciliated epithelium." | x |
+| F023 | 17.1 | process | "The coordinated movements of cilia in the trachea help us in removing dust particles and some of the foreign substances inhaled along with the atmospheric air." | x |
+| F024 | 17.1 | process | "Passage of ova through the female reproductive tract is also facilitated by the ciliary movement." | x |
+| F025 | 17.1 | concept | "Movement of our limbs, jaws, tongue, etc, require muscular movement." | x |
+| F026 | 17.1 | concept | "The contractile property of muscles are effectively used for locomotion and other movements by human beings and majority of multicellular organisms." | x |
+| F027 | 17.1 | concept | "Locomotion requires a perfect coordinated activity of muscular, skeletal and neural systems." | x |
+| F028 | 17.1 | concept | "In this chapter, you will learn about the types of muscles, their structure, mechanism of their contraction and important aspects of the skeletal system." | x |
+| F029 | 17.2 | heading | "17.2 MUSCLE" | x |
+| F030 | 17.2 | opener | "You have studied in Chapter 8 that the cilia and flagella are the outgrowths of the cell membrane." | x |
+| F031 | 17.2 | example | "Flagellar movement helps in the swimming of spermatozoa, maintenance of water current in the canal system of sponges and in locomotion of Protists like Euglena." | x |
+| F032 | 17.2 | definition | "Muscle is a specialised tissue of mesodermal origin." | x |
+| F033 | 17.2 | number | "About 40-50 per cent of the body weight of a human adult is contributed by muscles." | x |
+| F034 | 17.2 | concept | "They have special properties like excitability, contractility, extensibility and elasticity." | x |
+| F035 | 17.2 | concept | "Muscles have been classified using different criteria, namely location, appearance and nature of regulation of their activities." | x |
+| F036 | 17.2 | concept | "Based on their location, three types of muscles are identified : (i) Skeletal (ii) Visceral and (iii) Cardiac." | x |
+| F037 | 17.2 | concept | "Skeletal muscles are closely associated with the skeletal components of the body." | x |
+| F038 | 17.2 | concept | "They have a striped appearance under the microscope and hence are called striated muscles." | x |
+| F039 | 17.2 | concept | "As their activities are under the voluntary control of the nervous system, they are known as voluntary muscles too." | x |
+| F040 | 17.2 | concept | "They are primarily involved in locomotory actions and changes of body postures." | x |
+| F041 | 17.2 | concept | "Visceral muscles are located in the inner walls of hollow visceral organs of the body like the alimentary canal, reproductive tract, etc." | x |
+| F042 | 17.2 | concept | "They do not exhibit any striation and are smooth in appearance. Hence, they are called smooth muscles (nonstriated muscle)." | x |
+| F043 | 17.2 | concept | "Their activities are not under the voluntary control of the nervous system and are therefore known as involuntary muscles." | x |
+| F044 | 17.2 | example | "They assist, for example, in the transportation of food through the digestive tract and gametes through the genital tract." | x |
+| F045 | 17.2 | concept | "As the name suggests, Cardiac muscles are the muscles of heart." | x |
+| F046 | 17.2 | concept | "Many cardiac muscle cells assemble in a branching pattern to form a cardiac muscle." | x |
+| F047 | 17.2 | concept | "Based on appearance, cardiac muscles are striated." | x |
+| F048 | 17.2 | concept | "They are involuntary in nature as the nervous system does not control their activities directly." | x |
+| F049 | 17.2 | definition | "Each organised skeletal muscle in our body is made of a number of muscle bundles or fascicles held together by a common collagenous connective tissue layer called fascia." | x |
+| F050 | 17.2 | concept | "Each muscle bundle contains a number of muscle fibres (Figure 17.1)." | x |
+| F051 | 17.2 | definition | "Each muscle fibre is lined by the plasma membrane called sarcolemma enclosing the sarcoplasm." | x |
+| F052 | 17.2 | concept | "Muscle fibre is a syncitium as the sarcoplasm contains many nuclei." | x |
+| F053 | 17.2 | concept | "The endoplasmic reticulum, i.e., sarcoplasmic reticulum of the muscle fibres is the store house of calcium ions." | x |
+| F054 | 17.2 | definition | "A characteristic feature of the muscle fibre is the presence of a large number of parallelly arranged filaments in the sarcoplasm called myofilaments or myofibrils." | x |
+| F055 | 17.2 | concept | "Each myofibril has alternate dark and light bands on it." | x |
+| F056 | 17.2 | concept | "A detailed study of the myofibril has established that the striated appearance is due to the distribution pattern of two important proteins - Actin and Myosin." | x |
+| F057 | 17.2 | definition | "The light bands contain actin and is called I-band or Isotropic band, whereas the dark band called 'A' or Anisotropic band contains myosin." | x |
+| F058 | 17.2 | concept | "Both the proteins are arranged as rod-like structures, parallel to each other and also to the longitudinal axis of the myofibrils." | x |
+| F059 | 17.2 | concept | "Actin filaments are thinner as compared to the myosin filaments, hence are commonly called thin and thick filaments respectively." | x |
+| F060 | 17.2 | definition | "In the centre of each 'I' band is an elastic fibre called 'Z' line which bisects it." | x |
+| F061 | 17.2 | concept | "The thin filaments are firmly attached to the 'Z' line." | x |
+| F062 | 17.2 | definition | "The thick filaments in the 'A' band are also held together in the middle of this band by a thin fibrous membrane called 'M' line." | x |
+| F063 | 17.2 | concept | "The 'A' and 'I' bands are arranged alternately throughout the length of the myofibrils." | x |
+| F064 | 17.2 | definition | "The portion of the myofibril between two successive 'Z' lines is considered as the functional unit of contraction and is called a sarcomere (Figure 17.2)." | x |
+| F065 | 17.2 | concept | "In a resting state, the edges of thin filaments on either side of the thick filaments partially overlap the free ends of the thick filaments leaving the central part of the thick filaments." | x |
+| F066 | 17.2 | definition | "This central part of thick filament, not overlapped by thin filaments is called the 'H' zone." | x |
+| F067 | 17.2.1 | heading | "17.2.1 Structure of Contractile Proteins" | x |
+| F068 | 17.2.1 | opener | "Each actin (thin) filament is made of two 'F' (filamentous) actins helically wound to each other." | x |
+| F069 | 17.2.1 | definition | "Each 'F' actin is a polymer of monomeric 'G' (Globular) actins." | x |
+| F070 | 17.2.1 | concept | "Two filaments of another protein, tropomyosin also run close to the 'F' actins throughout its length." | x |
+| F071 | 17.2.1 | concept | "A complex protein Troponin is distributed at regular intervals on the tropomyosin." | x |
+| F072 | 17.2.1 | process | "In the resting state a subunit of troponin masks the active binding sites for myosin on the actin filaments (Figure 17.3a)." | x |
+| F073 | 17.2.1 | concept | "Each myosin (thick) filament is also a polymerised protein." | x |
+| F074 | 17.2.1 | definition | "Many monomeric proteins called Meromyosins (Figure 17.3b) constitute one thick filament." | x |
+| F075 | 17.2.1 | definition | "Each meromyosin has two important parts, a globular head with a short arm and a tail, the former being called the heavy meromyosin (HMM) and the latter, the light meromyosin (LMM)." | x |
+| F076 | 17.2.1 | definition | "The HMM component, i.e.; the head and short arm projects outwards at regular distance and angle from each other from the surface of a polymerised myosin filament and is known as cross arm." | x |
+| F077 | 17.2.1 | concept | "The globular head is an active ATPase enzyme and has binding sites for ATP and active sites for actin." | x |
+| F078 | 17.2.2 | heading | "17.2.2 Mechanism of Muscle Contraction" | x |
+| F079 | 17.2.2 | opener | "Mechanism of muscle contraction is best explained by the sliding filament theory which states that contraction of a muscle fibre takes place by the sliding of the thin filaments over the thick filaments." | x |
+| F080 | 17.2.2 | process | "Muscle contraction is initiated by a signal sent by the central nervous system (CNS) via a motor neuron." | x |
+| F081 | 17.2.2 | definition | "A motor neuron along with the muscle fibres connected to it constitute a motor unit." | x |
+| F082 | 17.2.2 | definition | "The junction between a motor neuron and the sarcolemma of the muscle fibre is called the neuromuscular junction or motor-end plate." | x |
+| F083 | 17.2.2 | process | "A neural signal reaching this junction releases a neurotransmitter (Acetyl choline) which generates an action potential in the sarcolemma." | x |
+| F084 | 17.2.2 | process | "This spreads through the muscle fibre and causes the release of calcium ions into the sarcoplasm." | x |
+| F085 | 17.2.2 | process | "Increase in Ca++ level leads to the binding of calcium with a subunit of troponin on actin filaments and thereby remove the masking of active sites for myosin." | x |
+| F086 | 17.2.2 | process | "Utilising the energy from ATP hydrolysis, the myosin head now binds to the exposed active sites on actin to form a cross bridge (Figure 17.4)." | x |
+| F087 | 17.2.2 | process | "This pulls the attached actin filaments towards the centre of 'A' band." | x |
+| F088 | 17.2.2 | process | "The 'Z' line attached to these actins are also pulled inwards thereby causing a shortening of the sarcomere, i.e., contraction." | x |
+| F089 | 17.2.2 | concept | "It is clear from the above steps, that during shortening of the muscle, i.e., contraction, the 'I' bands get reduced, whereas the 'A' bands retain the length (Figure 17.5)." | x |
+| F090 | 17.2.2 | process | "The myosin, releasing the ADP and Pi goes back to its relaxed state." | x |
+| F091 | 17.2.2 | process | "A new ATP binds and the cross-bridge is broken (Figure 17.4)." | x |
+| F092 | 17.2.2 | process | "The ATP is again hydrolysed by the myosin head and the cycle of cross bridge formation and breakage is repeated causing further sliding." | x |
+| F093 | 17.2.2 | process | "The process continues till the Ca++ ions are pumped back to the sarcoplasmic cisternae resulting in the masking of actin filaments." | x |
+| F094 | 17.2.2 | process | "This causes the return of 'Z' lines back to their original position, i.e., relaxation." | x |
+| F095 | 17.2.2 | concept | "The reaction time of the fibres can vary in different muscles." | x |
+| F096 | 17.2.2 | process | "Repeated activation of the muscles can lead to the accumulation of lactic acid due to anaerobic breakdown of glycogen in them, causing fatigue." | x |
+| F097 | 17.2.2 | definition | "Muscle contains a red coloured oxygen storing pigment called myoglobin." | x |
+| F098 | 17.2.2 | concept | "Myoglobin content is high in some of the muscles which gives a reddish appearance. Such muscles are called the Red fibres." | x |
+| F099 | 17.2.2 | concept | "These muscles also contain plenty of mitochondria which can utilise the large amount of oxygen stored in them for ATP production. These muscles, therefore, can also be called aerobic muscles." | x |
+| F100 | 17.2.2 | concept | "On the other hand, some of the muscles possess very less quantity of myoglobin and therefore, appear pale or whitish. These are the White fibres." | x |
+| F101 | 17.2.2 | concept | "Number of mitochondria are also few in them, but the amount of sarcoplasmic reticulum is high. They depend on anaerobic process for energy." | x |
+| F102 | 17.3 | heading | "17.3 SKELETAL SYSTEM" | x |
+| F103 | 17.3 | opener | "Skeletal system consists of a framework of bones and a few cartilages." | x |
+| F104 | 17.3 | concept | "This system has a significant role in movement shown by the body." | x |
+| F105 | 17.3 | concept | "Imagine chewing food without jaw bones and walking around without the limb bones." | x |
+| F106 | 17.3 | concept | "Bone and cartilage are specialised connective tissues." | x |
+| F107 | 17.3 | concept | "The former has a very hard matrix due to calcium salts in it and the latter has slightly pliable matrix due to chondroitin salts." | x |
+| F108 | 17.3 | number | "In human beings, this system is made up of 206 bones and a few cartilages." | x |
+| F109 | 17.3 | concept | "It is grouped into two principal divisions - the axial and the appendicular skeleton." | x |
+| F110 | 17.3 | number | "Axial skeleton comprises 80 bones distributed along the main axis of the body." | x |
+| F111 | 17.3 | concept | "The skull, vertebral column, sternum and ribs constitute axial skeleton." | x |
+| F112 | 17.3 | number | "The skull (Figure 17.6) is composed of two sets of bones - cranial and facial, that totals to 22 bones." | x |
+| F113 | 17.3 | number | "Cranial bones are 8 in number. They form the hard protective outer covering, cranium for the brain." | x |
+| F114 | 17.3 | number | "The facial region is made up of 14 skeletal elements which form the front part of the skull." | x |
+| F115 | 17.3 | concept | "A single U-shaped bone called hyoid is present at the base of the buccal cavity." | x |
+| F116 | 17.3 | concept | "Each middle ear contains three tiny bones - Malleus, Incus and Stapes, collectively called Ear Ossicles." | x |
+| F117 | 17.3 | concept | "The skull region articulates with the superior region of the vertebral column with the help of two occipital condyles (dicondylic skull)." | x |
+| F118 | 17.3 | number | "Our vertebral column (Figure 17.7) is formed by 26 serially arranged units called vertebrae and is dorsally placed." | x |
+| F119 | 17.3 | concept | "It extends from the base of the skull and constitutes the main framework of the trunk." | x |
+| F120 | 17.3 | definition | "Each vertebra has a central hollow portion (neural canal) through which the spinal cord passes." | x |
+| F121 | 17.3 | concept | "First vertebra is the atlas and it articulates with the occipital condyles." | x |
+| F122 | 17.3 | number | "The vertebral column is differentiated into cervical (7), thoracic (12), lumbar (5), sacral (1-fused) and coccygeal (1-fused) regions starting from the skull." | x |
+| F123 | 17.3 | concept | "The number of cervical vertebrae are seven in almost all mammals including human beings." | x |
+| F124 | 17.3 | concept | "The vertebral column protects the spinal cord, supports the head and serves as the point of attachment for the ribs and musculature of the back." | x |
+| F125 | 17.3 | definition | "Sternum is a flat bone on the ventral midline of thorax." | x |
+| F126 | 17.3 | number | "There are 12 pairs of ribs." | x |
+| F127 | 17.3 | concept | "Each rib is a thin flat bone connected dorsally to the vertebral column and ventrally to the sternum." | x |
+| F128 | 17.3 | definition | "It has two articulation surfaces on its dorsal end and is hence called bicephalic." | x |
+| F129 | 17.3 | concept | "First seven pairs of ribs are called true ribs. Dorsally, they are attached to the thoracic vertebrae and ventrally connected to the sternum with the help of hyaline cartilage." | x |
+| F130 | 17.3 | concept | "The 8th, 9th and 10th pairs of ribs do not articulate directly with the sternum but join the seventh rib with the help of hyaline cartilage. These are called vertebrochondral (false) ribs." | x |
+| F131 | 17.3 | concept | "Last 2 pairs (11th and 12th) of ribs are not connected ventrally and are therefore, called floating ribs." | x |
+| F132 | 17.3 | concept | "Thoracic vertebrae, ribs and sternum together form the rib cage (Figure 17.8)." | x |
+| F133 | 17.3 | definition | "The bones of the limbs along with their girdles constitute the appendicular skeleton." | x |
+| F134 | 17.3 | number | "Each limb is made of 30 bones." | x |
+| F135 | 17.3 | number | "The bones of the hand (fore limb) are humerus, radius and ulna, carpals (wrist bones - 8 in number), metacarpals (palm bones - 5 in number) and phalanges (digits - 14 in number) (Figure 17.9)." | x |
+| F136 | 17.3 | number | "Femur (thigh bone - the longest bone), tibia and fibula, tarsals (ankle bones - 7 in number), metatarsals (5 in number) and phalanges (digits - 14 in number) are the bones of the legs (hind limb) (Figure 17.10)." | x |
+| F137 | 17.3 | definition | "A cup shaped bone called patella cover the knee ventrally (knee cap)." | x |
+| F138 | 17.3 | concept | "Pectoral and Pelvic girdle bones help in the articulation of the upper and the lower limbs respectively with the axial skeleton." | x |
+| F139 | 17.3 | concept | "Each girdle is formed of two halves." | x |
+| F140 | 17.3 | concept | "Each half of pectoral girdle consists of a clavicle and a scapula (Figure 17.9)." | x |
+| F141 | 17.3 | definition | "Scapula is a large triangular flat bone situated in the dorsal part of the thorax between the second and the seventh ribs." | x |
+| F142 | 17.3 | definition | "The dorsal, flat, triangular body of scapula has a slightly elevated ridge called the spine which projects as a flat, expanded process called the acromion." | x |
+| F143 | 17.3 | concept | "The clavicle articulates with this." | x |
+| F144 | 17.3 | definition | "Below the acromion is a depression called the glenoid cavity which articulates with the head of the humerus to form the shoulder joint." | x |
+| F145 | 17.3 | concept | "Each clavicle is a long slender bone with two curvatures. This bone is commonly called the collar bone." | x |
+| F146 | 17.3 | concept | "Pelvic girdle consists of two coxal bones (Figure 17.10)." | x |
+| F147 | 17.3 | concept | "Each coxal bone is formed by the fusion of three bones - ilium, ischium and pubis." | x |
+| F148 | 17.3 | definition | "At the point of fusion of the above bones is a cavity called acetabulum to which the thigh bone articulates." | x |
+| F149 | 17.3 | definition | "The two halves of the pelvic girdle meet ventrally to form the pubic symphysis containing fibrous cartilage." | x |
+| F150 | 17.4 | heading | "17.4 JOINTS" | x |
+| F151 | 17.4 | opener | "Joints are essential for all types of movements involving the bony parts of the body." | x |
+| F152 | 17.4 | concept | "Locomotory movements are no exception to this." | x |
+| F153 | 17.4 | definition | "Joints are points of contact between bones, or between bones and cartilages." | x |
+| F154 | 17.4 | concept | "Force generated by the muscles is used to carry out movement through joints, where the joint acts as a fulcrum." | x |
+| F155 | 17.4 | concept | "The movability at these joints vary depending on different factors." | x |
+| F156 | 17.4 | concept | "Joints have been classified into three major structural forms, namely, fibrous, cartilaginous and synovial." | x |
+| F157 | 17.4 | concept | "Fibrous joints do not allow any movement." | x |
+| F158 | 17.4 | example | "This type of joint is shown by the flat skull bones which fuse end-to-end with the help of dense fibrous connective tissues in the form of sutures, to form the cranium." | x |
+| F159 | 17.4 | concept | "In cartilaginous joints, the bones involved are joined together with the help of cartilages." | x |
+| F160 | 17.4 | example | "The joint between the adjacent vertebrae in the vertebral column is of this pattern and it permits limited movements." | x |
+| F161 | 17.4 | definition | "Synovial joints are characterised by the presence of a fluid filled synovial cavity between the articulating surfaces of the two bones." | x |
+| F162 | 17.4 | concept | "Such an arragement allows considerable movement." | x |
+| F163 | 17.4 | concept | "These joints help in locomotion and many other movements." | x |
+| F164 | 17.4 | example | "Ball and socket joint (between humerus and pectoral girdle), hinge joint (knee joint), pivot joint (between atlas and axis), gliding joint (between the carpals) and saddle joint (between carpal and metacarpal of thumb) are some examples." | x |
+| F165 | 17.5 | heading | "17.5 DISORDERS OF MUSCULAR AND SKELETAL SYSTEM" | x |
+| F166 | 17.5 | disorder | "Myasthenia gravis: Auto immune disorder affecting neuromuscular junction leading to fatigue, weakening and paralysis of skeletal muscle." | x |
+| F167 | 17.5 | disorder | "Muscular dystrophy: Progressive degeneration of skeletal muscle mostly due to genetic disorder." | x |
+| F168 | 17.5 | disorder | "Tetany: Rapid spasms (wild contractions) in muscle due to low Ca++ in body fluid." | x |
+| F169 | 17.5 | disorder | "Arthritis: Inflammation of joints." | x |
+| F170 | 17.5 | disorder | "Osteoporosis: Age-related disorder characterised by decreased bone mass and increased chances of fractures. Decreased levels of estrogen is a common cause." | x |
+| F171 | 17.5 | disorder | "Gout: Inflammation of joints due to accumulation of uric acid crystals." | x |
+| F172 | summary | heading | "SUMMARY" | x |
+| F173 | exercises | heading | "EXERCISES" | x |
+| F174 | figures | caption | "Figure 17.1 Diagrammatic cross sectional view of a muscle showing muscle bundles and muscle fibres" | x |
+| F175 | figures | caption | "Figure 17.2 Diagrammatic representation of (a) anatomy of a muscle fibre showing a sarcomere (b) a sarcomere" | x |
+| F176 | figures | caption | "Figure 17.3 (a) An actin (thin) filament (b) Myosin monomer (Meromyosin)" | x |
+| F177 | figures | caption | "Figure 17.4 Stages in cross bridge formation, rotation of head and breaking of cross bridge" | x |
+| F178 | figures | caption | "Figure 17.5 Sliding-filament theory of muscle contraction (movement of the thin filaments and the relative size of the I band and H zones)" | x |
+| F179 | figures | caption | "Figure 17.6 Diagrammatic view of human skull" | x |
+| F180 | figures | caption | "Figure 17.7 Vertebral column (right lateral view)" | x |
+| F181 | figures | caption | "Figure 17.8 Ribs and rib cage" | x |
+| F182 | figures | caption | "Figure 17.9 Right pectoral girdle and upper arm. (frontal view)" | x |
+| F183 | figures | caption | "Figure 17.10 Right pelvic girdle and lower limb bones (frontal view)" | x |
 
 ### Caption discrepancy against the frozen figure manifest (recorded, not silently reconciled)
 
