@@ -16,9 +16,9 @@ RENDER_DPI = 300
 FIGS = [
     ("5_1", 4, (78, 95, 315, 405)),    # p4: full flowering-plant diagram; left/right leader labels retained, caption excluded
     ("5_2", 4, (78, 420, 555, 665)),   # p4: all three root photographs and their (a)-(c) labels, caption excluded
-    ("5_3", 5, (292, 120, 505, 325)),   # p5: root-tip diagram; right edge stops before prose column
+    ("5_3", 5, (285, 112, 520, 345)),   # p5: root-tip diagram; right edge stops before prose column
     ("5_4", 6, (45, 95, 278, 435)),   # p6: labelled leaf parts and venation panels a-c
-    ("5_5", 6, (48, 515, 282, 650)),  # p6: pinnate/palmate compound-leaf panels and labels
+    ("5_5", 6, (45, 505, 265, 750)),  # p6: pinnate/palmate compound-leaf panels and labels
     ("5_6", 7, (275, 85, 505, 335)),   # p7: three phyllotaxy examples with labels
     ("5_7", 7, (275, 405, 515, 675)),   # p7: racemose inflorescence, including lower flower cluster and labels
     ("5_8", 8, (50, 95, 278, 245)),    # p8: cymose inflorescence diagram

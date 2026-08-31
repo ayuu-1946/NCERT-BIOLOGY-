@@ -1,9 +1,9 @@
 --- A) text-layer word grazing ---
 fig_5_1: words_in_rect=16 ok
 fig_5_2: words_in_rect=10 GRAZING ['Laterals']
-fig_5_3: words_in_rect=0 ok
+fig_5_3: words_in_rect=7 GRAZING ['Figure', '5.3', 'The', 'regions', 'of', 'the', 'root-tip']
 fig_5_4: words_in_rect=8 ok
-fig_5_5: words_in_rect=1 ok
+fig_5_5: words_in_rect=19 ok
 fig_5_6: words_in_rect=7 ok
 fig_5_7: words_in_rect=0 ok
 fig_5_8: words_in_rect=4 GRAZING ['Figure', '5.8', 'Cymose', 'inflorescence']
@@ -19,7 +19,7 @@ fig_5_17: words_in_rect=18 GRAZING ['Figure', '5.17', 'Solanum', 'nigrum', '(mak
 --- B) drawings-extent overflow ---
 fig_5_1: ok
 fig_5_2: ok
-fig_5_3: OVERFLOW L1.0 T0.0 R0.0 B4.7
+fig_5_3: ok
 fig_5_4: ok
 fig_5_5: ok
 fig_5_6: no drawings (raster/text image)
@@ -37,9 +37,9 @@ fig_5_17: ok
 --- C) unexplained dark ink in border band ---
 fig_5_1: clean
 fig_5_2: clean
-fig_5_3: EDGE-INK ['R:49px@(np.float64(505.5), np.float64(174.7))']
+fig_5_3: clean
 fig_5_4: clean
-fig_5_5: EDGE-INK ['T:153px@(np.float64(225.1), np.float64(510.9))']
+fig_5_5: clean
 fig_5_6: clean
 fig_5_7: clean
 fig_5_8: clean
@@ -55,9 +55,9 @@ fig_5_17: clean
 --- D) file mode / dpi ---
 fig_5_1: mode=L dpi=(299.9994, 299.9994) size=(988, 1293)
 fig_5_2: mode=L dpi=(299.9994, 299.9994) size=(1988, 1021)
-fig_5_3: mode=L dpi=(299.9994, 299.9994) size=(889, 855)
+fig_5_3: mode=L dpi=(299.9994, 299.9994) size=(980, 972)
 fig_5_4: mode=L dpi=(299.9994, 299.9994) size=(972, 1418)
-fig_5_5: mode=L dpi=(299.9994, 299.9994) size=(975, 564)
+fig_5_5: mode=L dpi=(299.9994, 299.9994) size=(918, 1021)
 fig_5_6: mode=L dpi=(299.9994, 299.9994) size=(960, 1042)
 fig_5_7: mode=L dpi=(299.9994, 299.9994) size=(1001, 1126)
 fig_5_8: mode=L dpi=(299.9994, 299.9994) size=(951, 626)

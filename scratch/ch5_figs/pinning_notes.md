@@ -42,3 +42,19 @@ The production rule remains: approximately 10 pt padding is acceptable, but no e
 - Page 13 confirms Figure 5.15 spans approximately x=75–480, y=90–340, and Figure 5.16 is the lower-right diagram/formula approximately x=320–510, y=420–710. The first rectangles included header/prose and missed the true vertical extent.
 
 - Page 14 confirms Figure 5.17 is a wide lower multi-part plate approximately x=105–470, y=440–690, containing panels (a)–(f) and the caption; the first narrow box would have omitted most of the figure.
+
+## User-reported correction
+
+The user identified that the delivered `fig_5_3.png` and `fig_5_5.png` were still slightly cut off. Reinspection of the 440 dpi grids confirms that Figure 5.3 needs a wider left boundary and a lower bottom boundary to preserve the root-hair leader and root-cap tip/caption region. Figure 5.5 needs a slightly higher top boundary and a lower bottom boundary to preserve the full upper leaf edges, lower rachis/stalk, panel markers, and printed figure identification.
+
+## Second correction findings
+
+Full-resolution inspection showed that the expanded Figure 5.3 crop restored the root tip but still included a strip of the neighboring left prose column; its left edge must move right while retaining the `Root hair` leader. Figure 5.5 restored both compound-leaf panels but its top edge still included the preceding Figure 5.4 `(c) Parallel venation` label, and its right edge included neighboring prose. The final crop must begin lower, end slightly left, and stop after the `(a)`/`(b)` panel labels rather than carrying the unrelated caption/prose region.
+
+## Final edge correction
+
+The latest uncached inspection confirms Figure 5.3 is complete vertically and free of prose, but its `Root hair` label begins directly at the left edge; the crop should move slightly left to give that label a visible margin. Figure 5.5 still clips the uppermost leaf artwork and the lower `(a)`/`(b)` markers; its crop should begin slightly higher and extend lower, while keeping the right boundary tight against the prose column.
+
+## Final visual verification result
+
+Figure 5.3 is now complete with visible margins around `Root hair`, the full root cap, all three region brackets, and the printed caption. Figure 5.5 now includes both complete compound-leaf panels and panel labels without the preceding Figure 5.4 caption, but its right edge still carries a narrow prose strip and its final caption line is truncated. The next rectangle will tighten the right edge and extend the bottom only to complete the caption.

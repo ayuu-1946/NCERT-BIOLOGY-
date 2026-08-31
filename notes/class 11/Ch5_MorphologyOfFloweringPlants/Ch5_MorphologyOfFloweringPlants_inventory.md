@@ -8,9 +8,9 @@ This inventory records the 17 numbered NCERT figures extracted from the source c
 |---|---:|---|---|---|---|
 | `fig_5_1.png` | 4 | Parts of a flowering plant | `(78, 95, 315, 405)` | Flower, fruit, stem, leaf, node, internode, bud, primary root, secondary root, shoot/root-system brackets | Extracted, visually checked |
 | `fig_5_2.png` | 4 | Different types of roots | `(78, 420, 555, 665)` | Main root, laterals, fibrous roots, adventitious roots; panels (a)–(c) | Extracted, visually checked |
-| `fig_5_3.png` | 5 | The regions of the root-tip | `(292, 120, 505, 325)` | Root hair, root cap, region of maturation, elongation, and meristematic activity | Extracted, visually checked |
+| `fig_5_3.png` | 5 | The regions of the root-tip | `(285, 112, 520, 345)` | Root hair, root cap, region of maturation, elongation, and meristematic activity | Extracted, visually checked |
 | `fig_5_4.png` | 6 | Structure of a leaf | `(45, 95, 278, 435)` | Lamina, stipule, petiole, leaf base, axillary bud; panels (a)–(c) | Extracted, visually checked |
-| `fig_5_5.png` | 6 | Compound leaves | `(48, 515, 282, 650)` | Rachis; pinnately and palmately compound leaf panels (a)–(b) | Extracted, visually checked |
+| `fig_5_5.png` | 6 | Compound leaves | `(45, 505, 265, 750)` | Rachis; pinnately and palmately compound leaf panels (a)–(b) | Extracted, visually checked |
 | `fig_5_6.png` | 7 | Different types of phyllotaxy | `(275, 85, 505, 335)` | China rose, Guava, Alstonia; panels (a)–(c) | Extracted, visually checked |
 | `fig_5_7.png` | 7 | Racemose inflorescence | `(275, 405, 515, 675)` | Complete racemose inflorescence photograph | Extracted, visually checked |
 | `fig_5_8.png` | 8 | Cymose inflorescence | `(50, 95, 278, 245)` | Complete cymose branching diagram | Extracted, visually checked |
@@ -28,7 +28,7 @@ This inventory records the 17 numbered NCERT figures extracted from the source c
 
 All assets are PNG files rendered at **300 dpi**, converted to true grayscale with `Image.convert("L")`, and contrast-normalized with Pillow autocontrast. The extraction script is stored beside this inventory so every asset is reproducible. The source PDF was not modified.
 
-The first crop pass was rejected because several boxes captured page headers, adjacent prose, or the wrong vertical region. The final rectangles were repinned from full-page visual inspection and then tightened so that the figure’s artwork, labels, arrows, panel boundaries, and terminal marks remain present without large blank margins. The dense right-column Figure 5.12 was extended only far enough to retain the complete printed caption instead of visibly truncating it.
+The first crop pass was rejected because several boxes captured page headers, adjacent prose, or the wrong vertical region. After user review, Figures 5.3 and 5.5 were repinned again to restore their clipped leader labels, outer artwork, panel markers, and complete printed captions. The final rectangles were repinned from full-page visual inspection and then tightened so that the figure’s artwork, labels, arrows, panel boundaries, and terminal marks remain present without large blank margins. The dense right-column Figure 5.12 was extended only far enough to retain the complete printed caption instead of visibly truncating it.
 
 ## Three-part audit record
 

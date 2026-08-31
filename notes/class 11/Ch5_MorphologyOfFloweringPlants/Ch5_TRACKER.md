@@ -16,9 +16,9 @@
 |---|---|---|
 | `fig_5_1.png` | Moved to `(78, 95, 315, 405)` | Removed the page header and restored the full plant, root-system brackets, and right-side labels. |
 | `fig_5_2.png` | Moved to `(78, 420, 555, 665)` | Captured the complete three-panel root plate and labels instead of the upper prose region. |
-| `fig_5_3.png` | Moved to `(292, 120, 505, 325)` | Restored the root-tip artwork and all region brackets while excluding the left prose column. |
+| `fig_5_3.png` | Final rect `(285, 112, 520, 345)` | User review found the root-hair leader slightly tight; the final crop adds label margin and preserves the full root cap and caption while the audit remains clean. |
 | `fig_5_4.png` | Moved to `(45, 95, 278, 435)` | Captured all leaf-part and venation panels with callouts. |
-| `fig_5_5.png` | Moved to `(48, 515, 282, 650)` | Removed the Figure 5.4 caption/prose and retained both compound-leaf panels plus `Rachis`. |
+| `fig_5_5.png` | Final rect `(45, 505, 265, 750)` | User review found the upper leaf edge and lower panel/caption lines cut off; the final crop restores them and tightens the right edge away from prose. |
 | `fig_5_6.png` | Moved to `(275, 85, 505, 335)` | Restored all three phyllotaxy examples and plant-name labels. |
 | `fig_5_7.png` | Moved to `(275, 405, 515, 675)` | Recentered the racemose inflorescence photograph. |
 | `fig_5_8.png` | Moved to `(50, 95, 278, 245)` | Recentered the cymose diagram and removed the page header. |
