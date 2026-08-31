@@ -81,24 +81,24 @@ Locate:
 
 ### 1. Render mandatory high-density grid overlays for every artwork page
 
-For **every chapter update, new extraction, re-extraction, and crop-defect fix**, render each page listed in the inventory as containing a figure at **440 dpi** with coordinate gridlines every **5 PDF points** and coordinate labels every **20 PDF points** on both axes. This 4× high-density grid is mandatory for production pinning; the former ~110 dpi / 20-point grid is reference-only and must not be used to make final crop decisions. Save the mandatory grids to `scratch/ch<N>_figs/grid_4x/p<NN>.png`.
+For **every chapter update, new extraction, re-extraction, and crop-defect fix**, render each page listed in the inventory as containing a figure at **440 dpi** with coordinate gridlines every **5 PDF points** and coordinate labels every **20 PDF points** on both axes. This 4× high-density grid is mandatory for production pinning. Save the mandatory grids to `scratch/ch<N>_figs/grid_4x/p<NN>.png`.
 
 ```python
 import pymupdf
 from PIL import Image, ImageDraw
 doc = pymupdf.open(SRC)
 page = doc[pno - 1]
-dpi = 110; z = dpi / 72
-pix = page.get_pixmap(dpi=dpi)
+DPI = 440; STEP = 5; LABEL_STEP = 20; z = DPI / 72
+pix = page.get_pixmap(dpi=DPI)
 img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
 d = ImageDraw.Draw(img)
-for x in range(0, int(page.rect.width) + 1, 20):
-    d.line([(x*z, 0), (x*z, img.height)], fill=(120, 180, 255))
-    if x % 40 == 0: d.text((x*z + 1, 1), str(x), fill=(255, 0, 0))
-for y in range(0, int(page.rect.height) + 1, 20):
-    d.line([(0, y*z), (img.width, y*z)], fill=(120, 180, 255))
-    if y % 40 == 0: d.text((1, y*z + 1), str(y), fill=(255, 0, 0))
-img.save(f"scratch/ch{N}_figs/grid/p{pno:02d}.png")
+for x in range(0, int(page.rect.width) + 1, STEP):
+    d.line([(x*z, 0), (x*z, img.height)], fill=(175, 215, 255), width=1)
+    if x % LABEL_STEP == 0: d.text((x*z + 2, 2), str(x), fill=(220, 0, 0))
+for y in range(0, int(page.rect.height) + 1, STEP):
+    d.line([(0, y*z), (img.width, y*z)], fill=(175, 215, 255), width=1)
+    if y % LABEL_STEP == 0: d.text((2, y*z + 2), str(y), fill=(220, 0, 0))
+img.save(f"scratch/ch{N}_figs/grid_4x/p{pno:02d}.png")
 ```
 
 ### 2. Read each figure's rect off its grid image — and cross-check numerically
@@ -112,8 +112,8 @@ After every extraction run, **open every emitted PNG individually**, not only a 
 Example 4× grid renderer:
 
 ```python
-DPI = 440                 # 4x the baseline 110-dpi render
-STEP = 5                  # 5 PDF points, 4x finer than the 20-point grid
+DPI = 440                 # mandatory production grid
+STEP = 5                  # mandatory PDF-point spacing
 for x in range(0, int(page.rect.width) + 1, STEP):
     d.line([(x*z, 0), (x*z, img.height)], fill=(175, 215, 255), width=1)
     if x % 20 == 0:
@@ -138,8 +138,8 @@ from PIL import Image, ImageDraw
 SRC = 'Chapter/class 11/Chapter 18 - Neural Control and Coordination.pdf'
 PAGES = [2, 3, 4, 5, 6, 7]
 OUT = 'scratch/ch18_figs/grid_4x'
-DPI = 440  # exactly 4× the prior 110-dpi grid
-STEP = 5   # PDF-point spacing; four times finer than 20pt grid
+DPI = 440  # mandatory production grid
+STEP = 5   # mandatory PDF-point spacing
 LABEL_STEP = 20
 
 os.makedirs(OUT, exist_ok=True)
