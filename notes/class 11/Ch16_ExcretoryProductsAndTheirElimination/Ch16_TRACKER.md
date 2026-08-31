@@ -2,9 +2,13 @@
 
 ## Current status
 
-**PASS 1 COMPLETE — GATE 1 CLOSED (2026-08-31).** Normal 3-pass protocol, 12 source pages (`Chapter/class 11/Chapter 16 - Excretory Products and their Elimination.pdf`). All five Pass 1 sessions have run (`1-F` figures, `1-S` sentence sweep, `1-H` headings, `1-O` openers, `1-Z` freeze). The inventory is **FROZEN** — H1 reads `# Frozen Inventory` — at **178 rows, `F001`–`F178`, contiguous, 0 gaps, 0 duplicate IDs, 0 ticked**.
+**PASS 2 COMPLETE — GATE 2 GREEN (2026-08-31).** Normal 3-pass protocol, 12 source pages (`Chapter/class 11/Chapter 16 - Excretory Products and their Elimination.pdf`). Pass 1 (all five sessions `1-S/1-H/1-O/1-F/1-Z`) closed Gate 1 with the inventory **FROZEN** — H1 reads `# Frozen Inventory` — at **178 rows, `F001`–`F178`, contiguous, 0 gaps, 0 duplicate IDs**, now **all 172 Facts rows ticked**. The rewritten chapter script and PDF are built and reproducible (18 pages, ~1065 KB).
 
-**Gate 2 / Gate 3:** OPEN. No script, no rewritten chapter PDF, `check_pdf.py` cannot run yet. Passes 2 and 3 have not started. This chapter is **not** countable in any completion tally.
+**Gate 2:** GREEN. `check_pdf.py` exits 0 — **0 fail, 0 warn** across all 10 checks, re-run against the freshly rebuilt PDF this session.
+
+**Gate 3:** OPEN — Pass 3 dual verification in progress. This chapter is **not** countable in any completion tally until Gate 3 closes.
+
+**Pass 2 defect caught this session (documentation-verification of Gate 2):** the committed script embedded only **5 of 6** figures — **Figure 16.4 "Malpighian body (renal corpuscle)"** (`fig_16_4.png`, asset present, `mode=L`) was never `figure()`-appended, so its image was missing from the PDF while its 4 labels still appeared in running text. `check_pdf.py` did **not** catch this — check 6 verifies label *text* coverage, not image *embedding*, so a dropped embed is invisible to the linter. Fixed by appending `figure("fig_16_4.png", ...)` + its verbatim-labels NOTE at its topic (the Malpighian-body keyterm in 16.1b, tagged `# [VERIFICATION FIX]`). Rebuilt PDF now embeds **6/6** images; Gate 2 re-run stays green (0/0).
 
 ## Machine-derived metrics (re-parsed from disk this session, not recalled)
 
@@ -33,9 +37,9 @@
 | `Ch16_ExcretoryProductsAndTheirElimination_inventory.md` | Present; **FROZEN, 178 rows**, six-row figure manifest + per-figure label matrix |
 | `assets/fig_16_1.png` … `assets/fig_16_6.png` | Present; all `mode=L`, individually visually verified |
 | `verify_inventory.py` | Present; **39/39 checks PASS** |
-| Full rewritten chapter script (`.py`) | Not started (Pass 2) |
-| Full rewritten chapter PDF | Not started (Pass 2) |
-| `check_pdf.py` chapter preflight | Not applicable until a chapter PDF exists |
+| `Ch16_ExcretoryProductsAndTheirElimination.py` | Present; builds reproducibly, imports `neet_template.py`, embeds 6/6 figures |
+| `Ch16_ExcretoryProductsAndTheirElimination.pdf` | Present; 18 pages, ~1065 KB, 6 embedded monochrome figures |
+| `check_pdf.py` chapter preflight | **PASS — 0 fail, 0 warn** (Gate 2 green) |
 
 ## References
 

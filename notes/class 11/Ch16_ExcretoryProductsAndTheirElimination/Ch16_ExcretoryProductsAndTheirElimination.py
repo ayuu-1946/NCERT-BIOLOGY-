@@ -326,6 +326,16 @@ story.append(keyterm(
     "<b>Bowman's capsule</b> (Figure 16.4). The renal tubule begins with this double walled "
     "cup-like Bowman's capsule, which encloses the glomerulus."))
 
+# [VERIFICATION FIX] Fig 16.4 embed was dropped in Pass 2 (asset present, image never
+# appended); check_pdf.py check 6 verifies label text only, not image embedding, so this
+# was linter-invisible. Restored at its topic (Malpighian-body keyterm).
+story.append(gap())
+story.append(figure("fig_16_4.png", "Figure 16.4 Malpighian body (renal corpuscle)"))
+
+story.append(note(
+    "<b>Figure 16.4 labels, verbatim:</b> \"Afferent arteriole\"; \"Efferent arteriole\"; "
+    "\"Bowman's capsule\"; \"Proximal convoluted tubule\"."))
+
 story.append(gap())
 story.append(body("The renal tubule then runs through four named segments in strict order:"))
 
