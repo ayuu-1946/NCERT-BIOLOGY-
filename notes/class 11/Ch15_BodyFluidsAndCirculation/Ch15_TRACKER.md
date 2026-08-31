@@ -9,7 +9,9 @@
 **Gate 1 (inventory freeze):** CLOSED — 245 rows frozen. See `Ch15_BodyFluidsAndCirculation_inventory.md`.  
 **Gate 2 (script + build):** CLOSED — `Ch15_BodyFluidsAndCirculation.py` → 11-page PDF; `check_pdf.py` 10/10 PASS, `verify_inventory.py` green, 245/245 ticked.  
 **Gate 3(a) (visual render pass):** CLOSED — venv rebuilt, PDF regenerated (11 pages, 30,707 chars, 4 images), both verifiers re-confirmed green, all 11 pages rendered and inspected; no layout defect. See the Gate 3(a) checklist in the inventory file.  
-**Gate 3(b) (line-by-line content read + tracker/README tally):** OPEN — not started. Per §6, this chapter must not appear in any completion tally until Gate 3(b) closes.
+**Gate 3(b) (line-by-line content read + tracker/README tally):** CLOSED — bidirectional full read of the fresh source text layer (12 pp.) against the frozen 245-row inventory and the 11 rendered PDF pages, with a per-source-page reading claim. Direction 1: 245/245 rows COVERED (0 MISSING / 0 FABRICATED / 0 DRIFTED); Direction 2: every NCERT sentence and heading represented (0 UNINVENTORIED), with one factless navigational transition considered and correctly dismissed. `check_pdf.py` PASS (0 fail, 0 warn, also `--strict`), `verify_inventory.py` green, rebuild reproducible (identical text hash). **VERDICT: PASS.** See the Gate 3(b) checklist in the inventory file.
+
+**Chapter 15: COMPLETE** — all gates (1, 2, 3a, 3b) CLOSED. Cleared to appear in the completion tally.
 
 ## Re-pin log
 

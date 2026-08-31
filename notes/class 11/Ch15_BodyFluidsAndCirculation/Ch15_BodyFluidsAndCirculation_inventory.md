@@ -389,7 +389,40 @@ Environment rebuilt first per §0.2 (the venv is ephemeral): `/vercel/share/neet
 - [x] **Sub/superscripts render visibly at legible size** — O₂, CO₂, mm⁻³, min⁻¹, Na⁺, Ca⁺⁺, Mg⁺⁺, HCO₃⁻, Cl⁻ all appear as true raised/lowered glyphs, none dropped to the illegibility floor (consistent with check 2 reporting 0 warn).
 - [x] **No footer/header band, no page numbers** — consistent with check 1; confirmed visually on every page.
 
-**Gate 3(a): CLOSED.** No layout defect found; the built PDF is a faithful visual render. **Gate 3(b) is OPEN and has not started** — the independent line-by-line content read against the source and the tracker/README tally remain to be done. Per §6, this chapter stays out of every completion tally until Gate 3(b) closes.
+**Gate 3(a): CLOSED.** No layout defect found; the built PDF is a faithful visual render.
+
+## Gate 3(b) checklist — bidirectional full-read content verification
+
+Run per §6 Pass 3(b) and the "Gate 3(b) Verification Rules" appendix. Environment re-confirmed live first (`ls /vercel/share/neetenv/bin/python` present; reportlab 5.0.1 / pymupdf 1.28.2 / Pillow 12.3.0 on 3.13, matching the known-good reference). The read used the **source text layer extracted fresh from `Chapter/class 11/Chapter 15 - Body Fluids and Circulation.pdf` (12 pages)** read start-to-finish against the **frozen inventory (loaded from this file, not memory)** and the **11 rendered pages of the built PDF** — no grep, coverage score, or similarity metric was used to clear any row (hard bar, §6).
+
+**Reading claim — both directions, per source page → script block:**
+
+| Source pp. | Sections | Script blocks read against | Direction 1 (inv→script) | Direction 2 (source→inv) |
+|---|---|---|---|---|
+| 193 | title, intro, 15.1, 15.1.1 | `# ---- title/intro ----`, `# ---- 15.1 ----`, `# ---- 15.1.1 ----` | F001–F017 COVERED | 0 UNINVENTORIED |
+| 194 | 15.1.1, 15.1.2 + Fig 15.1 | `# ---- 15.1.1 ----`, `# ---- 15.1.2 ----` | F018–F043, F050, F242 COVERED | 0 UNINVENTORIED |
+| 195 | 15.1.2, 15.1.3, 15.1.3.1 + Table 15.1 | `# ---- 15.1.2 ----`, `# ---- 15.1.3 ----`, `# ---- 15.1.3.1 ----` | F044–F067 COVERED | 0 UNINVENTORIED |
+| 196 | 15.1.3.2, 15.1.4 | `# ---- 15.1.3.2 ----`, `# ---- 15.1.4 ----` | F068–F094 COVERED | 0 UNINVENTORIED |
+| 197 | 15.2, 15.3 | `# ---- 15.2 ----`, `# ---- 15.3 ----` | F095–F120 COVERED | 1 considered item — see below |
+| 198 | 15.3.1 + Fig 15.2 | `# ---- 15.3.1 ----` | F121–F130, F144, F243 COVERED | 0 UNINVENTORIED |
+| 199 | 15.3.1, 15.3.2 | `# ---- 15.3.1 ----`, `# ---- 15.3.2 ----` | F131–F153 COVERED | 0 UNINVENTORIED |
+| 200 | 15.3.2, 15.3.3 | `# ---- 15.3.2 ----`, `# ---- 15.3.3 ----` | F154–F175 COVERED | 0 UNINVENTORIED |
+| 201 | 15.3.3 + Fig 15.3, 15.4 | `# ---- 15.3.3 ----`, `# ---- 15.4 ----` | F176–F196, F187, F244 COVERED | 0 UNINVENTORIED |
+| 202 | 15.4 + Fig 15.4, 15.5, 15.6 | `# ---- 15.4 ----`, `# ---- 15.5 ----`, `# ---- 15.6 ----` | F197–F210, F200, F245 COVERED | 0 UNINVENTORIED |
+| 203 | 15.6, SUMMARY | `# ---- 15.6 ----`, `# ---- summary ----` | F211–F226 COVERED | 0 UNINVENTORIED |
+| 204 | SUMMARY, EXERCISES | `# ---- summary ----`, `# ---- exercises ----` | F227–F241, S1–S24 COVERED | 0 UNINVENTORIED |
+
+- [x] **Direction 1 (inventory → script/PDF): 245/245 rows COVERED, 0 MISSING, 0 FABRICATED, 0 DRIFTED.** High-risk numeric/qualifier/spelling rows confirmed verbatim in the rendered PDF by direct read (not grep): F040 (Neutrophils 60-65 most abundant / basophils 0.5-1 least), F047 (`1,500,00-3,500,00`), F069 (`majority (nearly 80 per cent)`), F114 (3-chambered, "except crocodiles"), F142/F143 (`70-75 min⁻¹`, `72 beats min⁻¹`), F151 (`30 per cent`), F162 (`0.8 seconds`), F165 (`5000 mL or 5 litres`). Source's own spellings preserved and rendered: `primarly` (F019), `medulla oblangata` (F203), `coagulam` (F087), `no enough oxygen` (F218), `graveyard of RBCs` (F034). All four figure-callout NOTES verbatim against the images (F242–F245). Table 15.1 (F061–F065) and the exercise-answer key (Ex 3 matches a-iii, b-v, c-ii, d-i, e-iv) both re-derived correct against the source.
+- [x] **Direction 2 (source → inventory): every NCERT sentence and heading carries a row, with one considered navigational item (below).** All 15 numbered headings + 7 unnumbered headings, every section's first/antecedent sentence, and all 24 summary sentences (S1–S24, 5 SUMMARY-UNIQUE folded) are represented. No dropped antecedent, no dropped sub-heading.
+- [x] **F083 forward-reference resolved.** The 15.1.4 opener's trailing rhetorical hook ("...usually the blood stops flowing after sometime. Do you know why?") is folded into F083 and rendered as the section opener — consistent with F146 keeping "How does the heart function? Let us take a look." This is the "Gate 3(b) record" that F083's note points to.
+- [x] **check_pdf.py green on the FINAL rebuilt PDF** — repo-level `check_pdf.py` re-run from the root against `notes/class 11/Ch15_BodyFluidsAndCirculation`: **VERDICT PASS, 0 fail, 0 warn** (also PASS under `--strict`). Checks 1–9 all green (43/43 labels in text, 241/241 Facts ticked, 4/4 mono images, 11/11 A4 portrait, 70 banners no orphans).
+- [x] **Rebuild reproducible** — regenerated from `Ch15_BodyFluidsAndCirculation.py`; fingerprint identical before and after: **11 pages / 30,724 pymupdf chars / 4 images / text SHA-256 prefix `1a49f8f83c7d142b`** unchanged. `verify_inventory.py` green (245/245, header claims match a fresh parse).
+
+**Considered direction-2 item, dismissed with reasoning (recorded per §6 "record false positives separately"):**
+
+- The closing transition of §15.3, *"Let us study the human circulatory system."* (source p. 197, immediately before the 15.3.1 heading), has **no inventory row**. It is a pure navigational sentence carrying **no fact** — it is not an antecedent/defining sentence and the very next line is the `15.3.1 Human Circulatory System` banner, which states the same transition structurally. Under the chapter's governing doctrine (§ core: "if both source and output were reduced to a flat list of *facts*, the two lists must match exactly — the prose need not match"), a factless transition is correctly omitted, not a MISSING/UNINVENTORIED defect. **Not a confirmed defect; no row added, no PDF change.** Logged so a later audit does not re-raise it.
+
+**Gate 3(b): CLOSED.** Full read complete in both directions, per-section reading claim stated above, **zero confirmed defects** (0 MISSING / 0 FABRICATED / 0 DRIFTED / 0 UNINVENTORIED; one factless transition considered and correctly dismissed). All five §6 Gate-3 conditions hold: (1) zero confirmed defects; (2) `check_pdf.py` green on the final rebuild; (3) 11/11 pages inspected at 3(a); (4) 3(b) full read in both directions with reading claim, no coverage/grep substitute; (5) rebuild reproducible (identical fingerprint). **VERDICT: PASS.**
 
 ## References
 
