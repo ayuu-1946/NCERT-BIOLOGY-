@@ -1,0 +1,54 @@
+A) text-layer word grazing
+fig_7_1: words_in_rect=10 ok
+fig_7_2: words_in_rect=6 ok
+fig_7_3: words_in_rect=3 ok
+fig_7_4: words_in_rect=16 GRAZING ['cell']
+fig_7_5: words_in_rect=4 GRAZING ['(b)']
+fig_7_6: words_in_rect=27 GRAZING ['bones', 'connective', 'and', 'are', 'them', 'embryos', 'present', 'bones', 'rich', 'its', 'structural', 'softer', 'present', 'the', 'They', 'to', 'is', 'red', '(Figure', 'the', 'about']
+fig_7_7: words_in_rect=14 GRAZING ['(c)']
+fig_7_8: words_in_rect=17 GRAZING ['to', 'contract,', 'its', 'neighbours', 'are', 'over', 'changing', 'of', 'body.', 'stimulated,', 'Neuroglea']
+fig_7_14: words_in_rect=19 GRAZING ['(tergites', 'dorsally', 'and', 'sternites', 'ventrally)', 'that', 'are', 'joined', 'to', 'each', 'other', 'by', 'thin']
+fig_7_15: words_in_rect=30 GRAZING ['bears', 'a', 'pair', 'of', 'jointed', 'filamentous', 'structures', 'called', 'anal', 'cerci.', '(b)']
+fig_7_16: words_in_rect=18 GRAZING ['Rectum']
+fig_7_17: words_in_rect=6 GRAZING ['muscles']
+fig_7_18: words_in_rect=43 GRAZING ['Spermatheca', 'gonapophyses']
+fig_7_19: words_in_rect=7 ok
+fig_7_20: words_in_rect=17 GRAZING ['Intestine', 'Rectum', 'Cloaca', 'Urinary', 'bladder', 'Gall', 'bladder', 'Lung', 'Cloacal']
+fig_7_21: words_in_rect=17 ok
+fig_7_22: words_in_rect=33 GRAZING ['and', 'of', 'well-organised', 'aggregations', 'of', 'skull.', 'unit).', 'tympanum', 'of', 'female', 'organs', '(Figure', 'part', 'called', 'in', 'the', 'Bidder’s', 'the', 'kidneys', 'small,', 'faecal', 'pair', 'situated', 'functional']
+B) drawings-extent overflow
+fig_7_1: OVERFLOW L11.9 T48.1 R0.0 B26.0
+fig_7_2: ok
+fig_7_3: ok
+fig_7_4: ok
+fig_7_5: ok
+fig_7_6: ok
+fig_7_7: ok
+fig_7_8: no drawings (raster figure)
+fig_7_14: no drawings (raster figure)
+fig_7_15: ok
+fig_7_16: ok
+fig_7_17: ok
+fig_7_18: OVERFLOW L0.0 T11.0 R0.0 B0.0
+fig_7_19: ok
+fig_7_20: ok
+fig_7_21: ok
+fig_7_22: no drawings (raster figure)
+C) unexplained dark ink in border band
+fig_7_1: clean
+fig_7_2: clean
+fig_7_3: clean
+fig_7_4: clean
+fig_7_5: clean
+fig_7_6: clean
+fig_7_7: clean
+fig_7_8: EDGE-INK ['B:501px@(np.float64(355.4), np.float64(672.0))']
+fig_7_14: clean
+fig_7_15: clean
+fig_7_16: clean
+fig_7_17: clean
+fig_7_18: clean
+fig_7_19: EDGE-INK ['L:179px@(np.float64(83.8), np.float64(534.7))']
+fig_7_20: clean
+fig_7_21: clean
+fig_7_22: clean
