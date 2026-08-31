@@ -164,6 +164,60 @@ def main() -> int:
     )
     check("\ufffd" not in inv, "no U+FFFD replacement chars in inventory")
 
+    print("[6] caption text is source-verbatim in the BUILT pdf")
+    # WHY THIS CHECK EXISTS (Gate 3(b), defect D1): check [1] above counts caption
+    # BLOCKS and asserts their NUMBERS are contiguous 1..6 - it never looked at a single
+    # caption's WORDS. So the chapter shipped Figure 16.3 as "... duct and tubules" while
+    # NCERT draws "... duct and tubule" (singular), and 39 green checks plus a full
+    # check_pdf.py run never noticed. Frozen row F167 carries the same Pass 1 eye-slip.
+    # A caption is a verbatim-transcription obligation, so it gets a verbatim assertion.
+    #
+    # Method: pull each caption STRUCTURALLY (block-level) out of the built PDF, then
+    # require it to appear contiguously in the normalized source text. Block-level
+    # extraction is used because a plain "first match of Figure 16.N" regex picks up
+    # in-text call-outs and the label NOTEs instead of the caption itself; containment
+    # against normalized source text is used because the source's two-column caption
+    # wraps into several blocks that cannot be reassembled reliably.
+    built_pdf = HERE / "Ch16_ExcretoryProductsAndTheirElimination.pdf"
+    if not built_pdf.exists():
+        check(False, f"built pdf present for caption verification ({built_pdf.name})")
+    else:
+        def _norm(t: str) -> str:
+            for a, b in (("\u2013", "-"), ("\u2014", "-"), ("\u2019", "'"), ("\u2018", "'")):
+                t = t.replace(a, b)
+            return re.sub(r"\s+", " ", t).strip()
+
+        src_norm = _norm(full)
+        bdoc = pymupdf.open(built_pdf)
+        built_caps: dict[int, str] = {}
+        for bpage in bdoc:
+            for blk in bpage.get_text("blocks"):
+                btxt = _norm(blk[4])
+                m = re.match(r"^Figure\.?\s*16\.(\d)\s+(.+)$", btxt)
+                if m and "labels, verbatim" not in btxt:
+                    built_caps.setdefault(int(m.group(1)), m.group(2))
+        bdoc.close()
+
+        check(
+            sorted(built_caps) == list(range(1, EXP_FIGURES + 1)),
+            f"built pdf prints {EXP_FIGURES} figure captions (got {sorted(built_caps)})",
+        )
+        for n in range(1, EXP_FIGURES + 1):
+            cap = built_caps.get(n, "")
+            check(
+                bool(cap) and cap in src_norm,
+                f"Fig 16.{n} caption is source-verbatim"
+                + ("" if cap and cap in src_norm else f" (printed {cap!r} is not in the source)"),
+            )
+
+    print()
+    print("KNOWN FROZEN-ROW DRIFT (documented, deliberately not 'fixed'):")
+    print("  F167 records the Fig 16.3 caption as '... duct and tubules'; the source draws")
+    print("  '... duct and tubule'. SS7 rule 5 forbids rewording a frozen Facts row, so the")
+    print("  row stands as frozen and the correction lives in the inventory's Pass 3(b)")
+    print("  findings section. The BUILT pdf prints the source-verbatim caption, which is")
+    print("  what check [6] above enforces.")
+
     print()
     if FAILURES:
         print(f"RESULT: FAIL -- {len(FAILURES)} of {CHECKS} checks failed")
