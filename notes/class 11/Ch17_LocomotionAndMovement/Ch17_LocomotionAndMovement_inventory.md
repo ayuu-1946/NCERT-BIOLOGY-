@@ -235,7 +235,7 @@ One row per figure. Labels were harvested in session `1-F` by opening each rende
 | F188 | Fig 17.5 | figure-label | Figure labels: “H zone”; “I band”; “A band”; “Relaxed”; “Contracting”; “Maximally Contracted”; “Z line”; “Two Sarcomeres” | |
 | F189 | Fig 17.6 | figure-label | Figure labels: “Parietal bone”; “Frontal bone”; “Temporal bone”; “Occipital bone”; “Occipital condyle”; “Sphenoid bone”; “Ethmoid bone”; “Lacrimal bone”; “Nasal bone”; “Zygomatic bone”; “Maxilla”; “Mandible”; “Hyoid bone” | |
 | F190 | Fig 17.7 | figure-label | Figure labels: “Cervical vertebra”; “Thoracic vertebra”; “Lumbar vertebra”; “Intervertebral disc”; “Sacrum”; “Coccyx” | |
-| F191 | Fig 17.8 | figure-label | Figure labels: “1”; “2”; “3”; “4”; “5”; “6”; “7”; “8”; “9”; “10”; “11”; “12”; “True ribs”; “False ribs”; “Floating ribs”; “Sternum”; “Ribs”; “Vertebral column” | |
+| F191 | Fig 17.8 | figure-label | Figure labels: “1”; “2”; “3”; “4”; “5”; “6”; “7”; “8”; “9”; “10”; “11”; “12”; “True ribs”; “False ribs”; “Floating ribs”; “Sternum”; ���Ribs”; “Vertebral column” | |
 | F192 | Fig 17.9 | figure-label | Figure labels: “Clavicle”; “Scapula”; “Humerus”; “Radius”; “Ulna”; “Carpals”; “Metacarpals”; “Phalanges” | |
 | F193 | Fig 17.10 | figure-label | Figure labels: “Ilium”; “Pubis”; “Ischium”; “Coxal bone”; “Sacrum”; “Femur”; “Patella”; “Tibia”; “Fibula”; “Tarsals”; “Metatarsals”; “Phalanges” | |
 
@@ -329,6 +329,31 @@ Call-outs, in source order: (Figure 17.1) · (Figure 17.2) · (Figure 17.3a) · 
 | 11 | No Unicode sub/superscripts or U+FFFD in this file | done — asserted by `verify_inventory.py` check [5] |
 | 12 | All counts machine-derived, not hand-tallied | done — `verify_inventory.py` re-parses the PDF and this file and exits non-zero on drift |
 | 13 | All Facts rows unticked at freeze | done — 0 of 193 ticked |
+
+## Pass 3 defect register (verification sweep)
+
+Pass 3 ran two independent sweeps over the built PDF: **3(a)** a page-by-page visual inspection of every rendered page, and **3(b)** a bidirectional full read (source text -> notes, then notes -> source) to catch both dropped and invented content. Defects are numbered `D<n>` in the Ch15/Ch16 house style; every one below is closed.
+
+| # | Sweep | Defect | Disposition |
+|---|---|---|---|
+| D1 | 3(b) | Sarcomere was introduced only inside a `[MEMORY AID - not in NCERT]` box, so the NCERT definition ("portion of the myofibril between two successive 'Z' lines ... functional unit of contraction", `F062`-`F064`) sat in non-NCERT furniture instead of body text | fixed — the definition is now a body bullet on notes p.3 with the Figure 17.2 call-out; the memory aid was reduced to the mnemonic alone (only the 'I' band and 'H' zone shrink, the 'A' band never does) |
+| D2 | 3(b) | Exercise 9(c) and 9(d) are answerable only by applying a chapter definition, not by quoting one | fixed — both answers carry an explicit `(Applied answer: ...)` parenthetical naming the chapter statement they are derived from, and the EXERCISES `[NOTE]` flags this in place |
+| D3 | 3(a) | Figure 17.5 typeset caption had to be chosen between two frozen strings (see **OBS-17.5**) | closed — the typeset caption uses the source-verbatim `F178` string ("... movement of the thin filaments and the relative size of the I band and H zones"); the `1-F` manifest row is left frozen as recorded, so the divergence stays documented rather than silently reconciled |
+
+**Non-defects confirmed during 3(b)** (recorded so a later session does not re-open them): the `syncitium`, `arragement` and `ADP and P` + stray `1` source artefacts behave exactly as the transcription policy above dictates (frozen verbatim in the rows, spelled/typeset correctly in the prose, `Pi` rendered as P with a subscript i); the corrupted p.6 running head is page furniture and produced no row; and the only content in the notes with no source anchor is the two `[MEMORY AID - not in NCERT]` boxes and the chapter-map recap `[NOTE]`, each explicitly labelled as such.
+
+## Gate 3 record
+
+| # | Requirement | Status |
+|---|---|---|
+| 1 | Every Facts row ticked | done — 193 of 193 (`F001`-`F193`), zero `[ ]` remaining |
+| 2 | All 10 figures placed, each with a verbatim caption and a `[NOTE] labels` line | done — Fig 17.1-17.10 on notes pp. 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 |
+| 3 | `check_pdf.py` green | done — all checks pass; check 4 has no manifest row to fire on (true negative, denominator 10) |
+| 4 | Build reproducible from the committed script | done — rebuild differs only in the PDF `CreationDate`/`ModDate`/ID (62 bytes); 15 pages, 30,008 text chars, 10 images both times |
+| 5 | Pass 3(a) visual inspection of every rendered page | done — all 15 pages rendered at 105 dpi and inspected: no text/figure collision, no clipped artwork, no cell overflow, no orphan heading, all badges correct, greyscale-only so print-safe in B&W |
+| 6 | Pass 3(b) bidirectional read | done — source pp. 217-229 -> notes (nothing dropped) and notes -> source (nothing invented); defects D1-D3 raised and closed |
+| 7 | SUMMARY reproduced and EXERCISES answered | done — full summary section plus all 10 NCERT exercises with worked answers sourced from the chapter text |
+| 8 | Defect register written | done — D1-D3 above, all closed |
 
 ## References
 
