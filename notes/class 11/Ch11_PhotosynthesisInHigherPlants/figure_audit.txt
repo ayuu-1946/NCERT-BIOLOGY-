@@ -1,6 +1,6 @@
 --- A) text-layer word grazing ---
 fig_11_1: words_in_rect=4 ok
-fig_11_2: words_in_rect=13 ok
+fig_11_2: words_in_rect=14 GRAZING ['light-dependent.']
 fig_11_3a: words_in_rect=0 ok
 fig_11_3b: words_in_rect=0 ok
 fig_11_3c: words_in_rect=0 ok
@@ -13,7 +13,7 @@ fig_11_9: words_in_rect=0 ok
 fig_11_10: words_in_rect=10 ok
 --- B) drawings-extent overflow ---
 fig_11_1: ok
-fig_11_2: OVERFLOW L0.0 T5.0 R0.0 B0.0
+fig_11_2: ok
 fig_11_3a: ok
 fig_11_3b: ok
 fig_11_3c: ok
@@ -28,8 +28,8 @@ fig_11_10: ok
 fig_11_1: clean
 fig_11_2: clean
 fig_11_3a: clean
-fig_11_3b: EDGE-INK ['T:53px', 'B:194px']
-fig_11_3c: EDGE-INK ['T:79px']
+fig_11_3b: EDGE-INK ['B:398px']
+fig_11_3c: EDGE-INK ['T:403px']
 fig_11_4: clean
 fig_11_5: clean
 fig_11_6: clean
@@ -38,15 +38,15 @@ fig_11_8: clean
 fig_11_9: clean
 fig_11_10: clean
 --- D) emitted image mode and blank-margin estimate ---
-fig_11_1: mode=L size=(867, 1472) ink_bbox_margins=(np.int64(14), np.int64(9), np.int64(0), np.int64(0))
-fig_11_2: mode=L size=(1780, 805) ink_bbox_margins=(np.int64(31), np.int64(0), np.int64(18), np.int64(20))
-fig_11_3a: mode=L size=(959, 626) ink_bbox_margins=(np.int64(65), np.int64(62), np.int64(20), np.int64(0))
-fig_11_3b: mode=L size=(848, 532) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(0), np.int64(0))
-fig_11_3c: mode=L size=(909, 705) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(21), np.int64(53))
-fig_11_4: mode=L size=(943, 826) ink_bbox_margins=(np.int64(19), np.int64(20), np.int64(0), np.int64(0))
-fig_11_5: mode=L size=(1022, 939) ink_bbox_margins=(np.int64(11), np.int64(75), np.int64(40), np.int64(0))
-fig_11_6: mode=L size=(896, 834) ink_bbox_margins=(np.int64(22), np.int64(63), np.int64(32), np.int64(23))
-fig_11_7: mode=L size=(1605, 1234) ink_bbox_margins=(np.int64(12), np.int64(12), np.int64(0), np.int64(0))
-fig_11_8: mode=L size=(1563, 1730) ink_bbox_margins=(np.int64(71), np.int64(33), np.int64(0), np.int64(0))
-fig_11_9: mode=L size=(1251, 1547) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(11), np.int64(7))
-fig_11_10: mode=L size=(959, 822) ink_bbox_margins=(np.int64(23), np.int64(20), np.int64(26), np.int64(21))
+fig_11_1: mode=L size=(880, 1471) ink_bbox_margins=(np.int64(14), np.int64(13), np.int64(0), np.int64(0))
+fig_11_2: mode=L size=(1788, 826) ink_bbox_margins=(np.int64(31), np.int64(0), np.int64(26), np.int64(20))
+fig_11_3a: mode=L size=(897, 576) ink_bbox_margins=(np.int64(11), np.int64(20), np.int64(12), np.int64(0))
+fig_11_3b: mode=L size=(897, 559) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(11), np.int64(0))
+fig_11_3c: mode=L size=(897, 664) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(13), np.int64(28))
+fig_11_4: mode=L size=(947, 826) ink_bbox_margins=(np.int64(19), np.int64(20), np.int64(0), np.int64(0))
+fig_11_5: mode=L size=(1026, 864) ink_bbox_margins=(np.int64(36), np.int64(21), np.int64(19), np.int64(0))
+fig_11_6: mode=L size=(897, 792) ink_bbox_margins=(np.int64(35), np.int64(21), np.int64(20), np.int64(23))
+fig_11_7: mode=L size=(1621, 1247) ink_bbox_margins=(np.int64(20), np.int64(21), np.int64(0), np.int64(0))
+fig_11_8: mode=L size=(1455, 1692) ink_bbox_margins=(np.int64(21), np.int64(20), np.int64(0), np.int64(0))
+fig_11_9: mode=L size=(1267, 1555) ink_bbox_margins=(np.int64(0), np.int64(0), np.int64(19), np.int64(7))
+fig_11_10: mode=L size=(951, 822) ink_bbox_margins=(np.int64(23), np.int64(20), np.int64(18), np.int64(21))

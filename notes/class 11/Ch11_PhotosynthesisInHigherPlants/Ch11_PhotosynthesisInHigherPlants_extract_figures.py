@@ -1,20 +1,23 @@
-"""SUPREME COMMAND §4.4 figure extraction for Ch11 Photosynthesis in Higher Plants.
+"""SUPREME COMMAND §4.4 Step 1 figure extraction — Ch11 Photosynthesis in Higher Plants.
 
-Rects are in source-PDF points (page is 576.0 x 784.8). Every rect was pinned
+Rectangles are in source-PDF points (page box 576 x 784.8) and were pinned
 against the mandatory 440 dpi / 5-point coordinate grids in
-`scratch/ch11_figs/grid_4x/p<NN>.png`, then cross-checked numerically against
-`page.get_drawings()` extents, `page.get_image_rects()` (raster plates) and
-`page.get_text("words")` (caption and neighbour-column boundaries).
+`scratch/ch11_figs/grid_4x/`, then validated three ways by `audit_figures.py`
+(text-layer grazing, drawings-extent overflow, border-band ink).
 
-Gate-1 session 1-F, 2026-09-01: five rects were found clipped when every asset
-was opened and read for the figure-label matrix. Those are marked [REPIN] with
-the measurement that pinned them.
-
-fig_11_3b is NOT produced from a rect: it is the user-approved reference asset
-preserved on disk (848 x 532, converted to true monochrome in place). The
-script skips it so a re-run can never overwrite it.
+Pinning method per rect (Gate 1 session 1-F repin, 2026-09-01):
+  * lower bound  = machine-measured drawings/raster extent of the artwork,
+                   restricted to the figure's own halo and with the page-scale
+                   "Reprint 2026-27" watermark and full-page background raster
+                   excluded (they span the whole page and otherwise swallow
+                   every extent measurement);
+  * upper bound  = first neighbouring text baseline (caption line, adjacent
+                   prose column, or the next panel's marker), minus clearance.
+Every rect therefore encloses all artwork, all in-figure labels and all panel
+markers, and stops short of the NCERT caption and of the body-prose column.
 """
 import os
+
 import pymupdf
 from PIL import Image, ImageOps
 
@@ -22,73 +25,82 @@ SRC = "Chapter/class 11/Chapter 11 - Photosynthesis in Higher Plants.pdf"
 OUT_DIR = "notes/class 11/Ch11_PhotosynthesisInHigherPlants/assets"
 RENDER_DPI = 300
 
-# asset id, source page, rect; comments record the geometric pinning.
+# asset id, source page, rect. Comments record the measured pinning evidence.
 FIGS = [
-    # [REPIN] p4 Priestley plate: drawings extent x 63.7-266.2 y 106.4-442.9;
-    # the (c)/(d) panel markers are text-layer words at y 444.5-454.4 and were
-    # sheared off by the old y1=435. Caption "Figure 11.1" starts y 459.4, so
-    # y1=457 keeps both markers and still excludes the caption.
-    ("11_1", 4, (61, 104, 269, 457)),
-    # p6 chloroplast: drawings x 92.7-428.8, label words run to x 508.1 and to
-    # y 681.6 ("Lipid droplet"). The body line "light-dependent." ends y 492.7,
-    # so y0=493 is the highest edge that excludes prose.
-    ("11_2", 6, (85, 493, 512, 686)),
-    # p7 (a) absorption-spectrum panel: ends immediately after the (a) marker,
-    # before the (b) panel that begins below y 300.
-    ("11_3a", 7, (290, 135, 520, 285)),
-    # p7 (b) action-spectrum panel: PRESERVED user-approved reference asset,
-    # 848 x 532; rect recorded for provenance only, never re-rendered.
-    ("11_3b", 7, (290, 300, 520, 444)),
-    # [REPIN] p7 (c) superimposed panel: the graph frame's top rule reads off
-    # the 4x grid at y 424.5 (old y0=430 sliced it); drawings extent
-    # x 305.9-514.6, max y1 577.3; the (b) marker above ends y 419 and the
-    # Figure 11.3a caption below starts y 600.6.
-    ("11_3c", 7, (302, 421, 520, 590)),
-    # [REPIN] p8 light-harvesting complex: label words reach x 284.1
-    # ("molecules") and drawings reach y 483.3 - the old (60,285,285,475) cut
-    # both. Body column starts x 296.4, caption at y 497.1.
-    ("11_4", 8, (63, 292, 289, 490)),
-    # p9 Z scheme: includes both LHCs and the lower water-splitting line,
-    # stopping before the caption.
-    ("11_5", 9, (280, 100, 525, 325)),
-    # p10 cyclic photophosphorylation: complete, caption excluded.
-    ("11_6", 10, (60, 105, 275, 305)),
-    # [REPIN] p11 chemiosmosis is a raster plate: get_image_rects returns
-    # exactly (77, 105, 456, 396); the old y1=395 clipped the bottom
-    # "ADP + Pi -> ATP" row. Caption starts y 403.5.
-    ("11_7", 11, (74, 102, 459, 398)),
-    # p14 Calvin cycle: raster plate, complete through "Sucrose, starch".
-    ("11_8", 14, (105, 100, 480, 515)),
-    # [REPIN] p16 Hatch and Slack: raster plate rect is
-    # (192.8, 329.6, 487.4, 696.3) - the old y1=690 clipped 6pt off the
-    # bundle-sheath cell outline. Caption starts y 700.2.
-    ("11_9", 16, (190, 327, 490, 698)),
-    # [REPIN] p19 light-intensity graph: the x-axis title "Light intensity" is
-    # a text-layer word at y 656.2-665.1, cut by the old y1=655; the y-axis
-    # title starts x 297.3, drawings reach x 515.8, caption starts y 688.4.
-    ("11_10", 19, (292, 473, 522, 670)),
+    # p4 2x2 Priestley plate. Artwork drawings reach y442.9 and the "(c)"/"(d)"
+    # panel markers occupy y444.5-454.4; caption "Figure 11.1" starts y459.4.
+    # The old y1=435 sheared both bottom markers off, so the bottom moves to 456.
+    # Right edge 272 keeps clear of the prose column at x285.1.
+    ("11_1", 4, (61.0, 103.0, 272.0, 456.0)),
+    # p6 chloroplast. The artwork's own outer frame begins at exactly y488.0
+    # (measured), the right-hand label stack runs to x508.1 ("Outer membrane")
+    # and ends y681.6 ("Lipid droplet"), and the caption starts y693.0. The
+    # last prose line "light-dependent." occupies y482.2-492.7 at x174-257.3,
+    # i.e. it overlaps the artwork's y-band, so no horizontal cut can exclude
+    # it and keep the frame: the top is pinned at the frame itself (488.0) and
+    # the audit's residual grazing report on that one word is expected and
+    # was confirmed by eye to leave no legible prose in the crop.
+    ("11_2", 6, (85.0, 488.0, 514.0, 686.0)),
+    # p7 absorption spectrum (a). Graph box y149.0-266.1, y-axis label from
+    # x307.3, "(a)" marker y269.9-279.5; panel (b)'s y-axis label starts y294.5.
+    ("11_3a", 7, (303.0, 145.0, 518.0, 283.0)),
+    # p7 action spectrum (b). y-axis label from y294.5, graph box y306.8-395.9,
+    # "(b)" marker y411.6-421.0; panel (c)'s graph frame starts y428.8.
+    ("11_3b", 7, (303.0, 290.0, 518.0, 424.0)),
+    # p7 superimposed (c). Graph frame top y428.8 (legend box inside at
+    # y434.4) — old y0=430 clipped the frame; content ends with the "(c)"
+    # marker and the "Wavelength of light in nanometres (nm)" axis title at
+    # y579.9. Panel (b)'s marker ends y421.0.
+    ("11_3c", 7, (303.0, 425.0, 518.0, 584.0)),
+    # p8 light-harvesting complex. Drawings (89.0,296.9,236.4,483.3) plus the
+    # "Pigment molecules" label to x284.1/y448.8; caption starts y497.1; prose
+    # column starts x296.4. Old rect (60,285,285,475) clipped the label block.
+    ("11_4", 8, (63.0, 292.0, 290.0, 490.0)),
+    # p9 Z scheme. Drawings (277.9,129.9,481.5,309.7); in-figure text reaches
+    # x515.7 ("NADPH") and y312.9; caption starts y333.5.
+    ("11_5", 9, (274.0, 113.0, 520.0, 320.0)),
+    # p10 cyclic photophosphorylation. Drawings (59.9,134.6,267.0,299.2),
+    # "Photosystem I" label from y119.8, "Chlorophyll P 700" ends y295.1;
+    # caption starts y312.6.
+    ("11_6", 10, (57.0, 115.0, 272.0, 305.0)),
+    # p11 chemiosmosis. Single raster plate, bbox (77.0,105.0,456.0,396.0);
+    # caption starts y403.5. Old y1=395 shaved 1pt off the ATP/H+ row.
+    ("11_7", 11, (72.0, 100.0, 461.0, 399.0)),
+    # p14 Calvin cycle. Raster bbox (122.0,121.2,461.4,491.6) with vector text
+    # labels from y107.6 ("Atmosphere") to y503.9 ("Sucrose, starch") and
+    # x132.2-454.8; caption starts y516.6.
+    ("11_8", 14, (117.0, 103.0, 466.0, 509.0)),
+    # p16 Hatch and Slack. Raster bbox (192.8,329.6,487.4,696.3); caption
+    # starts y700.2. Old rect cut 6.3pt off the bottom and carried ~30pt of
+    # empty left margin.
+    ("11_9", 16, (188.0, 325.0, 492.0, 698.0)),
+    # p19 light-intensity graph. Drawings (317.6,477.7,515.8,645.5) plus the
+    # rotated "Rate of photosynthesis" y-axis title at x297.3 and the "Light
+    # intensity" x-axis title y656.2-665.1; caption starts y688.4; prose
+    # column ends x283.9. Old y1=655 cut the x-axis title.
+    ("11_10", 19, (292.0, 473.0, 520.0, 670.0)),
 ]
 
-PRESERVED = {"11_3b"}
 
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
-    doc = pymupdf.open(SRC)
+    try:
+        doc = pymupdf.open(SRC)
+    except Exception as exc:  # noqa: BLE001 - loud, named failure per §4.4
+        raise SystemExit(f"cannot open source PDF {SRC!r}: {exc}") from exc
+
     for fid, pno, rect in FIGS:
-        out = os.path.join(OUT_DIR, f"fig_{fid}.png")
-        if fid in PRESERVED and os.path.exists(out):
-            im = Image.open(out)
-            print(f"fig_{fid}: preserved reference asset {im.size} mode={im.mode} -> {out}")
-            continue
         page = doc[pno - 1]
         clip = pymupdf.Rect(*rect) & page.rect
         pix = page.get_pixmap(clip=clip, dpi=RENDER_DPI, alpha=False)
-        img = ImageOps.autocontrast(
-            Image.frombytes("RGB", (pix.width, pix.height), pix.samples).convert("L"),
-            cutoff=1,
-        )
+        # §4.4 Step 2 — true monochrome, then autocontrast so hue-carried
+        # distinctions (the four pigment curves, the two spectra) survive.
+        img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples).convert("L")
+        img = ImageOps.autocontrast(img, cutoff=1)
+        out = os.path.join(OUT_DIR, f"fig_{fid}.png")
         img.save(out, optimize=True)
         print(f"fig_{fid}: p{pno} {rect} {img.size} mode={img.mode} -> {out}")
+
 
 if __name__ == "__main__":
     main()

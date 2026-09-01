@@ -1,5 +1,6 @@
+PAGES: 22 SIZE: Rect(0.0, 0.0, 576.0, 784.7999877929688)
 
-===== PAGE 1 =====
+===== PDF PAGE 1 =====
 UNIT 4
 The description of structure and variation of living organisms over a
 period of time, ended up as two, apparently irreconcilable perspectives
@@ -26,7 +27,8 @@ Plant Growth and
 Development
 Reprint 2026-27
 
-===== PAGE 2 =====
+
+===== PDF PAGE 2 =====
 MELVIN CALVIN born in Minnesota in April, 1911, received his
 Ph.D. in Chemistry from the University of Minnesota. He served
 as Professor of Chemistry at the University of California,
@@ -49,7 +51,8 @@ research.
 Melvin Calvin
 Reprint 2026-27
 
-===== PAGE 3 =====
+
+===== PDF PAGE 3 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 133
 All animals including human beings depend on plants for their food. Have
@@ -116,7 +119,8 @@ affecting
 Photosynthesis
 Reprint 2026-27
 
-===== PAGE 4 =====
+
+===== PDF PAGE 4 =====
 134
 BIOLOGY
 Another experiment you may have carried out
@@ -168,7 +172,8 @@ could release oxygen.
 Figure 11.1 Priestley’s experiment
 Reprint 2026-27
 
-===== PAGE 5 =====
+
+===== PDF PAGE 5 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 135
 It was not until about 1854 that Julius von Sachs provided evidence
@@ -267,7 +272,8 @@ where C6 H12 O6 represents glucose. The O2 released is from water; this
 was proved using radio isotope techniques. Note that this is not a single
 Reprint 2026-27
 
-===== PAGE 6 =====
+
+===== PDF PAGE 6 =====
 136
 BIOLOGY
 reaction but description of a multistep process called photosynthesis.
@@ -311,7 +317,8 @@ Starch granule
 Lipid droplet
 Reprint 2026-27
 
-===== PAGE 7 =====
+
+===== PDF PAGE 7 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 137
 11.4
@@ -376,7 +383,8 @@ superimposed on absorption
 spectrum of chlorophyll a
 Reprint 2026-27
 
-===== PAGE 8 =====
+
+===== PDF PAGE 8 =====
 138
 BIOLOGY
 These graphs, together, show that most of the photosynthesis takes
@@ -428,7 +436,8 @@ Primary acceptor
 Figure 11.4 The light harvesting complex
 Reprint 2026-27
 
-===== PAGE 9 =====
+
+===== PDF PAGE 9 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 139
 system consisting of cytochromes (Figure
@@ -508,7 +517,8 @@ ATP
 Figure 11.5 Z scheme of light reaction
 Reprint 2026-27
 
-===== PAGE 10 =====
+
+===== PDF PAGE 10 =====
 140
 BIOLOGY
 ATP is synthesised by cells (in mitochondria and
@@ -564,7 +574,8 @@ ADP+iP
 ATP
 Reprint 2026-27
 
-===== PAGE 11 =====
+
+===== PDF PAGE 11 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 141
 (b) As electrons move through the photosystems, protons are transported
@@ -590,7 +601,8 @@ protons across the membrane to the stroma through the transmembrane
 Figure 11.7 ATP synthesis through chemiosmosis
 Reprint 2026-27
 
-===== PAGE 12 =====
+
+===== PDF PAGE 12 =====
 142
 BIOLOGY
 channel of the CF0 of the ATP synthase. The ATP synthase enzyme consists
@@ -646,7 +658,8 @@ first product identified was 3-phosphoglyceric acid or in short PGA.
 How many carbon atoms does it have?
 Reprint 2026-27
 
-===== PAGE 13 =====
+
+===== PDF PAGE 13 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 143
 Scientists also tried to know whether all plants have PGA as the first
@@ -691,7 +704,8 @@ activity it would be more correct to call it RuBP carboxylase-oxygenase
 or RuBisCO.
 Reprint 2026-27
 
-===== PAGE 14 =====
+
+===== PDF PAGE 14 =====
 144
 BIOLOGY
 2. Reduction – These are a series of reactions that lead to the formation
@@ -728,7 +742,8 @@ and NADPH; and (3) regeneration during which the CO2 acceptor ribulose-
 1,5-bisphosphate is formed again so that the cycle continues
 Reprint 2026-27
 
-===== PAGE 15 =====
+
+===== PDF PAGE 15 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 145
 Hence for every CO2  molecule entering the Calvin cycle, 3 molecules
@@ -778,7 +793,8 @@ bundles.  The presence of the bundle sheath would help you identify
 the C4 plants.
 Reprint 2026-27
 
-===== PAGE 16 =====
+
+===== PDF PAGE 16 =====
 146
 BIOLOGY
 Now study the pathway shown in Figure 11.9. This pathway that has
@@ -800,7 +816,8 @@ pathway, a pathway common to all plants. The bundle sheath cells are
 Figure 11.9 Diagrammatic representation of the Hatch and Slack Pathway
 Reprint 2026-27
 
-===== PAGE 17 =====
+
+===== PDF PAGE 17 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 147
 rich in an enzyme Ribulose bisphosphate carboxylase-oxygenase
@@ -859,7 +876,8 @@ C3 and the C4 pathway?  Use the table format given in table 11.1 and fill
 in the information.
 Reprint 2026-27
 
-===== PAGE 18 =====
+
+===== PDF PAGE 18 =====
 148
 BIOLOGY
 TABLE 11.1 Fill in the Columns 2 and 3 in this table to highlight the differences
@@ -924,7 +942,8 @@ and list them in the appropriate
 columns.
 Reprint 2026-27
 
-===== PAGE 19 =====
+
+===== PDF PAGE 19 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 149
 11.10
@@ -980,7 +999,8 @@ D
 E
 Reprint 2026-27
 
-===== PAGE 20 =====
+
+===== PDF PAGE 20 =====
 150
 BIOLOGY
 incident light beyond a point causes the breakdown of chlorophyll and a
@@ -1021,7 +1041,8 @@ the CO2 availability. Besides, water stress also makes leaves wilt, thus,
 reducing the surface area of the leaves and their metabolic activity as well.
 Reprint 2026-27
 
-===== PAGE 21 =====
+
+===== PDF PAGE 21 =====
 PHOTOSYNTHESIS IN HIGHER PLANTS
 151
 SUMMARY
@@ -1065,7 +1086,8 @@ Even though a very few cells in a C4 plant carry out the biosynthetic – Calvin
 pathway, yet they are highly productive. Can you discuss why?
 Reprint 2026-27
 
-===== PAGE 22 =====
+
+===== PDF PAGE 22 =====
 152
 BIOLOGY
 4.
@@ -1094,3 +1116,4 @@ Give comparison between the following:
 (b) Cyclic and non-cyclic photophosphorylation
 (c) Anatomy of leaf in C3 and C4 plants
 Reprint 2026-27
+
