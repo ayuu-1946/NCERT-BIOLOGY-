@@ -1,8 +1,8 @@
-# Working Inventory (Pass 1 IN PROGRESS — **NOT FROZEN**) — Class 11 Biology, Chapter 19: Chemical Coordination and Integration
+# Frozen Inventory — Class 11 Biology, Chapter 19: Chemical Coordination and Integration
 
-Source: `Chapter/class 11/Chapter 19 - Chemical Coordination and Integration.pdf` (14 pages; supplied high-quality source `kebo119.pdf`) | Pass 1 sessions complete: **`1-F` (figures, 2026-08-30) · `1-S` (source read + Facts inventory, 2026-09-01)** | Pass 1 sessions NOT started: **`1-H` · `1-O` · `1-Z`** | Rows: **200** (`F001`–`F210` content Facts + `F212`–`F218` figure-label matrix rows)
+Source: `Chapter/class 11/Chapter 19 - Chemical Coordination and Integration.pdf` (14 pages; supplied high-quality source `kebo119.pdf`) | Frozen: 2026-09-01 | Pass 1 sessions complete: **all five — `1-F` (2026-08-30) · `1-S` (2026-09-01) · `1-H` (2026-09-01) · `1-O` (2026-09-01) · `1-Z` (2026-09-01)** | Rows: **218** (`F001`–`F211` content Facts + `F212`–`F218` figure-label matrix rows)
 
-> **Gate state: GATE 1 IS OPEN.** This file is a **working inventory, not a frozen one.** Nothing may be quoted from it as final and no Pass 2 script may be written against it until `1-H`, `1-O` and `1-Z` have run and a freeze is declared here.
+> **Gate state: GATE 1 IS GREEN (2026-09-01).** All five Pass 1 sessions have run, each reporting its own machine-derived row count; every count below was derived by re-parsing the finished `## Facts` table, not by hand tally. The inventory is **frozen**: Pass 2 may be written against it, and rows are ticked in this file as they are written into the script. **No row may be added, removed or reworded from here on** — a Pass 2 discovery that this file is incomplete reopens Gate 1, it does not get patched silently.
 
 Tick legend: `x` = the row's wording was read directly off the numbered source page named in its `Src` column and confirmed character-for-character, including the source's own typography and its own misspellings. A tick is **not** a claim about any delivered PDF — no PDF exists for this chapter yet.
 
@@ -27,11 +27,18 @@ The 4× figure refinement used the canonical high-density settings: 440 dpi rend
 | Top-level numbered sections | 4 | 19.1, 19.2, 19.3, 19.4 |
 | Numbered subsections | 10 | 19.2.1 – 19.2.10, all under 19.2 |
 | Numbered headings total | 14 | 4 + 10 |
-| Structural unnumbered headings | 4 | chapter title, `CHAPTER 19`, `SUMMARY`, `EXERCISES` |
+| Structural unnumbered headings | 5 | chapter title, `CHAPTER 19`, `SUMMARY`, `EXERCISES`, `NOTE` |
 | Numbered figures | 5 | 19.1, 19.2, 19.3, 19.4, 19.5 |
 | Delivered figure assets | 7 | 19.3 and 19.5 split (a)/(b); **19.4 deliberately ONE combined asset** |
 | Exercise questions | 9 | numbered 1–9 on p. 13 |
-| Exercise sub-parts | 41 | counted across all 9 questions |
+| Exercise lettered sub-parts | 39 | `3+0+12+5+6+6+3+0+4`, per question, Q1…Q9 |
+| Q9 Column II matching options | 4 | `(i)`–`(iv)`; the answer set, **not** sub-parts |
+| Exercise labelled items total | 43 | 39 + 4 |
+| SUMMARY sentences | 32 | p. 11 (after the `SUMMARY` heading) + p. 12 |
+
+**Two corrections `1-H`/`1-Z` made to this table.** The unnumbered-heading count was **4**, omitting the trailing `NOTE` page even though the row for it exists (`F211`) — the census contradicted its own table. The sub-part count was a single unexplained **41**, which is neither of the two defensible readings; the machine count is 39 lettered items, or 43 counting Q9's Column II. Both readings are now stated with the per-question addition beside them, so the total is derivable from the list rather than asserted next to it. Derivation: `scratch/ch19_gate1/exercise_census.py`.
+
+**The `(s)` trap, recorded because it produced a wrong number once.** A naive `\(([a-z])\)` scan of p. 13 returns **40**, because Q6's stem reads `Give example(s) of:` and the inflectional `(s)` is counted as a label. A sub-part label always sits at start-of-line or after whitespace; inflection is always glued to the preceding word. That one anchor condition is the whole difference between 40 and the true 39.
 
 **The `19.2` subsection run is the whole anatomical spine of the chapter** — ten glands in fixed order: hypothalamus, pituitary, pineal, thyroid, parathyroid, thymus, adrenal, pancreas, testis, ovary. Sections 19.3 and 19.4 then break that frame deliberately: 19.3 covers hormone sources that are *not* endocrine glands (heart, kidney, GI tract) and 19.4 is mechanism rather than anatomy.
 
@@ -272,41 +279,140 @@ Note that the source is **internally inconsistent**, not merely misspelt: it pri
 | F217 | Fig 19.5 (a) | caption | Figure (a) labels: "Hormone (e.g., FSH)"; "Receptor"; "Ovarian cell membrane"; "Response 1"; "(Generation of second messenger)"; "(Cyclic AMP or Ca++)"; "Biochemical responses"; "Physiological responses (e.g., ovarian growth)" | 10 | x |
 | F218 | Fig 19.5 (b) | caption | Figure (b) labels: "Hormone (e.g., estrogen)"; "Uterine cell membrane"; "Nucleus"; "Genome"; "mRNA"; "Proteins"; "Hormone-receptor complex"; "Physiological responses (Tissue growth and differentiation)" | 11 | x |
 
-## Row census (`1-S`, machine-derived from the table above)
+## Row census (machine-derived from the table above at freeze time)
+
+Derivation: `scratch/ch19_gate1/gate1_close.py`, run against this file after the last edit to the table. Every number here is a re-parse, not a tally.
 
 | Quantity | Value |
 |---|---:|
-| Rows | 200 |
+| Rows | 218 |
 | ID range | `F001`–`F218`, contiguous, monotonic |
 | Duplicate IDs | 0 |
 | Gaps | 0 |
-| Rows ticked | 200 / 200 |
-| Content Facts | 193 |
+| Rows ticked | 218 / 218 |
+| Content Facts | 211 |
 | Figure-label matrix rows | 7 |
 
-Type census — **8 values, all lowercase**:
+Type census — **9 values, all lowercase**:
 
 | Type | Count |
 |---|---:|
-| concept | 111 |
-| process | 26 |
-| definition | 20 |
-| heading | 18 |
-| opener | 9 |
+| concept | 108 |
+| process | 27 |
+| definition | 19 |
+| heading | 19 |
+| opener | 19 |
 | caption | 12 |
-| example | 8 |
-| number | 4 |
-| **total** | **200** |
+| example | 7 |
+| contents | 4 |
+| number | 3 |
+| **total** | **218** |
 
 `caption` = 5 figure captions (`F027`, `F069`, `F095`, `F137`, `F208`) + the 7 figure-label matrix rows (`F212`–`F218`), which keep `caption` so the `_extract_labels` parser continues to see them.
 
-## Two-value note on the `α`/`β` rows
+### Heading census (`1-H`) — 19 rows = 14 numbered + the 5 unnumbered IDs below
 
-`F142` and `F143` render the source's Greek `α-cells` / `β-cells` as `alpha-cells` / `beta-cells`. This is **a deliberate ASCII transliteration, not a transcription error**, recorded here so `1-H` does not raise it: the Pass 2 script must print the Greek letters, and the inventory row must be checked against the *glyph*, not the ASCII. Every other row in this table is character-for-character.
+`14 + 5 = 19`, and 19 is the `heading` count in the type census above.
+
+- **14 numbered:** `F012` (19.1), `F021` (19.2), `F028` (19.2.1), `F038` (19.2.2), `F070` (19.2.3), `F076` (19.2.4), `F096` (19.2.5), `F105` (19.2.6), `F113` (19.2.7), `F138` (19.2.8), `F157` (19.2.9), `F168` (19.2.10), `F181` (19.3), `F193` (19.4).
+- **5 unnumbered:** `F001` (chapter title), `F002` (`CHAPTER  19`), `F209` (`SUMMARY`), `F210` (`EXERCISES`), `F211` (`NOTE`).
+
+`1-H` walked the source's own type hierarchy rather than trusting the prose sweep, and found **no missing sub-heading**: sections 19.1–19.4 and 19.2.1–19.2.10 are the complete set, and there is no unnumbered sub-heading sitting inside any of them (the Ch9 D4 failure mode does not occur in this chapter). See the `1-H` record below for the font-hierarchy finding that makes this non-trivial.
+
+### Opener census (`1-O`) — 19 rows = 5 chapter-opener + the 14 section-opener IDs below
+
+`5 + 14 = 19`, and 19 is the `opener` count in the type census above.
+
+- **5 chapter-opener** (the pre-19.1 lead paragraph on p. 1): `F003`–`F007`.
+- **14 section-opener**, one per numbered section, in section order: `F013` (19.1), `F022` (19.2), `F029` (19.2.1), `F039` (19.2.2), `F071` (19.2.3), `F077` (19.2.4), `F097` (19.2.5), `F106` (19.2.6), `F114` (19.2.7), `F139` (19.2.8), `F158` (19.2.9), `F169` (19.2.10), `F182` (19.3), `F194` (19.4).
+
+**Every numbered section has exactly one `opener` row and the count is 14 = the numbered-heading count** — the two censuses cross-check each other, which is the property that makes a dropped opener detectable.
+
+## Note on the `α`/`β` rows — and a correction `1-H` made to this note
+
+`F142` and `F143` hold the source's Greek **`α-cells` / `β-cells` as real Greek glyphs** (U+03B1, U+03B2), character-for-character with the source, like every other row in this table.
+
+**This paragraph previously claimed the opposite** — that the two rows were "a deliberate ASCII transliteration" reading `alpha-cells` / `beta-cells`. That claim was false about the file it was printed in: a byte inspection of both rows returns `α` and `β`. It is the more dangerous direction of error, because a Pass 2 author trusting it would "restore" Greek letters that were never lost, or worse, treat the ASCII spelling as the frozen wording and ship it.
+
+**Carry-forward for Pass 2, which is the real constraint here:** `check_pdf.py` check 5 bans Greek letters from the *generated* PDF's text stream. So the inventory row is Greek (it must match the source) while the rendered page must not be — the script has to spell these two out as `alpha-cells` / `beta-cells` in the running text. That is a rendering decision at Pass 2, **not** an edit to these rows.
 
 ## Figure-label matrix note
 
 The matrix exists in exactly one place: the `## Facts` table above, rows `F212`–`F218`. Each row begins with `Figure labels:` or `Figure (a)/(b) labels:` in the wording column, matching the `_extract_labels` parser used by `check_pdf.py`. There is no duplicate pipe-delimited label table elsewhere in this inventory, so labels are not double-counted and no phantom separator row is created.
+
+## Summary classification
+
+`1-Z`, over the `SUMMARY` block that runs from the heading on p. 11 to the end of p. 12. **32 sentences**, enumerated by machine (`scratch/ch19_gate1/summary_classify.py`) so the census total is the length of this list — not a hand tally, and with no sentence classified that was never read.
+
+Method, stated because the verdict column is a judgement and the evidence for it should be inspectable: for each sentence the script reports (a) the best-matching Facts rows by content-word overlap and (b) every content word in the sentence that appears in **no** Facts row at all. A word occurring nowhere in the body is the signal for SUMMARY-UNIQUE; a high-overlap match with no unmatched words is the signal for BODY-PRESENT.
+
+Only **2 of 32** sentences flagged a word absent from every body row — S09 (`state`, `awake`) and S20 (`contents`) — and both resolved to wording variants on inspection: S09's `state of being awake` is `F074`'s `sleep-wake cycle`, and S20's `electrolyte contents` is `F129`'s `balance of water and electrolytes`. **The vocabulary test is a filter, not the verdict**, and this is the direction it fails in: it cannot see a sentence that reuses only body words while restating them, so S12 (`calcium homeostasis` for `F104`'s `calcium balance`) and S14 (`increase` for `F110`'s `promote`) are wording variants that the machine passed clean. Four sentences are therefore marked `BODY-PRESENT (wording variant)` — S09, S12, S14, S20 — against two the machine flagged. Every one of the 32 was read against its named body row by hand; the script only guarantees none was skipped.
+
+| Summary sentence | Classification | Folded into |
+|---|---|---|
+| S01 There are special chemicals which act as hormones and provide chemical coordination, integration and regulation in the human body. | BODY-PRESENT | `F018` |
+| S02 These hormones regulate metabolism, growth and development of our organs, the endocrine glands or certain cells. | BODY-PRESENT | `F020` |
+| S03 The endocrine system is composed of hypothalamus, pituitary and pineal, thyroid, adrenal, pancreas, parathyroid, thymus and gonads (testis and ovary). | BODY-PRESENT | `F024` |
+| S04 In addition to these, some other organs, e.g., gastrointestinal tract, kidney, heart etc., also produce hormones. | BODY-PRESENT | `F025` |
+| S05 The pituitary gland is divided into three major parts, which are called as pars distalis, pars intermedia and pars nervosa. | BODY-PRESENT | `F047` |
+| S06 Pars distalis produces six trophic hormones. | BODY-PRESENT | `F043` |
+| S07 Pars intermedia secretes only one hormone, while pars nervosa (neurohypophysis) secretes two hormones. | BODY-PRESENT | `F044`, `F046` |
+| S08 The pituitary hormones regulate the growth and development of somatic tissues and activities of peripheral endocrine glands. | BODY-PRESENT | `F068` |
+| S09 Pineal gland secretes melatonin, which plays a very important role in the regulation of 24-hour (diurnal) rhythms of our body (e.g., rhythms of sleep and state of being awake, body temperature, etc.). | BODY-PRESENT (wording variant) | `F072`, `F073`, `F074` |
+| S10 The thyroid gland hormones play an important role in the regulation of the basal metabolic rate, development and maturation of the central neural system, erythropoiesis, metabolism of carbohydrates, proteins and fats, menstrual cycle. | BODY-PRESENT | `F092` |
+| S11 Another thyroid hormone, i.e., thyrocalcitonin regulates calcium levels in our blood by decreasing it. | BODY-PRESENT | `F094` |
+| S12 The parathyroid glands secrete parathyroid hormone (PTH) which increases the blood Ca2+ levels and plays a major role in calcium homeostasis. | BODY-PRESENT (wording variant) | `F100`, `F104` |
+| S13 The thymus gland secretes thymosins which play a major role in the differentiation of T-lymphocytes, which provide cell-mediated immunity. | BODY-PRESENT | `F109` |
+| S14 In addition, thymosins also increase the production of antibodies to provide humoral immunity. | BODY-PRESENT (wording variant) | `F110` |
+| S15 The adrenal gland is composed of the centrally located adrenal medulla and the outer adrenal cortex. | BODY-PRESENT | `F116` |
+| S16 The adrenal medulla secretes epinephrine and norepinephrine. | BODY-PRESENT | `F118` |
+| S17 These hormones increase alertness, pupilary dilation, piloerection, sweating, heart beat, strength of heart contraction, rate of respiration, glycogenolysis, lipolysis, proteolysis. | **SUMMARY-UNIQUE** | **`F125` (folded)** |
+| S18 The adrenal cortex secretes glucocorticoids and mineralocorticoids. | BODY-PRESENT | `F127`, `F128`, `F129` |
+| S19 Glucocorticoids stimulate gluconeogenesis, lipolysis, proteolysis, erythropoiesis, cardio-vascular system, blood pressure, and glomerular filtration rate and inhibit inflammatory reactions by suppressing the immune response. | BODY-PRESENT | `F134` |
+| S20 Mineralocorticoids regulate water and electrolyte contents of the body. | BODY-PRESENT (wording variant) | `F129` |
+| S21 The endocrine pancreas secretes glucagon and insulin. | BODY-PRESENT | `F140`, `F143` |
+| S22 Glucagon stimulates glycogenolysis and gluconeogenesis resulting in hyperglycemia. | BODY-PRESENT | `F145` |
+| S23 Insulin stimulates cellular glucose uptake and utilisation, and glycogenesis resulting in hypoglycemia. | BODY-PRESENT | `F150`, `F151` |
+| S24 Insulin deficiency and/or insulin resistance result in a disease called diabetes mellitus. | BODY-PRESENT | `F155` |
+| S25 The testis secretes androgens, which stimulate the development, maturation and functions of the male accessory sex organs, appearance of the male secondary sex characters, spermatogenesis, male sexual behaviour, anabolic pathways and erythropoiesis. | BODY-PRESENT | `F167` |
+| S26 The ovary secretes estrogen and progesterone. | BODY-PRESENT | `F171` |
+| S27 Estrogen stimulates growth and development of female accessory sex organs and secondary sex characters. | BODY-PRESENT | `F175` |
+| S28 Progesterone plays a major role in the maintenance of pregnancy as well as in mammary gland development and lactation. | **SUMMARY-UNIQUE** | **`F179` (folded)** |
+| S29 The atrial wall of the heart produces atrial natriuretic factor which decreases the blood pressure. | BODY-PRESENT | `F183` |
+| S30 Kidney produces erythropoietin which stimulates erythropoiesis. | BODY-PRESENT | `F185` |
+| S31 The gastrointestinal tract secretes gastrin, secretin, cholecystokinin and gastric inhibitory peptide. | BODY-PRESENT | `F186` |
+| S32 These hormones regulate the secretion of digestive juices and help in digestion. | **SUMMARY-UNIQUE** | **`F191` (folded)** |
+
+**Census: 32 sentences = 29 BODY-PRESENT + the 3 SUMMARY-UNIQUE IDs below.** `29 + 3 = 32`, which is the sentence count in the source-structure table above.
+
+**The 3 SUMMARY-UNIQUE facts, all folded before the freeze** (this is what changed the row count from 208 to 211 content Facts):
+
+- **`F125`** (§19.2.7, after the catecholamine-effects run) — the SUMMARY names `glycogenolysis`, `lipolysis` and `proteolysis` as catecholamine effects. The body lists the *physiological* effects (alertness, pupilary dilation, piloerection, sweating, heart beat, respiration) but never these three metabolic terms, which are exactly the marks-critical vocabulary Rule 4 exists to protect.
+- **`F179`** (§19.2.10, after the progesterone actions) — the body gives progesterone's role in pregnancy maintenance; the SUMMARY adds `mammary gland development and lactation`.
+- **`F191`** (§19.3, after the four GI hormones) — the body states each GI hormone's individual action; the SUMMARY adds the generalisation that these hormones regulate the secretion of digestive juices and help in digestion.
+
+Each was inserted **in Content Order at its own body section**, not appended at the tail, which is why the whole table was renumbered and every cross-reference in this file was rewritten through an explicit old→new ID map (`scratch/ch19_gate1/apply_h_o_z.py`).
+
+**Wording variants are not folds.** S09, S12 and S20 restate a body fact in new words; folding them would duplicate a fact the inventory already holds and inflate the row count with no new information. They are marked BODY-PRESENT with the body row named, so the judgement is auditable rather than invisible.
+
+## Exercise-gap terms
+
+`1-Z`, over the 9 questions / 39 lettered sub-parts on p. 13. Every term an exercise *assumes* was checked against the Facts table by machine; the terms below are the ones whose status needed a decision.
+
+| Term/fact assumed by exercises | Explained where |
+|---|---|
+| `Exocrine gland` — Q1(a) asks the student to **define** it | **GAP.** The body uses the word (`F139`: pancreas "acts as both exocrine and endocrine gland"; `F188`: "the exocrine pancreas") but never defines it, while `F013`/`F014` define the endocrine gland by contrast. Pass 2 places the contrast in §19.1 beside `F013`, phrased **only** from what the source itself supplies — ductless vs. duct-bearing — since Rule 5 forbids importing an outside definition. |
+| `Endocrine gland`, `Hormone` — Q1(b), Q1(c) | Defined in §19.1: `F013` (ductless glands), `F014` (secretions are hormones), `F016` (the current definition). No gap. |
+| `Atrium`, `G-I Tract` — Q3(j), Q3(l) | Body-present under the source's own spellings: `F183` (`atrial wall`), `F186` (`gastro-intestinal tract`). The exercise's shorter forms are the same referent, so this is a wording difference, not a gap. Pass 2 must keep the body's spellings. |
+| `Hypoglycemic` / `Hyperglycemic` hormone — Q6(a) | Body-present as the noun: `F151` (`hypoglycemia`), `F145`/`F148` (`hyperglycemia`). The adjective form appears only in the exercise. No gap. |
+| `Gonadotrophic hormones` — Q6(c) | `F056`: "LH and FSH stimulate gonadal activity and hence are called gonadotrophins." No gap. |
+| `Blood pressure lowering hormone` — Q6(e) | `F183`/`F184`: ANF decreases blood pressure. No gap. |
+| `Mechanism of action of FSH` — Q8 | §19.4 supplies the mechanism (`F205`, membrane-bound receptor → second messenger) and `F217` supplies the FSH-specific figure labels (Figure 19.5a is drawn with `Hormone (e.g., FSH)`). No gap; Pass 2 must keep the figure adjacent to §19.4 so the two halves of the answer are not separated. |
+| `Thymosins`, `Androgens`, `Estrogens`, `Insulin`, `Glucagon`, `PTH`, `Thyroid hormones` — Q5 | All body-present in their own sections. No gap. |
+| `Diabetes mellitus`, `Goitre`, `Cretinism` — Q7 | `F155`, `F083`, `F084`. No gap. |
+| `Melanotrophin`, `Thyrotrophin`, `Corticotrophin`, `Gonadotrophins`, `Hypothalamic hormones` — Q4 | Body-present: `F044` (MSH), `F052` (TSH), `F054` (ACTH), `F056` (LH/FSH), `F032`–`F034` (releasing/inhibiting hormones). The exercise's own labels are additionally held verbatim as rows `F053` (`(b) Thyrotrophin (TSH)`) and `F055` (`(c) Corticotrophin (ACTH)`), since the exercise is the only place the chapter prints those two names. No gap. |
+
+**Exactly one gap, and it has a planned home.** Under Rule 2 this is closed as a gap-only addition in §19.1 — not an answer key, and not an imported definition.
 
 ## Figure manifest
 
@@ -343,8 +449,8 @@ All seven emitted assets are high-resolution grayscale PNGs (`mode=L`) generated
 ### `1-S` — source read + Facts inventory — COMPLETE (2026-09-01)
 
 - **All 14 source pages read in full**, in four sequential reads (1–4, 5–7, 8–11, 12–14). Page 14 carries only `NOTE` and the reprint line and contributes no Facts — verified by its 21-character text extraction, not assumed.
-- **193 content Facts entered in Content Order**, from the chapter opener through `EXERCISES`, plus the 7 renumbered figure-label rows = **200 rows**.
-- **Structure derived, not guessed:** 4 top-level sections, 10 subsections (all under 19.2), 14 numbered headings, 4 structural unnumbered headings, 5 numbered figures, 9 exercises with 41 sub-parts.
+- **`1-S`'s own machine-derived count: 208 content Facts** entered in Content Order, from the chapter opener through `EXERCISES`, plus the 7 renumbered figure-label rows = **215 rows** at the close of `1-S`. (`1-S` first reported 193/200; that was a hand tally against a table that already held 215 rows, and it is the reason step 10 forbids hand tallies. The re-parse is the number of record. The later sessions then took the table to 218 — see `1-Z`.)
+- **Structure derived, not guessed:** 4 top-level sections, 10 subsections (all under 19.2), 14 numbered headings, 5 structural unnumbered headings, 5 numbered figures, 9 exercises with 39 lettered sub-parts. (`1-S` reported 4 unnumbered headings and 41 sub-parts; both were corrected by machine in `1-H`/`1-Z` — see the source-structure table above.)
 - **5 source misspellings/inconsistencies catalogued** (`sella tursica`, `Exopthalmic`, `pupilary`, `glucagons`, `Diagramatic`) and held **verbatim** in their rows.
 - **3 defects in the pre-existing `1-F` documentation found and fixed** (all metadata; no asset, no crop box and no shared repo file touched): the false `Frozen Inventory` H1; the "verbatim" caption column that actually held paraphrases and silently repaired the source's `Diagramatic` typo; and the Figure 19.5 caption page recorded as the panel page.
 
