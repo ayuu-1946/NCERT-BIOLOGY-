@@ -2,9 +2,9 @@
 
 Source: `Chapter/class 11/Chapter 19 - Chemical Coordination and Integration.pdf` (14 pages; supplied high-quality source `kebo119.pdf`) | Frozen: 2026-09-01 | Pass 1 sessions complete: **all five — `1-F` (2026-08-30) · `1-S` (2026-09-01) · `1-H` (2026-09-01) · `1-O` (2026-09-01) · `1-Z` (2026-09-01)** | Rows: **218** (`F001`–`F211` content Facts + `F212`–`F218` figure-label matrix rows)
 
-> **Gate state: GATE 1 IS GREEN (2026-09-01).** All five Pass 1 sessions have run, each reporting its own machine-derived row count; every count below was derived by re-parsing the finished `## Facts` table, not by hand tally. The inventory is **frozen**: Pass 2 may be written against it, and rows are ticked in this file as they are written into the script. **No row may be added, removed or reworded from here on** — a Pass 2 discovery that this file is incomplete reopens Gate 1, it does not get patched silently.
+> **Gate state: GATES 1 AND 2 ARE GREEN; GATE 3 IS OPEN (Gate 1 2026-09-01, Gate 2 2026-09-01, re-verified 2026-09-01).** All five Pass 1 sessions have run, each reporting its own machine-derived row count; every count below was derived by re-parsing the finished `## Facts` table, not by hand tally. The inventory is **frozen** and 218/218 rows are ticked against the delivered script. **No row may be added, removed or reworded from here on** — a Pass 3 discovery that this file is incomplete reopens Gate 1, it does not get patched silently. The Gate 2 evidence is in `## Gate 2 record` at the foot of this file; **Pass 3 (bidirectional full read + every-page layout review) has not started.**
 
-Tick legend: `x` = the row's wording was read directly off the numbered source page named in its `Src` column and confirmed character-for-character, including the source's own typography and its own misspellings. A tick is **not** a claim about any delivered PDF — no PDF exists for this chapter yet.
+Tick legend: `x` = the row's wording was read directly off the numbered source page named in its `Src` column and confirmed character-for-character, including the source's own typography and its own misspellings. A tick is **not** a claim that a human has verified the row inside the delivered PDF — that claim belongs to Gate 3 and has not been made. It does now mean the row was written into the Pass 2 script, which is what `check_pdf.py` check 7 gates on.
 
 ## Header-correction record (`1-S`, 2026-09-01)
 
@@ -526,6 +526,8 @@ Pass 2 may now be written against this file, ticking rows in place as each is wr
 
 ### What Gate 1 does NOT claim
 
+*This subsection is the Gate 1 record as written on 2026-09-01 and is kept unaltered for history. **It is superseded on the script/PDF point by `## Gate 2 record` below**, which is the current state: the script and the PDF now exist and checks 6 and 7 have been run against them. What still holds is the last sentence — Gate 3 is open and the chapter is counted in no completion tally.*
+
 No script and no PDF exist for this chapter yet. Every `x` in the `Ticked` column means **"read off the numbered source page and confirmed character-for-character"** — it is not a claim about any delivered PDF, and `check_pdf.py`'s checks 6 and 7 have never been run against a Ch19 PDF because there is nothing to run them against. Gates 2 and 3 are **open**, and this chapter must not be counted in any completion tally.
 
 **Carry-forward list for Pass 2** (each item is a decision already made, not a question to re-litigate):
@@ -540,3 +542,60 @@ No script and no PDF exist for this chapter yet. Every `x` in the `Ticked` colum
 | 6 | Keep the body's spellings `atrial wall` / `gastro-intestinal tract` even though the exercise prints `Atrium` / `G-I Tract` | Same referent, source wording wins |
 | 7 | All 38 figure labels must appear in the running text | check 6 gates on the matrix, and the count is 38 — not the 35 this file previously claimed |
 | 8 | Figure 19.4 stays ONE combined asset | Its two panels interleave horizontally; any rectangular split cuts the kidney, labels or the connector |
+
+## Gate 2 record
+
+### Pass 2 — script + PDF (2026-09-01)
+
+`Ch19_ChemicalCoordinationAndIntegration.py` was written **linearly from this frozen file in Content Order (§5)**, one `# ---- N.N ----` block per NCERT section, importing the repo-level `neet_template.py` (§0.6). Machine-checked properties of the delivered script and PDF:
+
+- **18 block markers**, in source order: title block · `19.intro` · `19.1` · `19.2` · `19.2.1`–`19.2.10` (all ten glands, in NCERT's own order) · `19.3` · `19.4` · `Recap` (source `SUMMARY`, `F209`) · `Appendix` (source `EXERCISES` `F210` + the trailing `NOTE` page `F211`).
+- **No style is re-declared:** `0` occurrences of `ParagraphStyle` and `0` of `fontName` in the script; its only imports are `os`, `sys`, `neet_template` (names + `figure as _shared_figure`) and `reportlab.platypus`'s `Paragraph`/`Spacer`. No colour, geometry, margin or font constant is defined locally.
+- **PDF: 14 pages, A4 portrait, 1,657 KB, 7 embedded images, 31,137 extracted characters**, text SHA-256 (first 16) `08d68d03f8d3c05f`.
+- **218/218 rows ticked in this file** as each was written — ticked while writing, not reconciled afterwards. All 7 plates sit inside the section that cites them, each followed by a "Read the plate" NOTE that names its in-figure labels verbatim, which is how the 38 matrix labels reach the running text.
+
+### Disposition of the eight Pass 1 carry-forwards
+
+Each was honoured in the script; none was re-litigated and no frozen row was edited.
+
+1. Greek glyphs — running text spells the islet cells `alpha-cells` / `beta-cells` with a NOTE recording that the source prints `α` / `β`; ionic charges use ReportLab `<super>` tags, never Unicode superscripts (check 5 stays green).
+2. All five source spellings printed as the source prints them and flagged in place — `sella tursica` (`F039`), `Exopthalmic goitre` (`F087`), `pupilary dilation` (`F121`/`F125`), `glucagons` (`F153`), `Diagramatic` in the Figure 19.5 captions (`F208`), while the 19.2/19.3/19.4 captions keep the source's correct `Diagrammatic`.
+3. §19.2.7 is set as ordinary body text — the source's page-6 italics are a typesetting accident and were not reproduced.
+4. The single exercise gap, Q1(a) `Exocrine gland`, is closed in §19.1 beside `F013`, phrased only from the chapter's own ductless-vs-duct-bearing contrast and **labelled as an addition** (Rules 2 and 5).
+5. Both Figure 19.5 panels sit inside §19.4, so Q8's answer (prose + `F217`'s labels) is not split.
+6. The body keeps `atrial wall` and `gastro-intestinal tract`; the exercises' shorter `Atrium` / `G-I Tract` appear only in the appendix.
+7. All **38** figure labels appear in the running text (check 6 confirms 38/38).
+8. Figure 19.4 ships as the single combined plate `fig_19_4.png` and is read in one note.
+
+### Gate 2 (linter) — `check_pdf.py --strict` exit 0, re-verified 2026-09-01
+
+Command, from the repo root, with the §0.2 venv interpreter (rebuilt this session because `/vercel/share/neetenv` was absent — the expected post-session state, checked **before** any diagnosis):
+
+```bash
+/vercel/share/neetenv/bin/python check_pdf.py --strict "notes/class 11/Ch19_ChemicalCoordinationAndIntegration"
+```
+
+| # | Check | Result |
+|---|---|---|
+| 1 | Footer/header band | PASS — no text in the top/bottom 1.4 cm margin bands |
+| 2 | Legibility floor | PASS — smallest rendered glyph **6.0 pt** (FAIL < 5.0, WARN < 6.0) |
+| 3 | Grayscale-only images | PASS — all **7** embedded images monochrome |
+| 4 | No person image embedded | PASS — the manifest has no such row (a true negative: Ch19 has no scientist panel) |
+| 5 | Banned glyphs | PASS — no Unicode arrows, sub/superscripts, Greek letters or emoji in the text stream |
+| 6 | Figure-label coverage | PASS — **38/38** labels fully in text; 0 partial; 0 missing |
+| 7 | Frozen inventory ticked | PASS — all **218** Facts rows ticked |
+| 8 | Page geometry | PASS — all **14** pages A4 upright (595×842 pt) |
+| 9 | Orphaned headings | PASS — **57** banner headings all followed by content on their own page |
+| 10 | Badge plate / heading collision | PASS — **147** filled plates all clear of their neighbours |
+
+**VERDICT: PASS (0 fail, 0 warn), exit 0 — green under `--strict`, so no warning had to be waived to advance.** This is the ideal condition §6 Gate 2 asks for.
+
+**Reproducibility (checked here, not deferred to Gate 3):** the committed PDF was copied aside, the script re-run from a clean copy of the chapter folder, and the two compared — **14 pages / 31,137 chars / 7 images / text SHA `08d68d03f8d3c05f` on both**. The committed PDF was then restored byte-for-byte, so the rebuild check left no diff.
+
+### What Gate 2 does NOT claim
+
+Gate 2 is the **mechanical** gate. It says nothing about content fidelity or page layout, and Ch9 was fully green under `--strict` with three real content defects present — so nothing here may stand in for the Pass 3 read.
+
+- **Pass 3(b) has not been run.** No bidirectional full read (inventory → script, source → inventory) exists for this chapter, so `MISSING` / `FABRICATED` / `DRIFTED` / `UNINVENTORIED` are all **undetermined**, not zero.
+- **Pass 3(a) has not been run.** Only pages **1, 4, 8, 12 and 14** were spot-rendered while building; the other **9 of 14** pages have not been looked at by a human eye and must not be treated as layout-verified.
+- **Gate 3 is OPEN and this chapter is counted in no completion tally.** Gate 2 green is not chapter closure.
