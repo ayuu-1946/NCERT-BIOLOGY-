@@ -752,284 +752,56 @@ story.append(body(
 story.append(gap())
 
 # ======================================================================================
-# ---- EXERCISES ---- F127 (heading F127)
-# All ten NCERT exercises (textbook pp. 237-238) reproduced with worked answers drawn from the
-# chapter text above. Exercise 10's source lettering skips (c)-(e) and is reproduced as printed.
+# ---- APPENDIX: Terms used in the exercises ---- (SS5 item 9, Rule 2, Rule 6)
+# Rule 2 is gap-only. NCERT exercises 1-8, 9(a) and 10(a) are answered by the body sections
+# above, so they are neither reproduced nor re-answered here; the full COVERED/GAP
+# classification of all ten exercises lives in the inventory .md, not in the PDF (Rule 6).
+# Only the three questions leaning on something this chapter never states appear below,
+# each labelled as an addition so no reader mistakes it for NCERT body text (Rule 5).
 # ======================================================================================
-story.append(heading("Ex", "EXERCISES (with worked answers)", level=1))
+story.append(heading("Appendix", "Terms used in the exercises", level=1))
 
-story.append(note(
-    "All <b>ten</b> NCERT exercises are reproduced below with worked answers. Every answer is "
-    "sourced from the chapter text above; the three answers that go beyond NCERT's own "
-    "sentences (<b>9b master clock</b>, <b>10b saltatory conduction</b>, <b>10f cranial vs "
-    "spinal nerves</b>) are flagged in place and collected in the appendix. <b>Exercise 10 is "
-    "lettered (a), (b), (f) in the source</b> - the printed book skips (c)-(e), and that is "
-    "reproduced, not renumbered."))
-
-story.append(gap())
-story.append(body("<b>1. Briefly describe the structure of the Brain.</b>"))
-story.append(b1(
-    "The brain is the <b>central information processing organ</b>, the <b>'command and control "
-    "system'</b>, <b>protected by the skull</b> and wrapped in <b>cranial meninges</b> - "
-    "<b>dura mater</b> (outer), <b>arachnoid</b> (very thin middle) and <b>pia mater</b> (inner, "
-    "touching the brain tissue)."))
-story.append(b1(
-    "<b>Forebrain</b> - <b>cerebrum</b> (major part; a deep cleft divides it into left and right "
-    "<b>cerebral hemispheres</b> joined by the <b>corpus callosum</b>; the folded <b>cerebral "
-    "cortex</b> is the <b>grey matter</b> with motor, sensory and <b>association areas</b>, over "
-    "myelinated tracts forming the <b>white matter</b>), <b>thalamus</b> (coordinating centre "
-    "for sensory and motor signaling) and <b>hypothalamus</b> (temperature, eating, drinking, "
-    "<b>hypothalamic hormones</b>); the <b>limbic system</b> lies inside."))
-story.append(b1(
-    "<b>Midbrain</b> - between thalamus/hypothalamus and pons; the <b>cerebral aqueduct</b> runs "
-    "through it; the dorsal portion bears the <b>corpora quadrigemina</b> (four round swellings) "
-    "and it integrates <b>visual, tactile and auditory</b> inputs."))
-story.append(b1(
-    "<b>Hindbrain</b> - <b>pons</b> (fibre tracts interconnecting brain regions), "
-    "<b>cerebellum</b> (very convoluted surface; integrates semicircular-canal and auditory "
-    "information) and <b>medulla oblongata</b> (respiration, cardiovascular reflexes, gastric "
-    "secretions), connected to the <b>spinal cord</b>. <b>Mid brain + pons + medulla oblongata = "
-    "brain stem</b>, the connection between brain and spinal cord (see Figure 18.4)."))
-
-story.append(gap())
-story.append(body("<b>2. Compare the following:</b>"))
-story.append(body("<b>(a) Central neural system (CNS) and Peripheral neural system (PNS)</b>"))
-story.append(data_table([
-    ["Feature", "CNS", "PNS"],
-    ["Parts", "<b>Brain</b> and <b>spinal cord</b>",
-     "<b>All the nerves of the body associated with the CNS</b>"],
-    ["Role", "<b>Site of information processing and control</b>",
-     "<b>Carries impulses to and from the CNS</b> through <b>afferent</b> and <b>efferent</b> "
-     "fibres"],
-    ["Divisions", "Forebrain, midbrain, hindbrain; spinal cord",
-     "<b>Somatic</b> neural system and <b>autonomic</b> neural system (the latter "
-     "<b>sympathetic</b> + <b>parasympathetic</b>); the <b>visceral nervous system</b> is the "
-     "part serving the viscera"],
-], col_widths=[16, 34, 50]))
-
-story.append(gap())
-story.append(body("<b>(b) Resting potential and action potential</b>"))
-story.append(data_table([
-    ["Feature", "Resting potential", "Action potential"],
-    ["Definition",
-     "Electrical potential difference across the <b>resting</b> plasma membrane",
-     "Electrical potential difference across the membrane <b>at the stimulated site</b> - <b>in "
-     "fact termed a nerve impulse</b>"],
-    ["State of the membrane", "<b>Polarised</b>", "<b>Depolarised</b> (polarity reversed)"],
-    ["Charges",
-     "Outer surface <b>positive</b>, inner surface <b>negative</b>",
-     "Outer surface <b>negative</b>, inner side <b>positive</b>"],
-    ["Permeability",
-     f"More permeable to <b>{K}</b>, nearly impermeable to <b>{NA}</b>; gradients held by the "
-     f"<b>sodium-potassium pump</b> (3 {NA} out for 2 {K} in)",
-     f"Membrane becomes <b>freely permeable to {NA}</b>, giving a <b>rapid influx</b> of {NA}"],
-], col_widths=[16, 42, 42]))
-
-story.append(gap())
-story.append(body("<b>3. Explain the following processes:</b>"))
-story.append(b1(
-    f"<b>(a) Polarisation of the membrane of a nerve fibre.</b> At rest the axonal membrane is "
-    f"<b>comparatively more permeable to {K}</b>, <b>nearly impermeable to {NA}</b> and "
-    f"<b>impermeable to the negatively charged proteins</b> of the axoplasm, so the axoplasm "
-    f"holds <b>high {K}</b> + <b>negative proteins</b> and <b>low {NA}</b> while the fluid "
-    f"outside holds <b>low {K}</b> and <b>high {NA}</b> - a <b>concentration gradient</b> "
-    f"maintained by the <b>sodium-potassium pump</b> (<b>3 {NA} out for 2 {K} in</b>). Result: "
-    f"<b>outer surface positive, inner surface negative</b> - the membrane is <b>polarised</b>, "
-    f"and that potential difference is the <b>resting potential</b>."))
-story.append(b1(
-    f"<b>(b) Depolarisation of the membrane of a nerve fibre.</b> A <b>stimulus</b> at a site "
-    f"(point <b>A</b>) makes the membrane there <b>freely permeable to {NA}</b>; the <b>rapid "
-    f"{NA} influx reverses the polarity</b> so the <b>outer surface becomes negative</b> and the "
-    f"<b>inner side positive</b>. The site is <b>depolarised</b> and the potential difference "
-    f"there is the <b>action potential</b>, i.e. the <b>nerve impulse</b>."))
-story.append(b1(
-    "<b>(c) Transmission of a nerve impulse across a chemical synapse.</b> See Exercise 6 - the "
-    "arriving action potential moves <b>synaptic vesicles</b> to the membrane, they <b>fuse</b> "
-    "and <b>release neurotransmitters into the synaptic cleft</b>, which <b>bind specific "
-    "receptors on the post-synaptic membrane</b>, <b>opening ion channels</b> whose <b>ion "
-    "entry generates a new potential</b> that <b>may be excitatory or inhibitory</b>."))
-
-story.append(gap())
-story.append(body("<b>4. Draw labelled diagrams of the following:</b>"))
-story.append(b1(
-    "<b>(a) Neuron</b> - redraw <b>Figure 18.1</b> and label the <b>dendrites</b>, the "
-    "<b>Nissl's granules</b> and <b>nucleus</b> in the <b>cell body</b>, the <b>axon</b> with "
-    "its <b>Schwann cell</b> and <b>myelin sheath</b>, a <b>node of Ranvier</b>, and the "
-    "<b>axon terminal</b> ending in a <b>synaptic knob</b>."))
-story.append(b1(
-    "<b>(b) Brain</b> - redraw <b>Figure 18.4</b> and label the <b>forebrain</b> "
-    "(<b>cerebrum</b>, <b>cerebral hemisphere</b>, <b>corpus callosum</b>, <b>thalamus</b>, "
-    "<b>hypothalamus</b>), the <b>midbrain</b> with its <b>cerebral aqueduct</b>, and the "
-    "<b>hindbrain</b> (<b>pons</b>, <b>cerebellum</b>, <b>medulla</b>) continuing into the "
-    "<b>spinal cord</b>."))
-
-story.append(gap())
-story.append(body("<b>5. Write short notes on the following:</b>"))
-story.append(b1(
-    "<b>(a) Neural coordination</b> - <b>coordination</b> is the process through which two or "
-    "more organs <b>interact and complement</b> each other's functions; the <b>neural system</b> "
-    "does this with an <b>organised network of point-to-point connections for quick "
-    "coordination</b>, while the <b>endocrine system</b> provides <b>chemical integration "
-    "through hormones</b>. Example: in exercise, oxygen supply, respiration rate, heart beat and "
-    "blood flow rise together and return to normal afterwards."))
-story.append(b1(
-    "<b>(b) Forebrain</b> - <b>cerebrum + thalamus + hypothalamus</b>; cerebrum is the major "
-    "part, split into <b>two cerebral hemispheres</b> joined by the <b>corpus callosum</b>, "
-    "covered by the folded <b>cerebral cortex</b> (<b>grey matter</b>: motor, sensory and "
-    "<b>association areas</b>) over the myelinated <b>white matter</b>; <b>thalamus</b> "
-    "coordinates sensory and motor signaling; <b>hypothalamus</b> controls body temperature and "
-    "the urge for eating and drinking and secretes <b>hypothalamic hormones</b>; the "
-    "<b>limbic system</b> (with <b>amygdala, hippocampus</b>) handles <b>olfaction, autonomic "
-    "responses, sexual behaviour, emotional reactions and motivation</b>."))
-story.append(b1(
-    "<b>(c) Midbrain</b> - lies <b>between the thalamus/hypothalamus and the pons</b>; the "
-    "<b>cerebral aqueduct</b> runs through it; its <b>dorsal portion</b> bears <b>four round "
-    "swellings, the corpora quadrigemina</b>; it <b>receives and integrates visual, tactile and "
-    "auditory inputs</b> and, with pons and medulla, forms the <b>brain stem</b>."))
-story.append(b1(
-    "<b>(d) Hindbrain</b> - <b>pons</b> (fibre tracts interconnecting brain regions), "
-    "<b>cerebellum</b> (very <b>convoluted surface</b> for more neurons; integrates "
-    "<b>semicircular canal</b> and <b>auditory</b> information) and <b>medulla oblongata</b> "
-    "(<b>respiration, cardiovascular reflexes, gastric secretions</b>), which is <b>connected to "
-    "the spinal cord</b>."))
-story.append(b1(
-    "<b>(e) Synapse</b> - a <b>junction</b> formed by the membranes of a <b>pre-synaptic</b> and "
-    "a <b>post-synaptic</b> neuron, which <b>may or may not</b> be separated by the <b>synaptic "
-    "cleft</b>. <b>Electrical synapses</b> (membranes in very close proximity, direct current "
-    "flow, <b>always faster</b>, <b>rare in our system</b>) versus <b>chemical synapses</b> "
-    "(cleft crossed by <b>neurotransmitters</b>)."))
-
-story.append(gap())
-story.append(body("<b>6. Give a brief account of Mechanism of synaptic transmission.</b>"))
-story.append(process_flow([
-    "An <b>impulse (action potential) arrives at the axon terminal</b> of the <b>pre-synaptic</b> "
-    "neuron, whose <b>vesicles are filled with neurotransmitters</b>.",
-    "The impulse <b>stimulates the movement of the synaptic vesicles towards the membrane</b>.",
-    "The vesicles <b>fuse with the plasma membrane</b> and <b>release their neurotransmitters "
-    "into the synaptic cleft</b>.",
-    "The neurotransmitters <b>bind their specific receptors on the post-synaptic membrane</b>.",
-    "The binding <b>opens ion channels</b>; the <b>entering ions generate a new potential</b> in "
-    "the post-synaptic neuron, which <b>may be excitatory or inhibitory</b>.",
-]))
+story.append(body(
+    "Three of NCERT's exercise questions lean on something this chapter never actually states. "
+    "They are answered here, and <b>nothing in this appendix is NCERT body text</b> - each "
+    "answer names the gap it fills. Every other exercise question is answered by the sections "
+    "above."))
 
 story.append(gap())
 story.append(body(
-    f"<b>7. Explain the role of {NA} in the generation of action potential.</b>"))
+    "<b>9(b) Which part of our central neural system acts as a master clock?</b>"))
 story.append(b1(
-    f"At rest the membrane is <b>nearly impermeable to {NA}</b>, which is kept <b>high "
-    f"outside</b> and <b>low inside</b> by the <b>sodium-potassium pump</b> (<b>3 {NA} out for "
-    f"2 {K} in</b>) - this is what <b>polarises</b> the membrane."))
+    "The <b>hypothalamus</b> - specifically its <b>suprachiasmatic nucleus</b> - which times the "
+    "brain-controlled <b>circadian (24-hour) rhythms</b>."))
 story.append(b1(
-    f"On <b>stimulation</b> the membrane at that site becomes <b>freely permeable to {NA}</b>; "
-    f"the <b>rapid influx of {NA}</b> <b>reverses the polarity</b> (outer negative, inner "
-    f"positive) - <b>depolarisation</b> - and the resulting potential difference <b>is</b> the "
-    f"<b>action potential / nerve impulse</b>."))
-story.append(b1(
-    f"The {NA} influx also drives the <b>local current</b> from the depolarised site to the site "
-    f"immediately ahead, so the impulse is <b>conducted</b> along the axon; the rise in {NA} "
-    f"permeability is <b>extremely short-lived</b> and is followed by a rise in <b>{K}</b> "
-    f"permeability that <b>restores the resting potential</b>."))
-
-story.append(gap())
-story.append(body("<b>8. Differentiate between:</b>"))
-story.append(data_table([
-    ["Pair", "First member", "Second member"],
-    ["<b>(a) Myelinated vs non-myelinated axons</b>",
-     "<b>Enveloped with Schwann cells forming a myelin sheath</b>; gaps between adjacent sheaths "
-     "are <b>nodes of Ranvier</b>; found in <b>spinal and cranial nerves</b>",
-     "<b>Enclosed by a Schwann cell that does not form a myelin sheath</b>; <b>commonly</b> "
-     "found in <b>autonomous</b> and <b>somatic</b> neural systems"],
-    ["<b>(b) Dendrites vs axons</b>",
-     "<b>Short</b>, <b>repeatedly branched</b> fibres projecting from the cell body, "
-     "<b>containing Nissl's granules</b>; <b>transmit impulses towards the cell body</b>",
-     "A <b>long</b> fibre with a <b>branched distal end</b>, each branch ending in a "
-     "<b>synaptic knob</b> with <b>neurotransmitter vesicles</b>; <b>transmit impulses away "
-     "from the cell body</b> to a synapse or neuro-muscular junction"],
-    ["<b>(c) Thalamus vs hypothalamus</b>",
-     "The <b>cerebrum wraps around</b> it; a <b>major coordinating centre for sensory and motor "
-     "signaling</b>",
-     "Lies at the <b>base of the thalamus</b>; centres for <b>body temperature, eating and "
-     "drinking</b>; <b>neurosecretory cells</b> secreting <b>hypothalamic hormones</b>; with the "
-     "limbic system governs <b>emotion, sexual behaviour, motivation</b>"],
-    ["<b>(d) Cerebrum vs cerebellum</b>",
-     "<b>Forebrain</b>; <b>major part of the human brain</b>; <b>two hemispheres</b> joined by "
-     "the <b>corpus callosum</b>; folded <b>cortex</b> with motor, sensory and association "
-     "areas - voluntary action, memory, intelligence, speech",
-     "<b>Hindbrain</b>; <b>very convoluted surface</b> giving space for many more neurons; "
-     "<b>integrates information from the semicircular canals of the ear and the auditory "
-     "system</b>"],
-], col_widths=[17, 41, 42]))
-
-story.append(gap())
-story.append(body("<b>9. Answer the following:</b>"))
-story.append(b1(
-    "<b>(a) Which part of the human brain is the most developed?</b> The <b>cerebrum</b> - it "
-    "<b>forms the major part of the human brain</b>."))
-story.append(b1(
-    "<b>(b) Which part of our central neural system acts as a master clock?</b> The "
-    "<b>hypothalamus</b> (its <b>suprachiasmatic nucleus</b>), which times the brain-controlled "
-    "<b>circadian (24-hour) rhythms</b>. <i>(Answer beyond NCERT's own sentences - see the "
-    "appendix.)</i>"))
+    "<b>The gap:</b> the chapter states that the brain controls circadian rhythms, but never "
+    "names the structure that keeps the time."))
 
 story.append(gap())
 story.append(body(
-    "<b>10. Distinguish between:</b> <i>(source lettering: (a), (b), (f) - the book skips "
-    "(c)-(e))</i>"))
+    "<b>10(b) Impulse conduction in a myelinated nerve fibre vs an unmyelinated nerve "
+    "fibre.</b>"))
 story.append(b1(
-    "<b>(a) Afferent neurons vs efferent neurons.</b> <b>Afferent</b> nerve fibres <b>transmit "
-    "impulses from tissues/organs to the CNS</b>; <b>efferent</b> fibres <b>transmit regulatory "
-    "impulses from the CNS to the concerned peripheral tissues/organs</b>."))
+    "In an <b>unmyelinated</b> fibre the membrane is depolarised at <b>every successive point</b> "
+    "along the axon, so conduction is <b>continuous</b> and <b>slower</b>."))
 story.append(b1(
-    "<b>(b) Impulse conduction in a myelinated vs an unmyelinated nerve fibre.</b> In an "
-    "<b>unmyelinated</b> fibre the membrane is depolarised at <b>every successive point</b>, so "
-    "conduction is <b>continuous and slower</b>; in a <b>myelinated</b> fibre the <b>myelin "
-    "sheath insulates</b> the axon and the membrane is exposed only at the <b>nodes of "
-    "Ranvier</b>, so the impulse leaps <b>node to node</b> - <b>saltatory conduction</b>, "
-    "<b>faster</b> and more energy-efficient. <i>(Answer beyond NCERT's own sentences - see the "
-    "appendix.)</i>"))
+    "In a <b>myelinated</b> fibre the <b>myelin sheath insulates</b> the axon and leaves the "
+    "membrane exposed only at the <b>nodes of Ranvier</b>, so the impulse is regenerated node to "
+    "node and <b>leaps</b> the insulated stretches between them - <b>saltatory conduction</b>, "
+    "which is <b>faster</b> and more energy-efficient."))
 story.append(b1(
-    "<b>(f) Cranial nerves vs spinal nerves.</b> Both are <b>PNS</b> nerves, and NCERT notes "
-    "that <b>myelinated nerve fibres are found in spinal and cranial nerves</b>. <b>Cranial "
-    "nerves arise from the brain</b>; <b>spinal nerves arise from the spinal cord</b>. <i>(Answer "
-    "beyond NCERT's own sentences - see the appendix.)</i>"))
+    "<b>The gap:</b> 18.1 defines both fibre types and 18.3 explains conduction along an axon, "
+    "but the chapter never joins the two into a conduction comparison."))
 
 story.append(gap())
-
-# ======================================================================================
-# ---- APPENDIX: Terms used in the exercises (SS5 item 9, Rule 2) ----
-# The three genuine exercise gaps, collected in one place and labelled as additions so no
-# reader mistakes them for NCERT body text (Rule 5).
-# ======================================================================================
-story.append(heading("Appendix", "Terms used in the exercises", level=1, has_table=True))
-
-story.append(body(
-    "Three exercises lean on something this chapter never states. Each is answered above at the "
-    "point where it belongs, and collected here so the addition is never mistaken for NCERT "
-    "body text."))
-
-story.append(data_table([
-    ["Exercise", "Term the exercise assumes", "Explanation added (not in the NCERT body)"],
-    ["<b>9(b)</b>", "<b>Master clock</b> of the central neural system",
-     "NCERT states only that the brain controls <b>circadian (24-hour) rhythms</b>. The "
-     "timekeeper is the <b>hypothalamus</b>, specifically its <b>suprachiasmatic nucleus</b>."],
-    ["<b>10(b)</b>", "<b>Conduction in a myelinated vs an unmyelinated fibre</b>",
-     "NCERT defines both fibre types but not their conduction. <b>Unmyelinated: continuous</b> "
-     "depolarisation point by point, <b>slower</b>. <b>Myelinated: saltatory</b> - the impulse "
-     "is regenerated only at the <b>nodes of Ranvier</b>, so it is <b>faster</b>."],
-    ["<b>10(f)</b>", "<b>Cranial nerves vs spinal nerves</b>",
-     "NCERT names them once, as the site of myelinated fibres. <b>Cranial nerves leave the "
-     "brain</b>; <b>spinal nerves leave the spinal cord</b>; both belong to the <b>PNS</b> and "
-     "may carry afferent fibres, efferent fibres or both."],
-], col_widths=[10, 26, 64]))
-
-story.append(gap())
-story.append(note(
-    "<b>Coverage note.</b> All <b>4 figures</b> of the chapter are embedded as verified "
-    "monochrome assets (Figures 18.1-18.4), each followed by its full in-figure label list, so "
-    "no figure required manual attention. Source spellings kept verbatim where NCERT prints "
-    "them: <b>'sagital'</b> (Figure 18.4 caption), <b>'passess'</b> (18.4.2) and <b>'spiral "
-    "cord'</b> (summary). Nothing in the chapter is a photograph of a person, so no such image "
-    "was embedded."))
+story.append(body("<b>10(f) Cranial nerves vs spinal nerves.</b>"))
+story.append(b1(
+    "<b>Cranial nerves arise from the brain</b>; <b>spinal nerves arise from the spinal cord</b>. "
+    "Both belong to the <b>PNS</b>, and either may carry <b>afferent</b> fibres, <b>efferent</b> "
+    "fibres or both."))
+story.append(b1(
+    "<b>The gap:</b> the chapter names the two together only once - as the site where myelinated "
+    "nerve fibres are found - and never distinguishes them."))
 
 
 def main():

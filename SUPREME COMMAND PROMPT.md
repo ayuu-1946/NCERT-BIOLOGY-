@@ -191,13 +191,18 @@ Every one of these, wherever it appears in the source, must appear somewhere in 
 
 Default when unsure: keep it. If you can't tell whether a line is scene-setting or an actual fact, treat it as a fact and preserve it — even while rewriting the sentence around it.
 
-### Rule 2 — Close the exercise gap
+### Rule 2 — Close the exercise gap (gap-only; never a full answer key)
 NCERT's end-of-chapter questions sometimes use a term, or lean on a fact, that the chapter itself never actually explains. Before writing:
 1. Scan every exercise question for this.
-2. Check whether the main text or summary genuinely explains each term/fact the questions assume.
-3. If not, add a clear, correct explanation — inline where it naturally belongs, or in a closing appendix titled **Terms used in the exercises**.
+2. Check whether the main text or summary genuinely explains each term/fact the question assumes.
+3. **Classify every question, and reproduce only one class.**
+   - **COVERED** — the rewrite already answers it. **Do not reproduce the question and do not write an answer.** The body text *is* the answer; restating it as "Exercise 5(b)" is the same fact typed twice, which Rule 3 forbids as redundancy and which pushes real content further from the reader.
+   - **GAP** — the question needs something the chapter never states. Reproduce this question **in full**, answer it, and label the answer as an addition (Rule 5).
+4. Put the GAP questions, with their answers, in the closing appendix titled **Terms used in the exercises** — or inline where one naturally belongs, in which case the appendix row cross-references it rather than repeating the answer. **A gap is written out once, in one place.** If a chapter has zero gaps, the appendix does not exist and neither does any exercise section.
 
-Goal: someone who reads only the rewrite, never the original book, should be able to answer every exercise question.
+Goal is unchanged: someone who reads only the rewrite, never the original book, can answer every exercise question. What changed is the mechanism — coverage is proven by the body text, not by an answer key bolted onto the end. **A chapter must never ship an "EXERCISES (with worked answers)" section that walks all N questions.** That was measured on Ch18: ten questions reproduced, seven of them pure recall whose answers were copied back out of sections the reader had just read.
+
+**Inventory obligation.** The Pass 1 inventory carries the *full* classification — every exercise numbered, marked COVERED or GAP, and for COVERED, the section that answers it. That table is the audit trail proving nothing was dropped by ignorance rather than by rule. It lives in the inventory `.md`, never in the PDF (Rule 6).
 
 ### Rule 3 — What's actually allowed to cut
 "Garbage" means exactly three things: a sentence that just restates a fact already given, purely rhetorical scene-setting with no fact in it ("Have you ever wondered…"), and transitional filler between paragraphs. Nothing else qualifies. Merge redundant sentences into one — but every fact they carried has to survive the merge. Never cut something because it feels minor or "unlikely to be asked."
@@ -220,6 +225,18 @@ Two failure modes cost marks even when "every fact is present":
 Every fact in the rewrite must trace back to the source PDF given for that chapter. Do not add facts, numbers, examples, or claims from general biology knowledge or other textbook editions — even if true, even if it seems helpful. The chapter PDF is the only source of truth. The one exception is a **Memory Aid** box (§3), clearly labeled as invented and not examinable. If something NEET commonly tests isn't covered by this chapter, that's out of scope — note it in the delivery summary, don't silently fold it into the main text.
 
 This rule extends to figures: only figures extracted from the source PDF may appear, and only after the §4.4 monochrome conversion. Never generate, redraw, or substitute a diagram from memory or another edition, and never embed a raw or color extraction. The single decorative exception is the title motif (§4 Title block), which is a plain outline shape carrying zero facts.
+
+### Rule 6 — No process/meta commentary in the PDF
+The PDF is the student's book. It must read as if it had always been the book — it may not talk about how it was made. Banned from the PDF, with no exceptions:
+- **Coverage/completeness notes** — "All 4 figures of the chapter are embedded", "All ten exercises are reproduced below", "no figure required manual attention", "nothing in the chapter is a photograph of a person, so none was embedded".
+- **Pipeline vocabulary** — pass numbers, gates, linter names, verification status, asset counts, "monochrome asset", "verified", "extracted".
+- **Editorial self-description** — announcing what the following section will contain, how many items it has, or where its answers were sourced from.
+
+Every one of these facts is real and worth recording; its home is the chapter's **inventory `.md`** (and `CHAPTER_TRACKER.md`), which is where an auditor actually looks. Two consequences:
+- The **Coverage note box is deleted from the PDF** and lives as a *Coverage* section of the inventory (§7's fixed headings are unchanged — they just address the inventory now, not a PDF box). Its one genuinely reader-facing job survives: a figure that failed extraction is still flagged **in the PDF**, at the point where the figure would have appeared, under the fixed heading **"Figures requiring manual attention"** — a student needs to know a diagram is missing. The counts and the reassurances around it do not belong there.
+- **Source-spelling notes** stay only where a reader is actually looking at the odd spelling — parenthetically in the caption or line that carries it (Figure 18.4's `sagital`) — never as a collected list of every typo in the source.
+
+The test is one question: is this box's subject *biology*, or is it *this document*? A NOTE box exists to teach biology. If its subject is the document, delete it.
 
 ### Worked example
 **NCERT-style original:**
@@ -246,7 +263,7 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 - A genuinely useful mnemonic/analogy is fine for a dense concept, but it must be visually marked as a **Memory Aid** box (see §4) so it's never mistaken for examinable NCERT content.
 
 ### Special content handling
-- **Figures/diagrams**: the figure image itself is extracted, converted to true monochrome, and embedded per §4.4. IN ADDITION, pull every fact out of its caption and labels into the running text — the text must stand alone even if a print of the figure is illegible. Every in-figure label is a row in the Pass 1 figure-label matrix and is checked into running text automatically by `check_pdf.py`. If a figure fails extraction or verification (§4.4), flag it in the Coverage note under the fixed heading **"Figures requiring manual attention"** — never silently omit it.
+- **Figures/diagrams**: the figure image itself is extracted, converted to true monochrome, and embedded per §4.4. IN ADDITION, pull every fact out of its caption and labels into the running text — the text must stand alone even if a print of the figure is illegible. Every in-figure label is a row in the Pass 1 figure-label matrix and is checked into running text automatically by `check_pdf.py`. If a figure fails extraction or verification (§4.4), record it in the inventory's Coverage section under the fixed heading **"Figures requiring manual attention"**, and flag it in the PDF at the point the figure would have appeared — this is the one coverage fact a reader needs (Rule 6). Never silently omit it.
 - **Scientific names**: correct italics, correct binomial format.
 - **Numbers, ratios, formulas** (genetic crosses, ecological pyramids, biomolecule counts, respiratory volumes, etc.): reproduce exactly — never round or approximate.
 - **Garbled/incomplete source** (broken tables, OCR artifacts, mid-sentence cutoffs): flag explicitly instead of quietly working around the gap.
@@ -410,7 +427,7 @@ def process_flow(steps: list[str], cyclic: bool = False) -> Table:
     return t
 ```
 
-**Fallback rule (mandatory):** if a rendered flow block misaligns, clips, or breaks badly at a page boundary and one honest fix attempt doesn't cure it, fall back to plain numbered steps (`Bullet1` style, "1." "2." "3.") for that block and note it in the Coverage note. Content correctness always outranks decoration — never ship a broken flow, and never burn the session debugging graphics at the expense of content.
+**Fallback rule (mandatory):** if a rendered flow block misaligns, clips, or breaks badly at a page boundary and one honest fix attempt doesn't cure it, fall back to plain numbered steps (`Bullet1` style, "1." "2." "3.") for that block and record it in the inventory's Coverage section (never in the PDF — Rule 6). Content correctness always outranks decoration — never ship a broken flow, and never burn the session debugging graphics at the expense of content.
 
 ### 4.3 Boxes — NOTE vs MEMORY AID
 Both box types (exported as `note()` / `memory_aid()`) keep the `NOTE_BG` fill and Times-Italic text (fill is decoration) but are primarily told apart by **border style**, which survives any photocopy generation the fill doesn't:
@@ -453,8 +470,8 @@ img.save(output_path)
 
 **Step 3 — Verify (mandatory, every figure — not a spot-check):**
 Open every converted image and confirm: (a) it is the correct figure for its caption, (b) no labels or leader lines are cropped, (c) it is legible at print size, (d) it isn't an accidental grab of a neighboring figure/table/text, (e) it is genuinely monochrome, and (f) any distinction the original carried by color is still visible. Mark `Mono: yes` / `Verified: yes` only after this check.
-- If two elements remain indistinguishable after conversion, that is a **real information loss**: state the distinction explicitly in the caption and surrounding text/table, and record it in the Coverage note.
-- A figure that cannot be extracted or converted cleanly goes in the Coverage note under **"Figures requiring manual attention"** — never embed a bad crop silently, never skip a figure silently.
+- If two elements remain indistinguishable after conversion, that is a **real information loss**: state the distinction explicitly in the caption and surrounding text/table, and record it in the inventory's Coverage section.
+- A figure that cannot be extracted or converted cleanly goes in the inventory's Coverage section under **"Figures requiring manual attention"**, and is flagged in the PDF where it would have appeared — never embed a bad crop silently, never skip a figure silently.
 
 **Step 4 — Embed:**
 - Use `neet_template.figure(asset_path, caption_text, max_width_cm=...)`, which returns the image and its caption `Paragraph` wrapped in `KeepTogether` inside a thin 0.5pt `GRID_LINE` border box, so a figure never separates from its caption across a page break and reads as part of the design system.
@@ -494,7 +511,7 @@ Open every converted image and confirm: (a) it is the correct figure for its cap
 6. NOTE boxes at the end of the relevant section they belong to
 7. MEMORY AID boxes where a genuinely useful mnemonic helps (optional, clearly marked)
 8. **Quick Recap** — rewritten, denser version of the chapter summary
-9. **Terms used in the exercises** appendix — only if Rule 2 found gaps
+9. **Terms used in the exercises** appendix — only if Rule 2 found gaps, and containing **only** the GAP questions with their answers. Never a walk-through of all N exercises, and never a coverage/meta note (Rule 6). If there are no gaps, the chapter ends at the Quick Recap.
 
 ---
 
@@ -696,9 +713,9 @@ Then deliver the full chapter folder (§0.5): the PDF, the `.py` script (saved a
 
 Along with the files, include:
 - A **section-wise coverage confirmation** (e.g. "14.1 — 12/12 body facts, 2/2 summary-unique, 3/3 figures embedded + verified mono, all figure labels in text").
-- A short **Coverage note** with these fixed headings so an audit prompt can consume it mechanically:
+- A short **Coverage note**, written into the chapter's **inventory `.md`** and never into the PDF (Rule 6), with these fixed headings so an audit prompt can consume it mechanically:
   - **Compression decisions** — what was merged/reformatted and why it's safe
-  - **Exercise-gap terms** — confirmation every exercise-assumed term is covered
+  - **Exercise classification** — every exercise numbered and marked COVERED (naming the section that answers it) or GAP (naming where its added answer lives), per Rule 2
   - **Drift caught and fixed** — anything Pass 3 found
   - **Figures requiring manual attention** — figures that failed extraction/conversion/verification (write "None" if empty)
   - **Color-dependent figures** — figures whose meaning relied on color, and where that distinction is now stated in words (write "None" if empty)
