@@ -8,9 +8,13 @@ Tick legend: `x` = the row's wording was read directly off the numbered source p
 
 ## Header-correction record (`1-S`, 2026-09-01)
 
-This file's H1 previously read **"Frozen Inventory"** while the file contained **only the 7 figure-label rows** and no Facts at all. A 7-row figure manifest is not a frozen Pass 1 inventory, so the H1 asserted a gate that had never been earned — exactly the "documentation claims more than the artefact" defect that Gate 3(b) rule 2 says *is* the finding. The H1 is now demoted to **Working Inventory (Pass 1 IN PROGRESS — NOT FROZEN)** and the gate state is stated explicitly above. The `1-F` figure work itself was sound and is untouched; only the claim about it was wrong.
+This file's H1 previously read **"Frozen Inventory"** while the file contained **only the 7 figure-label rows** and no Facts at all. A 7-row figure manifest is not a frozen Pass 1 inventory, so the H1 asserted a gate that had never been earned — exactly the "documentation claims more than the artefact" defect that Gate 3(b) rule 2 says *is* the finding. `1-S` demoted the H1 to **Working Inventory (Pass 1 IN PROGRESS — NOT FROZEN)** and stated the gate state explicitly. The `1-F` figure work itself was sound and is untouched; only the claim about it was wrong.
 
-The original 7 figure-label rows were numbered `F001`–`F007`. Because the `## Facts` table must be in **Content Order**, and the figure-label matrix belongs at the tail (the Ch18 convention: 131 content Facts then 4 matrix rows), those 7 rows are **renumbered `F212`–`F218`**. Their `Section`, `Type` and wording columns are **byte-identical to the originals** — only the ID changed — so `check_pdf._extract_labels` sees the same 7 rows and the same 35-label harvest it saw before.
+**The H1 reads `Frozen Inventory` again as of 2026-09-01, and this time it is earned** — `1-H`, `1-O` and `1-Z` have since run, the freeze is declared in the Gate 1 record at the foot of this file, and every count is a re-parse. This paragraph is kept rather than deleted so the word `Frozen` in the H1 has a traceable history: it was false when written, was removed, and was restored only after the five sessions it asserts actually closed. **Do not read this paragraph as the current gate state** — line 5 is the current gate state.
+
+The original 7 figure-label rows were numbered `F001`–`F007`. Because the `## Facts` table must be in **Content Order**, and the figure-label matrix belongs at the tail (the Ch18 convention: 131 content Facts then 4 matrix rows), those 7 rows are **renumbered `F212`–`F218`**. Their `Section`, `Type` and wording columns are **byte-identical to the originals** — only the ID changed — so `check_pdf._extract_labels` sees the same 7 rows and the same label harvest it saw before.
+
+**The label count in this paragraph was wrong and is corrected here (`1-Z`).** It read **35 labels**, a number no parse of these rows returns: importing `_extract_labels` from `check_pdf.py` and running it over this file returns **38 labels across 7 figure rows** (`19.1` 9 · `19.2` 5 · `19.3a` 3 · `19.3b` 1 · `19.4` 4 · `19.5a` 8 · `19.5b` 8 = 38), with no doubling and no phantom `Fig #` row. The 35 was the *only* live restatement of the figure-label count in this file, which is why it survived two sessions: nothing contradicted it. Pass 2's check 6 will demand **38** labels in the running text, so a script written against 35 would have gone to Gate 2 three labels short.
 
 ## Scope and status
 
@@ -340,6 +344,18 @@ Type census — **9 values, all lowercase**:
 
 The matrix exists in exactly one place: the `## Facts` table above, rows `F212`–`F218`. Each row begins with `Figure labels:` or `Figure (a)/(b) labels:` in the wording column, matching the `_extract_labels` parser used by `check_pdf.py`. There is no duplicate pipe-delimited label table elsewhere in this inventory, so labels are not double-counted and no phantom separator row is created.
 
+**Machine re-parse, run by `1-Z` after the last edit to this file** (`scratch/ch19_gate1/gate1_close.py`, which imports the real `_extract_labels` out of `check_pdf.py` rather than reimplementing it):
+
+| Quantity | Value |
+|---|---:|
+| Figure rows parsed | 7 |
+| Labels parsed | 38 |
+| Per-figure split | `19.1` 9 · `19.2` 5 · `19.3 (a)` 3 · `19.3 (b)` 1 · `19.4 (a)/(b)` 4 · `19.5 (a)` 8 · `19.5 (b)` 8 |
+| Doubled labels | 0 |
+| Phantom `Fig #` rows | 0 |
+
+`9+5+3+1+4+8+8 = 38`, so the total is derivable from the split beside it. The re-parse was re-run **after** the two pipe-delimited tables in `## Summary classification` and `## Exercise-gap terms` were added, because `_extract_labels` scans every pipe-delimited line in the file and those tables are exactly the shape that produced Ch12's phantom-row failure; the count is unchanged at 7 / 38, so neither table is visible to the parser.
+
 ## Summary classification
 
 `1-Z`, over the `SUMMARY` block that runs from the heading on p. 11 to the end of p. 12. **32 sentences**, enumerated by machine (`scratch/ch19_gate1/summary_classify.py`) so the census total is the length of this list — not a hand tally, and with no sentence classified that was never read.
@@ -454,12 +470,73 @@ All seven emitted assets are high-resolution grayscale PNGs (`mode=L`) generated
 - **5 source misspellings/inconsistencies catalogued** (`sella tursica`, `Exopthalmic`, `pupilary`, `glucagons`, `Diagramatic`) and held **verbatim** in their rows.
 - **3 defects in the pre-existing `1-F` documentation found and fixed** (all metadata; no asset, no crop box and no shared repo file touched): the false `Frozen Inventory` H1; the "verbatim" caption column that actually held paraphrases and silently repaired the source's `Diagramatic` typo; and the Figure 19.5 caption page recorded as the panel page.
 
-### Remaining Pass 1 sessions — NOT STARTED
+### `1-H` — heading sweep — COMPLETE (2026-09-01)
 
-| Session | Purpose | Blocking |
+Deliverable: `scratch/ch19_gate1/heading_sweep.py`, which walks the source's own type hierarchy — **headings only, prose deliberately ignored** — and prints the census as `14 numbered + 5 unnumbered = 19`, matching the `heading` count in the type census above.
+
+- **`1-H`'s own machine-derived count: 19 heading rows.** No heading row was added by this session; the sweep's job was to prove the 19 already in the table are the complete set, and it did — sections 19.1–19.4 and 19.2.1–19.2.10 are all present, and **no unnumbered sub-heading sits inside any of them.** The Ch9 D4 failure mode (content present, heading silently missing) does not occur in this chapter.
+- **The finding that makes the sweep non-trivial: the source's own heading font-name is inconsistent.** Heading-sized spans use `Bookman-Demi` **26 times** and `Bookman,Bold` **7 times** for the same structural levels — `19.2.7 Adrenal Gland`, `19.3`, `19.4` and `SUMMARY` are set in the minority spelling. **A font-NAME filter would therefore have silently dropped four real headings, including a whole gland subsection**, and reported a clean 15. The sweep filters on **size** (≥ 12.0 pt: 12.0 = subsection, 13.0 = section, 15.4/26.8 = chapter title, 12.6 = chapter label, 18.0 = `NOTE`) for exactly that reason. Inline `Bookman-Demi` at 10.5 pt is *bold key-term emphasis inside body text*, not a heading, and is excluded — including it would have invented dozens of phantom headings.
+- **Two structural facts that would otherwise be miscounted.** (a) The chapter title prints on **two lines** (`CHEMICAL COORDINATION` / `AND INTEGRATION`) and is **one row** (`F001`) — a line-counting sweep reports 20. (b) The source sets each numbered heading's *number* and *title* as separate text lines, so a naive "unnumbered = line without a section number" rule classifies all 14 titles as unnumbered and returns 19 unnumbered headings; the classifier pairs number-lines with the title-line that follows, which is why the honest figure is 5.
+- **Corrections `1-H` made:** the source-structure table's unnumbered-heading count (**4 → 5**; the `NOTE` row `F211` existed while the census omitted it, so the census contradicted its own table), and the false `α`/`β` "ASCII transliteration" note (see that section — a byte inspection returns real U+03B1/U+03B2).
+- **Carry-forward for Pass 2, from this session's page-6 inspection:** the source renders essentially all of page 6 (§19.2.7's opening) in *italic* `Bookman` — a source typesetting accident, not emphasis. Pass 2 must **not** reproduce page 6 as italic body text.
+
+### `1-O` — opener sweep — COMPLETE (2026-09-01)
+
+Deliverable: `scratch/ch19_gate1/opener_verify.py`, which reads **openers only, headings ignored**, and asserts two properties against the source PDF rather than against this file's own prose.
+
+- **`1-O`'s own machine-derived count: 19 opener rows = 5 chapter-opener (`F003`–`F007`) + 14 section-opener, one per numbered section.** `5 + 14 = 19`, which is the `opener` count in the type census, and the 14 equals the numbered-heading count — the two censuses cross-check each other.
+- **Property A — Content Order (§5) holds.** `Src` page numbers are non-decreasing across the **189 body-prose rows**: 0 out-of-order rows. Two row classes are excluded, and the exclusion is printed by the script so it can be audited rather than believed: the **17 FOLD rows** (a numbered section carrying `Src` p11–p13 — a SUMMARY-UNIQUE fact folded into its body section, or an exercise label held verbatim beside the body fact it assumes) and the **5 caption rows**, which sit beside the prose that refers to the figure. `189 + 17 + 5 = 211` content rows.
+- **Property B — every section's `opener` row really is that section's first sentence.** For all **14/14** numbered sections, the row typed `opener` is located earliest in the source token stream of all that section's prose rows. This is the check that catches the failure 1-S cannot: the opening sentence existing *somewhere* in the table is not enough, it must be the row marked `opener`.
+- **A matcher artefact caught and fixed inside this session, recorded because it presented as a content defect.** The first run reported §19.2.10's opener `F169` ranked **2nd**, behind `F170` — an apparent real ordering defect. It was not. The matcher tolerates bounded gaps (NCERT's marginal contents column extracts *inside* body paragraphs, and long sentences wrap across page breaks), and `F170` begins `Ovary is the primary female sex organ…` while the token `Ovary` also occurs one token earlier **in the heading `19.2.10 Ovary`** — so the earliest-start match began at the heading and skipped the entire opening sentence within its gap budget. The fix is to rank by the **tightest** match (smallest span), not the earliest start: a true occurrence has span `len(needle)` and any heading-anchored match is strictly longer. After the fix all 14 sections are `1/N`. **Verdict: the source, the table and the types were right; the measurement was wrong** — which is the direction of error worth writing down, because the tempting "fix" was to edit a correct row.
+- **No opener row was added or reclassified by this session.** The `opener` typing and the `contents` typing of `F008`–`F011` (the marginal contents column, which is not a section opener) were applied in the preceding session's transform; `1-O`'s deliverable is the machine proof that the result is right.
+
+### `1-Z` — gaps, summary & freeze — COMPLETE (2026-09-01)
+
+- **Summary scan (step 8):** **32 SUMMARY sentences = 29 BODY-PRESENT + 3 SUMMARY-UNIQUE**, all 3 folded **before** the freeze — `F125` (S17, `glycogenolysis, lipolysis, proteolysis`), `F179` (S28, progesterone → mammary gland development and lactation) and `F191` (S32, hormones regulate the secretion of digestive juices). **This is what took the table from 208 to 211 content Facts.** Enumeration and evidence: `scratch/ch19_gate1/summary_classify.py`; the full sentence-by-sentence table with its named body row is in `## Summary classification` above. Four sentences are BODY-PRESENT **wording variants** (S09, S12, S14, S20) against the two the vocabulary filter flagged — the filter cannot see a sentence that restates a body fact using only body words, which is why every one of the 32 was also read against its named row by hand.
+- **Exercise-gap scan (step 7, Rule 2):** **9 questions / 39 lettered sub-parts / exactly 1 gap** — Q1(a) `Exocrine gland`, which the body *uses* (`F139`, `F188`) but never defines. Its planned home is §19.1 beside `F013`, phrased only from what the source itself supplies (ductless vs. duct-bearing), since Rule 5 forbids importing an outside definition. Every other exercise-assumed term resolves to a named body row — see `## Exercise-gap terms`.
+- **Corrections `1-Z` made:** the sub-part count (**41 → 39 lettered**, or 43 counting Q9's Column II, both readings now stated with the per-question addition beside them), and the figure-label count (**35 → 38**, see the header-correction record — the only live restatement of that number in the file, and a script written against 35 would have arrived at Gate 2 three labels short of check 6).
+- **`1-Z`'s own machine-derived count: 218 rows** = 211 content Facts + 7 figure-label matrix rows, `F001`–`F218`, contiguous and monotonic, 0 gaps, 0 duplicates, 218/218 ticked, type census summing to 218 across 9 all-lowercase values. Derivation: `scratch/ch19_gate1/gate1_close.py`.
+
+### Freeze declaration (2026-09-01)
+
+**This inventory is FROZEN.** All five Pass 1 sessions have run — `1-F` (2026-08-30) · `1-S`, `1-H`, `1-O`, `1-Z` (2026-09-01) — each reporting its own machine-derived row count, and every count in this file was re-derived by re-parsing the finished `## Facts` table after the last edit to it.
+
+**No row may be added, removed or reworded from here on.** A Pass 2 discovery that this file is incomplete **reopens Gate 1** and is recorded as a Pass 1 gap; it is not patched into the freeze silently and never back-dated.
+
+Pass 2 may now be written against this file, ticking rows in place as each is written into the script.
+
+### Gate 1 checklist — every criterion, with the evidence
+
+| §6 Gate 1 criterion | State | Evidence |
 |---|---|---|
-| `1-H` | heading/typography audit — confirm the 18 heading rows against the source's own type hierarchy and check every non-heading row is character-for-character (including the `α`/`β` transliteration note) | yes |
-| `1-O` | ordering audit — confirm the table is in true Content Order and that each row's `Src` page is the page the wording is actually printed on | yes |
-| `1-Z` | summary classification (BODY-PRESENT vs SUMMARY-UNIQUE over the p. 11–12 `SUMMARY`) and the exercise-gap scan over the 9 exercises / 41 sub-parts; every SUMMARY-UNIQUE item must be folded **before** the freeze | yes |
+| Every fact has a Facts row; every in-figure label has a matrix row, harvested by **opening each rendered asset** | ✅ | 211 content Facts + 7 matrix rows; labels harvested in `1-F` by opening all 7 PNGs individually at 440 dpi, not by text extraction |
+| Inventory validated by running **`check_pdf.py`'s own `_extract_labels`** — expected figure count, no doubling, no phantom rows | ✅ | `gate1_close.py` imports the real parser from `check_pdf.py`: **7 figures / 38 labels / 0 doubled / 0 phantom `Fig #`**, re-run after the two new pipe tables were added |
+| Every header count matches a re-parse; `F001..FNNN` contiguous, no gaps or duplicates; every **restatement** fixed, not just the header; each census total equals the length of its own list | ✅ | 218 rows, `F001`–`F218`, contiguous, monotonic, 0 gaps, 0 dupes, 218/218 ticked; heading `14+5=19`, opener `5+14=19`, summary `29+3=32`, sub-parts `3+0+12+5+6+6+3+0+4=39`, labels `9+5+3+1+4+8+8=38` — each written so the total is derivable from the list beside it |
+| `Type` column uses one normalized spelling/casing per value | ✅ | 9 values, **all lowercase**, summing to 218; `gate1_close.py` reports `non-lowercase Type values: none` |
+| Every heading has a `heading` row, **including unnumbered sub-headings**, confirmed by walking the headings as their own list | ✅ | `1-H` / `heading_sweep.py`: 19 rows = 14 numbered + 5 unnumbered; no unnumbered sub-heading exists inside any section; size-based filter used because the source's heading **font names** are inconsistent (26 `Bookman-Demi` vs 7 `Bookman,Bold`) |
+| Every section's opening sentence has an `opener` row, confirmed by walking the openers as their own list | ✅ | `1-O` / `opener_verify.py`: 14/14 sections' `opener` row is the earliest-positioned prose row of its section in the source; Content Order also asserted (0 out-of-order body rows) |
+| **All five Pass 1 sessions actually ran**, each reporting its own machine-derived count | ✅ | `1-F` 7 assets / 38 labels · `1-S` 208 Facts + 7 = 215 rows · `1-H` 19 heading rows · `1-O` 19 opener rows · `1-Z` +3 folds → **218 rows** |
+| Every figure in the manifest is `Mono: yes` and `Verified: yes` | ✅ | 7/7 rows in `## Figure manifest`, all `mode=L`, each opened individually |
+| Every exercise-gap term has a planned home; every SUMMARY-UNIQUE fact folded into a body row | ✅ | 1 gap (Q1(a) `Exocrine gland` → §19.1 beside `F013`); 3 SUMMARY-UNIQUE folded into `F125`, `F179`, `F191` |
+| Inventory file saved to the chapter folder | ✅ | `notes/class 11/Ch19_ChemicalCoordinationAndIntegration/Ch19_ChemicalCoordinationAndIntegration_inventory.md` |
 
-**The freeze may not be declared until all three have run.** In particular `1-Z` is load-bearing: the Ch19 `SUMMARY` runs to two full pages and demonstrably introduces at least one item the body never states (the body's thyroid section never mentions `development and maturation of the central neural system`, which the SUMMARY asserts), so SUMMARY-UNIQUE folds **will** change the row count and the count above must be treated as provisional.
+**Verdict: GATE 1 GREEN (2026-09-01).** `gate1_close.py` prints `VERDICT: GREEN`; `opener_verify.py` prints `VERDICT: GREEN`. Pass 2 may begin.
+
+**Housekeeping done at the freeze:** the stale duplicate `Ch19_ChemicalCoordinationAndIntegration_inventory.new.md` was **deleted**. It was a 43 KB intermediate from an earlier PR holding a *subset* of this table (the canonical `.md` was already the promoted superset), and leaving two files whose names differ by one word beside a freeze is how a later session ticks rows in the wrong file.
+
+### What Gate 1 does NOT claim
+
+No script and no PDF exist for this chapter yet. Every `x` in the `Ticked` column means **"read off the numbered source page and confirmed character-for-character"** — it is not a claim about any delivered PDF, and `check_pdf.py`'s checks 6 and 7 have never been run against a Ch19 PDF because there is nothing to run them against. Gates 2 and 3 are **open**, and this chapter must not be counted in any completion tally.
+
+**Carry-forward list for Pass 2** (each item is a decision already made, not a question to re-litigate):
+
+| # | Carry-forward | Why |
+|---|---|---|
+| 1 | Render `α-cells` / `β-cells` as `alpha-cells` / `beta-cells` in the running text | Rows `F142`/`F143` hold real Greek glyphs to match the source; `check_pdf.py` check 5 bans Greek from the generated PDF. A rendering decision, **not** an edit to those rows |
+| 2 | Keep all 5 source misspellings verbatim (`sella tursica`, `Exopthalmic goitre`, `pupilary dilation`, `glucagons`, `Diagramatic`) | Rule 4; the source is internally inconsistent (`Diagrammatic` in three captions, `Diagramatic` in the fourth) and both forms are frozen in their own rows |
+| 3 | Do **not** set page 6's content in italic | The source italicises essentially all of page 6 by accident (`1-H` finding) |
+| 4 | Close the one exercise gap in §19.1 beside `F013`, ductless-vs-duct-bearing only | Rule 2 gap-only; Rule 5 forbids an imported definition |
+| 5 | Keep Figure 19.5 adjacent to §19.4 | Q8 (`mechanism of action of FSH`) is answered only by §19.4's prose **plus** `F217`'s figure labels; separating them splits the answer |
+| 6 | Keep the body's spellings `atrial wall` / `gastro-intestinal tract` even though the exercise prints `Atrium` / `G-I Tract` | Same referent, source wording wins |
+| 7 | All 38 figure labels must appear in the running text | check 6 gates on the matrix, and the count is 38 — not the 35 this file previously claimed |
+| 8 | Figure 19.4 stays ONE combined asset | Its two panels interleave horizontally; any rectangular split cuts the kidney, labels or the connector |
