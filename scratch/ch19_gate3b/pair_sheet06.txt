@@ -1,0 +1,39 @@
+===== SOURCE SHEET 6  (printed page number detected: 6) =====
+--- 9 SOURCE SENTENCES ---
+S001. BIOLOGY 244 The adrenal medulla secretes two hormones called adrenaline or epinephrine and noradrenaline or norepinephrine
+S002. These are commonly called as catecholamines
+S003. Adrenaline and noradrenaline are rapidly secreted in response to stress of any kind and during emergency situations and are called emergency hormones or hormones of Fight or Flight
+S004. These hormones increase alertness, pupilary dilation, piloerection (raising of hairs), sweating etc. Both the hormones increase the heart beat, the strength of heart contraction and the rate of respiration
+S005. Catecholamines also stimulate the breakdown of glycogen resulting in 19.2.7 Adrenal Gland Our body has one pair of adrenal glands, one above of each kidney (Figure 19.4 a)
+S006. The gland is composed of two types of tissues
+S007. The centrally located tissue is called the adrenal medulla, and outside this lies the adrenal cortex (Figure 19.4 b)
+S008. Underproduction of hormones by the adrenal cortex alters carbohydrate metabolism causing acute weakness and fatigue leading to a disease called Addison’s disease
+S009. Figure 19.4 Diagrammatic representation of : (a) Adrenal gland above kidney (b) Section showing two parts of adrenal gland Adrenal gland Adrenal cortex Kidney Adrenal medulla (a) (b) Reprint 2026-27
+
+--- 13 INVENTORY ROWS CITING p6 ---
+[F113] (19.2.7 · heading · src 6)
+     19.2.7 Adrenal Gland
+[F114] (19.2.7 · opener · src 6)
+     Our body has one pair of adrenal glands, one above of each kidney (Figure 19.4 a).
+[F115] (19.2.7 · concept · src 6)
+     The gland is composed of two types of tissues.
+[F116] (19.2.7 · concept · src 6)
+     The centrally located tissue is called the adrenal medulla, and outside this lies the adrenal cortex (Figure 19.4 b).
+[F117] (19.2.7 · concept · src 6)
+     Underproduction of hormones by the adrenal cortex alters carbohydrate metabolism causing acute weakness and fatigue leading to a disease called Addison’s disease.
+[F118] (19.2.7 · concept · src 6)
+     The adrenal medulla secretes two hormones called adrenaline or epinephrine and noradrenaline or norepinephrine.
+[F119] (19.2.7 · definition · src 6)
+     These are commonly called as catecholamines.
+[F120] (19.2.7 · concept · src 6)
+     Adrenaline and noradrenaline are rapidly secreted in response to stress of any kind and during emergency situations and are called emergency hormones or hormones of Fight or Flight.
+[F121] (19.2.7 · concept · src 6)
+     These hormones increase alertness, pupilary dilation, piloerection (raising of hairs), sweating etc.
+[F122] (19.2.7 · concept · src 6)
+     Both the hormones increase the heart beat, the strength of heart contraction and the rate of respiration.
+[F123] (19.2.7 · process · src 6)
+     Catecholamines also stimulate the breakdown of glycogen resulting in an increased concentration of glucose in blood.
+[F137] (Fig 19.4 · caption · src 6)
+     Figure 19.4  Diagrammatic representation of : (a) Adrenal gland above kidney (b) Section showing two parts of adrenal gland
+[F216] (Fig 19.4 (a)/(b) · caption · src 6)
+     Figure labels: "Adrenal gland"; "Kidney"; "Adrenal cortex"; "Adrenal medulla"

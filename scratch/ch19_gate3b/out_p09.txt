@@ -1,0 +1,62 @@
+Cortex
+Adrenal cortex - the corticoids
+The adrenal cortex can be divided into three layers, called zona reticularis (inner layer), zona fasciculata
+(middle layer) and zona glomerulosa (outer layer). The adrenal cortex secretes many hormones, commonly
+called as corticoids.
+Corticoid class
+Definition
+Main one in our body
+Glucocorticoids
+The corticoids involved in carbohydrate metabolism
+Cortisol is the main glucocorticoid
+Mineralocorticoids
+Corticoids which regulate the balance of water and
+electrolytes in our body
+Aldosterone is the main
+mineralocorticoid in our body
+• Glucocorticoids stimulate gluconeogenesis, lipolysis and proteolysis; and inhibit cellular uptake and
+utilisation of amino acids.
+• Cortisol is also involved in maintaining the cardio-vascular system as well as the kidney functions.
+• Glucocorticoids, particularly cortisol, produce anti-inflammatory reactions and suppress the immune
+response.
+• Cortisol stimulates the RBC production.
+• Collected in one line: glucocorticoids stimulate gluconeogenesis, lipolysis, proteolysis, erythropoiesis,
+cardio-vascular system, blood pressure, and glomerular filtration rate, and inhibit inflammatory reactions
+by suppressing the immune response.
+1
+Aldosterone acts mainly at the renal tubules.
+2
+It stimulates the reabsorption of Na+ and water.
+3
+It stimulates the excretion of K+ and phosphate ions.
+4
+Thus aldosterone helps in the maintenance of electrolytes, body fluid volume, osmotic pressure and blood
+pressure.
+[NOTE] Small amounts of androgenic steroids are also secreted by the adrenal cortex, which play a role in the
+growth of axial hair, pubic hair and facial hair during puberty.
+[MEMORY AID - not in NCERT] Cortex from outside in - "salt, sugar, sex": zona glomerulosa (outer) is the salt
+layer, zona fasciculata (middle) the sugar layer, zona reticularis (inner) the sex-steroid layer. NCERT lists them
+inner-first, so read the list backwards.
+19.2.8
+Pancreas
+Pancreas is a composite gland (Figure 19.1) which acts as both exocrine and endocrine gland.
+The endocrine pancreas consists of 'Islets of Langerhans'. There are about 1 to 2 million Islets of
+Langerhans in a normal human pancreas, representing only 1 to 2 per cent of the pancreatic tissue.
+Islet cell
+Hormone
+Chemical nature
+alpha-cells
+Glucagon
+Peptide hormone; plays an important role in maintaining the normal blood
+glucose levels
+beta-cells
+Insulin
+Peptide hormone; plays a major role in the regulation of glucose homeostasis
+[NOTE] The source prints these two cell names with the Greek letters alpha and beta before the word cells; they
+are spelled out here so the page stays a plain-ASCII print file. The two main types of cells in the Islet of
+Langerhans are exactly these two.
+Glucagon - the hyperglycemic hormone
+1
+Glucagon acts mainly on the liver cells (hepatocytes).
+2
+It stimulates glycogenolysis, resulting in an increased blood sugar (hyperglycemia).

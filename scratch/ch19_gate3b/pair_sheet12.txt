@@ -1,0 +1,49 @@
+===== SOURCE SHEET 12  (printed page number detected: 12) =====
+--- 27 SOURCE SENTENCES ---
+S001. BIOLOGY 250 only one hormone, while pars nervosa (neurohypophysis) secretes two hormones
+S002. The pituitary hormones regulate the growth and development of somatic tissues and activities of peripheral endocrine glands
+S003. Pineal gland secretes melatonin, which plays a very important role in the regulation of 24-hour (diurnal) rhythms of our body (e.g., rhythms of sleep and state of being awake, body temperature, etc.)
+S004. The thyroid gland hormones play an important role in the regulation of the basal metabolic rate, development and maturation of the central neural system, erythropoiesis, metabolism of carbohydrates, proteins and fats, menstrual cycle
+S005. Another thyroid hormone, i.e., thyrocalcitonin regulates calcium levels in our blood by decreasing it
+S006. The parathyroid glands secrete parathyroid hormone (PTH) which increases the blood Ca2+ levels and plays a major role in calcium homeostasis
+S007. The thymus gland secretes thymosins which play a major role in the differentiation of T-lymphocytes, which provide cell-mediated immunity
+S008. In addition, thymosins also increase the production of antibodies to provide humoral immunity
+S009. The adrenal gland is composed of the centrally located adrenal medulla and the outer adrenal cortex
+S010. The adrenal medulla secretes epinephrine and norepinephrine
+S011. These hormones increase alertness, pupilary dilation, piloerection, sweating, heart beat, strength of heart contraction, rate of respiration, glycogenolysis, lipolysis, proteolysis
+S012. The adrenal cortex secretes glucocorticoids and mineralocorticoids
+S013. Glucocorticoids stimulate gluconeogenesis, lipolysis, proteolysis, erythropoiesis, cardio-vascular system, blood pressure, and glomerular filtration rate and inhibit inflammatory reactions by suppressing the immune response
+S014. Mineralocorticoids regulate water and electrolyte contents of the body
+S015. The endocrine pancreas secretes glucagon and insulin
+S016. Glucagon stimulates glycogenolysis and gluconeogenesis resulting in hyperglycemia
+S017. Insulin stimulates cellular glucose uptake and utilisation, and glycogenesis resulting in hypoglycemia
+S018. Insulin deficiency and/or insulin resistance result in a disease called diabetes mellitus
+S019. The testis secretes androgens, which stimulate the development, maturation and functions of the male accessory sex organs, appearance of the male secondary sex characters, spermatogenesis, male sexual behaviour, anabolic pathways and erythropoiesis
+S020. The ovary secretes estrogen and progesterone
+S021. Estrogen stimulates growth and development of female accessory sex organs and secondary sex characters
+S022. Progesterone plays a major role in the maintenance of pregnancy as well as in mammary gland development and lactation
+S023. The atrial wall of the heart produces atrial natriuretic factor which decreases the blood pressure
+S024. Kidney produces erythropoietin which stimulates erythropoiesis
+S025. The gastrointestinal tract secretes gastrin, secretin, cholecystokinin and gastric inhibitory peptide
+S026. These hormones regulate the secretion of digestive juices and help in digestion
+S027. Reprint 2026-27
+
+--- 9 INVENTORY ROWS CITING p12 ---
+[F068] (19.2.2 · concept · src 12)
+     The pituitary hormones regulate the growth and development of somatic tissues and activities of peripheral endocrine glands.
+[F092] (19.2.4 · concept · src 12)
+     The thyroid gland hormones play an important role in the regulation of the basal metabolic rate, development and maturation of the central neural system, erythropoiesis, metabolism of carbohydrates, proteins and fats, menstrual cycle.
+[F094] (19.2.4 · concept · src 12)
+     Another thyroid hormone, i.e., thyrocalcitonin regulates calcium levels in our blood by decreasing it.
+[F125] (19.2.7 · process · src 12)
+     These hormones increase alertness, pupilary dilation, piloerection, sweating, heart beat, strength of heart contraction, rate of respiration, glycogenolysis, lipolysis, proteolysis.
+[F134] (19.2.7 · process · src 12)
+     Glucocorticoids stimulate gluconeogenesis, lipolysis, proteolysis, erythropoiesis, cardio-vascular system, blood pressure, and glomerular filtration rate and inhibit inflammatory reactions by suppressing the immune response.
+[F155] (19.2.8 · concept · src 12)
+     Insulin deficiency and/or insulin resistance result in a disease called diabetes mellitus.
+[F167] (19.2.9 · concept · src 12)
+     The testis secretes androgens, which stimulate the development, maturation and functions of the male accessory sex organs, appearance of the male secondary sex characters, spermatogenesis, male sexual behaviour, anabolic pathways and erythropoiesis.
+[F179] (19.2.10 · concept · src 12)
+     Progesterone plays a major role in the maintenance of pregnancy as well as in mammary gland development and lactation.
+[F191] (19.3 · process · src 12)
+     These hormones regulate the secretion of digestive juices and help in digestion.

@@ -1,0 +1,54 @@
+===== SOURCE SHEET 1  (printed page number detected: 1) =====
+--- 12 SOURCE SENTENCES ---
+S001. 239 239 CHEMICAL COORDINATION AND INTEGRATION You have already learnt that the neural system provides a point-to-point rapid coordination among organs
+S002. The neural coordination is fast but short-lived
+S003. As the nerve fibres do not innervate all cells of the body and the cellular functions need to be continuously regulated; a special kind of coordination and integration has to be provided
+S004. This function is carried out by hormones
+S005. The neural system and the endocrine system jointly coordinate and regulate the physiological functions in the body
+S006. 19.1 ENDOCRINE GLANDS AND HORMONES Endocrine glands lack ducts and are hence, called ductless glands
+S007. Their secretions are called hormones
+S008. The classical definition of hormone as a chemical produced by endocrine glands and released into the blood and transported to a distantly located target organ has current scientific definition as follows: Hormones are non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts
+S009. The new definition covers a number of new molecules in addition to the hormones secreted by the organised endocrine glands
+S010. Invertebrates possess very simple endocrine systems with few hormones whereas a large number of chemicals act as hormones and provide coordination in the vertebrates
+S011. The human endocrine system is described here
+S012. CHEMICAL COORDINATION AND INTEGRATION CHAPTER 19 19.1 Endocrine Glands and Hormones 19.2 Human Endocrine System 19.3 Hormones of Heart, Kidney and Gastrointestinal Tract 19.4 Mechanism of Hormone Action Reprint 2026-27
+
+--- 19 INVENTORY ROWS CITING p1 ---
+[F001] (Title · heading · src 1)
+     CHEMICAL COORDINATION AND INTEGRATION
+[F002] (Title · heading · src 1)
+     CHAPTER  19
+[F003] (Opener · opener · src 1)
+     You have already learnt that the neural system provides a point-to-point rapid coordination among organs.
+[F004] (Opener · opener · src 1)
+     The neural coordination is fast but short-lived.
+[F005] (Opener · opener · src 1)
+     As the nerve fibres do not innervate all cells of the body and the cellular functions need to be continuously regulated; a special kind of coordination and integration has to be provided.
+[F006] (Opener · opener · src 1)
+     This function is carried out by hormones.
+[F007] (Opener · opener · src 1)
+     The neural system and the endocrine system jointly coordinate and regulate the physiological functions in the body.
+[F008] (Contents · contents · src 1)
+     19.1 Endocrine Glands and Hormones
+[F009] (Contents · contents · src 1)
+     19.2 Human Endocrine System
+[F010] (Contents · contents · src 1)
+     19.3 Hormones of Heart, Kidney and Gastrointestinal Tract
+[F011] (Contents · contents · src 1)
+     19.4 Mechanism of Hormone Action
+[F012] (19.1 · heading · src 1)
+     19.1 ENDOCRINE GLANDS AND HORMONES
+[F013] (19.1 · opener · src 1)
+     Endocrine glands lack ducts and are hence, called ductless glands.
+[F014] (19.1 · definition · src 1)
+     Their secretions are called hormones.
+[F015] (19.1 · concept · src 1)
+     The classical definition of hormone as a chemical produced by endocrine glands and released into the blood and transported to a distantly located target organ has current scientific definition as follows
+[F016] (19.1 · definition · src 1)
+     Hormones are non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts.
+[F017] (19.1 · concept · src 1)
+     The new definition covers a number of new molecules in addition to the hormones secreted by the organised endocrine glands.
+[F018] (19.1 · concept · src 1)
+     Invertebrates possess very simple endocrine systems with few hormones whereas a large number of chemicals act as hormones and provide coordination in the vertebrates.
+[F019] (19.1 · concept · src 1)
+     The human endocrine system is described here.

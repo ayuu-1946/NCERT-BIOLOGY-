@@ -1,0 +1,79 @@
+===== SOURCE SHEET 7  (printed page number detected: 7) =====
+--- 27 SOURCE SENTENCES ---
+S001. 245 245 CHEMICAL COORDINATION AND INTEGRATION an increased concentration of glucose in blood
+S002. In addition, they also stimulate the breakdown of lipids and proteins
+S003. The adrenal cortex can be divided into three layers, called zona reticularis (inner layer), zona fasciculata (middle layer) and zona glomerulosa (outer layer)
+S004. The adrenal cortex secretes many hormones, commonly called as corticoids
+S005. The corticoids, which are involved in carbohydrate metabolism are called glucocorticoids
+S006. In our body, cortisol is the main glucocorticoid
+S007. Corticoids, which regulate the balance of water and electrolytes in our body are called mineralocorticoids
+S008. Aldosterone is the main mineralocorticoid in our body
+S009. Glucocorticoids stimulate gluconeogenesis, lipolysis and proteolysis; and inhibit cellular uptake and utilisation of amino acids
+S010. Cortisol is also involved in maintaining the cardio-vascular system as well as the kidney functions
+S011. Glucocorticoids, particularly cortisol, produces anti- inflammatory reactions and suppresses the immune response
+S012. Cortisol stimulates the RBC production
+S013. Aldosterone acts mainly at the renal tubules and stimulates the reabsorption of Na+ and water and excretion of K+ and phosphate ions
+S014. Thus, aldosterone helps in the maintenance of electrolytes, body fluid volume, osmotic pressure and blood pressure
+S015. Small amounts of androgenic steroids are also secreted by the adrenal cortex which play a role in the growth of axial hair, pubic hair and facial hair during puberty
+S016. 19.2.8 Pancreas Pancreas is a composite gland (Figure 19.1) which acts as both exocrine and endocrine gland
+S017. The endocrine pancreas consists of ‘Islets of Langerhans’
+S018. There are about 1 to 2 million Islets of Langerhans in a normal human pancreas representing only 1 to 2 per cent of the pancreatic tissue
+S019. The two main types of cells in the Islet of Langerhans are called α-cells and β-cells
+S020. The α-cells secrete a hormone called glucagon, while the β-cells secrete insulin
+S021. Glucagon is a peptide hormone, and plays an important role in maintaining the normal blood glucose levels
+S022. Glucagon acts mainly on the liver cells (hepatocytes) and stimulates glycogenolysis resulting in an increased blood sugar (hyperglycemia)
+S023. In addition, this hormone stimulates the process of gluconeogenesis which also contributes to hyperglycemia
+S024. Glucagon reduces the cellular glucose uptake and utilisation
+S025. Thus, glucagon is a hyperglycemic hormone
+S026. Insulin is a peptide hormone, which plays a major role in the regulation of glucose homeostasis
+S027. Insulin acts mainly on hepatocytes and adipocytes (cells of adipose tissue), and enhances cellular glucose Reprint 2026-27
+
+--- 24 INVENTORY ROWS CITING p7 ---
+[F124] (19.2.7 · process · src 7)
+     In addition, they also stimulate the breakdown of lipids and proteins.
+[F126] (19.2.7 · concept · src 7)
+     The adrenal cortex can be divided into three layers, called zona reticularis (inner layer), zona fasciculata (middle layer) and zona glomerulosa (outer layer).
+[F127] (19.2.7 · definition · src 7)
+     The adrenal cortex secretes many hormones, commonly called as corticoids.
+[F128] (19.2.7 · definition · src 7)
+     The corticoids, which are involved in carbohydrate metabolism are called glucocorticoids. In our body, cortisol is the main glucocorticoid.
+[F129] (19.2.7 · definition · src 7)
+     Corticoids, which regulate the balance of water and electrolytes in our body are called mineralocorticoids. Aldosterone is the main mineralocorticoid in our body.
+[F130] (19.2.7 · process · src 7)
+     Glucocorticoids stimulate gluconeogenesis, lipolysis and proteolysis; and inhibit cellular uptake and utilisation of amino acids.
+[F131] (19.2.7 · concept · src 7)
+     Cortisol is also involved in maintaining the cardio-vascular system as well as the kidney functions.
+[F132] (19.2.7 · concept · src 7)
+     Glucocorticoids, particularly cortisol, produces anti-inflammatory reactions and suppresses the immune response.
+[F133] (19.2.7 · concept · src 7)
+     Cortisol stimulates the RBC production.
+[F135] (19.2.7 · process · src 7)
+     Aldosterone acts mainly at the renal tubules and stimulates the reabsorption of Na+ and water and excretion of K+ and phosphate ions.
+[F136] (19.2.7 · concept · src 7)
+     Thus, aldosterone helps in the maintenance of electrolytes, body fluid volume, osmotic pressure and blood pressure. Small amounts of androgenic steroids are also secreted by the adrenal cortex which play a role in the growth of axial hair, pubic hair and facial hair during puberty.
+[F138] (19.2.8 · heading · src 7)
+     19.2.8 Pancreas
+[F139] (19.2.8 · opener · src 7)
+     Pancreas is a composite gland (Figure 19.1) which acts as both exocrine and endocrine gland.
+[F140] (19.2.8 · definition · src 7)
+     The endocrine pancreas consists of ‘Islets of Langerhans’.
+[F141] (19.2.8 · number · src 7)
+     There are about 1 to 2 million Islets of Langerhans in a normal human pancreas representing only 1 to 2 per cent of the pancreatic tissue.
+[F142] (19.2.8 · concept · src 7)
+     The two main types of cells in the Islet of Langerhans are called α-cells and β-cells.
+[F143] (19.2.8 · concept · src 7)
+     The α-cells secrete a hormone called glucagon, while the β-cells secrete insulin.
+[F144] (19.2.8 · concept · src 7)
+     Glucagon is a peptide hormone, and plays an important role in maintaining the normal blood glucose levels.
+[F145] (19.2.8 · process · src 7)
+     Glucagon acts mainly on the liver cells (hepatocytes) and stimulates glycogenolysis resulting in an increased blood sugar (hyperglycemia).
+[F146] (19.2.8 · process · src 7)
+     In addition, this hormone stimulates the process of gluconeogenesis which also contributes to hyperglycemia.
+[F147] (19.2.8 · concept · src 7)
+     Glucagon reduces the cellular glucose uptake and utilisation.
+[F148] (19.2.8 · definition · src 7)
+     Thus, glucagon is a hyperglycemic hormone.
+[F149] (19.2.8 · concept · src 7)
+     Insulin is a peptide hormone, which plays a major role in the regulation of glucose homeostasis.
+[F150] (19.2.8 · process · src 7)
+     Insulin acts mainly on hepatocytes and adipocytes (cells of adipose tissue), and enhances cellular glucose uptake and utilisation.

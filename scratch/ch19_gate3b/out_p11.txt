@@ -1,0 +1,71 @@
+3
+After ovulation, the ruptured follicle is converted to a structure called corpus luteum.
+4
+The corpus luteum secretes mainly progesterone.
+Hormone
+Actions
+Estrogens
+Produce wide ranging actions such as stimulation of growth and activities of female secondary
+sex organs, development of growing ovarian follicles, appearance of female secondary sex
+characters (e.g., high pitch of voice, etc.) and mammary gland development. Estrogens also
+regulate female sexual behaviour
+Progesterone - the exercises
+call it the Progestational
+hormone
+Progesterone supports pregnancy. It also acts on the mammary glands and stimulates the
+formation of alveoli (sac-like structures which store milk) and milk secretion. Progesterone thus
+plays a major role in the maintenance of pregnancy as well as in mammary gland development
+and lactation
+19.3
+HORMONES OF HEART, KIDNEY AND GASTROINTESTINAL TRACT
+Now you know about the endocrine glands and their hormones. However, as mentioned earlier, hormones are
+also secreted by some tissues which are not endocrine glands.
+Non-gland source
+Hormone
+Action
+Heart - the atrial wall
+Atrial natriuretic factor (ANF), a
+very important peptide hormone
+Decreases blood pressure
+Kidney - the juxtaglomerular
+cells
+Erythropoietin, a peptide hormone
+Stimulates erythropoiesis (formation of RBC)
+1
+Blood pressure is increased.
+2
+ANF is secreted.
+3
+This causes dilation of the blood vessels.
+4
+This reduces the blood pressure.
+Endocrine cells present in different parts of the gastro-intestinal tract secrete four major peptide
+hormones, namely gastrin, secretin, cholecystokinin (CCK) and gastric inhibitory peptide (GIP).
+GI hormone
+Acts on
+Action
+Gastrin
+The gastric glands
+Stimulates the secretion of hydrochloric acid and pepsinogen
+Secretin
+The exocrine pancreas
+Stimulates secretion of water and bicarbonate ions
+CCK
+Both pancreas and gall
+bladder
+Stimulates the secretion of pancreatic enzymes and bile juice,
+respectively
+GIP
+The stomach
+Inhibits gastric secretion and motility
+[NOTE] Taken together, these hormones regulate the secretion of digestive juices and help in digestion - three
+stimulate a secretion and the fourth, GIP, shuts one down.
+Several other non-endocrine tissues secrete hormones called growth factors. These factors are essential for
+the normal growth of tissues and their repairing/regeneration.
+[MEMORY AID - not in NCERT] Four GI hormones, three organs, one inhibitor: Gastrin -> stomach acid,
+Secretin -> pancreatic bicarbonate, CCK -> pancreatic enzymes + bile, GIP -> the only one that inhibits. "GIP is
+the Grumpy Inhibitory Peptide."
+19.4
+MECHANISM OF HORMONE ACTION
+Hormones produce their effects on target tissues by binding to specific proteins called hormone receptors
+located in the target tissues only.

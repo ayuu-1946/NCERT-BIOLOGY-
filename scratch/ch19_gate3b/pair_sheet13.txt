@@ -1,0 +1,16 @@
+===== SOURCE SHEET 13  (printed page number detected: 13) =====
+--- 2 SOURCE SENTENCES ---
+S001. 251 251 CHEMICAL COORDINATION AND INTEGRATION EXERCISES 1. Define the following: (a) Exocrine gland (b) Endocrine gland (c) Hormone 2. Diagrammatically indicate the location of the various endocrine glands in our body
+S002. 3. List the hormones secreted by the following: (a) Hypothalamus (b) Pituitary (c) Thyroid (d) Parathyroid (e) Adrenal (f) Pancreas (g) Testis (h) Ovary (i) Thymus (j) Atrium (k) Kidney (l) G-I Tract 4. Fill in the blanks: Hormones Target gland (a) Hypothalamic hormones __________________ (b) Thyrotrophin (TSH) __________________ (c) Corticotrophin (ACTH) __________________ (d) Gonadotrophins (LH, FSH) __________________ (e) Melanotrophin (MSH) __________________ 5. Write short notes on the functions of the following hormones: (a) Parathyroid hormone (PTH) (b) Thyroid hormones (c) Thymosins (d) Androgens (e) Estrogens (f) Insulin and Glucagon 6. Give example(s) of: (a) Hyperglycemic hormone and hypoglycemic hormone (b) Hypercalcemic hormone (c) Gonadotrophic hormones (d) Progestational hormone (e) Blood pressure lowering hormone (f) Androgens and estrogens 7. Which hormonal deficiency is responsible for the following: (a) Diabetes mellitus (b) Goitre (c) Cretinism 8. Briefly mention the mechanism of action of FSH. 9. Match the following: Column I Column II (a) T4 (i) Hypothalamus (b) PTH (ii) Thyroid (c) GnRH (iii) Pituitary (d) LH (iv) Parathyroid Reprint 2026-27
+
+--- 5 INVENTORY ROWS CITING p13 ---
+[F053] (19.2.2 · definition · src 13)
+     (b) Thyrotrophin (TSH)
+[F055] (19.2.2 · definition · src 13)
+     (c) Corticotrophin (ACTH)
+[F062] (19.2.2 · definition · src 13)
+     (e) Melanotrophin (MSH)
+[F180] (19.2.10 · definition · src 13)
+     (d) Progestational hormone
+[F210] (Exercises · heading · src 13)
+     EXERCISES

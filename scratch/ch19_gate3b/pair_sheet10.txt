@@ -1,0 +1,28 @@
+===== SOURCE SHEET 10  (printed page number detected: 10) =====
+--- 6 SOURCE SENTENCES ---
+S001. BIOLOGY 248 physiological functions are regulated by hormones
+S002. On the basis of their chemical nature, hormones can be divided into groups : (i) peptide, polypeptide, protein hormones (e.g., insulin, glucagon, pituitary hormones, hypothalamic hormones, etc.) (ii) steroids (e.g., cortisol, testosterone, estradiol and progesterone) (iii) iodothyronines (thyroid hormones) (iv) amino-acid derivatives (e.g., epinephrine)
+S003. Hormones which interact with membrane-bound receptors normally do not enter the target cell, but generate second messengers (e.g., cyclic AMP, IP3, Ca++ etc) which in turn regulate cellular metabolism (Figure 19.5a)
+S004. Hormones which interact with intracellular receptors (e.g., steroid hormones, iodothyronines, etc.) mostly regulate gene expression or chromosome function by the interaction of hormone-receptor complex with the genome
+S005. Cumulative biochemical actions result in physiological and developmental effects (Figure 19.5b)
+S006. (a) Reprint 2026-27
+
+--- 9 INVENTORY ROWS CITING p10 ---
+[F200] (19.4 · concept · src 10)
+     On the basis of their chemical nature, hormones can be divided into groups :
+[F201] (19.4 · example · src 10)
+     (i) peptide, polypeptide, protein hormones (e.g., insulin, glucagon, pituitary hormones, hypothalamic hormones, etc.)
+[F202] (19.4 · example · src 10)
+     (ii) steroids (e.g., cortisol, testosterone, estradiol and progesterone)
+[F203] (19.4 · example · src 10)
+     (iii) iodothyronines (thyroid hormones)
+[F204] (19.4 · example · src 10)
+     (iv) amino-acid derivatives (e.g., epinephrine).
+[F205] (19.4 · process · src 10)
+     Hormones  which interact with membrane-bound receptors normally do not enter the target cell, but generate second messengers (e.g., cyclic AMP, IP3, Ca++ etc) which in turn regulate cellular metabolism (Figure 19.5a).
+[F206] (19.4 · process · src 10)
+     Hormones which interact with intracellular receptors (e.g., steroid hormones, iodothyronines, etc.) mostly regulate gene expression or chromosome function by the interaction of hormone-receptor complex with the genome.
+[F207] (19.4 · concept · src 10)
+     Cumulative biochemical actions result in physiological and developmental effects (Figure 19.5b).
+[F217] (Fig 19.5 (a) · caption · src 10)
+     Figure (a) labels: "Hormone (e.g., FSH)"; "Receptor"; "Ovarian cell membrane"; "Response 1"; "(Generation of second messenger)"; "(Cyclic AMP or Ca++)"; "Biochemical responses"; "Physiological responses (e.g., ovarian growth)"
