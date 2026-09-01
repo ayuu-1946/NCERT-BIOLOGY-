@@ -1,0 +1,144 @@
+
+============================================================================
+=== SOURCE PAGE 7 (2660 chars) ===
+============================================================================
+245
+245
+CHEMICAL COORDINATION AND INTEGRATION
+an increased concentration of glucose in blood. In addition, they also
+stimulate the breakdown of lipids and proteins.
+The adrenal cortex can be divided into three layers, called zona
+reticularis (inner layer), zona fasciculata (middle layer) and zona
+glomerulosa (outer layer). The adrenal cortex secretes many hormones,
+commonly called as corticoids. The corticoids, which are involved in
+carbohydrate metabolism are called glucocorticoids. In our body, cortisol
+is the main glucocorticoid. Corticoids, which regulate the balance of water
+and electrolytes in our body are called mineralocorticoids. Aldosterone is
+the main mineralocorticoid in our body.
+Glucocorticoids stimulate gluconeogenesis, lipolysis and proteolysis;
+and inhibit cellular uptake and utilisation of amino acids. Cortisol is also
+involved in maintaining the cardio-vascular system as well as the kidney
+functions. Glucocorticoids, particularly cortisol, produces anti-
+inflammatory reactions and suppresses the immune response. Cortisol
+stimulates the RBC production. Aldosterone acts mainly at the renal
+tubules and stimulates the reabsorption of Na+ and water and excretion
+of K+ and phosphate ions. Thus, aldosterone helps in the maintenance of
+electrolytes, body fluid volume, osmotic pressure and blood pressure.
+Small amounts of androgenic steroids are also secreted by the adrenal
+cortex which play a role in the growth of axial hair, pubic hair and facial
+hair during puberty.
+19.2.8
+Pancreas
+Pancreas is a composite gland (Figure 19.1) which acts as both exocrine
+and endocrine gland. The endocrine pancreas consists of ‘Islets of
+Langerhans’. There are about 1 to 2 million Islets of Langerhans in a
+normal human pancreas representing only 1 to 2 per cent of the pancreatic
+tissue. The two main types of cells in the Islet of Langerhans are called
+α-cells and β-cells. The α-cells secrete a hormone called glucagon, while
+the β-cells secrete insulin.
+Glucagon is a peptide hormone, and plays an important role in
+maintaining the normal blood glucose levels. Glucagon acts mainly on
+the liver cells (hepatocytes) and stimulates glycogenolysis resulting in an
+increased blood sugar (hyperglycemia). In addition, this hormone
+stimulates the process of gluconeogenesis which also contributes to
+hyperglycemia. Glucagon reduces the cellular glucose uptake and
+utilisation. Thus, glucagon is a hyperglycemic hormone.
+Insulin is a peptide hormone, which plays a major role in the
+regulation of glucose homeostasis. Insulin acts mainly on hepatocytes
+and adipocytes (cells of adipose tissue), and enhances cellular glucose
+Reprint 2026-27
+
+============================================================================
+=== SOURCE PAGE 8 (2333 chars) ===
+============================================================================
+BIOLOGY
+246
+uptake and utilisation. As a result, there is a rapid movement of glucose
+from blood to hepatocytes and adipocytes resulting in decreased blood
+glucose levels (hypoglycemia). Insulin also stimulates conversion of
+glucose to glycogen (glycogenesis) in the target cells. The glucose
+homeostasis in blood is thus maintained jointly by the two – insulin and
+glucagons.
+Prolonged hyperglycemia leads to a complex disorder called diabetes
+mellitus which is associated with loss of glucose through urine and
+formation of harmful compounds known as ketone bodies. Diabetic
+patients are successfully treated with insulin therapy.
+19.2.9
+Testis
+A pair of testis is present in the scrotal sac (outside abdomen) of male
+individuals (Figure 19.1). Testis performs dual functions as a primary
+sex organ as well as an endocrine gland. Testis is composed of
+seminiferous tubules and stromal or interstitial tissue. The Leydig
+cells or interstitial cells, which are present in the intertubular
+spaces produce a group of hormones called androgens mainly
+testosterone.
+Androgens regulate the development, maturation and functions of
+the male accessory sex organs like epididymis, vas deferens, seminal
+vesicles, prostate gland, urethra etc. These hormones stimulate muscular
+growth, growth of facial and axillary hair, aggressiveness, low pitch of
+voice etc. Androgens play a major stimulatory role in the process of
+spermatogenesis (formation of spermatozoa). Androgens act on the central
+neural system and influence the male sexual behaviour (libido). These
+hormones produce anabolic (synthetic) effects on protein and carbohydrate
+metabolism.
+19.2.10
+Ovary
+Females have a pair of ovaries located in the abdomen (Figure 19.1). Ovary
+is the primary female sex organ which produces one ovum during each
+menstrual cycle. In addition, ovary also produces two groups of steroid
+hormones called estrogen and progesterone. Ovary is composed of
+ovarian follicles and stromal tissues. The estrogen is synthesised and
+secreted mainly by the growing ovarian follicles. After ovulation, the
+ruptured follicle is converted to a structure called corpus luteum, which
+secretes mainly progesterone.
+Estrogens produce wide ranging actions such as stimulation of growth
+and activities of female secondary sex organs, development of growing
+Reprint 2026-27
+
+============================================================================
+=== SOURCE PAGE 9 (2527 chars) ===
+============================================================================
+247
+247
+CHEMICAL COORDINATION AND INTEGRATION
+ovarian follicles, appearance of female secondary sex characters (e.g., high
+pitch of voice, etc.) and mammary gland development. Estrogens also
+regulate female sexual behaviour.
+Progesterone supports pregnancy. Progesterone also acts on the
+mammary glands and stimulates the formation of alveoli (sac-like
+structures which store milk) and milk secretion.
+19.3
+HORMONES OF HEART, KIDNEY AND GASTROINTESTINAL TRACT
+Now you know about the endocrine glands and their hormones. However,
+as mentioned earlier, hormones are also secreted by some tissues which
+are not endocrine glands. For example, the atrial wall of our heart secretes
+a very important peptide hormone called atrial natriuretic factor (ANF),
+which decreases blood pressure. When blood pressure is increased, ANF
+is secreted which causes dilation of the blood vessels. This reduces the
+blood pressure.
+The juxtaglomerular cells of kidney produce a peptide hormone called
+erythropoietin which stimulates erythropoiesis (formation of RBC).
+Endocrine cells present in different parts of the gastro-intestinal tract
+secrete four major peptide hormones, namely gastrin, secretin,
+cholecystokinin (CCK) and gastric inhibitory peptide (GIP). Gastrin
+acts on the gastric glands and stimulates the secretion of hydrochloric
+acid and pepsinogen. Secretin acts on the exocrine pancreas and
+stimulates secretion of water and bicarbonate ions. CCK acts on both
+pancreas and gall bladder and stimulates the secretion of pancreatic
+enzymes and bile juice, respectively. GIP inhibits gastric secretion and
+motility. Several other non-endocrine tissues secrete hormones called
+growth factors. These factors are essential for the normal growth of tissues
+and their repairing/regeneration.
+19.4
+MECHANISM OF HORMONE ACTION
+Hormones produce their effects on target tissues by binding to specific
+proteins called hormone receptors located in the target tissues only.
+Hormone receptors present on the cell membrane of the target cells are
+called membrane-bound receptors and the receptors present inside the
+target cell are called intracellular receptors, mostly nuclear receptors
+(present in the nucleus). Binding of a hormone to its receptor leads to the
+formation of a hormone-receptor complex (Figure 19.5 a, b). Each
+receptor is specific to one hormone only and hence receptors are specific.
+Hormone-Receptor complex formation leads to certain biochemical
+changes in the target tissue. Target tissue metabolism and hence
+Reprint 2026-27
