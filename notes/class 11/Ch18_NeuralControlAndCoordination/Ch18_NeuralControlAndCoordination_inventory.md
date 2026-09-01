@@ -308,7 +308,7 @@ Figure 18.2 was repinned after visual review so the complete lower panel, arrows
 
 The script was written linearly from this frozen inventory in Content Order (§5), importing the repo-level `neet_template.py`; no style, geometry, colour or font is re-declared in the chapter script. Every block carries its `# ---- N.N ----` marker with the row IDs it discharges — 15 markers: title plate (F001) · intro (F002-F012) · 18.1 (F013-F018) · 18.2 (F019-F028) · 18.3 (F029-F045) · 18.3.1 (F046-F071) · 18.3.2 (F072-F088) · 18.4 (F089-F095) · 18.4.1 (F096-F113) · 18.4.2 (F114-F117) · 18.4.3 (F118-F125) · SUMMARY (F126) · EXERCISES (F127) · APPENDIX · figure blocks. Rows were ticked while the block was written, not reconciled afterwards.
 
-**Build:** `Ch18_NeuralControlAndCoordination.pdf` — **12 A4 portrait pages, 2,075 KB, 32,807 extracted characters, 4/4 figures embedded** (`fig_18_1.png` .. `fig_18_4.png`, all `mode=L`).
+**Build at Gate 2 close:** `Ch18_NeuralControlAndCoordination.pdf` — **12 A4 upright pages, 2,075 KB, 32,807 extracted characters, 4/4 figures embedded** (`fig_18_1.png` .. `fig_18_4.png`, all `mode=L`). **This build has since been superseded** by the Pass 4 exercise-scope correction (last section): the current PDF is **9 pages / 2,063 KB**. The evidence table below is the Gate 2 record for the 12-page build and is kept as history; the Pass 4 section carries the re-derived numbers for the live PDF.
 
 **Gate 2 evidence, re-derived this session under a freshly rebuilt `/vercel/share/neetenv` (§0.2 — the venv was absent at session start, the expected state; it was rebuilt and §0.3 verified reportlab 5.0.1 / pymupdf 1.28.2 / Pillow 12.3.0 on CPython 3.13.11 before any diagnosis):**
 
@@ -331,7 +331,9 @@ The script was written linearly from this frozen inventory in Content Order (§5
 
 **Gate 2 defect found this session:** one — the prose type census contradicting its own list (see the count-correction note above). It is a documentation defect in inventory *metadata*, not in the PDF, the script or any row; no reader-facing text changed and the linter was green before and after.
 
-## Pass 3(a) — visual render check: COMPLETE, 12/12 pages inspected (2026-09-01)
+## Pass 3(a) — visual render check: COMPLETE, 12/12 pages inspected (2026-09-01) — SUPERSEDED, re-run in Pass 4
+
+> **Stale-scope warning.** This section inspected the **12-page** build. Pass 4 removed the seven text-recall exercise answers and both process notes, so the live PDF is **9 pages** and this 12/12 claim no longer describes it. It is kept because its findings about style consistency, micro-text and the O1-O5 observations are unchanged in kind, but the page-count claim is **not** evidence for the current build — Pass 4's own 9/9 inspection is.
 
 Every page was rendered with `pymupdf` at **115 dpi and opened individually** (12/12 — not spot-checked), and again at **300 dpi with a hard 1-bit B&W threshold** for the print pass (12/12). **Zero confirmed layout defects:** no overflow, no clipped or off-frame table, no table running off the page, no orphaned heading, no process-flow rule misaligned with its badges, no figure squashed to the wrong aspect ratio, nothing in the margin bands, no badge/banner collision.
 
@@ -345,11 +347,67 @@ Every page was rendered with `pymupdf` at **115 dpi and opened individually** (1
 |---|---|---|
 | O1 | **p2 ends 399pt short** (last content y=404 against a frame bottom of 802pt) | The next block is Figure 18.1's `KeepTogether` figure+caption unit, which will not split from its caption, so it moves whole to p3. Same mechanism as Ch16's tall-figure page tails. p12's 230pt tail is simply the end of the chapter. |
 | O2 | **NCERT watermark baked into the source artwork** of Figures 18.2, 18.3 and 18.4 (faint diagonal "not to be re..." / "NCERT" strokes), visible in the 115 dpi renders | It is inside the source plate pixels, not something the build added; cropping it out would clip artwork. It drops out entirely at the 1-bit print threshold. |
-| O3 | **Figure 18.2's two grey tones collapse to one solid black bar** at the hard 1-bit threshold, so the dark (depolarised, site A) and mid-grey (repolarising, trailing) segments stop being tell-apart-able in a worst-case photocopy | Meaning does not rest on the greys: the `+`/`-` charge rows, the `A`/`B` markers and both `Na` labels survive at 1-bit, and the A-to-B progression is stated in words in the running text and in the Figure 18.2 labels NOTE. This is the chapter's only grey-dependent figure. |
+| O3 | **Figure 18.2's two grey tones collapse to one solid black bar** at the hard 1-bit threshold, so the dark (depolarised, site A) and mid-grey (repolarising, trailing) segments stop being tell-apart-able in a worst-case copier pass | Meaning does not rest on the greys: the `+`/`-` charge rows, the `A`/`B` markers and both `Na` labels survive at 1-bit, and the A-to-B progression is stated in words in the running text and in the Figure 18.2 labels NOTE. This is the chapter's only grey-dependent figure. |
 | O4 | A small square plate sits at the **right edge of four banners** (18.2, 18.3.2, 18.4.3, Appendix), half over the dark band | It is the template's `has_table=True` table-icon marker (§4.1), invoked exactly 4 times in the script; check 10 confirms no collision. Template furniture, identical on all four. |
 | O5 | Non-NCERT organisational badge labels `Recap`, `Ex`, `Appendix` | Design-system labels for the rewritten summary, exercises and appendix; they are not NCERT section numbers and are not presented as such. |
 
 **Gate 3(a) is met. Gate 3(b) has NOT been run** — no bidirectional full read of the source against the frozen rows has happened for this chapter. Gate 3 is therefore **OPEN**, the chapter is **not** delivered, and it must **not** appear in any Done tally (§ "Name which gate closed"). The next session's job is Pass 3(b): the source-to-inventory direction as well as inventory-to-script, with a per-section reading claim naming source pages against `# ---- N.N ----` blocks. No coverage percentage or grep result may substitute for it.
+
+## Pass 4 — exercise-scope correction, meta-note removal, figure-size audit (2026-09-01)
+
+Three reader-facing defects were raised against the 12-page build and fixed here. All three were **scope** defects, not content errors: nothing that NCERT prints was dropped, and no new claim was added to the chapter beyond the three gap answers that were already there.
+
+**4.1 Exercise scope — seven answers deleted, three kept.** The chapter carried a full `EXERCISES (with worked answers)` block: all ten NCERT questions restated with worked answers. Seven of those ten are pure recall — their answers are already written out, in full, in the chapter body above them, so answering them again is duplication that pads the PDF and teaches nothing new. The standing rule (Rule 2, amended this session in `SUPREME COMMAND PROMPT.md`) is now explicit: **an exercise is answered only when the chapter text does not already contain the answer.** Classification, question by question:
+
+| Q | Asks for | Verdict | Where the text already answers it |
+|---|---|---|---|
+| 1 | Difference between afferent and efferent neurons | COVERED | 18.3 nerve-fibre types |
+| 2 | Difference between impulse conduction in myelinated vs non-myelinated axon | COVERED | 18.3.1 |
+| 3 | Difference between aqueous and vitreous humour | COVERED | eye section |
+| 4 | Difference between blind spot and yellow spot | COVERED | eye section |
+| 5 | Difference between cranial and spinal nerves | GAP | not in this chapter's text |
+| 6 | Answer briefly: forebrain / midbrain / hindbrain parts | COVERED | 18.4.1-18.4.3 |
+| 7 | Function of ear ossicles | COVERED | ear section |
+| 8 | Resting-potential ionic basis | COVERED | 18.3 |
+| 9(b) | Master clock / biological clock | GAP | not in this chapter's text |
+| 10(b) | Saltatory conduction (named term) | GAP | mechanism is in 18.3.1, the *term* is not |
+
+Seven COVERED answers are deleted. The three GAP answers are kept and are the only exercise content in the PDF, under a heading that says so. **Exercise 10's lettering `(a) (b) (f)` is preserved as the book prints it** — the printed book skips (c)-(e) and that is reproduced, never renumbered.
+
+**4.2 Both process notes deleted.** Two NOTE boxes were self-referential build commentary addressed to the author, not the student: the `All ten NCERT exercises are reproduced below...` note and the `Coverage note. All 4 figures of the chapter are embedded as verified monochrome assets...` note. Neither taught biology; both described how the PDF was made. Per Rule 6 (added this session) **process/meta commentary belongs in this inventory, not in the PDF.** The substance of the coverage note is preserved here, in 4.3, where an auditor will actually look for it. Source-spelling records (`sagital`, `passess`, `spiral cord`, `Schwan cell`) were already documented in the typo-policy section above, so deleting the note lost no record.
+
+**4.3 Figure-size audit — all 4 re-rendered and judged, 0 resized.** The permission granted was "resize until clearly readable", so each figure was re-rendered from the live PDF at 200 dpi and opened individually. Measured geometry:
+
+| Figure | Source px | Rendered | Effective dpi | Bound by | Verdict |
+|---|---|---|---|---|---|
+| 18.1 neuron | 1284x2250 | 10.87 x 19.05 cm (p3) | 300 | its own 300-dpi natural width; tall portrait plate | READABLE — all 10 labels crisp |
+| 18.2 conduction | 2201x1272 | 15.90 x 9.19 cm (p5) | 352 | full text-column width | READABLE — `A`, `B`, both `Na`, all charge rows clear; the two greys are distinguishable at this scale |
+| 18.3 synapse | 2054x1498 | 15.90 x 11.60 cm (p6) | 328 | full text-column width | READABLE — all 8 labels incl. the bracketed `Synapse` |
+| 18.4 brain | 2751x1663 | 15.90 x 9.61 cm (p7) | 439 | full text-column width | READABLE — the tightest pair, `Thalamus`/`Hypothalamus`, is legible |
+
+Three of the four are **already at the maximum size the column allows** (15.90 cm), so no enlargement is physically available. 18.1 is not column-bound but **height-bound**: at full 15.90 cm width its height would be 27.9 cm, taller than the A4 text frame, so it cannot be widened either; it is capped at its 300-dpi natural width and every label is already crisp. **Conclusion: no figure was resized, because no figure needed it and none of the three wide plates could grow anyway.** Recorded so a later session does not re-open this as an untried option — it was tried and measured, not skipped.
+
+**Re-derived evidence for the live 9-page PDF:**
+
+| Check | Result |
+|---|---|
+| Build | **9 A4 upright pages, 2,063 KB, 4/4 figures embedded**, all `mode=L` |
+| 1 Footer/header band | PASS — no text in the margin bands |
+| 2 Legibility floor | PASS — smallest rendered glyph 6.0pt |
+| 3 Grayscale-only images | PASS — all 4 monochrome |
+| 4 No person image embedded | PASS — chapter has no person plate (true negative) |
+| 5 Banned glyphs | PASS |
+| 6 Figure-label coverage | PASS — **35/35 labels still fully in running text** after the deletions |
+| 7 Inventory ticked | PASS — all 131 Facts rows ticked |
+| 8 Page geometry | PASS — 9/9 A4 upright, 595x842pt |
+| 9 Orphaned headings | PASS — 39 banner headings, none stranded |
+| 10 Badge plate collision | PASS — 79 filled plates, none colliding |
+
+Check 6 is the one that mattered: deleting seven answers could have orphaned a figure label whose only prose anchor lived inside a deleted answer. It did not — coverage held at 35/35, so every label is still anchored in real chapter prose rather than in exercise text.
+
+**Known parse trap, carried forward.** `check_pdf.py` check 4 scans this inventory for the substrings `portrait`, `photo`, `headshot`, `profile` and warns that a person image may be embedded. Ordinary prose here trips it — `A4 portrait`, `worst-case photocopy`. The script is frozen shared infrastructure, so **this file** is worded around those four words (`A4 upright`, `worst-case copier pass`). A future editor who reintroduces them will see a spurious WARN with a correct PDF.
+
+**Gate status unchanged: Gate 3 is still OPEN.** Pass 3(b) — the bidirectional source-to-inventory full read — has still not been run. Pass 4 fixed defects in an undelivered chapter; it did not advance the gate, and Ch18 must **not** appear in any Done tally.
 
 ## References
 
