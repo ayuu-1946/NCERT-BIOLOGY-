@@ -485,7 +485,7 @@ Deliverable: `scratch/ch19_gate1/heading_sweep.py`, which walks the source's own
 Deliverable: `scratch/ch19_gate1/opener_verify.py`, which reads **openers only, headings ignored**, and asserts two properties against the source PDF rather than against this file's own prose.
 
 - **`1-O`'s own machine-derived count: 19 opener rows = 5 chapter-opener (`F003`–`F007`) + 14 section-opener, one per numbered section.** `5 + 14 = 19`, which is the `opener` count in the type census, and the 14 equals the numbered-heading count — the two censuses cross-check each other.
-- **Property A — Content Order (§5) holds.** `Src` page numbers are non-decreasing across the **189 body-prose rows**: 0 out-of-order rows. Two row classes are excluded, and the exclusion is printed by the script so it can be audited rather than believed: the **17 FOLD rows** (a numbered section carrying `Src` p11–p13 — a SUMMARY-UNIQUE fact folded into its body section, or an exercise label held verbatim beside the body fact it assumes) and the **5 caption rows**, which sit beside the prose that refers to the figure. `189 + 17 + 5 = 211` content rows.
+- **Property A ��� Content Order (§5) holds.** `Src` page numbers are non-decreasing across the **189 body-prose rows**: 0 out-of-order rows. Two row classes are excluded, and the exclusion is printed by the script so it can be audited rather than believed: the **17 FOLD rows** (a numbered section carrying `Src` p11–p13 — a SUMMARY-UNIQUE fact folded into its body section, or an exercise label held verbatim beside the body fact it assumes) and the **5 caption rows**, which sit beside the prose that refers to the figure. `189 + 17 + 5 = 211` content rows.
 - **Property B — every section's `opener` row really is that section's first sentence.** For all **14/14** numbered sections, the row typed `opener` is located earliest in the source token stream of all that section's prose rows. This is the check that catches the failure 1-S cannot: the opening sentence existing *somewhere* in the table is not enough, it must be the row marked `opener`.
 - **A matcher artefact caught and fixed inside this session, recorded because it presented as a content defect.** The first run reported §19.2.10's opener `F169` ranked **2nd**, behind `F170` — an apparent real ordering defect. It was not. The matcher tolerates bounded gaps (NCERT's marginal contents column extracts *inside* body paragraphs, and long sentences wrap across page breaks), and `F170` begins `Ovary is the primary female sex organ…` while the token `Ovary` also occurs one token earlier **in the heading `19.2.10 Ovary`** — so the earliest-start match began at the heading and skipped the entire opening sentence within its gap budget. The fix is to rank by the **tightest** match (smallest span), not the earliest start: a true occurrence has span `len(needle)` and any heading-anchored match is strictly longer. After the fix all 14 sections are `1/N`. **Verdict: the source, the table and the types were right; the measurement was wrong** — which is the direction of error worth writing down, because the tempting "fix" was to edit a correct row.
 - **No opener row was added or reclassified by this session.** The `opener` typing and the `contents` typing of `F008`–`F011` (the marginal contents column, which is not a section opener) were applied in the preceding session's transform; `1-O`'s deliverable is the machine proof that the result is right.
@@ -599,3 +599,77 @@ Gate 2 is the **mechanical** gate. It says nothing about content fidelity or pag
 - **Pass 3(b) has not been run.** No bidirectional full read (inventory → script, source → inventory) exists for this chapter, so `MISSING` / `FABRICATED` / `DRIFTED` / `UNINVENTORIED` are all **undetermined**, not zero.
 - **Pass 3(a) has not been run.** Only pages **1, 4, 8, 12 and 14** were spot-rendered while building; the other **9 of 14** pages have not been looked at by a human eye and must not be treated as layout-verified.
 - **Gate 3 is OPEN and this chapter is counted in no completion tally.** Gate 2 green is not chapter closure.
+
+*(The second bullet above is the state Pass 2 left behind; it was superseded on 2026-09-01 by the record below, which closes Pass 3(a) over all 14 pages. The first and third bullets still stand.)*
+
+## Gate 3(a) record — visual render check (2026-09-01)
+
+§6 Pass 3(a) asks for two things: **every page rendered and looked at directly**, and **cross-page style consistency** confirmed by pulling one instance of each element type from at least three different points in the chapter. Both were done on the **committed PDF** (not a fresh build), under the §0.2 venv interpreter.
+
+### Coverage — 14 of 14 pages inspected, not spot-checked
+
+Every page was rendered with `pymupdf` and opened individually (`scratch/ch19_gate3a_recheck/r01.png` … `r14.png`), plus a true-print-DPI 1-bit threshold render of each page for the B&W consistency read. **14/14 pages inspected; 0 pages inferred from a neighbour.**
+
+| Page | What is on it | Layout verdict |
+|---|---|---|
+| 1 | Title · intro · chapter-map table · §19.1 banner + duct table · §19.2 banner | clean |
+| 2 | §19.2 prose · Figure 19.1 plate + caption + label read · §19.2.1 banner | clean |
+| 3 | Hypothalamic-hormone table · 4-step flow · §19.2.2 banner + pituitary-division table | clean, short foot (see benign observations) |
+| 4 | Figure 19.2 plate + caption + label read · GH-error table · anterior-hormone table | clean |
+| 5 | Anterior table continues · posterior-hormone table · §19.2.3 · §19.2.4 | clean |
+| 6 | Figure 19.3 (a) and (b) plates, each with caption + label read · iodine/hormone table | clean |
+| 7 | Hyperthyroid table · thyroid-hormone list · §19.2.5 + PTH flow · §19.2.6 · §19.2.7 | clean |
+| 8 | Figure 19.4 combined plate + caption + label read · medulla band + catecholamine table | clean |
+| 9 | Cortex band + corticoid table · aldosterone flow · §19.2.8 + islet table · glucagon flow | clean |
+| 10 | Glucagon flow continues · insulin flow · §19.2.9 · §19.2.10 + ovary cycle flow | clean |
+| 11 | Ovary flow continues · estrogen/progesterone table · §19.3 + ANF flow + GI table · §19.4 | clean |
+| 12 | Receptor-class table · 4-step flow · chemical-nature table · Figure 19.5 (a) plate | clean |
+| 13 | Figure 19.5 (a) label read · Figure 19.5 (b) plate + caption + label read · Recap band | clean |
+| 14 | Recap list continues · Appendix band + exercise-term table · closing panel | clean, short foot (last page) |
+
+### Geometry, machine-re-derived on the same file
+
+| Measure | Result |
+|---|---|
+| Page size | **14/14** at 595×842 pt, upright |
+| Lowest text baseline anywhere | **792.9 pt** on page 10, against a bottom band starting at **802.3 pt** — no page reaches the band |
+| Highest text top anywhere | **45.1 pt**, against a top band ending at **39.7 pt** |
+| Smallest glyph | **6.0 pt** — the T3/T4 and IP3 subscripts only, set by the template, legible in the 1-bit render |
+| Figure aspect fidelity | **7/7** plates placed at their native ratio, largest deviation **0.00000** — nothing squashed or stretched |
+| Plate colour | **7/7** single-channel |
+
+### Cross-page style consistency — one signature per element type
+
+Element instances were pulled by span attributes (font · size · colour) from across the chapter, not eyeballed in isolation:
+
+| Element type | Signature | Instances / where |
+|---|---|---|
+| H1 chapter title | `Times-Bold` 20.0 pt | 1 · p1 |
+| §-level banner | `Times-Bold` 10.5 pt reversed | 7 · pp. 1, 11, 13, 14 |
+| Sub-banner + table header cells | `Times-Bold` 9.5 pt reversed | 63 · pp. 1–14 |
+| Mid-level band (medulla / cortex) | `Times-Bold` 9.0 pt reversed | 2 · pp. 8, 9 |
+| Section-number chip | `Times-Bold` 6.21 pt (§) and 6.0 pt (§.§) reversed | 6 + 12 · pp. 1–14 |
+| Step badge | `Times-Bold` 8.0 pt reversed | 33 · pp. 3, 7, 9, 10, 11, 12 |
+| NOTE lead-in | `Times-BoldItalic` 10.2 pt | 11 pages |
+| MEMORY AID lead-in | `Times-BoldItalic` 10.2 pt | 8 pages |
+| Figure caption | `Times-Italic` 9.5 pt | 7 captions across 6 pages |
+
+**Every element type resolves to exactly one signature.** Frame alignment matches too: the banner band, the NOTE panel fill and the MEMORY AID panel fill all run **48.5 → 558.8 pt**, so the three panel types share one frame edge on every page they appear. This is the expected outcome of importing styles from `neet_template.py` — the check confirms the template held rather than hunting hand-typed drift.
+
+### Defects found
+
+**Zero confirmed layout defects.** No overflow, no clipping, no table running off the frame, no orphaned heading, no flow rule misaligned with its badges, no figure at the wrong ratio. The two cross-reference wordings corrected in the previous session render as intended — the Figure 19.1 memory aid now points at **Section 19.2** and the Figure 19.3 (b) label read at **Section 19.2.5**.
+
+**Benign observations, deliberately not "fixed":**
+
+- **Page 3 ends at 546 pt** because Figure 19.2's plate travels with its caption and label read as one unit and would not fit; it opens page 4 instead. Breaking that unit to fill page 3 would separate a plate from its caption, which §4.4 forbids.
+- **Page 14 ends at 496 pt** — it is the last page.
+- **The cyclic-flow marker prints above step 1** of the ovary cycle (p10). That is `process_flow(cyclic=True)` in `neet_template.py` placing the loop-back note at the head of the flow; it is template behaviour shared by every chapter, not chapter-local drift.
+
+### What Gate 3(a) does NOT claim
+
+**Pass 3(a) is the layout half of Gate 3 only.** It looks at pages, not at meaning — a page can be typographically perfect and still carry a drifted qualifier or be missing an NCERT sentence entirely.
+
+- **Pass 3(b) has still not been run.** No bidirectional full read exists, so `MISSING` / `FABRICATED` / `DRIFTED` / `UNINVENTORIED` remain **undetermined, not zero**. Ch9 was green under `--strict` *and* visually clean while three real content defects were present.
+- **No coverage percentage or text-match score anywhere in this file may close Gate 3.** §6's hard bar stands.
+- **Gate 3 is therefore still OPEN, and Ch19 belongs in no completion tally.** The verdict for this chapter is *Gate 1 closed · Gate 2 closed · Gate 3(a) closed · Gate 3(b) outstanding*.
