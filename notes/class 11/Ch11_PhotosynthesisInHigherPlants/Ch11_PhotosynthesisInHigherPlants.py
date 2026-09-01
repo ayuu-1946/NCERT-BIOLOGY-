@@ -29,8 +29,30 @@ in the inventory Coverage section, never in the PDF - Rule 6):
     Figure 11.1 is a deliberate operator omission, NOT an extraction failure, so
     it is NOT flagged in the PDF under "Figures requiring manual attention"
     (that heading is reserved for figures that could not be extracted).
+    The general rule this instantiates is the "third state" bullet at SS4.4 Step 3
+    of the SUPREME COMMAND PROMPT: a figure is either embedded, or failed
+    extraction (flagged in the PDF), or deliberately omitted by operator decision
+    (documented in the inventory Coverage section and NOT flagged). 12 assets are
+    extracted for this chapter; 11 are embedded.
   * Figures 11.3a and 11.3b are stacked horizontally side by side, with Figure
     11.3c below them, each part carrying its own caption.
+  * Exercises: the appendix answers ONLY the 4 exercise-gap items (Ex. 1, 5, 6, 7).
+    The other 5 of the 9 exercises are INTENTIONALLY left unanswered because the
+    chapter body already teaches them - Rule 2 step 3 COVERED ("do not reproduce
+    the question and do not write an answer"), confirmed by the operator. Read as:
+    9 exercises = 4 answered by design + 5 unanswered by design + 0 overlooked.
+  * Figures 11.8, 11.9 and 11.10 render below full column width by operator order.
+    11.8 and 11.9 are a pagination fix (SS11.8 was being torn across three pages by
+    its own KeepTogether figure block); 11.10 is a plain size order. Each call site
+    carries a `# LAYOUT` comment; the numbers, the budget and the verification are
+    in figure_layout_decisions.md SS1-SS2 and SS5.
+
+Every operator deviation above is recorded at repo level, not just here:
+  - figure_layout_decisions.md            - full narrative, budget arithmetic, verification
+  - <chapter>_inventory.md "Coverage"     - the SS7/Rule 6 audit home
+  - figure_extraction_record.md           - "extracted but not embedded" for Fig 11.1
+  - SUPREME COMMAND PROMPT.md SS4.4, Rule 2 - the durable rules these instantiate
+  - CHAPTER_STATUS.md / CHAPTER_TRACKER.md  - chapter-level status entries
 
 Source: Chapter/class 11/Chapter 11 - Photosynthesis in Higher Plants.pdf
 """
@@ -925,7 +947,11 @@ story.append(figure(
     "during which carbohydrate is formed at the expense of the photochemically made ATP and "
     "NADPH; and (3) <b>regeneration</b> during which the CO<sub>2</sub> acceptor "
     "ribulose-1,5-bisphosphate is formed again so that the cycle continues.",
-    max_width_cm=10.5))
+    # LAYOUT (session order, see figure_layout_decisions.md SS2): 10.5 -> 7.6 cm.
+    # Shrinking 11.8 pulls stage (3) Regeneration back onto the same page as the
+    # rest of 11.7.2, and the vertical space it frees is what lets Figure 11.9
+    # sit on the C4 pathway page instead of being pushed onto a page of its own.
+    max_width_cm=7.6))
 story.append(gap())
 # Figure 11.8 labels (F280)
 story.append(body(
@@ -1035,7 +1061,10 @@ story.append(gap())
 story.append(figure(
     "fig_11_9.png",
     "<b>Fig. 11.9</b> - Diagrammatic representation of the Hatch and Slack Pathway.",
-    max_width_cm=10.0))
+    # LAYOUT (session order, see figure_layout_decisions.md SS2): 10.0 -> 7.4 cm,
+    # so the whole figure block fits in the tail of the C4 pathway page (11.8)
+    # and the content above the 11.9 Photorespiration heading stays contiguous.
+    max_width_cm=7.4))
 story.append(gap())
 # Figure 11.9 labels (F281)
 story.append(body(
@@ -1257,7 +1286,11 @@ story.append(gap())
 story.append(figure(
     "fig_11_10.png",
     "<b>Fig. 11.10</b> - Graph of light intensity on the rate of photosynthesis.",
-    max_width_cm=8.0))
+    # LAYOUT (session order, see figure_layout_decisions.md SS2): 8.0 -> 6.2 cm.
+    # This one is a size order, not a pagination fix: the graph carries only two
+    # axis names and the points A-E, so it stays legible at 6.2 cm while giving
+    # 11.10.1 more text on its opening page.
+    max_width_cm=6.2))
 story.append(gap())
 # Figure 11.10 labels (F282)
 story.append(body(

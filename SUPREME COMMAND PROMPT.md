@@ -204,6 +204,8 @@ Goal is unchanged: someone who reads only the rewrite, never the original book, 
 
 **Inventory obligation.** The Pass 1 inventory carries the *full* classification — every exercise numbered, marked COVERED or GAP, and for COVERED, the section that answers it. That table is the audit trail proving nothing was dropped by ignorance rather than by rule. It lives in the inventory `.md`, never in the PDF (Rule 6).
 
+**State the arithmetic, not just the table.** An unanswered exercise is the single easiest thing in a finished chapter to mistake for an oversight — a reviewer counts 9 questions, finds 4 answers, and reads 5 missing. So alongside the classification table, write the closed sum in words: **"N exercises, G answered by design (GAP), C unanswered by design (COVERED), 0 overlooked."** COVERED questions are unanswered *because* the body answers them; that is Rule 2 succeeding, and it should be legible as a decision rather than reconstructible only by whoever wrote it. Ch11 (Class 11) is the worked example: **9 exercises, 4 answered, 5 unanswered by design, 0 overlooked** — see its inventory's *Exercise-gap terms* table and `figure_layout_decisions.md` §4.
+
 ### Rule 3 — What's actually allowed to cut
 "Garbage" means exactly three things: a sentence that just restates a fact already given, purely rhetorical scene-setting with no fact in it ("Have you ever wondered…"), and transitional filler between paragraphs. Nothing else qualifies. Merge redundant sentences into one — but every fact they carried has to survive the merge. Never cut something because it feels minor or "unlikely to be asked."
 
@@ -250,7 +252,7 @@ Cut: the "you might have noticed" framing. Kept: emergence order, both germinati
 
 ## 3. Structure, Formatting & Style Rules
 
-- Clear headers/subheaders. Reorder or regroup content from the original — e.g. pulling a comparison scattered across two paragraphs into one place — as long as nothing is lost.
+- Clear headers/subheaders. Reorder or regroup content from the original — e.g. pulling a comparison scattered across two paragraphs into one place �� as long as nothing is lost.
 - **Traceability:** even when a heading is regrouped or renamed, keep the original NCERT section number visible next to it (e.g. "14.1.2"). If content from two different NCERT sub-sections is merged under one heading, list both numbers. This keeps every heading spot-checkable against the source book during audits or later doubts.
 - **Bold** key terms on first use.
 - Convert anything comparative or enumerable into a table.
@@ -472,10 +474,21 @@ img.save(output_path)
 Open every converted image and confirm: (a) it is the correct figure for its caption, (b) no labels or leader lines are cropped, (c) it is legible at print size, (d) it isn't an accidental grab of a neighboring figure/table/text, (e) it is genuinely monochrome, and (f) any distinction the original carried by color is still visible. Mark `Mono: yes` / `Verified: yes` only after this check.
 - If two elements remain indistinguishable after conversion, that is a **real information loss**: state the distinction explicitly in the caption and surrounding text/table, and record it in the inventory's Coverage section.
 - A figure that cannot be extracted or converted cleanly goes in the inventory's Coverage section under **"Figures requiring manual attention"**, and is flagged in the PDF where it would have appeared — never embed a bad crop silently, never skip a figure silently.
+- **Operator-omitted figures — the third state.** A figure has three possible fates, not two: *embedded*, *failed extraction* (the bullet above), or **deliberately omitted by operator decision** — extraction succeeded, the asset is good, and the operator judges the plate not worth printing. Keep the three apart, because they are documented in opposite ways:
+  - Such a figure is **NOT** flagged in the PDF under "Figures requiring manual attention". That heading promises a reader *"a diagram you should have is missing"*; using it for a plate dropped on purpose is a false alarm, and Rule 6 keeps the PDF from explaining itself.
+  - It **stays** in the figure manifest with `Mono`/`Verified` as earned, and its asset stays on disk — the extraction is valid work and the omission is a reversible placement decision, not a retraction. Annotate its manifest row **"extracted, deliberately NOT embedded"** so the manifest never reads as a promise the PDF broke.
+  - The omission is only permissible once **every fact in the figure's caption and labels is carried in prose** — the §4.4/§5 rule that the text must stand alone if a figure prints illegibly, applied to a figure that is simply absent. State the row IDs that carry them. Bare panel markers (`(a)`, `(b)`, ...) carry no fact and need no home.
+  - Record it in the inventory's Coverage section **and** in a chapter-level decisions file, and name it in the chapter script's docstring. An unexplained gap between manifest and PDF is indistinguishable from a bug, and the next auditor will "fix" it.
+  - Worked example: Ch11 (Class 11) Figure 11.1, Priestley's experiment — see `notes/class 11/Ch11_PhotosynthesisInHigherPlants/figure_layout_decisions.md` §3.
 
 **Step 4 — Embed:**
 - Use `neet_template.figure(asset_path, caption_text, max_width_cm=...)`, which returns the image and its caption `Paragraph` wrapped in `KeepTogether` inside a thin 0.5pt `GRID_LINE` border box, so a figure never separates from its caption across a page break and reads as part of the design system.
 - Scale to fit the text column width preserving aspect ratio; never upscale beyond 300 dpi effective resolution.
+- **`max_width_cm` is the pagination lever, and it acts on its neighbours.** Because `figure()` returns a `KeepTogether`, a figure block is indivisible: if it is taller than the space left on the page, ReportLab moves the *whole* block to the next page and leaves the remainder blank. A figure stranded alone on a page, or a section torn across three pages, is almost always this — not a spacing bug — and the fix is the render width, not a `Spacer`.
+  - Budget it in points against the measured free tail, and remember the block costs more than the image: **image height + ~10 pt frame padding + caption height + gap**.
+  - Shrinking an *earlier* figure pulls text up and adds that many points to a *later* page's tail, so a stubborn break is often cheaper to fix one figure upstream than by cutting the offending figure past legibility. Ch11's page-12 break needed Fig 11.9 at ≈4.7 cm to fix alone, but was solved by trimming 11.8 and 11.9 together.
+  - Downward resizes are always safe against the no-upscale cap and *raise* effective dpi, but they are bounded by §4.4 Step 3(c) legibility and the §5 photocopier rule. A dense many-label diagram has far less headroom than a two-label graph — cut the cheap figure first.
+  - Record every deviation from the default width in the chapter's decisions file with before/after numbers and the reason, and comment the call site. A figure narrower than the column otherwise reads as an oversight.
 - Caption format: **"Fig. 14.2 — <caption>"** keeping the NCERT figure number verbatim, caption text rewritten-but-factually-exact (Rules 1 & 4 apply; a caption keeps its own inventory rows).
 - If the figure's meaning depended on color, the caption carries one added sentence stating that distinction in words.
 - Placement is **inline at the exact point where the figure's topic is covered** — never grouped at the end.

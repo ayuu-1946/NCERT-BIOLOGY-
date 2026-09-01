@@ -41,6 +41,16 @@ The PDF-derived assets are rendered at 300 dpi from hand-pinned PDF rectangles, 
 
 The chapter therefore contains **12 extracted assets**: Figures 11.1, 11.2, 11.3a–c, and Figures 11.4–11.10. Page 22 refers back to Figure 11.10 and contains no new figure plate.
 
+### Extracted but not embedded — Figure 11.1
+
+**12 assets are extracted; 11 are embedded in the delivered PDF.** `fig_11_1.png` (Priestley's experiment) is a **deliberate operator omission**, made after review on the judgement that the plate carries no NEET teaching value.
+
+This is a *placement* decision, not an extraction outcome. Figure 11.1's crop was pinned, re-pinned against the 440 dpi grid (its original bottom at y435 had sheared the `(c)`/`(d)` markers; the final rect `(61,103,272,456)` clears artwork reaching y442.9), rendered, converted to mode `L`, audited and verified — the asset above is good and stays on disk, and this record's crop register and reproducibility instructions still cover it. Re-embedding is one `figure("fig_11_1.png", ...)` call in the chapter script.
+
+Because extraction succeeded, the figure is **not** listed under "Figures requiring manual attention" and is not flagged in the PDF; that heading is reserved for figures a reader is genuinely missing. No factual coverage is lost — every fact of the plate is carried in prose at `F024`–`F029` in §11.2. Full reasoning: `figure_layout_decisions.md` §3; the general rule it instantiates is the third-state bullet at §4.4 Step 3 of `SUPREME COMMAND PROMPT.md`.
+
+Note that the delivered PDF also renders Figures 11.8, 11.9 and 11.10 below full column width by operator order. That is a draw-time width change only and does not affect any asset in this record — the pixels, crop rectangles and dpi above are unchanged. Ledger: `figure_layout_decisions.md` §2.
+
 ## Validation record
 
 The mechanical audit in `figure_audit.txt` ran three complementary checks. Text-layer grazing was clean for all crops except the legitimate in-figure `LHC` label in Figure 11.5. Drawing-extent checks showed only small edge intersections for complex vector strokes at Figure 11.1, Figure 11.2, and Figure 11.3c; visual inspection confirmed that no visible panel, label, arrow, or terminal mark was clipped. Border-band ink reports are conservative because the source pages contain diagonal watermark artwork and vector strokes adjacent to figure edges; they were reviewed against the final contact sheet rather than treated as standalone failure signals. The image-mode check passed for the 11 PDF-derived assets, which are mode `L` (true grayscale). Figure 11.3b intentionally preserves the user-supplied RGB reference appearance at 848 × 532. The focused reference crop was verified by exact dimensions and visual comparison with the supplied image.
