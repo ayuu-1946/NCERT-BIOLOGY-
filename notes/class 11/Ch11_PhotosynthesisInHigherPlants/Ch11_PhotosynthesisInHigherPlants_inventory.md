@@ -5,28 +5,29 @@
 **Chapter:** Class 11, Chapter 11 — Photosynthesis in Higher Plants
 **Source PDF:** `Chapter/class 11/Chapter 11 - Photosynthesis in Higher Plants.pdf` (22 PDF pages; textbook pp. 133–152; page box 576 x 784.8)
 **Protocol:** normal 3-pass gated workflow (`SUPREME COMMAND PROMPT.md` v6).
-**Pass 1 status:** COMPLETE — **GATE 1 CLOSED (2026-09-01).** Table below is **FROZEN**: rows are never renumbered, moved, deleted, or re-typed. Any later addition is appended with an `a`-suffixed ID and logged as a Pass-3(b) gap, never back-dated into the freeze.
+**Pass 1 status:** COMPLETE — all five sessions run (`1-S`, `1-H`, `1-O`, `1-F`, `1-Z`); **GATE 1 CLOSED 2026-09-01 at the end of session `1-Z`**, with every header count re-derived by machine from this finished table (never hand-tallied) and the label matrix validated through `check_pdf.py._extract_labels`. See the *Gate 1 closure record* at the foot of this file. Table below is **FROZEN**: rows are never renumbered, moved, deleted, or re-typed. Any later addition is appended with an `a`-suffixed ID and logged as a Pass-3(b) gap, never back-dated into the freeze.
 
 **Predecessor annulled.** The file previously occupying this path was *not* a SUPREME-format frozen inventory — it was figure-extraction documentation (environment record, crop register, reproducibility notes). It is **quashed** for inventory purposes and preserved for its crop-rect provenance as `figure_extraction_record.md`. Nothing in it is treated as a Gate 1 artifact; this file is written from a fresh five-session Pass 1.
 
-**Row total:** 158 rows, `F001`–`F158`, contiguous, 0 gaps, 0 duplicate IDs, monotonic, 0 ticked (Pass 1 emits no `[x]`).
+**Row total:** 282 rows, `F001`–`F282`, contiguous, 0 gaps, 0 duplicate IDs, monotonic, 0 ticked (Pass 1 emits no `[x]`).
 
-**Block composition (session → rows):**
-- `1-S` Facts sweep → 106 rows
-- `1-H` heading sweep → 21 rows
-- `1-O` opener sweep → 15 rows
-- `1-Z` summary-unique fold → 4 rows
-- `1-F` figure-label matrix → 12 rows
-- Total = 106 + 21 + 15 + 4 + 12 = **158**, equal to the highest ID.
+**Block composition (session → ID range → rows):**
+- `1-S` Facts sweep → `F001`–`F218` → 218 rows
+- `1-H` heading sweep → `F219`–`F246` → 28 rows
+- `1-O` opener sweep → `F247`–`F266` → 20 rows
+- `1-Z` summary-unique fold → `F267`–`F270` → 4 rows
+- `1-F` figure-label matrix → `F271`–`F282` → 12 rows
+- Total = 218 + 28 + 20 + 4 + 12 = **282**, equal to the highest ID.
 
-**Type census of the contiguous `F001`–`F158` table (normalized lowercase; machine re-derived by re-parsing this finished table; sums to 158):**
-`concept` 45 · `heading` 21 · `definition` 20 · `opener` 15 · `number` 18 · `process` 14 · `caption` 12 · `example` 7 · `equation` 6 = **158**.
+**Type census of the contiguous `F001`–`F282` table (normalized lowercase; machine re-derived by re-parsing this finished table in session 1-Z; sums to 282):**
+`concept` 128 · `definition` 31 · `number` 28 · `heading` 28 · `process` 26 · `opener` 20 · `caption` 12 · `equation` 5 · `example` 4 = **282**. Exactly 9 `Type` values exist in the table and all are lowercase — no `Caption`/`caption` style split.
 
-**Heading census:** 21 = 11 numbered (§11.1, §11.2, §11.3, §11.4, §11.5, §11.6, §11.6.1, §11.6.2, §11.6.3, §11.7, §11.7.1) + the IDs listed in the Headings section below. The full derivation is written there so the total is derivable from the list, never asserted beside it.
-**Opener census:** 15 opener rows — one opening sentence per section/sub-section that begins with running prose. See the Openers section for the ID list.
-**Summary classification:** 22 summary sentences → 18 BODY-PRESENT + 4 SUMMARY-UNIQUE (all 4 folded into body rows `F155`–`F158`).
+**Heading census:** 19 numbered + the 9 unnumbered IDs listed in the *Heading census* section below = **28**, equal to the machine-derived `heading` row count. The derivation is written there so the total is derivable from its own list.
+**Opener census:** **20** opener rows, `F247`–`F266` — one opening sentence per section/sub-section that begins with running prose. The ID list is in the *Opener census* section below.
+**Summary classification:** **20** summary sentences (the SUMMARY block, PDF p. 21) → **15 BODY-PRESENT + 5 SUMMARY-UNIQUE**, all 5 folded into the 4 body rows `F267`–`F270` (`F270` carries two folds). See the correction note in that section.
 **Exercise-gap scan:** 9 exercises → 4 genuine gaps, each with a planned Pass-2 home (see the exercise-gap table).
-**Figure census:** 12 assets (Figures 11.1, 11.2, 11.3a, 11.3b, 11.3c, 11.4, 11.5, 11.6, 11.7, 11.8, 11.9, 11.10), each with a `Figure labels:` row. Page 22 refers back to Figure 11.10 and carries no new plate.
+**Figure census:** 12 assets (Figures 11.1, 11.2, 11.3a, 11.3b, 11.3c, 11.4, 11.5, 11.6, 11.7, 11.8, 11.9, 11.10), each one label row `F271`–`F282`. Page 22 refers back to Figure 11.10 and carries no new plate.
+**Label census (machine-derived by `check_pdf.py._extract_labels`):** **12 figure rows / 116 labels**, per-figure 4 + 8 + 5 + 2 + 9 + 4 + 12 + 7 + 26 + 16 + 16 + 7 = 116; **no doubling, no phantom `Fig #` row, no duplicate (figure, label) pair.**
 
 ---
 
@@ -307,13 +308,29 @@ Legend — the `Type` column uses one of the 9 normalized lowercase census value
 | F269 | 11.summary | concept | SUMMARY-UNIQUE fold: in the light reaction the light energy is absorbed by the pigments present in the antenna and funnelled to special chlorophyll a molecules called reaction centre chlorophylls. Folded into 11.5 body coverage. | [ ] |
 | F270 | 11.summary | concept | SUMMARY-UNIQUE fold: photosynthesis has two stages, the light reaction and the carbon fixing reactions, and RuBisCO also catalyses a wasteful oxygenation reaction in C3 plants: photorespiration. Folded into 11.3/11.9 body coverage. | [ ] |
 
+## Heading census
+
+Session **1-H**, re-derived by machine in session 1-Z. Written as bullet lists, never as a second pipe-delimited table, so no census line can be re-parsed as a Facts row or a label row.
+
+- **19 numbered** heading rows, `F221`–`F239`, one per numbered section/sub-section: 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.6.1, 11.6.2, 11.6.3, 11.7, 11.7.1, 11.7.2, 11.8, 11.9, 11.10, 11.10.1, 11.10.2, 11.10.3, 11.10.4 — 19 section numbers, 19 IDs.
+- **9 unnumbered** heading rows — the IDs are: `F219` (chapter title), `F220` (Unit 4 banner), `F240` (Table 11.1 caption-heading), `F241`, `F242`, `F243` (the three unnumbered Calvin-cycle stage sub-headings "1. Carboxylation", "2. Reduction", "3. Regeneration" inside §11.7.2), `F244` (SUMMARY), `F245` (EXERCISES), `F246` (the "Melvin Calvin" scientist-profile heading).
+- 19 + 9 = **28**, equal to the machine-derived `heading` type count in the freeze header.
+
+## Opener census
+
+Session **1-O**, re-derived by machine in session 1-Z. **20** opener rows, contiguous `F247`–`F266`:
+
+- `F247` — chapter introduction (the un-numbered opening block on PDF p. 3).
+- `F248`–`F266` — one per numbered section/sub-section, in book order: 11.1 `F248`, 11.2 `F249`, 11.3 `F250`, 11.4 `F251`, 11.5 `F252`, 11.6 `F253`, 11.6.1 `F254`, 11.6.2 `F255`, 11.6.3 `F256`, 11.7 `F257`, 11.7.1 `F258`, 11.7.2 `F259`, 11.8 `F260`, 11.9 `F261`, 11.10 `F262`, 11.10.1 `F263`, 11.10.2 `F264`, 11.10.3 `F265`, 11.10.4 `F266` — 19 IDs.
+- 1 + 19 = **20**, equal to the machine-derived `opener` type count. Every one of the 19 numbered headings has an opener row, matching the 19 numbered heading rows above; no structural observation *about* an opener is counted as a row.
+
 ## Figure-label matrix
 
 Session **1-F**. One row per figure (per figure-part for the three panels of Figure 11.3). **Every label below was read off the rendered PNG by opening it**, never from `page.get_text()` — the entirety of page 7's three panels and the whole of Figures 11.7 and 11.9 carry **zero** text-layer words (audit section A reports `words_in_rect=0` for `fig_11_3a`, `fig_11_3b`, `fig_11_3c`, `fig_11_7` and `fig_11_9`), so a text-extraction harvest would have returned an empty label set for five of the twelve figures and passed a gate that verified nothing.
 
 This matrix exists in exactly **one** place in this file. It is never restated as a second pipe-delimited table; the prose census below lists row IDs only.
 
-| ID | Fig # | Type | Figure labels (one row per figure; every in-figure label listed) | Tick |
+| ID | Fig # | Type | In-figure labels, one row per figure part; every visible label listed | Tick |
 |---|---|---|---|---|
 | F271 | Fig 11.1 | caption | Figure labels: "(a)"; "(b)"; "(c)"; "(d)" | [ ] |
 | F272 | Fig 11.2 | caption | Figure labels: "Outer membrane"; "Inner membrane"; "Stromal lamella"; "Grana"; "Stroma"; "Ribosomes"; "Starch granule"; "Lipid droplet" | [ ] |
@@ -376,7 +393,9 @@ Audit result after repin (`figure_audit.txt`): section B (drawings-extent overfl
 
 ## Summary classification
 
-22 summary sentences. 18 BODY-PRESENT; 4 SUMMARY-UNIQUE, all folded into body rows `F267`-`F270` during session 1-Z (nothing left unfolded).
+Session **1-Z**. The SUMMARY block (PDF p. 21, textbook p. 151) contains **20 sentences**: **15 BODY-PRESENT** + **5 SUMMARY-UNIQUE**, and all 5 unique sentences are folded into the 4 body rows `F267`-`F270` (`F270` carries two folds — the explicit two-stage naming and the "wasteful" qualifier). Nothing is left unfolded.
+
+**Correction made in session 1-Z (recorded, not back-dated).** The draft of this table carried **22** rows and claimed "18 BODY-PRESENT + 4 SUMMARY-UNIQUE". Two of those rows — *"Photosynthesis is the primary source of all food on earth."* and *"Photosynthesis is responsible for the release of oxygen into the atmosphere."* — are **not summary sentences at all**: both sit in the chapter introduction on PDF **page 3** ("Photosynthesis is important due to two reasons: it is the primary source of all food on earth. It is also responsible for the release of oxygen into the atmosphere by green plants."), verified by extracting the SUMMARY block between the `SUMMARY` and `EXERCISES` headings and confirming neither sentence appears inside it. They are removed from this table because a summary-classification row must correspond to a real summary sentence; the facts themselves are unaffected and remain carried by Facts row `F016`. The 4-vs-5 SUMMARY-UNIQUE discrepancy was a hand tally of the same table: the `SUMMARY-UNIQUE` label appears on 5 rows (sentences 2, 5, 6, 7 and 17), mapping onto only 4 fold rows, which is why the draft's count of the *folds* was mistaken for a count of the *sentences*. Both corrections are propagated to every restatement (freeze header, Gate 1 checklist, `CHAPTER_STATUS.md`, `CHAPTER_TRACKER.md`) in the same edit, per §6 step 10.
 
 | Summary sentence | Classification | Folded into |
 |---|---|---|
@@ -400,8 +419,6 @@ Audit result after repin (`figure_audit.txt`): section B (drawings-extent overfl
 | Some tropical plants show a special type of photosynthesis called C4 pathway. | BODY-PRESENT | F149 |
 | In these plants the first product of CO2 fixation that takes place in the mesophyll, is a 4-carbon compound. | BODY-PRESENT | F161 |
 | In the bundle sheath cells the Calvin pathway is carried out for the synthesis of carbohydrates. | BODY-PRESENT | F165, F168 |
-| Photosynthesis is the primary source of all food on earth. | BODY-PRESENT | F016 |
-| Photosynthesis is responsible for the release of oxygen into the atmosphere. | BODY-PRESENT | F016 |
 
 ## Exercise-gap terms
 
@@ -413,3 +430,41 @@ Audit result after repin (`figure_audit.txt`): section B (drawings-extent overfl
 | Ex. 5 — that chlorophyll a is indispensable, so a plant with only chlorophyll b could not run photosynthesis (the body states chlorophyll a is the chief pigment and b is accessory, but never that b alone is insufficient). | Appendix, tied to the §11.4 accessory-pigment block (`F070`, `F073`, `F074`). |
 | Ex. 6 — the relative stability of the pigments, i.e. that chlorophyll degrades in darkness faster than the carotenoids, leaving a yellow/pale-green leaf. | Appendix; the body gives photo-oxidation protection (`F074`) but never the dark-degradation ordering. |
 | Ex. 7 — that shade leaves are darker green than sun leaves because they build more chlorophyll per unit area (the body only says light is rarely limiting except in shade, `F202`). | Appendix, tied to the §11.10.1 light block. |
+
+Each gap was re-confirmed against the extracted source in session 1-Z: the body never contains the negative external C3/C4 claim (`externally` occurs only in Exercise 1), never states that chlorophyll b alone is insufficient (§11.4 only names b as an accessory pigment), never gives the dark-degradation stability ordering (`stable` occurs in §11.8/§11.7.2 in an unrelated sense), and never explains why shade leaves are darker green (§11.10.1 stops at "light is rarely a limiting factor in nature ... except for plants in shade"). Exercises 2, 3, 4, 8 and 9 are fully answerable from body rows (Kranz anatomy, C4 productivity, RuBisCO carboxylation bias, Figure 11.10 regions, and the three comparisons) and therefore generate no appendix entry.
+
+---
+
+## Gate 1 closure record (session 1-Z, 2026-09-01)
+
+**Environment.** `/vercel/share/neetenv` was absent at session start (expected — it does not survive a session boundary) and was rebuilt per §0.2 before anything was diagnosed: `uv venv /vercel/share/neetenv --python 3.13` + `uv pip install --python /vercel/share/neetenv/bin/python reportlab pdfplumber pymupdf Pillow`. Verified `3.13.11 @ /vercel/share/neetenv` · reportlab 5.0.1 · pdfplumber OK · pymupdf 1.28.2 · Pillow 12.3.0. Every command below ran through that interpreter.
+
+**Session 1-Z deliverables (steps 7, 8, 9, 10).**
+1. **Exercise-gap scan (step 7).** 9 exercises parsed from PDF p. 21–22; 4 genuine gaps, each with a named Pass-2 home; the 5 non-gap exercises are individually accounted for above.
+2. **Summary scan and fold (step 8).** The SUMMARY block was cut out of the source by locating the `SUMMARY`→`EXERCISES` span and classified sentence by sentence: **20 sentences = 15 BODY-PRESENT + 5 SUMMARY-UNIQUE**, the 5 unique sentences folded into `F267`–`F270`. Two rows the draft carried were shown to be page-3 introduction sentences, not summary sentences, and were removed with the reasoning recorded in the *Summary classification* section.
+3. **Freeze (step 9).** Rows numbered, nothing renumbered, moved or re-typed; 0 rows ticked (Pass 2 does the ticking, in this file).
+4. **Machine-derived counts (step 10).** Every count in this file was produced by re-parsing the finished table, and every restatement was corrected in the same edit.
+
+**What the re-parse found and fixed.** The pre-1-Z header described a **158-row** table (`F001`–`F158`) with 106/21/15/4/12 block sizes, a 9-value type census summing to 158, 21 heading rows, 15 opener rows, 22 summary sentences, and folds at `F155`–`F158`. The table it sits on actually holds **282 rows** (`F001`–`F282`). Every one of those numbers was wrong — the header had been written against an earlier draft and never re-derived — so it was rewritten wholesale from the parse rather than patched. This is precisely the failure §6 step 10 exists to stop, and it is recorded rather than quietly overwritten.
+
+**Gate 1 criteria — evidence.**
+
+| Criterion (§6 Gate 1) | Status | Evidence |
+|---|---|---|
+| Every fact has a Facts row; every in-figure label has a matrix row, harvested by opening each rendered asset | ✅ | 218 `1-S` fact rows + the 1-H/1-O/1-Z blocks; 12 label rows carrying 116 labels. Five of twelve figures (`fig_11_3a/b/c`, `fig_11_7`, `fig_11_9`) return `words_in_rect=0` in `figure_audit.txt`, so the non-empty label sets for them prove the harvest was visual, not text-layer |
+| Inventory validated by running `check_pdf.py._extract_labels` — expected figure count, no doubling, no phantom rows | ✅ | Imported `_extract_labels` from the repo-root linter and ran it against this file: **12 figure rows / 116 labels**, per-figure 4+8+5+2+9+4+12+7+26+16+16+7, **0 duplicate (figure, label) pairs, 0 phantom rows**. It first returned **118 labels and a phantom `Fig #` figure**: the matrix's own column header read "Figure labels (one row per figure; every in-figure label listed)", which the parser matched as a label row and split on `;` into two junk labels. The column header is now worded "In-figure labels, …" (the phrasing every already-closed chapter uses) — a formatting fix in the inventory, exactly where §6 requires it, and **no label, caption or asset was touched** |
+| Every header count matches a re-parse; contiguous `F001..FNNN`; normalized `Type` column | ✅ | 282 rows, `F001`–`F282`, **0 gaps, 0 duplicates, monotonic**; type census `concept` 128 · `definition` 31 · `number` 28 · `heading` 28 · `process` 26 · `opener` 20 · `caption` 12 · `equation` 5 · `example` 4 = 282; exactly 9 `Type` values, all lowercase |
+| Every heading has a row including unnumbered sub-headings; every section opener has a row | ✅ | Heading census 19 numbered + 9 unnumbered = 28 (list-derived, §*Heading census*); opener census 1 intro + 19 numbered = 20 (§*Opener census*). Walked as their own lists; the three unnumbered Calvin-stage sub-headings and the Melvin Calvin profile heading are present, and each of the 19 numbered headings has exactly one opener |
+| All five Pass 1 sessions ran and each reported its own machine-derived row count | ✅ | `1-S` 218 (`F001`–`F218`) · `1-H` 28 (`F219`–`F246`) · `1-O` 20 (`F247`–`F266`) · `1-F` 12 (`F271`–`F282`) + manifest + repin record · `1-Z` 4 (`F267`–`F270`) + this record. Sum 282 = highest ID |
+| Every figure marked `Mono: yes` and `Verified: yes` | ✅ | 12/12 in the figure manifest; `fig_11_3b` re-rendered as a mode-`L` clip after the inherited RGB reference image was rejected; six rects re-pinned against the 440 dpi / 5-pt grid |
+| Every exercise-gap term has a planned home; every SUMMARY-UNIQUE fact folded into a body row | ✅ | 4/4 gaps homed in the appendix with cross-references; 5/5 SUMMARY-UNIQUE sentences folded into `F267`–`F270` |
+| Inventory file saved in the chapter folder | ✅ | `notes/class 11/Ch11_PhotosynthesisInHigherPlants/Ch11_PhotosynthesisInHigherPlants_inventory.md` |
+
+**GATE 1: GREEN.** Pass 2 may begin — write `Ch11_PhotosynthesisInHigherPlants.py` linearly from this frozen table in Content Order (§5), importing `neet_template.py`, ticking rows in this file as each `# ---- N.N ----` block is written, then loop render → `check_pdf.py` until exit 0.
+
+**Carry-over for Pass 2.**
+- The 4 exercise-gap items are the *only* appendix content (Rule 2); no coverage or meta note (Rule 6).
+- Figure 11.3a/11.3c captions must state the pigment identities and the rate-vs-absorption pairing in words, since the original carried them by colour (§4.4 Step 3(f)).
+- The Melvin Calvin profile is text-only, from `F004`–`F010` and `F246`; the p. 2 headshot is never embedded.
+- Table 11.1 is an NCERT *fill-in* table (`F240`): reproduce it as a completed comparison table from the C3/C4 body rows, keeping the NCERT caption number.
+- Write `CO2`, `H+`, `NADP+`, `O2`, `HCO3-`, `C3`/`C4` with `<sub>`/`<super>` tags, never Unicode (check 5).
