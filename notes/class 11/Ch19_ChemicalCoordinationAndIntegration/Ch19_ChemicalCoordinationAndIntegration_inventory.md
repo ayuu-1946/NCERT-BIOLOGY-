@@ -551,7 +551,7 @@ No script and no PDF exist for this chapter yet. Every `x` in the `Ticked` colum
 
 - **18 block markers**, in source order: title block · `19.intro` · `19.1` · `19.2` · `19.2.1`–`19.2.10` (all ten glands, in NCERT's own order) · `19.3` · `19.4` · `Recap` (source `SUMMARY`, `F209`) · `Appendix` (source `EXERCISES` `F210` + the trailing `NOTE` page `F211`).
 - **No style is re-declared:** `0` occurrences of `ParagraphStyle` and `0` of `fontName` in the script; its only imports are `os`, `sys`, `neet_template` (names + `figure as _shared_figure`) and `reportlab.platypus`'s `Paragraph`/`Spacer`. No colour, geometry, margin or font constant is defined locally.
-- **PDF: 14 pages, A4 portrait, 1,657 KB, 7 embedded images, 31,137 extracted characters**, text SHA-256 (first 16) `08d68d03f8d3c05f`.
+- **PDF: 14 pages, A4 portrait, 1,657 KB, 7 embedded images, 31,149 extracted characters (pymupdf)**, pymupdf text SHA-256 (first 16) `f4850a48c881f3b3`. *(Corrected at Gate 3(b), 2026-09-01 — D1. This record originally read `31,137` / `08d68d03f8d3c05f`, which was true when Pass 2 wrote it but was left stale by commit `957c1dd`, which applied the two Pass 3(a) D1 string fixes `SS19.2`→`Section 19.2` and `SS19.2.5`→`Section 19.2.5` (+6 chars each, +12 total: 31,137 + 12 = 31,149) and rebuilt the PDF without updating this line. The extractor is now named because a bare char count without its extractor is what made Ch16 ambiguous; pdfplumber reads 31,422 / `4297a27a6e8b6a98` on the same file.)*
 - **218/218 rows ticked in this file** as each was written — ticked while writing, not reconciled afterwards. All 7 plates sit inside the section that cites them, each followed by a "Read the plate" NOTE that names its in-figure labels verbatim, which is how the 38 matrix labels reach the running text.
 
 ### Disposition of the eight Pass 1 carry-forwards
@@ -590,7 +590,7 @@ Command, from the repo root, with the §0.2 venv interpreter (rebuilt this sessi
 
 **VERDICT: PASS (0 fail, 0 warn), exit 0 — green under `--strict`, so no warning had to be waived to advance.** This is the ideal condition §6 Gate 2 asks for.
 
-**Reproducibility (checked here, not deferred to Gate 3):** the committed PDF was copied aside, the script re-run from a clean copy of the chapter folder, and the two compared — **14 pages / 31,137 chars / 7 images / text SHA `08d68d03f8d3c05f` on both**. The committed PDF was then restored byte-for-byte, so the rebuild check left no diff.
+**Reproducibility (checked here, not deferred to Gate 3):** the committed PDF was copied aside, the script re-run from a clean copy of the chapter folder, and the two compared — **14 pages / 31,149 chars / 7 images / pymupdf text SHA `f4850a48c881f3b3` on both** *(re-confirmed at Gate 3(b), 2026-09-01; the fingerprint originally recorded here — `31,137` / `08d68d03f8d3c05f` — was superseded by commit `957c1dd`, see the PDF line above)*. The committed PDF was then restored byte-for-byte, so the rebuild check left no diff.
 
 ### What Gate 2 does NOT claim
 
