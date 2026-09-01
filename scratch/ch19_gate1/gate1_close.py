@@ -49,6 +49,38 @@ def page_texts() -> list[str]:
         return [(p.extract_text() or "") for p in pdf.pages]
 
 
+def page_texts_geometric() -> list[str]:
+    """Second, independent rendering of the source built from PyMuPDF word boxes.
+
+    pdfplumber's reading order breaks two real NCERT typographic devices:
+      * small-caps chapter furniture ('CHAPTER  19' extracts as 'C 19 / HAPTER'),
+      * subscripts, which are emitted as their own line ('(T ) and' + '4'),
+    so a perfectly verbatim row can appear 'missing'. Clustering words into
+    visual lines by vertical *overlap* (not equal y) folds the subscript back
+    inline and restores small-caps order, giving a corpus that reflects what a
+    human reads off the page. Rows must be verbatim in at least one corpus."""
+    import pymupdf
+    out = []
+    with pymupdf.open(SRC) as doc:
+        for page in doc:
+            words = page.get_text("words")  # x0, y0, x1, y1, word, block, line, wno
+            lines: list[dict] = []
+            for x0, y0, x1, y1, w, *_ in sorted(words, key=lambda t: (t[1], t[0])):
+                for ln in lines:
+                    # overlap test: a subscript's box overlaps its parent line
+                    if min(y1, ln["y1"]) - max(y0, ln["y0"]) > 0.35 * min(
+                        y1 - y0, ln["y1"] - ln["y0"]
+                    ):
+                        ln["w"].append((x0, w))
+                        ln["y0"], ln["y1"] = min(ln["y0"], y0), max(ln["y1"], y1)
+                        break
+                else:
+                    lines.append({"y0": y0, "y1": y1, "w": [(x0, w)]})
+            out.append("\n".join(
+                " ".join(w for _, w in sorted(ln["w"])) for ln in lines))
+    return out
+
+
 LIG = {"\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "\ufb03": "ffi", "\ufb04": "ffl"}
 
 
@@ -188,32 +220,65 @@ def main() -> int:
     print("=" * 78)
     print("D. VERBATIM + Src PAGE ATTRIBUTION vs SOURCE PDF")
     print("=" * 78)
-    pages = page_texts()
-    ptoks = [toks(p) for p in pages]
-    sq = [squash(p) for p in pages]
-    print(f"source pages   : {len(pages)}")
-    print(f"page char count: {[len(p) for p in pages]}")
-    notfound, misattributed = [], []
+    plumb = page_texts()
+    geo = page_texts_geometric()
+    n_pages = len(plumb)
+    print(f"source pages   : {n_pages}  (corpora: pdfplumber + PyMuPDF-geometric)")
+    print(f"page char count: {[len(p) for p in plumb]}")
+
+    corpora = [plumb, geo]
+    prepped = [[(squash(p), toks(p)) for p in c] for c in corpora]
+
+    def found_on(page_1based: int, needle_s: str, needle_t: list[str]) -> bool:
+        i = page_1based - 1
+        for c in prepped:
+            s, t = c[i]
+            if (needle_s and needle_s in s) or subseq_at(t, needle_t):
+                return True
+        return False
+
+    def found_spanning(page_1based: int, needle_s: str, needle_t: list[str]) -> bool:
+        """Sentence begins on `page` and finishes on the next one."""
+        i = page_1based - 1
+        if i + 1 >= n_pages:
+            return False
+        for c in corpora:
+            joined = c[i] + "\n" + c[i + 1]
+            if (needle_s and needle_s in squash(joined)) or subseq_at(toks(joined), needle_t):
+                return True
+        return False
+
+    notfound, misattributed, spanning = [], [], []
     for r in content:
         w = r["wording"]
-        needle_t = toks(w)
-        needle_s = squash(w)
+        needle_t, needle_s = toks(w), squash(w)
         try:
             want = int(r["src"])
         except ValueError:
             want = None
-        hits = [i + 1 for i in range(len(pages))
-                if (needle_s and needle_s in sq[i]) or subseq_at(ptoks[i], needle_t)]
-        if not hits:
-            notfound.append((r["id"], want, w[:90]))
-        elif want not in hits:
+        hits = [p for p in range(1, n_pages + 1) if found_on(p, needle_s, needle_t)]
+        if want in hits:
+            continue
+        # not wholly on its stated page — is it a page-break straddle starting there?
+        if want and found_spanning(want, needle_s, needle_t):
+            spanning.append((r["id"], want, w[:64]))
+            continue
+        if hits:
             misattributed.append((r["id"], want, hits, w[:70]))
-    print(f"rows whose wording was NOT found verbatim on ANY page : {len(notfound)}")
-    for i, want, w in notfound:
-        print(f"   {i} (Src {want}): {w}")
+        else:
+            notfound.append((r["id"], want, w[:90]))
+
+    print(f"rows verbatim wholly on their stated Src page         : "
+          f"{len(content) - len(spanning) - len(misattributed) - len(notfound)}")
+    print(f"rows straddling a page break, starting on stated Src  : {len(spanning)}")
+    for i, want, w in spanning:
+        print(f"   {i}: p{want}->p{want + 1} :: {w}")
     print(f"rows found, but NOT on their stated Src page          : {len(misattributed)}")
     for i, want, hits, w in misattributed:
         print(f"   {i}: Src says {want}, found on {hits} :: {w}")
+    print(f"rows whose wording was NOT found verbatim ANYWHERE    : {len(notfound)}")
+    for i, want, w in notfound:
+        print(f"   {i} (Src {want}): {w}")
     if notfound or misattributed:
         fails.append("verbatim/page attribution")
 
