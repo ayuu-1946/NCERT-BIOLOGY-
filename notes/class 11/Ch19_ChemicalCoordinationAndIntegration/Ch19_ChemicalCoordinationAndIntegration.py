@@ -241,7 +241,9 @@ story.append(note(
 
 story.append(gap())
 story.append(memory_aid(
-    "<b>Ten glands, head to gonad, in the order SS19.2 uses them:</b> "
+    # [VERIFICATION FIX] Pass 3(a) D1: printed "SS19.2" - the docstring's ASCII
+    # stand-in for the section sign leaked into reader-facing text. Spelled out.
+    "<b>Ten glands, head to gonad, in the order Section 19.2 uses them:</b> "
     "<b>Hy</b>pothalamus, <b>Pi</b>tuitary, <b>Pi</b>neal, <b>Thy</b>roid, <b>Para</b>thyroid, "
     "<b>Thy</b>mus, <b>Ad</b>renal, <b>Pan</b>creas, <b>Tes</b>tis, <b>Ov</b>ary. Learn the order "
     "once and every subsection number becomes predictable."))
@@ -464,7 +466,8 @@ story.append(figure("fig_19_3b.png",
 story.append(note(
     "<b>Read the plate (Figure 19.3 (b) labels).</b> The dorsal view marks the four "
     "<b>Parathyroid glands</b> on the back of the thyroid lobes - the same organ seen from "
-    "behind, which is why SS19.2.5 refers to this panel."))
+    # [VERIFICATION FIX] Pass 3(a) D1: printed "SS19.2.5" - same leak as above.
+    "behind, which is why Section 19.2.5 refers to this panel."))
 
 story.append(gap())
 story.append(Paragraph("<b>Too little iodine, too much hormone</b>", STYLES["Body"]))
