@@ -1,0 +1,170 @@
+
+============================================================================
+=== SOURCE PAGE 1 (1558 chars) ===
+============================================================================
+239
+239
+CHEMICAL COORDINATION AND INTEGRATION
+You have already learnt that the neural system provides a
+point-to-point rapid coordination among organs. The neural
+coordination is fast but short-lived. As the nerve fibres do not innervate
+all cells of the body and the cellular functions need to be continuously
+regulated; a special kind of coordination and integration has to be
+provided. This function is carried out by hormones. The neural system
+and the endocrine system jointly coordinate and regulate the
+physiological functions in the body.
+19.1
+ENDOCRINE GLANDS AND HORMONES
+Endocrine glands lack ducts and are hence, called ductless glands. Their
+secretions are called hormones. The classical definition of hormone as a
+chemical produced by endocrine glands and released into the blood and
+transported to a distantly located target organ has current scientific
+definition as follows: Hormones are non-nutrient chemicals which
+act as intercellular messengers and are produced in trace amounts.
+The new definition covers a number of new molecules in addition to the
+hormones secreted by the organised endocrine glands. Invertebrates
+possess very simple endocrine systems with few hormones whereas a large
+number of chemicals act as hormones and provide coordination in the
+vertebrates. The human endocrine system is described here.
+CHEMICAL COORDINATION
+AND INTEGRATION
+CHAPTER  19
+19.1 Endocrine
+Glands and
+Hormones
+19.2 Human
+Endocrine
+System
+19.3 Hormones of
+Heart, Kidney
+and
+Gastrointestinal
+Tract
+19.4 Mechanism of
+Hormone Action
+Reprint 2026-27
+
+============================================================================
+=== SOURCE PAGE 2 (1947 chars) ===
+============================================================================
+BIOLOGY
+240
+19.2   HUMAN ENDOCRINE SYSTEM
+The endocrine glands and hormone
+producing diffused tissues/cells located in
+different parts of our body constitute the
+endocrine system. Pituitary, pineal,
+thyroid, adrenal, pancreas, parathyroid,
+thymus and gonads (testis in males and
+ovary in females) are the organised
+endocrine 
+bodies 
+in 
+our 
+body
+(Figure 19.1). In addition to these, some
+other organs, e.g., gastrointestinal tract,
+liver, kidney, heart also produce hormones.
+A brief account of the structure and
+functions of all major endocrine glands
+and hypothalamus of the human body is
+given in the following sections.
+19.2.1
+The Hypothalamus
+As you know, the hypothalamus is the
+basal part of diencephalon, forebrain
+(Figure 19.1) and it regulates a wide
+spectrum of body functions. It contains
+several groups of neurosecretory cells
+called nuclei which produce hormones.
+These hormones regulate the synthesis
+and secretion of pituitary hormones.
+However, the hormones produced by
+hypothalamus are of two types, the
+releasing hormones (which stimulate secretion of pituitary hormones) and
+the inhibiting hormones (which inhibit secretions of pituitary hormones).
+For example a hypothalamic hormone called Gonadotrophin releasing
+hormone (GnRH) stimulates the pituitary synthesis and release of
+gonadotrophins. On the other hand, somatostatin from the hypothalamus
+inhibits the release of growth hormone from the pituitary. These hormones
+originating in the hypothalamic neurons, pass through axons and are
+released from their nerve endings. These hormones reach the pituitary
+gland through a portal circulatory system and regulate the functions of
+the anterior pituitary. The posterior pituitary is under the direct neural
+regulation of the hypothalamus (Figure 19.2).
+Figure 19.1 Location of endocrine glands
+Testis
+(in male)
+Ovary
+(in female)
+Adrenal
+Pancreas
+Thyroid and
+Parathyroid
+Thymus
+Pineal
+Pituitary
+Hypothalamus
+Reprint 2026-27
+
+============================================================================
+=== SOURCE PAGE 3 (2484 chars) ===
+============================================================================
+241
+241
+CHEMICAL COORDINATION AND INTEGRATION
+19.2.2
+The Pituitary Gland
+The pituitary gland is located in a bony cavity
+called sella tursica and is attached to
+hypothalamus by a stalk (Figure 19.2). It is
+divided anatomically into an adenohypophysis
+and a neurohypophysis. Adenohypophysis
+consists of two portions, pars distalis and pars
+intermedia. The pars distalis region of pituitary,
+commonly called anterior pituitary, produces
+growth hormone (GH), prolactin (PRL), thyroid
+stimulating 
+hormone 
+(TSH),
+adrenocorticotrophic hormone (ACTH),
+luteinizing hormone (LH) and follicle
+stimulating hormone (FSH). Pars intermedia
+secretes only one hormone called melanocyte
+stimulating hormone (MSH). However, in
+humans, the pars intermedia is almost merged
+with pars distalis. Neurohypophysis (pars
+nervosa) also known as posterior pituitary, stores
+and releases two hormones called oxytocin and
+vasopressin, which are actually synthesised by
+the hypothalamus and are transported axonally to neurohypophysis.
+Over-secretion of GH stimulates abnormal growth of the body leading
+to gigantism and low secretion of GH results in stunted growth resulting
+in pituitary dwarfism. Excess secretion of growth hormone in adults
+especially in middle age can result in severe disfigurement (especially of
+the face) called Acromegaly, which may lead to serious complications,
+and premature death if unchecked. The disease is hard to diagnose in
+the early stages and often goes undetected for many years, until changes
+in external features become noticeable. Prolactin regulates the growth of
+the mammary glands and formation of milk in them. TSH stimulates the
+synthesis and secretion of thyroid hormones from the thyroid gland. ACTH
+stimulates the synthesis and secretion of steroid hormones called
+glucocorticoids from the adrenal cortex. LH and FSH stimulate gonadal
+activity and hence are called gonadotrophins. In males, LH stimulates
+the synthesis and secretion of hormones called androgens from testis.
+In males, FSH and androgens regulate spermatogenesis. In females, LH
+induces ovulation of fully mature follicles (graafian follicles) and maintains
+the corpus luteum, formed from the remnants of the graafian follicles
+after ovulation. FSH stimulates growth and development of the ovarian
+Posterior
+pituitary
+Anterior
+pituitary
+Hypothalamus
+Hypothalamic
+neurons
+Portal circulation
+Figure 19.2 Diagrammatic representation of
+pituitary and its relationship with
+hypothalamus
+Reprint 2026-27
