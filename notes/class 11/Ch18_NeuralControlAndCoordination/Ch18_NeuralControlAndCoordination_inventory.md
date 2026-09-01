@@ -6,7 +6,8 @@
 **Gate 1 frozen:** 2026-09-01
 **Facts rows:** 131 (F001-F131) · **Figure-label matrix rows:** 4 (F132-F135) · **Total:** 135
 **Ticked:** 135 / 135 (all 131 Facts rows ticked by Pass 2; the 4 label rows were ticked at `1-F`)
-**Gate state:** Gate 1 CLOSED · Gate 2 CLOSED (2026-09-01) · Gate 3(a) COMPLETE (2026-09-01) · **Gate 3(b) NOT STARTED — Gate 3 OPEN, chapter not delivered**
+**Gate state:** Gate 1 CLOSED · Gate 2 CLOSED (2026-09-01) · Gate 3(a) COMPLETE (2026-09-01) · Gate 3(b) COMPLETE (2026-09-01) · **Gate 3 CLOSED — chapter DELIVERED**
+**Live build:** 9 A4 upright pages · 2,063 KB · 4/4 figures embedded (all `mode=L`)
 
 This is the **full Pass 1 inventory** and the Gate 1 deliverable. It supersedes the earlier figures-only freeze that lived in this same file (session `1-F`, frozen 2026-08-30), whose figure-label matrix, captions, manifest and audit trail are preserved **verbatim** below — only their row IDs were shifted to the end of the ID space (was `F001`-`F004`, now `F132`-`F135`) so the Facts table can occupy a contiguous `F001`-`F131` in source order, matching the Ch15/Ch16/Ch17 house format. No asset, label string, or manifest entry was re-extracted or reworded by this session; figure extraction was already complete and verified. The earlier freeze explicitly declared itself extraction-only and declared Pass 1 running-text work out of scope, so this file is the first Pass 1 freeze of the chapter's Facts table.
 
@@ -359,20 +360,47 @@ Three reader-facing defects were raised against the 12-page build and fixed here
 
 **4.1 Exercise scope — seven answers deleted, three kept.** The chapter carried a full `EXERCISES (with worked answers)` block: all ten NCERT questions restated with worked answers. Seven of those ten are pure recall — their answers are already written out, in full, in the chapter body above them, so answering them again is duplication that pads the PDF and teaches nothing new. The standing rule (Rule 2, amended this session in `SUPREME COMMAND PROMPT.md`) is now explicit: **an exercise is answered only when the chapter text does not already contain the answer.** Classification, question by question:
 
+> **This table was rewritten in Pass 3(b) — the original was wrong.** The version written at Pass 4 audited **another chapter's exercise list**: it carried rows for "aqueous vs vitreous humour", "blind spot vs yellow spot" and "function of ear ossicles", none of which occur anywhere in Chapter 18 (each returns **0 matches** in the source — they belong to the sense-organs chapter). It also numbered the questions 1-10 as if all ten were flat, mislabelled the cranial/spinal-nerve gap as `5` when the source letters it `10(f)`, and omitted `10(f)` entirely. The table below is re-derived from the source's actual `EXERCISES` block and reconciled against the Gate 1 exercise-gap table above. **The defect was confined to this metadata table** — see the correction note at the end of this section.
+
 | Q | Asks for | Verdict | Where the text already answers it |
 |---|---|---|---|
-| 1 | Difference between afferent and efferent neurons | COVERED | 18.3 nerve-fibre types |
-| 2 | Difference between impulse conduction in myelinated vs non-myelinated axon | COVERED | 18.3.1 |
-| 3 | Difference between aqueous and vitreous humour | COVERED | eye section |
-| 4 | Difference between blind spot and yellow spot | COVERED | eye section |
-| 5 | Difference between cranial and spinal nerves | GAP | not in this chapter's text |
-| 6 | Answer briefly: forebrain / midbrain / hindbrain parts | COVERED | 18.4.1-18.4.3 |
-| 7 | Function of ear ossicles | COVERED | ear section |
-| 8 | Resting-potential ionic basis | COVERED | 18.3 |
-| 9(b) | Master clock / biological clock | GAP | not in this chapter's text |
-| 10(b) | Saltatory conduction (named term) | GAP | mechanism is in 18.3.1, the *term* is not |
+| 1 | Briefly describe the structure of the Brain | COVERED | 18.4-18.4.3 (F089-F125) |
+| 2(a) | CNS vs PNS | COVERED | 18.1-18.2 (F013-F022) |
+| 2(b) | Resting potential vs action potential | COVERED | 18.3.1 (F046-F071) |
+| 3(a) | Polarisation of a nerve-fibre membrane | COVERED | 18.3.1 (F047-F055) |
+| 3(b) | Depolarisation of a nerve-fibre membrane | COVERED | 18.3.1 (F056-F065) |
+| 3(c) | Transmission of an impulse across a chemical synapse | COVERED | 18.3.2 (F081-F088) |
+| 4(a) | Labelled diagram of a neuron | COVERED | Fig 18.1 + its labels NOTE (F128, F132) |
+| 4(b) | Labelled diagram of the brain | COVERED | Fig 18.4 + its labels NOTE (F131, F135) |
+| 5(a) | Short note: neural coordination | COVERED | intro (F002-F012) |
+| 5(b) | Short note: forebrain | COVERED | 18.4.1 (F096-F113) |
+| 5(c) | Short note: midbrain | COVERED | 18.4.2 (F114-F117), incl. SUMMARY-UNIQUE fold #14 |
+| 5(d) | Short note: hindbrain | COVERED | 18.4.3 (F118-F125) |
+| 5(e) | Short note: synapse | COVERED | 18.3 (F073-F074) |
+| 6 | Mechanism of synaptic transmission | COVERED | 18.3.2 (F072-F088) |
+| 7 | Role of Na+ in generating the action potential | COVERED | 18.3.1 (F056-F062) |
+| 8(a) | Myelinated vs non-myelinated axons | COVERED | 18.3 (F041-F045) |
+| 8(b) | Dendrites vs axons | COVERED | 18.3 (F032-F036) |
+| 8(c) | Thalamus vs hypothalamus | COVERED | 18.4.1 (F108-F111) |
+| 8(d) | Cerebrum vs cerebellum | COVERED | 18.4.1 + 18.4.3, incl. SUMMARY-UNIQUE fold #16 |
+| 9(a) | Which brain part is most developed | COVERED | 18.4.1 (F098) |
+| 9(b) | Which CNS part acts as a **master clock** | **GAP** | not in this chapter's text — answered in the Appendix |
+| 10(a) | Afferent vs efferent neurons | COVERED | 18.2 (F023, F024) |
+| 10(b) | Conduction in a myelinated vs unmyelinated fibre | **GAP** | both fibre types and axonal conduction are in the text, but never contrasted — answered in the Appendix |
+| 10(f) | Cranial nerves vs spinal nerves | **GAP** | named once in passing (F044), never distinguished — answered in the Appendix |
 
-Seven COVERED answers are deleted. The three GAP answers are kept and are the only exercise content in the PDF, under a heading that says so. **Exercise 10's lettering `(a) (b) (f)` is preserved as the book prints it** — the printed book skips (c)-(e) and that is reproduced, never renumbered.
+The COVERED answers are deleted. The three GAP answers are kept and are the only exercise content in the PDF, under a heading that says so. **Exercise 10's lettering `(a) (b) (f)` is preserved as the book prints it** — the printed book skips (c)-(e) and that is reproduced, never renumbered.
+
+**Correction note — blast radius of the wrong Pass 4 table (verified in Pass 3(b), 0 reader-facing impact).** The erroneous table was checked against every downstream artefact before being rewritten:
+
+| Artefact | Checked how | Result |
+|---|---|---|
+| Built PDF | searched for all six foreign-chapter terms (`aqueous`, `vitreous`, `blind spot`, `yellow spot`, `ossicle`, `humour`) | **0 occurrences** — nothing leaked into the deliverable |
+| Script | same six terms grepped across all 817 lines | **0 occurrences**; the only exercise answers in the script are `9(b)`, `10(b)`, `10(f)` |
+| Appendix in the PDF | read in full | answers exactly the three real gaps, each naming the gap it fills |
+| Gate 1 exercise-gap table (above) | compared row by row against the source's `EXERCISES` block | **already correct** — it always listed `9(b)`, `10(b)`, `10(f)` with the right lettering |
+
+So the wrong table never propagated: Pass 4 evidently *acted* on the correct Gate 1 table while *transcribing* a different chapter's list into its own prose. This is the second Ch18 defect of exactly this shape — inventory metadata contradicting a correct deliverable (Gate 2 found the prose-census one) — which is why Pass 3(b) re-derived every count from the source rather than trusting any narrative sentence in this file.
 
 **4.2 Both process notes deleted.** Two NOTE boxes were self-referential build commentary addressed to the author, not the student: the `All ten NCERT exercises are reproduced below...` note and the `Coverage note. All 4 figures of the chapter are embedded as verified monochrome assets...` note. Neither taught biology; both described how the PDF was made. Per Rule 6 (added this session) **process/meta commentary belongs in this inventory, not in the PDF.** The substance of the coverage note is preserved here, in 4.3, where an auditor will actually look for it. Source-spelling records (`sagital`, `passess`, `spiral cord`, `Schwan cell`) were already documented in the typo-policy section above, so deleting the note lost no record.
 
@@ -408,6 +436,59 @@ Check 6 is the one that mattered: deleting seven answers could have orphaned a f
 **Known parse trap, carried forward.** `check_pdf.py` check 4 scans this inventory for the substrings `portrait`, `photo`, `headshot`, `profile` and warns that a person image may be embedded. Ordinary prose here trips it — `A4 portrait`, `worst-case photocopy`. The script is frozen shared infrastructure, so **this file** is worded around those four words (`A4 upright`, `worst-case copier pass`). A future editor who reintroduces them will see a spurious WARN with a correct PDF.
 
 **Gate status unchanged: Gate 3 is still OPEN.** Pass 3(b) — the bidirectional source-to-inventory full read — has still not been run. Pass 4 fixed defects in an undelivered chapter; it did not advance the gate, and Ch18 must **not** appear in any Done tally.
+
+## Pass 3(b) / Gate 3 — CLOSED (2026-09-01)
+
+The bidirectional full read that Gate 3 requires. Run under a freshly rebuilt `/vercel/share/neetenv` (§0.2 — the venv was absent at session start, the expected state; reportlab 5.0.1 / pymupdf 1.28.2 / Pillow 12.3.0 / pdfplumber 0.11.7 on CPython 3.13.11 verified per §0.3 before any reading began).
+
+**Gates 1 and 2 were independently re-verified first rather than trusted from the header** (Gate 1 rule 1). Every asserted count was re-derived from the artefacts: 135 total rows = 131 Facts (`F001`-`F131`, contiguous, no gap, no duplicate, no case variant) + 4 label rows (`F132`-`F135`); 12 heading rows; 10 opener rows; 135/135 ticked; the figure-label matrix parses to **4 figures / 35 labels** through `check_pdf._extract_labels` with no doubling and no phantom row. All match the header. `check_pdf.py` was re-run on a fresh rebuild: **0 fail, 1 warn** (check 4, the known `portrait` substring trap documented above — the word occurs in the *plate-geometry* note for the neuron diagram, and the chapter embeds no person image). `verify_inventory.py`: **PASS, 105/105**.
+
+**Direction 1 — inventory → script/PDF, per section.** Source pages read against `# ---- N.N ----` blocks, every row's destination confirmed by eye in the built PDF, not by grep:
+
+| Source pp. | Section | Rows | Script block | Read verdict |
+|---:|---|---|---|---|
+| 1 (230) | title + intro | F001-F012 | title plate, intro | all 12 present; the "why coordination is needed" chain intact |
+| 1-2 (230-231) | 18.1 Neural System | F013-F018 | `18.1` | all 6; human-vs-hydra/insect contrast preserved |
+| 2 (231) | 18.2 Human Neural System | F019-F028 | `18.2` | all 10; CNS/PNS split, afferent/efferent, somatic/autonomic |
+| 2-3 (231-232) | 18.3 Neuron | F029-F045 | `18.3` | all 17; three neuron zones, both fibre types, Fig 18.1 anchored |
+| 3-4 (232-233) | 18.3.1 Impulse conduction | F046-F071 | `18.3.1` | all 26; the polarised → depolarised → repolarised cycle and both pump stoichiometries correct |
+| 5 (234) | 18.3.2 Synaptic transmission | F072-F088 | `18.3.2` | all 17; electrical vs chemical synapse, vesicle→cleft→receptor chain, Fig 18.3 anchored |
+| 5-6 (234-235) | 18.4 CNS | F089-F095 | `18.4` | all 7; forebrain/midbrain/hindbrain frame |
+| 6-7 (235-236) | 18.4.1 Forebrain | F096-F113 | `18.4.1` | all 18; cerebrum, corpus callosum, lobes, thalamus, hypothalamus, limbic system |
+| 7 (236) | 18.4.2 Midbrain | F114-F117 | `18.4.2` | all 4 + midbrain-function fold |
+| 7-8 (236-237) | 18.4.3 Hindbrain | F118-F125 | `18.4.3` | all 8 + cerebellum-function fold |
+| 8 (237) | SUMMARY | F126 | `SUMMARY` (Recap) | 18 sentences classified; **4 SUMMARY-UNIQUE facts all land in a body section**, none orphaned |
+| 8-9 (237-238) | EXERCISES | F127 | `EXERCISES`/Appendix | 3 real gaps answered, each naming the gap it fills |
+| 3,4,5,6 | Figures | F128-F135 | figure blocks | 4 plates, each in the section it illustrates, caption + labels NOTE directly after |
+
+Mechanically corroborated alongside the read: **131/131 Facts rows and 35/35 figure labels reach the built PDF.** The only rows scoring below 0.9 token overlap are the three `prompt`-type rows deliberately rephrased as italic questions and one row where `Na+` is emitted through a `<super>` tag — inspected individually, all faithful.
+
+**Direction 2 — source → inventory (the direction that had never been run).** The whole source was re-extracted, de-hyphenated and split into sentences, and **every** body and summary sentence was scored for token coverage against the inventory. Exactly **two** sentences fell below the 0.85 threshold, and both are non-defects on inspection:
+
+| Flag | Sentence | Adjudication |
+|---|---|---|
+| 0.75 | "There are two types of axons, namely, myelinated and nonmyelinated." | **Not uninventoried.** The fact is `F041`, transcribed verbatim with the source's *other* spelling. The source prints `nonmyelinated` once and `non-myelinated` once for the same concept; `F041` carries the hyphenated form. A spelling variant, not missing content. |
+| 0.83 | "Reprint 2026-27 NEURAL CONTROL AND COORDINATION 237" | **Page furniture**, not content — the reprint stamp + running header + page number, present on all 9 pages and correctly excluded from the inventory (and banned from the rebuild by check 1). |
+
+Structural sweep in the same direction: **9 numbered headings** (`18.1`-`18.4.3`) all present in the inventory; **4 numbered figures with 10 `Figure 18.x` mentions** (6 in-text call-outs + 4 caption heads) reconciled; **10 numbered exercises** all accounted for. **No UNINVENTORIED row was required** — Direction 2 found nothing the frozen inventory had missed, which is the substantive result of this pass.
+
+**Reproducibility (Gate 3 condition 5).** The committed script was re-run against the same `assets/`: the rebuild is **content-identical** — 9 pages before and after, extracted text stream SHA-256 equal.
+
+**Defect found and fixed this session:** one — the Pass 4 §4.1 exercise-scope table audited a **different chapter's** exercise list (aqueous/vitreous humour, blind spot/yellow spot, ear ossicles: 0 occurrences each in Ch18), mislettered the cranial/spinal gap and omitted `10(f)`. It is rewritten above from the source's real `EXERCISES` block, with a blast-radius table proving **0 reader-facing impact** — the script and PDF were always correct and answer exactly the three real gaps. Like the Gate 2 defect before it, this was inventory *metadata* contradicting a correct deliverable.
+
+**Cross-document gap closed:** `CHAPTER_STATUS.md` had **no Ch18 row at all** while `CHAPTER_TRACKER.md` carried the chapter as in-progress. Both are now consistent and record Gate 3 CLOSED.
+
+| # | Gate 3 condition | Status |
+|---|---|---|
+| 1 | Every page of the built PDF rendered and inspected | PASS — Pass 3(a) + Pass 4's 9/9 inspection of the live build |
+| 2 | Bidirectional full read, both directions, no grep substitute | PASS — Direction 1 per-section table above; Direction 2 whole-source sentence sweep |
+| 3 | Every inventory row traced to its destination in the PDF | PASS — 131/131 Facts + 35/35 labels |
+| 4 | Every source sentence traced to an inventory row or adjudicated | PASS — 2 flags, both adjudicated non-defects, 0 UNINVENTORIED rows needed |
+| 5 | Rebuild reproducible from the committed script | PASS — content-identical, text SHA-256 equal |
+| 6 | `check_pdf.py` green, every WARN justified | PASS — 0 fail / 1 warn, the documented `portrait`-substring true negative |
+| 7 | Findings documented, defects recorded not silently fixed | PASS — this section; the Pass 4 table defect recorded with its blast radius |
+
+**Gate 3 is CLOSED. Chapter 18 is delivered** and may now appear in a Done tally.
 
 ## References
 
