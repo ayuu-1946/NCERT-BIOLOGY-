@@ -507,7 +507,52 @@ Each gap was re-confirmed against the extracted source in session 1-Z: the body 
 
 The §7 / Rule 6 Coverage section: the facts about *this deliverable* that an auditor needs and the PDF must never carry. Full narrative for the operator decisions is in `figure_layout_decisions.md`.
 
+The seven fixed §6 headings follow in the spec's order, so an audit prompt can consume this section mechanically. *(Normalised at Gate 3(b), defect `D3`: the section previously omitted **Compression decisions**, **Color-dependent figures** and **Source problems** entirely, and carried the other two under the local names "Exercises" and "Known linter state". The substance of those two was already correct and is preserved verbatim below under its mandated heading; the three new headings state facts that were true but unwritten.)*
+
+### Compression decisions
+
+What was merged or reformatted relative to NCERT's prose, and why no fact is at risk. Nothing here drops a fact — each item is a change of *form* only, and every underlying row is ticked in the Facts table.
+
+| Compression | Where | Why it is safe |
+|---|---|---|
+| The two prior-class experiments (variegated/black-paper leaf; KOH test tube) became two numbered **process-flow** blocks instead of running prose | §11.1 | `F019`–`F022` are step sequences in the source too; the flow preserves each step, its order and its result verbatim, including the negative KOH result |
+| The five early-experiment scientists became **five H3 sub-blocks** under §11.2 rather than one continuous narrative | §11.2 | NCERT runs them as unbroken prose, but strictly in this order; each scientist's every sentence is carried in his own block (`F024`–`F054`) |
+| Engelmann's prism experiment and van Niel's inference became process-flow / bullet sequences | §11.2d, §11.2f | Both are stepwise in the original; no qualifier ("mainly", "roughly", "essentially") was dropped |
+| The chloroplast's eight in-figure parts became a **two-column table** rather than a label list | §11.3 | Carries `F272`'s eight labels into running text (what check 6 verifies) and adds no claim NCERT does not make |
+| The four leaf pigments and their chromatogram colours became a table | §11.4 | One row per pigment; the four colour descriptions are quoted as NCERT words them ("bright or blue green", "yellow to yellow-orange") |
+| The three Calvin stages became **three unnumbered H3 sub-headings** (`F241`–`F243`) plus the IN/OUT balance sheet as a table | §11.7.2 | Mirrors NCERT's own "1. Carboxylation / 2. Reduction / 3. Regeneration" numbering and its own In/Out list |
+| NCERT's **fill-in** Table 11.1 was reproduced **completed** from the chapter's own C3/C4 statements | Table 11.1 | The blank table teaches nothing on the page; `F187` additionally carries NCERT's own "Choose from" option lists verbatim, so the exercise is recoverable |
+| The chapter Summary was rewritten as a denser **QUICK RECAP** (`F244`) rather than reproduced | Recap | Rule 3: all 20 summary sentences are classified in *Summary classification*; the 5 SUMMARY-UNIQUE ones are folded into body rows `F267`–`F270`, so the recap adds no unique fact |
+
+### Exercise classification
+
+**9 exercises = 4 answered by design (GAP) + 5 unanswered by design (COVERED) + 0 overlooked.** See *Exercise-gap terms* above for the full per-gap table and its planned homes. The 5 COVERED questions are deliberately not reproduced and not answered, per Rule 2 step 3 and the operator's confirmation.
+
+| Ex. | Class | Where it is answered / why no answer is written |
+|---|---|---|
+| 1 | **GAP** | Appendix "Terms used in the exercises" — the negative *external* C3/C4 claim is never made in the body |
+| 2 | COVERED | §11.8 Kranz anatomy / bundle sheath cells (`F152`–`F156`) |
+| 3 | COVERED | §11.8 + §11.9 — the CO2-concentrating mechanism and absence of photorespiration (`F166`–`F168`, `F181`–`F184`) |
+| 4 | COVERED | §11.9 — RuBisCO's competitive CO2/O2 binding and the raised intracellular CO2 in bundle sheath cells (`F174`–`F176`, `F182`) |
+| 5 | **GAP** | Appendix — that chlorophyll a is indispensable is never stated outright |
+| 6 | **GAP** | Appendix — the dark-degradation stability ordering is never stated |
+| 7 | **GAP** | Appendix — why shade leaves are darker green is never explained |
+| 8 | COVERED | §11.10.1 + Figure 11.10, whose points A–E are named in running text (`F282`, `F199`–`F203`) |
+| 9 | COVERED | Table 11.1 (C3 vs C4), §11.6.2 (cyclic vs non-cyclic), §11.8 (leaf anatomy) |
+
+### Drift caught and fixed
+
+Pass 3 found **one** confirmed content defect and **two** confirmed metadata defects; three further flags were investigated and dismissed. The full register with reasoning is in the *Gate 3(b) closure record* below.
+
+| ID | Class | Finding | Resolution |
+|---|---|---|---|
+| `D1` | DRIFTED (content) | §11.2c heading read "Julius von Sachs (1854)". All four sibling scientist headings carry life-date pairs, so the bare year reads as Sachs' life dates — which NCERT never gives. 1854 is the year of the evidence (`F033`). | Relabelled "Julius von Sachs (evidence of 1854)" in the `# ---- 11.2 Julius von Sachs ----` block, tagged `# [VERIFICATION FIX]`. No fact changed. |
+| `D2` | Metadata | The `Deliberate operator omissions` table described Figure 11.1 as "Reversible by adding one `figure()` call" without recording that its label row `F271` is nonetheless ticked and check-6 clean. | Clarified in that table's *Why it is safe* cell (see below). |
+| `D3` | Metadata | This Coverage section omitted three of the seven mandated §6 headings and renamed two others. | Normalised to the seven fixed headings in spec order; no existing substance removed. |
+
 ### Figures requiring manual attention
+
+**None.** All 12 figures extracted and converted cleanly; no figure failed extraction, so this heading has no entry and — per §4.4 — appears nowhere in the PDF.
 
 **None.** All 12 figures extracted and converted cleanly; no figure failed extraction, so this heading has no entry and — per §4.4 — appears nowhere in the PDF.
 
@@ -515,7 +560,7 @@ The §7 / Rule 6 Coverage section: the facts about *this deliverable* that an au
 
 | Item | Decision | Why it is safe | Where the facts live instead |
 |---|---|---|---|
-| **Figure 11.1** — Priestley's experiment (source p. 4) | Extracted, monochrome, verified, **deliberately not embedded**. Operator judgement: the plate carries no NEET teaching value. | Every fact of the plate is in prose; its label row `F271` is only the bare panel markers `(a)`–`(d)`, which carry no fact. Reversible by adding one `figure()` call. | `F024`–`F029` in §11.2 — bell jar, candle extinguished, mouse suffocating, mint plant, and Priestley's hypothesis |
+| **Figure 11.1** — Priestley's experiment (source p. 4) | Extracted, monochrome, verified, **deliberately not embedded**. Operator judgement: the plate carries no NEET teaching value. | Every fact of the plate is in prose; its label row `F271` is only the bare panel markers `(a)`–`(d)`, which carry no fact. Reversible by adding one `figure()` call. **Re-confirmed at Gate 3(b) (`D2`):** `fig_11_1.png` is the one asset in `assets/` with no `figure()` call in the script — which is why the PDF holds **11** image XObjects against **12** assets. That gap is this decision, not a dropped figure. `F271`'s four panel markers are ticked and check-6 clean because the caption text naming panels (a)–(d) reaches the running text via `F026`–`F028`'s prose. | `F024`–`F029` in §11.2 — bell jar, candle extinguished, mouse suffocating, mint plant, and Priestley's hypothesis |
 | **Melvin Calvin headshot** (source p. 2) | Never extracted, never embedded — §4.4 photograph hard-no. | Profile is fully carried as text. | `F004`–`F010`, heading `F246` |
 
 Neither is flagged in the PDF: that flag means "a diagram you should have is missing", and neither is missing by accident.
@@ -532,11 +577,27 @@ Set at the call site in `Ch11_PhotosynthesisInHigherPlants.py`, recorded because
 
 No asset, crop rectangle, caption or inventory row changed — only the draw-time width. All three moves are downward, so the §4.4 300 dpi no-upscale cap is unaffected and effective print resolution rose.
 
-### Exercises
+### Color-dependent figures
 
-**9 exercises = 4 answered by design (GAP) + 5 unanswered by design (COVERED) + 0 overlooked.** See *Exercise-gap terms* above. The 5 COVERED questions are deliberately not reproduced and not answered, per Rule 2 step 3 and the operator's confirmation.
+Figures whose meaning relied on colour in the original, and where that distinction is now stated **in words** so it survives monochrome conversion and photocopying (§4.4 Step 3(f)). The per-figure conversion record is in *Colour-carried distinctions preserved under monochrome conversion* above.
 
-### Known linter state
+| Fig | What colour carried in the original | Where the distinction is now stated in words |
+|---|---|---|
+| **11.3a** | Three absorption curves distinguished only by line colour | Caption names all three curves explicitly — **Chlorophyll a**, **Chlorophyll b**, **Carotenoids** — plus the vertical axis "Absorbance of light by chloroplast pigments" |
+| **11.3b** | The single action-spectrum curve read against 11.3a's colours | Caption names the curve and its vertical axis, "Rate of photosynthesis (measured by O2 release)", and the panel marker **(b)** |
+| **11.3c** | Two superimposed curves: rate in **black**, absorption in **cyan**, with a shaded "Light absorbed" band | Caption states the pairing outright — "the **Rate of photosynthesis** curve was black and the **Absorption** curve was cyan, and the shaded band is **Light absorbed**" — plus the 400/500/600/700 nm axis marks |
+
+All other figures carried their meaning by line, arrow, label or position, not colour, so monochrome conversion cost them nothing. Check 3 confirms every embedded image is single-channel.
+
+### Source problems
+
+**None.** No part of the source chapter was garbled or unrecoverable. Three source characteristics are worth recording, none of them a defect in the deliverable:
+
+- **NCERT's own summary carries two errors** the body contradicts: it says electrons pass "finally to **NAD** forming **NADH**" (body: NADP+ to NADPH, `F089`) and that water splitting transfers "electrons to **PS II**" (body: PS II supplies PS I, `F094`). Both summary sentences are classified BODY-PRESENT against the **correct** body rows, so the notes carry the body's accurate version and do not propagate the typos. Confirmed by full read at Gate 3(b), not by token match.
+- `pdfplumber` reflows the source's subscripted formulae into separate lines (`CO +H O →[CH O]+O` with the digits on the following line). This is an extraction artifact of the reader, not damage to the source; every formula was read from the rendered page and re-typed with `<sub>`/`<super>` tags (check 5 green).
+- The source's decorative letter-spacing renders some emphasised words with repeated glyphs (e.g. "dddddaaaaarrrrrkkkkk rrrrreeeeeaaaaaccccctttttiiiiiooooonnnnn" on p. 12, "Chlorophyll aaaaa" on p. 7). Read as "dark reaction" and "Chlorophyll a"; no fact was taken from the mangled spelling.
+
+### Linter verdict
 
 `check_pdf.py` exits **0** (VERDICT WARN, 0 fail, 1 warn) — Gate 2 is GREEN. The 270 Facts rows and 12 figure-label-matrix rows are now all ticked `x` (the Pass-2 bookkeeping debt described in earlier drafts is cleared; see the *Gate 2 closure record* below). Check 4's WARN is the standing benign one: it fires on inventory rows whose own text contains *portrait*/*photo*, and this chapter embeds no human-subject image at all. Checks 1, 2, 3, 5, 6 (116/116 labels), 7 (270/270 ticked), 8 (17/17 A4 portrait) and 9 (88 banners, 0 orphaned headings) pass.
 

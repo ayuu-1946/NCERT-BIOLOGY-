@@ -352,7 +352,13 @@ story.append(b1(
     "<b>only the green part</b> of the plants that could release oxygen."))
 
 # ---- 11.2 Julius von Sachs (F033-F036) ----
-story.append(heading("11.2c", "Julius von Sachs (1854)", 3))
+# [VERIFICATION FIX] Gate 3(b) D1: the heading read "Julius von Sachs (1854)". Every sibling
+# scientist heading in 11.2 carries a life-date pair (Priestley 1733-1804, Ingenhousz 1730-1799,
+# Engelmann 1843-1909, van Niel 1897-1985), so a bare "(1854)" in that same slot reads as Sachs'
+# life dates. NCERT gives no dates for Sachs at all; 1854 is the year he provided the evidence
+# (F033: "It was not until about 1854 that Julius von Sachs provided evidence..."). Relabelled so
+# the year is unambiguously the work, not the man. No fact added, removed or changed.
+story.append(heading("11.2c", "Julius von Sachs (evidence of 1854)", 3))
 # F033, F034, F036
 story.append(b1(
     "It was not until about <b>1854</b> that <b>Julius von Sachs</b> provided evidence for the "
