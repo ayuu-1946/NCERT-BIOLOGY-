@@ -5,6 +5,8 @@
 **Figure assets:** 4 (`assets/fig_18_1.png` .. `assets/fig_18_4.png`)
 **Gate 1 frozen:** 2026-09-01
 **Facts rows:** 131 (F001-F131) · **Figure-label matrix rows:** 4 (F132-F135) · **Total:** 135
+**Ticked:** 135 / 135 (all 131 Facts rows ticked by Pass 2; the 4 label rows were ticked at `1-F`)
+**Gate state:** Gate 1 CLOSED · Gate 2 CLOSED (2026-09-01) · Gate 3(a) COMPLETE (2026-09-01) · **Gate 3(b) NOT STARTED — Gate 3 OPEN, chapter not delivered**
 
 This is the **full Pass 1 inventory** and the Gate 1 deliverable. It supersedes the earlier figures-only freeze that lived in this same file (session `1-F`, frozen 2026-08-30), whose figure-label matrix, captions, manifest and audit trail are preserved **verbatim** below — only their row IDs were shifted to the end of the ID space (was `F001`-`F004`, now `F132`-`F135`) so the Facts table can occupy a contiguous `F001`-`F131` in source order, matching the Ch15/Ch16/Ch17 house format. No asset, label string, or manifest entry was re-extracted or reworded by this session; figure extraction was already complete and verified. The earlier freeze explicitly declared itself extraction-only and declared Pass 1 running-text work out of scope, so this file is the first Pass 1 freeze of the chapter's Facts table.
 
@@ -276,7 +278,9 @@ Figure 18.2 was repinned after visual review so the complete lower panel, arrows
 
 **Figure census — 4 numbered figures, 4 assets, 4 caption rows (F128-F131), 4 label rows (F132-F135), 35 labels, and 6 in-text call-outs.** Call-outs: Figure 18.1 x1 (F030) · Figure 18.2 x2 (F059, F065) · Figure 18.4 x2 (F095, F097) · Figure 18.3 x1 (F081). Total mentions of the string `Figure 18.` in the source = 10 (6 call-outs + 4 caption heads). Pages carrying no figure were opened as images to confirm no unnumbered plate exists (see the figure census reconciliation section).
 
-**Type census — 131 Facts rows by type** (machine-derived by `verify_inventory.py` check [4] from the Type column, not hand-tallied): concept 55 · process 22 · definition 22 · heading 12 · opener 10 · caption 4 · prompt 3 · example 3 · number 2. Plus 4 `figure-label` rows in the matrix = 135 total.
+**Type census — 131 Facts rows by type** (machine-derived from the Type column, not hand-tallied): concept 55 · definition 21 · process 20 · heading 12 · opener 10 · caption 4 · example 4 · prompt 3 · number 2 = **131**. Plus 4 `figure-label` rows in the matrix = 135 total.
+
+> **Count correction (Gate 2 session, 2026-09-01) — metadata only, no row touched.** This census previously read "concept 55 · process 22 · definition 22 · heading 12 · opener 10 · caption 4 · prompt 3 · example 3 · number 2", which **sums to 133** against a real 131 — a census asserting a total its own list did not support (§6 step 10). Re-parsing the frozen table gives the figures now shown (`definition` 21, `process` 20, `example` 4), which are **exactly** the values `verify_inventory.py`'s `EXP_TYPES` already asserted and re-checks green, so the defect was confined to this one prose restatement; the verifier and the rows always agreed. Per the freeze boundary rule, the rows win and the count changed — nothing was added, removed, reclassified or reworded. A repo-wide sweep for the old values found no other live copy.
 
 **Exercise census — 10 numbered exercises**, sub-lettered `(a)`-`(f)` with the source's `(c)`-`(e)` skip in exercise 10.
 
@@ -298,7 +302,54 @@ Figure 18.2 was repinned after visual review so the complete lower panel, arrows
 | 12 | All Facts rows unticked at freeze | PASS — Pass 2 ticks them; only the `1-F` label rows carry `x`, earned by opened-PNG verification |
 | 13 | Every asserted count machine-derivable, not hand-waved | PASS — `verify_inventory.py` re-derives all of them from the PDF, the assets and this file |
 
-**Gate 1 is green.** Pass 2 (rewrite) has not started and no rewrite prose exists for this chapter.
+**Gate 1 is green**, and it is no longer the frontier: Pass 2 is complete and Gate 2 is closed (next section). Checklist row 12 is a record of the *freeze moment* — every Facts row was unticked when Gate 1 closed. All 131 Facts rows are ticked **now**, which is Pass 2's deliverable, not a contradiction of row 12; `verify_inventory.py`'s tick assertion is phase-aware for exactly this reason and passes in the post-Pass-2 phase.
+
+## Pass 2 / Gate 2 — CLOSED (2026-09-01)
+
+The script was written linearly from this frozen inventory in Content Order (§5), importing the repo-level `neet_template.py`; no style, geometry, colour or font is re-declared in the chapter script. Every block carries its `# ---- N.N ----` marker with the row IDs it discharges — 15 markers: title plate (F001) · intro (F002-F012) · 18.1 (F013-F018) · 18.2 (F019-F028) · 18.3 (F029-F045) · 18.3.1 (F046-F071) · 18.3.2 (F072-F088) · 18.4 (F089-F095) · 18.4.1 (F096-F113) · 18.4.2 (F114-F117) · 18.4.3 (F118-F125) · SUMMARY (F126) · EXERCISES (F127) · APPENDIX · figure blocks. Rows were ticked while the block was written, not reconciled afterwards.
+
+**Build:** `Ch18_NeuralControlAndCoordination.pdf` — **12 A4 portrait pages, 2,075 KB, 32,807 extracted characters, 4/4 figures embedded** (`fig_18_1.png` .. `fig_18_4.png`, all `mode=L`).
+
+**Gate 2 evidence, re-derived this session under a freshly rebuilt `/vercel/share/neetenv` (§0.2 — the venv was absent at session start, the expected state; it was rebuilt and §0.3 verified reportlab 5.0.1 / pymupdf 1.28.2 / Pillow 12.3.0 on CPython 3.13.11 before any diagnosis):**
+
+| Check | Result |
+|---|---|
+| 1 Footer/header band | PASS — no text span in the top/bottom 1.4 cm bands |
+| 2 Legibility floor | PASS — smallest rendered glyph **6.0pt** (FAIL<5.0, WARN<6.0); no span in the warn band |
+| 3 Grayscale-only images | PASS — all 4 embedded images monochrome |
+| 4 No person image embedded | PASS — the figure manifest has no row describing a person, so nothing person-depicting is embedded. A **legitimate true negative**, not a suppressed finding: this chapter contains no scientist panel for the check to fire on |
+| 5 Banned glyphs | PASS — no Unicode arrows, sub/superscripts, Greek letters or emoji |
+| 6 Figure-label coverage | PASS — **35/35 labels fully in running text**, 0 partial, 0 missing |
+| 7 Inventory ticked | PASS — all **131** Facts rows ticked |
+| 8 Page geometry | PASS — 12/12 pages A4 upright, 595x842pt |
+| 9 Orphaned headings | PASS — 45 banner headings, none stranded at a page foot |
+| 10 Badge plate collision | PASS — 94 filled plates, none colliding with a neighbour |
+
+`check_pdf.py` **exits 0 — VERDICT PASS, 0 fail / 0 warn**, and is **also green under `--strict`** (exit 0), so no WARN had to be accepted or justified. The chapter-local `verify_inventory.py` re-runs the inventory-vs-source audit at **PASS, 105/105 checks**, including that the documented source typos (`passess`, `sagital`, `Schwan cell`, `spiral cord`) are still transcribed verbatim and really are what the source prints.
+
+**Reproducibility (Gate 3 condition 5, earned early):** the committed script was re-run from a clean directory against the same `assets/` — the rebuild is **content-identical** to the committed PDF: 12 pp / 32,807 chars / 4 images / extracted-text SHA-256 `2ef6054b4c2e8a03` on both.
+
+**Gate 2 defect found this session:** one — the prose type census contradicting its own list (see the count-correction note above). It is a documentation defect in inventory *metadata*, not in the PDF, the script or any row; no reader-facing text changed and the linter was green before and after.
+
+## Pass 3(a) — visual render check: COMPLETE, 12/12 pages inspected (2026-09-01)
+
+Every page was rendered with `pymupdf` at **115 dpi and opened individually** (12/12 — not spot-checked), and again at **300 dpi with a hard 1-bit B&W threshold** for the print pass (12/12). **Zero confirmed layout defects:** no overflow, no clipped or off-frame table, no table running off the page, no orphaned heading, no process-flow rule misaligned with its badges, no figure squashed to the wrong aspect ratio, nothing in the margin bands, no badge/banner collision.
+
+**Cross-page style consistency is machine-corroborated by a span dump over all 12 pages:** only the four Times faces appear (`Times-Roman`, `Times-Bold`, `Times-Italic`, `Times-BoldItalic`) — no other `fontName` anywhere. Body running text is **10.8pt** on all 12 pages, table cells/heads 9.5pt on 11 pages, NOTE / MEMORY-AID italic body 10.2pt on 10 pages, the four figure captions 9.5pt Times-Italic, section-number badges 6.0-6.2pt Times-Bold white, process-flow step digits 8.0pt, the title 20.0pt. Every element type (H1, H2, table, NOTE, MEMORY AID, process flow, figure box) was compared across at least three widely separated pages and renders identically — the imported template held.
+
+**Micro-text audit (why the 6.0pt floor is legitimate, span by span):** the only spans at or below 8.2pt are the badge texts (`18.1`, `18.2`, `18.3` at 6.2pt; `18.3.1`, `18.3.2`, `18.4.1`, `18.4.2`, `18.4.3` at 6.0pt; `Recap`, `Ex`, `Appendix` at 6.2pt), the process-flow digits 1-7 at 8.0pt, and the ASCII ionic-charge `+` marks at 7.6-8.2pt. All sit **above** the 6.0pt WARN band, none is a collapsed badge, and the charge marks are flat ASCII by design (a Unicode superscript would trip check 5).
+
+**Accepted layout observations — not defects, recorded so a later audit does not re-raise them:**
+
+| # | Observation | Why it is accepted |
+|---|---|---|
+| O1 | **p2 ends 399pt short** (last content y=404 against a frame bottom of 802pt) | The next block is Figure 18.1's `KeepTogether` figure+caption unit, which will not split from its caption, so it moves whole to p3. Same mechanism as Ch16's tall-figure page tails. p12's 230pt tail is simply the end of the chapter. |
+| O2 | **NCERT watermark baked into the source artwork** of Figures 18.2, 18.3 and 18.4 (faint diagonal "not to be re..." / "NCERT" strokes), visible in the 115 dpi renders | It is inside the source plate pixels, not something the build added; cropping it out would clip artwork. It drops out entirely at the 1-bit print threshold. |
+| O3 | **Figure 18.2's two grey tones collapse to one solid black bar** at the hard 1-bit threshold, so the dark (depolarised, site A) and mid-grey (repolarising, trailing) segments stop being tell-apart-able in a worst-case photocopy | Meaning does not rest on the greys: the `+`/`-` charge rows, the `A`/`B` markers and both `Na` labels survive at 1-bit, and the A-to-B progression is stated in words in the running text and in the Figure 18.2 labels NOTE. This is the chapter's only grey-dependent figure. |
+| O4 | A small square plate sits at the **right edge of four banners** (18.2, 18.3.2, 18.4.3, Appendix), half over the dark band | It is the template's `has_table=True` table-icon marker (§4.1), invoked exactly 4 times in the script; check 10 confirms no collision. Template furniture, identical on all four. |
+| O5 | Non-NCERT organisational badge labels `Recap`, `Ex`, `Appendix` | Design-system labels for the rewritten summary, exercises and appendix; they are not NCERT section numbers and are not presented as such. |
+
+**Gate 3(a) is met. Gate 3(b) has NOT been run** — no bidirectional full read of the source against the frozen rows has happened for this chapter. Gate 3 is therefore **OPEN**, the chapter is **not** delivered, and it must **not** appear in any Done tally (§ "Name which gate closed"). The next session's job is Pass 3(b): the source-to-inventory direction as well as inventory-to-script, with a per-section reading claim naming source pages against `# ---- N.N ----` blocks. No coverage percentage or grep result may substitute for it.
 
 ## References
 
