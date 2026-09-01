@@ -180,7 +180,7 @@ The `1-F` manifest row for Figure 18.4 records the caption as **"Diagram showing
 
 ## Figure-label matrix
 
-Preserved **verbatim** from the `1-F` freeze (was `F001`-`F004`). The matrix exists in exactly one place — this table — and each row's wording column begins with `Figure labels:`, matching the `_extract_labels` parser in `check_pdf.py`. Labels were harvested by opening each final rendered PNG, not from PDF text extraction. The repeated `Na` marking in Figure 18.2 is one label wording occurring at two positions in the plate; it is represented once because the matrix audits label vocabulary, not repeated spatial occurrences. There is no second pipe-delimited label table anywhere in this file, so no label is double-counted and no phantom separator row is created.
+Preserved **verbatim** from the `1-F` freeze (was `F001`-`F004`). The matrix exists in exactly one place — this table — and each row's wording column begins with the `Figure&nbsp;labels:` sentinel that the `_extract_labels` parser in `check_pdf.py` scans for. (That sentinel is deliberately written here with a non-breaking space so this explanatory line is not itself counted as a matrix row; the table rows below carry the plain-space form the parser matches.) Labels were harvested by opening each final rendered PNG, not from PDF text extraction. The repeated `Na` marking in Figure 18.2 is one label wording occurring at two positions in the plate; it is represented once because the matrix audits label vocabulary, not repeated spatial occurrences. There is no second pipe-delimited label table anywhere in this file, so no label is double-counted and no phantom separator row is created.
 
 | ID | Section | Type | Exact original wording | Ticked |
 |---|---|---|---|---|

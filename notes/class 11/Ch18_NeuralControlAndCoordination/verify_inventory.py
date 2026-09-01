@@ -37,13 +37,13 @@ EXP_LABEL_TOTAL = 35
 EXP_LABELS_PER_FIG = {1: 10, 2: 3, 3: 9, 4: 13}
 EXP_TYPES = {
     "concept": 55,
-    "process": 22,
-    "definition": 22,
+    "definition": 21,
+    "process": 20,
     "heading": 12,
     "opener": 10,
     "caption": 4,
+    "example": 4,
     "prompt": 3,
-    "example": 3,
     "number": 2,
 }
 EXP_HEADING_IDS = [
