@@ -1,0 +1,124 @@
+150 BIOLOGY
+incident light beyond a point causes the breakdown of chlorophyll and a
+decrease in photosynthesis.
+11.10.2 Carbon dioxide Concentration
+Carbon dioxide is the major limiting factor for photosynthesis. The
+concentration of CO is very low in the atmosphere (between 0.03 and
+2
+0.04 per cent). Increase in concentration upto 0.05 per cent can cause an
+increase in CO fixation rates; beyond this the levels can become damaging
+2
+over longer periods.
+The C and C plants respond differently to CO concentrations. At
+3 4 2
+low light conditions neither group responds to high CO conditions. At
+2
+high light intensities, both C and C plants show increase in the rates of
+3 4
+photosynthesis. What is important to note is that the C plants show
+4
+saturation at about 360 µlL-1 while C responds to increased CO
+3 2
+concentration and saturation is seen only beyond 450 µlL-1. Thus, current
+availability of CO levels is limiting to the C plants.
+2 3
+The fact that C plants respond to higher CO concentration by
+3 2
+showing increased rates of photosynthesis leading to higher productivity
+has been used for some greenhouse crops such as tomatoes and bell
+pepper. They are allowed to grow in carbon dioxide enriched atmosphere
+that leads to higher yields.
+11.10.3 Temperature
+The dark reactions being enzymatic are temperature controlled. Though
+the light reactions are also temperature sensitive they are affected to a
+much lesser extent. The C plants respond to higher temperatures and
+4
+show higher rate of photosynthesis while C plants have a much lower
+3
+temperature optimum.
+The temperature optimum for photosynthesis of different plants also
+depends on the habitat that they are adapted to. Tropical plants have a
+higher temperature optimum than the plants adapted to temperate
+climates.
+11.10.4 Water
+Even though water is one of the reactants in the light reaction, the effect of
+water as a factor is more through its effect on the plant, rather than directly
+on photosynthesis. Water stress causes the stomata to close hence reducing
+the CO availability. Besides, water stress also makes leaves wilt, thus,
+2
+reducing the surface area of the leaves and their metabolic activity as well.
+Reprint 2026-27
+PHOTOSYNTHESIS IN HIGHER PLANTS 151
+S
+UMMARY
+Green plants make their own food by photosynthesis. During this process carbon
+dioxide from the atmosphere is taken in by leaves through stomata and used for
+making carbohydrates, principally glucose and starch. Photosynthesis takes place
+only in the green parts of the plants, mainly the leaves. Within the leaves, the
+mesophyll cells have a large number of chloroplasts that are responsible for CO
+2
+fixation. Within the chloroplasts, the membranes are sites for the light reaction,
+while the chemosynthetic pathway occurs in the stroma. Photosynthesis has two
+stages: the light reaction and the carbon fixing reactions. In the light reaction the
+light energy is absorbed by the pigments present in the antenna, and funnelled to
+special chlorophyll a molecules called reaction centre chlorophylls. There are two
+photosystems, PS I and PS II. PS I has a 700 nm absorbing chlorophyll a P700
+molecule at its reaction centre, while PS II has a P680 reaction centre that absorbs
+red light at 680 nm. After absorbing light, electrons are excited and transferred
+through PS II and PS I and finally to NAD forming NADH. During this process a
+proton gradient is created across the membrane of the thylakoid. The breakdown
+of the protons gradient due to movement through the F part of the ATPase enzyme
+0
+releases enough energy for synthesis of ATP. Splitting of water molecules is
+associated with PS II resulting in the release of O , protons and transfer of electrons
+2
+to PS II.
+In the carbon fixation cycle, CO is added by the enzyme, RuBisCO, to a 5-
+2
+carbon compound RuBP that is converted to 2 molecules of 3-carbon PGA. This
+is then converted to sugar by the Calvin cycle, and the RuBP is regenerated. During
+this process ATP and NADPH synthesised in the light reaction are utilised. RuBisCO
+also catalyses a wasteful oxygenation reaction in C plants: photorespiration.
+3
+Some tropical plants show a special type of photosynthesis called C pathway.
+4
+In these plants the first product of CO fixation that takes place in the mesophyll,
+2
+is a 4-carbon compound. In the bundle sheath cells the Calvin pathway is carried
+out for the synthesis of carbohydrates.
+E
+XERCISES
+1. By looking at a plant externally, can you tell whether a plant is C or C ? Why
+3 4
+and how?
+2. By looking at which internal structure of a plant you can tell whether a plant is
+C or C ? Explain.
+3 4
+3. Even though a very few cells in a C plant carry out the biosynthetic – Calvin
+4
+pathway, yet they are highly productive. Can you discuss why?
+Reprint 2026-27
+152 BIOLOGY
+4. RuBisCO is an enzyme that acts both as a carboxylase and oxygenase. Why do
+you think RuBisCO carries out more carboxylation in C plants?
+4
+5. Suppose there were plants that had a high concentration of Chlorophyll b, but
+lacked chlorophyll a, would it carry out photosynthesis? Then why do plants
+have chlorophyll b and other accessory pigments?
+6. Why is the colour of a leaf kept in the dark frequently becomes yellow, or pale
+green? Which pigment do you think is more stable?
+7. Look at leaves of the same plant on the shady side and compare it with the
+leaves on the sunny side. Or, compare the potted plants kept in the sunlight with
+those in the shade. Which of them has leaves that are darker green ? Why?
+8. Figure 11.10 shows the effect of light on the rate of photosynthesis. Based on the
+graph, answer the following questions:
+(a) At which point/s (A, B or C) in the curve light is a limiting factor?
+(b) What could be the limiting factor/s in region A?
+(c) What do C and D represent on the curve?
+9. Give comparison between the following:
+(a) C and C pathways
+3 4
+(b) Cyclic and non-cyclic photophosphorylation
+(c) Anatomy of leaf in C and C plants
+3 4
+Reprint 2026-27
