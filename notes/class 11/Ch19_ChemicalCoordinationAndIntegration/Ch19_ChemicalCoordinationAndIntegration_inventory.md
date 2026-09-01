@@ -169,7 +169,7 @@ Note that the source is **internally inconsistent**, not merely misspelt: it pri
 | F114 | 19.2.7 | concept | Our body has one pair of adrenal glands, one above of each kidney (Figure 19.4 a). | 6 | x |
 | F115 | 19.2.7 | concept | The gland is composed of two types of tissues. | 6 | x |
 | F116 | 19.2.7 | concept | The centrally located tissue is called the adrenal medulla, and outside this lies the adrenal cortex (Figure 19.4 b). | 6 | x |
-| F117 | 19.2.7 | concept | Underproduction of hormones by the adrenal cortex alters carbohydrate metabolism causing acute weakness and fatigue leading to a disease called Addison’ disease. | 6 | x |
+| F117 | 19.2.7 | concept | Underproduction of hormones by the adrenal cortex alters carbohydrate metabolism causing acute weakness and fatigue leading to a disease called Addison’s disease. | 6 | x |
 | F118 | 19.2.7 | concept | The adrenal medulla secretes two hormones called adrenaline or epinephrine and noradrenaline or norepinephrine. | 6 | x |
 | F119 | 19.2.7 | definition | These are commonly called as catecholamines. | 6 | x |
 | F120 | 19.2.7 | concept | Adrenaline and noradrenaline are rapidly secreted in response to stress of any kind and during emergency situations and are called emergency hormones or hormones of Fight or Flight. | 6 | x |
