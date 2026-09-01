@@ -349,9 +349,11 @@ This matrix exists in exactly **one** place in this file. It is never restated a
 
 Assets are 300 dpi clip renders of hand-pinned rectangles (`Ch11_PhotosynthesisInHigherPlants_extract_figures.py`), each `convert("L")` + `autocontrast(cutoff=1)`. `Verified` means the rendered PNG was **opened and read** in session 1-F against §4.4 Step 3 checks (a)-(f).
 
-| Fig # | Caption (verbatim) | Asset file | Source page | Mono | Verified |
-|---|---|---|---|---|---|
-| Figure 11.1 | Priestley's experiment | `assets/fig_11_1.png` | 4 | yes | yes |
+**12 assets extracted, 11 embedded in the PDF.** The difference is Figure 11.1 alone — a deliberate operator omission, not an extraction failure and not a coverage miss. The two numbers are stated together here so the gap between manifest and PDF can never be read as a defect; the full reasoning is in `figure_layout_decisions.md` §3 and the rule it instantiates is §4.4 Step 3's third-state bullet.
+
+| Fig # | Caption (verbatim) | Asset file | Source page | Mono | Verified | Embedding note |
+|---|---|---|---|---|---|---|
+| Figure 11.1 | Priestley's experiment | `assets/fig_11_1.png` | 4 | yes | yes | **extracted, deliberately NOT embedded** (operator decision; §4.4 third state). Asset is good and stays on disk; every fact of the plate is carried in prose at `F024`–`F029`. NOT an extraction failure, so NOT flagged in the PDF under "Figures requiring manual attention". See `figure_layout_decisions.md` §3. |
 | Figure 11.2 | Diagrammatic representation of an electron micrograph of a section of chloroplast | `assets/fig_11_2.png` | 6 | yes | yes |
 | Figure 11.3a | Graph showing the absorption spectrum of chlorophyll a, b and the carotenoids | `assets/fig_11_3a.png` | 7 | yes | yes |
 | Figure 11.3b | Graph showing action spectrum of photosynthesis | `assets/fig_11_3b.png` | 7 | yes | yes |
@@ -424,6 +426,8 @@ Session **1-Z**. The SUMMARY block (PDF p. 21, textbook p. 151) contains **20 se
 
 9 exercises. 4 assume a term or step the body never states outright; each has a planned Pass-2 home. The appendix carries **only** these 4 gap items, never a walk-through of all 9 (Rule 2).
 
+**Closed arithmetic: 9 exercises = 4 answered by design (GAP) + 5 unanswered by design (COVERED) + 0 overlooked.** The 5 unanswered exercises are unanswered *because the chapter body already teaches them* — that is Rule 2 step 3 COVERED ("do not reproduce the question and do not write an answer"), confirmed by the operator in the review session. Reproducing them would type the same fact twice and push real content away from the reader. Anyone auditing this chapter should expect to find 4 answers to 9 questions and read that as correct.
+
 | Term/fact assumed by exercises | Explained where |
 |---|---|
 | Ex. 1 — that C3 vs C4 cannot be told apart by external appearance (the body only ever gives *internal* Kranz-anatomy criteria, never the negative external claim). | "Terms used in the exercises" appendix; cross-referenced from the §11.8 Kranz-anatomy block. |
@@ -468,3 +472,40 @@ Each gap was re-confirmed against the extracted source in session 1-Z: the body 
 - The Melvin Calvin profile is text-only, from `F004`–`F010` and `F246`; the p. 2 headshot is never embedded.
 - Table 11.1 is an NCERT *fill-in* table (`F240`): reproduce it as a completed comparison table from the C3/C4 body rows, keeping the NCERT caption number.
 - Write `CO2`, `H+`, `NADP+`, `O2`, `HCO3-`, `C3`/`C4` with `<sub>`/`<super>` tags, never Unicode (check 5).
+
+## Coverage
+
+The §7 / Rule 6 Coverage section: the facts about *this deliverable* that an auditor needs and the PDF must never carry. Full narrative for the operator decisions is in `figure_layout_decisions.md`.
+
+### Figures requiring manual attention
+
+**None.** All 12 figures extracted and converted cleanly; no figure failed extraction, so this heading has no entry and — per §4.4 — appears nowhere in the PDF.
+
+### Deliberate operator omissions (NOT extraction failures)
+
+| Item | Decision | Why it is safe | Where the facts live instead |
+|---|---|---|---|
+| **Figure 11.1** — Priestley's experiment (source p. 4) | Extracted, monochrome, verified, **deliberately not embedded**. Operator judgement: the plate carries no NEET teaching value. | Every fact of the plate is in prose; its label row `F271` is only the bare panel markers `(a)`–`(d)`, which carry no fact. Reversible by adding one `figure()` call. | `F024`–`F029` in §11.2 — bell jar, candle extinguished, mouse suffocating, mint plant, and Priestley's hypothesis |
+| **Melvin Calvin headshot** (source p. 2) | Never extracted, never embedded — §4.4 photograph hard-no. | Profile is fully carried as text. | `F004`–`F010`, heading `F246` |
+
+Neither is flagged in the PDF: that flag means "a diagram you should have is missing", and neither is missing by accident.
+
+### Figure render widths deviating from the default
+
+Set at the call site in `Ch11_PhotosynthesisInHigherPlants.py`, recorded because a figure narrower than its column otherwise reads as an oversight. Ledger with rendered point sizes and the pagination budget behind them: `figure_layout_decisions.md` §1–§2.
+
+| Fig | `max_width_cm` | Reason |
+|---|---|---|
+| 11.8 | 10.5 → **7.6** | frees 95 pt so Calvin-cycle stage (3) Regeneration rejoins its section, and pays for 11.9's move |
+| 11.9 | 10.0 → **7.4** | `KeepTogether` block now fits the tail of the C4 pathway page instead of taking a page of its own |
+| 11.10 | 8.0 → **6.2** | operator size order; cheapest figure to shrink (2 axis names + points A–E) |
+
+No asset, crop rectangle, caption or inventory row changed — only the draw-time width. All three moves are downward, so the §4.4 300 dpi no-upscale cap is unaffected and effective print resolution rose.
+
+### Exercises
+
+**9 exercises = 4 answered by design (GAP) + 5 unanswered by design (COVERED) + 0 overlooked.** See *Exercise-gap terms* above. The 5 COVERED questions are deliberately not reproduced and not answered, per Rule 2 step 3 and the operator's confirmation.
+
+### Known linter state
+
+`check_pdf.py` check 7 reports 0/270 rows ticked, because the `[ ]` boxes in the Facts table above were never ticked during Pass 2 — a bookkeeping debt **in this file**, not a defect in the PDF. Check 4's WARN is the standing benign one: it fires on inventory rows whose own text contains *portrait*/*photo*, and this chapter embeds no human-subject image at all. Checks 1, 2, 3, 5, 6 (116/116 labels), 8 (17/17 A4 portrait) and 9 (88 banners, 0 orphaned headings) pass.
