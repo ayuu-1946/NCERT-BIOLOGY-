@@ -42,137 +42,137 @@ One row per sentence-level fact, in source order. Types: `heading` · `opener` �
 
 | ID | Section | Type | Exact original wording | Ticked |
 |---|---|---|---|---|
-| F001 | Title plate | heading | CHAPTER 18 — NEURAL CONTROL AND COORDINATION |  |
-| F002 | Intro | opener | As you know, the functions of the organs/organ systems in our body must be coordinated to maintain homeostasis. |  |
-| F003 | Intro | definition | Coordination is the process through which two or more organs interact and complement the functions of one another. |  |
-| F004 | Intro | example | For example, when we do physical exercises, the energy demand is increased for maintaining an increased muscular activity. |  |
-| F005 | Intro | example | The supply of oxygen is also increased. |  |
-| F006 | Intro | process | The increased supply of oxygen necessitates an increase in the rate of respiration, heart beat and increased blood flow via blood vessels. |  |
-| F007 | Intro | process | When physical exercise is stopped, the activities of nerves, lungs, heart and kidney gradually return to their normal conditions. |  |
-| F008 | Intro | concept | Thus, the functions of muscles, lungs, heart, blood vessels, kidney and other organs are coordinated while performing physical exercises. |  |
-| F009 | Intro | concept | In our body the neural system and the endocrine system jointly coordinate and integrate all the activities of the organs so that they function in a synchronised fashion. |  |
-| F010 | Intro | concept | The neural system provides an organised network of point-to-point connections for a quick coordination. |  |
-| F011 | Intro | concept | The endocrine system provides chemical integration through hormones. |  |
-| F012 | Intro | concept | In this chapter, you will learn about the neural system of human, mechanisms of neural coordination like transmission of nerve impulse and impulse conduction across a synapse. |  |
-| F013 | 18.1 | heading | 18.1 NEURAL SYSTEM |  |
-| F014 | 18.1 | opener | The neural system of all animals is composed of highly specialised cells called neurons which can detect, receive and transmit different kinds of stimuli. |  |
-| F015 | 18.1 | concept | The neural organisation is very simple in lower invertebrates. |  |
-| F016 | 18.1 | example | For example, in Hydra it is composed of a network of neurons. |  |
-| F017 | 18.1 | example | The neural system is better organised in insects, where a brain is present along with a number of ganglia and neural tissues. |  |
-| F018 | 18.1 | concept | The vertebrates have a more developed neural system. |  |
-| F019 | 18.2 | heading | 18.2 HUMAN NEURAL SYSTEM |  |
-| F020 | 18.2 | opener | The human neural system is divided into two parts : (i) the central neural system (CNS) (ii) the peripheral neural system (PNS) |  |
-| F021 | 18.2 | concept | The CNS includes the brain and the spinal cord and is the site of information processing and control. |  |
-| F022 | 18.2 | definition | The PNS comprises of all the nerves of the body associated with the CNS (brain and spinal cord). |  |
-| F023 | 18.2 | concept | The nerve fibres of the PNS are of two types : (a) afferent fibres (b) efferent fibres |  |
-| F024 | 18.2 | definition | The afferent nerve fibres transmit impulses from tissues/organs to the CNS and the efferent fibres transmit regulatory impulses from the CNS to the concerned peripheral tissues/organs. |  |
-| F025 | 18.2 | concept | The PNS is divided into two divisions called somatic neural system and autonomic neural system. |  |
-| F026 | 18.2 | definition | The somatic neural system relays impulses from the CNS to skeletal muscles while the autonomic neural system transmits impulses from the CNS to the involuntary organs and smooth muscles of the body. |  |
-| F027 | 18.2 | concept | The autonomic neural system is further classified into sympathetic neural system and parasympathetic neural system. |  |
-| F028 | 18.2 | definition | Visceral nervous system is the part of the peripheral nervous system that comprises the whole complex of nerves, fibres, ganglia, and plexuses by which impulses travel from the central nervous system to the viscera and from the viscera to the central nervous system. |  |
-| F029 | 18.3 | heading | 18.3 NEURON AS STRUCTURAL AND FUNCTIONAL UNIT OF NEURAL SYSTEM |  |
-| F030 | 18.3 | opener | A neuron is a microscopic structure composed of three major parts, namely, cell body, dendrites and axon (Figure 18.1). |  |
-| F031 | 18.3 | concept | The cell body contains cytoplasm with typical cell organelles and certain granular bodies called Nissl's granules. |  |
-| F032 | 18.3 | definition | Short fibres which branch repeatedly and project out of the cell body also contain Nissl's granules and are called dendrites. |  |
-| F033 | 18.3 | process | These fibres transmit impulses towards the cell body. |  |
-| F034 | 18.3 | concept | The axon is a long fibre, the distal end of which is branched. |  |
-| F035 | 18.3 | definition | Each branch terminates as a bulb-like structure called synaptic knob which possess synaptic vesicles containing chemicals called neurotransmitters. |  |
-| F036 | 18.3 | process | The axons transmit nerve impulses away from the cell body to a synapse or to a neuro-muscular junction. |  |
-| F037 | 18.3 | concept | Based on the number of axon and dendrites, the neurons are divided into three types, i.e., multipolar, bipolar and unipolar. |  |
-| F038 | 18.3 | definition | multipolar (with one axon and two or more dendrites; found in the cerebral cortex) |  |
-| F039 | 18.3 | definition | bipolar (with one axon and one dendrite, found in the retina of eye) |  |
-| F040 | 18.3 | definition | unipolar (cell body with one axon only; found usually in the embryonic stage) |  |
-| F041 | 18.3 | concept | There are two types of axons, namely, myelinated and non-myelinated. |  |
-| F042 | 18.3 | concept | The myelinated nerve fibres are enveloped with Schwann cells, which form a myelin sheath around the axon. |  |
-| F043 | 18.3 | definition | The gaps between two adjacent myelin sheaths are called nodes of Ranvier. |  |
-| F044 | 18.3 | concept | Myelinated nerve fibres are found in spinal and cranial nerves. |  |
-| F045 | 18.3 | concept | Unmyelinated nerve fibre is enclosed by a Schwann cell that does not form a myelin sheath around the axon, and is commonly found in autonomous and the somatic neural systems. |  |
-| F046 | 18.3.1 | heading | 18.3.1 Generation and Conduction of Nerve Impulse |  |
-| F047 | 18.3.1 | opener | Neurons are excitable cells because their membranes are in a polarised state. |  |
-| F048 | 18.3.1 | prompt | Do you know why the membrane of a neuron is polarised? |  |
-| F049 | 18.3.1 | concept | Different types of ion channels are present on the neural membrane. |  |
-| F050 | 18.3.1 | concept | These ion channels are selectively permeable to different ions. |  |
-| F051 | 18.3.1 | process | When a neuron is not conducting any impulse, i.e., resting, the axonal membrane is comparatively more permeable to potassium ions (K+) and nearly impermeable to sodium ions (Na+). |  |
-| F052 | 18.3.1 | concept | Similarly, the membrane is impermeable to negatively charged proteins present in the axoplasm. |  |
-| F053 | 18.3.1 | concept | Consequently, the axoplasm inside the axon contains high concentration of K+ and negatively charged proteins and low concentration of Na+. |  |
-| F054 | 18.3.1 | concept | In contrast, the fluid outside the axon contains a low concentration of K+, a high concentration of Na+ and thus form a concentration gradient. |  |
-| F055 | 18.3.1 | number | These ionic gradients across the resting membrane are maintained by the active transport of ions by the sodium-potassium pump which transports 3 Na+ outwards for 2 K+ into the cell. |  |
-| F056 | 18.3.1 | process | As a result, the outer surface of the axonal membrane possesses a positive charge while its inner surface becomes negatively charged and, therefore is, polarised. |  |
-| F057 | 18.3.1 | definition | The electrical potential difference across the resting plasma membrane is called as the resting potential. |  |
-| F058 | 18.3.1 | prompt | You might be curious to know about the mechanisms of generation of nerve impulse and its conduction along an axon. |  |
-| F059 | 18.3.1 | process | When a stimulus is applied at a site (Figure 18.2 e.g., point A) on the polarised membrane, the membrane at the site A becomes freely permeable to Na+. |  |
-| F060 | 18.3.1 | process | This leads to a rapid influx of Na+ followed by the reversal of the polarity at that site, i.e., the outer surface of the membrane becomes negatively charged and the inner side becomes positively charged. |  |
-| F061 | 18.3.1 | process | The polarity of the membrane at the site A is thus reversed and hence depolarised. |  |
-| F062 | 18.3.1 | definition | The electrical potential difference across the plasma membrane at the site A is called the action potential, which is in fact termed as a nerve impulse. |  |
-| F063 | 18.3.1 | concept | At sites immediately ahead, the axon (e.g., site B) membrane has a positive charge on the outer surface and a negative charge on its inner surface. |  |
-| F064 | 18.3.1 | process | As a result, a current flows on the inner surface from site A to site B. |  |
-| F065 | 18.3.1 | process | On the outer surface current flows from site B to site A (Figure 18.2) to complete the circuit of current flow. |  |
-| F066 | 18.3.1 | process | Hence, the polarity at the site is reversed, and an action potential is generated at site B. |  |
-| F067 | 18.3.1 | process | Thus, the impulse (action potential) generated at site A arrives at site B. |  |
-| F068 | 18.3.1 | process | The sequence is repeated along the length of the axon and consequently the impulse is conducted. |  |
-| F069 | 18.3.1 | concept | The rise in the stimulus-induced permeability to Na+ is extremely short-lived. |  |
-| F070 | 18.3.1 | process | It is quickly followed by a rise in permeability to K+. |  |
-| F071 | 18.3.1 | process | Within a fraction of a second, K+ diffuses outside the membrane and restores the resting potential of the membrane at the site of excitation and the fibre becomes once more responsive to further stimulation. |  |
-| F072 | 18.3.2 | heading | 18.3.2 Transmission of Impulses |  |
-| F073 | 18.3.2 | opener | A nerve impulse is transmitted from one neuron to another through junctions called synapses. |  |
-| F074 | 18.3.2 | definition | A synapse is formed by the membranes of a pre-synaptic neuron and a post-synaptic neuron, which may or may not be separated by a gap called synaptic cleft. |  |
-| F075 | 18.3.2 | concept | There are two types of synapses, namely, electrical synapses and chemical synapses. |  |
-| F076 | 18.3.2 | concept | At electrical synapses, the membranes of pre- and post-synaptic neurons are in very close proximity. |  |
-| F077 | 18.3.2 | process | Electrical current can flow directly from one neuron into the other across these synapses. |  |
-| F078 | 18.3.2 | concept | Transmission of an impulse across electrical synapses is very similar to impulse conduction along a single axon. |  |
-| F079 | 18.3.2 | concept | Impulse transmission across an electrical synapse is always faster than that across a chemical synapse. |  |
-| F080 | 18.3.2 | concept | Electrical synapses are rare in our system. |  |
-| F081 | 18.3.2 | definition | At a chemical synapse, the membranes of the pre- and post-synaptic neurons are separated by a fluid-filled space called synaptic cleft (Figure 18.3). |  |
-| F082 | 18.3.2 | prompt | Do you know how the pre-synaptic neuron transmits an impulse (action potential) across the synaptic cleft to the post-synaptic neuron? |  |
-| F083 | 18.3.2 | concept | Chemicals called neurotransmitters are involved in the transmission of impulses at these synapses. |  |
-| F084 | 18.3.2 | concept | The axon terminals contain vesicles filled with these neurotransmitters. |  |
-| F085 | 18.3.2 | process | When an impulse (action potential) arrives at the axon terminal, it stimulates the movement of the synaptic vesicles towards the membrane where they fuse with the plasma membrane and release their neurotransmitters in the synaptic cleft. |  |
-| F086 | 18.3.2 | process | The released neurotransmitters bind to their specific receptors, present on the post-synaptic membrane. |  |
-| F087 | 18.3.2 | process | This binding opens ion channels allowing the entry of ions which can generate a new potential in the post-synaptic neuron. |  |
-| F088 | 18.3.2 | concept | The new potential developed may be either excitatory or inhibitory. |  |
-| F089 | 18.4 | heading | 18.4 CENTRAL NEURAL SYSTEM |  |
-| F090 | 18.4 | opener | The brain is the central information processing organ of our body, and acts as the 'command and control system'. |  |
-| F091 | 18.4 | concept | It controls the voluntary movements, balance of the body, functioning of vital involuntary organs (e.g., lungs, heart, kidneys, etc.), thermoregulation, hunger and thirst, circadian (24-hour) rhythms of our body, activities of several endocrine glands and human behaviour. |  |
-| F092 | 18.4 | concept | It is also the site for processing of vision, hearing, speech, memory, intelligence, emotions and thoughts. |  |
-| F093 | 18.4 | concept | The human brain is well protected by the skull. |  |
-| F094 | 18.4 | concept | Inside the skull, the brain is covered by cranial meninges consisting of an outer layer called dura mater, a very thin middle layer called arachnoid and an inner layer (which is in contact with the brain tissue) called pia mater. |  |
-| F095 | 18.4 | concept | The brain can be divided into three major parts: (i) forebrain, (ii) midbrain, and (iii) hindbrain (Figure 18.4). |  |
-| F096 | 18.4.1 | heading | 18.4.1 Forebrain |  |
-| F097 | 18.4.1 | opener | The forebrain consists of cerebrum, thalamus and hypothalamus (Figure 18.4). |  |
-| F098 | 18.4.1 | concept | Cerebrum forms the major part of the human brain. |  |
-| F099 | 18.4.1 | concept | A deep cleft divides the cerebrum longitudinally into two halves, which are termed as the left and right cerebral hemispheres. |  |
-| F100 | 18.4.1 | definition | The hemispheres are connected by a tract of nerve fibres called corpus callosum. |  |
-| F101 | 18.4.1 | definition | The layer of cells which covers the cerebral hemisphere is called cerebral cortex and is thrown into prominent folds. |  |
-| F102 | 18.4.1 | definition | The cerebral cortex is referred to as the grey matter due to its greyish appearance. |  |
-| F103 | 18.4.1 | concept | The neuron cell bodies are concentrated here giving the colour. |  |
-| F104 | 18.4.1 | concept | The cerebral cortex contains motor areas, sensory areas and large regions that are neither clearly sensory nor motor in function. |  |
-| F105 | 18.4.1 | definition | These regions called as the association areas are responsible for complex functions like intersensory associations, memory and communication. |  |
-| F106 | 18.4.1 | concept | Fibres of the tracts are covered with the myelin sheath, which constitute the inner part of cerebral hemisphere. |  |
-| F107 | 18.4.1 | definition | They give an opaque white appearance to the layer and, hence, is called the white matter. |  |
-| F108 | 18.4.1 | concept | The cerebrum wraps around a structure called thalamus, which is a major coordinating centre for sensory and motor signaling. |  |
-| F109 | 18.4.1 | concept | Another very important part of the brain called hypothalamus lies at the base of the thalamus. |  |
-| F110 | 18.4.1 | concept | The hypothalamus contains a number of centres which control body temperature, urge for eating and drinking. |  |
-| F111 | 18.4.1 | concept | It also contains several groups of neurosecretory cells, which secrete hormones called hypothalamic hormones. |  |
-| F112 | 18.4.1 | definition | The inner parts of cerebral hemispheres and a group of associated deep structures like amygdala, hippocampus, etc., form a complex structure called the limbic lobe or limbic system. |  |
-| F113 | 18.4.1 | concept | Along with the hypothalamus, it is involved in the regulation of sexual behaviour, expression of emotional reactions (e.g., excitement, pleasure, rage and fear), and motivation. |  |
-| F114 | 18.4.2 | heading | 18.4.2 Midbrain |  |
-| F115 | 18.4.2 | opener | The midbrain is located between the thalamus/hypothalamus of the forebrain and pons of the hindbrain. |  |
-| F116 | 18.4.2 | concept | A canal called the cerebral aqueduct passess through the midbrain. |  |
-| F117 | 18.4.2 | number | The dorsal portion of the midbrain consists mainly of four round swellings (lobes) called corpora quadrigemina. |  |
-| F118 | 18.4.3 | heading | 18.4.3 Hindbrain |  |
-| F119 | 18.4.3 | opener | The hindbrain comprises pons, cerebellum and medulla (also called the medulla oblongata). |  |
-| F120 | 18.4.3 | concept | Pons consists of fibre tracts that interconnect different regions of the brain. |  |
-| F121 | 18.4.3 | concept | Cerebellum has very convoluted surface in order to provide the additional space for many more neurons. |  |
-| F122 | 18.4.3 | concept | The medulla of the brain is connected to the spinal cord. |  |
-| F123 | 18.4.3 | concept | The medulla contains centres which control respiration, cardiovascular reflexes and gastric secretions. |  |
-| F124 | 18.4.3 | concept | Three major regions make up the brain stem; mid brain, pons and medulla oblongata. |  |
-| F125 | 18.4.3 | concept | Brain stem forms the connections between the brain and spinal cord. |  |
-| F126 | SUMMARY | heading | SUMMARY |  |
-| F127 | EXERCISES | heading | EXERCISES |  |
-| F128 | Fig 18.1 | caption | Figure 18.1 Structure of a neuron |  |
-| F129 | Fig 18.2 | caption | Figure 18.2 Diagrammatic representation of impulse conduction through an axon (at points A and B) |  |
-| F130 | Fig 18.3 | caption | Figure 18.3 Diagram showing axon terminal and synapse |  |
-| F131 | Fig 18.4 | caption | Figure 18.4 Diagram showing sagital section of the human brain |  |
+| F001 | Title plate | heading | CHAPTER 18 — NEURAL CONTROL AND COORDINATION | x |
+| F002 | Intro | opener | As you know, the functions of the organs/organ systems in our body must be coordinated to maintain homeostasis. | x |
+| F003 | Intro | definition | Coordination is the process through which two or more organs interact and complement the functions of one another. | x |
+| F004 | Intro | example | For example, when we do physical exercises, the energy demand is increased for maintaining an increased muscular activity. | x |
+| F005 | Intro | example | The supply of oxygen is also increased. | x |
+| F006 | Intro | process | The increased supply of oxygen necessitates an increase in the rate of respiration, heart beat and increased blood flow via blood vessels. | x |
+| F007 | Intro | process | When physical exercise is stopped, the activities of nerves, lungs, heart and kidney gradually return to their normal conditions. | x |
+| F008 | Intro | concept | Thus, the functions of muscles, lungs, heart, blood vessels, kidney and other organs are coordinated while performing physical exercises. | x |
+| F009 | Intro | concept | In our body the neural system and the endocrine system jointly coordinate and integrate all the activities of the organs so that they function in a synchronised fashion. | x |
+| F010 | Intro | concept | The neural system provides an organised network of point-to-point connections for a quick coordination. | x |
+| F011 | Intro | concept | The endocrine system provides chemical integration through hormones. | x |
+| F012 | Intro | concept | In this chapter, you will learn about the neural system of human, mechanisms of neural coordination like transmission of nerve impulse and impulse conduction across a synapse. | x |
+| F013 | 18.1 | heading | 18.1 NEURAL SYSTEM | x |
+| F014 | 18.1 | opener | The neural system of all animals is composed of highly specialised cells called neurons which can detect, receive and transmit different kinds of stimuli. | x |
+| F015 | 18.1 | concept | The neural organisation is very simple in lower invertebrates. | x |
+| F016 | 18.1 | example | For example, in Hydra it is composed of a network of neurons. | x |
+| F017 | 18.1 | example | The neural system is better organised in insects, where a brain is present along with a number of ganglia and neural tissues. | x |
+| F018 | 18.1 | concept | The vertebrates have a more developed neural system. | x |
+| F019 | 18.2 | heading | 18.2 HUMAN NEURAL SYSTEM | x |
+| F020 | 18.2 | opener | The human neural system is divided into two parts : (i) the central neural system (CNS) (ii) the peripheral neural system (PNS) | x |
+| F021 | 18.2 | concept | The CNS includes the brain and the spinal cord and is the site of information processing and control. | x |
+| F022 | 18.2 | definition | The PNS comprises of all the nerves of the body associated with the CNS (brain and spinal cord). | x |
+| F023 | 18.2 | concept | The nerve fibres of the PNS are of two types : (a) afferent fibres (b) efferent fibres | x |
+| F024 | 18.2 | definition | The afferent nerve fibres transmit impulses from tissues/organs to the CNS and the efferent fibres transmit regulatory impulses from the CNS to the concerned peripheral tissues/organs. | x |
+| F025 | 18.2 | concept | The PNS is divided into two divisions called somatic neural system and autonomic neural system. | x |
+| F026 | 18.2 | definition | The somatic neural system relays impulses from the CNS to skeletal muscles while the autonomic neural system transmits impulses from the CNS to the involuntary organs and smooth muscles of the body. | x |
+| F027 | 18.2 | concept | The autonomic neural system is further classified into sympathetic neural system and parasympathetic neural system. | x |
+| F028 | 18.2 | definition | Visceral nervous system is the part of the peripheral nervous system that comprises the whole complex of nerves, fibres, ganglia, and plexuses by which impulses travel from the central nervous system to the viscera and from the viscera to the central nervous system. | x |
+| F029 | 18.3 | heading | 18.3 NEURON AS STRUCTURAL AND FUNCTIONAL UNIT OF NEURAL SYSTEM | x |
+| F030 | 18.3 | opener | A neuron is a microscopic structure composed of three major parts, namely, cell body, dendrites and axon (Figure 18.1). | x |
+| F031 | 18.3 | concept | The cell body contains cytoplasm with typical cell organelles and certain granular bodies called Nissl's granules. | x |
+| F032 | 18.3 | definition | Short fibres which branch repeatedly and project out of the cell body also contain Nissl's granules and are called dendrites. | x |
+| F033 | 18.3 | process | These fibres transmit impulses towards the cell body. | x |
+| F034 | 18.3 | concept | The axon is a long fibre, the distal end of which is branched. | x |
+| F035 | 18.3 | definition | Each branch terminates as a bulb-like structure called synaptic knob which possess synaptic vesicles containing chemicals called neurotransmitters. | x |
+| F036 | 18.3 | process | The axons transmit nerve impulses away from the cell body to a synapse or to a neuro-muscular junction. | x |
+| F037 | 18.3 | concept | Based on the number of axon and dendrites, the neurons are divided into three types, i.e., multipolar, bipolar and unipolar. | x |
+| F038 | 18.3 | definition | multipolar (with one axon and two or more dendrites; found in the cerebral cortex) | x |
+| F039 | 18.3 | definition | bipolar (with one axon and one dendrite, found in the retina of eye) | x |
+| F040 | 18.3 | definition | unipolar (cell body with one axon only; found usually in the embryonic stage) | x |
+| F041 | 18.3 | concept | There are two types of axons, namely, myelinated and non-myelinated. | x |
+| F042 | 18.3 | concept | The myelinated nerve fibres are enveloped with Schwann cells, which form a myelin sheath around the axon. | x |
+| F043 | 18.3 | definition | The gaps between two adjacent myelin sheaths are called nodes of Ranvier. | x |
+| F044 | 18.3 | concept | Myelinated nerve fibres are found in spinal and cranial nerves. | x |
+| F045 | 18.3 | concept | Unmyelinated nerve fibre is enclosed by a Schwann cell that does not form a myelin sheath around the axon, and is commonly found in autonomous and the somatic neural systems. | x |
+| F046 | 18.3.1 | heading | 18.3.1 Generation and Conduction of Nerve Impulse | x |
+| F047 | 18.3.1 | opener | Neurons are excitable cells because their membranes are in a polarised state. | x |
+| F048 | 18.3.1 | prompt | Do you know why the membrane of a neuron is polarised? | x |
+| F049 | 18.3.1 | concept | Different types of ion channels are present on the neural membrane. | x |
+| F050 | 18.3.1 | concept | These ion channels are selectively permeable to different ions. | x |
+| F051 | 18.3.1 | process | When a neuron is not conducting any impulse, i.e., resting, the axonal membrane is comparatively more permeable to potassium ions (K+) and nearly impermeable to sodium ions (Na+). | x |
+| F052 | 18.3.1 | concept | Similarly, the membrane is impermeable to negatively charged proteins present in the axoplasm. | x |
+| F053 | 18.3.1 | concept | Consequently, the axoplasm inside the axon contains high concentration of K+ and negatively charged proteins and low concentration of Na+. | x |
+| F054 | 18.3.1 | concept | In contrast, the fluid outside the axon contains a low concentration of K+, a high concentration of Na+ and thus form a concentration gradient. | x |
+| F055 | 18.3.1 | number | These ionic gradients across the resting membrane are maintained by the active transport of ions by the sodium-potassium pump which transports 3 Na+ outwards for 2 K+ into the cell. | x |
+| F056 | 18.3.1 | process | As a result, the outer surface of the axonal membrane possesses a positive charge while its inner surface becomes negatively charged and, therefore is, polarised. | x |
+| F057 | 18.3.1 | definition | The electrical potential difference across the resting plasma membrane is called as the resting potential. | x |
+| F058 | 18.3.1 | prompt | You might be curious to know about the mechanisms of generation of nerve impulse and its conduction along an axon. | x |
+| F059 | 18.3.1 | process | When a stimulus is applied at a site (Figure 18.2 e.g., point A) on the polarised membrane, the membrane at the site A becomes freely permeable to Na+. | x |
+| F060 | 18.3.1 | process | This leads to a rapid influx of Na+ followed by the reversal of the polarity at that site, i.e., the outer surface of the membrane becomes negatively charged and the inner side becomes positively charged. | x |
+| F061 | 18.3.1 | process | The polarity of the membrane at the site A is thus reversed and hence depolarised. | x |
+| F062 | 18.3.1 | definition | The electrical potential difference across the plasma membrane at the site A is called the action potential, which is in fact termed as a nerve impulse. | x |
+| F063 | 18.3.1 | concept | At sites immediately ahead, the axon (e.g., site B) membrane has a positive charge on the outer surface and a negative charge on its inner surface. | x |
+| F064 | 18.3.1 | process | As a result, a current flows on the inner surface from site A to site B. | x |
+| F065 | 18.3.1 | process | On the outer surface current flows from site B to site A (Figure 18.2) to complete the circuit of current flow. | x |
+| F066 | 18.3.1 | process | Hence, the polarity at the site is reversed, and an action potential is generated at site B. | x |
+| F067 | 18.3.1 | process | Thus, the impulse (action potential) generated at site A arrives at site B. | x |
+| F068 | 18.3.1 | process | The sequence is repeated along the length of the axon and consequently the impulse is conducted. | x |
+| F069 | 18.3.1 | concept | The rise in the stimulus-induced permeability to Na+ is extremely short-lived. | x |
+| F070 | 18.3.1 | process | It is quickly followed by a rise in permeability to K+. | x |
+| F071 | 18.3.1 | process | Within a fraction of a second, K+ diffuses outside the membrane and restores the resting potential of the membrane at the site of excitation and the fibre becomes once more responsive to further stimulation. | x |
+| F072 | 18.3.2 | heading | 18.3.2 Transmission of Impulses | x |
+| F073 | 18.3.2 | opener | A nerve impulse is transmitted from one neuron to another through junctions called synapses. | x |
+| F074 | 18.3.2 | definition | A synapse is formed by the membranes of a pre-synaptic neuron and a post-synaptic neuron, which may or may not be separated by a gap called synaptic cleft. | x |
+| F075 | 18.3.2 | concept | There are two types of synapses, namely, electrical synapses and chemical synapses. | x |
+| F076 | 18.3.2 | concept | At electrical synapses, the membranes of pre- and post-synaptic neurons are in very close proximity. | x |
+| F077 | 18.3.2 | process | Electrical current can flow directly from one neuron into the other across these synapses. | x |
+| F078 | 18.3.2 | concept | Transmission of an impulse across electrical synapses is very similar to impulse conduction along a single axon. | x |
+| F079 | 18.3.2 | concept | Impulse transmission across an electrical synapse is always faster than that across a chemical synapse. | x |
+| F080 | 18.3.2 | concept | Electrical synapses are rare in our system. | x |
+| F081 | 18.3.2 | definition | At a chemical synapse, the membranes of the pre- and post-synaptic neurons are separated by a fluid-filled space called synaptic cleft (Figure 18.3). | x |
+| F082 | 18.3.2 | prompt | Do you know how the pre-synaptic neuron transmits an impulse (action potential) across the synaptic cleft to the post-synaptic neuron? | x |
+| F083 | 18.3.2 | concept | Chemicals called neurotransmitters are involved in the transmission of impulses at these synapses. | x |
+| F084 | 18.3.2 | concept | The axon terminals contain vesicles filled with these neurotransmitters. | x |
+| F085 | 18.3.2 | process | When an impulse (action potential) arrives at the axon terminal, it stimulates the movement of the synaptic vesicles towards the membrane where they fuse with the plasma membrane and release their neurotransmitters in the synaptic cleft. | x |
+| F086 | 18.3.2 | process | The released neurotransmitters bind to their specific receptors, present on the post-synaptic membrane. | x |
+| F087 | 18.3.2 | process | This binding opens ion channels allowing the entry of ions which can generate a new potential in the post-synaptic neuron. | x |
+| F088 | 18.3.2 | concept | The new potential developed may be either excitatory or inhibitory. | x |
+| F089 | 18.4 | heading | 18.4 CENTRAL NEURAL SYSTEM | x |
+| F090 | 18.4 | opener | The brain is the central information processing organ of our body, and acts as the 'command and control system'. | x |
+| F091 | 18.4 | concept | It controls the voluntary movements, balance of the body, functioning of vital involuntary organs (e.g., lungs, heart, kidneys, etc.), thermoregulation, hunger and thirst, circadian (24-hour) rhythms of our body, activities of several endocrine glands and human behaviour. | x |
+| F092 | 18.4 | concept | It is also the site for processing of vision, hearing, speech, memory, intelligence, emotions and thoughts. | x |
+| F093 | 18.4 | concept | The human brain is well protected by the skull. | x |
+| F094 | 18.4 | concept | Inside the skull, the brain is covered by cranial meninges consisting of an outer layer called dura mater, a very thin middle layer called arachnoid and an inner layer (which is in contact with the brain tissue) called pia mater. | x |
+| F095 | 18.4 | concept | The brain can be divided into three major parts: (i) forebrain, (ii) midbrain, and (iii) hindbrain (Figure 18.4). | x |
+| F096 | 18.4.1 | heading | 18.4.1 Forebrain | x |
+| F097 | 18.4.1 | opener | The forebrain consists of cerebrum, thalamus and hypothalamus (Figure 18.4). | x |
+| F098 | 18.4.1 | concept | Cerebrum forms the major part of the human brain. | x |
+| F099 | 18.4.1 | concept | A deep cleft divides the cerebrum longitudinally into two halves, which are termed as the left and right cerebral hemispheres. | x |
+| F100 | 18.4.1 | definition | The hemispheres are connected by a tract of nerve fibres called corpus callosum. | x |
+| F101 | 18.4.1 | definition | The layer of cells which covers the cerebral hemisphere is called cerebral cortex and is thrown into prominent folds. | x |
+| F102 | 18.4.1 | definition | The cerebral cortex is referred to as the grey matter due to its greyish appearance. | x |
+| F103 | 18.4.1 | concept | The neuron cell bodies are concentrated here giving the colour. | x |
+| F104 | 18.4.1 | concept | The cerebral cortex contains motor areas, sensory areas and large regions that are neither clearly sensory nor motor in function. | x |
+| F105 | 18.4.1 | definition | These regions called as the association areas are responsible for complex functions like intersensory associations, memory and communication. | x |
+| F106 | 18.4.1 | concept | Fibres of the tracts are covered with the myelin sheath, which constitute the inner part of cerebral hemisphere. | x |
+| F107 | 18.4.1 | definition | They give an opaque white appearance to the layer and, hence, is called the white matter. | x |
+| F108 | 18.4.1 | concept | The cerebrum wraps around a structure called thalamus, which is a major coordinating centre for sensory and motor signaling. | x |
+| F109 | 18.4.1 | concept | Another very important part of the brain called hypothalamus lies at the base of the thalamus. | x |
+| F110 | 18.4.1 | concept | The hypothalamus contains a number of centres which control body temperature, urge for eating and drinking. | x |
+| F111 | 18.4.1 | concept | It also contains several groups of neurosecretory cells, which secrete hormones called hypothalamic hormones. | x |
+| F112 | 18.4.1 | definition | The inner parts of cerebral hemispheres and a group of associated deep structures like amygdala, hippocampus, etc., form a complex structure called the limbic lobe or limbic system. | x |
+| F113 | 18.4.1 | concept | Along with the hypothalamus, it is involved in the regulation of sexual behaviour, expression of emotional reactions (e.g., excitement, pleasure, rage and fear), and motivation. | x |
+| F114 | 18.4.2 | heading | 18.4.2 Midbrain | x |
+| F115 | 18.4.2 | opener | The midbrain is located between the thalamus/hypothalamus of the forebrain and pons of the hindbrain. | x |
+| F116 | 18.4.2 | concept | A canal called the cerebral aqueduct passess through the midbrain. | x |
+| F117 | 18.4.2 | number | The dorsal portion of the midbrain consists mainly of four round swellings (lobes) called corpora quadrigemina. | x |
+| F118 | 18.4.3 | heading | 18.4.3 Hindbrain | x |
+| F119 | 18.4.3 | opener | The hindbrain comprises pons, cerebellum and medulla (also called the medulla oblongata). | x |
+| F120 | 18.4.3 | concept | Pons consists of fibre tracts that interconnect different regions of the brain. | x |
+| F121 | 18.4.3 | concept | Cerebellum has very convoluted surface in order to provide the additional space for many more neurons. | x |
+| F122 | 18.4.3 | concept | The medulla of the brain is connected to the spinal cord. | x |
+| F123 | 18.4.3 | concept | The medulla contains centres which control respiration, cardiovascular reflexes and gastric secretions. | x |
+| F124 | 18.4.3 | concept | Three major regions make up the brain stem; mid brain, pons and medulla oblongata. | x |
+| F125 | 18.4.3 | concept | Brain stem forms the connections between the brain and spinal cord. | x |
+| F126 | SUMMARY | heading | SUMMARY | x |
+| F127 | EXERCISES | heading | EXERCISES | x |
+| F128 | Fig 18.1 | caption | Figure 18.1 Structure of a neuron | x |
+| F129 | Fig 18.2 | caption | Figure 18.2 Diagrammatic representation of impulse conduction through an axon (at points A and B) | x |
+| F130 | Fig 18.3 | caption | Figure 18.3 Diagram showing axon terminal and synapse | x |
+| F131 | Fig 18.4 | caption | Figure 18.4 Diagram showing sagital section of the human brain | x |
 
 ### Caption discrepancy against the frozen `1-F` figure manifest (recorded, not silently reconciled)
 
