@@ -539,3 +539,37 @@ No asset, crop rectangle, caption or inventory row changed — only the draw-tim
 ### Known linter state
 
 `check_pdf.py` exits **0** (VERDICT WARN, 0 fail, 1 warn) — Gate 2 is GREEN. The 270 Facts rows and 12 figure-label-matrix rows are now all ticked `x` (the Pass-2 bookkeeping debt described in earlier drafts is cleared; see the *Gate 2 closure record* below). Check 4's WARN is the standing benign one: it fires on inventory rows whose own text contains *portrait*/*photo*, and this chapter embeds no human-subject image at all. Checks 1, 2, 3, 5, 6 (116/116 labels), 7 (270/270 ticked), 8 (17/17 A4 portrait) and 9 (88 banners, 0 orphaned headings) pass.
+
+## Gate 3(a) closure record — visual render check (Pass 3, 2026-09-01)
+
+**Environment.** `/vercel/share/neetenv` was **absent at session start** — the expected §0.2 state, and the first action of the session, so nothing was diagnosed before it. Rebuilt per §0.2 (`uv venv … --python 3.13` + `uv pip install … reportlab pdfplumber pymupdf Pillow`) and version-checked: CPython **3.13.11** @ `/vercel/share/neetenv` · reportlab 5.0.1 · pdfplumber 0.11.10 · pymupdf 1.28.2 · Pillow 12.3.0. Every command ran through that interpreter.
+
+**Gate 2 re-verified from disk before Pass 3 opened (§6, "do not begin the human pass while the linter is red").** `check_pdf.py "notes/class 11/Ch11_PhotosynthesisInHigherPlants"` re-run against the **committed** PDF → **exit 0, VERDICT WARN (0 fail / 1 warn)**. The single WARN is check 4's standing benign portrait-row false positive (no human-subject image is embedded). Geometry check reports **17/17 pages A4 portrait**; smallest glyph **6.0 pt**; all embedded images single-channel monochrome; **116/116 figure labels in running text**.
+
+**(a) Visual render check — EVERY page inspected, not spot-checked.** All **17 of 17** pages were rendered from the committed PDF with `pymupdf` (≈150 dpi colour for reading + a 1-bit true-print-DPI B&W threshold render for the photocopy-safety pass) and opened and looked at individually. Result: **zero confirmed layout defects.** Per-page findings:
+
+| Pages | What was confirmed |
+|---|---|
+| 1 | H1 title + DNA motif; Unit-4 + Ch-11 + 11.1 banners; 2 tables (perspectives, ) with dark headers; process-flow Experiment-1 step badges legible; CO2 subscript correct |
+| 2 | Experiment-1/2 step badges; §11.2 + 11.2a–11.2d banners; NOTE box (Priestley hypothesis) with the "!" icon rendered; no orphaned heading at foot |
+| 3 | §11.2e/f + §11.3 banners; van Niel equations with sub/superscripts (2H2A, C6H12O6, 6H2O); **Fig 11.2** embedded in bordered box, all 9 leader-line labels legible, caption present |
+| 4 | 2 tables (chloroplast parts, leaf pigments) dark header + zebra rows; NOTE box (dark-reactions); §11.4 banner |
+| 5 | **Figs 11.3a / 11.3b / 11.3c** all embedded mono with panel markers (a)/(b)/(c) and the colour-carried identities restated in the captions; §11.5 banner |
+| 6 | NOTE box (photosystem naming); **Fig 11.4** embedded; photosystem table; §11.6 THE ELECTRON TRANSPORT process badges with NADP+/NADPH+H+ superscripts |
+| 7 | **Fig 11.5** (Z scheme) embedded with descriptive caption; §11.6.1/11.6.2 banners; NOTE box (water-splitting complex) |
+| 8 | **Fig 11.6** (cyclic) embedded; §11.6.3 banner; superscripts (NADP+, NADPH + H+) correct |
+| 9 | **Fig 11.7** (chemiosmosis) embedded with long read-aloud caption; process badges 1–5; sub/superscripts (H2O → 1/2 O2 + H+) correct |
+| 10 | CF0/CF1 subscripts; §11.7 banner; no overflow |
+| 11 | **Fig 11.8** (Calvin cycle) embedded (width 7.6 cm, per layout ledger); Stage-1/2/3 banners; descriptive caption |
+| 12 | Calvin balance-sheet table; **MEMORY AID — not in NCERT** star box; §11.8 THE C4 PATHWAY banner; **Fig 11.9** embedded (width 7.4 cm) |
+| 13 | §11.9 PHOTORESPIRATION banner; process badges with the cyclic "last step feeds back to step 1" note; NOTE box; C3/C4 subscripts |
+| 14 | **Table 11.1** (C3/C4 differences) fully filled, dark header + zebra rows, no run-off; §11.10 banner; factors table |
+| 15 | §11.10.1/11.10.2 banners; **Fig 11.10** (light-intensity graph, width 6.2 cm) embedded; CO2-response table |
+| 16 | §11.10.3/11.10.4 + QUICK RECAP (Recap) + TERMS USED (Appendix) banners; Ex.1 answer box |
+| 17 | Ex.5/Ex.6/Ex.7 answer boxes with `[addition]` tags; chapter ends cleanly, no trailing orphan |
+
+**Cross-page style consistency (§7).** One rendered instance of each element type was pulled from ≥3 different points and compared: H1 (p1), banner H2/H3 (pp1, 6, 14), tables (pp1, 4, 14), NOTE box (pp2, 6, 13), MEMORY-AID box (p12), process-flow (pp1, 6, 13), figure box (pp3, 9, 15). All instances of each type are visually identical — expected, since every style is imported from `neet_template.py` (this check confirms the template held rather than hunting hand-typed drift). **No footer / page-number strip on any page (defect-1 class); every badge and step digit legible (defect-2/3 classes).**
+
+**No embedded colour and no human photograph.** The 1-bit renders and check 3 agree every figure is true monochrome; Fig 11.1 (Priestley) and the Melvin Calvin headshot are the two documented deliberate omissions (see *Deliberate operator omissions*), so the chapter carries no human-subject image — check 4's WARN is that known false positive, not a suppressed finding.
+
+**GATE 3(a): CLOSED — 17/17 pages inspected, zero confirmed layout defects, cross-page styles identical, linter green on the committed PDF.** Pass 3(b) — the bidirectional full-read content cross-check against this frozen table — is the only remaining Gate 3 condition and has **not** yet been run.
