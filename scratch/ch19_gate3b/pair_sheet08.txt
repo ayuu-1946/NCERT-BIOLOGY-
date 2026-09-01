@@ -1,0 +1,70 @@
+===== SOURCE SHEET 8  (printed page number detected: 8) =====
+--- 20 SOURCE SENTENCES ---
+S001. BIOLOGY 246 uptake and utilisation
+S002. As a result, there is a rapid movement of glucose from blood to hepatocytes and adipocytes resulting in decreased blood glucose levels (hypoglycemia)
+S003. Insulin also stimulates conversion of glucose to glycogen (glycogenesis) in the target cells
+S004. The glucose homeostasis in blood is thus maintained jointly by the two – insulin and glucagons
+S005. Prolonged hyperglycemia leads to a complex disorder called diabetes mellitus which is associated with loss of glucose through urine and formation of harmful compounds known as ketone bodies
+S006. Diabetic patients are successfully treated with insulin therapy
+S007. 19.2.9 Testis A pair of testis is present in the scrotal sac (outside abdomen) of male individuals (Figure 19.1)
+S008. Testis performs dual functions as a primary sex organ as well as an endocrine gland
+S009. Testis is composed of seminiferous tubules and stromal or interstitial tissue
+S010. The Leydig cells or interstitial cells, which are present in the intertubular spaces produce a group of hormones called androgens mainly testosterone
+S011. Androgens regulate the development, maturation and functions of the male accessory sex organs like epididymis, vas deferens, seminal vesicles, prostate gland, urethra etc. These hormones stimulate muscular growth, growth of facial and axillary hair, aggressiveness, low pitch of voice etc. Androgens play a major stimulatory role in the process of spermatogenesis (formation of spermatozoa)
+S012. Androgens act on the central neural system and influence the male sexual behaviour (libido)
+S013. These hormones produce anabolic (synthetic) effects on protein and carbohydrate metabolism
+S014. 19.2.10 Ovary Females have a pair of ovaries located in the abdomen (Figure 19.1)
+S015. Ovary is the primary female sex organ which produces one ovum during each menstrual cycle
+S016. In addition, ovary also produces two groups of steroid hormones called estrogen and progesterone
+S017. Ovary is composed of ovarian follicles and stromal tissues
+S018. The estrogen is synthesised and secreted mainly by the growing ovarian follicles
+S019. After ovulation, the ruptured follicle is converted to a structure called corpus luteum, which secretes mainly progesterone
+S020. Estrogens produce wide ranging actions such as stimulation of growth and activities of female secondary sex organs, development of growing Reprint 2026-27
+
+--- 23 INVENTORY ROWS CITING p8 ---
+[F151] (19.2.8 · process · src 8)
+     As a result, there is a rapid movement of glucose from blood to hepatocytes and adipocytes resulting in decreased blood glucose levels (hypoglycemia).
+[F152] (19.2.8 · process · src 8)
+     Insulin also stimulates conversion of glucose to glycogen (glycogenesis) in the target cells.
+[F153] (19.2.8 · concept · src 8)
+     The glucose homeostasis in blood is thus maintained jointly by the two – insulin and glucagons.
+[F154] (19.2.8 · concept · src 8)
+     Prolonged hyperglycemia leads to a complex disorder called diabetes mellitus which is associated with loss of glucose through urine and formation of harmful compounds known as ketone bodies.
+[F156] (19.2.8 · concept · src 8)
+     Diabetic patients are successfully treated with insulin therapy.
+[F157] (19.2.9 · heading · src 8)
+     19.2.9 Testis
+[F158] (19.2.9 · opener · src 8)
+     A pair of testis is present in the scrotal sac (outside abdomen) of male individuals (Figure 19.1).
+[F159] (19.2.9 · concept · src 8)
+     Testis performs dual functions as a primary sex organ as well as an endocrine gland.
+[F160] (19.2.9 · concept · src 8)
+     Testis is composed of seminiferous tubules and stromal or interstitial tissue.
+[F161] (19.2.9 · concept · src 8)
+     The Leydig cells or interstitial cells, which are present in the intertubular spaces produce a group of hormones called androgens mainly testosterone.
+[F162] (19.2.9 · concept · src 8)
+     Androgens regulate the development, maturation and functions of the male accessory sex organs like epididymis, vas deferens, seminal vesicles, prostate gland, urethra etc.
+[F163] (19.2.9 · concept · src 8)
+     These hormones stimulate muscular growth, growth of facial and axillary hair, aggressiveness, low pitch of voice etc.
+[F164] (19.2.9 · concept · src 8)
+     Androgens play a major stimulatory role in the process of spermatogenesis (formation of spermatozoa).
+[F165] (19.2.9 · concept · src 8)
+     Androgens act on the central neural system and influence the male sexual behaviour (libido).
+[F166] (19.2.9 · concept · src 8)
+     These hormones produce anabolic (synthetic) effects on protein and carbohydrate metabolism.
+[F168] (19.2.10 · heading · src 8)
+     19.2.10 Ovary
+[F169] (19.2.10 · opener · src 8)
+     Females have a pair of ovaries located in the abdomen (Figure 19.1).
+[F170] (19.2.10 · concept · src 8)
+     Ovary is the primary female sex organ which produces one ovum during each menstrual cycle.
+[F171] (19.2.10 · concept · src 8)
+     In addition, ovary also produces two groups of steroid hormones called estrogen and progesterone.
+[F172] (19.2.10 · concept · src 8)
+     Ovary is composed of ovarian follicles and stromal tissues.
+[F173] (19.2.10 · concept · src 8)
+     The estrogen is synthesised and secreted mainly by the growing ovarian follicles.
+[F174] (19.2.10 · process · src 8)
+     After ovulation, the ruptured follicle is converted to a structure called corpus luteum, which secretes mainly progesterone.
+[F175] (19.2.10 · concept · src 8)
+     Estrogens produce wide ranging actions such as stimulation of growth and activities of female secondary sex organs, development of growing ovarian follicles, appearance of female secondary sex characters (e.g., high pitch of voice, etc.) and mammary gland development.

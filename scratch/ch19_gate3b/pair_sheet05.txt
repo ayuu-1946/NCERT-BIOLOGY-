@@ -1,0 +1,78 @@
+===== SOURCE SHEET 5  (printed page number detected: 5) =====
+--- 24 SOURCE SENTENCES ---
+S001. 243 243 CHEMICAL COORDINATION AND INTEGRATION retardation, low intelligence quotient, abnormal skin, deaf-mutism, etc. In adult women, hypothyroidism may cause menstrual cycle to become irregular
+S002. Due to cancer of the thyroid gland or due to development of nodules of the thyroid glands, the rate of synthesis and secretion of the thyroid hormones is increased to abnormal high levels leading to a condition called hyperthyroidism which adversely affects the body physiology
+S003. Exopthalmic goitre is a form of hyperthyroidism, characterised by enlargement of the thyroid gland, protrusion of the eyeballs, increased basal metabolic rate, and weight loss, also called Graves’ disease
+S004. Thyroid hormones play an important role in the regulation of the basal metabolic rate
+S005. These hormones also support the process of red blood cell formation
+S006. Thyroid hormones control the metabolism of carbohydrates, proteins and fats
+S007. Maintenance of water and electrolyte balance is also influenced by thyroid hormones
+S008. Thyroid gland also secretes a protein hormone called thyrocalcitonin (TCT) which regulates the blood calcium levels
+S009. 19.2.5 Parathyroid Gland In humans, four parathyroid glands are present on the back side of the thyroid gland, one pair each in the two lobes of the thyroid gland (Figure 19.3 b)
+S010. The parathyroid glands secrete a peptide hormone called parathyroid hormone (PTH)
+S011. The secretion of PTH is regulated by the circulating levels of calcium ions
+S012. Parathyroid hormone (PTH) increases the Ca2+ levels in the blood
+S013. PTH acts on bones and stimulates the process of bone resorption (dissolution/ demineralisation)
+S014. PTH also stimulates reabsorption of Ca2+ by the renal tubules and increases Ca2+ absorption from the digested food
+S015. It is, thus, clear that PTH is a hypercalcemic hormone, i.e., it increases the blood Ca2+ levels
+S016. Along with TCT, it plays a significant role in calcium balance in the body
+S017. 19.2.6 Thymus The thymus gland is a lobular structure located between lungs behind sternum on the ventral side of aorta
+S018. The thymus plays a major role in the development of the immune system
+S019. This gland secretes the peptide hormones called thymosins
+S020. Thymosins play a major role in the differentiation of T-lymphocytes, which provide cell-mediated immunity
+S021. In addition, thymosins also promote production of antibodies to provide humoral immunity
+S022. Thymus is degenerated in old individuals resulting in a decreased production of thymosins
+S023. As a result, the immune responses of old persons become weak
+S024. Reprint 2026-27
+
+--- 25 INVENTORY ROWS CITING p5 ---
+[F085] (19.2.4 · concept · src 5)
+     In adult women, hypothyroidism may cause menstrual cycle to become irregular.
+[F086] (19.2.4 · concept · src 5)
+     Due to cancer of the thyroid gland or due to development of nodules of the thyroid glands, the rate of synthesis and secretion of the thyroid hormones is increased to abnormal high levels leading to a condition called hyperthyroidism which adversely affects the body physiology.
+[F087] (19.2.4 · concept · src 5)
+     Exopthalmic goitre is a form of hyperthyroidism, characterised by enlargement of the thyroid gland, protrusion of the eyeballs, increased basal metabolic rate, and weight loss, also called Graves’ disease.
+[F088] (19.2.4 · concept · src 5)
+     Thyroid hormones play an important role in the regulation of the basal metabolic rate.
+[F089] (19.2.4 · concept · src 5)
+     These hormones also support the process of red blood cell formation.
+[F090] (19.2.4 · concept · src 5)
+     Thyroid hormones control the metabolism of carbohydrates, proteins and fats.
+[F091] (19.2.4 · concept · src 5)
+     Maintenance of water and electrolyte balance is also influenced by thyroid hormones.
+[F093] (19.2.4 · concept · src 5)
+     Thyroid gland also secretes a protein hormone called thyrocalcitonin (TCT) which regulates the blood calcium levels.
+[F096] (19.2.5 · heading · src 5)
+     19.2.5 Parathyroid Gland
+[F097] (19.2.5 · opener · src 5)
+     In humans, four parathyroid glands are present on the back side of the thyroid gland, one pair each in the two lobes of the thyroid gland (Figure 19.3 b).
+[F098] (19.2.5 · concept · src 5)
+     The parathyroid glands secrete a peptide hormone called parathyroid hormone (PTH).
+[F099] (19.2.5 · concept · src 5)
+     The secretion of PTH is regulated by the circulating levels of calcium ions.
+[F100] (19.2.5 · concept · src 5)
+     Parathyroid hormone (PTH) increases the Ca2+ levels in the blood.
+[F101] (19.2.5 · process · src 5)
+     PTH acts on bones and stimulates the process of bone resorption (dissolution/demineralisation).
+[F102] (19.2.5 · process · src 5)
+     PTH also stimulates reabsorption of Ca2+ by the renal tubules and increases Ca2+ absorption from the digested food.
+[F103] (19.2.5 · definition · src 5)
+     It is, thus, clear that PTH is a hypercalcemic hormone, i.e., it increases the blood Ca2+ levels.
+[F104] (19.2.5 · concept · src 5)
+     Along with TCT, it plays a significant role in calcium balance in the body.
+[F105] (19.2.6 · heading · src 5)
+     19.2.6 Thymus
+[F106] (19.2.6 · opener · src 5)
+     The thymus gland is a lobular structure located between lungs behind sternum on the ventral side of aorta.
+[F107] (19.2.6 · concept · src 5)
+     The thymus plays a major role in the development of the immune system.
+[F108] (19.2.6 · concept · src 5)
+     This gland secretes the peptide hormones called thymosins.
+[F109] (19.2.6 · concept · src 5)
+     Thymosins play a major role in the differentiation of T-lymphocytes, which provide cell-mediated immunity.
+[F110] (19.2.6 · concept · src 5)
+     In addition, thymosins also promote production of antibodies to provide humoral immunity.
+[F111] (19.2.6 · concept · src 5)
+     Thymus is degenerated in old individuals resulting in a decreased production of thymosins.
+[F112] (19.2.6 · concept · src 5)
+     As a result, the immune responses of old persons become weak.

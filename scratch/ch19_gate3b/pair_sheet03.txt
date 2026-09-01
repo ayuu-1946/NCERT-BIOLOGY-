@@ -1,0 +1,64 @@
+===== SOURCE SHEET 3  (printed page number detected: 3) =====
+--- 18 SOURCE SENTENCES ---
+S001. 241 241 CHEMICAL COORDINATION AND INTEGRATION 19.2.2 The Pituitary Gland The pituitary gland is located in a bony cavity called sella tursica and is attached to hypothalamus by a stalk (Figure 19.2)
+S002. It is divided anatomically into an adenohypophysis and a neurohypophysis
+S003. Adenohypophysis consists of two portions, pars distalis and pars intermedia
+S004. The pars distalis region of pituitary, commonly called anterior pituitary, produces growth hormone (GH), prolactin (PRL), thyroid stimulating hormone (TSH), adrenocorticotrophic hormone (ACTH), luteinizing hormone (LH) and follicle stimulating hormone (FSH)
+S005. Pars intermedia secretes only one hormone called melanocyte stimulating hormone (MSH)
+S006. However, in humans, the pars intermedia is almost merged with pars distalis
+S007. Neurohypophysis (pars nervosa) also known as posterior pituitary, stores and releases two hormones called oxytocin and vasopressin, which are actually synthesised by the hypothalamus and are transported axonally to neurohypophysis
+S008. Over-secretion of GH stimulates abnormal growth of the body leading to gigantism and low secretion of GH results in stunted growth resulting in pituitary dwarfism
+S009. Excess secretion of growth hormone in adults especially in middle age can result in severe disfigurement (especially of the face) called Acromegaly, which may lead to serious complications, and premature death if unchecked
+S010. The disease is hard to diagnose in the early stages and often goes undetected for many years, until changes in external features become noticeable
+S011. Prolactin regulates the growth of the mammary glands and formation of milk in them
+S012. TSH stimulates the synthesis and secretion of thyroid hormones from the thyroid gland
+S013. ACTH stimulates the synthesis and secretion of steroid hormones called glucocorticoids from the adrenal cortex
+S014. LH and FSH stimulate gonadal activity and hence are called gonadotrophins
+S015. In males, LH stimulates the synthesis and secretion of hormones called androgens from testis
+S016. In males, FSH and androgens regulate spermatogenesis
+S017. In females, LH induces ovulation of fully mature follicles (graafian follicles) and maintains the corpus luteum, formed from the remnants of the graafian follicles after ovulation
+S018. FSH stimulates growth and development of the ovarian Posterior pituitary Anterior pituitary Hypothalamus Hypothalamic neurons Portal circulation Figure 19.2 Diagrammatic representation of pituitary and its relationship with hypothalamus Reprint 2026-27
+
+--- 21 INVENTORY ROWS CITING p3 ---
+[F038] (19.2.2 · heading · src 3)
+     19.2.2 The Pituitary Gland
+[F039] (19.2.2 · opener · src 3)
+     The pituitary gland is located in a bony cavity called sella tursica and is attached to hypothalamus by a stalk (Figure 19.2).
+[F040] (19.2.2 · concept · src 3)
+     It is divided anatomically into an adenohypophysis and a neurohypophysis.
+[F041] (19.2.2 · concept · src 3)
+     Adenohypophysis consists of two portions, pars distalis and pars intermedia.
+[F042] (19.2.2 · concept · src 3)
+     The pars distalis region of pituitary, commonly called anterior pituitary, produces growth hormone (GH), prolactin (PRL), thyroid stimulating hormone (TSH), adrenocorticotrophic hormone (ACTH), luteinizing hormone (LH) and follicle stimulating hormone (FSH).
+[F044] (19.2.2 · concept · src 3)
+     Pars intermedia secretes only one hormone called melanocyte stimulating hormone (MSH).
+[F045] (19.2.2 · concept · src 3)
+     However, in humans, the pars intermedia is almost merged with pars distalis.
+[F046] (19.2.2 · concept · src 3)
+     Neurohypophysis (pars nervosa) also known as posterior pituitary, stores and releases two hormones called oxytocin and vasopressin, which are actually synthesised by the hypothalamus and are transported axonally to neurohypophysis.
+[F048] (19.2.2 · concept · src 3)
+     Over-secretion of GH stimulates abnormal growth of the body leading to gigantism and low secretion of GH results in stunted growth resulting in pituitary dwarfism.
+[F049] (19.2.2 · concept · src 3)
+     Excess secretion of growth hormone in adults especially in middle age can result in severe disfigurement (especially of the face) called Acromegaly, which may lead to serious complications, and premature death if unchecked.
+[F050] (19.2.2 · concept · src 3)
+     The disease is hard to diagnose in the early stages and often goes undetected for many years, until changes in external features become noticeable.
+[F051] (19.2.2 · concept · src 3)
+     Prolactin regulates the growth of the mammary glands and formation of milk in them.
+[F052] (19.2.2 · concept · src 3)
+     TSH stimulates the synthesis and secretion of thyroid hormones from the thyroid gland.
+[F054] (19.2.2 · concept · src 3)
+     ACTH stimulates the synthesis and secretion of steroid hormones called glucocorticoids from the adrenal cortex.
+[F056] (19.2.2 · definition · src 3)
+     LH and FSH stimulate gonadal activity and hence are called gonadotrophins.
+[F057] (19.2.2 · concept · src 3)
+     In males, LH stimulates the synthesis and secretion of hormones called androgens from testis.
+[F058] (19.2.2 · concept · src 3)
+     In males, FSH and androgens regulate spermatogenesis.
+[F059] (19.2.2 · concept · src 3)
+     In females, LH induces ovulation of fully mature follicles (graafian follicles) and maintains the corpus luteum, formed from the remnants of the graafian follicles after ovulation.
+[F060] (19.2.2 · concept · src 3)
+     FSH stimulates growth and development of the ovarian follicles in females.
+[F069] (Fig 19.2 · caption · src 3)
+     Figure 19.2 Diagrammatic representation of pituitary and its relationship with hypothalamus
+[F213] (Fig 19.2 · caption · src 3)
+     Figure labels: "Hypothalamus"; "Hypothalamic neurons"; "Portal circulation"; "Posterior pituitary"; "Anterior pituitary"

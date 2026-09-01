@@ -1,0 +1,73 @@
+===== SOURCE SHEET 4  (printed page number detected: 4) =====
+--- 21 SOURCE SENTENCES ---
+S001. BIOLOGY 242 follicles in females
+S002. MSH acts on the melanocytes (melanin containing cells) and regulates pigmentation of the skin
+S003. Oxytocin acts on the smooth muscles of our body and stimulates their contraction
+S004. In females, it stimulates a vigorous contraction of uterus at the time of child birth, and milk ejection from the mammary gland
+S005. Vasopressin acts mainly at the kidney and stimulates resorption of water and electrolytes by the distal tubules and thereby reduces loss of water through urine (diuresis)
+S006. Hence, it is also called as anti- diuretic hormone (ADH)
+S007. An impairment affecting synthesis or release of ADH results in a diminished ability of the kidney to conserve water leading to water loss and dehydration
+S008. This condition is known as Diabetes Insipidus
+S009. 19.2.3 The Pineal Gland The pineal gland is located on the dorsal side of forebrain
+S010. Pineal secretes a hormone called melatonin
+S011. Melatonin plays a very important role in the regulation of a 24-hour (diurnal) rhythm of our body
+S012. For example, it helps in maintaining the normal rhythms of sleep-wake cycle, body temperature
+S013. In addition, melatonin also influences metabolism, pigmentation, the menstrual cycle as well as our defense capability
+S014. 19.2.4 Thyroid Gland The thyroid gland is composed of two lobes which are located on either side of the trachea (Figure 19.3 a)
+S015. Both the lobes are interconnected with a thin flap of connective tissue called isthmus
+S016. The thyroid gland is composed of follicles and stromal tissues
+S017. Each thyroid follicle is composed of follicular cells, enclosing a cavity
+S018. These follicular cells synthesise two hormones, tetraiodothyronine or thyroxine (T4) and triiodothyronine (T3)
+S019. Iodine is essential for the normal rate of hormone synthesis in the thyroid
+S020. Deficiency of iodine in our diet results in hypothyroidism and enlargement of the thyroid gland, commonly called goitre
+S021. Hypothyroidism during pregnancy causes defective development and maturation of the growing baby leading to stunted growth (cretinism), mental Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid (a) Ventral side (b) Dorsal side Reprint 2026-27
+
+--- 24 INVENTORY ROWS CITING p4 ---
+[F061] (19.2.2 · concept · src 4)
+     MSH acts on the melanocytes (melanin containing cells) and regulates pigmentation of the skin.
+[F063] (19.2.2 · concept · src 4)
+     Oxytocin acts on the smooth muscles of our body and stimulates their contraction.
+[F064] (19.2.2 · concept · src 4)
+     In females, it stimulates a vigorous contraction of uterus at the time of child birth, and milk ejection from the mammary gland.
+[F065] (19.2.2 · process · src 4)
+     Vasopressin acts mainly at the kidney and stimulates resorption of water and electrolytes by the distal tubules and thereby reduces loss of water through urine (diuresis).
+[F066] (19.2.2 · definition · src 4)
+     Hence, it is also called as anti-diuretic hormone (ADH).
+[F067] (19.2.2 · concept · src 4)
+     An impairment affecting synthesis or release of ADH results in a diminished ability of the kidney to conserve water leading to water loss and dehydration. This condition is known as Diabetes Insipidus.
+[F070] (19.2.3 · heading · src 4)
+     19.2.3 The Pineal Gland
+[F071] (19.2.3 · opener · src 4)
+     The pineal gland is located on the dorsal side of forebrain.
+[F072] (19.2.3 · concept · src 4)
+     Pineal secretes a hormone called melatonin.
+[F073] (19.2.3 · number · src 4)
+     Melatonin plays a very important role in the regulation of a 24-hour (diurnal) rhythm of our body.
+[F074] (19.2.3 · example · src 4)
+     For example, it helps in maintaining the normal rhythms of sleep-wake cycle, body temperature.
+[F075] (19.2.3 · concept · src 4)
+     In addition, melatonin also influences metabolism, pigmentation, the menstrual cycle as well as our defense capability.
+[F076] (19.2.4 · heading · src 4)
+     19.2.4 Thyroid Gland
+[F077] (19.2.4 · opener · src 4)
+     The thyroid gland is composed of two lobes which are located on either side of the trachea (Figure 19.3 a).
+[F078] (19.2.4 · definition · src 4)
+     Both the lobes are interconnected with a thin flap of connective tissue called isthmus.
+[F079] (19.2.4 · concept · src 4)
+     The thyroid gland is composed of follicles and stromal tissues.
+[F080] (19.2.4 · concept · src 4)
+     Each thyroid follicle is composed of follicular cells, enclosing a cavity.
+[F081] (19.2.4 · concept · src 4)
+     These follicular cells synthesise two hormones, tetraiodothyronine or thyroxine (T4) and triiodothyronine (T3).
+[F082] (19.2.4 · concept · src 4)
+     Iodine is essential for the normal rate of hormone synthesis in the thyroid.
+[F083] (19.2.4 · concept · src 4)
+     Deficiency of iodine in our diet results in hypothyroidism and enlargement of the thyroid gland, commonly called goitre.
+[F084] (19.2.4 · concept · src 4)
+     Hypothyroidism during pregnancy causes defective development and maturation of the growing baby leading to stunted growth (cretinism), mental retardation, low intelligence quotient, abnormal skin, deaf-mutism, etc.
+[F095] (Fig 19.3 · caption · src 4)
+     Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid (a) Ventral side (b) Dorsal side
+[F214] (Fig 19.3 (a) · caption · src 4)
+     Figure (a) labels: "Vocal cord"; "Thyroid"; "Trachea"
+[F215] (Fig 19.3 (b) · caption · src 4)
+     Figure (b) labels: "Parathyroid glands"

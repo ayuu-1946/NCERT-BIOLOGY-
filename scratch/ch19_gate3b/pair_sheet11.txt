@@ -1,0 +1,25 @@
+===== SOURCE SHEET 11  (printed page number detected: 11) =====
+--- 7 SOURCE SENTENCES ---
+S001. 249 249 CHEMICAL COORDINATION AND INTEGRATION SUMMARY There are special chemicals which act as hormones and provide chemical coordination, integration and regulation in the human body
+S002. These hormones regulate metabolism, growth and development of our organs, the endocrine glands or certain cells
+S003. The endocrine system is composed of hypothalamus, pituitary and pineal, thyroid, adrenal, pancreas, parathyroid, thymus and gonads (testis and ovary)
+S004. In addition to these, some other organs, e.g., gastrointestinal tract, kidney, heart etc., also produce hormones
+S005. The pituitary gland is divided into three major parts, which are called as pars distalis, pars intermedia and pars nervosa
+S006. Pars distalis produces six trophic hormones
+S007. Pars intermedia secretes Figure 19.5 Diagramatic representation of the mechanism of hormone action : (a) Protein hormone (b) Steroid hormone (b) Reprint 2026-27
+
+--- 7 INVENTORY ROWS CITING p11 ---
+[F020] (19.1 · concept · src 11)
+     These hormones regulate metabolism, growth and development of our organs, the endocrine glands or certain cells.
+[F024] (19.2 · concept · src 11)
+     The endocrine system is composed of hypothalamus, pituitary and pineal, thyroid, adrenal, pancreas, parathyroid, thymus and gonads (testis and ovary).
+[F043] (19.2.2 · number · src 11)
+     Pars distalis produces six trophic hormones.
+[F047] (19.2.2 · concept · src 11)
+     The pituitary gland is divided into three major parts, which are called as  pars distalis, pars intermedia and pars nervosa.
+[F208] (Fig 19.5 · caption · src 11)
+     Figure 19.5 Diagramatic representation of the mechanism of hormone action : (a) Protein hormone  (b) Steroid hormone
+[F209] (Summary · heading · src 11)
+     SUMMARY
+[F218] (Fig 19.5 (b) · caption · src 11)
+     Figure (b) labels: "Hormone (e.g., estrogen)"; "Uterine cell membrane"; "Nucleus"; "Genome"; "mRNA"; "Proteins"; "Hormone-receptor complex"; "Physiological responses (Tissue growth and differentiation)"

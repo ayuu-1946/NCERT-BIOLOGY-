@@ -1,0 +1,52 @@
+===== SOURCE SHEET 2  (printed page number detected: 2) =====
+--- 14 SOURCE SENTENCES ---
+S001. BIOLOGY 240 19.2 HUMAN ENDOCRINE SYSTEM The endocrine glands and hormone producing diffused tissues/cells located in different parts of our body constitute the endocrine system
+S002. Pituitary, pineal, thyroid, adrenal, pancreas, parathyroid, thymus and gonads (testis in males and ovary in females) are the organised endocrine bodies in our body (Figure 19.1)
+S003. In addition to these, some other organs, e.g., gastrointestinal tract, liver, kidney, heart also produce hormones
+S004. A brief account of the structure and functions of all major endocrine glands and hypothalamus of the human body is given in the following sections
+S005. 19.2.1 The Hypothalamus As you know, the hypothalamus is the basal part of diencephalon, forebrain (Figure 19.1) and it regulates a wide spectrum of body functions
+S006. It contains several groups of neurosecretory cells called nuclei which produce hormones
+S007. These hormones regulate the synthesis and secretion of pituitary hormones
+S008. However, the hormones produced by hypothalamus are of two types, the releasing hormones (which stimulate secretion of pituitary hormones) and the inhibiting hormones (which inhibit secretions of pituitary hormones)
+S009. For example a hypothalamic hormone called Gonadotrophin releasing hormone (GnRH) stimulates the pituitary synthesis and release of gonadotrophins
+S010. On the other hand, somatostatin from the hypothalamus inhibits the release of growth hormone from the pituitary
+S011. These hormones originating in the hypothalamic neurons, pass through axons and are released from their nerve endings
+S012. These hormones reach the pituitary gland through a portal circulatory system and regulate the functions of the anterior pituitary
+S013. The posterior pituitary is under the direct neural regulation of the hypothalamus (Figure 19.2)
+S014. Figure 19.1 Location of endocrine glands Testis (in male) Ovary (in female) Adrenal Pancreas Thyroid and Parathyroid Thymus Pineal Pituitary Hypothalamus Reprint 2026-27
+
+--- 17 INVENTORY ROWS CITING p2 ---
+[F021] (19.2 · heading · src 2)
+     19.2   HUMAN ENDOCRINE SYSTEM
+[F022] (19.2 · opener · src 2)
+     The endocrine glands and hormone producing diffused tissues/cells located in different parts of our body constitute the endocrine system.
+[F023] (19.2 · concept · src 2)
+     Pituitary, pineal, thyroid, adrenal, pancreas, parathyroid, thymus and gonads (testis in males and ovary in females) are the organised endocrine bodies in our body (Figure 19.1).
+[F025] (19.2 · concept · src 2)
+     In addition to these, some other organs, e.g., gastrointestinal tract, liver, kidney, heart also produce hormones.
+[F026] (19.2 · concept · src 2)
+     A brief account of the structure and functions of all major endocrine glands and hypothalamus of the human body is given in the following sections.
+[F027] (Fig 19.1 · caption · src 2)
+     Figure 19.1 Location of endocrine glands
+[F028] (19.2.1 · heading · src 2)
+     19.2.1 The Hypothalamus
+[F029] (19.2.1 · opener · src 2)
+     As you know, the hypothalamus is the basal part of diencephalon, forebrain (Figure 19.1) and it regulates a wide spectrum of body functions.
+[F030] (19.2.1 · definition · src 2)
+     It contains several groups of neurosecretory cells called nuclei which produce hormones.
+[F031] (19.2.1 · concept · src 2)
+     These hormones regulate the synthesis and secretion of pituitary hormones.
+[F032] (19.2.1 · definition · src 2)
+     However, the hormones produced by hypothalamus are of two types, the releasing hormones (which stimulate secretion of pituitary hormones) and the inhibiting hormones (which inhibit secretions of pituitary hormones).
+[F033] (19.2.1 · example · src 2)
+     For example a hypothalamic hormone called Gonadotrophin releasing hormone (GnRH) stimulates the pituitary synthesis and release of gonadotrophins.
+[F034] (19.2.1 · example · src 2)
+     On the other hand, somatostatin from the hypothalamus inhibits the release of growth hormone from the pituitary.
+[F035] (19.2.1 · process · src 2)
+     These hormones originating in the hypothalamic neurons, pass through axons and are released from their nerve endings.
+[F036] (19.2.1 · process · src 2)
+     These hormones reach the pituitary gland through a portal circulatory system and regulate the functions of the anterior pituitary.
+[F037] (19.2.1 · concept · src 2)
+     The posterior pituitary is under the direct neural regulation of the hypothalamus (Figure 19.2).
+[F212] (Fig 19.1 · caption · src 2)
+     Figure labels: "Hypothalamus"; "Pituitary"; "Pineal"; "Thyroid and Parathyroid"; "Thymus"; "Pancreas"; "Adrenal"; "Ovary (in female)"; "Testis (in male)"

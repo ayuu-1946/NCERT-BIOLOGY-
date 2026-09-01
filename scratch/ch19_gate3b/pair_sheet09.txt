@@ -1,0 +1,69 @@
+===== SOURCE SHEET 9  (printed page number detected: 9) =====
+--- 23 SOURCE SENTENCES ---
+S001. 247 247 CHEMICAL COORDINATION AND INTEGRATION ovarian follicles, appearance of female secondary sex characters (e.g., high pitch of voice, etc.) and mammary gland development
+S002. Estrogens also regulate female sexual behaviour
+S003. Progesterone supports pregnancy
+S004. Progesterone also acts on the mammary glands and stimulates the formation of alveoli (sac-like structures which store milk) and milk secretion
+S005. 19.3 HORMONES OF HEART, KIDNEY AND GASTROINTESTINAL TRACT Now you know about the endocrine glands and their hormones
+S006. However, as mentioned earlier, hormones are also secreted by some tissues which are not endocrine glands
+S007. For example, the atrial wall of our heart secretes a very important peptide hormone called atrial natriuretic factor (ANF), which decreases blood pressure
+S008. When blood pressure is increased, ANF is secreted which causes dilation of the blood vessels
+S009. This reduces the blood pressure
+S010. The juxtaglomerular cells of kidney produce a peptide hormone called erythropoietin which stimulates erythropoiesis (formation of RBC)
+S011. Endocrine cells present in different parts of the gastro-intestinal tract secrete four major peptide hormones, namely gastrin, secretin, cholecystokinin (CCK) and gastric inhibitory peptide (GIP)
+S012. Gastrin acts on the gastric glands and stimulates the secretion of hydrochloric acid and pepsinogen
+S013. Secretin acts on the exocrine pancreas and stimulates secretion of water and bicarbonate ions
+S014. CCK acts on both pancreas and gall bladder and stimulates the secretion of pancreatic enzymes and bile juice, respectively
+S015. GIP inhibits gastric secretion and motility
+S016. Several other non-endocrine tissues secrete hormones called growth factors
+S017. These factors are essential for the normal growth of tissues and their repairing/regeneration
+S018. 19.4 MECHANISM OF HORMONE ACTION Hormones produce their effects on target tissues by binding to specific proteins called hormone receptors located in the target tissues only
+S019. Hormone receptors present on the cell membrane of the target cells are called membrane-bound receptors and the receptors present inside the target cell are called intracellular receptors, mostly nuclear receptors (present in the nucleus)
+S020. Binding of a hormone to its receptor leads to the formation of a hormone-receptor complex (Figure 19.5 a, b)
+S021. Each receptor is specific to one hormone only and hence receptors are specific
+S022. Hormone-Receptor complex formation leads to certain biochemical changes in the target tissue
+S023. Target tissue metabolism and hence Reprint 2026-27
+
+--- 21 INVENTORY ROWS CITING p9 ---
+[F176] (19.2.10 · concept · src 9)
+     Estrogens also regulate female sexual behaviour.
+[F177] (19.2.10 · concept · src 9)
+     Progesterone supports pregnancy.
+[F178] (19.2.10 · concept · src 9)
+     Progesterone also acts on the mammary glands and stimulates the formation of alveoli (sac-like structures which store milk) and milk secretion.
+[F181] (19.3 · heading · src 9)
+     19.3 HORMONES OF HEART, KIDNEY AND GASTROINTESTINAL TRACT
+[F182] (19.3 · opener · src 9)
+     Now you know about the endocrine glands and their hormones. However, as mentioned earlier, hormones are also secreted by some tissues which are not endocrine glands.
+[F183] (19.3 · concept · src 9)
+     For example, the atrial wall of our heart secretes a very important peptide hormone called atrial natriuretic factor (ANF), which decreases blood pressure.
+[F184] (19.3 · process · src 9)
+     When blood pressure is increased, ANF is secreted which causes dilation of the blood vessels. This reduces the blood pressure.
+[F185] (19.3 · concept · src 9)
+     The juxtaglomerular cells of kidney produce a peptide hormone called erythropoietin which stimulates erythropoiesis (formation of RBC).
+[F186] (19.3 · concept · src 9)
+     Endocrine cells present in different parts of the gastro-intestinal tract secrete four major peptide hormones, namely gastrin, secretin, cholecystokinin (CCK) and gastric inhibitory peptide (GIP).
+[F187] (19.3 · process · src 9)
+     Gastrin acts on the gastric glands and stimulates the secretion of hydrochloric acid and pepsinogen.
+[F188] (19.3 · process · src 9)
+     Secretin acts on the exocrine pancreas and stimulates secretion of water and bicarbonate ions.
+[F189] (19.3 · process · src 9)
+     CCK acts on both pancreas and gall bladder and stimulates the secretion of pancreatic enzymes and bile juice, respectively.
+[F190] (19.3 · process · src 9)
+     GIP inhibits gastric secretion and motility.
+[F192] (19.3 · concept · src 9)
+     Several other non-endocrine tissues secrete hormones called growth factors. These factors are essential for the normal growth of tissues and their repairing/regeneration.
+[F193] (19.4 · heading · src 9)
+     19.4 MECHANISM OF HORMONE ACTION
+[F194] (19.4 · opener · src 9)
+     Hormones produce their effects on target tissues by binding to specific proteins called hormone receptors located in the target tissues only.
+[F195] (19.4 · definition · src 9)
+     Hormone receptors present on the cell membrane of the target cells are called membrane-bound receptors and the receptors present inside the target cell are called intracellular receptors, mostly nuclear receptors (present in the nucleus).
+[F196] (19.4 · process · src 9)
+     Binding of a hormone to its receptor leads to the formation of a hormone-receptor complex (Figure 19.5 a, b).
+[F197] (19.4 · concept · src 9)
+     Each receptor is specific to one hormone only and hence receptors are specific.
+[F198] (19.4 · process · src 9)
+     Hormone-Receptor complex formation leads to certain biochemical changes in the target tissue.
+[F199] (19.4 · concept · src 9)
+     Target tissue metabolism and hence physiological functions are regulated by hormones.
