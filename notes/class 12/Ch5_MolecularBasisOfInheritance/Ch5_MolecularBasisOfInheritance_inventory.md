@@ -920,3 +920,111 @@ one uninventoried fact with exam weight (`D2-1`). The seven "missing" numbers th
 reported are NCERT folio page numbers (83, 88, 89, 98, 101, 102, and `110033` = folio 103
 with digits doubled by the two-column overlay) spliced into sentences by the extractor —
 **zero content numbers and zero proper nouns are missing.**
+
+## Gate 3b section-by-section read log (Pass 3(b) reading claim, both directions)
+
+Per §6 Pass 3(b) and the Gate 3(b) rules (§7), the record must be a **human-legible reading
+claim per section, naming source pages against script blocks** — no coverage percentage,
+similarity score or grep result may stand in for it (the hard bar, §6). The read was run
+**section by section** over the whole 31-page source against the 13 `# ---- N.N ----` /
+divider-marked script blocks; every row count below is the machine-derived per-section total
+(re-parsed from the Facts table, not hand-tallied) and every one of those rows is ticked.
+Figures are attributed to the script block that embeds them (verified from the `figure(...)`
+call sites and their captions), which is also the Pass-3 "figure sits at its topic" check.
+
+Direction 1 = every inventory row traced to the cited **source** page (not merely present in
+our own PDF). Direction 2 = every source sentence/heading checked for an owning row. A
+section is CLEAN only when **both** directions are clean.
+
+| Section | Source pp | Script block | Body rows (all ticked) | Figures embedded (labels) | D1 | D2 |
+|---|---|---|---|---|---|---|
+| Intro | p1 (+ p4 plate) | top of story → `heading("5.1")` | 13 | central-dogma plate (labels filed under Fig 5.3, see `D1-1`) | see `D1-1..D1-3` | CLEAN |
+| §5.1 The DNA | pp2–6 | `5.1` / `5.1.1` / `5.1.2` | 70 | 5.1(6) · 5.2(7) · 5.3(10) · 5.4a(4) · 5.4b(label-free) | CLEAN* | CLEAN |
+| §5.2 The Search for Genetic Material | pp6–10 | `5.2` / `5.2a` / `5.2b` / `5.2.1` / `5.2.2` | 71 | 5.5(10, Hershey-Chase in §5.2.1) | CLEAN | CLEAN |
+| §5.3 RNA World | p10 | `5.3` | 9 | — | CLEAN | CLEAN |
+| §5.4 Replication | pp10–13 | `5.4` / `5.4.1` / `5.4.2` | 47 | 5.6(6) · 5.7(11) · 5.8(6) | CLEAN | CLEAN |
+| §5.5 Transcription | pp13–17 | `5.5` / `5.5.1` / `5.5.2` / `5.5.3` | 53 | 5.9(8) · 5.10(12) · 5.11(11) | CLEAN | CLEAN |
+| §5.6 Genetic Code | pp17–20 | `5.6` / `5.6.1` / `5.6.2` | 55 (incl. `Table 5.1` = `F280`) | 5.12(9, tRNA in §5.6.2) | `D1-4` (row-type only) | CLEAN |
+| §5.7 Translation | pp20–21 | `5.7` | 25 | 5.13(13) | CLEAN | CLEAN |
+| §5.8 Regulation of Gene Expression | pp21–24 | `5.8` / `5.8.1` | 43 | 5.14(13, lac operon in §5.8.1) | CLEAN | CLEAN |
+| §5.9 Human Genome Project | pp24–27 | `5.9` / `5.9a` / `5.9.1` / `5.9.2` | 58 | none embedded (`fig_5_15` label-free, removed from PDF by owner; retained on disk) | CLEAN | CLEAN |
+| §5.10 DNA Fingerprinting | pp27–29 | `5.10` | 49 | 5.16(10) | CLEAN | `D2-1` (fixed in PDF) |
+| Summary → Quick Recap | pp29–30 | `QUICK RECAP` (`F494`) | 1 heading + 4 SUMMARY-UNIQUE folded as `F507`–`F510` (in their body sections); 29 BODY-PRESENT restated only in Quick Recap | CLEAN (19 of Direction-2's 21 suspects were Summary rephrasings, expected) | CLEAN |
+| Exercises → Terms | p31 | `TERMS USED IN THE EXERCISES` (`F495`) | 15 (14 Q `F469`–`F482` + heading); 5 Rule-2 gaps homed inline as NOTE boxes | CLEAN | CLEAN |
+| Chapter title (`—`) | p1 | `title_block(...)` | 1 (`F232`) | — | CLEAN | CLEAN |
+
+`*` §5.1 D1 is CLEAN for the six labels that are genuinely Fig 5.3's; the four central-dogma
+labels mis-filed under Fig 5.3 (`F530`–`F533`) are the `D1-1`/`D1-2`/`D1-3` attribution
+findings, whose facts are all correctly in the PDF (caption fix). See the defect register.
+
+**Totals reconcile to the freeze:** 13+70+71+9+47+53+9(…) text rows across all sections =
+**510 text rows**, + **136 figure-label rows** = **646**, matching the machine re-parse
+(`F001`..`F646`, 0 gaps, 0 dups). Assets embedded = **17** (central-dogma plate + 5.1, 5.2,
+5.3, 5.4a, 5.4b, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11, 5.12, 5.13, 5.14, 5.16); `fig_5_15` is
+the 18th on disk, deliberately not embedded. Figure-label sum
+6+7+10+4+10+6+11+6+8+12+11+9+13+13+10 = **136**.
+
+**Pass 3(a) page walk:** all **30/30** rendered pages were inspected (Gate 3a), 0 layout
+defects after the badge/bullet fixes; re-confirmed A4-portrait 30/30 by `check_pdf.py` check 8
+on the final rebuild. **Pass 3(b) was a full read, not a token screen** — the evidence,
+per-figure verdict table and the three independent Direction-2 sweeps live in
+`scratch/ch5_3b_d1/findings.md`; this log is its per-section summary.
+
+## Section-wise coverage confirmation
+
+Format per §6 Pass 3 deliverable. Every body row is ticked and every figure is embedded
+monochrome with all its labels present in the running text (`check_pdf.py` check 6 = 136/136).
+
+- **Intro** — 13/13 body facts; central-dogma plate embedded + verified mono; all plate labels in text (caption names `replication, DNA, transcription, mRNA, translation, protein, Central dogma`).
+- **§5.1 The DNA** — 70/70 body facts; 5 figures embedded + verified mono (5.1, 5.2, 5.3, 5.4a, 5.4b); 27/27 labels in text.
+- **§5.2 The Search for Genetic Material** — 71/71 body facts; Fig 5.5 embedded + verified mono; 10/10 labels in text.
+- **§5.3 RNA World** — 9/9 body facts; no figure.
+- **§5.4 Replication** — 47/47 body facts; 3 figures embedded + verified mono (5.6, 5.7, 5.8); 23/23 labels in text.
+- **§5.5 Transcription** — 53/53 body facts; 3 figures embedded + verified mono (5.9, 5.10, 5.11); 31/31 labels in text.
+- **§5.6 Genetic Code** — 55/55 body facts (incl. hand-built `Table 5.1`); Fig 5.12 embedded + verified mono; 9/9 labels in text.
+- **§5.7 Translation** — 25/25 body facts; Fig 5.13 embedded + verified mono; 13/13 labels in text.
+- **§5.8 Regulation of Gene Expression** — 43/43 body facts; Fig 5.14 embedded + verified mono; 13/13 labels in text.
+- **§5.9 Human Genome Project** — 58/58 body facts; no figure embedded (`fig_5_15` is label-free, removed from the PDF by owner decision).
+- **§5.10 DNA Fingerprinting** — 49/49 body facts; Fig 5.16 embedded + verified mono; 10/10 labels in text (incl. the `D2-1` C-matches-B conclusion now in the caption).
+- **Summary** — 33 sentences classified = 29 BODY-PRESENT + 4 SUMMARY-UNIQUE (`F507`–`F510`); Quick Recap carries all 33.
+- **Exercises** — 14 questions classified (`F469`–`F482`), 11 COVERED + 5 GAP-homed inline + `F288`/`F289` worked from `Table 5.1`; heading `F495`.
+
+Whole-chapter roll-up: **646/646 rows ticked · 17 figures embedded (all mono) · 136/136 labels in running text · 30/30 pages inspected · `check_pdf.py --strict` PASS 0/0 · reproducible rebuild (30 pp / 89,213 chars / 17 images / text SHA `8c387c43ed0e5000`).**
+
+## Coverage note
+
+Written into this inventory `.md` only, never into the PDF (Rule 6). Fixed headings per §6 Pass 3 so an audit prompt can consume it mechanically.
+
+### Compression decisions
+- **NCERT Summary → Quick Recap.** The 33-sentence Summary was classified 29 BODY-PRESENT + 4 SUMMARY-UNIQUE. The 29 body-present sentences are **not** duplicated as body rows; they are carried only in the denser rewritten Quick Recap (Rule 3). The 4 unique facts were folded into the body sections they belong to as `F507`–`F510`. Safe because every body-present sentence keeps its body anchor (listed per sentence in the Summary classification section) and no fact is dropped.
+- **Scattered contrasts reformatted into tables/grids.** Repetitive vs satellite DNA (Q8a) is presented as a 2-column table in §5.10 rather than left scattered across `F428`–`F431`; the polymerase classes (Q6) as a template-vs-product grid in §5.4.2. No fact added — pure reformatting of existing rows.
+- **`Table 5.1` (64-codon checker-board) hand-built.** The source table's cells are not text-extractable (carry-over 9), so it was rebuilt in the script from an authoritative codon table and proof-read cell-by-cell against p18. It is a table, not a figure, so it was not clipped as an image.
+- **Qualifier preserved over Summary looseness (Rule 4).** Summary sentence 23's unqualified "Regulation of transcription is the primary step…" was kept only in Quick Recap; the body keeps NCERT's exact qualifier at `F343` ("In prokaryotes … predominant site").
+
+### Exercise classification
+All 14 end-of-chapter questions (`F469`–`F482`) + the in-body pair `F288`/`F289` scanned; full detail in the **Exercise-gap terms** section above. Summary:
+- **COVERED (11):** Q1 (`F024`/`F025`/`F020`–`F023`), Q5 (`F038`/`F045`/`F046`/`F146`/`F147`/`F149`), Q7 (`F107`–`F114`), Q8a/b/c (`F428`–`F431` / `F264`/`F216`/`F217`/`F308`–`F313` / `F196`/`F197`/`F204`), Q9 (`F324`/`F325`), Q11 (`F198`/`F201`/`F219`/`F308`–`F313`/`F211`/`F228`), Q12 (`F377`–`F381`/`F389`–`F391`), Q13 (`F428`/`F444`–`F455`/`F467`/`F510`), Q14a/b/c (opener rows `F261`/`F441`/`F442`/`F499`).
+- **GAP, answer homed inline as a NOTE box (5):** Q2 base-percentage arithmetic → §5.1.1 (after `F039`/`F045`); Q3/Q4 strand-writing conventions → §5.5.1 (beside `F196`); Q6 polymerase template/product grid → §5.4.2 (after `F164`); Q10 inducer-consumption reasoning → §5.8.1 (after `F371`); Q14(d) what Bioinformatics does → §5.9 (extends `F381`/`F382`). Each verified present in the script and derived only from inventory rows (Rule 2/Rule 5); each rendered as a NOTE box so it is visibly rewrite scaffolding.
+- **In-body `F288`/`F289`:** worked from the hand-built `Table 5.1`.
+
+### Drift caught and fixed
+- **`D1-2` (wording drift, medium) — FIXED in PDF.** `F532` says "RNA"; the central-dogma plate prints "mRNA". The plate caption now names all six printed labels including **mRNA**. Frozen row stays "RNA" (owner decision at next unfreeze).
+- **`D2-1` (uninventoried fact, real loss, medium) — FIXED in PDF.** Fig 5.16's conclusion ("banding pattern of crime-scene DNA matches individual **B**, not A") was absent from the built PDF; the caption now carries it plus the per-allele VNTR statement.
+- **`D1-1` / `D1-3` / `D1-4` — no fact lost, PDF correct, rows OPEN under freeze:** central-dogma labels mis-filed under Fig 5.3 (`D1-1`), three plate labels with no row (`D1-3`, now named in the caption), and `F606` "anticodon loop" typed `figure-label` when it is p20 body prose (`D1-4`). All five are logged in the **Gate 3b defect register** for re-sectioning/retyping at the next unfreeze; none blocks Gate 3.
+
+### Figures requiring manual attention
+**None.** All 18 assets are `mode=L` verified mono and were opened individually; every embedded rect passed the three-part crop gate (word-grazing + drawings-extent + border-band ink), with `fig_5_1`, `fig_5_2` and `fig_5_16` re-pinned and re-extracted in earlier passes. Accepted-and-closed cosmetics that are **not** defects and must not be re-raised: the NCERT **source watermark** baked into the artwork, and the **baked-in double borders** on `fig_5_4b`/`fig_5_6`/`fig_5_7`/`fig_5_9` (NCERT's own frame inside the crop).
+
+### Color-dependent figures
+- **Fig 5.16 (DNA fingerprinting)** — NCERT's caption uses "different colour schemes … to trace each band's origin". In a monochrome replacement that cue is void; the distinction is now carried **in words**: the caption states the paternal and maternal chromosomes differ in VNTR copy number and that the crime-scene pattern matches individual B. So band origin survives on text, not colour.
+- **Fig 5.7 (Meselson-Stahl)** — the `15N`/`14N` heavy/light band positions are carried by the printed tube-band **labels** (`F554`–`F564`), not by colour, so `autocontrast` mono loses nothing.
+- No figure in this chapter relies on colour alone to carry a fact after conversion.
+
+### Source problems
+Reproduced exactly as NCERT prints them (do not "fix"):
+- **Human genome size printed inconsistently in §5.10** — `3 x 10^9 bp` (`F423`) then `3 x 10^6 base pairs` two sentences later (`F426`). The `10^6` is NCERT's own slip; both reproduced verbatim (carry-over 11).
+- **Goals-of-HGP list mis-numbered `(iiii)`** on p24 (`F385`); rewrite prints `(iii)` so the list reads i–vi, remaining items not renumbered (carry-over 12).
+- **`Table 5.1` not text-extractable** — a source/extraction limitation, resolved by hand-building (see Compression decisions). No garbled or unrecoverable prose otherwise.
+
+### Linter verdict
+`check_pdf.py --strict "notes/class 12/Ch5_MolecularBasisOfInheritance"` → **PASS, 0 fail / 0 warn**, exit 0, re-run against the **final rebuilt** PDF this session. All checks green: footer band · legibility floor (smallest text **6.0pt**) · 17/17 grayscale images · no person photo · no banned glyphs · **136/136** labels in text · **646/646** Facts ticked · 30/30 A4 portrait · no orphaned headings · no badge/banner collisions. No accepted WARNs (none raised).
