@@ -16,6 +16,22 @@ SRC = 'Chapter/class 11/Chapter 12 - Respiration in Plants.pdf'
 OUT_DIR = 'notes/class 11/Ch12_RespirationInPlants/assets'
 RENDER_DPI = 300
 
+# Per-figure render DPI override. RENDER_DPI (300) is the default and is what
+# every figure that renders AT OR BELOW its 300 dpi natural width needs. A figure
+# that is deliberately displayed WIDER than its 300 dpi natural width needs more
+# source pixels, or neet_template.figure()'s no-upscale cap silently pins it back
+# to the natural width and the requested enlargement does nothing at all.
+#
+# fig_12_2 is the one such case (operator instruction, this revision: it is
+# enlarged to fill the space freed by moving 12.4 to its own page). Raising its
+# render DPI is honest here rather than cosmetic because 169 vector drawings and
+# ZERO text/raster-only labels sit inside its crop - all of its labels, arrows and
+# leader lines are vector artwork, so they re-render genuinely sharper at a higher
+# DPI. Only the flat colour panel behind them comes from the page's 294 dpi
+# raster; it is greyscaled anyway and carries no fine detail. Numbers: §2 of
+# figure_layout_decisions.md.
+FIG_DPI = {"12_2": 440}
+
 # (asset_id, 1-indexed PDF page, (x0, y0, x1, y1))
 FIGS = [
     # p4: raster green glycolysis panel bbox≈(60.6,154.9)-(293.0,577.3);
@@ -48,14 +64,16 @@ def main() -> int:
         for fid, pno, rect in FIGS:
             page = doc[pno - 1]
             clip = pymupdf.Rect(*rect) & page.rect
-            pix = page.get_pixmap(clip=clip, dpi=RENDER_DPI, alpha=False)
+            dpi = FIG_DPI.get(fid, RENDER_DPI)
+            pix = page.get_pixmap(clip=clip, dpi=dpi, alpha=False)
             img = ImageOps.autocontrast(
                 Image.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('L'),
                 cutoff=1,
             )
             out = os.path.join(OUT_DIR, f'fig_{fid}.png')
             img.save(out, optimize=True)
-            print(f'fig_{fid}: page={pno} rect={rect} size={img.size} mode={img.mode} -> {out}')
+            print(f'fig_{fid}: page={pno} rect={rect} dpi={dpi} '
+                  f'size={img.size} mode={img.mode} -> {out}')
     finally:
         doc.close()
     return 0
