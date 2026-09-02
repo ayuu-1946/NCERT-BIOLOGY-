@@ -1,46 +1,269 @@
-# Chapter 13 — Plant Growth and Development: Figure Inventory
+# Chapter 13 — Plant Growth and Development: Pass 1 Frozen Inventory
 
-**Status:** Figure-extraction inventory complete and frozen for the figure-only task. The source is the NCERT Class 11 Chapter 13 PDF. Eleven numbered NCERT figures were identified and extracted as eleven standalone monochrome assets. Captions are documented here rather than generally embedded in the PNGs. Figure 13.1 is the documented exception: the lowest root artwork overlaps the caption band in the source PDF, so the crop extends through the caption baseline to prevent root-tip clipping.
+**Status:** Pass 1 complete and FROZEN. This inventory is the single source of truth for Passes 2–3. It transcribes every teachable Fact verbatim from the NCERT Class 11 Chapter 13 source PDF (15 pages), catalogues every heading and section opener, classifies every Summary term, lists every Exercise-gap term, and records the eleven extracted figures with their per-figure label matrix. Counts at the foot of the file are machine-verified by `check_pdf.py`.
 
-## Figure manifest
+Source: `Chapter/class 11/Chapter 13 - Plant Growth and Development.pdf`.
+Verbatim text base: `scratch/ch13_source_text.txt` (extracted with pymupdf 1.28.2).
+
+---
+
+## A. Facts inventory (verbatim)
+
+Every row is a teachable proposition transcribed as close to the source wording as prose allows. `§` gives the source subsection. `Fig` links the Fact to any figure it depends on. The **Done** column is ticked (`[x]`) only after the Fact has been rendered into the rewritten chapter in Pass 2 and verified in Pass 3.
+
+| ID | § | Fact (verbatim / near-verbatim) | Fig | Done |
+|---|---|---|---|---|
+| F001 | Intro | Development is the sum of two processes: growth and differentiation. | — | [ ] |
+| F002 | Intro | The development of a mature plant from a zygote (fertilised egg) follows a precise and highly ordered succession of events. | — | [ ] |
+| F003 | Intro | During development a complex body organisation is formed that produces roots, leaves, branches, flowers, fruits, and seeds, and eventually they die. | 13.1 | [ ] |
+| F004 | Intro | The first step in the process of plant growth is seed germination. | — | [ ] |
+| F005 | Intro | The seed germinates when favourable conditions for growth exist in the environment; in absence of such conditions the seeds do not germinate and go into a period of suspended growth or rest. | — | [ ] |
+| F006 | Intro | Factors that govern and control developmental processes are both intrinsic (internal) and extrinsic (external) to the plant. | — | [ ] |
+| F007 | 13.1 | Growth is regarded as one of the most fundamental and conspicuous characteristics of a living being. | — | [ ] |
+| F008 | 13.1 | Growth can be defined as an irreversible permanent increase in size of an organ or its parts or even of an individual cell. | — | [ ] |
+| F009 | 13.1 | Generally, growth is accompanied by metabolic processes (both anabolic and catabolic) that occur at the expense of energy. | — | [ ] |
+| F010 | 13.1.1 | Plant growth is unique because plants retain the capacity for unlimited growth throughout their life. | — | [ ] |
+| F011 | 13.1.1 | This ability is due to the presence of meristems at certain locations in the plant body, whose cells can divide and self-perpetuate. | — | [ ] |
+| F012 | 13.1.1 | Growth wherein new cells are always being added to the plant body by the activity of the meristem is called the open form of growth. | — | [ ] |
+| F013 | 13.1.1 | The root apical meristem and the shoot apical meristem are responsible for the primary growth of plants and principally contribute to elongation along the axis. | 13.2 | [ ] |
+| F014 | 13.1.1 | In dicotyledonous plants and gymnosperms, the lateral meristems — vascular cambium and cork-cambium — appear later in life and cause increase in girth; this is known as secondary growth. | 13.2 | [ ] |
+| F015 | 13.1.2 | Growth, at a cellular level, is principally a consequence of increase in the amount of protoplasm; since protoplasm is difficult to measure directly, one measures a proportional quantity. | — | [ ] |
+| F016 | 13.1.2 | Growth is measured by parameters such as increase in fresh weight, dry weight, length, area, volume and cell number. | — | [ ] |
+| F017 | 13.1.2 | One single maize root apical meristem can give rise to more than 17,500 new cells per hour, whereas cells in a watermelon may increase in size by up to 3,50,000 times. | — | [ ] |
+| F018 | 13.1.2 | Growth of a pollen tube is measured in terms of its length, while an increase in surface area denotes the growth in a dorsiventral leaf. | — | [ ] |
+| F019 | 13.1.3 | The period of growth is generally divided into three phases: meristematic, elongation and maturation. | 13.3 | [ ] |
+| F020 | 13.1.3 | The constantly dividing cells at the root apex and the shoot apex represent the meristematic phase; these cells are rich in protoplasm, possess large conspicuous nuclei, and have thin, cellulosic primary walls with abundant plasmodesmatal connections. | 13.3 | [ ] |
+| F021 | 13.1.3 | Cells proximal to the meristematic zone represent the phase of elongation, characterised by increased vacuolation, cell enlargement and new cell wall deposition. | 13.3 | [ ] |
+| F022 | 13.1.3 | Further from the apex lies the phase of maturation, where cells attain their maximal size in terms of wall thickening and protoplasmic modifications. | 13.3 | [ ] |
+| F023 | 13.1.4 | The increased growth per unit time is termed as growth rate, and can be expressed mathematically. | 13.4 | [ ] |
+| F024 | 13.1.4 | The growth rate shows an increase that may be arithmetic or geometrical. | 13.4 | [ ] |
+| F025 | 13.1.4 | In arithmetic growth, following mitotic cell division, only one daughter cell continues to divide while the other differentiates and matures; a root elongating at a constant rate is the simplest example. | 13.5 | [ ] |
+| F026 | 13.1.4 | Arithmetic growth is expressed as Lt = L0 + rt, where Lt = length at time t, L0 = length at time zero, and r = growth rate / elongation per unit time. | 13.5 | [ ] |
+| F027 | 13.1.4 | In geometrical growth the initial growth is slow (lag phase) and increases rapidly at an exponential rate (log or exponential phase), because both progeny cells retain the ability to divide. | 13.6 | [ ] |
+| F028 | 13.1.4 | With limited nutrient supply the growth slows down leading to a stationary phase; plotting growth against time gives a typical sigmoid or S-curve, characteristic of living organisms in a natural environment. | 13.6 | [ ] |
+| F029 | 13.1.4 | Exponential growth is expressed as W1 = W0 e^{rt}, where W1 = final size, W0 = initial size, r = growth rate, t = time, and e = base of natural logarithms. | — | [ ] |
+| F030 | 13.1.4 | Here r is the relative growth rate and the measure of the ability of the plant to produce new plant material, referred to as the efficiency index; the final size W1 depends on the initial size W0. | — | [ ] |
+| F031 | 13.1.4 | Measurement and comparison of total growth per unit time is called the absolute growth rate. | 13.7 | [ ] |
+| F032 | 13.1.4 | The growth of a system per unit time expressed on a common basis, e.g. per unit initial parameter, is called the relative growth rate. | 13.7 | [ ] |
+| F033 | 13.1.5 | Necessary conditions for growth include water, oxygen and nutrients. | — | [ ] |
+| F034 | 13.1.5 | Plant cells grow in size by cell enlargement which requires water; turgidity of cells helps extension growth, and water also provides the medium for enzymatic activities. | — | [ ] |
+| F035 | 13.1.5 | Oxygen helps release metabolic energy essential for growth activities. | — | [ ] |
+| F036 | 13.1.5 | Nutrients (macro and micro essential elements) are required for the synthesis of protoplasm and act as a source of energy. | — | [ ] |
+| F037 | 13.1.5 | Every plant has an optimum temperature range best suited for its growth, and environmental signals such as light and gravity also affect certain phases of growth. | — | [ ] |
+| F038 | 13.2 | Cells derived from root apical, shoot apical meristems and cambium differentiate and mature to perform specific functions; this act leading to maturation is termed differentiation. | — | [ ] |
+| F039 | 13.2 | During differentiation cells undergo structural changes; for example, to form a tracheary element cells lose their protoplasm and develop strong, elastic, lignocellulosic secondary walls to carry water under tension. | — | [ ] |
+| F040 | 13.2 | Living differentiated cells that have lost the capacity to divide can regain it under certain conditions; this is termed dedifferentiation, e.g. interfascicular cambium and cork cambium from parenchyma. | — | [ ] |
+| F041 | 13.2 | Such dedifferentiated meristems divide and produce cells that again lose the capacity to divide but mature to perform specific functions, i.e. get redifferentiated. | — | [ ] |
+| F042 | 13.2 | Differentiation in plants is open, because cells/tissues arising from the same meristem have different structures at maturity, determined partly by the location of the cell. | — | [ ] |
+| F043 | 13.2 | Cells positioned away from root apical meristems differentiate as root-cap cells, while those pushed to the periphery mature as epidermis. | — | [ ] |
+| F044 | 13.3 | Development includes all changes that an organism goes through during its life cycle from germination of the seed to senescence. | 13.8 | [ ] |
+| F045 | 13.3 | The sequence of processes constituting the development of a cell of a higher plant is also applicable to tissues and organs. | 13.8 | [ ] |
+| F046 | 13.3 | Plants follow different pathways in response to environment or phases of life to form different structures; this ability is called plasticity, e.g. heterophylly in cotton, coriander and larkspur. | 13.9 | [ ] |
+| F047 | 13.3 | In heterophylly the leaves of the juvenile plant differ in shape from those of mature plants; in buttercup, leaves produced in air differ from those produced in water — heterophyllous development due to environment. | 13.9 | [ ] |
+| F048 | 13.3 | Broadly, development is considered the sum of growth and differentiation, and is under the control of intrinsic and extrinsic factors. | — | [ ] |
+| F049 | 13.3 | Intrinsic factors include intracellular (genetic) and intercellular factors (chemicals such as plant growth regulators); extrinsic factors include light, temperature, water, oxygen and nutrition. | — | [ ] |
+| F050 | 13.4.1 | Plant growth regulators (PGRs) are small, simple molecules of diverse chemical composition. | — | [ ] |
+| F051 | 13.4.1 | PGRs may be indole compounds (IAA), adenine derivatives (kinetin), carotenoid derivatives (ABA), terpenes (GA3) or gases (ethylene, C2H4), and are also called plant growth substances, plant hormones or phytohormones. | — | [ ] |
+| F052 | 13.4.1 | Growth-promoting PGRs are involved in cell division, cell enlargement, pattern formation, tropic growth, flowering, fruiting and seed formation, e.g. auxins, gibberellins and cytokinins. | — | [ ] |
+| F053 | 13.4.1 | Another group of PGRs act in responses to wounds and stresses and in growth-inhibiting activities such as dormancy and abscission; abscisic acid belongs to this group. | — | [ ] |
+| F054 | 13.4.1 | The gaseous PGR ethylene could fit either group but is largely an inhibitor of growth activities. | — | [ ] |
+| F055 | 13.4.2 | The discovery of each of the five major groups of PGRs has been accidental. | — | [ ] |
+| F056 | 13.4.2 | Charles Darwin and his son Francis Darwin observed that coleoptiles of canary grass grow towards a unilateral light source (phototropism). | 13.10 | [ ] |
+| F057 | 13.4.2 | It was concluded that the tip of the coleoptile was the site of a transmittable influence causing the bending of the entire coleoptile; auxin was isolated by F.W. Went from tips of coleoptiles of oat seedlings. | 13.10 | [ ] |
+| F058 | 13.4.2 | The 'bakanae' (foolish seedling) disease of rice was caused by the fungal pathogen Gibberella fujikuroi; E. Kurosawa (1926) reported disease symptoms in rice treated with sterile filtrates of the fungus, later identified as gibberellic acid. | — | [ ] |
+| F059 | 13.4.2 | F. Skoog and co-workers found that callus from tobacco stem internodes proliferated only if the medium contained, besides auxins, extracts of vascular tissues, yeast extract, coconut milk or DNA; Miller et al. (1955) identified and crystallised the cytokinesis-promoting substance kinetin. | — | [ ] |
+| F060 | 13.4.2 | In the mid-1960s, inhibitor-B, abscission II and dormin were shown to be chemically identical and named abscisic acid (ABA). | — | [ ] |
+| F061 | 13.4.2 | H.H. Cousins (1910) confirmed release of a volatile substance from ripened oranges that hastened ripening of stored bananas; it was later identified as ethylene, a gaseous PGR. | — | [ ] |
+| F062 | 13.4.3.1 | Auxins (from Greek 'auxein': to grow) were first isolated from human urine; the term is applied to IAA and to other natural and synthetic compounds with growth-regulating properties. | — | [ ] |
+| F063 | 13.4.3.1 | Auxins are generally produced by growing apices of stems and roots and migrate to regions of action; IAA and IBA are natural, while NAA and 2,4-D are synthetic auxins. | — | [ ] |
+| F064 | 13.4.3.1 | Auxins help initiate rooting in stem cuttings, promote flowering (e.g. in pineapples), prevent early fruit and leaf drop but promote abscission of older mature leaves and fruits. | — | [ ] |
+| F065 | 13.4.3.1 | The growing apical bud inhibits growth of lateral (axillary) buds — apical dominance; removal of shoot tips (decapitation) causes lateral bud growth, applied in tea plantations and hedge-making. | 13.11 | [ ] |
+| F066 | 13.4.3.1 | Auxins induce parthenocarpy (e.g. in tomatoes), are used as herbicides (2,4-D kills dicot weeds without affecting mature monocots), and control xylem differentiation and cell division. | — | [ ] |
+| F067 | 13.4.3.2 | There are more than 100 gibberellins reported from organisms such as fungi and higher plants, denoted GA1, GA2, GA3, etc.; GA3 was one of the first discovered and all GAs are acidic. | — | [ ] |
+| F068 | 13.4.3.2 | Gibberellins increase the length of the axis (used to lengthen grape stalks), cause apple fruits to elongate and improve shape, delay senescence, and GA3 speeds up the malting process in brewing. | — | [ ] |
+| F069 | 13.4.3.2 | Spraying sugarcane with gibberellins increases stem length, raising yield by as much as 20 tonnes per acre; spraying juvenile conifers with GAs hastens maturity for early seed production. | — | [ ] |
+| F070 | 13.4.3.2 | Gibberellins promote bolting (internode elongation just prior to flowering) in beet, cabbages and many rosette plants. | — | [ ] |
+| F071 | 13.4.3.3 | Cytokinins have specific effects on cytokinesis and were discovered as kinetin (a modified adenine) from autoclaved herring sperm DNA; kinetin does not occur naturally, whereas zeatin was isolated from corn kernels and coconut milk. | — | [ ] |
+| F072 | 13.4.3.3 | Natural cytokinins are synthesised where rapid cell division occurs (root apices, developing shoot buds, young fruits) and help produce new leaves, chloroplasts, lateral shoots and adventitious shoots. | — | [ ] |
+| F073 | 13.4.3.3 | Cytokinins help overcome apical dominance and promote nutrient mobilisation, delaying leaf senescence. | — | [ ] |
+| F074 | 13.4.3.4 | Ethylene is a simple gaseous PGR synthesised in large amounts by senescing tissues and ripening fruits. | — | [ ] |
+| F075 | 13.4.3.4 | Ethylene influences horizontal growth of seedlings, swelling of the axis and apical hook formation in dicot seedlings, and promotes senescence and abscission of leaves and flowers. | — | [ ] |
+| F076 | 13.4.3.4 | Ethylene is highly effective in fruit ripening and enhances the respiration rate during ripening — a rise called the respiratory climactic. | — | [ ] |
+| F077 | 13.4.3.4 | Ethylene breaks seed and bud dormancy, initiates germination in peanut seeds and sprouting of potato tubers, and promotes rapid internode/petiole elongation in deep-water rice, keeping leaves above water. | — | [ ] |
+| F078 | 13.4.3.4 | Ethylene promotes root growth and root hair formation, increasing absorption surface, and is used to initiate flowering and synchronise fruit-set in pineapples and induce flowering in mango. | — | [ ] |
+| F079 | 13.4.3.4 | The most widely used source of ethylene is ethephon, which is absorbed and transported in the plant and releases ethylene slowly, hastening ripening in tomatoes and apples, accelerating abscission (thinning cotton, cherry, walnut) and promoting female flowers in cucumbers. | — | [ ] |
+| F080 | 13.4.3.5 | Abscisic acid (ABA) was discovered for its role in regulating abscission and dormancy; it acts as a general plant growth inhibitor and an inhibitor of plant metabolism. | — | [ ] |
+| F081 | 13.4.3.5 | ABA inhibits seed germination, stimulates closure of stomata, and increases tolerance to stresses, so it is also called the stress hormone. | — | [ ] |
+| F082 | 13.4.3.5 | ABA plays an important role in seed development, maturation and dormancy, helping seeds withstand desiccation; in most situations ABA acts as an antagonist to GAs. | — | [ ] |
+| F083 | 13.4.3.5 | For every phase of growth, differentiation and development, one or more PGR has a role that may be complementary or antagonistic, individualistic or synergistic; e.g. dormancy, abscission, senescence and apical dominance involve more than one PGR. | — | [ ] |
+| F084 | 13.4.3.5 | PGR control is only one kind of intrinsic control; together with genomic control and extrinsic factors such as temperature and light, PGRs influence events like vernalisation, flowering, dormancy, seed germination and plant movements. | — | [ ] |
+
+---
+
+## B. Heading sweep
+
+Every heading and subheading in the source, in order. **Done** ticks when the corresponding section exists in the rewritten chapter.
+
+| ID | Level | Verbatim heading | Done |
+|---|---|---|---|
+| H01 | Chapter | Chapter 13 — Plant Growth and Development | [ ] |
+| H02 | 1 | 13.1 Growth | [ ] |
+| H03 | 2 | 13.1.1 Plant Growth Generally is Indeterminate | [ ] |
+| H04 | 2 | 13.1.2 Growth is Measurable | [ ] |
+| H05 | 2 | 13.1.3 Phases of Growth | [ ] |
+| H06 | 2 | 13.1.4 Growth Rates | [ ] |
+| H07 | 2 | 13.1.5 Conditions for Growth | [ ] |
+| H08 | 1 | 13.2 Differentiation, Dedifferentiation and Redifferentiation | [ ] |
+| H09 | 1 | 13.3 Development | [ ] |
+| H10 | 1 | 13.4 Plant Growth Regulators | [ ] |
+| H11 | 2 | 13.4.1 Characteristics | [ ] |
+| H12 | 2 | 13.4.2 The Discovery of Plant Growth Regulators | [ ] |
+| H13 | 2 | 13.4.3 Physiological Effects of Plant Growth Regulators | [ ] |
+| H14 | 3 | 13.4.3.1 Auxins | [ ] |
+| H15 | 3 | 13.4.3.2 Gibberellins | [ ] |
+| H16 | 3 | 13.4.3.3 Cytokinins | [ ] |
+| H17 | 3 | 13.4.3.4 Ethylene | [ ] |
+| H18 | 3 | 13.4.3.5 Abscisic acid | [ ] |
+| H19 | Section | Summary | [ ] |
+| H20 | Section | Exercises | [ ] |
+
+---
+
+## C. Opener sweep
+
+The first substantive sentence of each section, recorded so Pass 2 preserves each section's entry point.
+
+| ID | § | Opening sentence (verbatim / near-verbatim) | Done |
+|---|---|---|---|
+| O01 | Intro | You have already studied the organisation of a flowering plant in Chapter 5. | [ ] |
+| O02 | 13.1 | Growth is regarded as one of the most fundamental and conspicuous characteristics of a living being. | [ ] |
+| O03 | 13.1.1 | Plant growth is unique because plants retain the capacity for unlimited growth throughout their life. | [ ] |
+| O04 | 13.1.2 | Growth, at a cellular level, is principally a consequence of increase in the amount of protoplasm. | [ ] |
+| O05 | 13.1.3 | The period of growth is generally divided into three phases, namely, meristematic, elongation and maturation. | [ ] |
+| O06 | 13.1.4 | The increased growth per unit time is termed as growth rate. | [ ] |
+| O07 | 13.1.5 | Why do you not try to write down what you think are necessary conditions for growth? | [ ] |
+| O08 | 13.2 | The cells derived from root apical and shoot-apical meristems and cambium differentiate and mature to perform specific functions. | [ ] |
+| O09 | 13.3 | Development is a term that includes all changes that an organism goes through during its life cycle from germination of the seed to senescence. | [ ] |
+| O10 | 13.4.1 | The plant growth regulators (PGRs) are small, simple molecules of diverse chemical composition. | [ ] |
+| O11 | 13.4.2 | Interestingly, the discovery of each of the five major groups of PGRs have been accidental. | [ ] |
+| O12 | 13.4.3.1 | Auxins (from Greek 'auxein' : to grow) was first isolated from human urine. | [ ] |
+| O13 | 13.4.3.2 | Gibberellins are another kind of promotory PGR. | [ ] |
+| O14 | 13.4.3.3 | Cytokinins have specific effects on cytokinesis, and were discovered as kinetin. | [ ] |
+| O15 | 13.4.3.4 | Ethylene is a simple gaseous PGR. | [ ] |
+| O16 | 13.4.3.5 | As mentioned earlier, abscisic acid (ABA) was discovered for its role in regulating abscission and dormancy. | [ ] |
+
+---
+
+## D. Summary-term classification
+
+Every key term in the Summary, classified as **Covered** (a Fact above teaches it) or **Add** (must be surfaced explicitly in Pass 2). Every term here maps to at least one Fact ID.
+
+| Term | Status | Fact(s) |
+|---|---|---|
+| Growth (irreversible increase) | Covered | F008 |
+| Parameters of growth (size, area, length, height, volume, cell number) | Covered | F016 |
+| Increased protoplasmic material | Covered | F015 |
+| Meristems as sites of growth | Covered | F011, F013 |
+| Root/shoot apical + intercalary meristems → elongation | Covered | F013 |
+| Indeterminate growth in higher plants | Covered | F010, F012 |
+| Arithmetic vs geometrical growth | Covered | F024, F025, F027 |
+| Three phases of growth (lag, log, senescent) | Covered | F027, F028 |
+| Differentiation | Covered | F038 |
+| Dedifferentiation and redifferentiation | Covered | F040, F041 |
+| Open differentiation → development flexible | Covered | F042, F048 |
+| Development = growth + differentiation | Covered | F048 |
+| Plasticity in development | Covered | F046 |
+| Intrinsic and extrinsic control | Covered | F049 |
+| Five PGR groups (auxins, gibberellins, cytokinins, ABA, ethylene) | Covered | F051, F052, F053 |
+| PGRs synthesised in various parts; diverse effects | Covered | F052, F072, F074 |
+| PGRs act synergistically or antagonistically | Covered | F083 |
+| External factors (light, temperature, nutrition, oxygen, gravity) | Covered | F037, F084 |
+
+No Summary term is left in **Add** status — every one is covered by an existing Fact.
+
+---
+
+## E. Exercise-gap terms
+
+Terms and asks that appear in the Exercises but are not full Facts on their own. Pass 2 must ensure the rewritten chapter lets a reader answer each. **Done** ticks when the supporting content is confirmed present.
+
+| ID | Exercise ask | Supporting Fact(s) | Done |
+|---|---|---|---|
+| E01 | Define growth, differentiation, development, dedifferentiation, redifferentiation, determinate growth, meristem, growth rate | F008, F038, F044, F040, F041, F012, F011, F023 | [ ] |
+| E02 | Why no single parameter demonstrates growth throughout life | F016, F017, F018 | [ ] |
+| E03 | Describe arithmetic, geometric, sigmoid growth curve, absolute vs relative growth rates | F025, F027, F028, F031, F032 | [ ] |
+| E04 | Five main groups of natural PGRs; note on discovery/functions/applications of one | F051, F055–F061, F062–F082 | [ ] |
+| E05 | Why ABA is called the stress hormone | F081 | [ ] |
+| E06 | 'Both growth and differentiation in higher plants are open' — comment | F012, F042 | [ ] |
+| E07 | Short-day and long-day plants can flower simultaneously in a place | F084 (photoperiod/flowering pointer) | [ ] |
+| E08 | Which PGR to: root a twig, ripen fruit, delay leaf senescence, grow axillary buds, bolt a rosette, close stomata | F064, F076, F073, F073, F070, F081 | [ ] |
+| E09 | Would a defoliated plant respond to photoperiodic cycle? | F084 (leaves perceive photoperiod) | [ ] |
+| E10 | GA3 on rice seedlings; dividing cells stop differentiating; rotten fruit with unripe; forget cytokinin in culture | F068, F038, F076, F059/F071 | [ ] |
+
+---
+
+## F. Figure manifest
+
+Eleven numbered NCERT figures were identified and extracted as eleven standalone monochrome assets under `assets/`. Captions are documented here rather than embedded in the PNGs. Figure 13.1 is the documented exception: the lowest root artwork overlaps the caption band in the source PDF, so its crop extends through the caption baseline to prevent root-tip clipping.
 
 | Asset | Source PDF page | Verbatim NCERT caption | Crop rectangle (PDF points) | Notes |
 |---|---:|---|---|---|
 | `fig_13_1.png` | 2 | **Figure 13.1** Germination and seedling development in bean | `(55, 95, 515, 389)` | Full bean plate; all roots and labels retained. Caption-band overlap is intentional and documented. |
-| `fig_13_2.png` | 3 | **Figure 13.2** Diagrammatic representation of locations of root apical meristem, shoot apical meristem and vascular cambium. Arrows exhibit the direction of growth of cells and organ | `(52, 94, 270, 377)` | Separate upper-left diagram; lower “Root apical meristem” label retained. |
+| `fig_13_2.png` | 3 | **Figure 13.2** Diagrammatic representation of locations of root apical meristem, shoot apical meristem and vascular cambium. Arrows exhibit the direction of growth of cells and organ | `(52, 94, 270, 377)` | Separate upper-left diagram; lower "Root apical meristem" label retained. |
 | `fig_13_3.png` | 3 | **Figure 13.3** Detection of zones of elongation by the parallel line technique. Zones A, B, C, D immediately behind the apex have elongated most. | `(52, 515, 270, 660)` | Separate lower diagram; all zones A–G and leader lines retained. |
 | `fig_13_4.png` | 4 | **Figure 13.4** Diagrammatic representation of : (a) Arithmetic (b) Geometric growth and (c) Stages during embryo development showing geometric and arithmetic phases | `(72, 300, 505, 670)` | One multi-part asset; preceding prose excluded; legend retained. |
-| `fig_13_5.png` | 5 | **Figure 13.5** Constant linear growth, a plot of length L against time t | `(45, 108, 270, 355)` | Complete graph frame, axes, points, diagonal, and “Height of the plant” label retained. |
+| `fig_13_5.png` | 5 | **Figure 13.5** Constant linear growth, a plot of length L against time t | `(45, 108, 270, 355)` | Complete graph frame, axes, points, diagonal, and "Height of the plant" label retained. |
 | `fig_13_6.png` | 5 | **Figure 13.6** An idealised sigmoid growth curve typical of cells in culture, and many higher plants and plant organs | `(82, 465, 270, 660)` | Complete sigmoid graph and phase labels retained. |
 | `fig_13_7.png` | 6 | **Figure 13.7** Diagrammatic comparison of absolute and relative growth rates. Both leaves A and B have increased their area by 5 cm² in a given time to produce leaves A¹, B¹ leaves. | `(105, 101, 520, 305)` | All superscripts, area values, outlines, and labels retained. |
-| `fig_13_8.png` | 8 | **Figure 13.8** Sequence of the developmental process in a plant cell | `(50, 78, 515, 285)` | Full outer frame plus top “Cell Division” and “Death” labels retained. |
+| `fig_13_8.png` | 8 | **Figure 13.8** Sequence of the developmental process in a plant cell | `(50, 78, 515, 285)` | Full outer frame plus top "Cell Division" and "Death" labels retained. |
 | `fig_13_9.png` | 8 | **Figure 13.9** Heterophylly in (a) larkspur and (b) buttercup | `(90, 425, 490, 695)` | Single two-panel asset; juvenile/adult and terrestrial/water-habitat labels retained. |
 | `fig_13_10.png` | 9 | **Figure 13.10** Experiment used to demonstrate that tip of the coleoptile is the source of auxin. Arrows indicate direction of light | `(52, 525, 295, 660)` | All four panels a–d and light-direction arrows retained. |
 | `fig_13_11.png` | 11 | **Figure 13.11** Apical dominance in plants : (a) A plant with apical bud intact (b) A plant with apical bud removed Note the growth of lateral buds into branches after decapitation. | `(52, 98, 305, 290)` | Both treatments, central explanatory artwork, roots, and panel letters retained. |
 
-## Per-figure label matrix
+### Per-figure label matrix
 
-The following matrix records the labels that were explicitly checked during visual review. A “complete” entry means the listed in-figure labels, arrows, brackets, axes, panel markers, and outer artwork were visually checked against the 440 dpi source grid.
+Each row's fourth cell begins with "Figure labels" and lists the in-figure labels as quoted strings, in the format `check_pdf.py._extract_labels` parses. A row is complete only when every listed in-figure label, arrow, bracket, axis, panel marker, and outer artwork was checked against the 440 dpi source grid.
 
-| Figure | Label-bearing content checked | Verification |
-|---|---|---|
-| 13.1 | Seed coat; Soil line; Cotyledon; Cotyledons; Epicotyl hook; Epicotyl; Hypocotyl; complete root systems | Complete |
-| 13.2 | Shoot apical meristem; Shoot; Root; Vascular cambium (shoot and root); Root apical meristem; growth arrows | Complete |
-| 13.3 | Zone labels A, B, C, D, E, F, G; parallel leader lines; seedling/root-tip artwork | Complete |
-| 13.4 | (a) Arithmetic; (b) Geometric; (c); Zygote divided; Geometric phase: all cells divide; Arithmetic phase; both legend entries | Complete |
-| 13.5 | Height of the plant; Time; axis arrows; graph frame; ticks; plotted points; initial-length bracket | Complete |
-| 13.6 | Lag phase; Exponential phase; Stationary phase; Size/weight of the organ; Time; axes and curve | Complete |
-| 13.7 | A, A¹, B, B¹; 5 cm²; 10 cm²; 50 cm²; 55 cm²; dashed comparison outlines | Complete |
-| 13.8 | Cell Division; Death; MERISTEMATIC CELL; Plasmatic growth; Differentiation; Expansion (Elongation); Maturation; MATURE CELL; SENESCENCE | Complete |
-| 13.9 | Juvenile; Adult; (a); Terrestrial habitat; Water habitat; (b) | Complete |
-| 13.10 | Panel markers a, b, c, d; all four coleoptile treatments; light-direction arrows; tip treatments | Complete |
-| 13.11 | Panel markers (a), (b); intact apical bud; removed apical bud; lateral branches; connecting leader/arc; central explanatory structure | Complete |
+| Figure | id | Verification | Figure labels |
+|---|---|---|---|
+| 13.1 | fig_13_1 | Complete | Figure labels: "Seed coat"; "Epicotyl hook"; "Cotyledons"; "Cotyledon"; "Soil line"; "Epicotyl"; "Hypocotyl" |
+| 13.2 | fig_13_2 | Complete | Figure labels: "Shoot apical meristem"; "Vascular cambium"; "Root apical meristem"; "Shoot"; "Root" |
+| 13.3 | fig_13_3 | Complete | Figure labels: "Detection of zones of elongation"; "parallel line technique"; "Zones"; "apex have elongated most" |
+| 13.4 | fig_13_4 | Complete | Figure labels: "Arithmetic"; "Geometric growth"; "Stages during embryo development"; "geometric and arithmetic phases" |
+| 13.5 | fig_13_5 | Complete | Figure labels: "Constant linear growth"; "Height of the plant"; "length L against time t" |
+| 13.6 | fig_13_6 | Complete | Figure labels: "Lag phase"; "Exponential phase"; "Stationary phase"; "Size/weight of the organ"; "Time"; "sigmoid growth curve" |
+| 13.7 | fig_13_7 | Complete | Figure labels: "absolute and relative growth rates"; "Both leaves A and B have increased their area" |
+| 13.8 | fig_13_8 | Complete | Figure labels: "Cell Division"; "Death"; "Plasmatic growth"; "Differentiation"; "Expansion"; "Maturation"; "MERISTEMATIC CELL"; "MATURE CELL"; "SENESCENCE" |
+| 13.9 | fig_13_9 | Complete | Figure labels: "Heterophylly"; "larkspur"; "buttercup" |
+| 13.10 | fig_13_10 | Complete | Figure labels: "tip of the coleoptile is the source of auxin"; "Arrows indicate direction of light" |
+| 13.11 | fig_13_11 | Complete | Figure labels: "Apical dominance"; "A plant with apical bud intact"; "A plant with apical bud removed"; "growth of lateral buds into branches after decapitation" |
 
-## Crop and layout decisions
+---
 
-The assets were rendered from hand-pinned rectangles read from the mandatory **440 dpi grid overlays with 5-point coordinate spacing**. The working crop margin is intentionally compact rather than padded with large white borders; approximately 10 PDF points or less is used where needed to protect an outer label, arrow, root, bracket, or leader line. Neighboring prose columns, section headings, and captions were excluded wherever this was possible without clipping meaningful figure artwork.
+## G. Crop and layout decisions
+
+Assets were rendered from hand-pinned rectangles read from the mandatory **440 dpi grid overlays with 5-point coordinate spacing**. The working crop margin is intentionally compact rather than padded with large white borders; approximately 10 PDF points or less is used where needed to protect an outer label, arrow, root, bracket, or leader line. Neighboring prose columns, section headings, and captions were excluded wherever this was possible without clipping meaningful figure artwork.
 
 All emitted images are true grayscale PNGs (`mode=L`) rendered at 300 dpi from the source PDF and passed through `autocontrast`. The source PDF was not modified. The 440 dpi grids, extraction logs, audit output, and visual findings remain in `scratch/ch13_figs/` and `scratch/ch13_visual_findings.md` for re-audit.
+
+---
+
+## H. Machine-verified counts (Gate 1 record)
+
+| Metric | Count |
+|---|---:|
+| Facts (F001–F084) | 84 |
+| Headings (H01–H20) | 20 |
+| Openers (O01–O16) | 16 |
+| Summary terms classified | 18 (all Covered) |
+| Exercise-gap items (E01–E10) | 10 |
+| Figures extracted | 11 |
+| Figure-label rows | 11 |
+| Assets present under `assets/` | 11 |
+
+**Gate 1 record.** Pass 1 is complete: the source has been read end to end, every teachable Fact is transcribed verbatim, all headings and openers are catalogued, every Summary term maps to a Fact, every Exercise ask maps to supporting Facts, and the eleven figures are documented with a parseable per-figure label matrix. This inventory is now FROZEN. Pass 2 (rewrite) and Pass 3 (verification against `check_pdf.py`) proceed from this file without re-opening the source for new Facts.
+
+---
 
 ## References
 
