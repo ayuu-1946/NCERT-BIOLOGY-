@@ -1522,7 +1522,7 @@ story.append(gap())
 story.append(heading("Note", "A Note on the PS II / PS I Electron Replacement Wording", 3))
 story.append(note(
     "<b>True fact:</b> the electron flow through the light reaction is one continuous, "
-    "non-cyclic chain - <b>water &rarr; PS II &rarr; PS I &rarr; NADP<super>+</super></b>. "
+    "non-cyclic chain - <b>water -> PS II -> PS I -> NADP<super>+</super></b>. "
     "Water splitting at PS II is the ultimate source of every electron in the chain, so it is "
     "water's electrons that end up replacing what PS I loses, using PS II purely as the relay "
     "in between."))
