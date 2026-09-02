@@ -335,6 +335,25 @@ story.append(process_flow([
 story.append(note(
     "<b>Priestley's hypothesis:</b> <i>Plants restore to the air whatever breathing animals and "
     "burning candles remove.</i>"))
+story.append(gap())
+
+# ---- 11.2 Figure 11.1 - Priestley's experiment; labels F271 into running text ----
+# [VERIFICATION FIX] Gate 3(b) D2: fig_11_1.png was extracted, converted to mono and marked
+# Verified: yes in the Pass 1 manifest, and carries label row F271, but Pass 2 never embedded it -
+# the PDF held 11 images against 12 verified assets. NCERT cites it at exactly this point
+# ("...soon gets extinguished (Figure 11.1 a, b, c, d)"), so it is placed here, directly after the
+# Priestley flow it illustrates. check_pdf.py check 6 could not catch this: F271's labels are the
+# bare panel markers "(a)".."(d)", which _norm() reduces to single characters that
+# _coverage_ratio() discards (len(t) > 1), leaving zero tokens and returning an unconditional
+# pass - see the guard added to check_pdf.py in this same session.
+story.append(figure(
+    "fig_11_1.png",
+    "<b>Fig. 11.1</b> - Priestley's experiment. Panels <b>(a)</b> and <b>(b)</b> show the "
+    "<b>mouse and the burning candle alone</b> in the bell jar - the candle is <b>extinguished</b> "
+    "and the mouse <b>suffocates</b>. Panels <b>(c)</b> and <b>(d)</b> show the <b>mint plant "
+    "placed in the same bell jar</b> - the <b>mouse stays alive</b> and the <b>candle continues to "
+    "burn</b>.",
+    max_width_cm=7.8))
 
 # ---- 11.2 Jan Ingenhousz (F030-F032) ----
 story.append(heading("11.2b", "Jan Ingenhousz (1730-1799)", 3))
@@ -1218,7 +1237,12 @@ story.append(data_table([
     ["Would <b>photorespiration</b> be present at <b>high CO<sub>2</sub> concentrations</b>",
      "Negligible", "Negligible"],
     ["<b>Temperature optimum</b>", "20-25 degrees C", "30-40 degrees C"],
-    ["<b>Examples</b>", "Tomatoes, bell pepper", "Maize, sorghum"],
+    # [VERIFICATION FIX] Gate 3(b) D1: this row read C3 = "Tomatoes, bell pepper". NCERT names
+    # tomatoes and bell pepper exactly once (p. 150, SS11.10.2) and only as *greenhouse crops*
+    # grown in a CO2-enriched atmosphere - it never classifies them as C3 plants. No inventory row
+    # licenses that claim (F185-F187 carry only the characteristics and the 'Choose from' lists),
+    # so it was FABRICATED. Maize and sorghum ARE sourced as C4 plants (p. 145) and stay.
+    ["<b>Examples</b>", "Not named in this chapter", "Maize, sorghum"],
 ], col_widths=[5.0, 2.5, 2.5]))
 story.append(gap())
 # F187 - NCERT's own "Choose from" option lists, carried verbatim in substance
