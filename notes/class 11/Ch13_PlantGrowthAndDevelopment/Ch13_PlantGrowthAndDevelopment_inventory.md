@@ -265,6 +265,30 @@ All emitted images are true grayscale PNGs (`mode=L`) rendered at 300 dpi from t
 
 ---
 
+## Pass 2 / Gate 2 — CLOSED
+
+`Ch13_PlantGrowthAndDevelopment.py` was written linearly from this frozen inventory, importing the repo-level `neet_template.py` (no style, geometry, colour, or font re-declared). It renders a **10-page A4 PDF** with all eleven figures embedded inline. `check_pdf.py` exits **0 — VERDICT WARN (0 fail, 1 warn)** — a green gate: checks 1–3 and 5–10 all PASS (**84/84 Facts ticked**, **49/49 figure labels found in running text**, all 11 images monochrome, geometry/bands/legibility/orphan-headings/badge-collisions all clean). The lone WARN is check 4's known portrait-heuristic false positive — the substring "photo" inside the "phototropism" (F056) and "photoperiodic" (E07, E09) rows — no person photograph is embedded, matching the accepted Ch12 baseline.
+
+## Pass 3(a) — visual render check: COMPLETE, 10/10 pages inspected
+
+Every page of the rebuilt PDF was rendered with `pymupdf` at 150 dpi (colour) and again at a 1-bit B&W threshold, and each page was inspected directly (not sampled). Result: **10/10 pages CLEAN** — zero layout, orphaned-heading, overflow, squashed/clipped-figure, colour-channel, or print-safety defects. Cross-page style consistency was pulled across ≥3 instances of every recurring element type (H1 banner, H2/H3 banner, section-number badge, figure box + caption, process-flow triangle badge, the single data table, the single NOTE box) and each resolved to one identical signature. 1-bit threshold render confirms no fill lighter than `#D9D9D9` is the sole carrier of meaning anywhere. Full page-by-page table: `scratch/ch13_gate3/PASS3A_FINDINGS.md`.
+
+## Pass 3(b) / Gate 3 — CLOSED
+
+A full bidirectional read (source re-extracted with pdfplumber, 15 pages; no grep or coverage percentage used to clear any row) was run against every script block:
+
+- **Direction 1 (inventory → script):** **84/84 Facts COVERED, 0 MISSING, 0 FABRICATED, 0 material DRIFT.** Numbers/qualifiers spot-verified verbatim ("17,500 new cells per hour", "3,50,000 times", "more than 100 gibberellins", "20 tonnes per acre", "mid-1960s", "E. Kurosawa (1926)", "Miller et al. (1955)", "H. H. Cousins (1910)"); NCERT's own spelling "respiratory climactic" retained, not silently corrected. The PGR data table and process-flow steps were confirmed as faithful reformats of F051 and Fig 13.8 — no fabrication.
+- **Direction 2 (source → inventory):** every section's opener sentence and every H1/H2/H3 heading (including all five 13.4.3.x sub-headings) is present and correctly filed. Seven candidate UNINVENTORIED sentences were investigated and dismissed as trivial/pedagogical restatements already carried by an existing Fact (**FP-1** intro converse of F005; **FP-2** §13.1 leaf-area illustration carried by F018; **FP-3** §13.1.1 maturation-of-derivatives carried by F038/F012; **FP-4** §13.1.2 cell-number/cell-size carried implicitly by the script's own wording; **FP-5** §13.1.5 subsumed by F037; **FP-6** §13.4.3.1 "in most higher plants" preamble compressed in both the inventory and the script — direction 1 clean; **FP-7** §13.4.3.3 recap-of-existence sentence carried by F071/F072).
+- **Compression decision (CD-1):** kinetin's IUPAC name "N⁶-furfurylaminopurine" is compressed to "adenine derivatives (kinetin)" in both F051 and the script; kinetin's identity as a modified adenine is still stated via F071. NEET-relevant identity preserved.
+- **Source observation (NOTE-1):** "intercalary meristem" appears only in the NCERT Summary, not the body; it is catalogued in section D and surfaced in the rendered Quick Recap ("(and intercalary meristems)"). Coverage intact, no defect.
+- **Source-level gap (SRC-1):** Exercises 7 and 9 ask about short-day/long-day plants and photoperiodic response — content the rationalised NCERT edition removed from the chapter body while retaining the exercises. The inventory honestly maps E07/E09 to F084 (the surviving pointer that light/temperature control flowering via PGRs). This is an inherent inconsistency in the NCERT source, not a chapter defect.
+
+**Figure-label matrix (human backstop):** all 11 figures confirmed at their correct topic with captions matching NCERT wording; `check_pdf.py` check 6 returns 49/49 labels in running text, spot-confirmed by eye.
+
+**Verdict: both directions CLEAN, 0 confirmed content defects.** Combined with Pass 3(a)'s 10/10 clean pages, **Gate 3 is CLOSED with zero confirmed defects** — no `.py` edit, Fact, caption, or asset change was required. Full findings: `scratch/ch13_gate3/PASS3B_FINDINGS.md`.
+
+---
+
 ## References
 
 [1]: `../../../../SUPREME COMMAND PROMPT.md` "Repository SUPREME COMMAND PROMPT"
