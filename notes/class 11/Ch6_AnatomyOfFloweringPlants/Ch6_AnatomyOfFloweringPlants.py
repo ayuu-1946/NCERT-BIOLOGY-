@@ -411,7 +411,7 @@ story.append(KeepTogether([figure(
     "<b>Parenchyma</b>; <b>Endodermis</b>; <b>Pericycle</b>; <b>Vascular bundle</b>; "
     "<b>Medullary rays</b>; <b>Pith</b>; <b>Collenchyma</b>; <b>Phloem</b>; <b>Cambium</b>; "
     "<b>Metaxylem</b>; <b>Protoxylem</b>; <b>Xylem</b>; <b>Vascular bundles</b>; <b>Ground "
-    "tissue</b>."))  # F099 labels [VERIFICATION FIX D2: 'Xylem' label of the monocot panel added - 17 labels]
+    "tissue</b>.")]))  # F099 labels [VERIFICATION FIX D2: 'Xylem' label of the monocot panel added - 17 labels]
 
 # ======================================================================================
 # ---- 6.2.5  Dorsiventral (Dicotyledonous) Leaf ---- F100-F114 (+ Fig 6.5 with 6.2.6)
