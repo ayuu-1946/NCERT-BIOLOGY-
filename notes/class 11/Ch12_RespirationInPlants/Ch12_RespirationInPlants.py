@@ -57,6 +57,21 @@ figure_layout_decisions.md, never in the PDF - Rule 6):
     of stranding its final line on the following page. Page count is unchanged
     at 10.
 
+  * SS12.5 PAGE BREAK + FIG 12.4 ENLARGEMENT (operator instruction, this revision).
+    SS12.5 previously began at the foot of page 7 directly under the Fig 12.4 /
+    Fig 12.5 plate: only the section banner and its opening paragraph fitted
+    there, while the assumptions list, the NOTE and the balance sheet carried
+    over to page 8. An explicit PageBreak now opens the whole SS12.5 block on
+    page 8. The ~2.4 cm of column height vacated on page 7 is spent enlarging
+    Fig 12.4 from 7.0 cm to 8.4 cm (picture 11.77 -> 14.12 cm tall), still inside
+    its 9.75 cm natural width, so the move is DOWNWARD-only and no upscaling
+    occurs. Fig 12.5 is left at its 7.6 cm request on purpose: its 300 dpi
+    natural width is just 6.67 cm, so _panel() already clamps it there and any
+    larger number would only push it past 300 dpi without changing the render.
+    The pair therefore grows on the 12.4 side alone, and the row still measures
+    ~16.1 cm inside the 18 cm column. Page count is unchanged at 10 and pages
+    9-10 are pixel-identical to the previous build.
+
   * EXERCISES. The Pass 1 exercise-gap scan found ZERO gaps: all 12 exercises are
     answered by the body. Per Rule 2 step 4 and SS5 item 9 the chapter therefore
     ends at the Quick Recap with no "Terms used in the exercises" appendix and no
@@ -637,10 +652,17 @@ story.append(b1(
     "intermembrane space to the matrix down the electrochemical proton gradient.</b>"))
 story.append(gap(6))
 
-# LAYOUT: Fig 12.4 (AR 0.595) at 7.0 cm paired with Fig 12.5 (AR 1.079) at 7.6 cm - both
+# LAYOUT: Fig 12.4 (AR 0.595) at 8.4 cm paired with Fig 12.5 (AR 1.079) at 7.6 cm - both
 # belong to SS12.4.2, so the pair displaces nothing. At full column width 12.4 would render
 # ~29 cm tall (taller than the whole text column) and even at its 9.75 cm natural width it
 # costs 16.4 cm while leaving ~8 cm of column empty. See figure_layout_decisions.md SS1-SS2.
+#
+# ENLARGEMENT (operator instruction, this revision): 12.4 was 7.0 cm. SS12.5 no longer
+# trails this plate on page 7 (see the PageBreak below), and that vacated ~2.4 cm of column
+# height is spent here: 8.4 cm renders 12.4 at ~14.1 cm tall, filling the page without
+# overflow. Fig 12.5 is deliberately left at 7.6 cm because its 300 dpi natural width is
+# only 6.67 cm - _panel() already clamps it there, so any larger request would upscale past
+# 300 dpi. The pair therefore grows on the 12.4 side only; row width is ~16.1 cm of 18 cm.
 story.append(figure_pair(
     ("fig_12_4.png",
      "Fig. 12.4 - Electron Transport System (ETS). The carriers are drawn in the <b>inner "
@@ -648,8 +670,8 @@ story.append(figure_pair(
      f"I</b> and <b>succinate</b> feeds {FADH2} at <b>complex II</b>; both hand electrons to "
      "<b>ubiquinone</b>, which passes them through <b>complex III</b> to <b>cytochrome c</b> "
      f"and on to <b>complex IV</b>, where {O2} is reduced to {H2O}. <b>Complex V</b> is the "
-     "<b>ATP synthase</b> that makes ATP from <b>ADP</b> and <b>inorganic phosphate</b>.",
-     7.0),
+    "<b>ATP synthase</b> that makes ATP from <b>ADP</b> and <b>inorganic phosphate</b>.",
+    8.4),
     ("fig_12_5.png",
      "Fig. 12.5 - Diagramatic presentation of ATP synthesis in mitochondria. The "
      "<b>F<sub>1</sub></b> headpiece projects into the <b>matrix</b> and carries the site where "
@@ -662,6 +684,14 @@ story.append(figure_pair(
 # ======================================================================================
 # ---- 12.5 The Respiratory Balance Sheet ---- F128-F138
 # ======================================================================================
+# LAYOUT (operator instruction, this revision): SS12.5 previously began at the foot of
+# page 7, directly under the Fig 12.4 / Fig 12.5 plate - the section banner plus its
+# opening paragraph were stranded there while the assumptions list and the balance sheet
+# carried over to page 8. An explicit PageBreak now opens the whole SS12.5 block on
+# page 8, and the column height it vacates on page 7 is spent enlarging Fig 12.4 (see the
+# ENLARGEMENT note above). Page 8 has the slack to absorb the moved heading, so the
+# chapter still ends at 10 pages and pages 9-10 are untouched.
+story.append(PageBreak())
 story.append(heading("12.5", "The Respiratory Balance Sheet", 1))
 story.append(body(
     "It is <b>possible to make calculations of the net gain of ATP for every glucose molecule "
