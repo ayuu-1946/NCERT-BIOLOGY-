@@ -47,7 +47,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import KeepTogether, Paragraph, Spacer  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch6_AnatomyOfFloweringPlants.pdf")
@@ -401,14 +401,17 @@ story.append(b1(
     "within the vascular bundles."))  # F097
 
 # --- Fig 6.4 ---
-story.append(figure(
+# [VERIFICATION FIX D4] figure + its label NOTE held on one page (they were split by a
+# page break, leaving the label list stranded at the top of the next page).
+story.append(KeepTogether([figure(
     "fig_6_4.png",
-    "Figure 6.4 T.S. of stem: (a) Dicot (b) Monocot"))  # F098 caption
-story.append(note(
+    "Figure 6.4 T.S. of stem: (a) Dicot (b) Monocot"),  # F098 caption
+    note(
     "Figure 6.4 labels (verbatim): <b>Epidermal hair</b>; <b>Epidermis</b>; <b>Hypodermis</b>; "
     "<b>Parenchyma</b>; <b>Endodermis</b>; <b>Pericycle</b>; <b>Vascular bundle</b>; "
     "<b>Medullary rays</b>; <b>Pith</b>; <b>Collenchyma</b>; <b>Phloem</b>; <b>Cambium</b>; "
-    "<b>Metaxylem</b>; <b>Protoxylem</b>; <b>Vascular bundles</b>; <b>Ground tissue</b>."))  # F099 labels
+    "<b>Metaxylem</b>; <b>Protoxylem</b>; <b>Xylem</b>; <b>Vascular bundles</b>; <b>Ground "
+    "tissue</b>."))  # F099 labels [VERIFICATION FIX D2: 'Xylem' label of the monocot panel added - 17 labels]
 
 # ======================================================================================
 # ---- 6.2.5  Dorsiventral (Dicotyledonous) Leaf ---- F100-F114 (+ Fig 6.5 with 6.2.6)
@@ -452,6 +455,10 @@ story.append(b1(
 story.append(b1(
     "The vascular bundles are surrounded by a layer of <b>thick-walled bundle sheath "
     "cells</b>."))  # F114
+story.append(b1(
+    "Note the <b>position of the xylem</b> within the bundle (Figure 6.5 a): the <b>xylem lies "
+    "towards the adaxial (upper) side</b> and the <b>phloem towards the abaxial (lower) "
+    "side</b>."))  # F114a [VERIFICATION FIX D3: NCERT's closing sentence of 6.2.5 had no inventory row]
 
 # ======================================================================================
 # ---- 6.2.6  Isobilateral (Monocotyledonous) Leaf ---- F117-F123 (+ Fig 6.5)
@@ -524,15 +531,15 @@ story.append(body(
     "<b>Q6. How is the study of plant anatomy useful to us?</b>"))  # F132 exercise-gap
 story.append(b1(
     "<b>Anatomy is the study of the internal structure and functional organisation of "
-    "plants</b> (F002), so it lets us understand how a plant is built from cells to tissues to "
-    "organs."))
+    "plants</b>, so it lets us understand how a plant is built from cells to tissues to "
+    "organs."))  # F002 [VERIFICATION FIX D1: inventory row ID removed from reader text - Rule 6]
 story.append(b1(
     "It lets us <b>distinguish monocots from dicots anatomically</b> - within angiosperms the "
-    "two are internally different (F005) - which is how a stem or root is identified from a "
-    "transverse section."))
+    "two are internally different - which is how a stem or root is identified from a "
+    "transverse section."))  # F005 [VERIFICATION FIX D1]
 story.append(b1(
-    "It reveals the <b>adaptations of internal structures to diverse environments</b> (F006), "
-    "e.g. bulliform cells that curl a grass leaf to reduce water loss."))
+    "It reveals the <b>adaptations of internal structures to diverse environments</b>, "
+    "e.g. bulliform cells that curl a grass leaf to reduce water loss."))  # F006 [VERIFICATION FIX D1]
 
 # ======================================================================================
 # ---- BUILD ---- (SS0.6: build_pdf owns page furniture; no footer/header/page number)
