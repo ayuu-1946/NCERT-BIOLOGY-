@@ -6,7 +6,7 @@ Source: `Chapter/class 11/Chapter 06 - Anatomy of Flowering Plants.pdf` | Frozen
 - Total Facts rows: **132** (IDs `F001..F132`, contiguous, no gaps/duplicates)
 - Heading rows (`Type: heading`): **14** = 11 numbered section headings + chapter title + `SUMMARY` + `EXERCISES`; **0 unnumbered sub-headings** exist in this chapter
 - Opener rows (`Type: opener`): **11** (one per numbered section: 6.1, 6.1.1, 6.1.2, 6.1.3, 6.2, 6.2.1, 6.2.2, 6.2.3, 6.2.4, 6.2.5, 6.2.6)
-- Figure-label rows (`Type: figure-labels`): **5** figures / **44** labels (6.1=5, 6.2=3, 6.3=9, 6.4=16, 6.5=11)
+- Figure-label rows (`Type: figure-labels`): **5** figures / **45** labels (6.1=5, 6.2=3, 6.3=9, 6.4=17, 6.5=11) — *Fig 6.4 was 16 at freeze; its 17th label `Xylem` (monocot panel, bottom-right) was added at Gate 3(b) as fix D2, see the Pass 3 record below.*
 - Caption rows (`Type: caption`): **5**
 - Summary sentences classified: **13** (7 BODY-PRESENT, 6 SUMMARY-UNIQUE)
 - Exercises: **7 total, 1 answered by design (GAP: Q6), 6 unanswered by design (COVERED), 0 overlooked**
@@ -17,7 +17,7 @@ Session log (Pass 1, five mandatory sessions):
 - **1-S** source read + facts — done (F002–F006 intro; per-section fact rows)
 - **1-H** heading sweep — done (14 `heading` rows; 11 numbered + 3 structural, 0 unnumbered)
 - **1-O** opener sweep — done (11 `opener` rows)
-- **1-F** figures — done previously (manifest + 44-label matrix, all `Mono: yes`/`Verified: yes`)
+- **1-F** figures — done previously (manifest + 44-label matrix at freeze → **45** after Gate 3(b) fix D2 added Fig 6.4's `Xylem` label, all `Mono: yes`/`Verified: yes`)
 - **1-Z** gaps, summary, freeze — done (summary classification + exercise-gap; counts machine-derived) → **Gate 1**
 
 Pass 2 / Gate 2 (2026-09-02):
@@ -130,7 +130,7 @@ Type vocabulary (normalized, single casing): `heading`, `opener`, `definition`, 
 | F096 | 6.2.4 | qualifier | "Peripheral vascular bundles are generally smaller than the centrally located ones." (qualifier: generally) | x |
 | F097 | 6.2.4 | fact | "The phloem parenchyma is absent, and water-containing cavities are present within the vascular bundles." | x |
 | F098 | Fig 6.4 | caption | Fig. 6.4 caption: "T.S. of stem: (a) Dicot (b) Monocot" | x |
-| F099 | Fig 6.4 | figure-labels | Figure labels: "Epidermal hair"; "Epidermis"; "Hypodermis"; "Parenchyma"; "Endodermis"; "Pericycle"; "Vascular bundle"; "Medullary rays"; "Pith"; "Collenchyma"; "Phloem"; "Cambium"; "Metaxylem"; "Protoxylem"; "Vascular bundles"; "Ground tissue" | x |
+| F099 | Fig 6.4 | figure-labels | Figure labels: "Epidermal hair"; "Epidermis"; "Hypodermis"; "Parenchyma"; "Endodermis"; "Pericycle"; "Vascular bundle"; "Medullary rays"; "Pith"; "Collenchyma"; "Phloem"; "Cambium"; "Metaxylem"; "Protoxylem"; "Xylem"; "Vascular bundles"; "Ground tissue" | x |
 | F100 | 6.2.5 | heading | "6.2.5 Dorsiventral (Dicotyledonous) Leaf" | x |
 | F101 | 6.2.5 | opener | "The vertical section of a dorsiventral leaf through the lamina shows three main parts, namely, epidermis, mesophyll and vascular system." (count: three) | x |
 | F102 | 6.2.5 | term | "The epidermis which covers both the upper surface (adaxial epidermis) and lower surface (abaxial epidermis) of the leaf has a conspicuous cuticle." | x |
