@@ -95,7 +95,10 @@ story.append(body(
 # ======================================================================================
 # ---- 2.1 THE MALE REPRODUCTIVE SYSTEM ---- F009-F036 (heading F009, opener F010)
 # ======================================================================================
-story.append(heading("2.1", "The Male Reproductive System", 1, has_table=True))
+# [VERIFICATION FIX] table icon removed: §2.1 contains no data_table (the stray
+# open-square badge that appeared at the banner's right margin on page 1). The icon
+# now sits only on the table-bearing sections 2.2 and 2.6.
+story.append(heading("2.1", "The Male Reproductive System", 1))
 story.append(body(
     "The <b>male reproductive system is located in the pelvis region</b>. It includes a "
     "<b>pair of testes</b> along with <b>accessory ducts</b>, <b>glands</b> and the "
@@ -171,7 +174,8 @@ story.append(figure(
 # ======================================================================================
 # ---- 2.2 THE FEMALE REPRODUCTIVE SYSTEM ---- F037-F077 (heading F037, opener F038)
 # ======================================================================================
-story.append(heading("2.2", "The Female Reproductive System", 1))
+# [VERIFICATION FIX] has_table=True: §2.2 carries a data_table (mammary-gland structure).
+story.append(heading("2.2", "The Female Reproductive System", 1, has_table=True))
 story.append(body(
     "The <b>female reproductive system</b> consists of a <b>pair of ovaries</b> along with a "
     "<b>pair of oviducts</b>, a <b>uterus</b>, a <b>cervix</b>, a <b>vagina</b> and the "
@@ -525,7 +529,8 @@ story.append(figure(
 # ======================================================================================
 # ---- 2.6 PREGNANCY AND EMBRYONIC DEVELOPMENT ---- F170-F189 (heading F170, opener F171)
 # ======================================================================================
-story.append(heading("2.6", "Pregnancy and Embryonic Development", 1))
+# [VERIFICATION FIX] has_table=True: §2.6 carries a data_table (foetal-growth timeline).
+story.append(heading("2.6", "Pregnancy and Embryonic Development", 1, has_table=True))
 story.append(body(
     "After implantation, <b>finger-like projections appear on the trophoblast called chorionic "
     "villi</b>, which are <b>surrounded by the uterine tissue and maternal blood</b>. The "
