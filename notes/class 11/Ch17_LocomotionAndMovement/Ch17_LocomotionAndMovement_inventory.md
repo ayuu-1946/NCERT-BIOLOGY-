@@ -235,7 +235,7 @@ One row per figure. Labels were harvested in session `1-F` by opening each rende
 | F188 | Fig 17.5 | figure-label | Figure labels: “H zone”; “I band”; “A band”; “Relaxed”; “Contracting”; “Maximally Contracted”; “Z line”; “Two Sarcomeres” | |
 | F189 | Fig 17.6 | figure-label | Figure labels: “Parietal bone”; “Frontal bone”; “Temporal bone”; “Occipital bone”; “Occipital condyle”; “Sphenoid bone”; “Ethmoid bone”; “Lacrimal bone”; “Nasal bone”; “Zygomatic bone”; “Maxilla”; “Mandible”; “Hyoid bone” | |
 | F190 | Fig 17.7 | figure-label | Figure labels: “Cervical vertebra”; “Thoracic vertebra”; “Lumbar vertebra”; “Intervertebral disc”; “Sacrum”; “Coccyx” | |
-| F191 | Fig 17.8 | figure-label | Figure labels: “1”; “2”; “3”; “4”; “5”; “6”; “7”; “8”; “9”; “10”; “11”; “12”; “True ribs”; “False ribs”; “Floating ribs”; “Sternum”; ���Ribs”; “Vertebral column” | |
+| F191 | Fig 17.8 | figure-label | Figure labels: “1”; “2”; “3”; “4”; “5”; “6”; “7”; “8”; “9”; “10”; “11”; “12”; “True ribs”; “False ribs”; “Floating ribs”; “Sternum”; �����Ribs”; “Vertebral column” | |
 | F192 | Fig 17.9 | figure-label | Figure labels: “Clavicle”; “Scapula”; “Humerus”; “Radius”; “Ulna”; “Carpals”; “Metacarpals”; “Phalanges” | |
 | F193 | Fig 17.10 | figure-label | Figure labels: “Ilium”; “Pubis”; “Ischium”; “Coxal bone”; “Sacrum”; “Femur”; “Patella”; “Tibia”; “Fibula”; “Tarsals”; “Metatarsals”; “Phalanges” | |
 
@@ -354,6 +354,27 @@ Pass 3 ran two independent sweeps over the built PDF: **3(a)** a page-by-page vi
 | 6 | Pass 3(b) bidirectional read | done — source pp. 217-229 -> notes (nothing dropped) and notes -> source (nothing invented); defects D1-D3 raised and closed |
 | 7 | SUMMARY reproduced and EXERCISES answered | done — full summary section plus all 10 NCERT exercises with worked answers sourced from the chapter text |
 | 8 | Defect register written | done — D1-D3 above, all closed |
+
+## Pass 3(b) section-by-section read log (re-verified 2026-09-02)
+
+The bidirectional read was re-run this session **section by section**, walking the source (textbook pp. 217–229) against the built notes (15 rendered pages) and then the notes back against the source. Each row records the source span, the notes span, the figure(s) that land in that section, and the drift verdict. Every section is clean; the only defects ever raised (D1–D3, above) all fall in §17.2 / EXERCISES / Fig 17.5 and are already closed.
+
+| # | Section (source) | Facts span | Notes location | Figures | Source→notes (dropped?) | Notes→source (invented?) |
+|---|---|---|---|---|---|---|
+| 0 | Intro — Movement vs Locomotion (`Amoeba`, `Paramoecium`, `Hydra`; all locomotions are movements, not vice-versa; habitat/purpose) | `F001`–`F011` | p.1 | — | none — bullet-for-bullet | none |
+| 1 | **17.1 Types of Movement** (amoeboid / ciliary / muscular; macrophages·leucocytes·microfilaments; trachea·ova; note on muscular+skeletal+neural) | `F012`–`F024` | p.1 | — | none — 3-row table reproduces where/how verbatim | none; `[NOTE]` correctly flags the coordinated-systems remark |
+| 2 | **17.2 Muscle** (mesodermal origin, 40–50%, excitability/contractility/extensibility/elasticity; skeletal/visceral/cardiac; structure of skeletal muscle; banding A/I/Z/M/H; sarcomere as functional unit; resting overlap) | `F025`–`F075` | pp. 1–4 | **17.1** (p.2), **17.2** (p.3) | none — muscle-type table, band table, sarcomere bullets all present | none — **D1** was the only issue (sarcomere sat in a memory-aid box); fixed, now body text on p.3 |
+| 3 | **17.2.1 Structure of Contractile Proteins** (F/G actin, tropomyosin, troponin masks sites; meromyosin HMM/LMM, head = ATPase with ATP + actin sites) | `F076`–`F088` | pp. 3–4 | **17.3** (p.4) | none — actin bullets + HMM/LMM table present | none |
+| 4 | **17.2.2 Mechanism of Muscle Contraction** (sliding-filament theory; motor unit / neuromuscular junction; 9-step cycle; I-band shortens, A-band constant; reaction time; fatigue/lactic acid; red vs white fibres/myoglobin) | `F089`–`F133` | pp. 4–6 | **17.4** (p.5), **17.5** (p.6) | none — the full contraction cycle is staged as a numbered process-flow; red/white table present | none; `Pi` artefact (`F090`) rendered correctly, verbatim in row |
+| 5 | **17.3 Skeletal System** intro (bone vs cartilage matrix; 206 bones; axial + appendicular) | `F134`–`F138` | p.6 | — | none | none |
+| 6 | **Axial Skeleton** (80 bones; skull 22 = cranial 8 + facial 14; hyoid; ear ossicles M/I/S; dicondylic; vertebral column 26, atlas, 7/12/5/1/1, intervertebral disc; sternum + 12 rib pairs, bicephalic; true/false/floating) | `F139`–`F167` | pp. 7–9 | **17.6** (p.7), **17.7** (p.8), **17.8** (p.9) | none — every count matches; rib table (true 7 / vertebrochondral 8–10 / floating 11–12) present | none |
+| 7 | **Appendicular Skeleton** (30 bones/limb; fore-limb humerus·radius·ulna·carpals 8·metacarpals 5·phalanges 14; hind-limb femur·tibia·fibula·tarsals 7·metatarsals 5·phalanges 14; patella; pectoral = clavicle+scapula, spine·acromion·glenoid cavity; pelvic = coxal = ilium+ischium+pubis, acetabulum, pubic symphysis) | `F168`–`F179` | pp. 9–11 | **17.9** (p.10), **17.10** (p.11) | none — limb table + girdle bullets present | none; the two `[MEMORY AID]` boxes are the only non-NCERT content and are labelled |
+| 8 | **17.4 Joints** (fulcrum; fibrous/cartilaginous/synovial; ball-and-socket, hinge, pivot, gliding, saddle with examples) | `F180`–`F186` | pp. 11–12 | — | none — joint-type table + sub-type bullets present | none; `arragement` artefact (`F162`/synovial) rendered correctly, verbatim in row |
+| 9 | **17.5 Disorders** (myasthenia gravis, muscular dystrophy, tetany, arthritis, osteoporosis, gout) | `F187`–`F193` | p.12 | — | none — 6-row disorder table present | none; chapter-map recap `[NOTE]` labelled as synthesis |
+| 10 | **SUMMARY** (pp. 228–229) | folded into `F001`–`F193` (3 SUMMARY-UNIQUE folded at Gate 1) | p.12 | — | none — full summary reproduced | none |
+| 11 | **EXERCISES** (10 questions, pp. 229) | `question` rows across the file | pp. 13–15 | — | none — all 10 answered with worked solutions | none — **D2** (9c/9d answerable only by applying a definition) closed via explicit `(Applied answer: …)` parentheticals + EXERCISES `[NOTE]` |
+
+**Verdict:** 12 / 12 source sections read in both directions, **nothing dropped and nothing invented**; all 10 figures land in their correct sections with verbatim captions and `[NOTE] labels` lines; the three defects ever raised (D1–D3) remain closed. This matches the machine evidence (`check_pdf.py --strict` = PASS 0/0; 183/183 Facts ticked; 95/95 labels; 10/10 mono images).
 
 ## References
 
