@@ -12,10 +12,10 @@ Page-image inspection of artwork pages 2–7 identified five numbered NCERT figu
 | Figure | Source page | Caption / subject | Asset | PDF crop rectangle (x0, y0, x1, y1) | Mono | Verified |
 |---|---:|---|---|---|---|---|
 | 6.1 | 2 | Diagrammatic representation of stomata: (a) bean-shaped guard cells; (b) dumb-bell-shaped guard cells | `assets/fig_6_1.png` | `(60, 337, 530, 448)` | yes | yes |
-| 6.2 | 3 | Various types of vascular bundles: (a) radial; (b) conjoint closed; (c) conjoint open | `assets/fig_6_2.png` | `(320, 80, 520, 482)` | yes | yes |
-| 6.3 | 4 | T.S. of root: (a) dicot root (primary); (b) monocot root | `assets/fig_6_3.png` | `(75, 78, 320, 558)` | yes | yes |
+| 6.2 | 3 | Various types of vascular bundles: (a) radial; (b) conjoint closed; (c) conjoint open | `assets/fig_6_2.png` (a/b/c stacked horizontally) | `(320, 80, 520, 482)` | yes | yes |
+| 6.3 | 4 | T.S. of root: (a) dicot root (primary); (b) monocot root | `assets/fig_6_3.png` (a/b stacked horizontally), plus `assets/fig_6_3a.png` and `assets/fig_6_3b.png` | `(75, 78, 320, 558)` | yes | yes |
 | 6.4 | 5 | T.S. of stem: (a) dicot; (b) monocot | `assets/fig_6_4.png` | `(55, 235, 550, 700)` | yes | yes |
-| 6.5 | 6 | T.S. of leaf: (a) dicot; (b) monocot | `assets/fig_6_5.png` | `(55, 285, 320, 690)` | yes | yes |
+| 6.5 | 6 | T.S. of leaf: (a) dicot; (b) monocot | `assets/fig_6_5.png` (a/b stacked horizontally), plus `assets/fig_6_5a.png` and `assets/fig_6_5b.png` | `(55, 285, 320, 690)` | yes | yes |
 
 ## Figure-label matrix
 
@@ -35,6 +35,10 @@ The crops use approximately 10 PDF points of intentional clearance where the art
 
 Figure 6.4 is a raster-dominant plate, so the drawings-extent check reports “no drawings (raster figure)” rather than treating the result as a failure. Figure 6.2 has no text-layer words inside the plate, confirming that its labels must be verified visually.
 
+## Reformatting record
+
+Figure 6.2 was trimmed on the right and reformatted into an equal-cell horizontal composite of panels (a), (b), and (c). Figures 6.3 and 6.5 were split into standalone (a) and (b) assets and then recombined horizontally into `fig_6_3.png` and `fig_6_5.png`. All reformatted outputs were individually checked against the mandatory 440 dpi / 5-point source-page grids.
+
 ## Verification record
 
 The final audit was run with `audit_figures.py` after the last extraction. The text-layer grazing check reported no grazing words for all five assets; the drawings-extent check reported `ok` for Figures 6.1, 6.2, 6.3, and 6.5, and correctly identified Figure 6.4 as raster-dominant; the border-band ink check reported `clean` for all five assets. The emitted PNGs all exist, use one grayscale channel (`mode=L`), and were individually opened for visual confirmation of label visibility and panel completeness.
@@ -47,7 +51,7 @@ The final audit was run with `audit_figures.py` after the last extraction. The t
 | `audit_figures.py` | Three-part mechanical crop gate plus image-mode check |
 | `Ch6_extraction.log` | Final extraction output and image dimensions |
 | `Ch6_figure_audit.txt` | Final A/B/C/D audit output |
-| `assets/fig_6_1.png` through `assets/fig_6_5.png` | Final tightly cropped, grayscale figure assets |
+| `assets/fig_6_1.png`, `assets/fig_6_2.png`, `assets/fig_6_3a.png`, `assets/fig_6_3b.png`, `assets/fig_6_4.png`, `assets/fig_6_5a.png`, `assets/fig_6_5b.png` | Final tightly cropped, grayscale figure assets; original combined 6.3/6.5 files retained |
 | `../../scratch/ch6_figs/grid_4x/p02.png` through `p07.png` | Mandatory high-density pinning grids retained as audit evidence |
 
 ## References
