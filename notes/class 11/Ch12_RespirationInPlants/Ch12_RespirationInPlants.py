@@ -18,20 +18,40 @@ figure_layout_decisions.md, never in the PDF - Rule 6):
     default max_width_cm=15.9 Fig 12.1 (AR 0.556) and Fig 12.4 (AR 0.595) would
     render 27-29 cm tall - taller than the 24.9 cm text column - and even at
     their 300 dpi natural widths (8.54 / 9.75 cm) they cost 15-16 cm of height
-    while leaving ~8 cm of column empty beside them. On operator instruction
-    every tall plate renders in the 6.5-8.0 cm band. All moves are DOWNWARD, so
-    the no-upscale cap in neet_template.figure() is untouched and effective
-    print resolution RISES in every case.
+    while leaving ~8 cm of column empty beside them. Every tall plate therefore
+    renders below its natural width. All moves are DOWNWARD, so the no-upscale
+    cap in neet_template.figure() is untouched and effective print resolution
+    RISES in every case.
 
-  * PAIRED PANELS WHERE THE FIGURES ARE ADJACENT. The column width freed by the
-    compact widths is spent on the neighbouring figure rather than left blank:
-      - Fig 12.1 (glycolysis) + Fig 12.2 (anaerobic pathways) sit side by side
-        at the foot of SS12.2, at the point where F057-F060 name pyruvate's three
-        fates - i.e. each panel still sits at its own topic.
+  * FIG 12.1 IS SIZED TO FILL ITS OWN PAGE (operator instruction, this revision).
+    It was previously paired with Fig 12.2 in one side-by-side row; that pairing
+    spent the spare column but forced BOTH plates onto the page after SS12.2 and
+    squeezed the glycolysis chart - the most examined diagram in the chapter -
+    down to 6.6 cm. Unpaired, Fig 12.1 is HEIGHT-limited rather than width-
+    limited: 17.69 cm is free below the pyruvate-fate table, the full-column
+    caption costs 2.65 cm and the frame padding 0.35 cm, leaving 14.4 cm of
+    picture, which at AR 0.556 is 8.0 cm wide. That is still inside the 8.54 cm
+    natural width, so the chart grows to fill the page with NO upscaling. Its
+    NCERT source is a 150 dpi raster, so 8.0 cm is also near the point where
+    more display width would stop buying real detail.
+
+  * PAIRED PANELS WHERE THE FIGURES ARE ADJACENT. Where a compact width leaves a
+    column half empty and the neighbouring figure belongs to the same section,
+    that space is spent rather than left blank:
       - Fig 12.4 (ETS) + Fig 12.5 (ATP synthesis) sit side by side inside
         SS12.4.2, the single section that covers both.
-    Figures 12.3 and 12.6 stay single-panel: 12.3 has no same-section neighbour,
-    and 12.6 is a landscape plate (AR 1.288) that already uses the full width.
+    Figures 12.1, 12.2, 12.3 and 12.6 stand alone: 12.1 fills its page as above,
+    12.2 keeps its place at the pyruvate branch point and is centred at 8.65 cm
+    (exactly its 300 dpi natural width - it is near-square at AR 0.946, so a
+    full-column 15.9 cm would be 16.8 cm tall and consume a whole page for one
+    plate), 12.3 has no same-section neighbour, and 12.6 is a landscape plate
+    (AR 1.288) that already uses the full width.
+
+  * SS12.4.1 / Fig 12.3 PAGE BREAK. Fig 12.3 is a KeepTogether block that does
+    not fit in the 6.28 cm left after the TCA-cycle text, so it opens the next
+    page and that 6.28 cm stays blank. This is accepted deliberately on operator
+    instruction to hold Fig 12.3 on its current page; the alternative was
+    shrinking the plate or splitting it from its caption.
 
   * EXERCISES. The Pass 1 exercise-gap scan found ZERO gaps: all 12 exercises are
     answered by the body. Per Rule 2 step 4 and SS5 item 9 the chapter therefore
@@ -370,32 +390,41 @@ story.append(body(
     f"aerobic respiration</b>. <b>This requires {O2} supply.</b>"))
 story.append(gap(6))
 
-# LAYOUT: Fig 12.1 (AR 0.556) at 6.6 cm and Fig 12.2 (AR 0.946) at 8.4 cm, paired.
-# 12.1 alone at full column would be ~28 cm tall; at its 8.54 cm natural width it still
-# costs 15.4 cm of height and leaves ~9 cm of column blank. Pairing it with the anaerobic
-# -pathway plate spends that column instead of wasting it. Both panels sit at their own
-# topic: 12.1 closes SS12.2 (glycolysis), 12.2 illustrates the pyruvate branch point that
-# the paragraph immediately above names. Numbers + reasoning: figure_layout_decisions.md SS1-SS2.
-story.append(figure_pair(
-    ("fig_12_1.png",
-     "Fig. 12.1 - Steps of glycolysis. The chart runs from <b>Glucose (6C)</b> down through "
-     "<b>Glucose-6-phosphate (6C)</b> and <b>Fructose-6-phosphate (6C)</b> - each of the "
-     "first two steps spending one <b>ATP</b> and releasing <b>ADP</b> - to <b>Fructose "
-     "1,6-bisphosphate (6C)</b>, which splits into the <b>Triose phosphate dihydroxyacetone "
-     "phosphate (3C)</b> and the <b>Triose phosphate glyceraldehyde-3-phosphate (3C)</b>. The "
-     f"latter, with {NADp} reduced to {NADH}, becomes the <b>Triose bisphosphate "
-     "1,3-bisphosphoglyceric acid (3C)</b>, then the <b>Triose phosphate 3-phosphoglyceric "
-     f"acid (3C)</b>, then <b>2-phosphoglycerate</b>, which loses {H2O} to give "
-     "<b>phosphoenolpyruvate</b> and finally <b>Pyruvic acid (3C)</b>.",
-     6.6),
-    ("fig_12_2.png",
-     "Fig. 12.2 - Major pathways of anaerobic respiration. <b>Glucose</b> passes through "
-     "<b>Glyceraldehyde 3-phosphate</b>, <b>3-phosphoglyceric acid</b> and <b>phosphoenol "
-     "pyruvic acid</b> to <b>Pyruvic acid</b>, which then branches either to <b>Lactic acid</b> "
-     f"or to <b>Ethanol</b> plus {CO2}. {NADp} and {NADH} are shown being interconverted "
-     "along the pathway, since the reducing power taken out of the sugar is handed back at the "
-     "branch.",
-     8.4)))
+# LAYOUT: Fig 12.1 stands alone and is sized to FILL the page it closes (SS12.2).
+# The two plates used to be paired into one row purely to avoid wasting a column; that
+# forced both onto the following page and left the glycolysis chart at a cramped 6.6 cm.
+# Unpaired, 12.1 is HEIGHT-limited, not width-limited: the page has 17.69 cm free below
+# the pyruvate-fate table, the full-column caption costs 2.65 cm and the frame padding
+# 0.35 cm, leaving 14.4 cm of picture. At AR 0.556 that is 8.0 cm wide - still inside the
+# 8.54 cm natural width, so the chart is scaled up to fill the page with NO upscaling past
+# the 300 dpi cap. Numbers + reasoning: figure_layout_decisions.md SS1-SS2.
+story.append(figure(
+    "fig_12_1.png",
+    "Fig. 12.1 - Steps of glycolysis. The chart runs from <b>Glucose (6C)</b> down through "
+    "<b>Glucose-6-phosphate (6C)</b> and <b>Fructose-6-phosphate (6C)</b> - each of the "
+    "first two steps spending one <b>ATP</b> and releasing <b>ADP</b> - to <b>Fructose "
+    "1,6-bisphosphate (6C)</b>, which splits into the <b>Triose phosphate dihydroxyacetone "
+    "phosphate (3C)</b> and the <b>Triose phosphate glyceraldehyde-3-phosphate (3C)</b>. The "
+    f"latter, with {NADp} reduced to {NADH}, becomes the <b>Triose bisphosphate "
+    "1,3-bisphosphoglyceric acid (3C)</b>, then the <b>Triose phosphate 3-phosphoglyceric "
+    f"acid (3C)</b>, then <b>2-phosphoglycerate</b>, which loses {H2O} to give "
+    "<b>phosphoenolpyruvate</b> and finally <b>Pyruvic acid (3C)</b>.",
+    max_width_cm=8.0))
+
+# LAYOUT: Fig 12.2 keeps its place in the reading order - it illustrates the pyruvate
+# branch point the paragraph above names, and introduces SS12.3 overleaf. Freed from the
+# pair it is centred at its own width. It is near-square (AR 0.946), so "full column"
+# would make it 16.8 cm tall and eat a whole page; 8.65 cm is also exactly its 300 dpi
+# natural width, so this is simultaneously the widest honest size and the right one.
+story.append(figure(
+    "fig_12_2.png",
+    "Fig. 12.2 - Major pathways of anaerobic respiration. <b>Glucose</b> passes through "
+    "<b>Glyceraldehyde 3-phosphate</b>, <b>3-phosphoglyceric acid</b> and <b>phosphoenol "
+    "pyruvic acid</b> to <b>Pyruvic acid</b>, which then branches either to <b>Lactic acid</b> "
+    f"or to <b>Ethanol</b> plus {CO2}. {NADp} and {NADH} are shown being interconverted "
+    "along the pathway, since the reducing power taken out of the sugar is handed back at the "
+    "branch.",
+    max_width_cm=8.65))
 
 # ======================================================================================
 # ---- 12.3 Fermentation ---- F063-F075
@@ -713,6 +742,12 @@ story.append(figure(
 # ---- 12.7 Respiratory Quotient ---- F152-F162
 # ======================================================================================
 story.append(heading("12.7", "Respiratory Quotient", 1))
+# F153 is the source's transitional lead-in. It carries no biology, so it is set
+# unbolded - the house rule is that bold marks NCERT substance, and bolding a pure
+# navigation sentence would dilute that signal. It is written rather than dropped
+# because the other nine opener rows are all present and a frozen row is never
+# silently discarded; the only documented no-block row is F164 (see the docstring).
+story.append(body("Let us now look at another aspect of respiration."))
 story.append(keyterm(
     "<b>Respiratory quotient (RQ) or respiratory ratio:</b> the <b>ratio of the volume of "
     f"{CO2} evolved to the volume of {O2} consumed in respiration</b>."))
