@@ -1237,3 +1237,48 @@ Per the hard bar in `§6`, **that screen is Pass 2 evidence only and cannot clea
 single row.** Gate 3 still requires the per-page visual pass over all 20 pages and the
 **bidirectional** full read — in particular direction 2 (source → inventory), the one
 that actually failed on Ch9 twice. Only 2 of 20 pages have been looked at.
+
+## Out-of-pipeline text edit (2026-09-02) — not a Pass 2 session
+
+Four prose-only fixes were applied directly to `Ch7_HumanHealthAndDisease.py` outside
+the normal pass structure, at the requester's direction: (1) dropped the
+throat-clearing opener clause in the chapter-intro paragraph (`F306`) and a redundant
+lead-in sentence in the Widal test / Typhoid Mary passage (`F026`-area); (2) reworded
+one hedge construction ("It should be clearly borne in mind that…") in the addiction
+passage (`F247`/`F248`); (3) replaced two "due to/ascribed to the fact that"
+constructions with "because" in the immunity passage (`§7.2`, `§7.2.2`); (4)
+de-duplicated four separately-occurring "NCERT's own wording/order/points" attribution
+phrases into varied wording (disease-group table header, `§7.1i` water-borne passage,
+the P-P-C-C memory aid, the DNA-vaccine appendix). **No Facts row, figure caption,
+label, or asset was touched** — every change is phrasing only, checked by diff against
+the previously committed script (see the paired GitHub commit message for the literal
+diff). This was **not** a Pass 2 session and did not follow the `§6` protocol; it is
+logged here so it is not mistaken for one.
+
+**Re-verification run this session (not carried forward from August):**
+`check_pdf.py` on the rebuilt PDF returns **exit 0 — WARN (0 fail, 1 warn)**, same
+verdict shape as Gate 2 close. The warn is the same check 4 trigger re-inspected fresh
+— all four flagged manifest lines are text mentions of "photograph" (the Fig 7.3
+ringworm caption note and the M.S. Swaminathan exclusion comment), no image embedded,
+**11/11 embedded images confirmed monochrome**, same as before. Re-derived fresh:
+**20 pp / 51,575 chars / 11 imgs, text SHA `438ff96647b64fbc`** (was 51,556 chars at
+Gate 2 close; the +19 net char difference is consistent with the four wording changes
+above — shorter openers, cut duplicate lead-ins, versus the added "because"/"chapter's
+own" phrasing). **21/21 figure labels still in running text, 0 partial, 0 missing.**
+
+**A pre-existing count discrepancy was found, not introduced by this edit.** Check 7
+(`check_ticked`) reports **338** Facts rows ticked when re-run today, not the **335**
+recorded at Gate 2 close above. Traced directly against `check_pdf.py`'s own parser
+(`§`grep on `## Facts` scope): the table's row count was always 338 once the lettered
+sub-rows (`F001a`, `F001b`, and others matching `[a-z]?\d{2,}`) are counted alongside
+the plain-numbered rows running `F001`-`F335` — this session's script edit never
+touched the inventory file, so the true row count cannot have changed today. The
+`335/335 … 335+11=346` figure above was therefore already stale before this session,
+for a reason unrelated to this edit. **Left as found, not corrected in place**, per
+`§7`'s rule that a documentation defect is logged rather than silently overwritten —
+whoever next runs a real Pass 2/3 session on Ch7 should resolve which of `335` or
+`338` (or a fresh third count) is the row count to carry forward, ideally by listing
+the full ID set rather than trusting either number here.
+
+**Gate 3 status is unchanged by this edit.** No Pass 3(a) visual pass and no Pass 3(b)
+bidirectional read were performed. Ch7 remains **NOT in the Done tally**.
