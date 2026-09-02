@@ -22,7 +22,7 @@ Session log (Pass 1, five mandatory sessions):
 
 Pass 2 / Gate 2 (2026-09-02):
 - Script `Ch6_AnatomyOfFloweringPlants.py` written linearly from this freeze in Content Order (§5), importing the repo-level `neet_template.py`; no style/geometry/colour/font re-declared. All 6 SUMMARY-UNIQUE facts (`F125`–`F130`) folded into their body homes and restated in the Quick Recap.
-- PDF built: **6 A4 portrait pages, 4.6 MB, 5 embedded monochrome images** (Fig 6.1–6.5).
+- PDF built: **6 A4 portrait pages, 4.6 MB, 5 embedded monochrome images** (Fig 6.1–6.5). *(This was the pre-D2 count; the later `Xylem`-label commit reflowed the tail to a 7th page. The final committed PDF is 7 pages — see the Pass 3(a) fingerprint.)*
 - `check_pdf.py` → **exit 0, VERDICT WARN (0 fail / 1 benign warn)**: check 6 = **44/44 labels in running text**; check 7 = **132/132 Facts rows ticked**; checks 1–3, 5, 8–10 all PASS. The single WARN is **check 4** keyword-firing on "photo" inside *photosynthesis*/*photosynthates* rows (`F106`, `F126`, `S3`) — true-negative (check 3 confirms all 5 assets are monochrome T.S. diagrams; no person photograph exists in Ch6).
 - Ticking: chapter-local `tick_rows.py` (token screen, Pass-2 evidence only, never a Gate-3 clear) auto-ticked 121 rows; the remaining 11 (`F008`/`F057` paraphrased openers, `F071`/`F098`/`F115` figure captions, `F124` recap heading, `F125`/`F127`/`F128`/`F129`/`F130` summary-unique folds) were flagged as scorer artefacts (annotation words in the wording column), hand-verified present in the extracted PDF text, and ticked. → **Gate 2 CLOSED** (Gate 3 full-read defect hunt still open).
 
@@ -241,18 +241,40 @@ Method: full start-to-finish read of the 8-page NCERT source against the 132 fro
 **Direction-1 result:** 132/132 rows COVERED; 0 MISSING, 0 FABRICATED, 0 DRIFTED.
 **Direction-2 result:** every source sentence and every heading (14) maps to a row; 0 UNINVENTORIED. Every numbered/defining first sentence checked explicitly (the class that failed on Ch9): each section opener (F008, F013, F038, F043, F055, F057, F074, F080, F094, F101, F118) is present and carries its section's antecedent.
 
-**Figure-label matrix (human backstop to check 6):** all 5 figures sit at their topic with verbatim captions; all 44 labels appear in running-text NOTE boxes (6.1=5, 6.2=3, 6.3=9, 6.4=16, 6.5=11). Multi-part plates 6.3 and 6.5 are placed in the second-part block (6.2.2, 6.2.6) because each spans both parts — correct placement, not drift.
+**Figure-label matrix (human backstop to check 6):** all 5 figures sit at their topic with verbatim captions; all labels appear in running-text NOTE boxes. *As read at 3(b) this was 44 labels (6.1=5, 6.2=3, 6.3=9, 6.4=16, 6.5=11); the subsequent D2 fix added Fig 6.4's 17th label `Xylem` (monocot panel), so the final count is **45** (6.4=17) — confirmed by check_pdf check 6 = 45/45 and re-confirmed by eye in the Pass 3(a) render of page 5 (the "Xylem" label is present in both the Fig 6.4(b) monocot panel and its NOTE box).* Multi-part plates 6.3 and 6.5 are placed in the second-part block (6.2.2, 6.2.6) because each spans both parts — correct placement, not drift.
 
 **False positives / considered non-issues (kept per Gate 3(b) rule, not defects):**
 1. `check_pdf.py` check 4 WARN — keyword-fires on the substring "photo" inside *photosynthesis*/*photosynthates* (F106, F126, S3). True-negative: check 3 confirms all 5 embedded assets are monochrome T.S./diagram plates; no person photograph exists in Ch6.
 2. Source instructional sentence "Look at Figure 6.5 (a) and find the position of xylem in the vascular bundle." (p.77) carries no fact and is intentionally not inventoried — contrast F057, which was inventoried because its "Look at Figure 6.3 (a)…" sentence carries the *sunflower root* example.
 3. Source spelling errors "conjuctive tissue" and "parenchyomatous" (p.74) are silently corrected to "conjunctive"/"parenchymatous" in the script — a spelling fix, not content drift.
 
-**Gate 3(b) verdict: PASS — 0 confirmed defects.** Gate 3(a) whole-chapter visual-render inspection of all 6 pages is the remaining step before full Gate 3 closure; it was out of scope for this content-verification pass and is not claimed here.
+**Gate 3(b) verdict: PASS — 0 confirmed defects.** Gate 3(a) whole-chapter visual-render inspection was the remaining step before full Gate 3 closure; it was out of scope for this content-verification pass. **It has since been completed — see `## Pass 3(a) / Gate 3 — CLOSED` below.**
 
-Gate-3 mechanical preconditions re-confirmed this session:
-- `check_pdf.py` re-run against the **final rebuilt** PDF → exit 0, VERDICT WARN (0 fail / 1 benign warn); check 6 = 44/44 labels; check 7 = 132/132 rows ticked.
-- Reproducible rebuild: regenerated from the script → identical **6 pages, 13158 extracted chars, 5 images** (embedded timestamp the only byte difference).
+Gate-3 mechanical preconditions re-confirmed at 3(b):
+- `check_pdf.py` re-run against the then-final PDF → exit 0, VERDICT WARN (0 fail / 1 benign warn); check 7 = 132/132 rows ticked.
+- Reproducible rebuild fingerprint **at 3(b) time: 6 pages, 13158 chars, 44 labels, 5 images**. ⚠ **These numbers were superseded by the later D2 label commit** (adding Fig 6.4's `Xylem` label lengthened the Fig 6.4 NOTE box, reflowing the tail onto a 7th page). The current committed / final-rebuilt PDF is **7 pages, 14034 extracted chars, 45 labels, 5 images** — this is the fingerprint the Pass 3(a) closure below verifies, and it is the authoritative one.
+
+## Pass 3(a) / Gate 3 — CLOSED (2026-09-02)
+
+Whole-chapter visual render check. Environment rebuilt from scratch (`/vercel/share/neetenv` was **absent** at session start — the expected §0.2 state — rebuilt and version-verified against the Ch12 baseline: Python 3.13.11, reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0). The PDF was rebuilt from the committed script and `check_pdf.py` re-run against the **final** build: **VERDICT WARN (0 fail, 1 warn)** — the single WARN is check 4's known portrait-heuristic false positive (the substring "photo" inside "photosynthesis"/"photosynthates" in text rows F106/F126/S3; no person photograph is embedded, all 5 images confirmed monochrome). Reproducibility fingerprint of the final PDF: **7 pages · 5 embedded monochrome images · 14,034 extracted characters** (stable across rebuilds).
+
+Every page was rendered with `pymupdf` at 150 dpi (colour) and again at a 1-bit B&W threshold, and inspected individually:
+
+| Page | Contents | Verdict |
+|---|---|---|
+| 1 | title block; intro + Anatomy keyterm; H1 `6.1`; H2 `6.1.1`; epidermis/stomata bullets | CLEAN |
+| 2 | Stomatal-apparatus keyterm; Fig 6.1 + NOTE; H2 `6.1.2`, `6.1.3`; bundle-type bullets; Fig 6.2 + NOTE; H1 `6.2` | CLEAN |
+| 3 | H3 `6.2.1` dicot root; Stele keyterm; H3 `6.2.2` monocot root; Fig 6.3 + NOTE; H3 `6.2.3` dicot stem | CLEAN |
+| 4 | dicot-stem bullets; H3 `6.2.4` monocot stem bullets (trailing whitespace = Fig 6.4 KeepTogether pushed to p5, normal) | CLEAN |
+| 5 | Fig 6.4 + 3-line NOTE (incl. the D2 `Xylem` label); H3 `6.2.5` dorsiventral leaf | CLEAN |
+| 6 | mesophyll/vascular bullets; H3 `6.2.6` isobilateral leaf; Bulliform keyterm; Fig 6.5 + NOTE; Quick Recap + 5 bullets | CLEAN |
+| 7 | `Terms Used in the Exercises` banner; Q6 + 3 answer bullets (trailing whitespace = final page, normal) | CLEAN |
+
+**Result: 7/7 pages CLEAN — 0 layout, orphaned-heading, overflow, clipping, or squashed-figure defects.** Cross-page style consistency was pulled across ≥3 instances of every recurring element type (H1 ×2, H2 ×3, H3 ×6, figure box ×5, NOTE box ×5, keyterm bullet ×5, section-number badge — smallest rendered text 6.0pt, above the 5.0pt FAIL floor) and each resolved to one identical signature — expected, since styles are imported from the frozen `neet_template.py`. The 1-bit B&W render confirms print-safety: heading banners keep reversed white-on-black text, NOTE-box and figure-box borders survive as crisp rules, and all figure labels/leader lines stay legible (labels sit outside the fill). The only B&W observation is that mid-grey micrograph fills (Fig 6.2 b/c, Fig 6.4 a/b) collapse toward black under the deliberately aggressive global threshold — an artifact of hard 1-bit thresholding, not of halftone printing; the figures are embedded as grayscale `mode=L` and reproduce correctly, and no meaning rests on a fill lighter than `#D9D9D9` alone. No `.py`, Fact, caption, or asset edit was required.
+
+**Full findings:** `scratch/ch6_gate3a/PASS3A_FINDINGS.md`.
+
+**Gate 3 verdict — all five conditions hold, CLOSED:** (1) zero confirmed defects across 3(a) and the earlier 3(b); (2) `check_pdf.py` green on the final rebuilt PDF; (3) Pass 3(a) covered **7/7** pages; (4) Pass 3(b) was a full bidirectional read with per-section reading claims (recorded above); (5) rebuild reproducible at 7 pages / 14,034 chars / 5 images. **Chapter 6 is FULLY COMPLETE.**
 
 ## Coverage note
 

@@ -50,7 +50,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 
 ---
 
-## Chapter 6 (Class 11) — Anatomy of Flowering Plants — ▶️ IN PROGRESS — GATES 1 + 2 CLOSED, GATE 3(b) PASS (2026-09-02); GATE 3(a) VISUAL RENDER PENDING
+## Chapter 6 (Class 11) — Anatomy of Flowering Plants — ✅ FULLY COMPLETE — GATE 3 CLOSED (all gates 1, 2, 3a, 3b earned; 2026-09-02)
 
 Source: `Chapter/class 11/Chapter 06 - Anatomy of Flowering Plants.pdf` (8 pages). Inventory: `notes/class 11/Ch6_AnatomyOfFloweringPlants/Ch6_AnatomyOfFloweringPlants_inventory.md`. Normal 3-pass protocol (short/normal chapter).
 
