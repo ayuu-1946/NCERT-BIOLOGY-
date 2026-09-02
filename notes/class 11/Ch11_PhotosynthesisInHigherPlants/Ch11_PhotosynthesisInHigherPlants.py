@@ -1515,6 +1515,27 @@ story.append(body(
     "dense forests</b>, and that <b>increase in incident light beyond a point causes the breakdown "
     "of chlorophyll</b> - so the sunny-side leaf keeps less chlorophyll."))
 
+# ---- End-of-chapter note (Gate 3b Block 4 re-verification finding) --------------------
+# NCERT's own PS I / PS II electron-replacement wording (SS11.6.1) is reproduced
+# faithfully in this note - this is textbook fidelity, not a Pass-2 drift.
+story.append(gap())
+story.append(heading("Note", "A Note on the PS II / PS I Electron Replacement Wording", 3))
+story.append(note(
+    "<b>True fact:</b> the electron flow through the light reaction is one continuous, "
+    "non-cyclic chain - <b>water &rarr; PS II &rarr; PS I &rarr; NADP<super>+</super></b>. "
+    "Water splitting at PS II is the ultimate source of every electron in the chain, so it is "
+    "water's electrons that end up replacing what PS I loses, using PS II purely as the relay "
+    "in between."))
+story.append(note(
+    "<b>As NCERT itself states it</b> (Ch.11, SS11.6.1, verbatim): "
+    "\"<i>The electrons that were moved from photosystem II must be replaced. This is achieved "
+    "by electrons available due to splitting of water... The electrons needed to replace those "
+    "removed from photosystem I are provided by photosystem II.</i>\" NCERT describes this as "
+    "two separate replacement steps - water replaces PS II's electrons, then PS II replaces PS "
+    "I's electrons - rather than as one continuous chain, which is why a first read can suggest "
+    "PS II's electrons are being replaced twice. This is a known quirk of NCERT's own phrasing, "
+    "carried here exactly as printed, not an error introduced in these notes."))
+
 
 def main():
     return build_pdf(OUT_PDF, story, title="Photosynthesis in Higher Plants - NEET Notes")

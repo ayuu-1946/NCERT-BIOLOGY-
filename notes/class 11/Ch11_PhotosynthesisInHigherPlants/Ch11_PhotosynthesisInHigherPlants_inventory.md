@@ -542,13 +542,14 @@ What was merged or reformatted relative to NCERT's prose, and why no fact is at 
 
 ### Drift caught and fixed
 
-Pass 3 found **one** confirmed content defect and **two** confirmed metadata defects; three further flags were investigated and dismissed. The full register with reasoning is in the *Gate 3(b) closure record* below.
+Pass 3 found **two** confirmed content defects and **two** confirmed metadata defects; three further flags were investigated and dismissed. The full register with reasoning is in the *Gate 3(b) closure record* below.
 
 | ID | Class | Finding | Resolution |
 |---|---|---|---|
 | `D1` | DRIFTED (content) | §11.2c heading read "Julius von Sachs (1854)". All four sibling scientist headings carry life-date pairs, so the bare year reads as Sachs' life dates — which NCERT never gives. 1854 is the year of the evidence (`F033`). | Relabelled "Julius von Sachs (evidence of 1854)" in the `# ---- 11.2 Julius von Sachs ----` block, tagged `# [VERIFICATION FIX]`. No fact changed. |
 | `D2` | Metadata | The `Deliberate operator omissions` table described Figure 11.1 as "Reversible by adding one `figure()` call" without recording that its label row `F271` is nonetheless ticked and check-6 clean. | Clarified in that table's *Why it is safe* cell (see below). |
 | `D3` | Metadata | This Coverage section omitted three of the seven mandated §6 headings and renamed two others. | Normalised to the seven fixed headings in spec order; no existing substance removed. |
+| `D4` | MISSING (content, trivial) | §11.1's opener sentence — "Let us try to find out what we already know about photosynthesis." — is ticked `[x]` at row `F248`, and the script's own block comment at the `# ---- 11.1 ----` block cites `F248` alongside `F018`, but the sentence itself is absent from both the build script and the rendered PDF; §11.1 opens directly on `F018`. Found and independently re-confirmed (fresh venv, byte-level re-extraction of source and gen) in the Gate 3(b) re-verification pass. Zero factual/NEET content — pure rhetorical framing. | **Open, by design pending operator choice.** Documented here rather than silently fixed, per Rule 6: either (a) restore the sentence into the script's §11.1 block, or (b) reclassify `F248` as a documented deliberate omission in this Coverage section (same basis as Fig 11.1's bare panel markers, which carry no fact either). Until one is chosen, the "282/282 carried" count in the *Freeze header* is inaccurate by exactly this one row. |
 
 ### Figures requiring manual attention
 
@@ -633,4 +634,40 @@ All other figures carried their meaning by line, arrow, label or position, not c
 
 **No embedded colour and no human photograph.** The 1-bit renders and check 3 agree every figure is true monochrome; Fig 11.1 (Priestley) and the Melvin Calvin headshot are the two documented deliberate omissions (see *Deliberate operator omissions*), so the chapter carries no human-subject image — check 4's WARN is that known false positive, not a suppressed finding.
 
-**GATE 3(a): CLOSED — 17/17 pages inspected, zero confirmed layout defects, cross-page styles identical, linter green on the committed PDF.** Pass 3(b) was then completed as a section-wise bidirectional full read against the frozen table: **282/282 inventory rows covered, 0 UNINVENTORIED source sentences, 0 confirmed defects**, with the rebuild reproducing 17 pages / 45,891 chars / 11 images (timestamp-only byte difference). **GATE 3: CLOSED (2026-09-02).**
+**GATE 3(a): CLOSED — 17/17 pages inspected, zero confirmed layout defects, cross-page styles identical, linter green on the committed PDF.** Pass 3(b) was then completed as a section-wise bidirectional full read against the frozen table: see the *Gate 3(b) closure record* below for the full block-by-block register (this line's original "282/282, 0 confirmed defects" summary is superseded by that record, which found `D4`/`F248`).
+
+## Gate 3(b) closure record — bidirectional content read, re-verified independently across two later sessions
+
+**Method.** Per Rule 6, repo documentation was **not** trusted as ground truth. Each of the three re-verification sessions independently reinstalled `pymupdf`/`reportlab` in a fresh venv and re-extracted **both** the source PDF (`Chapter/class 11/Chapter 11 - Photosynthesis in Higher Plants.pdf`, 22 pp) and the delivered PDF (17 pp) from scratch, then checked every claim against that fresh text, the build script, and the figure assets directly — never against this file's own prose. The final session confirmed its fresh extractions were **byte-identical in content** to the persisted scratch files from the earlier sessions (0 diff lines after stripping page-marker formatting), so the two sessions' findings are directly comparable and are consolidated here as one register.
+
+**Block map (5 section blocks, 282 rows, run session-wise):**
+
+| Block | Sections | Rows | Verdict |
+|---|---|---|---|
+| 1 | unit intro + 11.1 + 11.2 | 60 (`F001`–`F054`, `F185`–`F187`, `F219`–`F222`, `F240`, `F246`–`F249`) | **1 defect — `D4`/`F248`** |
+| 2 | 11.3 + 11.4 + 11.5 | 32 (`F055`–`F083`, `F223`–`F225`, `F250`–`F252`) | CLEAN |
+| 3 | 11.6 + 11.7 | 62 (`F084`–`F148`, `F226`–`F232`, `F241`–`F243`, `F253`–`F259`) | CLEAN |
+| 4 | 11.8 + 11.9 + 11.10 | 81 (`F149`–`F266`) | CLEAN |
+| 5 | Summary + Exercises + figure-label rows | 47 (`F267`–`F282` + the exercise/summary rows folded into it) | CLEAN |
+
+**Block 1 — `D4`/`F248` (the sole defect).** See the *Drift caught and fixed* table above. False-positive ruled out by direct comparison: the gen §11.1 opens on the *second* source sentence (`F018`), not a rephrasing of the opener — the opener sentence is genuinely absent from the script source, so a rebuild reproduces the same drop. All other 19 opener rows (`F247`, `F249`–`F266`) were re-audited the same way and are clean; rhetorical student prompts elsewhere are a documented compression class, not silent drops; the "stomata / principally glucose and starch" sentence in gen §11.1 was confirmed to be a genuine Summary sentence (source p. 21) legitimately folded forward, not a fabrication.
+
+**Block 2 — CLEAN.** Both §11.4 heading variants (body heading vs. the shorter contents-list form) were reconciled; the inventory correctly uses the body heading. All 8 chloroplast labels are present in running text; `F272`'s table placement is correct.
+
+**Block 3 — CLEAN, including one re-confirmed fidelity item.** Every Calvin-cycle number was checked against source (2 ATP + 2 NADPH per CO2 reduction; 1 ATP regeneration; 3 ATP + 2 NADPH per CO2 overall; 6 turns; 6 CO2 / 18 ATP / 12 NADPH in → 1 glucose / 18 ADP / 12 NADP out). One apparent water-splitting-equation error in a plain-text extraction turned out to be text-layer subscript flattening only — the script itself carries the correct `<sub>`/`<super>` tags. **NCERT's own PS I / PS II electron-replacement wording (SS11.6.1) was checked against source and reproduced faithfully — this is textbook fidelity, not drift** (NCERT's own two sentences state the replacement as two separate steps — water replaces PS II's electrons; PS II then replaces PS I's electrons — rather than as the single continuous non-cyclic chain, water → PS II → PS I → NADP+, that the Z scheme actually describes). This finding is now also documented **in the delivered PDF itself**, as an end-of-chapter NOTE box quoting NCERT's exact SS11.6.1 wording alongside the true continuous-chain fact — added after this Gate 3(b) session, so a reader of the notes has the same fidelity context an auditor has.
+
+**Block 4 — CLEAN. 81 rows (`F149`–`F266`) checked: 0 missing, 0 fabricated, 0 drifted, 0 uninventoried.** Eight candidate issues were raised during the investigation and each was resolved as non-defects:
+1. The C3/C4 external-identification sentence initially looked like an unflagged added cross-reference — resolved as an allowed navigational addition.
+2. The Kranz-anatomy → "Terms used in exercises" cross-reference — checked against the exercise-classification policy and resolved.
+3. Table 11.1's filled answers (bundle sheath, PEP carboxylase, photorespiration, CO2 fixation, examples) — checked row by row; the inferred answers are accepted under the completed-table policy (see *Compression decisions* above).
+4. The "wasteful oxygenation reaction" wording — traced back to the chapter's own Summary and treated as a legitimate fold, not fabrication.
+5. `F260` — trimming "mentioned earlier" judged to preserve the factual content.
+6. `F261` — rephrasing the "Let us try and understand..." opener judged acceptable under the compression policy (contrast `D4`/`F248`, where the opener was dropped outright rather than rephrased).
+7. Numeric spot-checks all passed: 360 µL/L, 450, 0.03–0.04, 0.05, 10%, the temperature ranges, and Blackman (1905).
+8. §11.10.2's figures and Table 11.1 were specifically traced and checked.
+
+**Block 5 — CLEAN.** Summary: all 4 summary-unique folds (`F267`–`F270`) verifiably surface in the QUICK RECAP. Exercises: the appendix reproduces exactly Ex. 1, 5, 6, 7 (the four needing out-of-chapter additions); Ex. 2/3/4/8/9 are legitimately body-covered — split confirmed correct. Figures: all 9 embedded figures (11.2–11.10) are present as assets and placed by the script; labels `F271`–`F282` are figure-artwork text, correctly absent from both text layers. `F271`/Fig 11.1 is the properly documented "third-state" deliberate operator omission (§4.4 Step 3) — the Priestley facts fully survive in `F024`–`F029`; the bare panel markers "(a)"–"(d)" carry no independent fact.
+
+**Cross-document consistency and reproducible rebuild.** This file's own Gate-3b log (`D1`–`D3` above) was checked against the fresh findings: `D2`/`D3` match exactly (both already recorded here as metadata fixes); `D4`/`F248` was **not** previously recorded and is added by this closure record. A rebuild from the unmodified script reproduces the same `D4` drop (confirmed against the script source, not just the rendered PDF), so the defect is not a one-off render artifact.
+
+**GATE 3(b) VERDICT: PASS on content.** No teaching fact is lost in any of the five blocks. The single outstanding item is `D4`/`F248` — a rhetorical opener sentence ticked as carried but genuinely dropped and (until this record) undocumented; zero factual/NEET content, open pending the operator's choice of fix from the two options recorded in the *Drift caught and fixed* table. **GATE 3: CLOSED, with `D4` open as a documented trivial bookkeeping item (2026-09-02, re-verified 2026-09-02).**
