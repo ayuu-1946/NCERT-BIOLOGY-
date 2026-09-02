@@ -6,7 +6,13 @@
 
 **Three-part crop audit:** Complete. Check A (text-layer word grazing) is clean for all eleven assets. Check B (drawing-extent overflow) is clean for the vector-bearing assets; Figures 13.4 and 13.10 are raster artwork for which the drawing check is not applicable. Check C (6-point border-band ink) is clean for all eleven assets. Figure 13.1 required a documented bottom-edge exception because the lowest root artwork extends into the source caption band; the final crop includes the root tips instead of clipping them.
 
-**Scope:** This task covers figure extraction and documentation only. Full rewritten chapter PDF generation, facts inventory, and chapter replacement gates have not been started by this task.
+**Pass 1 / Gate 1:** Complete. The frozen inventory (`Ch13_PlantGrowthAndDevelopment_inventory.md`) holds 84 Facts (F001–F084), 20 headings, 16 openers, the Summary/Exercise-gap classifications, and the 11-figure label matrix.
+
+**Pass 2 / Gate 2:** Complete. `Ch13_PlantGrowthAndDevelopment.py` was written linearly from the frozen inventory, importing the repo-level `neet_template.py`; it renders a 10-page A4 PDF (`Ch13_PlantGrowthAndDevelopment.pdf`) with all eleven figures embedded inline. `check_pdf.py` exits **0 (green gate)**: checks 1–3 and 5–10 all PASS (84/84 Facts ticked, 49/49 figure labels found in running text, all 11 images monochrome, geometry/bands/legibility/orphan-headings/badge-collisions clean). The only WARN is check 4's known portrait-heuristic false positive — the substring "photo" inside the "phototropism"/"photoperiodic" inventory rows — and no person photograph is embedded, matching the accepted Ch12 baseline.
+
+**Remaining:** Pass 3 (dual verification — full render review and bidirectional content cross-check against the frozen inventory) has not been run.
+
+**Scope note:** The figure-extraction stage above covered assets only; Pass 2 added the script, the rendered PDF, and the ticked inventory.
 
 ## Re-pin log
 
