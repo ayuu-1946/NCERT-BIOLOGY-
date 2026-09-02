@@ -51,6 +51,7 @@ The record below is refreshed per session, because `/vercel/share/neetenv` lives
 
 - **Original extraction session:** `/usr/bin/python3` (Python 3.12.3) with `/home/ubuntu/NCERT-BIOLOGY-` writable; PyMuPDF 1.28.2, Pillow 12.3.0, NumPy 2.5.1, pdfplumber 0.11.10, ReportLab 5.0.0.
 - **SS12.5 page-break / Fig 12.4 enlargement session:** the venv was absent at session start and was rebuilt per §0.2 with `uv venv /vercel/share/neetenv --python 3.13`. Active interpreter `/vercel/share/neetenv/bin/python` (Python 3.13.11, `sys.prefix=/vercel/share/neetenv`); reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0, pdfplumber present. Verified against the §0.3 known-good reference before any build or gate was run.
+- **Gate 2 re-verification / documentation session (2026-09-02):** the venv was again absent at session start (expected §0.2 state) and rebuilt with `uv venv /vercel/share/neetenv --python 3.13`. Active interpreter `/vercel/share/neetenv/bin/python` (Python 3.13.11, `sys.prefix=/vercel/share/neetenv`); reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0, pdfplumber OK — matches the §0.3 reference. `check_pdf.py` re-run against the delivered PDF returned **exit 0, VERDICT WARN (0 fail, 1 inspected-benign warn)**; the check-4 WARN was re-confirmed a true-negative and Gate 2 remains **CLOSED**. Repo-level `CHAPTER_STATUS.md` and `CHAPTER_TRACKER.md` were updated to record the closure.
 
 The reusable setup note is `setup_environment.md` at the repository root.
 
