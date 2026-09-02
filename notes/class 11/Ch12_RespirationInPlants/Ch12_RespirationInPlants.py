@@ -327,9 +327,17 @@ story.append(body(
     "synthesis</b>. During the process of respiration, <b>oxygen is utilised</b>, and "
     "<b>carbon dioxide, water and energy are released as products</b>."))
 story.append(heading("12.1b", "The Anaerobic Legacy", 3))
+# [VERIFICATION FIX D1] Pass 3(b) direction 2 found the NCERT antecedent sentence
+# "Even among present-day living organisms, we know of several that are adapted to
+# anaerobic conditions." missing from the freeze AND from this block (new row F034a).
+# Without it "Some of these organisms" attached to "the first cells on this planet",
+# which reads facultative/obligate anaerobes as extinct first cells - a DRIFT of
+# meaning, not just a dropped sentence.
 story.append(body(
     "There are <b>sufficient reasons to believe that the first cells on this planet lived in an "
-    "atmosphere that lacked oxygen</b>. <b>Some of these organisms are facultative "
+    "atmosphere that lacked oxygen</b>. <b>Even among present-day living organisms, we know of "
+    "several that are adapted to anaerobic conditions.</b> <b>Some of these organisms are "
+    "facultative "
     "anaerobes</b>, while <b>in others the requirement for anaerobic condition is "
     "obligate</b>. In any case, <b>all living organisms retain the enzymatic machinery to "
     "partially oxidise glucose without the help of oxygen</b>."))
