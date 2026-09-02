@@ -217,6 +217,53 @@ Extraction standard: hand-pinned rectangles from mandatory 440 dpi grids (5 PDF-
 
 Audit (from `Ch6_figure_audit.txt`): text-layer grazing = no grazing words for all five; drawings-extent = ok for 6.1/6.2/6.3/6.5 and correctly "raster figure" for 6.4; border-band ink = clean for all five. All emitted PNGs exist, `mode=L`, single channel. Figure 6.2 has zero text-layer words inside the plate, confirming its labels are vector/raster artwork verified visually. Multi-part plates (6.3, 6.5) recombined horizontally from standalone (a)/(b) assets. No figure failed extraction; none deliberately omitted; none is a photograph of a person.
 
+## Pass 3(b) — Content cross-check (dual-direction full read, 2026-09-02)
+
+Method: full start-to-finish read of the 8-page NCERT source against the 132 frozen rows and the `# ---- N.N ----` script blocks, in **both** directions — Direction 1 (inventory → script: MISSING/FABRICATED/DRIFTED) and the mandatory Direction 2 (source → inventory: UNINVENTORIED). No coverage percentage, similarity score, or grep result was used to clear any row (SUPREME COMMAND §6 Pass 3 hard bar). Each claim below names the source page(s) read against the script block.
+
+| Source § (pages) | Script block | Rows | COVERED | UNINVENTORIED | Status |
+|---|---|---|---|---|---|
+| intro (p.71) | `# ---- 6.intro ----` | F002–F006 | 5 | 0 | CLEAN |
+| 6.1 (p.71) | `# ---- 6.1 ----` | F007–F011 (+F125,F126 folded) | 7 | 0 | CLEAN |
+| 6.1.1 (pp.71–72) | `# ---- 6.1.1 ----` | F012–F036 | 25 | 0 | CLEAN |
+| 6.1.2 (p.72) | `# ---- 6.1.2 ----` | F037–F041 (+F127,F128 folded) | 7 | 0 | CLEAN |
+| 6.1.3 (p.73) | `# ---- 6.1.3 ----` | F042–F053 (+F129 folded) | 13 | 0 | CLEAN |
+| 6.2 (p.73) | `# ---- 6.2 ----` | F054–F055 (+F130 folded) | 3 | 0 | CLEAN |
+| 6.2.1 (pp.73–74) | `# ---- 6.2.1 ----` | F056–F072 | 17 | 0 | CLEAN |
+| 6.2.2 (p.74) | `# ---- 6.2.2 ----` | F073–F078 (+Fig 6.3 F071/F072) | 8 | 0 | CLEAN |
+| 6.2.3 (pp.74–76) | `# ---- 6.2.3 ----` | F079–F092 | 14 | 0 | CLEAN |
+| 6.2.4 (p.76) | `# ---- 6.2.4 ----` | F093–F099 | 7 | 0 | CLEAN |
+| 6.2.5 (pp.76–77) | `# ---- 6.2.5 ----` | F100–F114 | 15 | 0 | CLEAN |
+| 6.2.6 (p.77) | `# ---- 6.2.6 ----` | F117–F123 (+Fig 6.5 F115/F116) | 9 | 0 | CLEAN |
+| SUMMARY (p.77) | `# ---- QUICK RECAP ----` | F124–F130 | 7 | 0 | CLEAN |
+| EXERCISES (p.78) | `# ---- APPENDIX ----` | F131–F132 | 2 | 0 | CLEAN |
+
+**Direction-1 result:** 132/132 rows COVERED; 0 MISSING, 0 FABRICATED, 0 DRIFTED.
+**Direction-2 result:** every source sentence and every heading (14) maps to a row; 0 UNINVENTORIED. Every numbered/defining first sentence checked explicitly (the class that failed on Ch9): each section opener (F008, F013, F038, F043, F055, F057, F074, F080, F094, F101, F118) is present and carries its section's antecedent.
+
+**Figure-label matrix (human backstop to check 6):** all 5 figures sit at their topic with verbatim captions; all 44 labels appear in running-text NOTE boxes (6.1=5, 6.2=3, 6.3=9, 6.4=16, 6.5=11). Multi-part plates 6.3 and 6.5 are placed in the second-part block (6.2.2, 6.2.6) because each spans both parts — correct placement, not drift.
+
+**False positives / considered non-issues (kept per Gate 3(b) rule, not defects):**
+1. `check_pdf.py` check 4 WARN — keyword-fires on the substring "photo" inside *photosynthesis*/*photosynthates* (F106, F126, S3). True-negative: check 3 confirms all 5 embedded assets are monochrome T.S./diagram plates; no person photograph exists in Ch6.
+2. Source instructional sentence "Look at Figure 6.5 (a) and find the position of xylem in the vascular bundle." (p.77) carries no fact and is intentionally not inventoried — contrast F057, which was inventoried because its "Look at Figure 6.3 (a)…" sentence carries the *sunflower root* example.
+3. Source spelling errors "conjuctive tissue" and "parenchyomatous" (p.74) are silently corrected to "conjunctive"/"parenchymatous" in the script — a spelling fix, not content drift.
+
+**Gate 3(b) verdict: PASS — 0 confirmed defects.** Gate 3(a) whole-chapter visual-render inspection of all 6 pages is the remaining step before full Gate 3 closure; it was out of scope for this content-verification pass and is not claimed here.
+
+Gate-3 mechanical preconditions re-confirmed this session:
+- `check_pdf.py` re-run against the **final rebuilt** PDF → exit 0, VERDICT WARN (0 fail / 1 benign warn); check 6 = 44/44 labels; check 7 = 132/132 rows ticked.
+- Reproducible rebuild: regenerated from the script → identical **6 pages, 13158 extracted chars, 5 images** (embedded timestamp the only byte difference).
+
+## Coverage note
+
+- **Compression decisions** — §6.1.1 was reorganised so the epidermal appendages (hairs/trichomes, F020–F026) are grouped before the stomata block (F027–F034), whereas NCERT interleaves them around Fig 6.1; no fact was dropped and every sentence retained. Stomata and stomatal-apparatus definitions were promoted to keyterm callouts. §6.1.3's vascular-bundle types were split into "open vs closed" (basis: cambium) and "radial vs conjoint" (basis: xylem/phloem position) groupings where NCERT runs them as continuous prose. The six SUMMARY-UNIQUE facts (F125–F130) were folded into their body homes and restated in the Quick Recap. All merges preserve NCERT numbers and qualifiers verbatim (three tissue systems, two guard cells, 2–4 patches, >six/polyarch, three sub-zones, three leaf parts, two mesophyll cell types; usually/may/sometimes/generally/most/except/only).
+- **Exercise classification** — Q1 (draw monocot vs dicot root & stem) COVERED §6.2.1–6.2.4 + Figs 6.3/6.4; Q2 (ascertain monocot vs dicot stem) COVERED §6.2.3 vs §6.2.4; Q3 (scattered conjoint bundles + sclerenchymatous sheath + no phloem parenchyma) COVERED §6.2.4; Q4 (stomatal apparatus + stomata structure + diagram) COVERED §6.1.1 F029–F034 + Fig 6.1; Q5 (three tissue systems + tissues under each) COVERED §6.1 F010–F011 + §6.1.1–6.1.3; **Q6 (usefulness of plant anatomy) GAP** — reproduced and answered in the "Terms Used in the Exercises" appendix from F002/F005/F006; Q7 (dorsiventral leaf internal structure + diagrams) COVERED §6.2.5 F101–F114 + Fig 6.5. Total 7 = 6 COVERED + 1 GAP, 0 overlooked.
+- **Drift caught and fixed** — None. Both directions clean; no MISSING/FABRICATED/DRIFTED/UNINVENTORIED rows.
+- **Figures requiring manual attention** — None. All 5 figures extracted, `mode=L` monochrome, verified, embedded with verbatim captions; 44/44 labels in running text.
+- **Color-dependent figures** — None. All five are B&W T.S./diagrammatic line plates; no NCERT meaning was carried by colour.
+- **Source problems** — None unrecoverable. Two spelling errors and one purely instructional sentence noted above.
+- **Linter verdict** — `check_pdf.py` exit 0, VERDICT WARN (0 fail / 1 warn) on the final rebuilt PDF; the lone WARN is the check-4 "photo"-substring true-negative documented above.
+
 ## References
 
 [1] `Chapter/class 11/Chapter 06 - Anatomy of Flowering Plants.pdf` — NCERT Biology source chapter.
