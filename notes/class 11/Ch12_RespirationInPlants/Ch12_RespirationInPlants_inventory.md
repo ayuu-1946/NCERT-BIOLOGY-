@@ -1,15 +1,15 @@
 # Frozen Inventory — Respiration in Plants (Class 11, Chapter 12)
-Source: Chapter/class 11/Chapter 12 - Respiration in Plants.pdf | Frozen: 2026-09-02 | Rows: 164 (F001..F164)
+Source: Chapter/class 11/Chapter 12 - Respiration in Plants.pdf | Frozen: 2026-09-02 (164 rows, F001..F164) | Current: 184 rows after Pass 3(b) verification-fix additions
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. Rows are unticked at freeze; they are ticked in Pass 2 as each block is written.
 
 Counts below are machine-derived by re-parsing the finished Facts table (see the Census section); do not hand-edit a count without re-running the parse and fixing every restatement.
 
-- Total Facts rows: 164 (IDs contiguous F001..F164, no gaps or duplicates)
+- Total Facts rows: 184 = 164 base (contiguous F001..F164) + 20 verification-fix suffixed rows (F034a, F117a, F125a-F125q, F147a); no gaps or duplicates among the base IDs
 - Heading rows (`Type: heading`): 12 = 9 numbered + 3 unnumbered
 - Opener rows (`Type: opener`): 10
-- Figure-label rows (`Type: label`, wording begins "Figure labels:"): 6 (one per numbered figure)
-- In-figure labels catalogued across those 6 rows: 84
+- Figure-label rows (`Type: label`, wording begins "Figure labels:"): 23 (Fig 12.4 spans F125 + F125a..F125q after the Pass 3(b) label restoration; the other five figures keep one row each)
+- In-figure labels catalogued across those rows: 99 (Fig 12.1:16, 12.2:10, 12.3:15, 12.4:33, 12.5:9, 12.6:16)
 - Figure caption rows (`Type: caption`): 6
 
 ## Facts
@@ -211,9 +211,10 @@ Counts below are machine-derived by re-parsing the finished Facts table (see the
 - F002 (Intro), F019 (12.1), F039 (12.2), F064 (12.3), F079 (12.4), F089 (12.4.1), F104 (12.4.2), F129 (12.5), F140 (12.6), F153 (12.7)
 - One opener per section including both sub-sections of 12.4; the unnumbered intro before 12.1 also gets an opener.
 
-### Figure-label rows — 6 total, 84 labels
-- F062 (Fig 12.1, 16 labels), F077 (Fig 12.2, 10 labels), F102 (Fig 12.3, 15 labels), F125 (Fig 12.4, 17 labels), F127 (Fig 12.5, 10 labels), F151 (Fig 12.6, 16 labels)
-- 16 + 10 + 15 + 17 + 10 + 16 = 84. The matrix exists ONLY as these six Facts rows (never restated as a second pipe table) so `check_pdf.py._extract_labels` cannot double-count or read a phantom `Fig #` separator row.
+### Figure-label rows — 23 rows, 99 labels (after Pass 3(b) Fig 12.4 restoration)
+- F062 (Fig 12.1, 16 labels), F077 (Fig 12.2, 10 labels), F102 (Fig 12.3, 15 labels), F127 (Fig 12.5, 9 labels), F151 (Fig 12.6, 16 labels)
+- Fig 12.4 now spans 18 rows: F125 (16 labels) + F125a..F125q (17 rows, 1 label each) = 33 labels.
+- Per-figure totals: 16 + 10 + 15 + 33 + 9 + 16 = 99, across 5 + 18 = 23 label rows. The matrix exists ONLY as these Facts rows (never restated as a second pipe table) so `check_pdf.py._extract_labels` cannot double-count or read a phantom `Fig #` separator row. Every added label token has length > 1 after `_norm` (e.g. "2e-" -> "2e", "4H+" -> "4h", "F0" -> "f0"), so none collapses to <=1 char and silently auto-passes under `_coverage_ratio`.
 
 ## Summary classification
 | Summary sentence | Classification | Folded into |
