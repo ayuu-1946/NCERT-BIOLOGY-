@@ -1,0 +1,208 @@
+
+
+========== NOTES PAGE 1 ==========
+
+Anatomy of Flowering Plants
+The external morphology of larger living organisms - plants and animals alike - shows clear structural similarities
+and variations; a study of their internal structure reveals similarities and differences too. This chapter deals with
+the internal structure and functional organisation of higher plants.
+Anatomy - the study of the internal structure of plants.
+Plants have cells as the basic unit; cells are organised into tissues, and in turn the tissues are organised into
+organs.
+(cid:127) Different organs in a plant show differences in their internal structure.
+(cid:127) Within angiosperms, the monocots and dicots are also seen to be anatomically different.
+(cid:127) Internal structures also show adaptations to diverse environments.
+6.1 The Tissue System
+Tissues were earlier discussed on the basis of the types of cells present. Tissues also vary depending on their
+location in the plant body, and their structure and function are dependent on that location.
+The plant tissues are broadly classified into meristematic (apical, lateral and intercalary) and permanent (simple
+and complex) tissues. Assimilation of food and its storage, transportation of water, minerals and
+photosynthates, and mechanical support are the main functions of tissues.
+On the basis of their structure and location, there are three types of tissue systems:
+(cid:127) the epidermal tissue system,
+(cid:127) the ground or fundamental tissue system, and
+(cid:127) the vascular or conducting tissue system.
+6.1.1 Epidermal Tissue System
+The epidermal tissue system forms the outer-most covering of the whole plant body and comprises epidermal
+cells, stomata and the epidermal appendages - the trichomes and hairs.
+The epidermis is the outermost layer of the primary plant body. It is made up of elongated, compactly arranged
+cells, which form a continuous layer.
+(cid:127) Epidermis is usually single-layered.
+(cid:127) Epidermal cells are parenchymatous with a small amount of cytoplasm lining the cell wall and a large vacuole.
+(cid:127) The outside of the epidermis is often covered with a waxy thick layer called the cuticle, which prevents the loss
+of water. Cuticle is absent in roots.
+Epidermal appendages. The cells of epidermis bear a number of hairs.
+(cid:127) Root hairs are unicellular elongations of the epidermal cells and help absorb water and minerals from the
+soil.
+(cid:127) On the stem the epidermal hairs are called trichomes. The trichomes in the shoot system are usually
+multicellular.
+(cid:127) They may be branched or unbranched and soft or stiff; they may even be secretory.
+(cid:127) Trichomes help in preventing water loss due to transpiration.
+Stomata - structures present in the epidermis of leaves that regulate the process of transpiration and gaseous
+exchange.
+(cid:127) Each stoma is composed of two bean-shaped cells known as guard cells which enclose the stomatal pore. In
+grasses, the guard cells are dumb-bell shaped.
+(cid:127) The outer walls of guard cells (away from the stomatal pore) are thin and the inner walls (towards the stomatal
+pore) are highly thickened.
+(cid:127) Guard cells possess chloroplasts and regulate the opening and closing of stomata.
+(cid:127) Sometimes, a few epidermal cells in the vicinity of the guard cells become specialised in shape and size and are
+known as subsidiary cells.
+
+
+========== NOTES PAGE 2 ==========
+
+Stomatal apparatus - the stomatal aperture, guard cells and the surrounding subsidiary cells together.
+Figure 6.1 Diagrammatic representation: (a) stomata with bean-shaped guard cells (b) stomata with dumb-bell shaped guard cell
+[NOTE] Figure 6.1 labels (verbatim): Epidermal cells; Subsidiary cells; Chloroplast; Guard cells; Stomatal pore.
+6.1.2 The Ground Tissue System
+All tissues except epidermis and vascular bundles constitute the ground tissue. The ground tissue system
+forms the main bulk of the plant.
+(cid:127) It consists of simple tissues such as parenchyma, collenchyma and sclerenchyma.
+(cid:127) Parenchymatous cells are usually present in cortex, pericycle, pith and medullary rays, in the primary stems
+and roots.
+(cid:127) In leaves, the ground tissue consists of thin-walled, chloroplast-containing cells and is called mesophyll.
+(cid:127) The ground tissue is divided into three zones - cortex, pericycle and pith.
+6.1.3 The Vascular Tissue System
+The vascular system consists of complex tissues, the phloem and the xylem. The xylem and phloem together
+constitute vascular bundles. The vascular bundles form the conducting tissue and translocate water, minerals
+and food material.
+Open vs closed vascular bundles (basis: presence of cambium):
+(cid:127) Open - in dicotyledonous stems, cambium is present between phloem and xylem. Because of this cambium
+these bundles can form secondary xylem and phloem, and are hence called open.
+(cid:127) Closed - in monocotyledons, the vascular bundles have no cambium. Since they do not form secondary
+tissues they are referred to as closed.
+Radial vs conjoint (basis: relative position of xylem and phloem):
+(cid:127) Radial - when xylem and phloem are arranged in an alternate manner along different radii, such as in roots.
+(cid:127) Conjoint - when xylem and phloem are jointly situated along the same radius. Such bundles are common in
+stems and leaves, and usually have the phloem located only on the outer side of the xylem.
+Figure 6.2 Various types of vascular bundles: (a) radial (b) conjoint closed (c) conjoint open
+[NOTE] Figure 6.2 labels (verbatim): Xylem; Phloem; Cambium.
+6.2 Anatomy of Dicotyledonous and Monocotyledonous Plants
+For a better understanding of tissue organisation of roots, stems and leaves, it is convenient to study the
+transverse sections of the mature zones of these organs. Secondary growth occurs in most of the
+
+
+========== NOTES PAGE 3 ==========
+
+dicotyledonous roots and stems.
+6.2.1 Dicotyledonous Root
+Figure 6.3 (a) shows the transverse section of the sunflower root. From outside in, the internal tissue organisation
+is as follows:
+(cid:127) Epiblema - the outermost layer. Many of its cells protrude as unicellular root hairs.
+(cid:127) Cortex - several layers of thin-walled parenchyma cells with intercellular spaces.
+(cid:127) Endodermis - the innermost layer of the cortex; a single layer of barrel-shaped cells without any
+intercellular spaces. Its tangential and radial walls have a deposition of the water-impermeable waxy material
+suberin in the form of casparian strips.
+(cid:127) Pericycle - a few layers of thick-walled parenchymatous cells next to the endodermis. Initiation of lateral
+roots and of vascular cambium during secondary growth takes place in these cells.
+(cid:127) Conjunctive tissue - the parenchymatous cells that lie between the xylem and the phloem.
+(cid:127) Pith - small or inconspicuous in the dicot root.
+Vascular tissue and stele.
+(cid:127) There are usually two to four (2-4) xylem and phloem patches.
+(cid:127) Later, a cambium ring develops between the xylem and phloem.
+Stele - all tissues on the inner side of the endodermis, i.e. pericycle, vascular bundles and pith, together.
+6.2.2 Monocotyledonous Root
+The anatomy of the monocot root is similar to the dicot root in many respects. It has epidermis, cortex,
+endodermis, pericycle, vascular bundles and pith.
+(cid:127) As compared to the dicot root (which has fewer xylem bundles), there are usually more than six (polyarch)
+xylem bundles in the monocot root.
+(cid:127) Pith is large and well developed.
+(cid:127) Monocotyledonous roots do not undergo any secondary growth.
+Figure 6.3 T.S.: (a) Dicot root (Primary) (b) Monocot root
+[NOTE] Figure 6.3 labels (verbatim): Root hair; Epidermis; Cortex; Endodermis; Pericycle; Protoxylem;
+Metaxylem; Pith; Phloem.
+6.2.3 Dicotyledonous Stem
+The transverse section of a typical young dicotyledonous stem shows the epidermis as the outermost protective
+layer. Covered with a thin layer of cuticle, it may bear trichomes and a few stomata.
+Cortex. The cells arranged in multiple layers between epidermis and pericycle constitute the cortex, which
+consists of three sub-zones:
+
+
+========== NOTES PAGE 4 ==========
+
+(cid:127) Hypodermis (outer) - a few layers of collenchymatous cells just below the epidermis, which provide
+mechanical strength to the young stem.
+(cid:127) Cortical layers below the hypodermis - rounded, thin-walled parenchymatous cells with conspicuous
+intercellular spaces.
+(cid:127) Endodermis (innermost layer of the cortex) - its cells are rich in starch grains, so the layer is also called the
+starch sheath.
+(cid:127) Pericycle - present on the inner side of the endodermis and above the phloem, in the form of semi-lunar patches
+of sclerenchyma.
+(cid:127) Medullary rays - a few layers of radially placed parenchymatous cells in between the vascular bundles.
+(cid:127) Vascular bundles - a large number arranged in a ring; this 'ring' arrangement is a characteristic of the dicot
+stem. Each bundle is conjoint, open, and with endarch protoxylem.
+(cid:127) Pith - a large number of rounded parenchymatous cells with large intercellular spaces occupying the central
+portion of the stem.
+6.2.4 Monocotyledonous Stem
+The monocot stem has a sclerenchymatous hypodermis, a large number of scattered vascular bundles (each
+surrounded by a sclerenchymatous bundle sheath), and a large, conspicuous parenchymatous ground tissue.
+(cid:127) Vascular bundles are conjoint and closed.
+(cid:127) Peripheral vascular bundles are generally smaller than the centrally located ones.
+(cid:127) The phloem parenchyma is absent, and water-containing cavities are present within the vascular bundles.
+Figure 6.4 T.S. of stem: (a) Dicot (b) Monocot
+
+
+========== NOTES PAGE 5 ==========
+
+[NOTE] Figure 6.4 labels (verbatim): Epidermal hair; Epidermis; Hypodermis; Parenchyma; Endodermis;
+Pericycle; Vascular bundle; Medullary rays; Pith; Collenchyma; Phloem; Cambium; Metaxylem; Protoxylem;
+Vascular bundles; Ground tissue.
+6.2.5 Dorsiventral (Dicotyledonous) Leaf
+The vertical section of a dorsiventral leaf through the lamina shows three main parts: epidermis, mesophyll and
+vascular system.
+Epidermis.
+(cid:127) It covers both the upper surface (adaxial epidermis) and the lower surface (abaxial epidermis) of the leaf and
+has a conspicuous cuticle.
+(cid:127) The abaxial epidermis generally bears more stomata than the adaxial epidermis; the latter (adaxial) may
+even lack stomata.
+Mesophyll.
+(cid:127) The tissue between the upper and the lower epidermis is the mesophyll. It possesses chloroplasts, carries out
+photosynthesis, and is made up of parenchyma.
+(cid:127) It has two types of cells - the palisade parenchyma and the spongy parenchyma.
+(cid:127) The adaxially placed palisade parenchyma is made up of elongated cells arranged vertically and parallel to
+each other.
+(cid:127) The oval or round, loosely arranged spongy parenchyma lies below the palisade cells and extends to the
+lower epidermis, with numerous large spaces and air cavities between the cells.
+Vascular system.
+(cid:127) It includes vascular bundles, seen in the veins and the midrib. The size of the vascular bundles depends on
+the size of the veins, and the veins vary in thickness in the reticulate venation of the dicot leaves.
+(cid:127) The vascular bundles are surrounded by a layer of thick-walled bundle sheath cells.
+6.2.6 Isobilateral (Monocotyledonous) Leaf
+The anatomy of the isobilateral leaf is similar to that of the dorsiventral leaf in many ways, with the following
+characteristic differences:
+(cid:127) Stomata are present on both surfaces of the epidermis; and the mesophyll is not differentiated into palisade
+and spongy parenchyma.
+Bulliform cells - in grasses, certain adaxial epidermal cells along the veins modify into large, empty, colourless
+cells.
+(cid:127) When the bulliform cells have absorbed water and are turgid, the leaf surface is exposed.
+(cid:127) When they are flaccid due to water stress, they make the leaves curl inwards to minimise water loss.
+(cid:127) The parallel venation in monocot leaves is reflected in the near similar sizes of vascular bundles (except in
+main veins), as seen in vertical sections.
+Figure 6.5 T.S. of leaf: (a) Dicot (b) Monocot
+
+
+========== NOTES PAGE 6 ==========
+
+[NOTE] Figure 6.5 labels (verbatim): Bundle sheath; Xylem; Phloem; Adaxial epidermis; Palisade mesophyll;
+Air cavity; Spongy mesophyll; Sub-stomatal cavity; Stoma; Abaxial epidermis; Mesophyll.
+Recap Quick Recap
+(cid:127) Anatomically, a plant is made of different kinds of tissues, broadly meristematic (apical, lateral, intercalary)
+and permanent (simple, complex). Their main functions are assimilation and storage of food, transport of
+water, minerals and photosynthates, and mechanical support.
+(cid:127) There are three tissue systems - epidermal, ground and vascular. The epidermal system is made of epidermal
+cells, stomata and epidermal appendages.
+(cid:127) The ground tissue system forms the main bulk of the plant and is divided into three zones - cortex, pericycle
+and pith.
+(cid:127) The vascular tissue system is formed by xylem and phloem; on the basis of presence of cambium and
+location of xylem and phloem the vascular bundles are of different types. They form the conducting tissue
+and translocate water, minerals and food material.
+(cid:127) Monocots and dicots differ in the type, number and location of vascular bundles, and secondary growth
+occurs in most dicot roots and stems.
+Q Terms Used in the Exercises
+Q6. How is the study of plant anatomy useful to us?
+(cid:127) Anatomy is the study of the internal structure and functional organisation of plants (F002), so it lets us
+understand how a plant is built from cells to tissues to organs.
+(cid:127) It lets us distinguish monocots from dicots anatomically - within angiosperms the two are internally different
+(F005) - which is how a stem or root is identified from a transverse section.
+(cid:127) It reveals the adaptations of internal structures to diverse environments (F006), e.g. bulliform cells that curl
+a grass leaf to reduce water loss.
