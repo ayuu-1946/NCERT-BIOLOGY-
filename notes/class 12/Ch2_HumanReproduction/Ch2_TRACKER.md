@@ -70,6 +70,44 @@ ls /vercel/share/neetenv/bin/python   # rebuild per §0.2 if absent
 /vercel/share/neetenv/bin/python check_pdf.py 'notes/class 12/Ch2_HumanReproduction' --strict
 ```
 
+## Pass 3 / Gate 3(a) — GREEN (per-page visual render inspection)
+
+Gate 3 was started after the Gate-2 hard stop. Environment was rebuilt again this session
+(venv absent at start; `uv venv` + `uv pip install reportlab pdfplumber pymupdf Pillow numpy`,
+interpreter 3.13.11 @ `/vercel/share/neetenv`, reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0).
+The PDF was rebuilt from the script and **Gate 2 re-run green against the freshly rebuilt PDF
+(0 fail, 0 warn, `--strict` exit 0)** before any 3(a) work — the linter is never carried forward.
+
+All 13 pages rendered at 150 dpi (correction-sensitive regions re-cropped at 300 dpi) and
+inspected one by one. Banners, step/number badges, the NOTE box (`!` icon), tables, figures
+and captions are structurally consistent on every page. Two flagged artifacts were run to ground:
+
+1. **Page 1 — stray open-square at the right of the "2.1" banner.** *Not* a watermark. It was
+   the `_icon_table()` design-system badge emitted by `heading(..., has_table=True)`, which was
+   mis-attached to §2.1 — a section that contains **no** `data_table`. The two sections that do
+   carry tables (§2.2 mammary-gland structure, §2.6 foetal-growth timeline) were missing the
+   badge. **Fix (script):** removed `has_table=True` from the §2.1 heading and added it to the
+   §2.2 and §2.6 headings. The badge now marks exactly the table-bearing sections; the page-1
+   banner is clean. Verified by re-render.
+
+2. **Page 12 — fig 2.12.** Genuine NCERT source-scan artifacts baked into `assets/fig_2_12.png`:
+   the diagonal "…not to be republished" cursive watermark (top/left, over white) and a grey
+   vertical bar + dash in the far-right white margin (x≈1198–1232, y≈610–771). **Fix (asset):**
+   white-washed in place — the isolated right-margin bar/dash box was set to white (verified to
+   contain **zero** dark artwork pixels first), and the watermark strokes were removed by raising
+   near-white pixels (tone ≥224) to white only within the top/left white zones, leaving all
+   artwork lines, labels and tissue shading (median tone ~166) untouched. Original backed up to
+   `scratch/` before editing. Verified by re-render: watermark and bar gone, diagram intact.
+
+**Scope decision (user-confirmed):** the same faint "…not to be republished" scan watermark is
+baked into most other figure PNGs (2.1, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, and prominently 2.11).
+Per user instruction, **only the two flagged artifacts were remediated**; all other figure
+watermarks are left intact as faithful to the NCERT source.
+
+After both fixes the PDF was rebuilt and **Gate 2 re-run green again (0 fail, 0 warn)**, so the
+lint state matches the final rebuilt PDF. Gate 3(a) is green. Gate 3(b) (bidirectional content
+cross-check) follows.
+
 ## Re-pin and replacement record
 
 The former `notes/class 12/Ch2_HumanReproduction/` directory and related Human Reproduction scratch artifacts were deleted before rebuilding. The source PDF was not modified. Rectangles were then re-established from fresh 4× grid overlays. The new extraction removed caption, prose, and page-number remnants identified during review, retained connected multi-panel figures 2.8 and 2.11 as complete assets, and preserved all documented in-figure labels.
