@@ -164,13 +164,27 @@ re-checks `ls /vercel/share/neetenv/bin/python` first**; sandboxes lose it.
 
 ---
 
-## 4. NEXT SESSION — Gate 3b, the bidirectional full read
+## 4. Gate 3b — COMPLETE (bidirectional full read + documentation)
 
-**Gates 1 and 2 are CLOSED. Gate 3a is CLOSED (page/asset walk done, both fixable defects fixed,
-strict re-run still PASS 0/0). The next session is Gate 3b — and it is the only thing left before
-Gate 3 can close.**
+**Gates 1, 2, 3a and 3b are all CLOSED, so GATE 3 IS CLOSED and the chapter is deliverable.**
+Gate 3b's bidirectional full read of all 646 rows has been run — Direction 1 (every row traced
+to the NCERT source: 495 verbatim + 15 explained extraction artefacts + 136 figure-label rows
+read off 300 dpi source crops of all 15 label-bearing figures) and Direction 2 (962 source
+sentences, 93 numbers and 159 proper nouns swept three structurally independent ways). It found
+five findings (`D1-1`..`D1-4`, `D2-1`); the two real fact-losses (`D1-2`, `D2-1`) were fixed in
+the PDF via caption edits, and the three bookkeeping items are logged for the next unfreeze —
+none blocks Gate 3. Evidence: `scratch/ch5_3b_d1/findings.md`; per-figure/defect register and
+the **section-by-section read log, section-wise coverage confirmation and the Pass 3 Coverage
+note** now live in `Ch5_MolecularBasisOfInheritance_inventory.md`. Final rebuild is
+content-identical (30 pp / 89,213 chars / 17 images / text SHA `8c387c43ed0e5000`) and
+`check_pdf.py --strict` on that rebuild is **PASS, 0 fail / 0 warn**.
 
-Scope, both directions, all **646** rows:
+*(Superseded, kept per §7: this section previously read "NEXT SESSION — Gate 3b, the
+bidirectional full read" and briefed Gate 3b as the only remaining work. Gate 3b and its
+documentation are now complete; the forward brief below is retained verbatim for audit only and
+is **not** an instruction to any future session.)*
+
+Scope as it was briefed, both directions, all **646** rows:
 
 1. **Direction 1 — every inventory row traced to the NCERT source.** Confirm the row's wording is
    faithful to the source page it cites, not merely present somewhere in the PDF. Gate 2's tick
