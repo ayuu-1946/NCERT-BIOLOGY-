@@ -641,6 +641,14 @@ story.append(keyterm(
     "phosphorylation, in respiration it is the energy of oxidation-reduction utilised for the "
     "same process</b>. <b>It is for this reason that the process is called oxidative "
     "phosphorylation.</b>"))
+# [VERIFICATION FIX D2] Pass 3(b) direction 2 found the NCERT sentence tying oxidative
+# phosphorylation to the chemiosmotic hypothesis (source p8, lines ~414-424) missing from
+# the freeze AND from this block (new row F117a). It names a real, NEET-examinable process
+# ("chemiosmotic hypothesis") and belongs in source order between F117 (oxidative
+# phosphorylation) and F118 (energy released -> ATP synthase), so it is restored here.
+story.append(body(
+    "<b>You have already studied about the mechanism of membrane-linked ATP synthesis as "
+    "explained by the chemiosmotic hypothesis in the earlier chapter.</b>"))
 story.append(heading("12.4.2a", "ATP Synthase - the F<sub>1</sub>/F<sub>0</sub> Machine", 3))
 story.append(body(
     "The <b>energy released during the electron transport system is utilised in synthesising "
@@ -671,22 +679,40 @@ story.append(gap(6))
 # overflow. Fig 12.5 is deliberately left at 7.6 cm because its 300 dpi natural width is
 # only 6.67 cm - _panel() already clamps it there, so any larger request would upscale past
 # 300 dpi. The pair therefore grows on the 12.4 side only; row width is ~16.1 cm of 18 cm.
+# [VERIFICATION FIX F125] Fig 12.4 caption re-read against the plate. The old caption
+# named "Complex V" (not on the plate - it reads F0 / F1 ATP synthase) and paraphrased the
+# plate's literal carriers ("ubiquinone" for UQ/UQH2, FADH2 for FAD, "inorganic phosphate"
+# for Pi). The caption is rewritten to transcribe the plate's actual labels - FMN, Fe-S,
+# 2e-, UQ/UQH2, FAD, succinate/fumarate, the Cyt b / Cyt c1 / Cyt c chain, Cu_A / Cyta /
+# Cyta3 / Cu_B, the 4H+/4H+/2H+ pumping stoichiometry, and F0 / F1 ATP synthase / ADP + Pi
+# - so every label catalogued in inventory row F125 (F125a..) traces to running text.
+# [VERIFICATION FIX F127] Fig 12.5 caption: "intermembrane space" corrected to the plate's
+# literal "Outer side", and the "electrochemical proton gradient" phrase (a Fig 12.4 label,
+# not on the 12.5 plate) removed.
 story.append(figure_pair(
     ("fig_12_4.png",
-     "Fig. 12.4 - Electron Transport System (ETS). The carriers are drawn in the <b>inner "
-     "mitochondrial membrane</b> with the <b>matrix</b> below. <b>NADH</b> feeds <b>complex "
-     f"I</b> and <b>succinate</b> feeds {FADH2} at <b>complex II</b>; both hand electrons to "
-     "<b>ubiquinone</b>, which passes them through <b>complex III</b> to <b>cytochrome c</b> "
-     f"and on to <b>complex IV</b>, where {O2} is reduced to {H2O}. <b>Complex V</b> is the "
-    "<b>ATP synthase</b> that makes ATP from <b>ADP</b> and <b>inorganic phosphate</b>.",
-    8.4),
+     "Fig. 12.4 - Electron Transport System (ETS). The carriers sit in the <b>inner "
+     "mitochondrial membrane</b> between the <b>inter-membrane space</b> and the <b>matrix</b>. "
+     f"At <b>Complex I (NADH dehydrogenase)</b>, <b>{NADH}</b> is oxidised to <b>{NADp}</b>, "
+     "handing <b>2e<super>-</super></b> to <b>FMN</b> and the <b>Fe-S</b> centres while "
+     "<b>4H<super>+</super></b> are pumped out; the electrons pass to <b>UQ</b>, which becomes "
+     "<b>UQH<sub>2</sub></b>. At <b>Complex II (Succinate dehydrogenase)</b>, <b>succinate</b> "
+     f"is oxidised to <b>fumarate</b> via <b>FAD</b> and Fe-S, also reducing UQ. <b>Complex III "
+     "(Cytochrome bc<sub>1</sub>)</b> passes electrons through <b>Cyt b</b>, Fe-S and "
+     "<b>Cyt c<sub>1</sub></b> to <b>Cyt c</b>, pumping a further <b>4H<super>+</super></b>. "
+     "<b>Complex IV (Cytochrome c oxidase)</b> carries them through <b>Cu<sub>A</sub></b>, "
+     f"<b>Cyta</b>, <b>Cyta<sub>3</sub></b> and <b>Cu<sub>B</sub></b>, reducing <b>{O2}</b> with "
+     f"<b>2H<super>+</super></b> to <b>{H2O}</b>. The protons return through <b>F<sub>0</sub></b> "
+     "and drive <b>F<sub>1</sub> ATP synthase</b> down the <b>electrochemical gradient</b>, "
+     "making <b>ATP</b> from <b>ADP + P<sub>i</sub></b>.",
+     8.4),
     ("fig_12_5.png",
      "Fig. 12.5 - Diagramatic presentation of ATP synthesis in mitochondria. The "
      "<b>F<sub>1</sub></b> headpiece projects into the <b>matrix</b> and carries the site where "
-     "<b>ADP</b> and <b>inorganic phosphate</b> are joined into <b>ATP</b>; "
+     "<b>ADP</b> and <b>P<sub>i</sub></b> are joined into <b>ATP</b>; "
      "<b>F<sub>0</sub></b> is the channel through the <b>inner mitochondrial membrane</b> "
-     "through which <b>4H<super>+</super></b> return from the <b>intermembrane space</b> down "
-     "the <b>electrochemical proton gradient</b> for every ATP made.",
+     "through which <b>4H<super>+</super></b> return from the <b>outer side</b> for every ATP "
+     "made.",
      7.6)))
 
 # ======================================================================================
@@ -758,12 +784,18 @@ story.append(data_table([
      "the pathway at some stage within the Krebs' cycle or even as pyruvate or acetyl CoA</b>"],
 ], col_widths=[2.2, 4.0, 7.0]))
 story.append(gap())
+# [VERIFICATION FIX D3] Pass 3(b) direction 2 found the NCERT sentence that generalises
+# the withdrawal/synthesis link beyond fatty acids to proteins (source p10, lines ~502-514)
+# missing from the freeze AND from this block, which covered only the fatty-acid case
+# (new row F147a). NCERT: "Similarly, during breakdown and synthesis of protein too,
+# respiratory intermediates form the link."
 story.append(body(
     "Since <b>respiration involves breakdown of substrates, the respiratory process has "
     "traditionally been considered a catabolic process and the respiratory pathway as a "
     "catabolic pathway</b>. But the same intermediates are also drawn off for synthesis: "
     "<b>when the organism needs to synthesise fatty acids, acetyl CoA would be withdrawn from "
-    "the respiratory pathway for it</b>."))
+    "the respiratory pathway for it</b>. <b>Similarly, during breakdown and synthesis of "
+    "protein too, respiratory intermediates form the link.</b>"))
 story.append(keyterm(
     "<b>Catabolism and anabolism:</b> <b>breaking down processes within the living organism is "
     "catabolism, and synthesis is anabolism</b>."))
@@ -776,6 +808,10 @@ story.append(gap(6))
 # LAYOUT: Fig 12.6 at 12.5 cm. Landscape plate (AR 1.288) whose 16.63 cm natural width
 # exceeds the 18 cm column only slightly; rendered at 12.5 cm it is ~9.7 cm tall and its
 # width is already doing the work, so it is not paired.
+# [VERIFICATION FIX D4] Pass 3(b) figure re-read found the old caption fabricated "arrows
+# drawn both ways" for the whole plate. The plate has exactly ONE bidirectional arrow
+# (dihydroxy acetone phosphate <-> glyceraldehyde 3-phosphate); every other arrow is
+# one-way into the pathway. Caption rewritten to state the true arrow pattern.
 story.append(figure(
     "fig_12_6.png",
     "Fig. 12.6 - Interrelationship among metabolic pathways showing respiration mediated "
@@ -785,8 +821,9 @@ story.append(figure(
     "runs <b>glucose 6-phosphate</b> to <b>fructose 1,6 bisphosphate</b> to the trioses "
     "<b>dihydroxy acetone phosphate</b> and <b>glyceraldehyde 3-phosphate</b> and on to "
     "<b>pyruvic acid</b>; every arm converges on <b>acetyl CoA</b> and the <b>Krebs cycle</b>, "
-    "with arrows drawn both ways to show that intermediates are withdrawn for synthesis as "
-    "well as oxidised.",
+    f"from which <b>{H2O}</b> and <b>{CO2}</b> leave. Every arrow runs one way into the "
+    "pathway except the <b>dihydroxy acetone phosphate</b> to <b>glyceraldehyde 3-phosphate</b> "
+    "step, which is the single reversible (two-way) arrow on the plate.",
     max_width_cm=12.5))
 
 # ======================================================================================
