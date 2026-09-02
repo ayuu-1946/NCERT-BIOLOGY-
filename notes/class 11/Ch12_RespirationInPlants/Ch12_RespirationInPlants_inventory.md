@@ -49,6 +49,7 @@ Counts below are machine-derived by re-parsing the finished Facts table (see the
 | F032 | 12.1 | fact | "The key is to oxidise glucose not in one step but in several small steps enabling some steps to be just large enough such that the energy released can be coupled to ATP synthesis." | x |
 | F033 | 12.1 | fact | "During the process of respiration, oxygen is utilised, and carbon dioxide, water and energy are released as products." | x |
 | F034 | 12.1 | fact | "There are sufficient reasons to believe that the first cells on this planet lived in an atmosphere that lacked oxygen." | x |
+| F034a | 12.1 | fact | "Even among present-day living organisms, we know of several that are adapted to anaerobic conditions." | x |
 | F035 | 12.1 | term | "Some of these organisms are facultative anaerobes, while in others the requirement for anaerobic condition is obligate." | x |
 | F036 | 12.1 | fact | "all living organisms retain the enzymatic machinery to partially oxidise glucose without the help of oxygen." | x |
 | F037 | 12.1 | definition | "This breakdown of glucose to pyruvic acid is called glycolysis." | x |
@@ -132,6 +133,7 @@ Counts below are machine-derived by re-parsing the finished Facts table (see the
 | F115 | 12.4.2 | fact | "Although the aerobic process of respiration takes place only in the presence of oxygen, the role of oxygen is limited to the terminal stage of the process." | x |
 | F116 | 12.4.2 | fact | "the presence of oxygen is vital, since it drives the whole process by removing hydrogen from the system. Oxygen acts as the final hydrogen acceptor." | x |
 | F117 | 12.4.2 | definition | "Unlike photophosphorylation where it is the light energy that is utilised for the production of proton gradient required for phosphorylation, in respiration it is the energy of oxidation-reduction utilised for the same process. It is for this reason that the process is called oxidative phosphorylation." | x |
+| F117a | 12.4.2 | fact | "You have already studied about the mechanism of membrane-linked ATP synthesis as explained by chemiosmotic hypothesis in the earlier chapter." | x |
 | F118 | 12.4.2 | fact | "The energy released during the electron transport system is utilised in synthesising ATP with the help of ATP synthase (complex V)." | x |
 | F119 | 12.4.2 | number | "This complex consists of two major components, F1 and F0." | x |
 | F120 | 12.4.2 | fact | "The F1 headpiece is a peripheral membrane protein complex and contains the site for synthesis of ATP from ADP and inorganic phosphate." | x |
@@ -139,9 +141,26 @@ Counts below are machine-derived by re-parsing the finished Facts table (see the
 | F122 | 12.4.2 | fact | "The passage of protons through the channel is coupled to the catalytic site of the F1 component for the production of ATP." | x |
 | F123 | 12.4.2 | number | "For each ATP produced, 4H+ pass through F0 from the intermembrane space to the matrix down the electrochemical proton gradient." | x |
 | F124 | Fig 12.4 | caption | "Electron Transport System (ETS)" | x |
-| F125 | Fig 12.4 | label | Figure labels: "inner mitochondrial membrane"; "matrix"; "complex I"; "complex II"; "complex III"; "complex IV"; "complex V"; "NADH"; "FADH2"; "ubiquinone"; "cytochrome c"; "ATP synthase"; "ADP"; "inorganic phosphate"; "succinate"; "O2"; "H2O" | x |
+| F125 | Fig 12.4 | label | Figure labels: "Inter-membrane space"; "Inner Mitochondrial membrane"; "Matrix"; "Complex I (NADH dehydrogenase)"; "Complex II (Succinate dehydrogenase)"; "Complex III (Cytochrome bc1)"; "Complex IV (Cytochrome c oxidase)"; "NADH+ H+"; "NAD+"; "Succinate"; "O2"; "H2O"; "F0"; "F1 ATP synthase"; "ADP + Pi"; "ATP" | x |
+| F125a | Fig 12.4 | label | Figure labels: "2e-" | x |
+| F125b | Fig 12.4 | label | Figure labels: "FMN" | x |
+| F125c | Fig 12.4 | label | Figure labels: "Fe-S" | x |
+| F125d | Fig 12.4 | label | Figure labels: "4H+" | x |
+| F125e | Fig 12.4 | label | Figure labels: "UQ" | x |
+| F125f | Fig 12.4 | label | Figure labels: "UQH2" | x |
+| F125g | Fig 12.4 | label | Figure labels: "Cyt b" | x |
+| F125h | Fig 12.4 | label | Figure labels: "Cyt c1" | x |
+| F125i | Fig 12.4 | label | Figure labels: "Cyt c" | x |
+| F125j | Fig 12.4 | label | Figure labels: "FAD" | x |
+| F125k | Fig 12.4 | label | Figure labels: "Fumarate" | x |
+| F125l | Fig 12.4 | label | Figure labels: "CuA" | x |
+| F125m | Fig 12.4 | label | Figure labels: "Cyta" | x |
+| F125n | Fig 12.4 | label | Figure labels: "Cyta3" | x |
+| F125o | Fig 12.4 | label | Figure labels: "CuB" | x |
+| F125p | Fig 12.4 | label | Figure labels: "2H+" | x |
+| F125q | Fig 12.4 | label | Figure labels: "Electrochemical gradient" | x |
 | F126 | Fig 12.5 | caption | "Diagramatic presentation of ATP synthesis in mitochondria" | x |
-| F127 | Fig 12.5 | label | Figure labels: "F1"; "F0"; "ADP"; "inorganic phosphate"; "ATP"; "4H+"; "inner mitochondrial membrane"; "matrix"; "intermembrane space"; "electrochemical proton gradient" | x |
+| F127 | Fig 12.5 | label | Figure labels: "Outer side"; "ATP"; "4H+"; "F0"; "F1"; "ADP"; "Pi"; "Inner mitochondrial membrane"; "Matrix" | x |
 | F128 | 12.5 | heading | "12.5 The Respiratory Balance Sheet" | x |
 | F129 | 12.5 | opener | "It is possible to make calculations of the net gain of ATP for every glucose molecule oxidised; but in reality this can remain only a theoretical exercise." | x |
 | F130 | 12.5 | fact | Assumption: "There is a sequential, orderly pathway functioning, with one substrate forming the next and with glycolysis, TCA cycle and ETS pathway following one after another." | x |
@@ -162,6 +181,7 @@ Counts below are machine-derived by re-parsing the finished Facts table (see the
 | F145 | 12.6 | term | "The proteins would be degraded by proteases and the individual amino acids (after deamination) depending on their structure would enter the pathway at some stage within the Krebs' cycle or even as pyruvate or acetyl CoA." | x |
 | F146 | 12.6 | fact | "the respiratory process has traditionally been considered a catabolic process and the respiratory pathway as a catabolic pathway." | x |
 | F147 | 12.6 | fact | "when the organism needs to synthesise fatty acids, acetyl CoA would be withdrawn from the respiratory pathway for it." | x |
+| F147a | 12.6 | fact | "Similarly, during breakdown and synthesis of protein too, respiratory intermediates form the link." | x |
 | F148 | 12.6 | definition | "Breaking down processes within the living organism is catabolism, and synthesis is anabolism." | x |
 | F149 | 12.6 | definition | "Because the respiratory pathway is involved in both anabolism and catabolism, it would hence be better to consider the respiratory pathway as an amphibolic pathway rather than as a catabolic one." | x |
 | F150 | Fig 12.6 | caption | "Interrelationship among metabolic pathways showing respiration mediated breakdown of different organic molecules to CO2 and H2O" | x |
