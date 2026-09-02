@@ -2,7 +2,7 @@
 
 Source: `Chapter/class 11/Chapter 19 - Chemical Coordination and Integration.pdf` (14 pages; supplied high-quality source `kebo119.pdf`) | Frozen: 2026-09-01 | Pass 1 sessions complete: **all five — `1-F` (2026-08-30) · `1-S` (2026-09-01) · `1-H` (2026-09-01) · `1-O` (2026-09-01) · `1-Z` (2026-09-01)** | Rows: **218** (`F001`–`F211` content Facts + `F212`–`F218` figure-label matrix rows)
 
-> **Gate state: GATES 1 AND 2 ARE GREEN; GATE 3 IS OPEN (Gate 1 2026-09-01, Gate 2 2026-09-01, re-verified 2026-09-01).** All five Pass 1 sessions have run, each reporting its own machine-derived row count; every count below was derived by re-parsing the finished `## Facts` table, not by hand tally. The inventory is **frozen** and 218/218 rows are ticked against the delivered script. **No row may be added, removed or reworded from here on** — a Pass 3 discovery that this file is incomplete reopens Gate 1, it does not get patched silently. The Gate 2 evidence is in `## Gate 2 record` at the foot of this file; **Pass 3 (bidirectional full read + every-page layout review) has not started.**
+> **Gate state: ALL GATES CLOSED — GATE 1, GATE 2, GATE 3(a) AND GATE 3(b) ARE GREEN (Gate 1 2026-09-01, Gate 2 2026-09-01, Gate 3(a) 2026-09-01, Gate 3(b) 2026-09-01; real `check_pdf.py` re-run 2026-09-02 confirmed exit 0 — VERDICT PASS, 0 fail / 0 warn).** All five Pass 1 sessions have run, each reporting its own machine-derived row count; every count below was derived by re-parsing the finished `## Facts` table, not by hand tally. The inventory is **frozen** and 218/218 rows are ticked against the delivered script. **No row may be added, removed or reworded** — a Pass 3 discovery that this file was incomplete would reopen Gate 1, not get patched silently; none was found. The Gate 2 evidence is in `## Gate 2 record`, the layout review in `## Gate 3(a) record`, and the bidirectional full read in `## Gate 3(b) record — CLOSED`, all at the foot of this file.
 
 Tick legend: `x` = the row's wording was read directly off the numbered source page named in its `Src` column and confirmed character-for-character, including the source's own typography and its own misspellings. A tick is **not** a claim that a human has verified the row inside the delivered PDF — that claim belongs to Gate 3 and has not been made. It does now mean the row was written into the Pass 2 script, which is what `check_pdf.py` check 7 gates on.
 
@@ -670,6 +670,19 @@ Element instances were pulled by span attributes (font · size · colour) from a
 
 **Pass 3(a) is the layout half of Gate 3 only.** It looks at pages, not at meaning — a page can be typographically perfect and still carry a drifted qualifier or be missing an NCERT sentence entirely.
 
-- **Pass 3(b) has still not been run.** No bidirectional full read exists, so `MISSING` / `FABRICATED` / `DRIFTED` / `UNINVENTORIED` remain **undetermined, not zero**. Ch9 was green under `--strict` *and* visually clean while three real content defects were present.
-- **No coverage percentage or text-match score anywhere in this file may close Gate 3.** §6's hard bar stands.
-- **Gate 3 is therefore still OPEN, and Ch19 belongs in no completion tally.** The verdict for this chapter is *Gate 1 closed · Gate 2 closed · Gate 3(a) closed · Gate 3(b) outstanding*.
+*The three bullets below are kept as written for history but are **now superseded** — Pass 3(b) has since run and closed with zero confirmed defects (see `## Gate 3(b) record — CLOSED`). The point that still holds is the first one: no coverage score stood in for the read; a full bidirectional read was performed.*
+
+- ~~**Pass 3(b) has still not been run.**~~ Superseded — the bidirectional full read ran 2026-09-01 with 0 confirmed content defects; see the record below.
+- **No coverage percentage or text-match score anywhere in this file may close Gate 3.** §6's hard bar stands — and it was met by a real read, not a score.
+- ~~**Gate 3 is therefore still OPEN, and Ch19 belongs in no completion tally.**~~ Superseded — the verdict for this chapter is now *Gate 1 closed · Gate 2 closed · Gate 3(a) closed · Gate 3(b) closed · **FULLY COMPLETE***.
+
+## Gate 3(b) record — CLOSED (2026-09-01; real gate re-confirmed 2026-09-02)
+
+Bidirectional full read + zero confirmed defects. Full log: `scratch/ch19_gate3b/FINDINGS.md`. Merged here from `CHAPTER_STATUS.md`'s `### Gate 3 — closed 2026-09-01` so the chapter's own inventory carries the closure record (the §0.5 convention every closed chapter follows).
+
+- **Re-derivation (Gate 1 closure rule 1).** All counts re-parsed from disk: 218 rows `F001`–`F218` contiguous/monotonic/0-dupes, 218/218 ticked, type census sums to 218 (9 lowercase values), 7 label-bearing figures / 38 labels / 0 doubling / 0 phantom, 14 A4-upright pages, 7 mono images. All confirmed.
+- **Gate 2 re-confirmed.** `check_pdf.py --strict` exits 0 — 0 fail / 0 warn, all 10 checks green. Rebuild is content-identical to the committed PDF (14 pp / 31,149 chars / 7 img / pymupdf SHA `f4850a48c881f3b3`). Re-run 2026-09-02 for this reconciliation returned the same clean verdict.
+- **Direction 1 (inventory → source).** Coverage screen flagged 10 rows; a full read confirmed **all 10 are false positives** — function words / inflections the token screen cannot match (`hand`, `originating`, `region`, `due`, `characterised`, `another`, `suppresses`, `interact` ×2) plus the intentional `SUMMARY`→`Recap` section rename (`F209`). Every flagged wording was verified present in the source. **0 MISSING / 0 FABRICATED / 0 DRIFTED.**
+- **Direction 2 (source → inventory).** All 14 source pages read sentence-by-sentence against the citing inventory rows; every source sentence maps to a row, including the 3 SUMMARY-UNIQUE folds (`F125`/`F179`/`F191`) and all section headings (`EXERCISES` `F210`, `NOTE` `F211`). **0 UNINVENTORIED.**
+- **Confirmed defects: content 0; documentation 2 — both fixed at closure.** D1: the Gate 2 fingerprint (`31,137` / `08d68d03f8d3c05f`) was stale after commit `957c1dd` applied the two Pass 3(a) string fixes (+12 chars) — corrected to `31,149` / pymupdf `f4850a48c881f3b3`. D2: stale roll-up wording corrected.
+- **Roll-up.** Ch19 counts as ✅ FULLY COMPLETE — CLOSED.

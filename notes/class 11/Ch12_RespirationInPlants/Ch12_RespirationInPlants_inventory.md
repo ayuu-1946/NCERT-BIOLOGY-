@@ -273,6 +273,23 @@ All six assets confirmed Pillow mode `L` (single-channel grayscale) and visually
 ## Scope decisions
 The unnumbered pyruvate-dehydrogenase reaction strip on source page 6 (captured as reaction F085), the summary equation on page 7 (captured as reaction F099), and the RQ equations on pages 11-12 (F155, F158, F160) are recorded as Facts rows but are NOT emitted as separate figure assets, because they are inline equations rather than numbered figures. Captions and neighbouring body text are intentionally excluded from all six PNG crops.
 
+## Gate closure records
+
+This chapter carried its Facts table and censuses but never grew the `## Gate … record` block that every other closed chapter keeps in its own inventory. Added here on reconciliation, backed by a real `check_pdf.py` re-run against the on-disk PDF (2026-09-02), so the closure evidence lives beside the artefact it describes rather than only in `CHAPTER_STATUS.md`.
+
+### Gate 1 — CLOSED (2026-09-02)
+Inventory **FROZEN at 164 rows, `F001`–`F164`, contiguous, 0 gaps, 0 duplicate IDs** = 158 Facts + 6 figure-label matrix rows; type census (9 lowercase values) sums to 164 (`fact` 86 · `number` 20 · `heading` 12 · `opener` 10 · `definition` 9 · `term` 9 · `reaction` 6 · `caption` 6 · `label` 6); heading census 12; opener census 10. The old extraction-only inventory (figure manifest, no Facts table, a duplicate label table that would have made `_extract_labels` double-count) was quashed and rebuilt to the §6 Gate 1 standard after reading the full 13-page source.
+
+### Gate 2 — CLOSED (2026-09-02)
+Script written linearly from the freeze importing the repo-level `neet_template.py` (no style/geometry/colour/font re-declared). `check_pdf.py` **exit 0 — VERDICT WARN, 0 fail / 1 inspected-benign warn**. The sole WARN is check 4 firing on the substring "photo" inside eight fact rows that mention *photosynthesis* (`F004`/`F005`/`F009`/`F010`/`F024`/`F025`/`F044`/`F117`) — verified **true-negative**: all 6 assets are metabolic-pathway diagrams and no person photograph exists in the chapter.
+
+### Gate 3 — CLOSED (2026-09-02)
+- **Pass 3(a) — visual render.** Every page rendered via `pymupdf` (150-dpi colour + 300-dpi 1-bit threshold), all pages inspected, **0 layout defects**; cross-page style consistency confirmed across H2/H3/table/NOTE/MEMORY-AID/process-flow/figure-box (each sampled ≥3 points, identical).
+- **Pass 3(b) — Fig 12.4 label restoration.** The ETS figure's in-figure labels were re-read against the source and restored, adding 20 verification-fix rows (`F034a`, `F117a`, `F125a`–`F125q`, `F147a`) that took the table from 164 → 184 rows and Fig 12.4 from 17 → 33 catalogued labels. Every restored label is present in the running text.
+- **Real gate, re-run 2026-09-02 against the on-disk PDF:** exit 0 — **99/99 labels in running text · 184/184 Facts rows ticked · 11/11 A4 portrait pages · 6/6 mono images · smallest glyph 6.0 pt · 0 orphaned headings · 84 plates, 0 collisions**. VERDICT WARN (0 fail / 1 benign check-4 warn).
+
+**Verdict for this chapter: Gate 1 closed · Gate 2 closed · Gate 3 closed · FULLY COMPLETE.**
+
 ## References
 [1]: `../../../../Chapter/class 11/Chapter 12 - Respiration in Plants.pdf` "NCERT Biology, Class 11, Chapter 12: Respiration in Plants"
 [2]: `../../../../SUPREME COMMAND PROMPT.md` "Repository SUPREME COMMAND prompt (v6)"
