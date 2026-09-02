@@ -41,17 +41,21 @@ figure_layout_decisions.md, never in the PDF - Rule 6):
       - Fig 12.4 (ETS) + Fig 12.5 (ATP synthesis) sit side by side inside
         SS12.4.2, the single section that covers both.
     Figures 12.1, 12.2, 12.3 and 12.6 stand alone: 12.1 fills its page as above,
-    12.2 keeps its place at the pyruvate branch point and is centred at 8.65 cm
-    (exactly its 300 dpi natural width - it is near-square at AR 0.946, so a
-    full-column 15.9 cm would be 16.8 cm tall and consume a whole page for one
-    plate), 12.3 has no same-section neighbour, and 12.6 is a landscape plate
-    (AR 1.288) that already uses the full width.
+    12.2 keeps its place at the pyruvate branch point and is centred at 11.0 cm
+    (below its 12.68 cm 300 dpi natural width after the PR #192 high-DPI
+    re-render, so no upscaling), 12.3 has no same-section neighbour, and 12.6
+    is a landscape plate (AR 1.288) that already uses the full width.
 
-  * SS12.4.1 / Fig 12.3 PAGE BREAK. Fig 12.3 is a KeepTogether block that does
-    not fit in the 6.28 cm left after the TCA-cycle text, so it opens the next
-    page and that 6.28 cm stays blank. This is accepted deliberately on operator
-    instruction to hold Fig 12.3 on its current page; the alternative was
-    shrinking the plate or splitting it from its caption.
+  * SS12.4 PAGE BREAK + FIG 12.2 / FIG 12.3 RESIZE (operator instruction, this
+    revision). SS12.4 previously started at the foot of page 4 (heading + intro
+    + step 1) with its process-flow split across the page turn; an explicit
+    PageBreak now opens the whole SS12.4 block on page 5. The space vacated on
+    page 4 is spent enlarging Fig 12.2 from 8.65 cm to 11.0 cm - sized so all of
+    SS12.3 still completes on page 4 with no overflow. Fig 12.3 is reduced from
+    9.0 cm to 8.2 cm so the SS12.4.2 oxygen-role sentence ("...oxygen acts as
+    the final hydrogen acceptor") completes on the same page as Fig 12.3 instead
+    of stranding its final line on the following page. Page count is unchanged
+    at 10.
 
   * EXERCISES. The Pass 1 exercise-gap scan found ZERO gaps: all 12 exercises are
     answered by the body. Per Rule 2 step 4 and SS5 item 9 the chapter therefore
@@ -86,7 +90,7 @@ from neet_template import (  # noqa: E402
 )
 from neet_template import figure as _shared_figure  # noqa: E402
 from reportlab.platypus import (  # noqa: E402
-    Paragraph, Spacer, Image, Table, TableStyle, KeepTogether,
+    Paragraph, Spacer, Image, Table, TableStyle, KeepTogether, PageBreak,
 )
 from reportlab.lib.units import cm  # noqa: E402
 
@@ -412,10 +416,11 @@ story.append(figure(
     max_width_cm=8.0))
 
 # LAYOUT: Fig 12.2 keeps its place in the reading order - it illustrates the pyruvate
-# branch point the paragraph above names, and introduces SS12.3 overleaf. Freed from the
-# pair it is centred at its own width. It is near-square (AR 0.946), so "full column"
-# would make it 16.8 cm tall and eat a whole page; 8.65 cm is also exactly its 300 dpi
-# natural width, so this is simultaneously the widest honest size and the right one.
+# branch point the paragraph above names, and introduces SS12.3 overleaf. Enlarged
+# (operator instruction, this revision) to spend the space vacated on page 4 by moving
+# SS12.4 to page 5 - sized to fill that gap WITHOUT overflowing the page. The asset was
+# re-rendered at higher DPI (PR #192), so its 300 dpi natural width is now 12.68 cm and
+# this display width is still a DOWNWARD move: the no-upscale cap stays untouched.
 story.append(figure(
     "fig_12_2.png",
     "Fig. 12.2 - Major pathways of anaerobic respiration. <b>Glucose</b> passes through "
@@ -424,7 +429,7 @@ story.append(figure(
     f"or to <b>Ethanol</b> plus {CO2}. {NADp} and {NADH} are shown being interconverted "
     "along the pathway, since the reducing power taken out of the sugar is handed back at the "
     "branch.",
-    max_width_cm=8.65))
+    max_width_cm=11.0))
 
 # ======================================================================================
 # ---- 12.3 Fermentation ---- F063-F075
@@ -468,6 +473,11 @@ story.append(body(
 # ======================================================================================
 # ---- 12.4 Aerobic Respiration ---- F078-F087
 # ======================================================================================
+# LAYOUT (operator instruction, this revision): SS12.4 previously started at the
+# bottom of page 4 (heading + intro + step 1) and its process-flow split onto
+# page 5. The whole block now opens page 5 intact; the space it vacated on page 4
+# is spent enlarging Fig 12.2 (see the Fig 12.2 LAYOUT note above).
+story.append(PageBreak())
 story.append(heading("12.4", "Aerobic Respiration", 1))
 story.append(body(
     "For aerobic respiration to take place <b>within the mitochondria</b>, the <b>final product "
@@ -539,9 +549,12 @@ story.append(body(
     "synthesised</b>, <b>besides just two molecules of ATP in TCA cycle</b>."))
 story.append(gap(6))
 
-# LAYOUT: Fig 12.3 at 9.0 cm (natural 8.54 cm, so it renders at its natural width and no
-# scaling deviation applies). AR 1.048, so the block is ~8.2 cm tall. It has no
-# same-section neighbour to pair with - 12.2 belongs to SS12.3 and 12.4 to SS12.4.2.
+# LAYOUT: Fig 12.3 reduced from 9.0 cm to 8.2 cm (operator instruction, this revision)
+# so the SS12.4.2 oxygen-role paragraph ("...oxygen acts as the final hydrogen
+# acceptor") completes on the same page as Fig 12.3 instead of stranding its last line
+# on the next page. Natural width is 8.54 cm, so 8.2 cm is a downward move and the
+# no-upscale cap is untouched. It has no same-section neighbour to pair with - 12.2
+# belongs to SS12.3 and 12.4 to SS12.4.2.
 story.append(figure(
     "fig_12_3.png",
     "Fig. 12.3 - The Citric acid cycle. <b>Pyruvate (3C)</b> loses "
@@ -551,7 +564,7 @@ story.append(figure(
     f"then, via <b>Succinic acid (4C)</b> - the step in which <b>GDP</b> becomes <b>GTP</b> - "
     f"and <b>Malic acid (4C)</b>, the cycle returns to oxaloacetic acid. {FADp} to "
     f"{FADH2} marks the single flavin-linked oxidation.",
-    max_width_cm=9.0))
+    max_width_cm=8.2))
 
 # ======================================================================================
 # ---- 12.4.2 Electron Transport System (ETS) and Oxidative Phosphorylation ----
