@@ -403,6 +403,311 @@ story.append(figure("fig_4_15.png",
 # summary folds F351-F352. Do not regenerate the 2a blocks above; append only.
 # ############################################################################
 
+# ---- 4.2.11 Phylum - Chordata ----
+story.append(heading("4.2.11", "Phylum - Chordata", level=2))
+story.append(b1("Animals belonging to phylum Chordata are fundamentally characterised by the "
+                "presence of a <b>notochord</b>, a <b>dorsal hollow nerve cord</b> and "
+                "<b>paired pharyngeal gill slits</b> (Figure 4.16)."))
+story.append(b1("These are bilaterally symmetrical, triploblastic, coelomate with organ-system "
+                "level of organisation."))
+story.append(b1("They possess a <b>post-anal part</b> (tail) and a <b>closed circulatory "
+                "system</b>. Table 4.1 presents a comparison of salient features of chordates "
+                "and non-chordates."))
+story.append(figure("fig_4_16.png",
+                    "<b>Fig. 4.16</b> - Chordata characteristics. Labels: Nerve cord, "
+                    "Notochord, Post-anal part and Gill slits.",
+                    max_width_cm=11.0))
+story.append(b1("Phylum Chordata is divided into three subphyla: <b>Urochordata</b> or "
+                "Tunicata, <b>Cephalochordata</b> and <b>Vertebrata</b>."))
+story.append(b1("Subphyla Urochordata and Cephalochordata are often referred to as "
+                "<b>protochordates</b> (Figure 4.17) and are exclusively marine. In Urochordata, "
+                "notochord is present only in the larval tail, while in Cephalochordata it "
+                "extends from head to tail region and is persistent throughout their life."))
+story.append(b1("<b>Examples:</b> Urochordata - <i>Ascidia</i>, <i>Salpa</i>, <i>Doliolum</i>; "
+                "Cephalochordata - <i>Branchiostoma</i> (Amphioxus or Lancelet)."))
+story.append(figure("fig_4_17.png",
+                    "<b>Fig. 4.17</b> - Ascidia (a urochordate protochordate).",
+                    max_width_cm=5.0))
+story.append(b1("The members of subphylum Vertebrata possess notochord during the embryonic "
+                "period. The notochord is replaced by a cartilaginous or bony vertebral column "
+                "in the adult. Thus <b>all vertebrates are chordates but all chordates are not "
+                "vertebrates</b>."))
+story.append(b1("Besides the basic chordate characters, vertebrates have a ventral muscular "
+                "heart with two, three or four chambers, kidneys for excretion and "
+                "osmoregulation and paired appendages which may be fins or limbs."))
+
+# TABLE 4.1
+story.append(body("<b>TABLE 4.1</b> Comparison of Chordates and Non-chordates"))
+story.append(data_table([
+    ["Chordates", "Non-chordates"],
+    ["Notochord present.", "Notochord absent."],
+    ["Central nervous system is dorsal, hollow and single.",
+     "Central nervous system is ventral, solid and double."],
+    ["Pharynx perforated by gill slits.", "Gill slits are absent."],
+    ["Heart is ventral.", "Heart is dorsal (if present)."],
+    ["A post-anal part (tail) is present.", "Post-anal tail is absent."],
+], col_widths=[1, 1]))
+
+# Vertebrata classification chart
+story.append(body("<b>The subphylum Vertebrata is further divided as follows:</b>"))
+story.append(b1("Subphylum <b>Vertebrata</b> is split into two divisions on the basis of jaws: "
+                "<b>Division Agnatha (lacks jaw)</b> and <b>Division Gnathostomata (bears "
+                "jaw)</b>."))
+story.append(b2("Division Agnatha (lacks jaw) includes a single Class - <b>Cyclostomata</b>."))
+story.append(b2("Division Gnathostomata (bears jaw) is divided into two super classes: "
+                "<b>Super Class Pisces (bear fins)</b> and <b>Super Class Tetrapoda (bear "
+                "limbs)</b>."))
+story.append(b2("Super Class Pisces (bear fins): Classes <b>Chondrichthyes</b> and "
+                "<b>Osteichthyes</b>."))
+story.append(b2("Super Class Tetrapoda (bear limbs): Classes <b>Amphibia</b>, <b>Reptilia</b>, "
+                "<b>Aves</b> and <b>Mammals</b>."))
+story.append(figure("fig_vertebrata_chart.png",
+                    "Classification chart of subphylum Vertebrata - Divisions Agnatha and "
+                    "Gnathostomata; Super Class Pisces and Tetrapoda; Classes Cyclostomata, "
+                    "Chondrichthyes, Osteichthyes, Amphibia, Reptilia, Aves and Mammals.",
+                    max_width_cm=14.0))
+
+# ---- 4.2.11.1 Class - Cyclostomata ----
+story.append(heading("4.2.11.1", "Class - Cyclostomata", level=3))
+story.append(b1("All living members of the class Cyclostomata are ectoparasites on some fishes. "
+                "They are the <b>most primitive chordates</b>."))
+story.append(b1("They have an elongated body bearing <b>6-15 pairs of gill slits</b> for "
+                "respiration. Cyclostomes have a sucking and circular mouth without jaws "
+                "(Fig. 4.18)."))
+story.append(b1("Their body is devoid of scales and paired fins. Cranium and vertebral column "
+                "are cartilaginous. Circulation is of closed type."))
+story.append(b1("Cyclostomes are marine but migrate for spawning to fresh water. After "
+                "spawning, within a few days, they die. Their larvae, after metamorphosis, "
+                "return to the ocean."))
+story.append(b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."))
+story.append(figure("fig_4_18.png",
+                    "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
+                    max_width_cm=11.0))
+
+# ---- 4.2.11.2 Class - Chondrichthyes ----
+story.append(heading("4.2.11.2", "Class - Chondrichthyes", level=3))
+story.append(b1("They are marine animals with streamlined body and have <b>cartilaginous "
+                "endoskeleton</b> (Figure 4.19). Mouth is located ventrally. Notochord is "
+                "persistent throughout life."))
+story.append(b1("Gill slits are separate and without operculum (gill cover). The skin is tough, "
+                "containing minute <b>placoid scales</b>. Teeth are modified placoid scales "
+                "which are backwardly directed. Their jaws are very powerful."))
+story.append(b1("These animals are predaceous. Due to the absence of <b>air bladder</b>, they "
+                "have to swim constantly to avoid sinking. Heart is two-chambered (one auricle "
+                "and one ventricle)."))
+story.append(b1("Some of them have electric organs (e.g., <i>Torpedo</i>) and some possess "
+                "poison sting (e.g., <i>Trygon</i>). They are <b>cold-blooded "
+                "(poikilothermous)</b> animals, i.e., they lack the capacity to regulate their "
+                "body temperature."))
+story.append(b1("Sexes are separate. In males pelvic fins bear <b>claspers</b>. They have "
+                "internal fertilisation and many of them are viviparous."))
+story.append(b1("<b>Examples:</b> <i>Scoliodon</i> (Dog fish), <i>Pristis</i> (Saw fish), "
+                "<i>Carcharodon</i> (Great white shark), <i>Trygon</i> (Sting ray)."))
+story.append(figure("fig_4_19ab.png",
+                    "<b>Fig. 4.19</b> - Cartilaginous fishes : (a) Scoliodon (b) Pristis.",
+                    max_width_cm=11.0))
+
+# ---- 4.2.11.3 Class - Osteichthyes ----
+story.append(heading("4.2.11.3", "Class - Osteichthyes", level=3))
+story.append(b1("It includes both marine and fresh water fishes with <b>bony endoskeleton</b>. "
+                "Their body is streamlined. Mouth is mostly terminal (Figure 4.20)."))
+story.append(b1("They have four pairs of gills which are covered by an <b>operculum</b> on each "
+                "side. Skin is covered with cycloid/ctenoid scales. <b>Air bladder</b> is "
+                "present which regulates buoyancy."))
+story.append(b1("Heart is two-chambered (one auricle and one ventricle). They are cold-blooded "
+                "animals. Sexes are separate. Fertilisation is usually external. They are mostly "
+                "oviparous and development is direct."))
+story.append(b1("<b>Examples:</b> Marine - <i>Exocoetus</i> (Flying fish), <i>Hippocampus</i> "
+                "(Sea horse); Freshwater - <i>Labeo</i> (Rohu), <i>Catla</i> (Katla), "
+                "<i>Clarias</i> (Magur); Aquarium - <i>Betta</i> (Fighting fish), "
+                "<i>Pterophyllum</i> (Angel fish)."))
+story.append(figure("fig_4_20ab.png",
+                    "<b>Fig. 4.20</b> - Bony fishes : (a) Hippocampus (b) Catla.",
+                    max_width_cm=9.0))
+
+# ---- 4.2.11.4 Class - Amphibia ----
+story.append(heading("4.2.11.4", "Class - Amphibia", level=3))
+story.append(b1("As the name indicates (Gr., <i>Amphi</i> : dual, <i>bios</i>, life), "
+                "amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21). "
+                "Most of them have two pairs of limbs. Body is divisible into head and trunk. "
+                "Tail may be present in some."))
+story.append(b1("The amphibian skin is moist (without scales). The eyes have eyelids. A "
+                "<b>tympanum</b> represents the ear. Alimentary canal, urinary and reproductive "
+                "tracts open into a common chamber called <b>cloaca</b> which opens to the "
+                "exterior."))
+story.append(b1("Respiration is by gills, lungs and through skin. The heart is three-chambered "
+                "(two auricles and one ventricle). These are cold-blooded animals."))
+story.append(b1("Sexes are separate. Fertilisation is external. They are oviparous and "
+                "development is indirect."))
+story.append(b1("<b>Examples:</b> <i>Bufo</i> (Toad), <i>Rana</i> (Frog), <i>Hyla</i> (Tree "
+                "frog), <i>Salamandra</i> (Salamander), <i>Ichthyophis</i> (Limbless "
+                "amphibia)."))
+story.append(figure("fig_4_21ab.png",
+                    "<b>Fig. 4.21</b> - Examples of Amphibia : (a) Salamandra (b) Rana.",
+                    max_width_cm=9.0))
+
+# ---- 4.2.11.5 Class - Reptilia ----
+story.append(heading("4.2.11.5", "Class - Reptilia", level=3))
+story.append(b1("The class name refers to their creeping or crawling mode of locomotion (Latin, "
+                "<i>repere</i> or <i>reptum</i>, to creep or crawl). They are mostly terrestrial "
+                "animals and their body is covered by dry and cornified skin, epidermal scales "
+                "or scutes (Fig. 4.22)."))
+story.append(b1("They do not have external ear openings. Tympanum represents ear. Limbs, when "
+                "present, are two pairs; <b>limbs are absent in snakes</b>."))
+story.append(b1("Heart is usually three-chambered, but <b>four-chambered in crocodiles</b>. "
+                "Reptiles are poikilotherms. Snakes and lizards shed their scales as skin cast."))
+story.append(b1("Sexes are separate. Fertilisation is internal. They are oviparous and "
+                "development is direct."))
+story.append(b1("<b>Examples:</b> <i>Chelone</i> (Turtle), <i>Testudo</i> (Tortoise), "
+                "<i>Chameleon</i> (Tree lizard), <i>Calotes</i> (Garden lizard), "
+                "<i>Crocodilus</i> (Crocodile), <i>Alligator</i> (Alligator), "
+                "<i>Hemidactylus</i> (Wall lizard); Poisonous snakes - <i>Naja</i> (Cobra), "
+                "<i>Bangarus</i> (Krait), <i>Vipera</i> (Viper)."))
+story.append(figure("fig_4_22abcd.png",
+                    "<b>Fig. 4.22</b> - Reptiles : (a) Chameleon (b) Crocodilus (c) Chelone "
+                    "(d) Naja.",
+                    max_width_cm=13.0))
+
+# ---- 4.2.11.6 Class - Aves ----
+story.append(heading("4.2.11.6", "Class - Aves", level=3))
+story.append(b1("The characteristic features of Aves (birds) are the presence of <b>feathers</b> "
+                "and most of them can fly except flightless birds (e.g., Ostrich). They possess "
+                "<b>beak</b> (Figure 4.23)."))
+story.append(b1("The forelimbs are modified into <b>wings</b>. The hind limbs generally have "
+                "scales and are modified for walking, swimming or clasping the tree branches. "
+                "Skin is dry without glands except the oil gland at the base of the tail."))
+story.append(b1("Endoskeleton is fully ossified (bony) and the long bones are hollow with air "
+                "cavities (<b>pneumatic</b>). The digestive tract of birds has additional "
+                "chambers, the <b>crop and gizzard</b>. Heart is completely four-chambered."))
+story.append(b1("They are <b>warm-blooded (homoiothermous)</b> animals, i.e., they are able to "
+                "maintain a constant body temperature. Respiration is by lungs. Air sacs "
+                "connected to lungs supplement respiration."))
+story.append(b1("Sexes are separate. Fertilisation is internal. They are oviparous and "
+                "development is direct."))
+story.append(b1("<b>Examples:</b> <i>Corvus</i> (Crow), <i>Columba</i> (Pigeon), "
+                "<i>Psittacula</i> (Parrot), <i>Struthio</i> (Ostrich), <i>Pavo</i> (Peacock), "
+                "<i>Aptenodytes</i> (Penguin), <i>Neophron</i> (Vulture)."))
+story.append(figure("fig_4_23abcd.png",
+                    "<b>Fig. 4.23</b> - Some birds : (a) Neophron (b) Struthio (c) Psittacula "
+                    "(d) Pavo.",
+                    max_width_cm=13.0))
+
+# ---- 4.2.11.7 Class - Mammalia ----
+story.append(heading("4.2.11.7", "Class - Mammalia", level=3))
+story.append(b1("They are found in a variety of habitats - polar ice caps, deserts, mountains, "
+                "forests, grasslands and dark caves. Some of them have adapted to fly or live in "
+                "water."))
+story.append(b1("The most unique mammalian characteristic is the presence of milk producing "
+                "glands (<b>mammary glands</b>) by which the young ones are nourished. They have "
+                "two pairs of limbs, adapted for walking, running, climbing, burrowing, swimming "
+                "or flying (Figure 4.24)."))
+story.append(b1("The skin of mammals is unique in possessing <b>hair</b>. External ears or "
+                "<b>pinnae</b> are present. Different types of teeth are present in the jaw. "
+                "Heart is four-chambered. They are homoiothermous. Respiration is by lungs."))
+story.append(b1("Sexes are separate and fertilisation is internal. They are <b>viviparous</b> "
+                "with few exceptions and development is direct."))
+story.append(b1("<b>Examples:</b> Oviparous - <i>Ornithorhynchus</i> (Platypus); Viviparous - "
+                "<i>Macropus</i> (Kangaroo), <i>Pteropus</i> (Flying fox), <i>Camelus</i> "
+                "(Camel), <i>Macaca</i> (Monkey), <i>Rattus</i> (Rat), <i>Canis</i> (Dog), "
+                "<i>Felis</i> (Cat), <i>Elephas</i> (Elephant), <i>Equus</i> (Horse), "
+                "<i>Delphinus</i> (Common dolphin), <i>Balaenoptera</i> (Blue whale), "
+                "<i>Panthera tigris</i> (Tiger), <i>Panthera leo</i> (Lion)."))
+story.append(figure("fig_4_24abcd.png",
+                    "<b>Fig. 4.24</b> - Some mammals : (a) Ornithorhynchus (b) Macropus "
+                    "(c) Pteropus (d) Balaenoptera.",
+                    max_width_cm=13.0))
+
+# TABLE 4.2 — salient features of all phyla
+story.append(body("The salient distinguishing features of all phyla under the animal kingdom "
+                  "are comprehensively given in Table 4.2."))
+story.append(body("<b>TABLE 4.2</b> Salient Features of Different Phyla in the Animal Kingdom"))
+story.append(data_table([
+    ["Phylum", "Level of Organisation", "Symmetry", "Coelom", "Segmen-tation",
+     "Digestive System", "Circula-tory", "Respira-tory", "Distinctive Features"],
+    ["Porifera", "Cellular", "Various", "Absent", "Absent", "Absent", "Absent", "Absent",
+     "Body with pores and canals in walls."],
+    ["Coelenterata (Cnidaria)", "Tissue", "Radial", "Absent", "Absent", "Incomplete", "Absent",
+     "Absent", "Cnidoblasts present."],
+    ["Ctenophora", "Tissue", "Radial", "Absent", "Absent", "Incomplete", "Absent", "Absent",
+     "Comb plates for locomotion."],
+    ["Platyhelminthes", "Organ &amp; Organ-system", "Bilateral", "Absent", "Absent", "Incomplete",
+     "Absent", "Absent", "Flat body, suckers."],
+    ["Aschelminthes", "Organ-system", "Bilateral", "Pseudo-coelomate", "Absent", "Complete",
+     "Absent", "Absent", "Often worm-shaped, elongated."],
+    ["Annelida", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
+     "Absent", "Body segmentation like rings."],
+    ["Arthropoda", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
+     "Present", "Exoskeleton of cuticle, jointed appendages."],
+    ["Mollusca", "Organ-system", "Bilateral", "Coelomate", "Absent", "Complete", "Present",
+     "Present", "External skeleton of shell usually present."],
+    ["Echinodermata", "Organ-system", "Radial", "Coelomate", "Absent", "Complete", "Present",
+     "Present", "Water vascular system, radial symmetry."],
+    ["Hemichordata", "Organ-system", "Bilateral", "Coelomate", "Absent", "Complete", "Present",
+     "Present", "Worm-like with proboscis, collar and trunk."],
+    ["Chordata", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
+     "Present", "Notochord, dorsal hollow nerve cord, gill slits with limbs or fins."],
+], col_widths=[1.15, 1.2, 0.85, 1.05, 0.95, 1.05, 0.9, 0.9, 1.95]))
+
+# ---- SUMMARY ----
+story.append(heading("Summary", "Summary", level=1))
+story.append(body("The basic fundamental features such as level of organisation, symmetry, cell "
+                  "organisation, coelom, segmentation, notochord, etc., have enabled us to "
+                  "broadly classify the animal kingdom. Besides the fundamental features, there "
+                  "are many other distinctive characters which are specific for each phyla or "
+                  "class."))
+story.append(body("Porifera includes multicellular animals which exhibit cellular level of "
+                  "organisation and have characteristic flagellated choanocytes. The "
+                  "coelenterates have tentacles and bear cnidoblasts; they are mostly aquatic, "
+                  "sessile or free-floating. The ctenophores are marine animals with comb "
+                  "plates. The platyhelminths have flat body and exhibit bilateral symmetry; the "
+                  "parasitic forms show distinct suckers and hooks. Aschelminthes are "
+                  "pseudocoelomates and include parasitic as well as non-parasitic roundworms."))
+story.append(body("Annelids are metamerically segmented animals with a true coelom. The "
+                  "arthropods are the most abundant group of animals characterised by the "
+                  "presence of jointed appendages; the body is covered with external skeleton "
+                  "made of chitin. The molluscs have a soft body surrounded by an external "
+                  "calcareous shell. The echinoderms possess a spiny skin and their most "
+                  "distinctive feature is the presence of water vascular system. The "
+                  "hemichordates are a small group of worm-like marine animals with a "
+                  "cylindrical body of proboscis, collar and trunk."))
+story.append(body("Phylum Chordata includes animals which possess a notochord either throughout "
+                  "or during early embryonic life; other common features are the dorsal hollow "
+                  "nerve cord and paired pharyngeal gill slits. Some of the vertebrates do not "
+                  "possess jaws (Agnatha) whereas most of them possess jaws (Gnathostomata). "
+                  "Agnatha is represented by the class Cyclostomata; they are the most primitive "
+                  "chordates and are ectoparasites on fishes."))
+story.append(body("Gnathostomata has two super classes, Pisces and Tetrapoda. Classes "
+                  "Chondrichthyes and Osteichthyes bear fins for locomotion and are grouped "
+                  "under Pisces; the Chondrichthyes are fishes with cartilaginous endoskeleton "
+                  "and are marine. Classes Amphibia, Reptilia, Aves and Mammalia have two pairs "
+                  "of limbs and are thus grouped under Tetrapoda. The amphibians have adapted to "
+                  "live both on land and water. Reptiles are characterised by the presence of "
+                  "dry and cornified skin; limbs are absent in snakes. Fishes, amphibians and "
+                  "reptiles are poikilothermous (cold-blooded)."))
+story.append(body("Aves are warm-blooded animals with feathers on their bodies and forelimbs "
+                  "modified into wings for flying; hind limbs are adapted for walking, swimming, "
+                  "perching or clasping. The unique features of mammals are the presence of "
+                  "mammary glands and hairs on the skin, and they commonly exhibit viviparity."))
+
+# ---- EXERCISES (gap support) ----
+story.append(heading("Exercises", "Exercises", level=1))
+story.append(body("The exercises assume two term-pairs that the running text uses but never "
+                  "formally defines. They are stated here so the exercise set is self-contained."))
+story.append(keyterm("<b>Intracellular vs extracellular digestion (Q4):</b> in intracellular "
+                     "digestion food is broken down <i>inside</i> the cell (as in Porifera); in "
+                     "extracellular digestion food is broken down <i>outside</i> the cells in a "
+                     "gut cavity (coelenterates and ctenophores use both intracellular and "
+                     "extracellular digestion)."))
+story.append(keyterm("<b>Oviparous vs viviparous (Q12):</b> oviparous animals lay eggs that "
+                     "develop and hatch outside the mother's body; viviparous animals give birth "
+                     "to young ones that have completed development inside the mother's body. "
+                     "The eggs of an oviparous mother and the young of a viviparous mother need "
+                     "not be equal in number."))
+story.append(memory_aid("Vertebrata ladder - <b>A</b>gnatha then <b>G</b>nathostomata; within "
+                        "Gnathostomata, Pisces (Chondrichthyes, Osteichthyes) then Tetrapoda "
+                        "(Amphibia, Reptilia, Aves, Mammalia). Chamber count climbs 2 -> 3 -> "
+                        "(3/4) -> 4 -> 4 across fishes, amphibia, reptilia, aves and mammals."))
+
 
 def main():
     return build_pdf(OUT_PDF, story,
