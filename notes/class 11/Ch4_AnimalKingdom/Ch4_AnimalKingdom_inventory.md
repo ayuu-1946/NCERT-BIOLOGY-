@@ -200,6 +200,46 @@ Re-parsing the finished table with `check_pdf.py`'s own row logic gives **154 Fa
 | F152 | 4.2.10 | feature | "Fertilisation is external." | |
 | F153 | 4.2.10 | feature | "Development is indirect." | |
 | F154 | 4.2.10 | example | "Examples: Balanoglossus and Saccoglossus." | |
+| F155 | 4.0 | heading | "CHAPTER 4" | |
+| F156 | 4.0 | heading | "ANIMAL KINGDOM" | |
+| F157 | 4.1 | heading | "4.1 BASIS OF CLASSIFICATION" | |
+| F158 | 4.1.1 | heading | "4.1.1 Levels of Organisation" | |
+| F159 | 4.1.2 | heading | "4.1.2 Symmetry" | |
+| F160 | 4.1.3 | heading | "4.1.3 Diploblastic and Triploblastic Organisation" | |
+| F161 | 4.1.4 | heading | "4.1.4 Coelom" | |
+| F162 | 4.1.5 | heading | "4.1.5 Segmentation" | |
+| F163 | 4.1.6 | heading | "4.1.6 Notochord" | |
+| F164 | 4.2 | heading | "4.2 CLASSIFICATION OF ANIMALS" | |
+| F165 | 4.2.1 | heading | "4.2.1 Phylum – Porifera" | |
+| F166 | 4.2.2 | heading | "4.2.2 Phylum – Coelenterata (Cnidaria)" | |
+| F167 | 4.2.3 | heading | "4.2.3 Phylum – Ctenophora" | |
+| F168 | 4.2.4 | heading | "4.2.4 Phylum – Platyhelminthes" | |
+| F169 | 4.2.5 | heading | "4.2.5 Phylum – Aschelminthes" | |
+| F170 | 4.2.6 | heading | "4.2.6 Phylum – Annelida" | |
+| F171 | 4.2.7 | heading | "4.2.7 Phylum – Arthropoda" | |
+| F172 | 4.2.8 | heading | "4.2.8 Phylum – Mollusca" | |
+| F173 | 4.2.9 | heading | "4.2.9 Phylum – Echinodermata" | |
+| F174 | 4.2.10 | heading | "4.2.10 Phylum – Hemichordata" | |
+| F175 | 4.0 | heading | Chapter-opening contents sidebar (source page 1, italic light face, not a body heading tier): "4.1 Basis of Classification"; "4.2 Classification of Animals" | |
+| F176 | 4.0 | opener | "When you look around, you will observe different animals with different structures and forms." | |
+| F177 | 4.1 | opener | "Inspite of differences in structure and form of different animals, there are fundamental features common to various individuals in relation to the arrangement of cells, body symmetry, nature of coelom, patterns of digestive, circulatory or reproductive systems." | |
+| F178 | 4.1.1 | opener | "Though all members of Animalia are multicellular, all of them do not exhibit the same pattern of organisation of cells." | |
+| F179 | 4.1.2 | opener | "Animals can be categorised on the basis of their symmetry." | |
+| F180 | 4.1.3 | opener | "Animals in which the cells are arranged in two embryonic layers, an external ectoderm and an internal endoderm, are called diploblastic animals, e.g., coelenterates." | |
+| F181 | 4.1.4 | opener | "Presence or absence of a cavity between the body wall and the gut wall is very important in classification." | |
+| F182 | 4.1.5 | opener | "In some animals, the body is externally and internally divided into segments with a serial repetition of at least some organs." | |
+| F183 | 4.1.6 | opener | "Notochord is a mesodermally derived rod-like structure formed on the dorsal side during embryonic development in some animals." | |
+| F184 | 4.2 | opener | "The broad classification of Animalia, based on common fundamental features as mentioned in the preceding sections, is given in Figure 4.4." | |
+| F185 | 4.2.1 | opener | "Members of this phylum are commonly known as sponges." | |
+| F186 | 4.2.2 | opener | "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals (Figure 4.6)." | |
+| F187 | 4.2.3 | opener | "Ctenophores, commonly known as sea walnuts or comb jellies are exclusively marine, radially symmetrical, diploblastic organisms with tissue level of organisation." | |
+| F188 | 4.2.4 | opener | "They have dorso-ventrally flattened body, hence are called flatworms (Figure 4.9)." | |
+| F189 | 4.2.5 | opener | "The body of the aschelminthes is circular in cross-section, hence, the name roundworms (Figure 4.10)." | |
+| F190 | 4.2.6 | opener | "They may be aquatic (marine and fresh water) or terrestrial; free-living, and sometimes parasitic." | |
+| F191 | 4.2.7 | opener | "This is the largest phylum of Animalia which includes insects." | |
+| F192 | 4.2.8 | opener | "This is the second largest animal phylum (Figure 4.13)." | |
+| F193 | 4.2.9 | opener | "These animals have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied, Figure 4.14)." | |
+| F194 | 4.2.10 | opener | "Hemichordata was earlier considered as a sub-phylum under phylum Chordata." | |
 
 ## Summary classification
 | Summary sentence | Classification | Folded into |
