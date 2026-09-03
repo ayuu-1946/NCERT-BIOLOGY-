@@ -147,7 +147,7 @@ Full list lives in the inventory's `## Carry-over list` (7 items). The ones that
 
 | Pass | Scope | Status |
 | :--- | :--- | :--- |
-| **Pass 1** | Source mastery & frozen inventory | **▶️ IN PROGRESS — 1 of 8 sessions. GATE 1 OPEN.** |
+| **Pass 1** | Source mastery & frozen inventory | **▶️ IN PROGRESS — 3 of 8 sessions (Pass 1a complete: 1a-S, 1a-H, 1a-O). GATE 1 OPEN.** |
 | Pass 2 | Script + PDF build (`check_pdf.py` green) | ⬜ not started — blocked on Gate 1 |
 | Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — blocked on Gate 2 |
 

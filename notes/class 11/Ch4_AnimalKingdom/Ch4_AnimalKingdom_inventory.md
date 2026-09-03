@@ -1,5 +1,5 @@
 # Frozen Inventory — Class 11 Chapter 4: Animal Kingdom
-Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: NOT YET FROZEN (Pass 1a in progress) | Rows: 154
+Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: NOT YET FROZEN (Pass 1a complete — 1b, 1-F, 1-Z pending) | Rows: 194
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. All rows are unticked — Pass 2 has not started.
 
@@ -23,19 +23,22 @@ Seam rule: TABLE 4.2 is assigned to **1b by physical location** even though its 
 | Session | Scope | Status | Rows added |
 |---|---|---|---|
 | 1a-S | Steps 1–3, prose facts, first half | **DONE** | 154 (F001–F154) |
-| 1a-H | Step 4, heading sweep, first half | not started | — |
-| 1a-O | Step 5, opener sweep, first half | not started | — |
+| 1a-H | Step 4, heading sweep, first half | **DONE** | 21 (F155–F175) |
+| 1a-O | Step 5, opener sweep, first half | **DONE** | 19 (F176–F194) |
 | 1b-S / 1b-H / 1b-O | second half | not started | — |
 | 1-F | Step 6, figures, whole chapter | not started | — |
 | 1-Z | Steps 7–10, gaps + summary + freeze | not started | — |
 
-### 1a-S census — re-parsed from the Facts table itself (step 10), never hand-tallied
+### Pass 1a census — re-parsed from the Facts table itself (step 10), never hand-tallied
 
-Re-parsing the finished table with `check_pdf.py`'s own row logic gives **154 Facts rows, IDs `F001`–`F154`, contiguous with no gaps and no duplicates**, all unticked. The total is derivable from this per-section list, which sums to 154:
+Pass 1a is complete: all three first-half sessions (1a-S, 1a-H, 1a-O) have run. Re-parsing the finished table with `check_pdf.py`'s own row logic gives **194 rows total, IDs `F001`–`F194`, contiguous with no gaps and no duplicates**, all unticked (Pass 2 has not started). The 194 rows break down by session:
 
-`4.0`=2, `4.1`=2, `4.1.1`=11, `4.1.2`=4, `4.1.3`=3, `4.1.4`=5, `4.1.5`=2, `4.1.6`=2, `4.2`=3, `4.2.1`=13, `4.2.2`=12, `4.2.3`=9, `4.2.4`=10, `4.2.5`=10, `4.2.6`=12, `4.2.7`=19, `4.2.8`=11, `4.2.9`=12, `4.2.10`=12 — 19 sections, 154 rows.
+- **1a-S — 154 facts rows** (`F001`–`F154`), derivable from this per-section census (heading/opener rows excluded), which sums to 154:
+  `4.0`=2, `4.1`=2, `4.1.1`=11, `4.1.2`=4, `4.1.3`=3, `4.1.4`=5, `4.1.5`=2, `4.1.6`=2, `4.2`=3, `4.2.1`=13, `4.2.2`=12, `4.2.3`=9, `4.2.4`=10, `4.2.5`=10, `4.2.6`=12, `4.2.7`=19, `4.2.8`=11, `4.2.9`=12, `4.2.10`=12 — 19 sections, 154 rows.
+- **1a-H — 21 heading rows** (`F155`–`F175`): chapter-title tier ×2 (F155–F156), the two small-caps section titles (F157 §4.1, F164 §4.2), the sixteen numbered sub-headings §4.1.1–§4.1.6 + §4.2.1–§4.2.10 (F158–F163, F165–F174), and the page-1 contents sidebar (F175). Count derivable: 2 + 2 + 16 + 1 = 21.
+- **1a-O — 19 opener rows** (`F176`–`F194`): one opener per section, all 19 sections of the 1a half. Count derivable: 1 (`4.0`) + 1 (`4.1`) + 6 (`4.1.1`–`4.1.6`) + 1 (`4.2`) + 10 (`4.2.1`–`4.2.10`) = 19.
 
-`Type` histogram (machine-grouped, all lowercase, no casing split): feature 86, definition 24, example 17, term 10, number 4, etymology 4, comparison 4, process 3, list 1, exception 1 = 154.
+Aggregate `Type` histogram over all 194 rows (machine-grouped, all lowercase, no casing split): feature 86, definition 24, heading 21, opener 19, example 17, term 10, number 4, etymology 4, comparison 4, process 3, list 1, exception 1 = 194.
 
 `check_pdf.py._extract_labels` run against this file returns **0 label rows, 0 figures, no phantom `Fig #` row** — correct for a file whose 1-F session has not run. It must return a non-zero, non-doubled count after 1-F.
 

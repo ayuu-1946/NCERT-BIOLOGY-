@@ -77,7 +77,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | 1. The Living World | ✅ Done |
 | 2. Biological Classification | ✅ Done |
 | 3. Plant Kingdom | ✅ Done |
-| 4. Animal Kingdom | 🟨 Pass 1 complete (Gate 1 passed) — figures + frozen inventory done; notes pending. See `notes/class 11/Ch4_AnimalKingdom/Ch4_AnimalKingdom_TRACKER.md` |
+| 4. Animal Kingdom | ▶️ **In progress — GATE 1 OPEN (not passed).** Big-chapter run restarted 2026-09-03; the prior "Gate 1 passed" claim came from an untrusted arc and was overturned (14-vs-18 page error, no real inventory on disk). **Pass 1a complete (3 of 8 Pass-1 sessions: 1a-S 154, 1a-H 21, 1a-O 19 → inventory `F001`–`F194`, working, not frozen)**; 1b-S/1b-H/1b-O, 1-F, 1-Z pending. Not in any Done tally. See `notes/class 11/Ch4_AnimalKingdom/Ch4_AnimalKingdom_TRACKER.md` |
 
 ### Unit II — Structural Organisation in Plants and Animals
 
