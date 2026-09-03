@@ -5,7 +5,7 @@
 **Text snapshot for this arc:** `scratch/ch4_gate1/ch4_source.txt` (1022 lines, PyMuPDF, page markers `===== PAGE n =====`).
 **Protocol:** `GATE_1_PASS_1_SOURCE_MASTERY.md`, run as a **big chapter** (§8) — halves 1a and 1b into one inventory.
 
-> **GATE 1 IS OPEN. Pass 1 is 1 of 8 sessions done. Chapter 4 must not appear in any completion tally.**
+> **GATE 1 IS OPEN. Pass 1 is 2 of 8 sessions done. Chapter 4 must not appear in any completion tally.**
 
 ---
 
@@ -51,7 +51,7 @@ No row, count or claim from that arc was carried into the new inventory.
 | Session | Scope | Status | Rows added |
 | :--- | :--- | :--- | :--- |
 | **1a-S** | Steps 1–3 — prose facts, first half | **[x] DONE (2026-09-03)** | **154 (`F001`–`F154`)** |
-| 1a-H | Step 4 — heading sweep, first half | [ ] not started | — |
+| **1a-H** | Step 4 — heading sweep, first half | **[x] DONE (2026-09-03)** | **21 (`F155`–`F175`)** |
 | 1a-O | Step 5 — opener sweep, first half | [ ] not started | — |
 | 1b-S | Steps 1–3 — second half | [ ] not started | — |
 | 1b-H | Step 4 — second half | [ ] not started | — |
@@ -59,7 +59,7 @@ No row, count or claim from that arc was carried into the new inventory.
 | 1-F | Step 6 — figures, whole chapter | [ ] not started | — |
 | 1-Z | Steps 7–10 — gaps, summary, freeze | [ ] not started | — |
 
-**Next session: `1a-H`** (heading sweep, first half). Nothing may be back-dated into a freeze; new findings become new rows in their own session.
+**Next session: `1a-O`** (opener sweep, first half). Nothing may be back-dated into a freeze; new findings become new rows in their own session.
 
 ---
 
@@ -74,6 +74,23 @@ Facts for source pages 1–9, transcribed in Content Order, verbatim, one fact p
 - Placeholders left explicit, not blank: summary classification, exercise-gap table and figure manifest each carry a `_pending session …_` row.
 
 **Not done by 1a-S, by design:** headings (1a-H), openers (1a-O), the whole second half (1b-*), figures (1-F), gaps/summary/freeze (1-Z).
+
+---
+
+## 4a. What session 1a-H produced
+
+Heading skeleton for source pages 1–9, swept by font size/weight off the layout (not the text stream), overprints deduplicated.
+
+- **21 heading rows, `F155`–`F175`** — appended contiguously (inventory now `F001`–`F175`, **0 gaps, 0 dupes, 0 ticked**), re-parsed by machine.
+- **Heading tiers, read off the font faces:**
+  - `4.0` chapter title tier — "CHAPTER 4" + "ANIMAL KINGDOM" (F155–F156).
+  - `4.1`/`4.2` section titles are **small-caps** ("BASIS OF CLASSIFICATION", "CLASSIFICATION OF ANIMALS") — F157, F164.
+  - `4.1.1`–`4.1.6` and `4.2.1`–`4.2.10` numbered sub-headings at 12.0/13.0 Demi — F158–F163, F165–F174.
+  - The chapter-opening **contents sidebar** (page 1, italic light face) captured as a structural row, F175.
+- **Exhaustiveness check, machine-run:** every 12.0/13.0 bold line in pages 1–9 is a numbered heading — **no unnumbered sub-headings exist in the 1a half**. The 10.5 bold runs are inline term emphasis, not headings, and were excluded.
+- **Seam finding (binds 1b):** the `4.2.11 Phylum – Chordata` heading physically sits on source **page 9** (y=662), but by the fixed half-seam it belongs to **1b** and was **not** taken here. 1b-H picks it up.
+
+**Not done by 1a-H, by design:** openers (1a-O), second half (1b-*), figures (1-F), gaps/summary/freeze (1-Z).
 
 ---
 

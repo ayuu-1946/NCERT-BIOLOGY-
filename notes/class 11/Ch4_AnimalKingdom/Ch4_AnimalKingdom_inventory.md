@@ -200,6 +200,27 @@ Re-parsing the finished table with `check_pdf.py`'s own row logic gives **154 Fa
 | F152 | 4.2.10 | feature | "Fertilisation is external." | |
 | F153 | 4.2.10 | feature | "Development is indirect." | |
 | F154 | 4.2.10 | example | "Examples: Balanoglossus and Saccoglossus." | |
+| F155 | 4.0 | heading | "CHAPTER 4" | |
+| F156 | 4.0 | heading | "ANIMAL KINGDOM" | |
+| F157 | 4.1 | heading | "4.1 BASIS OF CLASSIFICATION" | |
+| F158 | 4.1.1 | heading | "4.1.1 Levels of Organisation" | |
+| F159 | 4.1.2 | heading | "4.1.2 Symmetry" | |
+| F160 | 4.1.3 | heading | "4.1.3 Diploblastic and Triploblastic Organisation" | |
+| F161 | 4.1.4 | heading | "4.1.4 Coelom" | |
+| F162 | 4.1.5 | heading | "4.1.5 Segmentation" | |
+| F163 | 4.1.6 | heading | "4.1.6 Notochord" | |
+| F164 | 4.2 | heading | "4.2 CLASSIFICATION OF ANIMALS" | |
+| F165 | 4.2.1 | heading | "4.2.1 Phylum – Porifera" | |
+| F166 | 4.2.2 | heading | "4.2.2 Phylum – Coelenterata (Cnidaria)" | |
+| F167 | 4.2.3 | heading | "4.2.3 Phylum – Ctenophora" | |
+| F168 | 4.2.4 | heading | "4.2.4 Phylum – Platyhelminthes" | |
+| F169 | 4.2.5 | heading | "4.2.5 Phylum – Aschelminthes" | |
+| F170 | 4.2.6 | heading | "4.2.6 Phylum – Annelida" | |
+| F171 | 4.2.7 | heading | "4.2.7 Phylum – Arthropoda" | |
+| F172 | 4.2.8 | heading | "4.2.8 Phylum – Mollusca" | |
+| F173 | 4.2.9 | heading | "4.2.9 Phylum – Echinodermata" | |
+| F174 | 4.2.10 | heading | "4.2.10 Phylum – Hemichordata" | |
+| F175 | 4.0 | heading | Chapter-opening contents sidebar (source page 1, italic light face, not a body heading tier): "4.1 Basis of Classification"; "4.2 Classification of Animals" | |
 
 ## Summary classification
 | Summary sentence | Classification | Folded into |
