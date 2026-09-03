@@ -1,5 +1,7 @@
 # Animal Kingdom — Figure Extraction Audit
 
+> **UNTRUSTED (2026-09-03).** This file is from the pre-restart Chapter 4 arc, whose page count was wrong (it worked from 14 pages; the PDF has 18) and whose asset count contradicted itself (26 vs 27). **It is not evidence for Gate 1.** The extracted PNGs in `assets/` are trusted; every claim *about* them — source page, label set, mono/verified status — must be re-derived in session `1-F`. See `Ch4_AnimalKingdom_TRACKER.md` §1.
+
 ## Method
 
 The source PDF was inspected with coordinate grids, including a **4× high-density grid (440 dpi render with 5-point spacing)** for the Figure 4.5 refinement, and the figure rectangles were hand-pinned in PDF points. Crops were rendered at 300 dpi, converted with `Image.convert("L")`, and passed through `ImageOps.autocontrast(cutoff=1)`. This guarantees that emitted PNGs have one grayscale channel and avoids color-dependent print failures.
