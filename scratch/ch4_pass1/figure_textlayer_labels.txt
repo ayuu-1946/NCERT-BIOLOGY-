@@ -1,0 +1,146 @@
+TOTAL FIGURES: 26
+
+=== 4_1a (page 2) rect=(98, 108, 246, 268) ===
+(NO TEXT-LAYER CONTENT)
+
+=== 4_1b (page 2) rect=(58, 286, 276, 492) ===
+i (b) l l
+
+=== 4_2ab (page 2) rect=(58, 510, 302, 681) ===
+Ectoderm
+Mesoglea
+Endoderm
+Mesoderm
+(b)
+(a)
+
+=== 4_3abc (page 3) rect=(278, 164, 532, 408) ===
+Fi 4 3 Di ti ti l i f
+
+=== 4_4 (page 4) rect=(58, 96, 534, 342) ===
+(NO TEXT-LAYER CONTENT)
+
+=== 4_5abc (page 4) rect=(65, 420, 315, 674) ===
+4.2
+Mem
+as sp
+asym
+prim
+level
+tran
+minu
+cavi
+thro
+(b)
+tran
+exch
+(a)
+or co
+Dige
+by a
+fibre
+i.e.,
+indiv
+fragm
+(c)
+
+=== 4_6ab (page 5) rect=(84, 204, 430, 432) ===
+(a)
+(b)
+
+=== 4_7 (page 5) rect=(416, 470, 510, 618) ===
+i 4 7
+
+=== 4_8 (page 6) rect=(54, 96, 220, 355) ===
+(NO TEXT-LAYER CONTENT)
+
+=== 4_9ab (page 6) rect=(170, 486, 506, 694) ===
+(a)
+(b)
+
+=== 4_10 (page 7) rect=(300, 108, 506, 332) ===
+Male Female
+i l f
+
+=== 4_11ab (page 7) rect=(310, 368, 512, 670) ===
+(NO TEXT-LAYER CONTENT)
+
+=== 4_12abcd (page 8) rect=(54, 112, 300, 366) ===
+(a)
+(b)
+(c)
+(d)
+
+=== 4_13ab (page 8) rect=(62, 430, 300, 688) ===
+(a)
+(b)
+
+=== 4_14ab (page 9) rect=(340, 94, 510, 328) ===
+(a)
+(b)
+
+=== 4_15 (page 9) rect=(342, 438, 526, 670) ===
+Proboscis
+Collar
+Trunk
+
+=== 4_16 (page 10) rect=(54, 106, 292, 222) ===
+Nerve cord Notochord
+Post-anal part
+Gill slits
+Figure 4.16 Chordata characteristics
+
+=== 4_17 (page 10) rect=(136, 398, 250, 620) ===
+(NO TEXT-LAYER CONTENT)
+
+=== 4_18 (page 11) rect=(280, 384, 526, 462) ===
+(NO TEXT-LAYER CONTENT)
+
+=== 4_19ab (page 11) rect=(280, 500, 526, 680) ===
+(a)
+(b)
+
+=== 4_20ab (page 12) rect=(54, 96, 248, 336) ===
+(NO TEXT-LAYER CONTENT)
+
+=== 4_21ab (page 12) rect=(54, 440, 250, 666) ===
+(a)
+(b)
+
+=== 4_22abcd (page 13) rect=(32, 94, 540, 288) ===
+(b) (c) (d)
+(a)
+
+=== 4_23abcd (page 14) rect=(34, 92, 540, 275) ===
+(a) (d)
+(c)
+(b)
+
+=== 4_24abcd (page 14) rect=(46, 512, 540, 692) ===
+(c)
+(a)
+(d)
+(b)
+
+=== vertebrata_chart (page 11) rect=(104, 126, 474, 336) ===
+Vertebrata
+Division
+Gnathostomata
+Agnatha
+(bears jaw)
+(lacks jaw)
+Super Class
+Tetrapoda
+Pisces
+(bear limbs)
+(bear fins)
+Class
+Class
+Class
+1. Cyclostomata 1. Amphibia
+1. Chondrichthyes
+2. Reptilia
+2. Osteichthyes
+3. Aves
+4. Mammals
+
