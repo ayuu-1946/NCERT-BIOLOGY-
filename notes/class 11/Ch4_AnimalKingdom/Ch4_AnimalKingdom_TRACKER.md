@@ -193,13 +193,62 @@ judged on the whole merged PDF **after 2b**, per v6 §7. No mechanical regressio
 
 ---
 
+## 7b. What session Pass 2b produced (2026-09-03)
+
+Second half of the notes script — the chordate arc — appended at the
+`### PASS 2b CONTINUES HERE ###` seam in the same file, `Ch4_AnimalKingdom.py`. No
+2a block was touched. The build now renders `Ch4_AnimalKingdom.pdf` at **19 pages**.
+
+- **Scope written (1b half):** §4.2.11 Chordata opener + the three subphyla
+  (Urochordata, Cephalochordata, Vertebrata) + the distinguishing chordate features;
+  the Agnatha/Gnathostomata → Pisces/Tetrapoda classification hierarchy; all seven
+  Vertebrata classes (Cyclostomata, Chondrichthyes, Osteichthyes, Amphibia, Reptilia,
+  Aves, Mammalia) with diagnostic features and examples; TABLE 4.1 (chordate vs
+  non-chordate comparison) and TABLE 4.2 (all 11 phyla × 9 attributes); the chapter
+  SUMMARY; and the exercise-gap appendix (intracellular vs extracellular digestion;
+  oviparous vs viviparous).
+- **Figures placed (11 of 26, completing the manifest):** Figs 4.16–4.24 (class
+  representative diagrams) plus the unnumbered `fig_vertebrata_chart.png` on source
+  page 11, each with its verbatim NCERT caption.
+- **Rows ticked: 152** — all of `F195`–`F342`, plus `F348`, `F349`, `F351`, `F352`.
+  Combined with 2a's 200, the inventory is now **352/352 ticked, 0 remaining**.
+- **Label coverage engineered in:** the §4.2.11 prose and class sections deliberately
+  spell out all 13 previously-missing Fig 4.16/chart labels verbatim (the "Post-anal
+  part" partial from `F348` and the full label set from `F349`), so check 6 clears
+  every remaining label.
+
+### Pass 2b lint (`check_pdf.py`, whole PDF) — all-green Gate 2 verdict
+
+Ran `python check_pdf.py "notes/class 11/Ch4_AnimalKingdom"` against the merged 19-page
+PDF. All nine mechanical/1a checks stay green, and both checks that were 1b-scoped FAILs
+in 2a flip to PASS:
+
+| Check | Result |
+| :--- | :--- |
+| 1 Footer/header band | ✅ PASS |
+| 2 Legibility floor | ✅ PASS |
+| 3 Grayscale-only images | ✅ PASS |
+| 4 No person photograph | ✅ PASS |
+| 5 Banned glyphs | ✅ PASS |
+| 6 Figure-label coverage | ✅ PASS — 56/56 labels in running text (0 missing, 0 partial) |
+| 7 Inventory fully ticked | ✅ PASS — 352/352 rows ticked |
+| 8 Page geometry | ✅ PASS — all 19 pages A4 portrait (595×842pt) |
+| 9 Orphaned headings | ✅ PASS |
+| 10 Badge-plate collision | ✅ PASS |
+
+**VERDICT: PASS (0 fail, 0 warn)** over the whole 19-page merged PDF.
+
+---
+
 ## 8. Gate ledger
 
 | Pass | Scope | Status |
 | :--- | :--- | :--- |
 | **Pass 1** | Source mastery & frozen inventory | **✅ COMPLETE — all nine sessions done; inventory FROZEN at 352 rows. GATE 1 CLOSED (GREEN).** |
 | **Pass 2a** | Script + PDF build, **first half** (non-chordates, Figs 4.1–4.15) | **✅ DONE (2026-09-03) — 200/352 rows ticked (`F001`–`F194`, `F343`–`F347`, `F350`); PDF 12 pp; all 9 mechanical/1a lint checks green.** |
-| Pass 2b | Script + PDF build, **second half** (Chordata + 7 classes, TABLE 4.1/4.2, summary, `check_pdf.py` fully green) | ⬜ not started — appends at the `### PASS 2b CONTINUES HERE ###` seam; must tick `F195`+ and clear checks 6 & 7 |
-| Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — blocked on Gate 2b |
+| **Pass 2b** | Script + PDF build, **second half** (Chordata + 7 classes, TABLE 4.1/4.2, summary, `check_pdf.py` fully green) | **✅ DONE (2026-09-03) — 352/352 rows ticked (`F195`–`F352`); PDF 19 pp; `check_pdf.py` exit 0, 0 fail, 0 warn. GATE 2 CLOSED (GREEN).** |
+| Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — Gate 2 is closed; Chapter 4 stays out of any "Done" tally until Pass 3 delivers a defect-free PDF |
 
-**GATE 1 VERDICT: CLOSED (GREEN), 2026-09-03.** All nine Pass-1 sessions ran (1a-S, 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F, 1-F resumed, 1-Z) and 1-Z froze the inventory over the whole chapter at **352 rows (F001–F352, contiguous, 0 gaps/dupes)**, machine-validated. **Gate 1 closed is NOT chapter closed:** Pass 2 (script + PDF) has not started and every row is unticked, so Chapter 4 stays out of any "Done" tally until Pass 3 delivers a defect-free PDF.
+**GATE 1 VERDICT: CLOSED (GREEN), 2026-09-03.** All nine Pass-1 sessions ran (1a-S, 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F, 1-F resumed, 1-Z) and 1-Z froze the inventory over the whole chapter at **352 rows (F001–F352, contiguous, 0 gaps/dupes)**, machine-validated.
+
+**GATE 2 VERDICT: CLOSED (GREEN), 2026-09-03.** Pass 2a (non-chordates, 200 rows) and Pass 2b (chordates + tables + summary, 152 rows) together tick all 352 inventory rows and drive `check_pdf.py` to **exit 0 (0 fail, 0 warn)** over the full 19-page merged PDF. **Gate 2 closed is NOT chapter closed:** Pass 3 (verify & deliver) has not started, so Chapter 4 stays out of any "Done" tally until Pass 3 confirms zero defects.
