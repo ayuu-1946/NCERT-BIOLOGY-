@@ -1,5 +1,5 @@
 # Frozen Inventory — Class 11 Chapter 4: Animal Kingdom
-Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: NOT YET FROZEN (Pass 1a COMPLETE — whole-chapter freeze happens at 1-Z after Pass 1b) | Rows: 194
+Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: NOT YET FROZEN (Pass 1a + Pass 1b COMPLETE — whole-chapter freeze still pending at 1-Z) | Rows: 342
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. All rows are unticked — Pass 2 has not started.
 
@@ -25,11 +25,15 @@ Seam rule: TABLE 4.2 is assigned to **1b by physical location** even though its 
 | 1a-S | Steps 1–3, prose facts, first half | **DONE** | 154 (F001–F154) |
 | 1a-H | Step 4, heading sweep, first half | **DONE** | 21 (F155–F175) |
 | 1a-O | Step 5, opener sweep, first half | **DONE** | 19 (F176–F194) |
-| 1b-S / 1b-H / 1b-O | second half | not started | — |
-| 1-F | Step 6, figures, whole chapter | **DONE (2026-09-03)** | 26 manifest rows |
+| 1b-S | Steps 1–3, prose facts, second half | **DONE (2026-09-03)** | 130 (F195–F324) |
+| 1b-H | Step 4, heading sweep, second half | **DONE (2026-09-03)** | 10 (F325–F334) |
+| 1b-O | Step 5, opener sweep, second half | **DONE (2026-09-03)** | 8 (F335–F342) |
+| 1-F | Step 6, figures, whole chapter | **DONE (2026-09-03)** — but see carry-over #8: figure **manifest** exists, figure-**label matrix** does not | 26 manifest rows |
 | 1-Z | Steps 7–10, gaps + summary + freeze | not started | — |
 
-**Pass 1a is complete** (1a-S + 1a-H + 1a-O = 154 + 21 + 19 = 194 rows, machine-re-parsed below). Session **1-F is also complete** with 26 manifest rows. Next session is **1b-S**. This is not a gate: Gate 1 is evaluated over the whole chapter only after 1b and 1-Z. The inventory stays a working file, unfrozen.
+**Pass 1a and Pass 1b are both complete** — 1a (154 + 21 + 19 = 194) + 1b (130 + 10 + 8 = 148) = **342 rows, machine-re-parsed below**. Session **1-F** contributed 26 manifest rows (documentation only). The one remaining Pass 1 session is **1-Z** (steps 7–10: exercise-gap scan, summary classification + fold, freeze, whole-chapter machine-derived counts). This is **not** a gate: Gate 1 is evaluated over the whole chapter only after 1-Z closes the freeze. The inventory stays a working file, **unfrozen**.
+
+> **Gate 1 status: OPEN.** Pass 1 is **7 of 8 sessions done** (1a-S, 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F). Only 1-Z remains before Gate 1 can be evaluated. Chapter 4 must not appear in any completion tally.
 
 ### 1a-S census — re-parsed from the Facts table itself (step 10), never hand-tallied
 
@@ -55,6 +59,33 @@ Re-parsing the finished table gives **21 heading rows, IDs `F155`–`F175`, cont
 Re-parsing gives **19 opener rows, IDs `F176`–`F194`, contiguous, all unticked** — exactly one opener for each of the 19 sections in the 1a half. Count derivable from the list: `4.0`(1) + `4.1`(1) + `4.1.1`–`4.1.6`(6) + `4.2`(1) + `4.2.1`–`4.2.10`(10) = 1 + 1 + 6 + 1 + 10 = **19**, matching the machine tally. Openers were read from **layout reading-order** (blocks sorted by y-position), not the raw text stream — see carry-over #5 (discharged). §4.2.11 Chordata's opener (page 9) was not taken; it belongs to 1b.
 
 `check_pdf.py._extract_labels` baseline was **0 label rows, 0 figures, no phantom `Fig #` row** before 1-F. The figure manifest now contains **26 non-doubled caption rows**, including the unnumbered Vertebrata chart; figure rows are documentation only and remain unticked until Pass 2.
+
+### 1b-S census — re-parsed from the Facts table itself (step 10), never hand-tallied
+
+Re-parsing the finished table gives **130 prose-fact rows, IDs `F195`–`F324`, contiguous, all unticked** — source pages 9(§4.2.11 opener)–15 (through TABLE 4.2). The total is derivable from this per-section list, which sums to 130:
+
+`4.2.11`=24 (Chordata prose 12 + TABLE 4.1 title+5 rows = 6 + Vertebrata chart 6), `4.2.11.1`=10, `4.2.11.2`=16, `4.2.11.3`=12, `4.2.11.4`=15, `4.2.11.5`=12, `4.2.11.6`=15, `4.2.11.7`=13, `4.2`=13 (chapter-wide transition 1 + TABLE 4.2 title+11 rows = 12) — 9 section-groups, 130 rows.
+
+`Type` histogram of the 1b-S rows (machine-grouped, all lowercase): feature 96, example 9, comparison 7, definition 6, list 5, number 2, etymology 2, caption 2, exception 1 = 130.
+
+**Seam cross-check (TABLE 4.2 vs 1a prose, per the seam rule):** TABLE 4.2's ten non-chordate rows (F314–F323) were reassembled **column-major** per carry-over #7 and checked against the per-phylum prose already in 1a (F035–F154). All values agree with the prose except where the source table itself is terser than its prose — recorded as source wording, not a defect: Porifera symmetry reads **"Various"** in the table (prose F016/F036 say "mostly asymmetrical"), and Echinodermata symmetry reads **"Radial"** in the table (prose F133 gives the fuller "adult radial / larvae bilateral"). Both are verbatim from TABLE 4.2 and preserved as such. The 11th row (F324, Chordata) is cross-checked against 1b's own Chordata prose (F195–F206).
+
+### 1b-H census — re-parsed from the Facts table itself (step 10)
+
+Re-parsing gives **10 heading rows, IDs `F325`–`F334`, contiguous, all unticked**. The total is derivable from this list: **8 numbered headings + 2 unnumbered structural headings** —
+
+- Numbered: `4.2.11 Phylum – Chordata` (F325), and the seven classes `4.2.11.1`–`4.2.11.7` (F326–F332) = 8.
+- Unnumbered structural: `SUMMARY` (F333, source page 16), `EXERCISES` (F334, source page 17) = 2.
+
+8 + 2 = **10**, matching the machine tally. Carry-over #6 (each class heading renders **five times** as a faux-bold overprint on pages 11–15) was respected: every class was counted **once**. The `4.2.11 Phylum – Chordata` heading physically sits on source page 9 but is 1b's by the fixed seam (1a-H deliberately left it) and is taken here.
+
+### 1b-O census — re-parsed from the Facts table itself (step 10)
+
+Re-parsing gives **8 opener rows, IDs `F335`–`F342`, contiguous, all unticked** — exactly one opener for each of the 8 content sections in the 1b half (`4.2.11` and `4.2.11.1`–`4.2.11.7`). Count derivable from that list: 1 + 7 = **8**, matching the machine tally. `SUMMARY` and `EXERCISES` are not content sections and take **no** opener row; their content is processed at 1-Z. The §4.2.11 Chordata opener (F335, source page 9, "Animals belonging to phylum Chordata are fundamentally characterised…") is the genuine first sentence of the section in the source.
+
+### Whole-chapter census after Pass 1b — re-parsed from the Facts table (step 10)
+
+The finished table now parses to **342 rows, IDs `F001`–`F342`, contiguous, 0 gaps, 0 duplicate IDs, all unticked** (Pass 2 has not started). Derivable as 1a (194) + 1b (148) = 342. Whole-chapter `Type` histogram (machine-grouped, all lowercase, **no casing split**): feature 182, heading 31, opener 27, definition 30, example 26, comparison 11, term 10, number 6, etymology 6, list 6, process 3, caption 2, exception 2 = **342**. `check_pdf.py._extract_labels` still returns **0 labels / 0 figures / no phantom `Fig #` row** — expected, because the figure-**label matrix** has not yet been written (see carry-over #8); the label harvest is owed by a resumed 1-F before Gate 1.
 
 ### `Type` controlled vocabulary (normalised lowercase, asserted at 1-Z)
 
@@ -257,6 +288,154 @@ Re-parsing gives **19 opener rows, IDs `F176`–`F194`, contiguous, all unticked
 | F192 | 4.2.8 | opener | "This is the second largest animal phylum (Figure 4.13)." | |
 | F193 | 4.2.9 | opener | "These animals have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied, Figure 4.14)." | |
 | F194 | 4.2.10 | opener | "Hemichordata was earlier considered as a sub-phylum under phylum Chordata." | |
+| F195 | 4.2.11 | definition | "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16)." | |
+| F196 | 4.2.11 | feature | "These are bilaterally symmetrical, triploblastic, coelomate with organ-system level of organisation." | |
+| F197 | 4.2.11 | feature | "They possess a post anal tail and a closed circulatory system." | |
+| F198 | 4.2.11 | feature | "Table 4.1 presents a comparison of salient features of chordates and non-chordates." | |
+| F199 | 4.2.11 | feature | "Phylum Chordata is divided into three subphyla: Urochordata or Tunicata, Cephalochordata and Vertebrata." | |
+| F200 | 4.2.11 | definition | "Subphyla Urochordata and Cephalochordata are often referred to as protochordates (Figure 4.17) and are exclusively marine." | |
+| F201 | 4.2.11 | comparison | "In Urochordata, notochord is present only in larval tail, while in Cephalochordata, it extends from head to tail region and is persistent throughout their life." | |
+| F202 | 4.2.11 | example | "Examples: Urochordata – Ascidia, Salpa, Doliolum; Cephalochordata – Branchiostoma (Amphioxus or Lancelet)." | |
+| F203 | 4.2.11 | feature | "The members of subphylum Vertebrata possess notochord during the embryonic period." | |
+| F204 | 4.2.11 | feature | "The notochord is replaced by a cartilaginous or bony vertebral column in the adult." | |
+| F205 | 4.2.11 | comparison | "Thus all vertebrates are chordates but all chordates are not vertebrates." | |
+| F206 | 4.2.11 | feature | "Besides the basic chordate characters, vertebrates have a ventral muscular heart with two, three or four chambers, kidneys for excretion and osmoregulation and paired appendages which may be fins or limbs." | |
+| F207 | 4.2.11 | caption | TABLE 4.1 title: "TABLE 4.1 Comparison of Chordates and Non-chordates" | |
+| F208 | 4.2.11 | comparison | TABLE 4.1 row 1 — Chordates: "Notochord present." / Non-chordates: "Notochord absent." | |
+| F209 | 4.2.11 | comparison | TABLE 4.1 row 2 — Chordates: "Central nervous system is dorsal, hollow and single." / Non-chordates: "Central nervous system is ventral, solid and double." | |
+| F210 | 4.2.11 | comparison | TABLE 4.1 row 3 — Chordates: "Pharynx perforated by gill slits." / Non-chordates: "Gill slits are absent." | |
+| F211 | 4.2.11 | comparison | TABLE 4.1 row 4 — Chordates: "Heart is ventral." / Non-chordates: "Heart is dorsal (if present)." | |
+| F212 | 4.2.11 | comparison | TABLE 4.1 row 5 — Chordates: "A post-anal part (tail) is present." / Non-chordates: "Post-anal tail is absent." | |
+| F213 | 4.2.11 | feature | "The subphylum Vertebrata is further divided as follows:" (lead-in to the Vertebrata classification chart, source page 11) | |
+| F214 | 4.2.11 | list | Vertebrata chart: Vertebrata is split into two divisions — "Agnatha (lacks jaw)" and "Gnathostomata (bears jaw)". | |
+| F215 | 4.2.11 | list | Vertebrata chart: Division "Agnatha (lacks jaw)" contains Class "1. Cyclostomata". | |
+| F216 | 4.2.11 | list | Vertebrata chart: Division "Gnathostomata (bears jaw)" contains two Super Classes — "Pisces (bear fins)" and "Tetrapoda (bear limbs)". | |
+| F217 | 4.2.11 | list | Vertebrata chart: Super Class "Pisces (bear fins)" contains Classes "1. Chondrichthyes" and "2. Osteichthyes". | |
+| F218 | 4.2.11 | list | Vertebrata chart: Super Class "Tetrapoda (bear limbs)" contains Classes "1. Amphibia", "2. Reptilia", "3. Aves" and "4. Mammals". | |
+| F219 | 4.2.11.1 | feature | "All living members of the class Cyclostomata are ectoparasites on some fishes." | |
+| F220 | 4.2.11.1 | number | "They have an elongated body bearing 6-15 pairs of gill slits for respiration." | |
+| F221 | 4.2.11.1 | feature | "Cyclostomes have a sucking and circular mouth without jaws (Fig. 4.18)." | |
+| F222 | 4.2.11.1 | feature | "Their body is devoid of scales and paired fins." | |
+| F223 | 4.2.11.1 | feature | "Cranium and vertebral column are cartilaginous." | |
+| F224 | 4.2.11.1 | feature | "Circulation is of closed type." | |
+| F225 | 4.2.11.1 | feature | "Cyclostomes are marine but migrate for spawning to fresh water." | |
+| F226 | 4.2.11.1 | feature | "After spawning, within a few days, they die." | |
+| F227 | 4.2.11.1 | feature | "Their larvae, after metamorphosis, return to the ocean." | |
+| F228 | 4.2.11.1 | example | "Examples: Petromyzon (Lamprey) and Myxine (Hagfish)." | |
+| F229 | 4.2.11.2 | feature | "They are marine animals with streamlined body and have cartilaginous endoskeleton (Figure 4.19)." | |
+| F230 | 4.2.11.2 | feature | "Mouth is located ventrally." | |
+| F231 | 4.2.11.2 | feature | "Notochord is persistent throughout life." | |
+| F232 | 4.2.11.2 | feature | "Gill slits are separate and without operculum (gill cover)." | |
+| F233 | 4.2.11.2 | feature | "The skin is tough, containing minute placoid scales." | |
+| F234 | 4.2.11.2 | feature | "Teeth are modified placoid scales which are backwardly directed." | |
+| F235 | 4.2.11.2 | feature | "Their jaws are very powerful." | |
+| F236 | 4.2.11.2 | feature | "These animals are predaceous." | |
+| F237 | 4.2.11.2 | feature | "Due to the absence of air bladder, they have to swim constantly to avoid sinking." | |
+| F238 | 4.2.11.2 | feature | "Heart is two-chambered (one auricle and one ventricle)." | |
+| F239 | 4.2.11.2 | example | "Some of them have electric organs (e.g., Torpedo) and some possess poison sting (e.g., Trygon)." | |
+| F240 | 4.2.11.2 | definition | "They are cold-blooded (poikilothermous) animals, i.e., they lack the capacity to regulate their body temperature." | |
+| F241 | 4.2.11.2 | feature | "Sexes are separate." | |
+| F242 | 4.2.11.2 | feature | "In males pelvic fins bear claspers." | |
+| F243 | 4.2.11.2 | feature | "They have internal fertilisation and many of them are viviparous." | |
+| F244 | 4.2.11.2 | example | "Examples: Scoliodon (Dog fish), Pristis (Saw fish), Carcharodon (Great white shark), Trygon (Sting ray)." | |
+| F245 | 4.2.11.3 | feature | "It includes both marine and fresh water fishes with bony endoskeleton." | |
+| F246 | 4.2.11.3 | feature | "Their body is streamlined." | |
+| F247 | 4.2.11.3 | feature | "Mouth is mostly terminal (Figure 4.20)." | |
+| F248 | 4.2.11.3 | number | "They have four pairs of gills which are covered by an operculum on each side." | |
+| F249 | 4.2.11.3 | feature | "Skin is covered with cycloid/ctenoid scales." | |
+| F250 | 4.2.11.3 | feature | "Air bladder is present which regulates buoyancy." | |
+| F251 | 4.2.11.3 | feature | "Heart is two-chambered (one auricle and one ventricle)." | |
+| F252 | 4.2.11.3 | feature | "They are cold-blooded animals." | |
+| F253 | 4.2.11.3 | feature | "Sexes are separate." | |
+| F254 | 4.2.11.3 | feature | "Fertilisation is usually external." | |
+| F255 | 4.2.11.3 | feature | "They are mostly oviparous and development is direct." | |
+| F256 | 4.2.11.3 | example | "Examples: Marine – Exocoetus (Flying fish), Hippocampus (Sea horse); Freshwater – Labeo (Rohu), Catla (Katla), Clarias (Magur); Aquarium – Betta (Fighting fish), Pterophyllum (Angel fish)." | |
+| F257 | 4.2.11.4 | etymology | "As the name indicates (Gr., Amphi : dual, bios, life), amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21)." | |
+| F258 | 4.2.11.4 | feature | "Most of them have two pairs of limbs." | |
+| F259 | 4.2.11.4 | feature | "Body is divisible into head and trunk." | |
+| F260 | 4.2.11.4 | feature | "Tail may be present in some." | |
+| F261 | 4.2.11.4 | feature | "The amphibian skin is moist (without scales)." | |
+| F262 | 4.2.11.4 | feature | "The eyes have eyelids." | |
+| F263 | 4.2.11.4 | feature | "A tympanum represents the ear." | |
+| F264 | 4.2.11.4 | definition | "Alimentary canal, urinary and reproductive tracts open into a common chamber called cloaca which opens to the exterior." | |
+| F265 | 4.2.11.4 | feature | "Respiration is by gills, lungs and through skin." | |
+| F266 | 4.2.11.4 | feature | "The heart is three-chambered (two auricles and one ventricle)." | |
+| F267 | 4.2.11.4 | feature | "These are cold-blooded animals." | |
+| F268 | 4.2.11.4 | feature | "Sexes are separate." | |
+| F269 | 4.2.11.4 | feature | "Fertilisation is external." | |
+| F270 | 4.2.11.4 | feature | "They are oviparous and development is indirect." | |
+| F271 | 4.2.11.4 | example | "Examples: Bufo (Toad), Rana (Frog), Hyla (Tree frog), Salamandra (Salamander), Ichthyophis (Limbless amphibia)." | |
+| F272 | 4.2.11.5 | etymology | "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl)." | |
+| F273 | 4.2.11.5 | feature | "They are mostly terrestrial animals and their body is covered by dry and cornified skin, epidermal scales or scutes (Fig. 4.22)." | |
+| F274 | 4.2.11.5 | feature | "They do not have external ear openings." | |
+| F275 | 4.2.11.5 | feature | "Tympanum represents ear." | |
+| F276 | 4.2.11.5 | feature | "Limbs, when present, are two pairs." | |
+| F277 | 4.2.11.5 | exception | "Heart is usually three-chambered, but four-chambered in crocodiles." | |
+| F278 | 4.2.11.5 | feature | "Reptiles are poikilotherms." | |
+| F279 | 4.2.11.5 | feature | "Snakes and lizards shed their scales as skin cast." | |
+| F280 | 4.2.11.5 | feature | "Sexes are separate." | |
+| F281 | 4.2.11.5 | feature | "Fertilisation is internal." | |
+| F282 | 4.2.11.5 | feature | "They are oviparous and development is direct." | |
+| F283 | 4.2.11.5 | example | "Examples: Chelone (Turtle), Testudo (Tortoise), Chameleon (Tree lizard), Calotes (Garden lizard), Crocodilus (Crocodile), Alligator (Alligator). Hemidactylus (Wall lizard), Poisonous snakes – Naja (Cobra), Bangarus (Krait), Vipera (Viper)." | |
+| F284 | 4.2.11.6 | feature | "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich)." | |
+| F285 | 4.2.11.6 | feature | "They possess beak (Figure 4.23)." | |
+| F286 | 4.2.11.6 | feature | "The forelimbs are modified into wings." | |
+| F287 | 4.2.11.6 | feature | "The hind limbs generally have scales and are modified for walking, swimming or clasping the tree branches." | |
+| F288 | 4.2.11.6 | feature | "Skin is dry without glands except the oil gland at the base of the tail." | |
+| F289 | 4.2.11.6 | feature | "Endoskeleton is fully ossified (bony) and the long bones are hollow with air cavities (pneumatic)." | |
+| F290 | 4.2.11.6 | feature | "The digestive tract of birds has additional chambers, the crop and gizzard." | |
+| F291 | 4.2.11.6 | feature | "Heart is completely four-chambered." | |
+| F292 | 4.2.11.6 | definition | "They are warm-blooded (homoiothermous) animals, i.e., they are able to maintain a constant body temperature." | |
+| F293 | 4.2.11.6 | feature | "Respiration is by lungs." | |
+| F294 | 4.2.11.6 | feature | "Air sacs connected to lungs supplement respiration." | |
+| F295 | 4.2.11.6 | feature | "Sexes are separate." | |
+| F296 | 4.2.11.6 | feature | "Fertilisation is internal." | |
+| F297 | 4.2.11.6 | feature | "They are oviparous and development is direct." | |
+| F298 | 4.2.11.6 | example | "Examples : Corvus (Crow), Columba (Pigeon), Psittacula (Parrot), Struthio (Ostrich), Pavo (Peacock), Aptenodytes (Penguin), Neophron (Vulture)." | |
+| F299 | 4.2.11.7 | feature | "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves." | |
+| F300 | 4.2.11.7 | feature | "Some of them have adapted to fly or live in water." | |
+| F301 | 4.2.11.7 | definition | "The most unique mammalian characteristic is the presence of milk producing glands (mammary glands) by which the young ones are nourished." | |
+| F302 | 4.2.11.7 | feature | "They have two pairs of limbs, adapted for walking, running, climbing, burrowing, swimming or flying (Figure 4.24)." | |
+| F303 | 4.2.11.7 | feature | "The skin of mammals is unique in possessing hair." | |
+| F304 | 4.2.11.7 | feature | "External ears or pinnae are present." | |
+| F305 | 4.2.11.7 | feature | "Different types of teeth are present in the jaw." | |
+| F306 | 4.2.11.7 | feature | "Heart is four-chambered." | |
+| F307 | 4.2.11.7 | feature | "They are homoiothermous." | |
+| F308 | 4.2.11.7 | feature | "Respiration is by lungs." | |
+| F309 | 4.2.11.7 | feature | "Sexes are separate and fertilisation is internal." | |
+| F310 | 4.2.11.7 | feature | "They are viviparous with few exceptions and development is direct." | |
+| F311 | 4.2.11.7 | example | "Examples: Oviparous-Ornithorhynchus (Platypus); Viviparous - Macropus (Kangaroo), Pteropus (Flying fox), Camelus (Camel), Macaca (Monkey), Rattus (Rat), Canis (Dog), Felis (Cat), Elephas (Elephant), Equus (Horse), Delphinus (Common dolphin), Balaenoptera (Blue whale), Panthera tigris (Tiger), Panthera leo (Lion)." | |
+| F312 | 4.2 | feature | "The salient distinguishing features of all phyla under animal kingdom is comprehensively given in the Table 4.2." | |
+| F313 | 4.2 | caption | TABLE 4.2 title: "TABLE 4.2 Salient Features of Different Phyla in the Animal Kingdom" | |
+| F314 | 4.2 | feature | TABLE 4.2 — Porifera: Level of Organisation "Cellular"; Symmetry "Various"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Absent"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Body with pores and canals in walls." | |
+| F315 | 4.2 | feature | TABLE 4.2 — Coelenterata (Cnidaria): Level of Organisation "Tissue"; Symmetry "Radial"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Cnidoblasts present." | |
+| F316 | 4.2 | feature | TABLE 4.2 — Ctenophora: Level of Organisation "Tissue"; Symmetry "Radial"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Comb plates for locomotion." | |
+| F317 | 4.2 | feature | TABLE 4.2 — Platyhelminthes: Level of Organisation "Organ & Organ-system"; Symmetry "Bilateral"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Flat body, suckers." | |
+| F318 | 4.2 | feature | TABLE 4.2 — Aschelminthes: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Pseudocoelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Often worm-shaped, elongated." | |
+| F319 | 4.2 | feature | TABLE 4.2 — Annelida: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Absent"; Distinctive Features "Body segmentation like rings." | |
+| F320 | 4.2 | feature | TABLE 4.2 — Arthropoda: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Exoskeleton of cuticle, jointed appendages." | |
+| F321 | 4.2 | feature | TABLE 4.2 — Mollusca: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "External skeleton of shell usually present." | |
+| F322 | 4.2 | feature | TABLE 4.2 — Echinodermata: Level of Organisation "Organ-system"; Symmetry "Radial"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Water vascular system, radial symmetry." | |
+| F323 | 4.2 | feature | TABLE 4.2 — Hemichordata: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Worm-like with proboscis, collar and trunk." | |
+| F324 | 4.2 | feature | TABLE 4.2 — Chordata: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Notochord, dorsal hollow nerve cord, gill slits with limbs or fins." | |
+| F325 | 4.2.11 | heading | "4.2.11 Phylum – Chordata" | |
+| F326 | 4.2.11.1 | heading | "4.2.11.1 Class – Cyclostomata" | |
+| F327 | 4.2.11.2 | heading | "4.2.11.2 Class – Chondrichthyes" | |
+| F328 | 4.2.11.3 | heading | "4.2.11.3 Class – Osteichthyes" | |
+| F329 | 4.2.11.4 | heading | "4.2.11.4 Class – Amphibia" | |
+| F330 | 4.2.11.5 | heading | "4.2.11.5 Class – Reptilia" | |
+| F331 | 4.2.11.6 | heading | "4.2.11.6 Class – Aves" | |
+| F332 | 4.2.11.7 | heading | "4.2.11.7 Class – Mammalia" | |
+| F333 | SUMMARY | heading | "SUMMARY" (unnumbered structural heading, source page 16) | |
+| F334 | EXERCISES | heading | "EXERCISES" (unnumbered structural heading, source page 17) | |
+| F335 | 4.2.11 | opener | "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16)." | |
+| F336 | 4.2.11.1 | opener | "All living members of the class Cyclostomata are ectoparasites on some fishes." | |
+| F337 | 4.2.11.2 | opener | "They are marine animals with streamlined body and have cartilaginous endoskeleton (Figure 4.19)." | |
+| F338 | 4.2.11.3 | opener | "It includes both marine and fresh water fishes with bony endoskeleton." | |
+| F339 | 4.2.11.4 | opener | "As the name indicates (Gr., Amphi : dual, bios, life), amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21)." | |
+| F340 | 4.2.11.5 | opener | "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl)." | |
+| F341 | 4.2.11.6 | opener | "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich)." | |
+| F342 | 4.2.11.7 | opener | "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves." | |
 
 ## Summary classification
 | Summary sentence | Classification | Folded into |
@@ -305,5 +484,6 @@ Re-parsing gives **19 opener rows, IDs `F176`–`F194`, contiguous, all unticked
 3. `Ch4_figure_audit.md` and `extract_figures.py` in this folder are from the same untrusted arc, as was the old tracker — now archived as `Ch4_prior_TRACKER_UNTRUSTED.md` and replaced by a rewritten `Ch4_AnimalKingdom_TRACKER.md` that records Gate 1 as OPEN. `extract_figures.py` may be reused as a *starting point* for 1-F rectangles only after the 440 dpi / 5 pt gridline standard (§3) is applied and each rectangle re-inspected.
 4. The archived file records one asset `fig_vertebrata_chart.png` as a "bonus un-numbered" chart. §3 step 1 item 4 says **unnumbered plates are real figures**, not bonuses — 1-F must census from page images and decide its status properly (it is the "The subphylum Vertebrata is further divided as follows:" chart on source page 11, i.e. 1b territory).
 5. **[DISCHARGED by 1a-O]** Source page 5 extracts out of reading order: the §4.2.2 heading and its opening sentence sit at the *bottom* of the text stream while the continuation prose sits at the top. 1a-O took the §4.2.2 opener (F186, "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals…") from the layout, not the raw text order, so the correct opening sentence was captured.
-6. Source pages 11–15 render each class heading **five times** in the text layer (e.g. `4.2.11.1` × 5) — a faux-bold overprint, not five headings. 1b-H must not count duplicates.
-7. TABLE 4.2 (source page 15) extracts **column-major**: all "Level of Organisation" values, then all "Symmetry" values, etc., with the phylum names last. 1b must reassemble it by column position, and check the alignment against the per-phylum prose in 1a's rows.
+6. **[DISCHARGED by 1b-H]** Source pages 11–15 render each class heading **five times** in the text layer (e.g. `4.2.11.1` × 5) — a faux-bold overprint, not five headings. 1b-H counted each of the seven class headings exactly once (F326–F332); no duplicate was taken.
+7. **[DISCHARGED by 1b-S]** TABLE 4.2 (source page 15) extracts **column-major**: all "Level of Organisation" values, then all "Symmetry" values, etc., with the phylum names last. 1b-S reassembled it by column position into 11 per-phylum rows (F314–F324) and cross-checked every value against 1a's per-phylum prose (F035–F154); see the 1b-S census "Seam cross-check" note for the two places the source table is verbatim terser than its prose (Porifera "Various", Echinodermata "Radial") — preserved as source wording, not defects.
+8. **[OPEN — owed by a resumed 1-F before Gate 1]** The **figure-label matrix does not exist** in this inventory. Session 1-F built the 26-row figure **manifest** (captions/pages/mono/verified) but never harvested a single in-figure label into a `Type: caption` Facts row beginning `Figure labels:`, so `check_pdf.py._extract_labels` returns **0 labels / 0 figures**. §3 Step 1 requires the label matrix, harvested **by opening each rendered asset** (never by text extraction), and Gate 1's checklist requires it to be machine-validated with no doubling and no phantom `Fig #` row. This is a **1-F deliverable, not a Pass 1b one** — Pass 1b is the prose sweeps — but it blocks Gate 1 and must be completed before the freeze. Note that the Vertebrata chart's hierarchy (Agnatha/Gnathostomata → Pisces/Tetrapoda → the classes) is already carried in running text as body facts F213–F218, so those labels will satisfy check 6 once the matrix row for `fig_vertebrata_chart.png` is added.
