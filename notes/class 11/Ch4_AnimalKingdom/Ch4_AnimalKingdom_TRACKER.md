@@ -150,12 +150,56 @@ Full list lives in the inventory's `## Carry-over list` (10 items). The ones tha
 
 ---
 
+## 7a. What session Pass 2a produced (2026-09-03)
+
+First half of the notes script — the non-chordate arc — built into the single deliverable
+`Ch4_AnimalKingdom.py`, which renders `Ch4_AnimalKingdom.pdf` (**12 pages so far, 3021 KB**).
+
+- **Scope written (1a half):** title block; §4.0 opener; §4.1 + §4.1.1–§4.1.6 (levels of
+  organisation, symmetry, diploblastic/triploblastic, coelom, segmentation, notochord);
+  §4.2 opener with the Figure 4.4 classification chart described in prose; and all ten
+  non-chordate phyla §4.2.1–§4.2.10 (Porifera → Hemichordata), each with its example list.
+- **Figures placed (15 of 26):** 4.1(a), 4.1(b), 4.2ab, 4.3abc, 4.4, 4.5abc, 4.6ab, 4.7,
+  4.8, 4.9ab, 4.10, 4.11ab, 4.12abcd, 4.13ab, 4.14ab, 4.15 — every 1a asset, each with its
+  verbatim NCERT caption. Remaining 11 assets (4.16–4.24 + `fig_vertebrata_chart.png`) are 1b.
+- **Rows ticked: 200** — `F001`–`F194` (all prose/heading/opener rows of the 1a half), the
+  five 1a figure-label rows `F343`–`F347`, and the one 1a summary fold `F350` (Porifera
+  "flagellated choanocytes", woven into §4.2.1). Inventory now 200/352 ticked, 152 unticked
+  (all `F195`+, the 1b half). No 1b row was pre-ticked; nothing was back-dated into the freeze.
+- **Label coverage engineered in:** the §4.2 prose deliberately spells the Fig 4.4 chart terms
+  verbatim (Kingdom / Levels of Organisation / Symmetry / Body Cavity or Coelom / acoelomates /
+  pseudocoelomates / coelomates / every phylum leaf) so check 6 clears all 1a labels.
+
+### Pass 2a mid-build lint (`check_pdf.py`, whole PDF) — the expected healthy signature
+
+Ran `python check_pdf.py "notes/class 11/Ch4_AnimalKingdom"`. **All nine mechanical/1a checks PASS**;
+the only two FAILs are 100% 1b territory and clear when 2b lands:
+
+| Check | Result |
+| :--- | :--- |
+| 1 Footer/header band | ✅ PASS — content fills the frame only |
+| 2 Legibility floor | ✅ PASS — smallest text 6.0pt (floor 5.0) |
+| 3 Grayscale-only images | ✅ PASS — all 16 embedded images monochrome |
+| 4 No person photograph | ✅ PASS |
+| 5 Banned glyphs | ✅ PASS — no arrows/sub-super/Greek/emoji |
+| 6 Figure-label coverage | ⛔ FAIL — 42/56 in text; **all 13 missing are §4.2.11** (F348 Chordata + F349 Vertebrata chart) whose figures/text are 2b |
+| 7 Inventory fully ticked | ⛔ FAIL — 152/352 unticked, **exactly `F195`+** (the entire 1b half) |
+| 8 Page geometry | ✅ PASS — all 12 pages A4 portrait (595×842pt) |
+| 9 Orphaned headings | ✅ PASS — 38 banner headings, none stranded |
+| 10 Badge-plate collision | ✅ PASS — 46 filled plates all clear |
+
+Neither FAIL is a defect in the 1a build: both are simply "1b not written yet". Gate 2 is
+judged on the whole merged PDF **after 2b**, per v6 §7. No mechanical regression exists in 1a.
+
+---
+
 ## 8. Gate ledger
 
 | Pass | Scope | Status |
 | :--- | :--- | :--- |
 | **Pass 1** | Source mastery & frozen inventory | **✅ COMPLETE — all nine sessions done; inventory FROZEN at 352 rows. GATE 1 CLOSED (GREEN).** |
-| Pass 2 | Script + PDF build (`check_pdf.py` green) | ⬜ not started — now unblocked (Gate 1 closed) |
-| Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — blocked on Gate 2 |
+| **Pass 2a** | Script + PDF build, **first half** (non-chordates, Figs 4.1–4.15) | **✅ DONE (2026-09-03) — 200/352 rows ticked (`F001`–`F194`, `F343`–`F347`, `F350`); PDF 12 pp; all 9 mechanical/1a lint checks green.** |
+| Pass 2b | Script + PDF build, **second half** (Chordata + 7 classes, TABLE 4.1/4.2, summary, `check_pdf.py` fully green) | ⬜ not started — appends at the `### PASS 2b CONTINUES HERE ###` seam; must tick `F195`+ and clear checks 6 & 7 |
+| Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — blocked on Gate 2b |
 
 **GATE 1 VERDICT: CLOSED (GREEN), 2026-09-03.** All nine Pass-1 sessions ran (1a-S, 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F, 1-F resumed, 1-Z) and 1-Z froze the inventory over the whole chapter at **352 rows (F001–F352, contiguous, 0 gaps/dupes)**, machine-validated. **Gate 1 closed is NOT chapter closed:** Pass 2 (script + PDF) has not started and every row is unticked, so Chapter 4 stays out of any "Done" tally until Pass 3 delivers a defect-free PDF.
