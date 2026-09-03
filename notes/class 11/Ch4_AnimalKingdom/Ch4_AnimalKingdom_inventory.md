@@ -299,164 +299,164 @@ Re-parsing the **frozen** table with the machine (`scratch/ch4_gate1/validate_1z
 | F192 | 4.2.8 | opener | "This is the second largest animal phylum (Figure 4.13)." | x |
 | F193 | 4.2.9 | opener | "These animals have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied, Figure 4.14)." | x |
 | F194 | 4.2.10 | opener | "Hemichordata was earlier considered as a sub-phylum under phylum Chordata." | x |
-| F195 | 4.2.11 | definition | "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16)." | |
-| F196 | 4.2.11 | feature | "These are bilaterally symmetrical, triploblastic, coelomate with organ-system level of organisation." | |
-| F197 | 4.2.11 | feature | "They possess a post anal tail and a closed circulatory system." | |
-| F198 | 4.2.11 | feature | "Table 4.1 presents a comparison of salient features of chordates and non-chordates." | |
-| F199 | 4.2.11 | feature | "Phylum Chordata is divided into three subphyla: Urochordata or Tunicata, Cephalochordata and Vertebrata." | |
-| F200 | 4.2.11 | definition | "Subphyla Urochordata and Cephalochordata are often referred to as protochordates (Figure 4.17) and are exclusively marine." | |
-| F201 | 4.2.11 | comparison | "In Urochordata, notochord is present only in larval tail, while in Cephalochordata, it extends from head to tail region and is persistent throughout their life." | |
-| F202 | 4.2.11 | example | "Examples: Urochordata – Ascidia, Salpa, Doliolum; Cephalochordata – Branchiostoma (Amphioxus or Lancelet)." | |
-| F203 | 4.2.11 | feature | "The members of subphylum Vertebrata possess notochord during the embryonic period." | |
-| F204 | 4.2.11 | feature | "The notochord is replaced by a cartilaginous or bony vertebral column in the adult." | |
-| F205 | 4.2.11 | comparison | "Thus all vertebrates are chordates but all chordates are not vertebrates." | |
-| F206 | 4.2.11 | feature | "Besides the basic chordate characters, vertebrates have a ventral muscular heart with two, three or four chambers, kidneys for excretion and osmoregulation and paired appendages which may be fins or limbs." | |
-| F207 | 4.2.11 | caption | TABLE 4.1 title: "TABLE 4.1 Comparison of Chordates and Non-chordates" | |
-| F208 | 4.2.11 | comparison | TABLE 4.1 row 1 — Chordates: "Notochord present." / Non-chordates: "Notochord absent." | |
-| F209 | 4.2.11 | comparison | TABLE 4.1 row 2 — Chordates: "Central nervous system is dorsal, hollow and single." / Non-chordates: "Central nervous system is ventral, solid and double." | |
-| F210 | 4.2.11 | comparison | TABLE 4.1 row 3 — Chordates: "Pharynx perforated by gill slits." / Non-chordates: "Gill slits are absent." | |
-| F211 | 4.2.11 | comparison | TABLE 4.1 row 4 — Chordates: "Heart is ventral." / Non-chordates: "Heart is dorsal (if present)." | |
-| F212 | 4.2.11 | comparison | TABLE 4.1 row 5 — Chordates: "A post-anal part (tail) is present." / Non-chordates: "Post-anal tail is absent." | |
-| F213 | 4.2.11 | feature | "The subphylum Vertebrata is further divided as follows:" (lead-in to the Vertebrata classification chart, source page 11) | |
-| F214 | 4.2.11 | list | Vertebrata chart: Vertebrata is split into two divisions — "Agnatha (lacks jaw)" and "Gnathostomata (bears jaw)". | |
-| F215 | 4.2.11 | list | Vertebrata chart: Division "Agnatha (lacks jaw)" contains Class "1. Cyclostomata". | |
-| F216 | 4.2.11 | list | Vertebrata chart: Division "Gnathostomata (bears jaw)" contains two Super Classes — "Pisces (bear fins)" and "Tetrapoda (bear limbs)". | |
-| F217 | 4.2.11 | list | Vertebrata chart: Super Class "Pisces (bear fins)" contains Classes "1. Chondrichthyes" and "2. Osteichthyes". | |
-| F218 | 4.2.11 | list | Vertebrata chart: Super Class "Tetrapoda (bear limbs)" contains Classes "1. Amphibia", "2. Reptilia", "3. Aves" and "4. Mammals". | |
-| F219 | 4.2.11.1 | feature | "All living members of the class Cyclostomata are ectoparasites on some fishes." | |
-| F220 | 4.2.11.1 | number | "They have an elongated body bearing 6-15 pairs of gill slits for respiration." | |
-| F221 | 4.2.11.1 | feature | "Cyclostomes have a sucking and circular mouth without jaws (Fig. 4.18)." | |
-| F222 | 4.2.11.1 | feature | "Their body is devoid of scales and paired fins." | |
-| F223 | 4.2.11.1 | feature | "Cranium and vertebral column are cartilaginous." | |
-| F224 | 4.2.11.1 | feature | "Circulation is of closed type." | |
-| F225 | 4.2.11.1 | feature | "Cyclostomes are marine but migrate for spawning to fresh water." | |
-| F226 | 4.2.11.1 | feature | "After spawning, within a few days, they die." | |
-| F227 | 4.2.11.1 | feature | "Their larvae, after metamorphosis, return to the ocean." | |
-| F228 | 4.2.11.1 | example | "Examples: Petromyzon (Lamprey) and Myxine (Hagfish)." | |
-| F229 | 4.2.11.2 | feature | "They are marine animals with streamlined body and have cartilaginous endoskeleton (Figure 4.19)." | |
-| F230 | 4.2.11.2 | feature | "Mouth is located ventrally." | |
-| F231 | 4.2.11.2 | feature | "Notochord is persistent throughout life." | |
-| F232 | 4.2.11.2 | feature | "Gill slits are separate and without operculum (gill cover)." | |
-| F233 | 4.2.11.2 | feature | "The skin is tough, containing minute placoid scales." | |
-| F234 | 4.2.11.2 | feature | "Teeth are modified placoid scales which are backwardly directed." | |
-| F235 | 4.2.11.2 | feature | "Their jaws are very powerful." | |
-| F236 | 4.2.11.2 | feature | "These animals are predaceous." | |
-| F237 | 4.2.11.2 | feature | "Due to the absence of air bladder, they have to swim constantly to avoid sinking." | |
-| F238 | 4.2.11.2 | feature | "Heart is two-chambered (one auricle and one ventricle)." | |
-| F239 | 4.2.11.2 | example | "Some of them have electric organs (e.g., Torpedo) and some possess poison sting (e.g., Trygon)." | |
-| F240 | 4.2.11.2 | definition | "They are cold-blooded (poikilothermous) animals, i.e., they lack the capacity to regulate their body temperature." | |
-| F241 | 4.2.11.2 | feature | "Sexes are separate." | |
-| F242 | 4.2.11.2 | feature | "In males pelvic fins bear claspers." | |
-| F243 | 4.2.11.2 | feature | "They have internal fertilisation and many of them are viviparous." | |
-| F244 | 4.2.11.2 | example | "Examples: Scoliodon (Dog fish), Pristis (Saw fish), Carcharodon (Great white shark), Trygon (Sting ray)." | |
-| F245 | 4.2.11.3 | feature | "It includes both marine and fresh water fishes with bony endoskeleton." | |
-| F246 | 4.2.11.3 | feature | "Their body is streamlined." | |
-| F247 | 4.2.11.3 | feature | "Mouth is mostly terminal (Figure 4.20)." | |
-| F248 | 4.2.11.3 | number | "They have four pairs of gills which are covered by an operculum on each side." | |
-| F249 | 4.2.11.3 | feature | "Skin is covered with cycloid/ctenoid scales." | |
-| F250 | 4.2.11.3 | feature | "Air bladder is present which regulates buoyancy." | |
-| F251 | 4.2.11.3 | feature | "Heart is two-chambered (one auricle and one ventricle)." | |
-| F252 | 4.2.11.3 | feature | "They are cold-blooded animals." | |
-| F253 | 4.2.11.3 | feature | "Sexes are separate." | |
-| F254 | 4.2.11.3 | feature | "Fertilisation is usually external." | |
-| F255 | 4.2.11.3 | feature | "They are mostly oviparous and development is direct." | |
-| F256 | 4.2.11.3 | example | "Examples: Marine – Exocoetus (Flying fish), Hippocampus (Sea horse); Freshwater – Labeo (Rohu), Catla (Katla), Clarias (Magur); Aquarium – Betta (Fighting fish), Pterophyllum (Angel fish)." | |
-| F257 | 4.2.11.4 | etymology | "As the name indicates (Gr., Amphi : dual, bios, life), amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21)." | |
-| F258 | 4.2.11.4 | feature | "Most of them have two pairs of limbs." | |
-| F259 | 4.2.11.4 | feature | "Body is divisible into head and trunk." | |
-| F260 | 4.2.11.4 | feature | "Tail may be present in some." | |
-| F261 | 4.2.11.4 | feature | "The amphibian skin is moist (without scales)." | |
-| F262 | 4.2.11.4 | feature | "The eyes have eyelids." | |
-| F263 | 4.2.11.4 | feature | "A tympanum represents the ear." | |
-| F264 | 4.2.11.4 | definition | "Alimentary canal, urinary and reproductive tracts open into a common chamber called cloaca which opens to the exterior." | |
-| F265 | 4.2.11.4 | feature | "Respiration is by gills, lungs and through skin." | |
-| F266 | 4.2.11.4 | feature | "The heart is three-chambered (two auricles and one ventricle)." | |
-| F267 | 4.2.11.4 | feature | "These are cold-blooded animals." | |
-| F268 | 4.2.11.4 | feature | "Sexes are separate." | |
-| F269 | 4.2.11.4 | feature | "Fertilisation is external." | |
-| F270 | 4.2.11.4 | feature | "They are oviparous and development is indirect." | |
-| F271 | 4.2.11.4 | example | "Examples: Bufo (Toad), Rana (Frog), Hyla (Tree frog), Salamandra (Salamander), Ichthyophis (Limbless amphibia)." | |
-| F272 | 4.2.11.5 | etymology | "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl)." | |
-| F273 | 4.2.11.5 | feature | "They are mostly terrestrial animals and their body is covered by dry and cornified skin, epidermal scales or scutes (Fig. 4.22)." | |
-| F274 | 4.2.11.5 | feature | "They do not have external ear openings." | |
-| F275 | 4.2.11.5 | feature | "Tympanum represents ear." | |
-| F276 | 4.2.11.5 | feature | "Limbs, when present, are two pairs." | |
-| F277 | 4.2.11.5 | exception | "Heart is usually three-chambered, but four-chambered in crocodiles." | |
-| F278 | 4.2.11.5 | feature | "Reptiles are poikilotherms." | |
-| F279 | 4.2.11.5 | feature | "Snakes and lizards shed their scales as skin cast." | |
-| F280 | 4.2.11.5 | feature | "Sexes are separate." | |
-| F281 | 4.2.11.5 | feature | "Fertilisation is internal." | |
-| F282 | 4.2.11.5 | feature | "They are oviparous and development is direct." | |
-| F283 | 4.2.11.5 | example | "Examples: Chelone (Turtle), Testudo (Tortoise), Chameleon (Tree lizard), Calotes (Garden lizard), Crocodilus (Crocodile), Alligator (Alligator). Hemidactylus (Wall lizard), Poisonous snakes – Naja (Cobra), Bangarus (Krait), Vipera (Viper)." | |
-| F284 | 4.2.11.6 | feature | "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich)." | |
-| F285 | 4.2.11.6 | feature | "They possess beak (Figure 4.23)." | |
-| F286 | 4.2.11.6 | feature | "The forelimbs are modified into wings." | |
-| F287 | 4.2.11.6 | feature | "The hind limbs generally have scales and are modified for walking, swimming or clasping the tree branches." | |
-| F288 | 4.2.11.6 | feature | "Skin is dry without glands except the oil gland at the base of the tail." | |
-| F289 | 4.2.11.6 | feature | "Endoskeleton is fully ossified (bony) and the long bones are hollow with air cavities (pneumatic)." | |
-| F290 | 4.2.11.6 | feature | "The digestive tract of birds has additional chambers, the crop and gizzard." | |
-| F291 | 4.2.11.6 | feature | "Heart is completely four-chambered." | |
-| F292 | 4.2.11.6 | definition | "They are warm-blooded (homoiothermous) animals, i.e., they are able to maintain a constant body temperature." | |
-| F293 | 4.2.11.6 | feature | "Respiration is by lungs." | |
-| F294 | 4.2.11.6 | feature | "Air sacs connected to lungs supplement respiration." | |
-| F295 | 4.2.11.6 | feature | "Sexes are separate." | |
-| F296 | 4.2.11.6 | feature | "Fertilisation is internal." | |
-| F297 | 4.2.11.6 | feature | "They are oviparous and development is direct." | |
-| F298 | 4.2.11.6 | example | "Examples : Corvus (Crow), Columba (Pigeon), Psittacula (Parrot), Struthio (Ostrich), Pavo (Peacock), Aptenodytes (Penguin), Neophron (Vulture)." | |
-| F299 | 4.2.11.7 | feature | "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves." | |
-| F300 | 4.2.11.7 | feature | "Some of them have adapted to fly or live in water." | |
-| F301 | 4.2.11.7 | definition | "The most unique mammalian characteristic is the presence of milk producing glands (mammary glands) by which the young ones are nourished." | |
-| F302 | 4.2.11.7 | feature | "They have two pairs of limbs, adapted for walking, running, climbing, burrowing, swimming or flying (Figure 4.24)." | |
-| F303 | 4.2.11.7 | feature | "The skin of mammals is unique in possessing hair." | |
-| F304 | 4.2.11.7 | feature | "External ears or pinnae are present." | |
-| F305 | 4.2.11.7 | feature | "Different types of teeth are present in the jaw." | |
-| F306 | 4.2.11.7 | feature | "Heart is four-chambered." | |
-| F307 | 4.2.11.7 | feature | "They are homoiothermous." | |
-| F308 | 4.2.11.7 | feature | "Respiration is by lungs." | |
-| F309 | 4.2.11.7 | feature | "Sexes are separate and fertilisation is internal." | |
-| F310 | 4.2.11.7 | feature | "They are viviparous with few exceptions and development is direct." | |
-| F311 | 4.2.11.7 | example | "Examples: Oviparous-Ornithorhynchus (Platypus); Viviparous - Macropus (Kangaroo), Pteropus (Flying fox), Camelus (Camel), Macaca (Monkey), Rattus (Rat), Canis (Dog), Felis (Cat), Elephas (Elephant), Equus (Horse), Delphinus (Common dolphin), Balaenoptera (Blue whale), Panthera tigris (Tiger), Panthera leo (Lion)." | |
-| F312 | 4.2 | feature | "The salient distinguishing features of all phyla under animal kingdom is comprehensively given in the Table 4.2." | |
-| F313 | 4.2 | caption | TABLE 4.2 title: "TABLE 4.2 Salient Features of Different Phyla in the Animal Kingdom" | |
-| F314 | 4.2 | feature | TABLE 4.2 — Porifera: Level of Organisation "Cellular"; Symmetry "Various"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Absent"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Body with pores and canals in walls." | |
-| F315 | 4.2 | feature | TABLE 4.2 — Coelenterata (Cnidaria): Level of Organisation "Tissue"; Symmetry "Radial"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Cnidoblasts present." | |
-| F316 | 4.2 | feature | TABLE 4.2 — Ctenophora: Level of Organisation "Tissue"; Symmetry "Radial"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Comb plates for locomotion." | |
-| F317 | 4.2 | feature | TABLE 4.2 — Platyhelminthes: Level of Organisation "Organ & Organ-system"; Symmetry "Bilateral"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Flat body, suckers." | |
-| F318 | 4.2 | feature | TABLE 4.2 — Aschelminthes: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Pseudocoelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Often worm-shaped, elongated." | |
-| F319 | 4.2 | feature | TABLE 4.2 — Annelida: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Absent"; Distinctive Features "Body segmentation like rings." | |
-| F320 | 4.2 | feature | TABLE 4.2 — Arthropoda: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Exoskeleton of cuticle, jointed appendages." | |
-| F321 | 4.2 | feature | TABLE 4.2 — Mollusca: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "External skeleton of shell usually present." | |
-| F322 | 4.2 | feature | TABLE 4.2 — Echinodermata: Level of Organisation "Organ-system"; Symmetry "Radial"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Water vascular system, radial symmetry." | |
-| F323 | 4.2 | feature | TABLE 4.2 — Hemichordata: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Worm-like with proboscis, collar and trunk." | |
-| F324 | 4.2 | feature | TABLE 4.2 — Chordata: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Notochord, dorsal hollow nerve cord, gill slits with limbs or fins." | |
-| F325 | 4.2.11 | heading | "4.2.11 Phylum – Chordata" | |
-| F326 | 4.2.11.1 | heading | "4.2.11.1 Class – Cyclostomata" | |
-| F327 | 4.2.11.2 | heading | "4.2.11.2 Class – Chondrichthyes" | |
-| F328 | 4.2.11.3 | heading | "4.2.11.3 Class – Osteichthyes" | |
-| F329 | 4.2.11.4 | heading | "4.2.11.4 Class – Amphibia" | |
-| F330 | 4.2.11.5 | heading | "4.2.11.5 Class – Reptilia" | |
-| F331 | 4.2.11.6 | heading | "4.2.11.6 Class – Aves" | |
-| F332 | 4.2.11.7 | heading | "4.2.11.7 Class – Mammalia" | |
-| F333 | SUMMARY | heading | "SUMMARY" (unnumbered structural heading, source page 16) | |
-| F334 | EXERCISES | heading | "EXERCISES" (unnumbered structural heading, source page 17) | |
-| F335 | 4.2.11 | opener | "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16)." | |
-| F336 | 4.2.11.1 | opener | "All living members of the class Cyclostomata are ectoparasites on some fishes." | |
-| F337 | 4.2.11.2 | opener | "They are marine animals with streamlined body and have cartilaginous endoskeleton (Figure 4.19)." | |
-| F338 | 4.2.11.3 | opener | "It includes both marine and fresh water fishes with bony endoskeleton." | |
-| F339 | 4.2.11.4 | opener | "As the name indicates (Gr., Amphi : dual, bios, life), amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21)." | |
-| F340 | 4.2.11.5 | opener | "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl)." | |
-| F341 | 4.2.11.6 | opener | "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich)." | |
-| F342 | 4.2.11.7 | opener | "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves." | |
+| F195 | 4.2.11 | definition | "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16)." | x |
+| F196 | 4.2.11 | feature | "These are bilaterally symmetrical, triploblastic, coelomate with organ-system level of organisation." | x |
+| F197 | 4.2.11 | feature | "They possess a post anal tail and a closed circulatory system." | x |
+| F198 | 4.2.11 | feature | "Table 4.1 presents a comparison of salient features of chordates and non-chordates." | x |
+| F199 | 4.2.11 | feature | "Phylum Chordata is divided into three subphyla: Urochordata or Tunicata, Cephalochordata and Vertebrata." | x |
+| F200 | 4.2.11 | definition | "Subphyla Urochordata and Cephalochordata are often referred to as protochordates (Figure 4.17) and are exclusively marine." | x |
+| F201 | 4.2.11 | comparison | "In Urochordata, notochord is present only in larval tail, while in Cephalochordata, it extends from head to tail region and is persistent throughout their life." | x |
+| F202 | 4.2.11 | example | "Examples: Urochordata – Ascidia, Salpa, Doliolum; Cephalochordata – Branchiostoma (Amphioxus or Lancelet)." | x |
+| F203 | 4.2.11 | feature | "The members of subphylum Vertebrata possess notochord during the embryonic period." | x |
+| F204 | 4.2.11 | feature | "The notochord is replaced by a cartilaginous or bony vertebral column in the adult." | x |
+| F205 | 4.2.11 | comparison | "Thus all vertebrates are chordates but all chordates are not vertebrates." | x |
+| F206 | 4.2.11 | feature | "Besides the basic chordate characters, vertebrates have a ventral muscular heart with two, three or four chambers, kidneys for excretion and osmoregulation and paired appendages which may be fins or limbs." | x |
+| F207 | 4.2.11 | caption | TABLE 4.1 title: "TABLE 4.1 Comparison of Chordates and Non-chordates" | x |
+| F208 | 4.2.11 | comparison | TABLE 4.1 row 1 — Chordates: "Notochord present." / Non-chordates: "Notochord absent." | x |
+| F209 | 4.2.11 | comparison | TABLE 4.1 row 2 — Chordates: "Central nervous system is dorsal, hollow and single." / Non-chordates: "Central nervous system is ventral, solid and double." | x |
+| F210 | 4.2.11 | comparison | TABLE 4.1 row 3 — Chordates: "Pharynx perforated by gill slits." / Non-chordates: "Gill slits are absent." | x |
+| F211 | 4.2.11 | comparison | TABLE 4.1 row 4 — Chordates: "Heart is ventral." / Non-chordates: "Heart is dorsal (if present)." | x |
+| F212 | 4.2.11 | comparison | TABLE 4.1 row 5 — Chordates: "A post-anal part (tail) is present." / Non-chordates: "Post-anal tail is absent." | x |
+| F213 | 4.2.11 | feature | "The subphylum Vertebrata is further divided as follows:" (lead-in to the Vertebrata classification chart, source page 11) | x |
+| F214 | 4.2.11 | list | Vertebrata chart: Vertebrata is split into two divisions — "Agnatha (lacks jaw)" and "Gnathostomata (bears jaw)". | x |
+| F215 | 4.2.11 | list | Vertebrata chart: Division "Agnatha (lacks jaw)" contains Class "1. Cyclostomata". | x |
+| F216 | 4.2.11 | list | Vertebrata chart: Division "Gnathostomata (bears jaw)" contains two Super Classes — "Pisces (bear fins)" and "Tetrapoda (bear limbs)". | x |
+| F217 | 4.2.11 | list | Vertebrata chart: Super Class "Pisces (bear fins)" contains Classes "1. Chondrichthyes" and "2. Osteichthyes". | x |
+| F218 | 4.2.11 | list | Vertebrata chart: Super Class "Tetrapoda (bear limbs)" contains Classes "1. Amphibia", "2. Reptilia", "3. Aves" and "4. Mammals". | x |
+| F219 | 4.2.11.1 | feature | "All living members of the class Cyclostomata are ectoparasites on some fishes." | x |
+| F220 | 4.2.11.1 | number | "They have an elongated body bearing 6-15 pairs of gill slits for respiration." | x |
+| F221 | 4.2.11.1 | feature | "Cyclostomes have a sucking and circular mouth without jaws (Fig. 4.18)." | x |
+| F222 | 4.2.11.1 | feature | "Their body is devoid of scales and paired fins." | x |
+| F223 | 4.2.11.1 | feature | "Cranium and vertebral column are cartilaginous." | x |
+| F224 | 4.2.11.1 | feature | "Circulation is of closed type." | x |
+| F225 | 4.2.11.1 | feature | "Cyclostomes are marine but migrate for spawning to fresh water." | x |
+| F226 | 4.2.11.1 | feature | "After spawning, within a few days, they die." | x |
+| F227 | 4.2.11.1 | feature | "Their larvae, after metamorphosis, return to the ocean." | x |
+| F228 | 4.2.11.1 | example | "Examples: Petromyzon (Lamprey) and Myxine (Hagfish)." | x |
+| F229 | 4.2.11.2 | feature | "They are marine animals with streamlined body and have cartilaginous endoskeleton (Figure 4.19)." | x |
+| F230 | 4.2.11.2 | feature | "Mouth is located ventrally." | x |
+| F231 | 4.2.11.2 | feature | "Notochord is persistent throughout life." | x |
+| F232 | 4.2.11.2 | feature | "Gill slits are separate and without operculum (gill cover)." | x |
+| F233 | 4.2.11.2 | feature | "The skin is tough, containing minute placoid scales." | x |
+| F234 | 4.2.11.2 | feature | "Teeth are modified placoid scales which are backwardly directed." | x |
+| F235 | 4.2.11.2 | feature | "Their jaws are very powerful." | x |
+| F236 | 4.2.11.2 | feature | "These animals are predaceous." | x |
+| F237 | 4.2.11.2 | feature | "Due to the absence of air bladder, they have to swim constantly to avoid sinking." | x |
+| F238 | 4.2.11.2 | feature | "Heart is two-chambered (one auricle and one ventricle)." | x |
+| F239 | 4.2.11.2 | example | "Some of them have electric organs (e.g., Torpedo) and some possess poison sting (e.g., Trygon)." | x |
+| F240 | 4.2.11.2 | definition | "They are cold-blooded (poikilothermous) animals, i.e., they lack the capacity to regulate their body temperature." | x |
+| F241 | 4.2.11.2 | feature | "Sexes are separate." | x |
+| F242 | 4.2.11.2 | feature | "In males pelvic fins bear claspers." | x |
+| F243 | 4.2.11.2 | feature | "They have internal fertilisation and many of them are viviparous." | x |
+| F244 | 4.2.11.2 | example | "Examples: Scoliodon (Dog fish), Pristis (Saw fish), Carcharodon (Great white shark), Trygon (Sting ray)." | x |
+| F245 | 4.2.11.3 | feature | "It includes both marine and fresh water fishes with bony endoskeleton." | x |
+| F246 | 4.2.11.3 | feature | "Their body is streamlined." | x |
+| F247 | 4.2.11.3 | feature | "Mouth is mostly terminal (Figure 4.20)." | x |
+| F248 | 4.2.11.3 | number | "They have four pairs of gills which are covered by an operculum on each side." | x |
+| F249 | 4.2.11.3 | feature | "Skin is covered with cycloid/ctenoid scales." | x |
+| F250 | 4.2.11.3 | feature | "Air bladder is present which regulates buoyancy." | x |
+| F251 | 4.2.11.3 | feature | "Heart is two-chambered (one auricle and one ventricle)." | x |
+| F252 | 4.2.11.3 | feature | "They are cold-blooded animals." | x |
+| F253 | 4.2.11.3 | feature | "Sexes are separate." | x |
+| F254 | 4.2.11.3 | feature | "Fertilisation is usually external." | x |
+| F255 | 4.2.11.3 | feature | "They are mostly oviparous and development is direct." | x |
+| F256 | 4.2.11.3 | example | "Examples: Marine – Exocoetus (Flying fish), Hippocampus (Sea horse); Freshwater – Labeo (Rohu), Catla (Katla), Clarias (Magur); Aquarium – Betta (Fighting fish), Pterophyllum (Angel fish)." | x |
+| F257 | 4.2.11.4 | etymology | "As the name indicates (Gr., Amphi : dual, bios, life), amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21)." | x |
+| F258 | 4.2.11.4 | feature | "Most of them have two pairs of limbs." | x |
+| F259 | 4.2.11.4 | feature | "Body is divisible into head and trunk." | x |
+| F260 | 4.2.11.4 | feature | "Tail may be present in some." | x |
+| F261 | 4.2.11.4 | feature | "The amphibian skin is moist (without scales)." | x |
+| F262 | 4.2.11.4 | feature | "The eyes have eyelids." | x |
+| F263 | 4.2.11.4 | feature | "A tympanum represents the ear." | x |
+| F264 | 4.2.11.4 | definition | "Alimentary canal, urinary and reproductive tracts open into a common chamber called cloaca which opens to the exterior." | x |
+| F265 | 4.2.11.4 | feature | "Respiration is by gills, lungs and through skin." | x |
+| F266 | 4.2.11.4 | feature | "The heart is three-chambered (two auricles and one ventricle)." | x |
+| F267 | 4.2.11.4 | feature | "These are cold-blooded animals." | x |
+| F268 | 4.2.11.4 | feature | "Sexes are separate." | x |
+| F269 | 4.2.11.4 | feature | "Fertilisation is external." | x |
+| F270 | 4.2.11.4 | feature | "They are oviparous and development is indirect." | x |
+| F271 | 4.2.11.4 | example | "Examples: Bufo (Toad), Rana (Frog), Hyla (Tree frog), Salamandra (Salamander), Ichthyophis (Limbless amphibia)." | x |
+| F272 | 4.2.11.5 | etymology | "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl)." | x |
+| F273 | 4.2.11.5 | feature | "They are mostly terrestrial animals and their body is covered by dry and cornified skin, epidermal scales or scutes (Fig. 4.22)." | x |
+| F274 | 4.2.11.5 | feature | "They do not have external ear openings." | x |
+| F275 | 4.2.11.5 | feature | "Tympanum represents ear." | x |
+| F276 | 4.2.11.5 | feature | "Limbs, when present, are two pairs." | x |
+| F277 | 4.2.11.5 | exception | "Heart is usually three-chambered, but four-chambered in crocodiles." | x |
+| F278 | 4.2.11.5 | feature | "Reptiles are poikilotherms." | x |
+| F279 | 4.2.11.5 | feature | "Snakes and lizards shed their scales as skin cast." | x |
+| F280 | 4.2.11.5 | feature | "Sexes are separate." | x |
+| F281 | 4.2.11.5 | feature | "Fertilisation is internal." | x |
+| F282 | 4.2.11.5 | feature | "They are oviparous and development is direct." | x |
+| F283 | 4.2.11.5 | example | "Examples: Chelone (Turtle), Testudo (Tortoise), Chameleon (Tree lizard), Calotes (Garden lizard), Crocodilus (Crocodile), Alligator (Alligator). Hemidactylus (Wall lizard), Poisonous snakes – Naja (Cobra), Bangarus (Krait), Vipera (Viper)." | x |
+| F284 | 4.2.11.6 | feature | "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich)." | x |
+| F285 | 4.2.11.6 | feature | "They possess beak (Figure 4.23)." | x |
+| F286 | 4.2.11.6 | feature | "The forelimbs are modified into wings." | x |
+| F287 | 4.2.11.6 | feature | "The hind limbs generally have scales and are modified for walking, swimming or clasping the tree branches." | x |
+| F288 | 4.2.11.6 | feature | "Skin is dry without glands except the oil gland at the base of the tail." | x |
+| F289 | 4.2.11.6 | feature | "Endoskeleton is fully ossified (bony) and the long bones are hollow with air cavities (pneumatic)." | x |
+| F290 | 4.2.11.6 | feature | "The digestive tract of birds has additional chambers, the crop and gizzard." | x |
+| F291 | 4.2.11.6 | feature | "Heart is completely four-chambered." | x |
+| F292 | 4.2.11.6 | definition | "They are warm-blooded (homoiothermous) animals, i.e., they are able to maintain a constant body temperature." | x |
+| F293 | 4.2.11.6 | feature | "Respiration is by lungs." | x |
+| F294 | 4.2.11.6 | feature | "Air sacs connected to lungs supplement respiration." | x |
+| F295 | 4.2.11.6 | feature | "Sexes are separate." | x |
+| F296 | 4.2.11.6 | feature | "Fertilisation is internal." | x |
+| F297 | 4.2.11.6 | feature | "They are oviparous and development is direct." | x |
+| F298 | 4.2.11.6 | example | "Examples : Corvus (Crow), Columba (Pigeon), Psittacula (Parrot), Struthio (Ostrich), Pavo (Peacock), Aptenodytes (Penguin), Neophron (Vulture)." | x |
+| F299 | 4.2.11.7 | feature | "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves." | x |
+| F300 | 4.2.11.7 | feature | "Some of them have adapted to fly or live in water." | x |
+| F301 | 4.2.11.7 | definition | "The most unique mammalian characteristic is the presence of milk producing glands (mammary glands) by which the young ones are nourished." | x |
+| F302 | 4.2.11.7 | feature | "They have two pairs of limbs, adapted for walking, running, climbing, burrowing, swimming or flying (Figure 4.24)." | x |
+| F303 | 4.2.11.7 | feature | "The skin of mammals is unique in possessing hair." | x |
+| F304 | 4.2.11.7 | feature | "External ears or pinnae are present." | x |
+| F305 | 4.2.11.7 | feature | "Different types of teeth are present in the jaw." | x |
+| F306 | 4.2.11.7 | feature | "Heart is four-chambered." | x |
+| F307 | 4.2.11.7 | feature | "They are homoiothermous." | x |
+| F308 | 4.2.11.7 | feature | "Respiration is by lungs." | x |
+| F309 | 4.2.11.7 | feature | "Sexes are separate and fertilisation is internal." | x |
+| F310 | 4.2.11.7 | feature | "They are viviparous with few exceptions and development is direct." | x |
+| F311 | 4.2.11.7 | example | "Examples: Oviparous-Ornithorhynchus (Platypus); Viviparous - Macropus (Kangaroo), Pteropus (Flying fox), Camelus (Camel), Macaca (Monkey), Rattus (Rat), Canis (Dog), Felis (Cat), Elephas (Elephant), Equus (Horse), Delphinus (Common dolphin), Balaenoptera (Blue whale), Panthera tigris (Tiger), Panthera leo (Lion)." | x |
+| F312 | 4.2 | feature | "The salient distinguishing features of all phyla under animal kingdom is comprehensively given in the Table 4.2." | x |
+| F313 | 4.2 | caption | TABLE 4.2 title: "TABLE 4.2 Salient Features of Different Phyla in the Animal Kingdom" | x |
+| F314 | 4.2 | feature | TABLE 4.2 — Porifera: Level of Organisation "Cellular"; Symmetry "Various"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Absent"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Body with pores and canals in walls." | x |
+| F315 | 4.2 | feature | TABLE 4.2 — Coelenterata (Cnidaria): Level of Organisation "Tissue"; Symmetry "Radial"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Cnidoblasts present." | x |
+| F316 | 4.2 | feature | TABLE 4.2 — Ctenophora: Level of Organisation "Tissue"; Symmetry "Radial"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Comb plates for locomotion." | x |
+| F317 | 4.2 | feature | TABLE 4.2 — Platyhelminthes: Level of Organisation "Organ & Organ-system"; Symmetry "Bilateral"; Coelom "Absent"; Segmentation "Absent"; Digestive System "Incomplete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Flat body, suckers." | x |
+| F318 | 4.2 | feature | TABLE 4.2 — Aschelminthes: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Pseudocoelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Absent"; Respiratory System "Absent"; Distinctive Features "Often worm-shaped, elongated." | x |
+| F319 | 4.2 | feature | TABLE 4.2 — Annelida: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Absent"; Distinctive Features "Body segmentation like rings." | x |
+| F320 | 4.2 | feature | TABLE 4.2 — Arthropoda: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Exoskeleton of cuticle, jointed appendages." | x |
+| F321 | 4.2 | feature | TABLE 4.2 — Mollusca: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "External skeleton of shell usually present." | x |
+| F322 | 4.2 | feature | TABLE 4.2 — Echinodermata: Level of Organisation "Organ-system"; Symmetry "Radial"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Water vascular system, radial symmetry." | x |
+| F323 | 4.2 | feature | TABLE 4.2 — Hemichordata: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Absent"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Worm-like with proboscis, collar and trunk." | x |
+| F324 | 4.2 | feature | TABLE 4.2 — Chordata: Level of Organisation "Organ-system"; Symmetry "Bilateral"; Coelom "Coelomate"; Segmentation "Present"; Digestive System "Complete"; Circulatory System "Present"; Respiratory System "Present"; Distinctive Features "Notochord, dorsal hollow nerve cord, gill slits with limbs or fins." | x |
+| F325 | 4.2.11 | heading | "4.2.11 Phylum – Chordata" | x |
+| F326 | 4.2.11.1 | heading | "4.2.11.1 Class – Cyclostomata" | x |
+| F327 | 4.2.11.2 | heading | "4.2.11.2 Class – Chondrichthyes" | x |
+| F328 | 4.2.11.3 | heading | "4.2.11.3 Class – Osteichthyes" | x |
+| F329 | 4.2.11.4 | heading | "4.2.11.4 Class – Amphibia" | x |
+| F330 | 4.2.11.5 | heading | "4.2.11.5 Class – Reptilia" | x |
+| F331 | 4.2.11.6 | heading | "4.2.11.6 Class – Aves" | x |
+| F332 | 4.2.11.7 | heading | "4.2.11.7 Class – Mammalia" | x |
+| F333 | SUMMARY | heading | "SUMMARY" (unnumbered structural heading, source page 16) | x |
+| F334 | EXERCISES | heading | "EXERCISES" (unnumbered structural heading, source page 17) | x |
+| F335 | 4.2.11 | opener | "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16)." | x |
+| F336 | 4.2.11.1 | opener | "All living members of the class Cyclostomata are ectoparasites on some fishes." | x |
+| F337 | 4.2.11.2 | opener | "They are marine animals with streamlined body and have cartilaginous endoskeleton (Figure 4.19)." | x |
+| F338 | 4.2.11.3 | opener | "It includes both marine and fresh water fishes with bony endoskeleton." | x |
+| F339 | 4.2.11.4 | opener | "As the name indicates (Gr., Amphi : dual, bios, life), amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21)." | x |
+| F340 | 4.2.11.5 | opener | "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl)." | x |
+| F341 | 4.2.11.6 | opener | "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich)." | x |
+| F342 | 4.2.11.7 | opener | "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves." | x |
 | F343 | 4.1.3 | caption | Figure labels: "Ectoderm"; "Mesoglea"; "Endoderm"; "Mesoderm" (Figure 4.2ab, harvested from the rendered asset) | x |
 | F344 | 4.1.4 | caption | Figure labels: "Coelom"; "Pseudocoelom" (Figure 4.3abc, harvested from the rendered asset; panel (c) is unlabeled in the source) | x |
 | F345 | 4.2 | caption | Figure labels: "Kingdom"; "Levels of Organisation"; "Symmetry"; "Body Cavity or Coelom"; "Phylum"; "Animalia (multicellular)"; "Cellular level"; "mostly asymmetrical"; "acoelomata"; "Porifera"; "Tissue/Organ/Organ system"; "Radial"; "Coelenterata (Cnidaria)"; "Ctenophora"; "Without body cavity (acoelomates)"; "Platyhelminthes"; "Bilateral"; "With false coelom (pseudocoelomates)"; "Aschelminthes"; "With true coelom (coelomates)"; "Annelida"; "Arthropoda"; "Mollusca"; "Echinodermata"; "Hemichordata"; "Chordata" (Figure 4.4, harvested from the rendered asset) | x |
 | F346 | 4.2.5 | caption | Figure labels: "Male"; "Female" (Figure 4.10, harvested from the rendered asset) | x |
 | F347 | 4.2.10 | caption | Figure labels: "Proboscis"; "Collar"; "Trunk" (Figure 4.15, harvested from the rendered asset) | x |
-| F348 | 4.2.11 | caption | Figure labels: "Nerve cord"; "Notochord"; "Post-anal part"; "Gill slits" (Figure 4.16, harvested from the rendered asset) | |
-| F349 | 4.2.11 | caption | Figure labels: "Vertebrata"; "Division"; "Agnatha (lacks jaw)"; "Gnathostomata (bears jaw)"; "Super Class"; "Pisces (bear fins)"; "Tetrapoda (bear limbs)"; "Class"; "Cyclostomata"; "Chondrichthyes"; "Osteichthyes"; "Amphibia"; "Reptilia"; "Aves"; "Mammals" (Vertebrata chart, harvested from the rendered asset) | |
+| F348 | 4.2.11 | caption | Figure labels: "Nerve cord"; "Notochord"; "Post-anal part"; "Gill slits" (Figure 4.16, harvested from the rendered asset) | x |
+| F349 | 4.2.11 | caption | Figure labels: "Vertebrata"; "Division"; "Agnatha (lacks jaw)"; "Gnathostomata (bears jaw)"; "Super Class"; "Pisces (bear fins)"; "Tetrapoda (bear limbs)"; "Class"; "Cyclostomata"; "Chondrichthyes"; "Osteichthyes"; "Amphibia"; "Reptilia"; "Aves"; "Mammals" (Vertebrata chart, harvested from the rendered asset) | x |
 | F350 | 4.2.1 | feature | "Porifera … have characteristic flagellated choanocytes." (folded from SUMMARY at 1-Z — body F041 names "Choanocytes or collar cells" but never states they are flagellated; only the "flagellated" qualifier is SUMMARY-UNIQUE) | x |
-| F351 | 4.2.11.1 | feature | "They are the most primitive chordates …" (folded from SUMMARY at 1-Z — body F219/F336 state cyclostomes are ectoparasites on fishes but never that they are the most primitive chordates; the ectoparasite half is BODY-PRESENT, only "most primitive chordates" is SUMMARY-UNIQUE) | |
-| F352 | 4.2.11.5 | feature | "Limbs are absent in snakes." (folded from SUMMARY at 1-Z — body F273/F279 describe reptile dry/cornified skin and scale-shedding by snakes and lizards but never state that limbs are absent in snakes) | |
+| F351 | 4.2.11.1 | feature | "They are the most primitive chordates …" (folded from SUMMARY at 1-Z — body F219/F336 state cyclostomes are ectoparasites on fishes but never that they are the most primitive chordates; the ectoparasite half is BODY-PRESENT, only "most primitive chordates" is SUMMARY-UNIQUE) | x |
+| F352 | 4.2.11.5 | feature | "Limbs are absent in snakes." (folded from SUMMARY at 1-Z — body F273/F279 describe reptile dry/cornified skin and scale-shedding by snakes and lizards but never state that limbs are absent in snakes) | x |
 
 ## Summary classification
 
