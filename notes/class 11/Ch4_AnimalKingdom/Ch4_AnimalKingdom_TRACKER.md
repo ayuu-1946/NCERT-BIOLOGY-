@@ -5,7 +5,7 @@
 **Text snapshot for this arc:** `scratch/ch4_gate1/ch4_source.txt` (1022 lines, PyMuPDF, page markers `===== PAGE n =====`).
 **Protocol:** `GATE_1_PASS_1_SOURCE_MASTERY.md`, run as a **big chapter** (§8) — halves 1a and 1b into one inventory.
 
-> **GATE 1 IS OPEN. Pass 1 is 7 of 8 sessions done (Pass 1a + Pass 1b + 1-F complete; only 1-Z remains). Chapter 4 must not appear in any completion tally.**
+> **GATE 1 IS CLOSED (GREEN), 2026-09-03. Pass 1 is complete — all nine sessions done (Pass 1a + Pass 1b + 1-F + 1-F resumed + 1-Z). Inventory FROZEN at 352 rows (F001–F352, machine-validated). Pass 2 has NOT started: no script, no PDF, all 352 rows unticked — so Chapter 4 must NOT appear in any "Done" completion tally.**
 
 ---
 
@@ -57,11 +57,12 @@ No row, count or claim from that arc was carried into the new inventory.
 | 1b-H | Step 4 — second half | **[x] DONE (2026-09-03)** | **10 (`F325`–`F334`)** |
 | 1b-O | Step 5 — second half | **[x] DONE (2026-09-03)** | **8 (`F335`–`F342`)** |
 | 1-F | Step 6 — figures, whole chapter | [x] DONE (2026-09-03) — manifest only; **label matrix still owed**, carry-over #8 | 26 manifest rows |
-| 1-Z | Steps 7–10 — gaps, summary, freeze | [ ] not started | — |
+| 1-F (resumed) | Step 6 continued — label matrix + manifest audit | **[x] DONE (2026-09-03)** — discharges carry-over #8; also fixed carry-over #9 (12 wrong captions + 6 wrong pages in the manifest, all assets correct) | 7 Facts rows (`F343`–`F349`) |
+| 1-Z | Steps 7–10 — gaps, summary, freeze | **[x] DONE (2026-09-03)** — exercise-gap scan (15: 13 COVERED, 2 GAP), summary two-pass (34: 3 SUMMARY-UNIQUE folded, 31 BODY-PRESENT), freeze + machine recount | 3 Facts rows (`F350`–`F352`) |
 
 **1-F is complete for the manifest**: all 26 trusted PNG assets in `assets/` were opened and visually verified against the source-page placement. The manifest records 26 rows: numbered plates 4.1–4.24 grouped by their actual asset files, plus the real unnumbered `fig_vertebrata_chart.png` on source page 11. All assets are grayscale (`mode=L`), captions/prose are excluded, the corrected 4.5 plain rectangle is `(60,426,290,681)`, and the corrected 4.11 mask/rect is documented in the manifest. No figure was counted as a bonus or duplicated. **However, the figure-label matrix was never harvested** (`_extract_labels` = 0 labels / 0 figures) — logged as carry-over #8 and owed by a resumed 1-F before Gate 1.
 
-**Next session: `1-Z`** (steps 7–10 — exercise-gap scan, summary classification + fold, freeze, whole-chapter machine-derived counts). The label-matrix harvest (carry-over #8, a 1-F deliverable) must also be discharged before Gate 1 can be evaluated. Nothing may be back-dated into a freeze; new findings become new rows in their own session.
+**Next session: Pass 2 (script + PDF build).** Pass 1 is closed: 1-Z ran the exercise-gap scan, the summary two-pass classification + fold, and froze the inventory at 352 rows after a whole-chapter machine recount (`scratch/ch4_gate1/validate_1z.py`). Pass 2 turns the frozen inventory into the notes script and PDF, ticking each row as it is written and driving `check_pdf.py` to green. Nothing may be back-dated into the freeze; any new finding in Pass 2 is a defect to fix against the frozen inventory, not a new Pass-1 row.
 
 ---
 
@@ -118,7 +119,7 @@ The sandbox had been reset and `/vercel/share/neetenv` was gone. Rebuilt before 
 
 ## 6. Carry-overs for later sessions
 
-Full list lives in the inventory's `## Carry-over list` (8 items). The ones that change how a later session must work:
+Full list lives in the inventory's `## Carry-over list` (10 items). The ones that change how a later session must work:
 
 | # | Finding | Binds | Status |
 | :-: | :--- | :--- | :--- |
@@ -127,7 +128,9 @@ Full list lives in the inventory's `## Carry-over list` (8 items). The ones that
 | 3 | TABLE 4.2 (page 15) extracts **column-major** — all "Level of Organisation" values, then all "Symmetry" values, phylum names last. Reassemble by column position. | 1b-S | ✅ discharged — 11 rows `F314`–`F324`, cross-checked vs 1a prose |
 | 4 | Every source-page number from the archived arc is suspect (14-vs-18 page error); re-pin from page images. | 1-F | ✅ discharged |
 | 5 | `fig_vertebrata_chart.png` is a real unnumbered figure, not a "bonus"; census from page images and classify properly. | 1-F | ✅ discharged (manifest) |
-| 8 | **Figure-label matrix absent.** 1-F built the 26-row manifest but harvested **no** in-figure labels (`_extract_labels` = 0/0). §3 Step 1 + Gate 1 require a label matrix harvested by opening each asset. | resumed **1-F** (before Gate 1) | 🔴 OPEN |
+| 8 | **Figure-label matrix absent.** 1-F built the 26-row manifest but harvested **no** in-figure labels (`_extract_labels` = 0/0). §3 Step 1 + Gate 1 require a label matrix harvested by opening each asset. | resumed **1-F** (before Gate 1) | ✅ discharged — 7 label rows `F343`–`F349`; `_extract_labels` = 56 strings / 6 fig-id groups, 0 doubled |
+| 9 | **Figure manifest itself corrupted** by the untrusted prior arc — 12 wrong verbatim captions, 6 wrong source pages (all asset artwork correct). | resumed **1-F** | ✅ discharged — every row re-pinned pixel-for-pixel against rendered pages, `CORRECTED:` notes in manifest |
+| 10 | **Cosmetic:** `_extract_labels` keys figures on the Section column, so F348 + F349 (both §4.2.11) report as **6 fig-id groups for 7 label rows**. Not a missing/merged figure; changes no pass/fail. | Pass-2 readers | ℹ️ logged — benign off-by-one |
 
 ---
 
@@ -135,7 +138,8 @@ Full list lives in the inventory's `## Carry-over list` (8 items). The ones that
 
 | Path | Trust |
 | :--- | :--- |
-| `Ch4_AnimalKingdom_inventory.md` | **current** — 342 rows (`F001`–`F342`: 284 facts + 31 headings + 27 openers), working file, **NOT frozen** |
+| `Ch4_AnimalKingdom_inventory.md` | **current — FROZEN 2026-09-03** at 352 rows (`F001`–`F352`), machine-validated (0 gaps/dupes), all unticked |
+| `scratch/ch4_gate1/validate_1z.py` | **current** — 1-Z machine validator (row count, contiguity, Type histogram, `_extract_labels`), imports `check_pdf.py` |
 | `Ch4_AnimalKingdom_TRACKER.md` (this file) | **current** |
 | `scratch/ch4_gate1/ch4_source.txt` | **current** — 18/18 pages, page-marked |
 | `assets/` (26 PNG) | **assets and metadata verified at 1-F** — all opened, grayscale confirmed, manifest documented |
@@ -150,8 +154,8 @@ Full list lives in the inventory's `## Carry-over list` (8 items). The ones that
 
 | Pass | Scope | Status |
 | :--- | :--- | :--- |
-| **Pass 1** | Source mastery & frozen inventory | **▶️ IN PROGRESS — 7 of 8 sessions (Pass 1a + Pass 1b + 1-F done; only 1-Z remains). GATE 1 OPEN.** |
-| Pass 2 | Script + PDF build (`check_pdf.py` green) | ⬜ not started — blocked on Gate 1 |
+| **Pass 1** | Source mastery & frozen inventory | **✅ COMPLETE — all nine sessions done; inventory FROZEN at 352 rows. GATE 1 CLOSED (GREEN).** |
+| Pass 2 | Script + PDF build (`check_pdf.py` green) | ⬜ not started — now unblocked (Gate 1 closed) |
 | Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — blocked on Gate 2 |
 
-**GATE 1 VERDICT: OPEN.** The inventory is a working file. It may not be frozen, and Pass 2 may not begin, until 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F and 1-Z have each run and 1-Z has closed the freeze over the whole chapter.
+**GATE 1 VERDICT: CLOSED (GREEN), 2026-09-03.** All nine Pass-1 sessions ran (1a-S, 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F, 1-F resumed, 1-Z) and 1-Z froze the inventory over the whole chapter at **352 rows (F001–F352, contiguous, 0 gaps/dupes)**, machine-validated. **Gate 1 closed is NOT chapter closed:** Pass 2 (script + PDF) has not started and every row is unticked, so Chapter 4 stays out of any "Done" tally until Pass 3 delivers a defect-free PDF.
