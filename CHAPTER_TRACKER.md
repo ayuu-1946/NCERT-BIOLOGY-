@@ -77,7 +77,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | 1. The Living World | ✅ Done |
 | 2. Biological Classification | ✅ Done |
 | 3. Plant Kingdom | ✅ Done |
-| 4. Animal Kingdom | ⬜ Not done |
+| 4. Animal Kingdom | 🟨 Pass 1 complete (Gate 1 passed) — figures + frozen inventory done; notes pending. See `notes/class 11/Ch4_AnimalKingdom/Ch4_AnimalKingdom_TRACKER.md` |
 
 ### Unit II — Structural Organisation in Plants and Animals
 
