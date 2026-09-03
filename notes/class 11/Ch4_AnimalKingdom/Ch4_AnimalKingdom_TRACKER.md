@@ -5,7 +5,7 @@
 **Text snapshot for this arc:** `scratch/ch4_gate1/ch4_source.txt` (1022 lines, PyMuPDF, page markers `===== PAGE n =====`).
 **Protocol:** `GATE_1_PASS_1_SOURCE_MASTERY.md`, run as a **big chapter** (§8) — halves 1a and 1b into one inventory.
 
-> **GATE 1 IS OPEN. Pass 1 is 4 of 8 sessions done. Chapter 4 must not appear in any completion tally.**
+> **GATE 1 IS OPEN. Pass 1 is 7 of 8 sessions done (Pass 1a + Pass 1b + 1-F complete; only 1-Z remains). Chapter 4 must not appear in any completion tally.**
 
 ---
 
@@ -53,15 +53,15 @@ No row, count or claim from that arc was carried into the new inventory.
 | **1a-S** | Steps 1–3 — prose facts, first half | **[x] DONE (2026-09-03)** | **154 (`F001`–`F154`)** |
 | **1a-H** | Step 4 — heading sweep, first half | **[x] DONE (2026-09-03)** | **21 (`F155`–`F175`)** |
 | **1a-O** | Step 5 — opener sweep, first half | **[x] DONE (2026-09-03)** | **19 (`F176`–`F194`)** |
-| 1b-S | Steps 1–3 — second half | [ ] not started | — |
-| 1b-H | Step 4 — second half | [ ] not started | — |
-| 1b-O | Step 5 — second half | [ ] not started | — |
-| 1-F | Step 6 — figures, whole chapter | [x] DONE (2026-09-03) | 26 manifest rows |
+| 1b-S | Steps 1–3 — second half | **[x] DONE (2026-09-03)** | **130 (`F195`–`F324`)** |
+| 1b-H | Step 4 — second half | **[x] DONE (2026-09-03)** | **10 (`F325`–`F334`)** |
+| 1b-O | Step 5 — second half | **[x] DONE (2026-09-03)** | **8 (`F335`–`F342`)** |
+| 1-F | Step 6 — figures, whole chapter | [x] DONE (2026-09-03) — manifest only; **label matrix still owed**, carry-over #8 | 26 manifest rows |
 | 1-Z | Steps 7–10 — gaps, summary, freeze | [ ] not started | — |
 
-**1-F is complete**: all 26 trusted PNG assets in `assets/` were opened and visually verified against the source-page placement. The manifest now records 26 rows: numbered plates 4.1–4.24 grouped by their actual asset files, plus the real unnumbered `fig_vertebrata_chart.png` on source page 11. All assets are grayscale (`mode=L`), captions/prose are excluded, the corrected 4.5 plain rectangle is `(60,426,290,681)`, and the corrected 4.11 mask/rect is documented in the manifest. No figure was counted as a bonus or duplicated.
+**1-F is complete for the manifest**: all 26 trusted PNG assets in `assets/` were opened and visually verified against the source-page placement. The manifest records 26 rows: numbered plates 4.1–4.24 grouped by their actual asset files, plus the real unnumbered `fig_vertebrata_chart.png` on source page 11. All assets are grayscale (`mode=L`), captions/prose are excluded, the corrected 4.5 plain rectangle is `(60,426,290,681)`, and the corrected 4.11 mask/rect is documented in the manifest. No figure was counted as a bonus or duplicated. **However, the figure-label matrix was never harvested** (`_extract_labels` = 0 labels / 0 figures) — logged as carry-over #8 and owed by a resumed 1-F before Gate 1.
 
-**Next session: `1b-S`** (steps 1–3, prose facts, second half — pages 10–18). Nothing may be back-dated into a freeze; new findings become new rows in their own session.
+**Next session: `1-Z`** (steps 7–10 — exercise-gap scan, summary classification + fold, freeze, whole-chapter machine-derived counts). The label-matrix harvest (carry-over #8, a 1-F deliverable) must also be discharged before Gate 1 can be evaluated. Nothing may be back-dated into a freeze; new findings become new rows in their own session.
 
 ---
 
@@ -118,15 +118,16 @@ The sandbox had been reset and `/vercel/share/neetenv` was gone. Rebuilt before 
 
 ## 6. Carry-overs for later sessions
 
-Full list lives in the inventory's `## Carry-over list` (7 items). The ones that change how a later session must work:
+Full list lives in the inventory's `## Carry-over list` (8 items). The ones that change how a later session must work:
 
-| # | Finding | Binds |
-| :-: | :--- | :--- |
-| 1 | Source page 5 extracts **out of reading order** — the §4.2.2 heading and opener sit at the bottom of the text stream. Take the opener from the layout, not the stream. | 1a-O |
-| 2 | Source pages 11–15 render each class heading **five times** (faux-bold overprint), e.g. `4.2.11.1` ×5. Do not count duplicates as headings. | 1b-H |
-| 3 | TABLE 4.2 (page 15) extracts **column-major** — all "Level of Organisation" values, then all "Symmetry" values, phylum names last. Reassemble by column position. | 1b |
-| 4 | Every source-page number from the archived arc is suspect (14-vs-18 page error); re-pin from page images. | 1-F |
-| 5 | `fig_vertebrata_chart.png` is a real unnumbered figure, not a "bonus"; census from page images and classify properly. | 1-F |
+| # | Finding | Binds | Status |
+| :-: | :--- | :--- | :--- |
+| 1 | Source page 5 extracts **out of reading order** — the §4.2.2 heading and opener sit at the bottom of the text stream. Take the opener from the layout, not the stream. | 1a-O | ✅ discharged |
+| 2 | Source pages 11–15 render each class heading **five times** (faux-bold overprint), e.g. `4.2.11.1` ×5. Do not count duplicates as headings. | 1b-H | ✅ discharged — 7 class headings counted once (`F326`–`F332`) |
+| 3 | TABLE 4.2 (page 15) extracts **column-major** — all "Level of Organisation" values, then all "Symmetry" values, phylum names last. Reassemble by column position. | 1b-S | ✅ discharged — 11 rows `F314`–`F324`, cross-checked vs 1a prose |
+| 4 | Every source-page number from the archived arc is suspect (14-vs-18 page error); re-pin from page images. | 1-F | ✅ discharged |
+| 5 | `fig_vertebrata_chart.png` is a real unnumbered figure, not a "bonus"; census from page images and classify properly. | 1-F | ✅ discharged (manifest) |
+| 8 | **Figure-label matrix absent.** 1-F built the 26-row manifest but harvested **no** in-figure labels (`_extract_labels` = 0/0). §3 Step 1 + Gate 1 require a label matrix harvested by opening each asset. | resumed **1-F** (before Gate 1) | 🔴 OPEN |
 
 ---
 
@@ -134,7 +135,7 @@ Full list lives in the inventory's `## Carry-over list` (7 items). The ones that
 
 | Path | Trust |
 | :--- | :--- |
-| `Ch4_AnimalKingdom_inventory.md` | **current** — 194 rows (154 facts + 21 headings + 19 openers), working file, **NOT frozen** |
+| `Ch4_AnimalKingdom_inventory.md` | **current** — 342 rows (`F001`–`F342`: 284 facts + 31 headings + 27 openers), working file, **NOT frozen** |
 | `Ch4_AnimalKingdom_TRACKER.md` (this file) | **current** |
 | `scratch/ch4_gate1/ch4_source.txt` | **current** — 18/18 pages, page-marked |
 | `assets/` (26 PNG) | **assets and metadata verified at 1-F** — all opened, grayscale confirmed, manifest documented |
@@ -149,7 +150,7 @@ Full list lives in the inventory's `## Carry-over list` (7 items). The ones that
 
 | Pass | Scope | Status |
 | :--- | :--- | :--- |
-| **Pass 1** | Source mastery & frozen inventory | **▶️ IN PROGRESS — 3 of 8 sessions (Pass 1a complete). GATE 1 OPEN.** |
+| **Pass 1** | Source mastery & frozen inventory | **▶️ IN PROGRESS — 7 of 8 sessions (Pass 1a + Pass 1b + 1-F done; only 1-Z remains). GATE 1 OPEN.** |
 | Pass 2 | Script + PDF build (`check_pdf.py` green) | ⬜ not started — blocked on Gate 1 |
 | Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — blocked on Gate 2 |
 
