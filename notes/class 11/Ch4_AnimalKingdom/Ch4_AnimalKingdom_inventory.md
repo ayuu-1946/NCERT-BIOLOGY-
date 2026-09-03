@@ -1,5 +1,5 @@
 # Frozen Inventory — Class 11 Chapter 4: Animal Kingdom
-Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: NOT YET FROZEN (Pass 1a + Pass 1b + resumed 1-F COMPLETE — whole-chapter freeze still pending at 1-Z) | Rows: 349
+Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: **FROZEN 2026-09-03 at 1-Z** (Pass 1 complete — all five session kinds ran: 1-S, 1-H, 1-O, 1-F, 1-Z; ticking begins in Pass 2) | Rows: 352
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. All rows are unticked — Pass 2 has not started.
 
@@ -448,16 +448,72 @@ Re-parsing after the resumed 1-F session (carry-over #8 discharge) gives **349 r
 | F347 | 4.2.10 | caption | Figure labels: "Proboscis"; "Collar"; "Trunk" (Figure 4.15, harvested from the rendered asset) | |
 | F348 | 4.2.11 | caption | Figure labels: "Nerve cord"; "Notochord"; "Post-anal part"; "Gill slits" (Figure 4.16, harvested from the rendered asset) | |
 | F349 | 4.2.11 | caption | Figure labels: "Vertebrata"; "Division"; "Agnatha (lacks jaw)"; "Gnathostomata (bears jaw)"; "Super Class"; "Pisces (bear fins)"; "Tetrapoda (bear limbs)"; "Class"; "Cyclostomata"; "Chondrichthyes"; "Osteichthyes"; "Amphibia"; "Reptilia"; "Aves"; "Mammals" (Vertebrata chart, harvested from the rendered asset) | |
+| F350 | 4.2.1 | feature | "Porifera … have characteristic flagellated choanocytes." (folded from SUMMARY at 1-Z — body F041 names "Choanocytes or collar cells" but never states they are flagellated; only the "flagellated" qualifier is SUMMARY-UNIQUE) | |
+| F351 | 4.2.11.1 | feature | "They are the most primitive chordates …" (folded from SUMMARY at 1-Z — body F219/F336 state cyclostomes are ectoparasites on fishes but never that they are the most primitive chordates; the ectoparasite half is BODY-PRESENT, only "most primitive chordates" is SUMMARY-UNIQUE) | |
+| F352 | 4.2.11.5 | feature | "Limbs are absent in snakes." (folded from SUMMARY at 1-Z — body F273/F279 describe reptile dry/cornified skin and scale-shedding by snakes and lizards but never state that limbs are absent in snakes) | |
 
 ## Summary classification
-| Summary sentence | Classification | Folded into |
-|---|---|---|
-| _pending session 1-Z (summary is whole-chapter content on source pages 16–17)_ | — | — |
+
+**Rule 3 two-pass check applied to every summary sentence (source pages 16–17).** 34 summary sentences; **3 carry a SUMMARY-UNIQUE fact** now folded into the body (F350–F352), the remaining fully **BODY-PRESENT**, **0 overlooked**. Every SUMMARY-UNIQUE line is a mandatory Gate 1 checklist item and a Pass-2 body addition.
+
+| # | Summary sentence (verbatim) | Classification | Folded into |
+|---|---|---|---|
+| 1 | "The basic fundamental features such as level of organisation, symmetry, cell organisation, coelom, segmentation, notochord, etc., have enabled us to broadly classify the animal kingdom." | BODY-PRESENT | — (§4.1, F001-area) |
+| 2 | "Besides the fundamental features, there are many other distinctive characters which are specific for each phyla or class." | BODY-PRESENT (transitional restatement) | — |
+| 3 | "Porifera includes multicellular animals which exhibit cellular level of organisation and have characteristic flagellated choanocytes." | SPLIT — multicellular/cellular level BODY-PRESENT (F037); **"flagellated" choanocytes SUMMARY-UNIQUE** (F041 omits it) | **F350 (§4.2.1)** |
+| 4 | "The coelenterates have tentacles and bear cnidoblasts." | BODY-PRESENT (§4.2.2) | — |
+| 5 | "They are mostly aquatic, sessile or free-floating." | BODY-PRESENT (§4.2.2) | — |
+| 6 | "The ctenophores are marine animals with comb plates." | BODY-PRESENT (§4.2.3) | — |
+| 7 | "The platyhelminths have flat body and exhibit bilateral symmetry." | BODY-PRESENT (§4.2.4) | — |
+| 8 | "The parasitic forms show distinct suckers and hooks." | BODY-PRESENT (§4.2.4) | — |
+| 9 | "Aschelminthes are pseudocoelomates and include parasitic as well as non-parasitic roundworms." | BODY-PRESENT (§4.2.5) | — |
+| 10 | "Annelids are metamerically segmented animals with a true coelom." | BODY-PRESENT (§4.2.6, F091) | — |
+| 11 | "The arthropods are the most abundant group of animals characterised by the presence of jointed appendages." | BODY-PRESENT (§4.2.7) | — |
+| 12 | "The molluscs have a soft body surrounded by an external calcareous shell." | BODY-PRESENT (§4.2.8, F123) | — |
+| 13 | "The body is covered with external skeleton made of chitin." | BODY-PRESENT (§4.2.7 chitinous exoskeleton, F105) | — |
+| 14 | "The echinoderms possess a spiny skin." | BODY-PRESENT (§4.2.9, F131 "Spiny bodied") | — |
+| 15 | "Their most distinctive feature is the presence of water vascular system." | BODY-PRESENT (§4.2.9) | — |
+| 16 | "The hemichordates are a small group of worm-like marine animals." | BODY-PRESENT (§4.2.10) | — |
+| 17 | "They have a cylindrical body with proboscis, collar and trunk." | BODY-PRESENT (§4.2.10, F347 labels) | — |
+| 18 | "Phylum Chordata includes animals which possess a notochord either throughout or during early embryonic life." | BODY-PRESENT (§4.2.11, F335) | — |
+| 19 | "Other common features observed in the chordates are the dorsal, hollow nerve cord and paired pharyngeal gill slits." | BODY-PRESENT (§4.2.11, F335) | — |
+| 20 | "Some of the vertebrates do not possess jaws (Agnatha) whereas most of them possess jaws (Gnathostomata)." | BODY-PRESENT (§4.2.11 Vertebrata chart, F349) | — |
+| 21 | "Agnatha is represented by the class, Cyclostomata." | BODY-PRESENT (§4.2.11.1) | — |
+| 22 | "They are the most primitive chordates and are ectoparasites on fishes." | SPLIT — ectoparasites BODY-PRESENT (F219/F336); **"most primitive chordates" SUMMARY-UNIQUE** | **F351 (§4.2.11.1)** |
+| 23 | "Gnathostomata has two super classes, Pisces and Tetrapoda." | BODY-PRESENT (§4.2.11 chart, F349) | — |
+| 24 | "Classes Chondrichthyes and Osteichthyes bear fins for locomotion and are grouped under Pisces." | BODY-PRESENT (§4.2.11 chart / §4.2.11.2–3) | — |
+| 25 | "The Chondrichthyes are fishes with cartilaginous endoskeleton and are marine." | BODY-PRESENT (§4.2.11.2, F337) | — |
+| 26 | "Classes, Amphibia, Reptilia, Aves and Mammalia have two pairs of limbs and are thus grouped under Tetrapoda." | BODY-PRESENT (§4.2.11 chart, F349) | — |
+| 27 | "The amphibians have adapted to live both on land and water." | BODY-PRESENT (§4.2.11.4, F339) | — |
+| 28 | "Reptiles are characterised by the presence of dry and cornified skin." | BODY-PRESENT (§4.2.11.5, F273) | — |
+| 29 | "Limbs are absent in snakes." | **SUMMARY-UNIQUE** | **F352 (§4.2.11.5)** |
+| 30 | "Fishes, amphibians and reptiles are poikilothermous (cold-blooded)." | BODY-PRESENT (F240 cartilaginous fishes, F252 bony fishes, F267 amphibians, F278 reptiles — all stated cold-blooded/poikilothermous) | — |
+| 31 | "Aves are warm-blooded animals with feathers on their bodies and forelimbs modified into wings for flying." | BODY-PRESENT (§4.2.11.6, F292) | — |
+| 32 | "Hind limbs are adapted for walking, swimming, perching or clasping." | BODY-PRESENT (§4.2.11.6) | — |
+| 33 | "The unique features of mammals are the presence of mammary glands and hairs on the skin." | BODY-PRESENT (§4.2.11.7, F301/F303) | — |
+| 34 | "They commonly exhibit viviparity." | BODY-PRESENT (§4.2.11.7, F310) | — |
 
 ## Exercise-gap terms
-| Term/fact assumed by exercises | Explained where |
-|---|---|
-| _pending session 1-Z (15 exercises on source pages 17–18)_ | — |
+
+**Rule 2 classification applied to every exercise (source pages 17–18).** Arithmetic in words: **15 exercises, 13 COVERED (the body already answers), 2 GAP (a term the exercise assumes but the body never explains), 0 overlooked.** Each GAP names where the explanation must be added in Pass 2.
+
+| Exercise | Classification | Answered by / GAP home |
+|---|---|---|
+| Q1 — difficulties in classification if common fundamental features are ignored | COVERED | §4.1 (classification rests on common fundamental features; Fig 4.4 caption) |
+| Q2 — steps to classify a given specimen | COVERED | §4.1 + §4.1.1–4.1.6 (organisation, symmetry, coelom, segmentation, notochord criteria) |
+| Q3 — usefulness of body cavity and coelom in classification | COVERED | §4.1.5 (coelom/pseudocoelom/acoelom) |
+| Q4 — distinguish intracellular vs extracellular digestion | **GAP** | body uses both terms (F042 Porifera "intracellular"; F053 Coelenterata, F063 Ctenophora "extracellular and intracellular") but never **defines** the distinction — add a definition at §4.2.1/§4.2.2 or the Quick Recap |
+| Q5 — difference between direct and indirect development | COVERED | body states indirect development (F270 Amphibia, F129 Mollusca) and direct development (F255 Osteichthyes, F282 Reptilia, F297 Aves, F310 Mammalia) |
+| Q6 — peculiar features of parasitic platyhelminthes | COVERED | §4.2.4 (suckers, hooks, absorption of digested food) |
+| Q7 — reasons arthropods are the largest group | COVERED | §4.2.7 (largest phylum; jointed appendages, wide adaptation) |
+| Q8 — MCQ: water vascular system → (c) Echinodermata | COVERED | §4.2.9 (water vascular system) |
+| Q9 — "all vertebrates are chordates but all chordates are not vertebrates" | COVERED | §4.2.11 (notochord/nerve cord/gill slits in all chordates; vertebral column defines Vertebrata) |
+| Q10 — importance of air bladder in Pisces | COVERED | §4.2.11.3 (F250 air bladder regulates buoyancy) vs §4.2.11.2 (F237 its absence forces constant swimming) |
+| Q11 — modifications in birds that help them fly | COVERED | §4.2.11.6 (feathers, forelimbs modified into wings, hollow/pneumatic bones) |
+| Q12 — could eggs/young of an oviparous vs viviparous mother be equal? Why | **GAP** | body uses oviparous/viviparous throughout (F114, F129, F243, F255, F270, F282, F297, F310, F311) but never **defines** them — add definitions at §4.2 or the Quick Recap |
+| Q13 — MCQ: segmentation first observed in → (c) Annelida | COVERED | §4.2.6 (F091 metameric segmentation; cf. F029 metamerism) |
+| Q14 — match: operculum/parapodia/scales/comb plates/radula/hairs/choanocytes/gill slits | COVERED | operculum → §4.2.11.3 (F248); parapodia → §4.2.6 (F094); comb plates → §4.2.3; radula → §4.2.8 (F128); hairs → §4.2.11.7 (F303); choanocytes → §4.2.1 (F041); gill slits → §4.2.11 (F335/F348); scales → §4.2.11.2–5 |
+| Q15 — list animals parasitic on human beings | COVERED | examples in body: Aschelminthes §4.2.5 (Ascaris, Wuchereria, Ancylostoma); Platyhelminthes §4.2.4 (tapeworm, liver fluke); Annelida §4.2.6 (Hirudinaria, leech) |
 
 ## Figure manifest
 
