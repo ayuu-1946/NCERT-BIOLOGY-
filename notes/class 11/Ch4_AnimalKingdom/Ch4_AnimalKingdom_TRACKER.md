@@ -132,7 +132,7 @@ Full list lives in the inventory's `## Carry-over list` (7 items). The ones that
 
 | Path | Trust |
 | :--- | :--- |
-| `Ch4_AnimalKingdom_inventory.md` | **current** — 154 rows, working file, **NOT frozen** |
+| `Ch4_AnimalKingdom_inventory.md` | **current** — 194 rows (154 facts + 21 headings + 19 openers), working file, **NOT frozen** |
 | `Ch4_AnimalKingdom_TRACKER.md` (this file) | **current** |
 | `scratch/ch4_gate1/ch4_source.txt` | **current** — 18/18 pages, page-marked |
 | `assets/` (26 PNG) | **assets trusted, metadata not** — re-derived at 1-F |
@@ -147,7 +147,7 @@ Full list lives in the inventory's `## Carry-over list` (7 items). The ones that
 
 | Pass | Scope | Status |
 | :--- | :--- | :--- |
-| **Pass 1** | Source mastery & frozen inventory | **▶️ IN PROGRESS — 1 of 8 sessions. GATE 1 OPEN.** |
+| **Pass 1** | Source mastery & frozen inventory | **▶️ IN PROGRESS — 3 of 8 sessions (Pass 1a complete). GATE 1 OPEN.** |
 | Pass 2 | Script + PDF build (`check_pdf.py` green) | ⬜ not started — blocked on Gate 1 |
 | Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — blocked on Gate 2 |
 

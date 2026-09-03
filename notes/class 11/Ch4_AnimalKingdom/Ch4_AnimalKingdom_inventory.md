@@ -1,5 +1,5 @@
 # Frozen Inventory — Class 11 Chapter 4: Animal Kingdom
-Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: NOT YET FROZEN (Pass 1a in progress) | Rows: 154
+Source: `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` (18 source pages) | Frozen: NOT YET FROZEN (Pass 1a COMPLETE — whole-chapter freeze happens at 1-Z after Pass 1b) | Rows: 194
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. All rows are unticked — Pass 2 has not started.
 
@@ -23,11 +23,13 @@ Seam rule: TABLE 4.2 is assigned to **1b by physical location** even though its 
 | Session | Scope | Status | Rows added |
 |---|---|---|---|
 | 1a-S | Steps 1–3, prose facts, first half | **DONE** | 154 (F001–F154) |
-| 1a-H | Step 4, heading sweep, first half | not started | — |
-| 1a-O | Step 5, opener sweep, first half | not started | — |
+| 1a-H | Step 4, heading sweep, first half | **DONE** | 21 (F155–F175) |
+| 1a-O | Step 5, opener sweep, first half | **DONE** | 19 (F176–F194) |
 | 1b-S / 1b-H / 1b-O | second half | not started | — |
 | 1-F | Step 6, figures, whole chapter | not started | — |
 | 1-Z | Steps 7–10, gaps + summary + freeze | not started | — |
+
+**Pass 1a is complete** (1a-S + 1a-H + 1a-O = 154 + 21 + 19 = 194 rows, machine-re-parsed below). Next session is **1b-S**. This is not a gate: Gate 1 is evaluated over the whole chapter only after 1b and the whole-chapter 1-F and 1-Z. The inventory stays a working file, unfrozen.
 
 ### 1a-S census — re-parsed from the Facts table itself (step 10), never hand-tallied
 
@@ -36,6 +38,21 @@ Re-parsing the finished table with `check_pdf.py`'s own row logic gives **154 Fa
 `4.0`=2, `4.1`=2, `4.1.1`=11, `4.1.2`=4, `4.1.3`=3, `4.1.4`=5, `4.1.5`=2, `4.1.6`=2, `4.2`=3, `4.2.1`=13, `4.2.2`=12, `4.2.3`=9, `4.2.4`=10, `4.2.5`=10, `4.2.6`=12, `4.2.7`=19, `4.2.8`=11, `4.2.9`=12, `4.2.10`=12 — 19 sections, 154 rows.
 
 `Type` histogram (machine-grouped, all lowercase, no casing split): feature 86, definition 24, example 17, term 10, number 4, etymology 4, comparison 4, process 3, list 1, exception 1 = 154.
+
+### 1a-H census — re-parsed from the Facts table itself (step 10)
+
+Re-parsing the finished table gives **21 heading rows, IDs `F155`–`F175`, contiguous, all unticked**. The total is derivable from this list: **20 numbered/title headings + the 1 structural sidebar row** —
+
+- Chapter-title tier: `CHAPTER 4`, `ANIMAL KINGDOM` (F155–F156) = 2
+- §-title tier (small-caps): `4.1 BASIS OF CLASSIFICATION` (F157), `4.2 CLASSIFICATION OF ANIMALS` (F164) = 2
+- Numbered sub-headings: `4.1.1`–`4.1.6` (F158–F163) = 6, and `4.2.1`–`4.2.10` (F165–F174) = 10 → 16
+- Structural row: chapter-opening contents sidebar, page 1 (F175) = 1
+
+2 + 2 + 16 + 1 = **21**, matching the machine tally. **No unnumbered sub-headings exist in the 1a half** — every 12.0/13.0 bold line on pages 1–9 is a numbered heading; 10.5 bold runs are inline term emphasis, excluded. `4.2.11 Phylum – Chordata` sits physically on page 9 but belongs to **1b** by the fixed seam and was not taken here.
+
+### 1a-O census — re-parsed from the Facts table itself (step 10)
+
+Re-parsing gives **19 opener rows, IDs `F176`–`F194`, contiguous, all unticked** — exactly one opener for each of the 19 sections in the 1a half. Count derivable from the list: `4.0`(1) + `4.1`(1) + `4.1.1`–`4.1.6`(6) + `4.2`(1) + `4.2.1`–`4.2.10`(10) = 1 + 1 + 6 + 1 + 10 = **19**, matching the machine tally. Openers were read from **layout reading-order** (blocks sorted by y-position), not the raw text stream — see carry-over #5 (discharged). §4.2.11 Chordata's opener (page 9) was not taken; it belongs to 1b.
 
 `check_pdf.py._extract_labels` run against this file returns **0 label rows, 0 figures, no phantom `Fig #` row** — correct for a file whose 1-F session has not run. It must return a non-zero, non-doubled count after 1-F.
 
@@ -262,6 +279,6 @@ Re-parsing the finished table with `check_pdf.py`'s own row logic gives **154 Fa
 2. **The archived file claims the source PDF has "14 pages"; the machine says 18** (`doc.page_count == 18`, text extracted to `scratch/ch4_gate1/ch4_source.txt`). Every source-page number in that file is therefore suspect and must be re-pinned in 1-F.
 3. `Ch4_figure_audit.md` and `extract_figures.py` in this folder are from the same untrusted arc, as was the old tracker — now archived as `Ch4_prior_TRACKER_UNTRUSTED.md` and replaced by a rewritten `Ch4_AnimalKingdom_TRACKER.md` that records Gate 1 as OPEN. `extract_figures.py` may be reused as a *starting point* for 1-F rectangles only after the 440 dpi / 5 pt gridline standard (§3) is applied and each rectangle re-inspected.
 4. The archived file records one asset `fig_vertebrata_chart.png` as a "bonus un-numbered" chart. §3 step 1 item 4 says **unnumbered plates are real figures**, not bonuses — 1-F must census from page images and decide its status properly (it is the "The subphylum Vertebrata is further divided as follows:" chart on source page 11, i.e. 1b territory).
-5. Source page 5 extracts out of reading order: the §4.2.2 heading and its opening sentence sit at the *bottom* of the text stream while the continuation prose sits at the top. 1a-O must take the opener from the layout, not from the raw text order.
+5. **[DISCHARGED by 1a-O]** Source page 5 extracts out of reading order: the §4.2.2 heading and its opening sentence sit at the *bottom* of the text stream while the continuation prose sits at the top. 1a-O took the §4.2.2 opener (F186, "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals…") from the layout, not the raw text order, so the correct opening sentence was captured.
 6. Source pages 11–15 render each class heading **five times** in the text layer (e.g. `4.2.11.1` × 5) — a faux-bold overprint, not five headings. 1b-H must not count duplicates.
 7. TABLE 4.2 (source page 15) extracts **column-major**: all "Level of Organisation" values, then all "Symmetry" values, etc., with the phylum names last. 1b must reassemble it by column position, and check the alignment against the per-phylum prose in 1a's rows.
