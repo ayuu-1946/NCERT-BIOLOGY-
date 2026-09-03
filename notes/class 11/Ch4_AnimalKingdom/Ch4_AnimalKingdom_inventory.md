@@ -105,200 +105,200 @@ Re-parsing the **frozen** table with the machine (`scratch/ch4_gate1/validate_1z
 ## Facts
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
-| F001 | 4.0 | number | "As over a million species of animals have been described till now, the need for classification becomes all the more important." | |
-| F002 | 4.0 | feature | "The classification also helps in assigning a systematic position to newly described species." | |
-| F003 | 4.1 | list | "there are fundamental features common to various individuals in relation to the arrangement of cells, body symmetry, nature of coelom, patterns of digestive, circulatory or reproductive systems" | |
-| F004 | 4.1 | feature | "These features are used as the basis of animal classification and some of them are discussed here." | |
-| F005 | 4.1.1 | feature | "Though all members of Animalia are multicellular, all of them do not exhibit the same pattern of organisation of cells." | |
-| F006 | 4.1.1 | definition | "in sponges, the cells are arranged as loose cell aggregates, i.e., they exhibit cellular level of organisation" | |
-| F007 | 4.1.1 | feature | "Some division of labour (activities) occur among the cells." | |
-| F008 | 4.1.1 | definition | "In coelenterates, the arrangement of cells is more complex. Here the cells performing the same function are arranged into tissues, hence is called tissue level of organisation." | |
-| F009 | 4.1.1 | definition | "A still higher level of organisation, i.e., organ level is exhibited by members of Platyhelminthes and other higher phyla where tissues are grouped together to form organs, each specialised for a particular function." | |
-| F010 | 4.1.1 | definition | "In animals like Annelids, Arthropods, Molluscs, Echinoderms and Chordates, organs have associated to form functional systems, each system concerned with a specific physiological function. This pattern is called organ system level of organisation." | |
-| F011 | 4.1.1 | feature | "Organ systems in different groups of animals exhibit various patterns of complexities." | |
-| F012 | 4.1.1 | definition | "the digestive system in Platyhelminthes has only a single opening to the outside of the body that serves as both mouth and anus, and is hence called incomplete" | |
-| F013 | 4.1.1 | definition | "A complete digestive system has two openings, mouth and anus." | |
-| F014 | 4.1.1 | definition | "(i) open type in which the blood is pumped out of the heart and the cells and tissues are directly bathed in it" | |
-| F015 | 4.1.1 | definition | "(ii) closed type in which the blood is circulated through a series of vessels of varying diameters (arteries, veins and capillaries)" | |
-| F016 | 4.1.2 | definition | "Sponges are mostly asymmetrical, i.e., any plane that passes through the centre does not divide them into equal halves." | |
-| F017 | 4.1.2 | definition | "When any plane passing through the central axis of the body divides the organism into two identical halves, it is called radial symmetry." | |
-| F018 | 4.1.2 | example | "Coelenterates, ctenophores and echinoderms have this kind of body plan (Figure 4.1a)." | |
-| F019 | 4.1.2 | definition | "Animals like annelids, arthropods, etc., where the body can be divided into identical left and right halves in only one plane, exhibit bilateral symmetry (Figure 4.1b)." | |
-| F020 | 4.1.3 | definition | "Animals in which the cells are arranged in two embryonic layers, an external ectoderm and an internal endoderm, are called diploblastic animals, e.g., coelenterates." | |
-| F021 | 4.1.3 | feature | "An undifferentiated layer, mesoglea, is present in between the ectoderm and the endoderm (Figure 4.2a)." | |
-| F022 | 4.1.3 | definition | "Those animals in which the developing embryo has a third germinal layer, mesoderm, in between the ectoderm and endoderm, are called triploblastic animals (platyhelminthes to chordates, Figure 4.2b)." | |
-| F023 | 4.1.4 | feature | "Presence or absence of a cavity between the body wall and the gut wall is very important in classification." | |
-| F024 | 4.1.4 | definition | "The body cavity, which is lined by mesoderm is called coelom." | |
-| F025 | 4.1.4 | example | "Animals possessing coelom are called coelomates, e.g., annelids, molluscs, arthropods, echinoderms, hemichordates and chordates (Figure 4.3a)." | |
-| F026 | 4.1.4 | definition | "In some animals, the body cavity is not lined by mesoderm, instead, the mesoderm is present as scattered pouches in between the ectoderm and endoderm. Such a body cavity is called pseudocoelom and the animals possessing them are called pseudocoelomates, e.g., aschelminthes (Figure 4.3b)." | |
-| F027 | 4.1.4 | definition | "The animals in which the body cavity is absent are called acoelomates, e.g., platyhelminthes (Figure 4.3c)." | |
-| F028 | 4.1.5 | definition | "In some animals, the body is externally and internally divided into segments with a serial repetition of at least some organs." | |
-| F029 | 4.1.5 | definition | "For example, in earthworm, the body shows this pattern called metameric segmentation and the phenomenon is known as metamerism." | |
-| F030 | 4.1.6 | definition | "Notochord is a mesodermally derived rod-like structure formed on the dorsal side during embryonic development in some animals." | |
-| F031 | 4.1.6 | definition | "Animals with notochord are called chordates and those animals which do not form this structure are called non-chordates, e.g., porifera to echinoderms." | |
-| F032 | 4.2 | feature | "The broad classification of Animalia, based on common fundamental features as mentioned in the preceding sections, is given in Figure 4.4." | |
-| F033 | 4.2 | feature | "The important characteristic features of the different phyla are described." | |
-| F034 | 4.2 | exception | Figure 4.4 footnote: "*Echinodermata exhibits radial or bilateral symmetry depending on the stage." | |
-| F035 | 4.2.1 | term | "Members of this phylum are commonly known as sponges." | |
-| F036 | 4.2.1 | feature | "They are generally marine and mostly asymmetrical animals (Figure 4.5)." | |
-| F037 | 4.2.1 | feature | "These are primitive multicellular animals and have cellular level of organisation." | |
-| F038 | 4.2.1 | feature | "Sponges have a water transport or canal system." | |
-| F039 | 4.2.1 | process | "Water enters through minute pores (ostia) in the body wall into a central cavity, spongocoel, from where it goes out through the osculum." | |
-| F040 | 4.2.1 | feature | "This pathway of water transport is helpful in food gathering, respiratory exchange and removal of waste." | |
-| F041 | 4.2.1 | term | "Choanocytes or collar cells line the spongocoel and the canals." | |
-| F042 | 4.2.1 | feature | "Digestion is intracellular." | |
-| F043 | 4.2.1 | feature | "The body is supported by a skeleton made up of spicules or spongin fibres." | |
-| F044 | 4.2.1 | feature | "Sexes are not separate (hermaphrodite), i.e., eggs and sperms are produced by the same individual." | |
-| F045 | 4.2.1 | process | "Sponges reproduce asexually by fragmentation and sexually by formation of gametes." | |
-| F046 | 4.2.1 | feature | "Fertilisation is internal and development is indirect having a larval stage which is morphologically distinct from the adult." | |
-| F047 | 4.2.1 | example | "Examples: Sycon (Scypha), Spongilla (Fresh water sponge) and Euspongia (Bath sponge)." | |
-| F048 | 4.2.2 | feature | "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals (Figure 4.6)." | |
-| F049 | 4.2.2 | etymology | "The name cnidaria is derived from the cnidoblasts or cnidocytes (which contain the stinging capsules or nematocysts) present on the tentacles and the body." | |
-| F050 | 4.2.2 | feature | "Cnidoblasts are used for anchorage, defense and for the capture of prey (Figure 4.7)." | |
-| F051 | 4.2.2 | feature | "Cnidarians exhibit tissue level of organisation and are diploblastic." | |
-| F052 | 4.2.2 | feature | "They have a central gastro-vascular cavity with a single opening, mouth on hypostome." | |
-| F053 | 4.2.2 | feature | "Digestion is extracellular and intracellular." | |
-| F054 | 4.2.2 | example | "Some of the cnidarians, e.g., corals have a skeleton composed of calcium carbonate." | |
-| F055 | 4.2.2 | feature | "Cnidarians exhibit two basic body forms called polyp and medusa (Figure 4.6)." | |
-| F056 | 4.2.2 | definition | "The former is a sessile and cylindrical form like Hydra, Adamsia, etc." | |
-| F057 | 4.2.2 | definition | "whereas, the latter is umbrella-shaped and free-swimming like Aurelia or jelly fish" | |
-| F058 | 4.2.2 | process | "Those cnidarians which exist in both forms exhibit alternation of generations (Metagenesis), i.e., polyps produce medusae asexually and medusae form the polyps sexually (e.g., Obelia)." | |
-| F059 | 4.2.2 | example | "Examples: Physalia (Portuguese man-of-war), Adamsia (Sea anemone), Pennatula (Sea-pen), Gorgonia (Sea-fan) and Meandrina (Brain coral)." | |
-| F060 | 4.2.3 | term | "Ctenophores, commonly known as sea walnuts or comb jellies" | |
-| F061 | 4.2.3 | feature | "are exclusively marine, radially symmetrical, diploblastic organisms with tissue level of organisation" | |
-| F062 | 4.2.3 | number | "The body bears eight external rows of ciliated comb plates, which help in locomotion (Figure 4.8)." | |
-| F063 | 4.2.3 | feature | "Digestion is both extracellular and intracellular." | |
-| F064 | 4.2.3 | definition | "Bioluminescence (the property of a living organism to emit light) is well-marked in ctenophores." | |
-| F065 | 4.2.3 | feature | "Sexes are not separate." | |
-| F066 | 4.2.3 | feature | "Reproduction takes place only by sexual means." | |
-| F067 | 4.2.3 | feature | "Fertilisation is external with indirect development." | |
-| F068 | 4.2.3 | example | "Examples: Pleurobrachia and Ctenoplana." | |
-| F069 | 4.2.4 | term | "They have dorso-ventrally flattened body, hence are called flatworms (Figure 4.9)." | |
-| F070 | 4.2.4 | feature | "These are mostly endoparasites found in animals including human beings." | |
-| F071 | 4.2.4 | feature | "Flatworms are bilaterally symmetrical, triploblastic and acoelomate animals with organ level of organisation." | |
-| F072 | 4.2.4 | feature | "Hooks and suckers are present in the parasitic forms." | |
-| F073 | 4.2.4 | feature | "Some of them absorb nutrients from the host directly through their body surface." | |
-| F074 | 4.2.4 | term | "Specialised cells called flame cells help in osmoregulation and excretion." | |
-| F075 | 4.2.4 | feature | "Sexes are not separate." | |
-| F076 | 4.2.4 | feature | "Fertilisation is internal and development is through many larval stages." | |
-| F077 | 4.2.4 | example | "Some members like Planaria possess high regeneration capacity." | |
-| F078 | 4.2.4 | example | "Examples: Taenia (Tapeworm), Fasciola (Liver fluke)." | |
-| F079 | 4.2.5 | term | "The body of the aschelminthes is circular in cross-section, hence, the name roundworms (Figure 4.10)." | |
-| F080 | 4.2.5 | feature | "They may be freeliving, aquatic and terrestrial or parasitic in plants and animals." | |
-| F081 | 4.2.5 | feature | "Roundworms have organ-system level of body organisation." | |
-| F082 | 4.2.5 | feature | "They are bilaterally symmetrical, triploblastic and pseudocoelomate animals." | |
-| F083 | 4.2.5 | feature | "Alimentary canal is complete with a well-developed muscular pharynx." | |
-| F084 | 4.2.5 | feature | "An excretory tube removes body wastes from the body cavity through the excretory pore." | |
-| F085 | 4.2.5 | feature | "Sexes are separate (dioecious), i.e., males and females are distinct." | |
-| F086 | 4.2.5 | comparison | "Often females are longer than males." | |
-| F087 | 4.2.5 | feature | "Fertilisation is internal and development may be direct (the young ones resemble the adult) or indirect." | |
-| F088 | 4.2.5 | example | "Examples : Ascaris (Roundworm), Wuchereria (Filaria worm), Ancylostoma (Hookworm)." | |
-| F089 | 4.2.6 | feature | "They may be aquatic (marine and fresh water) or terrestrial; free-living, and sometimes parasitic." | |
-| F090 | 4.2.6 | feature | "They exhibit organ-system level of body organisation and bilateral symmetry." | |
-| F091 | 4.2.6 | feature | "They are triploblastic, metamerically segmented and coelomate animals." | |
-| F092 | 4.2.6 | etymology | "Their body surface is distinctly marked out into segments or metameres and, hence, the phylum name Annelida (Latin, annulus : little ring) (Figure 4.11)." | |
-| F093 | 4.2.6 | feature | "They possess longitudinal and circular muscles which help in locomotion." | |
-| F094 | 4.2.6 | feature | "Aquatic annelids like Nereis possess lateral appendages, parapodia, which help in swimming." | |
-| F095 | 4.2.6 | feature | "A closed circulatory system is present." | |
-| F096 | 4.2.6 | term | "Nephridia (sing. nephridium) help in osmoregulation and excretion." | |
-| F097 | 4.2.6 | feature | "Neural system consists of paired ganglia (sing. ganglion) connected by lateral nerves to a double ventral nerve cord." | |
-| F098 | 4.2.6 | comparison | "Nereis, an aquatic form, is dioecious, but earthworms and leeches are monoecious." | |
-| F099 | 4.2.6 | feature | "Reproduction is sexual." | |
-| F100 | 4.2.6 | example | "Examples : Nereis, Pheretima (Earthworm) and Hirudinaria (Blood sucking leech)." | |
-| F101 | 4.2.7 | feature | "This is the largest phylum of Animalia which includes insects." | |
-| F102 | 4.2.7 | number | "Over two-thirds of all named species on earth are arthropods (Figure 4.12)." | |
-| F103 | 4.2.7 | feature | "They have organ-system level of organisation." | |
-| F104 | 4.2.7 | feature | "They are bilaterally symmetrical, triploblastic, segmented and coelomate animals." | |
-| F105 | 4.2.7 | feature | "The body of arthropods is covered by chitinous exoskeleton." | |
-| F106 | 4.2.7 | feature | "The body consists of head, thorax and abdomen." | |
-| F107 | 4.2.7 | etymology | "They have jointed appendages (arthros-joint, poda-appendages)." | |
-| F108 | 4.2.7 | feature | "Respiratory organs are gills, book gills, book lungs or tracheal system." | |
-| F109 | 4.2.7 | feature | "Circulatory system is of open type." | |
-| F110 | 4.2.7 | feature | "Sensory organs like antennae, eyes (compound and simple), statocysts or balancing organs are present." | |
-| F111 | 4.2.7 | feature | "Excretion takes place through malpighian tubules." | |
-| F112 | 4.2.7 | feature | "They are mostly dioecious." | |
-| F113 | 4.2.7 | feature | "Fertilisation is usually internal." | |
-| F114 | 4.2.7 | feature | "They are mostly oviparous." | |
-| F115 | 4.2.7 | feature | "Development may be direct or indirect." | |
-| F116 | 4.2.7 | example | "Examples: Economically important insects – Apis (Honey bee), Bombyx (Silkworm), Laccifer (Lac insect)" | |
-| F117 | 4.2.7 | example | "Vectors – Anopheles, Culex and Aedes (Mosquitoes)" | |
-| F118 | 4.2.7 | example | "Gregarious pest – Locusta (Locust)" | |
-| F119 | 4.2.7 | example | "Living fossil – Limulus (King crab)." | |
-| F120 | 4.2.8 | number | "This is the second largest animal phylum (Figure 4.13)." | |
-| F121 | 4.2.8 | feature | "Molluscs are terrestrial or aquatic (marine or fresh water) having an organ-system level of organisation." | |
-| F122 | 4.2.8 | feature | "They are bilaterally symmetrical, triploblastic and coelomate animals." | |
-| F123 | 4.2.8 | feature | "Body is covered by a calcareous shell and is unsegmented with a distinct head, muscular foot and visceral hump." | |
-| F124 | 4.2.8 | feature | "A soft and spongy layer of skin forms a mantle over the visceral hump." | |
-| F125 | 4.2.8 | definition | "The space between the hump and the mantle is called the mantle cavity in which feather like gills are present." | |
-| F126 | 4.2.8 | feature | "They have respiratory and excretory functions." | |
-| F127 | 4.2.8 | feature | "The anterior head region has sensory tentacles." | |
-| F128 | 4.2.8 | term | "The mouth contains a file-like rasping organ for feeding, called radula." | |
-| F129 | 4.2.8 | feature | "They are usually dioecious and oviparous with indirect development." | |
-| F130 | 4.2.8 | example | "Examples: Pila (Apple snail), Pinctada (Pearl oyster), Sepia (Cuttlefish), Loligo (Squid), Octopus (Devil fish), Aplysia (Sea-hare), Dentalium (Tusk shell) and Chaetopleura (Chiton)." | |
-| F131 | 4.2.9 | etymology | "These animals have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied, Figure 4.14)." | |
-| F132 | 4.2.9 | feature | "All are marine with organ-system level of organisation." | |
-| F133 | 4.2.9 | comparison | "The adult echinoderms are radially symmetrical but larvae are bilaterally symmetrical." | |
-| F134 | 4.2.9 | feature | "They are triploblastic and coelomate animals." | |
-| F135 | 4.2.9 | feature | "Digestive system is complete with mouth on the lower (ventral) side and anus on the upper (dorsal) side." | |
-| F136 | 4.2.9 | feature | "The most distinctive feature of echinoderms is the presence of water vascular system which helps in locomotion, capture and transport of food and respiration." | |
-| F137 | 4.2.9 | feature | "An excretory system is absent." | |
-| F138 | 4.2.9 | feature | "Sexes are separate." | |
-| F139 | 4.2.9 | feature | "Reproduction is sexual." | |
-| F140 | 4.2.9 | feature | "Fertilisation is usually external." | |
-| F141 | 4.2.9 | feature | "Development is indirect with free-swimming larva." | |
-| F142 | 4.2.9 | example | "Examples: Asterias (Star fish), Echinus (Sea urchin), Antedon (Sea lily), Cucumaria (Sea cucumber) and Ophiura (Brittle star)." | |
-| F143 | 4.2.10 | comparison | "Hemichordata was earlier considered as a sub-phylum under phylum Chordata. But now it is placed as a separate phylum under non-chordata." | |
-| F144 | 4.2.10 | term | "Hemichordates have a rudimentary structure in the collar region called stomochord, a structure similar to notochord." | |
-| F145 | 4.2.10 | feature | "This phylum consists of a small group of worm-like marine animals with organ-system level of organisation." | |
-| F146 | 4.2.10 | feature | "They are bilaterally symmetrical, triploblastic and coelomate animals." | |
-| F147 | 4.2.10 | feature | "The body is cylindrical and is composed of an anterior proboscis, a collar and a long trunk (Figure 4.15)." | |
-| F148 | 4.2.10 | feature | "Circulatory system is of open type." | |
-| F149 | 4.2.10 | feature | "Respiration takes place through gills." | |
-| F150 | 4.2.10 | term | "Excretory organ is proboscis gland." | |
-| F151 | 4.2.10 | feature | "Sexes are separate." | |
-| F152 | 4.2.10 | feature | "Fertilisation is external." | |
-| F153 | 4.2.10 | feature | "Development is indirect." | |
-| F154 | 4.2.10 | example | "Examples: Balanoglossus and Saccoglossus." | |
-| F155 | 4.0 | heading | "CHAPTER 4" | |
-| F156 | 4.0 | heading | "ANIMAL KINGDOM" | |
-| F157 | 4.1 | heading | "4.1 BASIS OF CLASSIFICATION" | |
-| F158 | 4.1.1 | heading | "4.1.1 Levels of Organisation" | |
-| F159 | 4.1.2 | heading | "4.1.2 Symmetry" | |
-| F160 | 4.1.3 | heading | "4.1.3 Diploblastic and Triploblastic Organisation" | |
-| F161 | 4.1.4 | heading | "4.1.4 Coelom" | |
-| F162 | 4.1.5 | heading | "4.1.5 Segmentation" | |
-| F163 | 4.1.6 | heading | "4.1.6 Notochord" | |
-| F164 | 4.2 | heading | "4.2 CLASSIFICATION OF ANIMALS" | |
-| F165 | 4.2.1 | heading | "4.2.1 Phylum – Porifera" | |
-| F166 | 4.2.2 | heading | "4.2.2 Phylum – Coelenterata (Cnidaria)" | |
-| F167 | 4.2.3 | heading | "4.2.3 Phylum – Ctenophora" | |
-| F168 | 4.2.4 | heading | "4.2.4 Phylum – Platyhelminthes" | |
-| F169 | 4.2.5 | heading | "4.2.5 Phylum – Aschelminthes" | |
-| F170 | 4.2.6 | heading | "4.2.6 Phylum – Annelida" | |
-| F171 | 4.2.7 | heading | "4.2.7 Phylum – Arthropoda" | |
-| F172 | 4.2.8 | heading | "4.2.8 Phylum – Mollusca" | |
-| F173 | 4.2.9 | heading | "4.2.9 Phylum – Echinodermata" | |
-| F174 | 4.2.10 | heading | "4.2.10 Phylum – Hemichordata" | |
-| F175 | 4.0 | heading | Chapter-opening contents sidebar (source page 1, italic light face, not a body heading tier): "4.1 Basis of Classification"; "4.2 Classification of Animals" | |
-| F176 | 4.0 | opener | "When you look around, you will observe different animals with different structures and forms." | |
-| F177 | 4.1 | opener | "Inspite of differences in structure and form of different animals, there are fundamental features common to various individuals in relation to the arrangement of cells, body symmetry, nature of coelom, patterns of digestive, circulatory or reproductive systems." | |
-| F178 | 4.1.1 | opener | "Though all members of Animalia are multicellular, all of them do not exhibit the same pattern of organisation of cells." | |
-| F179 | 4.1.2 | opener | "Animals can be categorised on the basis of their symmetry." | |
-| F180 | 4.1.3 | opener | "Animals in which the cells are arranged in two embryonic layers, an external ectoderm and an internal endoderm, are called diploblastic animals, e.g., coelenterates." | |
-| F181 | 4.1.4 | opener | "Presence or absence of a cavity between the body wall and the gut wall is very important in classification." | |
-| F182 | 4.1.5 | opener | "In some animals, the body is externally and internally divided into segments with a serial repetition of at least some organs." | |
-| F183 | 4.1.6 | opener | "Notochord is a mesodermally derived rod-like structure formed on the dorsal side during embryonic development in some animals." | |
-| F184 | 4.2 | opener | "The broad classification of Animalia, based on common fundamental features as mentioned in the preceding sections, is given in Figure 4.4." | |
-| F185 | 4.2.1 | opener | "Members of this phylum are commonly known as sponges." | |
-| F186 | 4.2.2 | opener | "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals (Figure 4.6)." | |
-| F187 | 4.2.3 | opener | "Ctenophores, commonly known as sea walnuts or comb jellies are exclusively marine, radially symmetrical, diploblastic organisms with tissue level of organisation." | |
-| F188 | 4.2.4 | opener | "They have dorso-ventrally flattened body, hence are called flatworms (Figure 4.9)." | |
-| F189 | 4.2.5 | opener | "The body of the aschelminthes is circular in cross-section, hence, the name roundworms (Figure 4.10)." | |
-| F190 | 4.2.6 | opener | "They may be aquatic (marine and fresh water) or terrestrial; free-living, and sometimes parasitic." | |
-| F191 | 4.2.7 | opener | "This is the largest phylum of Animalia which includes insects." | |
-| F192 | 4.2.8 | opener | "This is the second largest animal phylum (Figure 4.13)." | |
-| F193 | 4.2.9 | opener | "These animals have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied, Figure 4.14)." | |
-| F194 | 4.2.10 | opener | "Hemichordata was earlier considered as a sub-phylum under phylum Chordata." | |
+| F001 | 4.0 | number | "As over a million species of animals have been described till now, the need for classification becomes all the more important." | x |
+| F002 | 4.0 | feature | "The classification also helps in assigning a systematic position to newly described species." | x |
+| F003 | 4.1 | list | "there are fundamental features common to various individuals in relation to the arrangement of cells, body symmetry, nature of coelom, patterns of digestive, circulatory or reproductive systems" | x |
+| F004 | 4.1 | feature | "These features are used as the basis of animal classification and some of them are discussed here." | x |
+| F005 | 4.1.1 | feature | "Though all members of Animalia are multicellular, all of them do not exhibit the same pattern of organisation of cells." | x |
+| F006 | 4.1.1 | definition | "in sponges, the cells are arranged as loose cell aggregates, i.e., they exhibit cellular level of organisation" | x |
+| F007 | 4.1.1 | feature | "Some division of labour (activities) occur among the cells." | x |
+| F008 | 4.1.1 | definition | "In coelenterates, the arrangement of cells is more complex. Here the cells performing the same function are arranged into tissues, hence is called tissue level of organisation." | x |
+| F009 | 4.1.1 | definition | "A still higher level of organisation, i.e., organ level is exhibited by members of Platyhelminthes and other higher phyla where tissues are grouped together to form organs, each specialised for a particular function." | x |
+| F010 | 4.1.1 | definition | "In animals like Annelids, Arthropods, Molluscs, Echinoderms and Chordates, organs have associated to form functional systems, each system concerned with a specific physiological function. This pattern is called organ system level of organisation." | x |
+| F011 | 4.1.1 | feature | "Organ systems in different groups of animals exhibit various patterns of complexities." | x |
+| F012 | 4.1.1 | definition | "the digestive system in Platyhelminthes has only a single opening to the outside of the body that serves as both mouth and anus, and is hence called incomplete" | x |
+| F013 | 4.1.1 | definition | "A complete digestive system has two openings, mouth and anus." | x |
+| F014 | 4.1.1 | definition | "(i) open type in which the blood is pumped out of the heart and the cells and tissues are directly bathed in it" | x |
+| F015 | 4.1.1 | definition | "(ii) closed type in which the blood is circulated through a series of vessels of varying diameters (arteries, veins and capillaries)" | x |
+| F016 | 4.1.2 | definition | "Sponges are mostly asymmetrical, i.e., any plane that passes through the centre does not divide them into equal halves." | x |
+| F017 | 4.1.2 | definition | "When any plane passing through the central axis of the body divides the organism into two identical halves, it is called radial symmetry." | x |
+| F018 | 4.1.2 | example | "Coelenterates, ctenophores and echinoderms have this kind of body plan (Figure 4.1a)." | x |
+| F019 | 4.1.2 | definition | "Animals like annelids, arthropods, etc., where the body can be divided into identical left and right halves in only one plane, exhibit bilateral symmetry (Figure 4.1b)." | x |
+| F020 | 4.1.3 | definition | "Animals in which the cells are arranged in two embryonic layers, an external ectoderm and an internal endoderm, are called diploblastic animals, e.g., coelenterates." | x |
+| F021 | 4.1.3 | feature | "An undifferentiated layer, mesoglea, is present in between the ectoderm and the endoderm (Figure 4.2a)." | x |
+| F022 | 4.1.3 | definition | "Those animals in which the developing embryo has a third germinal layer, mesoderm, in between the ectoderm and endoderm, are called triploblastic animals (platyhelminthes to chordates, Figure 4.2b)." | x |
+| F023 | 4.1.4 | feature | "Presence or absence of a cavity between the body wall and the gut wall is very important in classification." | x |
+| F024 | 4.1.4 | definition | "The body cavity, which is lined by mesoderm is called coelom." | x |
+| F025 | 4.1.4 | example | "Animals possessing coelom are called coelomates, e.g., annelids, molluscs, arthropods, echinoderms, hemichordates and chordates (Figure 4.3a)." | x |
+| F026 | 4.1.4 | definition | "In some animals, the body cavity is not lined by mesoderm, instead, the mesoderm is present as scattered pouches in between the ectoderm and endoderm. Such a body cavity is called pseudocoelom and the animals possessing them are called pseudocoelomates, e.g., aschelminthes (Figure 4.3b)." | x |
+| F027 | 4.1.4 | definition | "The animals in which the body cavity is absent are called acoelomates, e.g., platyhelminthes (Figure 4.3c)." | x |
+| F028 | 4.1.5 | definition | "In some animals, the body is externally and internally divided into segments with a serial repetition of at least some organs." | x |
+| F029 | 4.1.5 | definition | "For example, in earthworm, the body shows this pattern called metameric segmentation and the phenomenon is known as metamerism." | x |
+| F030 | 4.1.6 | definition | "Notochord is a mesodermally derived rod-like structure formed on the dorsal side during embryonic development in some animals." | x |
+| F031 | 4.1.6 | definition | "Animals with notochord are called chordates and those animals which do not form this structure are called non-chordates, e.g., porifera to echinoderms." | x |
+| F032 | 4.2 | feature | "The broad classification of Animalia, based on common fundamental features as mentioned in the preceding sections, is given in Figure 4.4." | x |
+| F033 | 4.2 | feature | "The important characteristic features of the different phyla are described." | x |
+| F034 | 4.2 | exception | Figure 4.4 footnote: "*Echinodermata exhibits radial or bilateral symmetry depending on the stage." | x |
+| F035 | 4.2.1 | term | "Members of this phylum are commonly known as sponges." | x |
+| F036 | 4.2.1 | feature | "They are generally marine and mostly asymmetrical animals (Figure 4.5)." | x |
+| F037 | 4.2.1 | feature | "These are primitive multicellular animals and have cellular level of organisation." | x |
+| F038 | 4.2.1 | feature | "Sponges have a water transport or canal system." | x |
+| F039 | 4.2.1 | process | "Water enters through minute pores (ostia) in the body wall into a central cavity, spongocoel, from where it goes out through the osculum." | x |
+| F040 | 4.2.1 | feature | "This pathway of water transport is helpful in food gathering, respiratory exchange and removal of waste." | x |
+| F041 | 4.2.1 | term | "Choanocytes or collar cells line the spongocoel and the canals." | x |
+| F042 | 4.2.1 | feature | "Digestion is intracellular." | x |
+| F043 | 4.2.1 | feature | "The body is supported by a skeleton made up of spicules or spongin fibres." | x |
+| F044 | 4.2.1 | feature | "Sexes are not separate (hermaphrodite), i.e., eggs and sperms are produced by the same individual." | x |
+| F045 | 4.2.1 | process | "Sponges reproduce asexually by fragmentation and sexually by formation of gametes." | x |
+| F046 | 4.2.1 | feature | "Fertilisation is internal and development is indirect having a larval stage which is morphologically distinct from the adult." | x |
+| F047 | 4.2.1 | example | "Examples: Sycon (Scypha), Spongilla (Fresh water sponge) and Euspongia (Bath sponge)." | x |
+| F048 | 4.2.2 | feature | "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals (Figure 4.6)." | x |
+| F049 | 4.2.2 | etymology | "The name cnidaria is derived from the cnidoblasts or cnidocytes (which contain the stinging capsules or nematocysts) present on the tentacles and the body." | x |
+| F050 | 4.2.2 | feature | "Cnidoblasts are used for anchorage, defense and for the capture of prey (Figure 4.7)." | x |
+| F051 | 4.2.2 | feature | "Cnidarians exhibit tissue level of organisation and are diploblastic." | x |
+| F052 | 4.2.2 | feature | "They have a central gastro-vascular cavity with a single opening, mouth on hypostome." | x |
+| F053 | 4.2.2 | feature | "Digestion is extracellular and intracellular." | x |
+| F054 | 4.2.2 | example | "Some of the cnidarians, e.g., corals have a skeleton composed of calcium carbonate." | x |
+| F055 | 4.2.2 | feature | "Cnidarians exhibit two basic body forms called polyp and medusa (Figure 4.6)." | x |
+| F056 | 4.2.2 | definition | "The former is a sessile and cylindrical form like Hydra, Adamsia, etc." | x |
+| F057 | 4.2.2 | definition | "whereas, the latter is umbrella-shaped and free-swimming like Aurelia or jelly fish" | x |
+| F058 | 4.2.2 | process | "Those cnidarians which exist in both forms exhibit alternation of generations (Metagenesis), i.e., polyps produce medusae asexually and medusae form the polyps sexually (e.g., Obelia)." | x |
+| F059 | 4.2.2 | example | "Examples: Physalia (Portuguese man-of-war), Adamsia (Sea anemone), Pennatula (Sea-pen), Gorgonia (Sea-fan) and Meandrina (Brain coral)." | x |
+| F060 | 4.2.3 | term | "Ctenophores, commonly known as sea walnuts or comb jellies" | x |
+| F061 | 4.2.3 | feature | "are exclusively marine, radially symmetrical, diploblastic organisms with tissue level of organisation" | x |
+| F062 | 4.2.3 | number | "The body bears eight external rows of ciliated comb plates, which help in locomotion (Figure 4.8)." | x |
+| F063 | 4.2.3 | feature | "Digestion is both extracellular and intracellular." | x |
+| F064 | 4.2.3 | definition | "Bioluminescence (the property of a living organism to emit light) is well-marked in ctenophores." | x |
+| F065 | 4.2.3 | feature | "Sexes are not separate." | x |
+| F066 | 4.2.3 | feature | "Reproduction takes place only by sexual means." | x |
+| F067 | 4.2.3 | feature | "Fertilisation is external with indirect development." | x |
+| F068 | 4.2.3 | example | "Examples: Pleurobrachia and Ctenoplana." | x |
+| F069 | 4.2.4 | term | "They have dorso-ventrally flattened body, hence are called flatworms (Figure 4.9)." | x |
+| F070 | 4.2.4 | feature | "These are mostly endoparasites found in animals including human beings." | x |
+| F071 | 4.2.4 | feature | "Flatworms are bilaterally symmetrical, triploblastic and acoelomate animals with organ level of organisation." | x |
+| F072 | 4.2.4 | feature | "Hooks and suckers are present in the parasitic forms." | x |
+| F073 | 4.2.4 | feature | "Some of them absorb nutrients from the host directly through their body surface." | x |
+| F074 | 4.2.4 | term | "Specialised cells called flame cells help in osmoregulation and excretion." | x |
+| F075 | 4.2.4 | feature | "Sexes are not separate." | x |
+| F076 | 4.2.4 | feature | "Fertilisation is internal and development is through many larval stages." | x |
+| F077 | 4.2.4 | example | "Some members like Planaria possess high regeneration capacity." | x |
+| F078 | 4.2.4 | example | "Examples: Taenia (Tapeworm), Fasciola (Liver fluke)." | x |
+| F079 | 4.2.5 | term | "The body of the aschelminthes is circular in cross-section, hence, the name roundworms (Figure 4.10)." | x |
+| F080 | 4.2.5 | feature | "They may be freeliving, aquatic and terrestrial or parasitic in plants and animals." | x |
+| F081 | 4.2.5 | feature | "Roundworms have organ-system level of body organisation." | x |
+| F082 | 4.2.5 | feature | "They are bilaterally symmetrical, triploblastic and pseudocoelomate animals." | x |
+| F083 | 4.2.5 | feature | "Alimentary canal is complete with a well-developed muscular pharynx." | x |
+| F084 | 4.2.5 | feature | "An excretory tube removes body wastes from the body cavity through the excretory pore." | x |
+| F085 | 4.2.5 | feature | "Sexes are separate (dioecious), i.e., males and females are distinct." | x |
+| F086 | 4.2.5 | comparison | "Often females are longer than males." | x |
+| F087 | 4.2.5 | feature | "Fertilisation is internal and development may be direct (the young ones resemble the adult) or indirect." | x |
+| F088 | 4.2.5 | example | "Examples : Ascaris (Roundworm), Wuchereria (Filaria worm), Ancylostoma (Hookworm)." | x |
+| F089 | 4.2.6 | feature | "They may be aquatic (marine and fresh water) or terrestrial; free-living, and sometimes parasitic." | x |
+| F090 | 4.2.6 | feature | "They exhibit organ-system level of body organisation and bilateral symmetry." | x |
+| F091 | 4.2.6 | feature | "They are triploblastic, metamerically segmented and coelomate animals." | x |
+| F092 | 4.2.6 | etymology | "Their body surface is distinctly marked out into segments or metameres and, hence, the phylum name Annelida (Latin, annulus : little ring) (Figure 4.11)." | x |
+| F093 | 4.2.6 | feature | "They possess longitudinal and circular muscles which help in locomotion." | x |
+| F094 | 4.2.6 | feature | "Aquatic annelids like Nereis possess lateral appendages, parapodia, which help in swimming." | x |
+| F095 | 4.2.6 | feature | "A closed circulatory system is present." | x |
+| F096 | 4.2.6 | term | "Nephridia (sing. nephridium) help in osmoregulation and excretion." | x |
+| F097 | 4.2.6 | feature | "Neural system consists of paired ganglia (sing. ganglion) connected by lateral nerves to a double ventral nerve cord." | x |
+| F098 | 4.2.6 | comparison | "Nereis, an aquatic form, is dioecious, but earthworms and leeches are monoecious." | x |
+| F099 | 4.2.6 | feature | "Reproduction is sexual." | x |
+| F100 | 4.2.6 | example | "Examples : Nereis, Pheretima (Earthworm) and Hirudinaria (Blood sucking leech)." | x |
+| F101 | 4.2.7 | feature | "This is the largest phylum of Animalia which includes insects." | x |
+| F102 | 4.2.7 | number | "Over two-thirds of all named species on earth are arthropods (Figure 4.12)." | x |
+| F103 | 4.2.7 | feature | "They have organ-system level of organisation." | x |
+| F104 | 4.2.7 | feature | "They are bilaterally symmetrical, triploblastic, segmented and coelomate animals." | x |
+| F105 | 4.2.7 | feature | "The body of arthropods is covered by chitinous exoskeleton." | x |
+| F106 | 4.2.7 | feature | "The body consists of head, thorax and abdomen." | x |
+| F107 | 4.2.7 | etymology | "They have jointed appendages (arthros-joint, poda-appendages)." | x |
+| F108 | 4.2.7 | feature | "Respiratory organs are gills, book gills, book lungs or tracheal system." | x |
+| F109 | 4.2.7 | feature | "Circulatory system is of open type." | x |
+| F110 | 4.2.7 | feature | "Sensory organs like antennae, eyes (compound and simple), statocysts or balancing organs are present." | x |
+| F111 | 4.2.7 | feature | "Excretion takes place through malpighian tubules." | x |
+| F112 | 4.2.7 | feature | "They are mostly dioecious." | x |
+| F113 | 4.2.7 | feature | "Fertilisation is usually internal." | x |
+| F114 | 4.2.7 | feature | "They are mostly oviparous." | x |
+| F115 | 4.2.7 | feature | "Development may be direct or indirect." | x |
+| F116 | 4.2.7 | example | "Examples: Economically important insects – Apis (Honey bee), Bombyx (Silkworm), Laccifer (Lac insect)" | x |
+| F117 | 4.2.7 | example | "Vectors – Anopheles, Culex and Aedes (Mosquitoes)" | x |
+| F118 | 4.2.7 | example | "Gregarious pest – Locusta (Locust)" | x |
+| F119 | 4.2.7 | example | "Living fossil – Limulus (King crab)." | x |
+| F120 | 4.2.8 | number | "This is the second largest animal phylum (Figure 4.13)." | x |
+| F121 | 4.2.8 | feature | "Molluscs are terrestrial or aquatic (marine or fresh water) having an organ-system level of organisation." | x |
+| F122 | 4.2.8 | feature | "They are bilaterally symmetrical, triploblastic and coelomate animals." | x |
+| F123 | 4.2.8 | feature | "Body is covered by a calcareous shell and is unsegmented with a distinct head, muscular foot and visceral hump." | x |
+| F124 | 4.2.8 | feature | "A soft and spongy layer of skin forms a mantle over the visceral hump." | x |
+| F125 | 4.2.8 | definition | "The space between the hump and the mantle is called the mantle cavity in which feather like gills are present." | x |
+| F126 | 4.2.8 | feature | "They have respiratory and excretory functions." | x |
+| F127 | 4.2.8 | feature | "The anterior head region has sensory tentacles." | x |
+| F128 | 4.2.8 | term | "The mouth contains a file-like rasping organ for feeding, called radula." | x |
+| F129 | 4.2.8 | feature | "They are usually dioecious and oviparous with indirect development." | x |
+| F130 | 4.2.8 | example | "Examples: Pila (Apple snail), Pinctada (Pearl oyster), Sepia (Cuttlefish), Loligo (Squid), Octopus (Devil fish), Aplysia (Sea-hare), Dentalium (Tusk shell) and Chaetopleura (Chiton)." | x |
+| F131 | 4.2.9 | etymology | "These animals have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied, Figure 4.14)." | x |
+| F132 | 4.2.9 | feature | "All are marine with organ-system level of organisation." | x |
+| F133 | 4.2.9 | comparison | "The adult echinoderms are radially symmetrical but larvae are bilaterally symmetrical." | x |
+| F134 | 4.2.9 | feature | "They are triploblastic and coelomate animals." | x |
+| F135 | 4.2.9 | feature | "Digestive system is complete with mouth on the lower (ventral) side and anus on the upper (dorsal) side." | x |
+| F136 | 4.2.9 | feature | "The most distinctive feature of echinoderms is the presence of water vascular system which helps in locomotion, capture and transport of food and respiration." | x |
+| F137 | 4.2.9 | feature | "An excretory system is absent." | x |
+| F138 | 4.2.9 | feature | "Sexes are separate." | x |
+| F139 | 4.2.9 | feature | "Reproduction is sexual." | x |
+| F140 | 4.2.9 | feature | "Fertilisation is usually external." | x |
+| F141 | 4.2.9 | feature | "Development is indirect with free-swimming larva." | x |
+| F142 | 4.2.9 | example | "Examples: Asterias (Star fish), Echinus (Sea urchin), Antedon (Sea lily), Cucumaria (Sea cucumber) and Ophiura (Brittle star)." | x |
+| F143 | 4.2.10 | comparison | "Hemichordata was earlier considered as a sub-phylum under phylum Chordata. But now it is placed as a separate phylum under non-chordata." | x |
+| F144 | 4.2.10 | term | "Hemichordates have a rudimentary structure in the collar region called stomochord, a structure similar to notochord." | x |
+| F145 | 4.2.10 | feature | "This phylum consists of a small group of worm-like marine animals with organ-system level of organisation." | x |
+| F146 | 4.2.10 | feature | "They are bilaterally symmetrical, triploblastic and coelomate animals." | x |
+| F147 | 4.2.10 | feature | "The body is cylindrical and is composed of an anterior proboscis, a collar and a long trunk (Figure 4.15)." | x |
+| F148 | 4.2.10 | feature | "Circulatory system is of open type." | x |
+| F149 | 4.2.10 | feature | "Respiration takes place through gills." | x |
+| F150 | 4.2.10 | term | "Excretory organ is proboscis gland." | x |
+| F151 | 4.2.10 | feature | "Sexes are separate." | x |
+| F152 | 4.2.10 | feature | "Fertilisation is external." | x |
+| F153 | 4.2.10 | feature | "Development is indirect." | x |
+| F154 | 4.2.10 | example | "Examples: Balanoglossus and Saccoglossus." | x |
+| F155 | 4.0 | heading | "CHAPTER 4" | x |
+| F156 | 4.0 | heading | "ANIMAL KINGDOM" | x |
+| F157 | 4.1 | heading | "4.1 BASIS OF CLASSIFICATION" | x |
+| F158 | 4.1.1 | heading | "4.1.1 Levels of Organisation" | x |
+| F159 | 4.1.2 | heading | "4.1.2 Symmetry" | x |
+| F160 | 4.1.3 | heading | "4.1.3 Diploblastic and Triploblastic Organisation" | x |
+| F161 | 4.1.4 | heading | "4.1.4 Coelom" | x |
+| F162 | 4.1.5 | heading | "4.1.5 Segmentation" | x |
+| F163 | 4.1.6 | heading | "4.1.6 Notochord" | x |
+| F164 | 4.2 | heading | "4.2 CLASSIFICATION OF ANIMALS" | x |
+| F165 | 4.2.1 | heading | "4.2.1 Phylum – Porifera" | x |
+| F166 | 4.2.2 | heading | "4.2.2 Phylum – Coelenterata (Cnidaria)" | x |
+| F167 | 4.2.3 | heading | "4.2.3 Phylum – Ctenophora" | x |
+| F168 | 4.2.4 | heading | "4.2.4 Phylum – Platyhelminthes" | x |
+| F169 | 4.2.5 | heading | "4.2.5 Phylum – Aschelminthes" | x |
+| F170 | 4.2.6 | heading | "4.2.6 Phylum – Annelida" | x |
+| F171 | 4.2.7 | heading | "4.2.7 Phylum – Arthropoda" | x |
+| F172 | 4.2.8 | heading | "4.2.8 Phylum – Mollusca" | x |
+| F173 | 4.2.9 | heading | "4.2.9 Phylum – Echinodermata" | x |
+| F174 | 4.2.10 | heading | "4.2.10 Phylum – Hemichordata" | x |
+| F175 | 4.0 | heading | Chapter-opening contents sidebar (source page 1, italic light face, not a body heading tier): "4.1 Basis of Classification"; "4.2 Classification of Animals" | x |
+| F176 | 4.0 | opener | "When you look around, you will observe different animals with different structures and forms." | x |
+| F177 | 4.1 | opener | "Inspite of differences in structure and form of different animals, there are fundamental features common to various individuals in relation to the arrangement of cells, body symmetry, nature of coelom, patterns of digestive, circulatory or reproductive systems." | x |
+| F178 | 4.1.1 | opener | "Though all members of Animalia are multicellular, all of them do not exhibit the same pattern of organisation of cells." | x |
+| F179 | 4.1.2 | opener | "Animals can be categorised on the basis of their symmetry." | x |
+| F180 | 4.1.3 | opener | "Animals in which the cells are arranged in two embryonic layers, an external ectoderm and an internal endoderm, are called diploblastic animals, e.g., coelenterates." | x |
+| F181 | 4.1.4 | opener | "Presence or absence of a cavity between the body wall and the gut wall is very important in classification." | x |
+| F182 | 4.1.5 | opener | "In some animals, the body is externally and internally divided into segments with a serial repetition of at least some organs." | x |
+| F183 | 4.1.6 | opener | "Notochord is a mesodermally derived rod-like structure formed on the dorsal side during embryonic development in some animals." | x |
+| F184 | 4.2 | opener | "The broad classification of Animalia, based on common fundamental features as mentioned in the preceding sections, is given in Figure 4.4." | x |
+| F185 | 4.2.1 | opener | "Members of this phylum are commonly known as sponges." | x |
+| F186 | 4.2.2 | opener | "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals (Figure 4.6)." | x |
+| F187 | 4.2.3 | opener | "Ctenophores, commonly known as sea walnuts or comb jellies are exclusively marine, radially symmetrical, diploblastic organisms with tissue level of organisation." | x |
+| F188 | 4.2.4 | opener | "They have dorso-ventrally flattened body, hence are called flatworms (Figure 4.9)." | x |
+| F189 | 4.2.5 | opener | "The body of the aschelminthes is circular in cross-section, hence, the name roundworms (Figure 4.10)." | x |
+| F190 | 4.2.6 | opener | "They may be aquatic (marine and fresh water) or terrestrial; free-living, and sometimes parasitic." | x |
+| F191 | 4.2.7 | opener | "This is the largest phylum of Animalia which includes insects." | x |
+| F192 | 4.2.8 | opener | "This is the second largest animal phylum (Figure 4.13)." | x |
+| F193 | 4.2.9 | opener | "These animals have an endoskeleton of calcareous ossicles and, hence, the name Echinodermata (Spiny bodied, Figure 4.14)." | x |
+| F194 | 4.2.10 | opener | "Hemichordata was earlier considered as a sub-phylum under phylum Chordata." | x |
 | F195 | 4.2.11 | definition | "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16)." | |
 | F196 | 4.2.11 | feature | "These are bilaterally symmetrical, triploblastic, coelomate with organ-system level of organisation." | |
 | F197 | 4.2.11 | feature | "They possess a post anal tail and a closed circulatory system." | |
@@ -447,14 +447,14 @@ Re-parsing the **frozen** table with the machine (`scratch/ch4_gate1/validate_1z
 | F340 | 4.2.11.5 | opener | "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl)." | |
 | F341 | 4.2.11.6 | opener | "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich)." | |
 | F342 | 4.2.11.7 | opener | "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves." | |
-| F343 | 4.1.3 | caption | Figure labels: "Ectoderm"; "Mesoglea"; "Endoderm"; "Mesoderm" (Figure 4.2ab, harvested from the rendered asset) | |
-| F344 | 4.1.4 | caption | Figure labels: "Coelom"; "Pseudocoelom" (Figure 4.3abc, harvested from the rendered asset; panel (c) is unlabeled in the source) | |
-| F345 | 4.2 | caption | Figure labels: "Kingdom"; "Levels of Organisation"; "Symmetry"; "Body Cavity or Coelom"; "Phylum"; "Animalia (multicellular)"; "Cellular level"; "mostly asymmetrical"; "acoelomata"; "Porifera"; "Tissue/Organ/Organ system"; "Radial"; "Coelenterata (Cnidaria)"; "Ctenophora"; "Without body cavity (acoelomates)"; "Platyhelminthes"; "Bilateral"; "With false coelom (pseudocoelomates)"; "Aschelminthes"; "With true coelom (coelomates)"; "Annelida"; "Arthropoda"; "Mollusca"; "Echinodermata"; "Hemichordata"; "Chordata" (Figure 4.4, harvested from the rendered asset) | |
-| F346 | 4.2.5 | caption | Figure labels: "Male"; "Female" (Figure 4.10, harvested from the rendered asset) | |
-| F347 | 4.2.10 | caption | Figure labels: "Proboscis"; "Collar"; "Trunk" (Figure 4.15, harvested from the rendered asset) | |
+| F343 | 4.1.3 | caption | Figure labels: "Ectoderm"; "Mesoglea"; "Endoderm"; "Mesoderm" (Figure 4.2ab, harvested from the rendered asset) | x |
+| F344 | 4.1.4 | caption | Figure labels: "Coelom"; "Pseudocoelom" (Figure 4.3abc, harvested from the rendered asset; panel (c) is unlabeled in the source) | x |
+| F345 | 4.2 | caption | Figure labels: "Kingdom"; "Levels of Organisation"; "Symmetry"; "Body Cavity or Coelom"; "Phylum"; "Animalia (multicellular)"; "Cellular level"; "mostly asymmetrical"; "acoelomata"; "Porifera"; "Tissue/Organ/Organ system"; "Radial"; "Coelenterata (Cnidaria)"; "Ctenophora"; "Without body cavity (acoelomates)"; "Platyhelminthes"; "Bilateral"; "With false coelom (pseudocoelomates)"; "Aschelminthes"; "With true coelom (coelomates)"; "Annelida"; "Arthropoda"; "Mollusca"; "Echinodermata"; "Hemichordata"; "Chordata" (Figure 4.4, harvested from the rendered asset) | x |
+| F346 | 4.2.5 | caption | Figure labels: "Male"; "Female" (Figure 4.10, harvested from the rendered asset) | x |
+| F347 | 4.2.10 | caption | Figure labels: "Proboscis"; "Collar"; "Trunk" (Figure 4.15, harvested from the rendered asset) | x |
 | F348 | 4.2.11 | caption | Figure labels: "Nerve cord"; "Notochord"; "Post-anal part"; "Gill slits" (Figure 4.16, harvested from the rendered asset) | |
 | F349 | 4.2.11 | caption | Figure labels: "Vertebrata"; "Division"; "Agnatha (lacks jaw)"; "Gnathostomata (bears jaw)"; "Super Class"; "Pisces (bear fins)"; "Tetrapoda (bear limbs)"; "Class"; "Cyclostomata"; "Chondrichthyes"; "Osteichthyes"; "Amphibia"; "Reptilia"; "Aves"; "Mammals" (Vertebrata chart, harvested from the rendered asset) | |
-| F350 | 4.2.1 | feature | "Porifera … have characteristic flagellated choanocytes." (folded from SUMMARY at 1-Z — body F041 names "Choanocytes or collar cells" but never states they are flagellated; only the "flagellated" qualifier is SUMMARY-UNIQUE) | |
+| F350 | 4.2.1 | feature | "Porifera … have characteristic flagellated choanocytes." (folded from SUMMARY at 1-Z — body F041 names "Choanocytes or collar cells" but never states they are flagellated; only the "flagellated" qualifier is SUMMARY-UNIQUE) | x |
 | F351 | 4.2.11.1 | feature | "They are the most primitive chordates …" (folded from SUMMARY at 1-Z — body F219/F336 state cyclostomes are ectoparasites on fishes but never that they are the most primitive chordates; the ectoparasite half is BODY-PRESENT, only "most primitive chordates" is SUMMARY-UNIQUE) | |
 | F352 | 4.2.11.5 | feature | "Limbs are absent in snakes." (folded from SUMMARY at 1-Z — body F273/F279 describe reptile dry/cornified skin and scale-shedding by snakes and lizards but never state that limbs are absent in snakes) | |
 
