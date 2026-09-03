@@ -5,7 +5,7 @@
 **Text snapshot for this arc:** `scratch/ch4_gate1/ch4_source.txt` (1022 lines, PyMuPDF, page markers `===== PAGE n =====`).
 **Protocol:** `GATE_1_PASS_1_SOURCE_MASTERY.md`, run as a **big chapter** (§8) — halves 1a and 1b into one inventory.
 
-> **GATE 1 IS OPEN. Pass 1 is 3 of 8 sessions done. Chapter 4 must not appear in any completion tally.**
+> **GATE 1 IS OPEN. Pass 1 is 4 of 8 sessions done. Chapter 4 must not appear in any completion tally.**
 
 ---
 
@@ -56,8 +56,10 @@ No row, count or claim from that arc was carried into the new inventory.
 | 1b-S | Steps 1–3 — second half | [ ] not started | — |
 | 1b-H | Step 4 — second half | [ ] not started | — |
 | 1b-O | Step 5 — second half | [ ] not started | — |
-| 1-F | Step 6 — figures, whole chapter | [ ] not started | — |
+| 1-F | Step 6 — figures, whole chapter | [x] DONE (2026-09-03) | 26 manifest rows |
 | 1-Z | Steps 7–10 — gaps, summary, freeze | [ ] not started | — |
+
+**1-F is complete**: all 26 trusted PNG assets in `assets/` were opened and visually verified against the source-page placement. The manifest now records 26 rows: numbered plates 4.1–4.24 grouped by their actual asset files, plus the real unnumbered `fig_vertebrata_chart.png` on source page 11. All assets are grayscale (`mode=L`), captions/prose are excluded, the corrected 4.5 plain rectangle is `(60,426,290,681)`, and the corrected 4.11 mask/rect is documented in the manifest. No figure was counted as a bonus or duplicated.
 
 **Next session: `1b-S`** (steps 1–3, prose facts, second half — pages 10–18). Nothing may be back-dated into a freeze; new findings become new rows in their own session.
 
@@ -135,7 +137,7 @@ Full list lives in the inventory's `## Carry-over list` (7 items). The ones that
 | `Ch4_AnimalKingdom_inventory.md` | **current** — 194 rows (154 facts + 21 headings + 19 openers), working file, **NOT frozen** |
 | `Ch4_AnimalKingdom_TRACKER.md` (this file) | **current** |
 | `scratch/ch4_gate1/ch4_source.txt` | **current** — 18/18 pages, page-marked |
-| `assets/` (26 PNG) | **assets trusted, metadata not** — re-derived at 1-F |
+| `assets/` (26 PNG) | **assets and metadata verified at 1-F** — all opened, grayscale confirmed, manifest documented |
 | `extract_figures.py` | untrusted arc — starting point for 1-F rectangles only |
 | `Ch4_figure_audit.md` | untrusted arc — not evidence |
 | `Ch4_prior_TRACKER_UNTRUSTED.md`, `Ch4_prior_figure_notes_UNTRUSTED.md` | archived, **not evidence** |

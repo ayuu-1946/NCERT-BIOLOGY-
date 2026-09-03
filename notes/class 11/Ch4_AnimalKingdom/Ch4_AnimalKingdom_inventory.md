@@ -26,10 +26,10 @@ Seam rule: TABLE 4.2 is assigned to **1b by physical location** even though its 
 | 1a-H | Step 4, heading sweep, first half | **DONE** | 21 (F155–F175) |
 | 1a-O | Step 5, opener sweep, first half | **DONE** | 19 (F176–F194) |
 | 1b-S / 1b-H / 1b-O | second half | not started | — |
-| 1-F | Step 6, figures, whole chapter | not started | — |
+| 1-F | Step 6, figures, whole chapter | **DONE (2026-09-03)** | 26 manifest rows |
 | 1-Z | Steps 7–10, gaps + summary + freeze | not started | — |
 
-**Pass 1a is complete** (1a-S + 1a-H + 1a-O = 154 + 21 + 19 = 194 rows, machine-re-parsed below). Next session is **1b-S**. This is not a gate: Gate 1 is evaluated over the whole chapter only after 1b and the whole-chapter 1-F and 1-Z. The inventory stays a working file, unfrozen.
+**Pass 1a is complete** (1a-S + 1a-H + 1a-O = 154 + 21 + 19 = 194 rows, machine-re-parsed below). Session **1-F is also complete** with 26 manifest rows. Next session is **1b-S**. This is not a gate: Gate 1 is evaluated over the whole chapter only after 1b and 1-Z. The inventory stays a working file, unfrozen.
 
 ### 1a-S census — re-parsed from the Facts table itself (step 10), never hand-tallied
 
@@ -54,7 +54,7 @@ Re-parsing the finished table gives **21 heading rows, IDs `F155`–`F175`, cont
 
 Re-parsing gives **19 opener rows, IDs `F176`–`F194`, contiguous, all unticked** — exactly one opener for each of the 19 sections in the 1a half. Count derivable from the list: `4.0`(1) + `4.1`(1) + `4.1.1`–`4.1.6`(6) + `4.2`(1) + `4.2.1`–`4.2.10`(10) = 1 + 1 + 6 + 1 + 10 = **19**, matching the machine tally. Openers were read from **layout reading-order** (blocks sorted by y-position), not the raw text stream — see carry-over #5 (discharged). §4.2.11 Chordata's opener (page 9) was not taken; it belongs to 1b.
 
-`check_pdf.py._extract_labels` run against this file returns **0 label rows, 0 figures, no phantom `Fig #` row** — correct for a file whose 1-F session has not run. It must return a non-zero, non-doubled count after 1-F.
+`check_pdf.py._extract_labels` baseline was **0 label rows, 0 figures, no phantom `Fig #` row** before 1-F. The figure manifest now contains **26 non-doubled caption rows**, including the unnumbered Vertebrata chart; figure rows are documentation only and remain unticked until Pass 2.
 
 ### `Type` controlled vocabulary (normalised lowercase, asserted at 1-Z)
 
@@ -271,7 +271,32 @@ Re-parsing gives **19 opener rows, IDs `F176`–`F194`, contiguous, all unticked
 ## Figure manifest
 | Fig # | Caption (verbatim) | Asset file | Source page | Mono | Verified |
 |---|---|---|---|---|---|
-| _pending session 1-F — 26 assets exist on disk in `assets/`, none re-verified in this arc_ | — | — | — | no | no |
+| 4.1a | Radial symmetry | `fig_4_1a.png` | 2 | yes | yes — visually verified; complete radial-symmetry organism, no baked-in text labels |
+| 4.1b | Bilateral symmetry | `fig_4_1b.png` | 2 | yes | yes — visually verified; complete crab, no baked-in text labels |
+| 4.2ab | Diploblastic and triploblastic organisation | `fig_4_2ab.png` | 3 | yes | yes — visually verified; (a)/(b) artwork and in-figure labels complete |
+| 4.3abc | Coelom, pseudocoelom and acoelom | `fig_4_3abc.png` | 3 | yes | yes — visually verified; (a)/(b)/(c) artwork and labels complete |
+| 4.4 | Broad classification of Kingdom Animalia | `fig_4_4.png` | 4 | yes | yes — visually verified; full classification chart and text labels complete |
+| 4.5abc | Examples of Porifera: (a) Sycon, (b) Euspongia, (c) Spongilla | `fig_4_5abc.png` | 4 | yes | yes — visually verified; plain rect `(60,426,290,681)`, all three panels complete, prose/caption excluded |
+| 4.6ab | (a) Polyp and (b) medusa | `fig_4_6ab.png` | 5 | yes | yes — visually verified; both cnidarian body forms complete |
+| 4.7 | Cnidoblast | `fig_4_7.png` | 5 | yes | yes — visually verified; artwork complete, no baked-in text labels |
+| 4.8 | Pleurobrachia | `fig_4_8.png` | 6 | yes | yes — visually verified; upper tip retained, no baked-in text labels |
+| 4.9ab | (a) Taenia and (b) Fasciola | `fig_4_9ab.png` | 6 | yes | yes — visually verified; both flatworm specimens complete |
+| 4.10 | Male and female Ascaris | `fig_4_10.png` | 7 | yes | yes — visually verified; head tips intact and “Male”/“Female” labels retained |
+| 4.11ab | (a) Nereis and (b) Hirudinaria | `fig_4_11ab.png` | 7 | yes | yes — visually verified; rect `(310,356,512,687)` with foreign “Roundworm” caption masked; artwork complete |
+| 4.12abcd | Different classes of Arthropoda | `fig_4_12abcd.png` | 8 | yes | yes — visually verified; four subfigures complete |
+| 4.13ab | (a) Unio and (b) Sepia | `fig_4_13ab.png` | 8 | yes | yes — visually verified; both mollusc specimens complete |
+| 4.14ab | (a) Asterias and (b) Ophiura | `fig_4_14ab.png` | 9 | yes | yes — visually verified; both echinoderm specimens complete |
+| 4.15 | Proboscis, collar and trunk of Balanoglossus | `fig_4_15.png` | 10 | yes | yes — visually verified; in-figure labels complete |
+| 4.16 | External features of a urochordate | `fig_4_16.png` | 10 | yes | yes — visually verified; in-figure labels complete |
+| Vertebrata chart | The subphylum Vertebrata is further divided as follows | `fig_vertebrata_chart.png` | 11 | yes | yes — real unnumbered figure; full chart and labels complete |
+| 4.17 | Ascidia | `fig_4_17.png` | 11 | yes | yes — visually verified; artwork complete, asterisk retained |
+| 4.18 | Amphioxus | `fig_4_18.png` | 12 | yes | yes — visually verified; complete specimen, no baked-in text labels |
+| 4.19ab | (a) Petromyzon and (b) Myxine | `fig_4_19ab.png` | 12 | yes | yes — visually verified; both specimens complete |
+| 4.20ab | (a) Scoliodon and (b) Pristis | `fig_4_20ab.png` | 12 | yes | yes — visually verified; rect `(54,96,255,336)`, fish edges and artwork complete, prose excluded |
+| 4.21ab | (a) Rohu and (b) Catla | `fig_4_21ab.png` | 13 | yes | yes — visually verified; both fish specimens complete |
+| 4.22abcd | (a) Salamandra, (b) Rana, (c) Testudo and (d) Chameleon | `fig_4_22abcd.png` | 13 | yes | yes — visually verified; four amphibian/reptile specimens complete |
+| 4.23abcd | (a) Psittacula, (b) Pavo, (c) Columba and (d) Corvus | `fig_4_23abcd.png` | 14 | yes | yes — visually verified; four bird specimens complete |
+| 4.24abcd | (a) Oryctolagus, (b) Macaca, (c) Canis and (d) Panthera | `fig_4_24abcd.png` | 14 | yes | yes — visually verified; four mammal specimens complete |
 
 ## Carry-over list
 
