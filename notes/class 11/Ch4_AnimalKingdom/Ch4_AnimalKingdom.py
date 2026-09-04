@@ -27,7 +27,7 @@ while not os.path.exists(os.path.join(ROOT, "neet_template.py")):
     ROOT = parent
 sys.path.insert(0, ROOT)
 
-from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether
+from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether, PageBreak
 from reportlab.lib.units import cm
 from neet_template import (
     STYLES, heading, keyterm, process_flow, note, memory_aid,
@@ -512,17 +512,19 @@ story.append(b1("Besides the basic chordate characters, vertebrates have a ventr
                 "heart with two, three or four chambers, kidneys for excretion and "
                 "osmoregulation and paired appendages which may be fins or limbs."))
 
-# TABLE 4.1
-story.append(body("<b>TABLE 4.1</b> Comparison of Chordates and Non-chordates"))
-story.append(data_table([
-    ["Chordates", "Non-chordates"],
-    ["Notochord present.", "Notochord absent."],
-    ["Central nervous system is dorsal, hollow and single.",
-     "Central nervous system is ventral, solid and double."],
-    ["Pharynx perforated by gill slits.", "Gill slits are absent."],
-    ["Heart is ventral.", "Heart is dorsal (if present)."],
-    ["A post-anal part (tail) is present.", "Post-anal tail is absent."],
-], col_widths=[1, 1]))
+# TABLE 4.1 — kept on a single page (label + full table never split)
+story.append(KeepTogether([
+    body("<b>TABLE 4.1</b> Comparison of Chordates and Non-chordates"),
+    data_table([
+        ["Chordates", "Non-chordates"],
+        ["Notochord present.", "Notochord absent."],
+        ["Central nervous system is dorsal, hollow and single.",
+         "Central nervous system is ventral, solid and double."],
+        ["Pharynx perforated by gill slits.", "Gill slits are absent."],
+        ["Heart is ventral.", "Heart is dorsal (if present)."],
+        ["A post-anal part (tail) is present.", "Post-anal tail is absent."],
+    ], col_widths=[1, 1]),
+]))
 
 # Vertebrata classification chart
 story.append(body("<b>The subphylum Vertebrata is further divided as follows:</b>"))
@@ -544,21 +546,25 @@ story.append(figure("fig_vertebrata_chart.png",
                     max_width_cm=14.85))
 
 # ---- 4.2.11.1 Class - Cyclostomata ----
-story.append(heading("4.2.11.1", "Class - Cyclostomata", level=3))
-story.append(b1("All living members of the class Cyclostomata are ectoparasites on some fishes. "
-                "They are the <b>most primitive chordates</b>."))
-story.append(b1("They have an elongated body bearing <b>6-15 pairs of gill slits</b> for "
-                "respiration. Cyclostomes have a sucking and circular mouth without jaws "
-                "(Fig. 4.18)."))
-story.append(b1("Their body is devoid of scales and paired fins. Cranium and vertebral column "
-                "are cartilaginous. Circulation is of closed type."))
-story.append(b1("Cyclostomes are marine but migrate for spawning to fresh water. After "
-                "spawning, within a few days, they die. Their larvae, after metamorphosis, "
-                "return to the ocean."))
-story.append(b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."))
-story.append(figure("fig_4_18.png",
-                    "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
-                    max_width_cm=14.59))
+# Whole section (heading -> Fig. 4.18) kept together so the figure never
+# splits away from the Cyclostomata text onto the next page.
+story.append(KeepTogether([
+    heading("4.2.11.1", "Class - Cyclostomata", level=3),
+    b1("All living members of the class Cyclostomata are ectoparasites on some fishes. "
+       "They are the <b>most primitive chordates</b>."),
+    b1("They have an elongated body bearing <b>6-15 pairs of gill slits</b> for "
+       "respiration. Cyclostomes have a sucking and circular mouth without jaws "
+       "(Fig. 4.18)."),
+    b1("Their body is devoid of scales and paired fins. Cranium and vertebral column "
+       "are cartilaginous. Circulation is of closed type."),
+    b1("Cyclostomes are marine but migrate for spawning to fresh water. After "
+       "spawning, within a few days, they die. Their larvae, after metamorphosis, "
+       "return to the ocean."),
+    b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."),
+    figure("fig_4_18.png",
+           "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
+           max_width_cm=14.59),
+]))
 
 # ---- 4.2.11.2 Class - Chondrichthyes ----
 story.append(heading("4.2.11.2", "Class - Chondrichthyes", level=3))
@@ -693,7 +699,10 @@ story.append(figure("fig_4_24abcd.png",
                     "(c) Pteropus (d) Balaenoptera.",
                     max_width_cm=13.08))
 
-# TABLE 4.2 — salient features of all phyla
+# TABLE 4.2 — salient features of all phyla.
+# Force a page break so this section opens a fresh page (the second-to-last
+# page), beginning with the "salient distinguishing features" sentence.
+story.append(PageBreak())
 story.append(body("The salient distinguishing features of all phyla under the animal kingdom "
                   "are comprehensively given in Table 4.2."))
 story.append(body("<b>TABLE 4.2</b> Salient Features of Different Phyla in the Animal Kingdom"))
