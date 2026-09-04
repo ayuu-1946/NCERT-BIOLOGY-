@@ -27,9 +27,10 @@ while not os.path.exists(os.path.join(ROOT, "neet_template.py")):
     ROOT = parent
 sys.path.insert(0, ROOT)
 
-from reportlab.platypus import Paragraph
+from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether
+from reportlab.lib.units import cm
 from neet_template import (
-    STYLES, heading, keyterm, process_flow, note, memory_aid,
+    STYLES, FRAME_WIDTH, GRID_LINE, heading, keyterm, process_flow, note, memory_aid,
     data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure
@@ -40,6 +41,78 @@ OUT_PDF = os.path.join(HERE, "Ch4_AnimalKingdom.pdf")
 
 def figure(asset_name, caption_text, max_width_cm=15.9):
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+
+
+def _panel(asset_name, caption_text, width_cm=None, max_width_cm=None, target_height_cm=None):
+    """One framed figure panel + its own caption, as a single-column Table."""
+    path = os.path.join(ASSETS, asset_name)
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"MISSING FIGURE ASSET: {path} (required by caption: {caption_text})")
+    try:
+        from PIL import Image as PILImage
+        with PILImage.open(path) as im:
+            px_w, px_h = im.size
+            mode = im.mode
+    except Exception as exc:
+        raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
+    if mode != "L":
+        raise RuntimeError(f"FIGURE NOT MONOCHROME: {asset_name} has mode {mode!r}, expected 'L'.")
+
+    natural_w = px_w / 300.0 * 2.54 * cm
+    if target_height_cm is not None:
+        target_h = target_height_cm * cm
+        calc_w = target_h * px_w / px_h
+        width = min(calc_w, natural_w)
+        if max_width_cm:
+            width = min(width, max_width_cm * cm)
+        height = width * px_h / px_w
+    else:
+        req_w = (width_cm if width_cm is not None else (max_width_cm if max_width_cm is not None else 15.9)) * cm
+        width = min(req_w, natural_w)
+        height = width * px_h / px_w
+
+    img = Image(path, width=width, height=height)
+    col_w = width + 10
+    framed = Table([[img]], colWidths=[col_w])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    framed.hAlign = "CENTER"
+
+    col = Table([[framed], [Paragraph(caption_text, STYLES["Caption"])]], colWidths=[col_w])
+    col.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    return col, col_w
+
+
+def figure_pair(left, right, gutter=10):
+    """Two figure panels stacked horizontally side by side, kept together."""
+    lcol, lw = _panel(*left)
+    rcol, rw = _panel(*right)
+    row = Table([[lcol, rcol]], colWidths=[lw, rw])
+    row.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (0, -1), gutter),
+        ("RIGHTPADDING", (1, 0), (1, -1), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    row.hAlign = "CENTER"
+    return KeepTogether([row])
 
 
 def body(text):
