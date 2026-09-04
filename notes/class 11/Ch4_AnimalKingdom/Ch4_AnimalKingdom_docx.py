@@ -408,6 +408,51 @@ def _fixed_layout(table):
     table.allow_autofit = False
 
 
+def _apply_grid(table, widths_pt):
+    """Force the table's column geometry.
+
+    python-docx only writes per-cell w:tcW; Word/LibreOffice under a *fixed*
+    layout honour the table-level w:tblGrid + w:tblW instead, and fall back to
+    even column distribution when they're missing. Writing them explicitly is
+    what makes narrow badge columns and full-width text columns render as laid
+    out (fixes badge floating centre-banner and body text shoved to half width).
+    Also pins every cell's w:tcW to the same numbers so the two agree.
+    """
+    twips = [int(round(w * 20)) for w in widths_pt]
+    total = sum(twips)
+    tbl = table._tbl
+    tblPr = tbl.tblPr
+    # total table width
+    tblW = tblPr.find(qn("w:tblW"))
+    if tblW is None:
+        tblW = OxmlElement("w:tblW")
+        tblPr.append(tblW)
+    tblW.set(qn("w:w"), str(total))
+    tblW.set(qn("w:type"), "dxa")
+    # replace the grid
+    old = tbl.find(qn("w:tblGrid"))
+    if old is not None:
+        tbl.remove(old)
+    grid = OxmlElement("w:tblGrid")
+    for t in twips:
+        gc = OxmlElement("w:gridCol")
+        gc.set(qn("w:w"), str(t))
+        grid.append(gc)
+    tblPr.addnext(grid)  # tblGrid must follow tblPr
+    # pin each cell
+    for row in table.rows:
+        for cidx, cell in enumerate(row.cells):
+            if cidx >= len(twips):
+                continue
+            tcpr = cell._tc.get_or_add_tcPr()
+            tcw = tcpr.find(qn("w:tcW"))
+            if tcw is None:
+                tcw = OxmlElement("w:tcW")
+                tcpr.append(tcw)
+            tcw.set(qn("w:w"), str(twips[cidx]))
+            tcw.set(qn("w:type"), "dxa")
+
+
 def _keep_with_next(paragraph):
     paragraph.paragraph_format.keep_with_next = True
 
