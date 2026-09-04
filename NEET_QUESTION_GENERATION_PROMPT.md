@@ -29,6 +29,12 @@ If an item can be answered by a single recalled line, it is **too easy — rewri
 - You may test *inference, integration, and synthesis across NCERT chapters*, but never *content outside NCERT* (no research trivia, no coaching-only mnemonics presented as fact, no exceptions the book does not state).
 - When in doubt about a fact, drop the item rather than guess. A hard item built on a shaky fact is a defect, not a challenge.
 
+### Source-grounding mandate (READ THIS FIRST — highest reliability lever)
+- You will be **given the NCERT source text** for the anchor chapter (and, for cross-chapter items, the linked chapters). **You may only use facts you can trace to that supplied text.** Do not rely on your own memory of NCERT — memory is the #1 cause of out-of-syllabus drift and wrong answer keys.
+- If the source text for a fact you want to use has **not** been supplied to you, you have two choices: (a) do not use that fact, or (b) flag it in the run header under `UNGROUNDED` and omit the item. Never silently trust recall.
+- In the answer key, every fused fact must quote or closely paraphrase the **specific supplied source line** it rests on. An item whose fact cannot be pinned to supplied text is a **defect — remove it.**
+- This rule overrides any temptation to make an item "look harder" with a fact you merely believe is in NCERT. Grounding beats cleverness.
+
 ### Difficulty calibration — three tiers (reweighted for adversarial intent)
 Distribute the {{COUNT}} items. **Default mix: 20% Tier-1, 45% Tier-2, 35% Tier-3.** The mass sits in the hard bands on purpose.
 
@@ -82,21 +88,35 @@ For Match items, render both lists as a two-column table before the options. Use
 **SECTION B — ANSWER KEY & EXPLANATIONS.** For each item:
 ```
 Q<n>. Correct: (<x>)
+Meta: chapters=[<anchor>, <linked...>] | tier=<1|2|3> | facts_used=<N> | trap_type=<sibling-term|adjacent-step|reciprocal|swapped-pair|false-cause|scope-overreach|...>
 Reasoning chain: <the 2–4 step path from NCERT facts to the answer>
 NCERT anchor: <anchor chapter/section> ; Links: <other chapter/section(s) used>
+Source lines: <short quote/paraphrase of each supplied NCERT line the fused facts rest on>
 Why others fail: (a) … (b) … (c) …
 Trap targeted: <the specific misconception this item punishes>
 ```
-Every explanation must cite the specific NCERT basis for *each* fact fused. If any fused fact cannot be cited, the item is invalid — remove it.
+Every explanation must cite the specific NCERT basis for *each* fact fused. If any fused fact cannot be cited to supplied source text, the item is invalid — remove it. The `Meta:` line makes the bank machine-auditable (coverage, tier balance, link count, trap variety).
 
-### Self-audit before you output (do all silently, then emit only the two sections)
-1. **Fact check:** re-derive each key from NCERT; confirm every distractor is genuinely wrong and every fused fact is citable.
+### Pass 1 — generate, then Pass 2 — attack your own paper (both silent)
+This is a **two-pass** process. Do not emit anything until both passes are done.
+
+**Pass 2 — self-adversarial solve.** After drafting all items, *become a 340-scorer attacking your own paper.* For every item, actively try to break it, and **rewrite or discard** any item that fails ANY of these:
+- **One-line-solvable:** the item can be answered by recalling a single sentence (except the deliberate Tier-1 floor). → make it fuse more, or demote its tier honestly.
+- **Ambiguous / multi-correct:** more than one option is defensible, or the "correct" one is arguably wrong. → fix the options or cut.
+- **Ungrounded link:** the cross-chapter connection is not actually stated/supported by the supplied NCERT text. → replace with a real link or drop the cross-chapter claim.
+- **Backsolvable trick:** the key is guessable from length, grammar, position, or a stem echo without any biology. → rewrite options.
+Log the count of items rewritten/discarded in the run header (`Pass-2 fixes: __`). If Pass 2 changes the tier or archetype counts, re-balance before output.
+
+### Final self-audit before you output (do all silently, then emit only the two sections)
+1. **Fact check:** re-derive each key from the **supplied** NCERT text; confirm every distractor is genuinely wrong and every fused fact is quotable from source.
 2. **Single-answer check:** confirm no item has zero or multiple correct options.
 3. **Difficulty check:** confirm the reweighted tier mix and that **no item is solvable by a single recalled line** except the deliberate Tier-1 floor.
 4. **Integration check:** confirm ≥50% of Tier-2/Tier-3 items are genuinely multi-concept, and the cross-chapter links are load-bearing.
 5. **Archetype spread check:** confirm all supported archetypes appear near quota, including Assertion–Reason and "how many" counting items.
 6. **Coverage check:** confirm items span the chapter's major sections (a 360 needs total coverage, not a hot topic).
-7. **Style check:** negative words bolded; options parallel; key positions randomized; no external content.
+7. **Answer-distribution check:** confirm keys are roughly balanced across (1)/(2)/(3)/(4) — no option should hold more than ~35% of keys, and none below ~15%. Reposition keys to balance.
+8. **Duplication check:** confirm no two items test the same fact-cluster/trap. Merge or replace near-duplicates so the bank does not degenerate.
+9. **Style check:** negative words bolded; options parallel; key positions randomized; no external content.
 
 Output only the run header (below) followed by SECTION A and SECTION B. No preamble, no commentary.
 
@@ -106,6 +126,9 @@ CHAPTER: Class {{CLASS}} — {{CHAPTER}}
 ITEMS: {{COUNT}} | Tier mix: T1/T2/T3 = __/__/__
 Archetype counts: single __ | match __ | multi/count __ | sequence __ | assertion-reason __ | negative __ | numerical __ | scenario __
 Cross-chapter items: __/{{COUNT}} | Linked chapters used: ...
+Key distribution: (1)=__ (2)=__ (3)=__ (4)=__
+Pass-2 fixes: __ rewritten / __ discarded
+UNGROUNDED (facts I could not pin to supplied text, omitted): ...
 Substitutions (if any): ...
 ```
 
@@ -121,3 +144,27 @@ Substitutions (if any): ...
 - **Recommended default count:** 45/chapter; raise to 60–90 for heavily-weighted chapters (Genetics, Human Physiology, Ecology, Biotechnology, Cell/Biomolecules).
 - **Answer-key discipline mirrors this repo's Gate ethos:** an item with an uncitable fused fact is a *defect*, not a stylistic choice — cut it. Treat "NCERT anchor / Links" as mandatory evidence, exactly like Fact-ledger citations elsewhere in this project.
 - **Most common failure modes to police:** (1) a "hard" item that quietly leaves NCERT; (2) a plausible distractor that is actually true; (3) a fake cross-chapter link that isn't load-bearing; (4) drifting the tier mix easy to make single-answer bookkeeping simpler. The scope rule and self-audit exist to kill all four.
+
+---
+
+## APPENDIX — CROSS-CHAPTER LINK REGISTRY (feed this to the model with the anchor chapter)
+
+A curated list of **legitimate, high-yield NCERT bridges** so "cross-chapter" stays real and repeatable instead of improvised each run. When generating for an anchor chapter, pull links from the rows that touch it. This is not exhaustive — but any link used should be *as defensible as these*. All bridges are stated or directly implied by NCERT itself.
+
+**Class 11 (Human Physiology & Diversity core)**
+- Animal Kingdom ↔ Body Fluids & Circulation (heart-chamber count as a classification character) ↔ Breathing & Exchange of Gases (respiratory surfaces: gills/lungs/skin/trachea) ↔ Excretory Products (ammonotelic/ureotelic/uricotelic vs habitat) ↔ Evolution (phylogeny, coelom, symmetry).
+- Structural Organisation in Animals (epithelia/tissues) ↔ Digestion & Absorption ↔ Breathing (tissue types lining organs).
+- Biomolecules ↔ Cell: The Unit of Life ↔ Enzymes (metabolic classes, cofactors) ↔ Respiration (glycolysis substrates) ↔ Photosynthesis (Calvin substrates).
+- Plant Kingdom ↔ Morphology of Flowering Plants ↔ Anatomy of Flowering Plants ↔ Sexual Reproduction in Flowering Plants (life-cycle/ploidy alternation).
+- Cell Cycle & Division ↔ Reproduction (meiosis placement, ploidy across generations) ↔ Genetics (linkage, recombination).
+- Chemical Coordination (hormones) ↔ Neural Control ↔ Excretion (ADH/aldosterone) ↔ Circulation (ANF, blood pressure).
+
+**Class 12 (Genetics, Reproduction, Ecology, Biotech)**
+- Principles of Inheritance ↔ Molecular Basis of Inheritance (gene→mutation→phenotype) ↔ Biotechnology Principles (restriction sites, vectors) ↔ Evolution (allele frequency, Hardy–Weinberg).
+- Human Reproduction ↔ Reproductive Health ↔ Chemical Coordination (gonadotropins, menstrual cycle hormones).
+- Sexual Reproduction in Flowering Plants ↔ Genetics (test cross, pollination → inheritance) ↔ Cell Division (double fertilisation ploidy).
+- Ecosystem ↔ Organisms & Populations (energy flow, growth models $$dN/dt$$) ↔ Biodiversity & Conservation ↔ Environmental Issues.
+- Microbes in Human Welfare ↔ Biotechnology & Its Applications ↔ Human Health & Disease (pathogens, immunity, antibiotics).
+- Evolution ↔ Molecular Basis (molecular clock) ↔ Animal/Plant Kingdom (homology, common ancestry).
+
+**How to use the registry:** in Pass 1, when building a Tier-2/3 item, pick a bridge whose left side is the anchor chapter; the right side is your `Links:` field. If a desired bridge is not in this registry, it is still allowed **only if** the supplied NCERT text explicitly supports it — otherwise treat it as an ungrounded link and drop it.
