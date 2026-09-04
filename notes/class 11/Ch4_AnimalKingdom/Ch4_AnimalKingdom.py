@@ -40,7 +40,35 @@ OUT_PDF = os.path.join(HERE, "Ch4_AnimalKingdom.pdf")
 
 
 def figure(asset_name, caption_text, max_width_cm=15.9):
-    return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+    from PIL import Image as PILImage
+    path = os.path.join(ASSETS, asset_name)
+    try:
+        with PILImage.open(path) as im:
+            px_w, px_h = im.size
+            mode = im.mode
+    except Exception as exc:
+        raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
+    if mode != "L":
+        raise RuntimeError(
+            f"FIGURE NOT MONOCHROME: {asset_name} has mode {mode!r}, expected 'L'. "
+            f"Run convert_figures_mono.py before building (§4.4 Step 2).")
+
+    width = min(max_width_cm * cm, FRAME_WIDTH)
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+
+    framed = Table([[img]], colWidths=[width + 10])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    framed.hAlign = "CENTER"
+    return KeepTogether([framed, Paragraph(caption_text, STYLES["Caption"])])
 
 
 def _framed_image(asset_name, width_cm):
@@ -191,7 +219,7 @@ story.append(b1("<b>Acoelomates:</b> animals in which the body cavity is absent,
 story.append(figure("fig_4_3abc.png",
                     "<b>Fig. 4.3</b> - Diagrammatic sectional view of : (a) Coelomate "
                     "(b) Pseudocoelomate (c) Acoelomate. Labels: Coelom and Pseudocoelom.",
-                    max_width_cm=6.5))
+                    max_width_cm=5.76))
 
 # ---- 4.1.5 Segmentation ----
 story.append(heading("4.1.5", "Segmentation", level=2))
@@ -227,7 +255,7 @@ story.append(b1("Under <b>Bilateral</b> symmetry the animals are grouped by body
 story.append(figure("fig_4_4.png",
                     "<b>Fig. 4.4</b> - Broad classification of Kingdom Animalia based on common "
                     "fundamental features.",
-                    max_width_cm=15.9))
+                    max_width_cm=11.48))
 story.append(note("Echinodermata exhibits radial or bilateral symmetry depending on the stage."))
 
 # ---- 4.2.1 Phylum - Porifera ----
@@ -280,7 +308,7 @@ story.append(b1("<b>Examples:</b> <i>Physalia</i> (Portuguese man-of-war), <i>Ad
 story.append(figure_row([
     ("fig_4_6ab.png",
      "<b>Fig. 4.6</b> - Examples of Coelenterata indicating outline of their body "
-     "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).", 9.0),
+     "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).", 8.5),
     ("fig_4_7.png", "<b>Fig. 4.7</b> - Diagrammatic view of Cnidoblast.", 3.2),
 ]))
 
@@ -380,7 +408,7 @@ story.append(b1("<b>Examples:</b> Economically important insects - <i>Apis</i> (
 story.append(figure("fig_4_12abcd.png",
                     "<b>Fig. 4.12</b> - Examples of Arthropoda : (a) Locust (b) Butterfly "
                     "(c) Scorpion (d) Prawn.",
-                    max_width_cm=8.0))
+                    max_width_cm=6.93))
 
 # ---- 4.2.8 Phylum - Mollusca ----
 story.append(heading("4.2.8", "Phylum - Mollusca", level=2))
@@ -402,7 +430,7 @@ story.append(b1("<b>Examples:</b> <i>Pila</i> (Apple snail), <i>Pinctada</i> (Pe
                 "(Chiton)."))
 story.append(figure("fig_4_13ab.png",
                     "<b>Fig. 4.13</b> - Examples of Mollusca : (a) Pila (b) Octopus.",
-                    max_width_cm=6.3))
+                    max_width_cm=7.97))
 
 # ---- 4.2.9 Phylum - Echinodermata ----
 story.append(heading("4.2.9", "Phylum - Echinodermata", level=2))
@@ -423,7 +451,7 @@ story.append(b1("<b>Examples:</b> <i>Asterias</i> (Star fish), <i>Echinus</i> (S
                 "(Brittle star)."))
 story.append(figure("fig_4_14ab.png",
                     "<b>Fig. 4.14</b> - Examples of Echinodermata : (a) Asterias (b) Ophiura.",
-                    max_width_cm=6.5))
+                    max_width_cm=4.65))
 
 # ---- 4.2.10 Phylum - Hemichordata ----
 story.append(heading("4.2.10", "Phylum - Hemichordata", level=2))
@@ -442,7 +470,7 @@ story.append(b1("Circulatory system is of open type. Respiration takes place thr
 story.append(b1("<b>Examples:</b> <i>Balanoglossus</i> and <i>Saccoglossus</i>."))
 story.append(figure("fig_4_15.png",
                     "<b>Fig. 4.15</b> - Balanoglossus. Labels: Proboscis, Collar and Trunk.",
-                    max_width_cm=4.6))
+                    max_width_cm=5.17))
 
 # ############################################################################
 # ### PASS 2b CONTINUES HERE ###
@@ -464,7 +492,7 @@ story.append(b1("They possess a <b>post-anal part</b> (tail) and a <b>closed cir
 story.append(figure("fig_4_16.png",
                     "<b>Fig. 4.16</b> - Chordata characteristics. Labels: Nerve cord, "
                     "Notochord, Post-anal part and Gill slits.",
-                    max_width_cm=7.5))
+                    max_width_cm=11.30))
 story.append(b1("Phylum Chordata is divided into three subphyla: <b>Urochordata</b> or "
                 "Tunicata, <b>Cephalochordata</b> and <b>Vertebrata</b>."))
 story.append(b1("Subphyla Urochordata and Cephalochordata are often referred to as "
@@ -475,7 +503,7 @@ story.append(b1("<b>Examples:</b> Urochordata - <i>Ascidia</i>, <i>Salpa</i>, <i
                 "Cephalochordata - <i>Branchiostoma</i> (Amphioxus or Lancelet)."))
 story.append(figure("fig_4_17.png",
                     "<b>Fig. 4.17</b> - Ascidia (a urochordate protochordate).",
-                    max_width_cm=3.0))
+                    max_width_cm=4.37))
 story.append(b1("The members of subphylum Vertebrata possess notochord during the embryonic "
                 "period. The notochord is replaced by a cartilaginous or bony vertebral column "
                 "in the adult. Thus <b>all vertebrates are chordates but all chordates are not "
@@ -513,7 +541,7 @@ story.append(figure("fig_vertebrata_chart.png",
                     "Classification chart of subphylum Vertebrata - Divisions Agnatha and "
                     "Gnathostomata; Super Class Pisces and Tetrapoda; Classes Cyclostomata, "
                     "Chondrichthyes, Osteichthyes, Amphibia, Reptilia, Aves and Mammals.",
-                    max_width_cm=14.0))
+                    max_width_cm=14.85))
 
 # ---- 4.2.11.1 Class - Cyclostomata ----
 story.append(heading("4.2.11.1", "Class - Cyclostomata", level=3))
@@ -530,7 +558,7 @@ story.append(b1("Cyclostomes are marine but migrate for spawning to fresh water.
 story.append(b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."))
 story.append(figure("fig_4_18.png",
                     "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
-                    max_width_cm=7.0))
+                    max_width_cm=14.59))
 
 # ---- 4.2.11.2 Class - Chondrichthyes ----
 story.append(heading("4.2.11.2", "Class - Chondrichthyes", level=3))
@@ -553,7 +581,7 @@ story.append(b1("<b>Examples:</b> <i>Scoliodon</i> (Dog fish), <i>Pristis</i> (S
                 "<i>Carcharodon</i> (Great white shark), <i>Trygon</i> (Sting ray)."))
 story.append(figure("fig_4_19ab.png",
                     "<b>Fig. 4.19</b> - Cartilaginous fishes : (a) Scoliodon (b) Pristis.",
-                    max_width_cm=8.0))
+                    max_width_cm=7.14))
 
 # ---- 4.2.11.3 Class - Osteichthyes ----
 story.append(heading("4.2.11.3", "Class - Osteichthyes", level=3))
@@ -592,7 +620,7 @@ story.append(b1("<b>Examples:</b> <i>Bufo</i> (Toad), <i>Rana</i> (Frog), <i>Hyl
                 "amphibia)."))
 story.append(figure("fig_4_21ab.png",
                     "<b>Fig. 4.21</b> - Examples of Amphibia : (a) Salamandra (b) Rana.",
-                    max_width_cm=5.2))
+                    max_width_cm=5.09))
 
 # ---- 4.2.11.5 Class - Reptilia ----
 story.append(heading("4.2.11.5", "Class - Reptilia", level=3))
@@ -614,7 +642,7 @@ story.append(b1("<b>Examples:</b> <i>Chelone</i> (Turtle), <i>Testudo</i> (Torto
 story.append(figure("fig_4_22abcd.png",
                     "<b>Fig. 4.22</b> - Reptiles : (a) Chameleon (b) Crocodilus (c) Chelone "
                     "(d) Naja.",
-                    max_width_cm=10.0))
+                    max_width_cm=11.10))
 
 # ---- 4.2.11.6 Class - Aves ----
 story.append(heading("4.2.11.6", "Class - Aves", level=3))
@@ -638,7 +666,7 @@ story.append(b1("<b>Examples:</b> <i>Corvus</i> (Crow), <i>Columba</i> (Pigeon),
 story.append(figure("fig_4_23abcd.png",
                     "<b>Fig. 4.23</b> - Some birds : (a) Neophron (b) Struthio (c) Psittacula "
                     "(d) Pavo.",
-                    max_width_cm=10.0))
+                    max_width_cm=13.56))
 
 # ---- 4.2.11.7 Class - Mammalia ----
 story.append(heading("4.2.11.7", "Class - Mammalia", level=3))
@@ -663,7 +691,7 @@ story.append(b1("<b>Examples:</b> Oviparous - <i>Ornithorhynchus</i> (Platypus);
 story.append(figure("fig_4_24abcd.png",
                     "<b>Fig. 4.24</b> - Some mammals : (a) Ornithorhynchus (b) Macropus "
                     "(c) Pteropus (d) Balaenoptera.",
-                    max_width_cm=10.0))
+                    max_width_cm=13.08))
 
 # TABLE 4.2 — salient features of all phyla
 story.append(body("The salient distinguishing features of all phyla under the animal kingdom "
