@@ -27,10 +27,13 @@ while not os.path.exists(os.path.join(ROOT, "neet_template.py")):
     ROOT = parent
 sys.path.insert(0, ROOT)
 
-from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether
+from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether, PageBreak
 from reportlab.lib.units import cm
+from reportlab.lib.colors import white
+from reportlab.lib.styles import ParagraphStyle
 from neet_template import (
-    STYLES, FRAME_WIDTH, GRID_LINE, heading, keyterm, process_flow, note, memory_aid,
+    STYLES, FRAME_WIDTH, GRID_LINE, DARK_GREY, ROW_ALT, FONT_REGULAR, FONT_BOLD,
+    heading, keyterm, process_flow, note, memory_aid,
     data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure
@@ -101,18 +104,74 @@ def figure_pair(left, right, gutter=10):
     """Two figure panels stacked horizontally side by side, kept together."""
     lcol, lw = _panel(*left)
     rcol, rw = _panel(*right)
-    row = Table([[lcol, rcol]], colWidths=[lw, rw])
-    row.setStyle(TableStyle([
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 0),
-        ("RIGHTPADDING", (0, 0), (0, -1), gutter),
-        ("RIGHTPADDING", (1, 0), (1, -1), 0),
-        ("TOPPADDING", (0, 0), (-1, -1), 0),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-    ]))
+    # Centre within FRAME_WIDTH if total width is narrower
+    total_w = lw + rw + gutter
+    pad_left = max(0, (FRAME_WIDTH - total_w) / 2.0)
+    if pad_left > 1:
+        row = Table([["", lcol, "", rcol]], colWidths=[pad_left, lw, gutter, rw])
+        row.setStyle(TableStyle([
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+        ]))
+    else:
+        row = Table([[lcol, rcol]], colWidths=[lw, rw])
+        row.setStyle(TableStyle([
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (0, -1), gutter),
+            ("RIGHTPADDING", (1, 0), (1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+        ]))
     row.hAlign = "CENTER"
     return KeepTogether([row])
+
+
+def compact_table(rows, col_widths=None):
+    """Compact single-page data table for Table 4.2 with compliant typography."""
+    head_style = ParagraphStyle(
+        "CompactTableHead",
+        fontName=FONT_BOLD,
+        fontSize=8.0,
+        leading=10.0,
+        alignment=0,
+        textColor=white,
+    )
+    cell_style = ParagraphStyle(
+        "CompactTableCell",
+        fontName=FONT_REGULAR,
+        fontSize=7.8,
+        leading=9.8,
+        alignment=0,
+    )
+    body = [[Paragraph(c, head_style) for c in rows[0]]]
+    for r in rows[1:]:
+        body.append([Paragraph(c, cell_style) for c in r])
+    if col_widths:
+        total = sum(col_widths)
+        col_widths = [w / total * FRAME_WIDTH for w in col_widths]
+    t = Table(body, colWidths=col_widths, repeatRows=1)
+    style = [
+        ("BACKGROUND", (0, 0), (-1, 0), DARK_GREY),
+        ("GRID", (0, 0), (-1, -1), 0.4, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("TOPPADDING", (0, 0), (-1, -1), 2.2),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 2.2),
+        ("LEFTPADDING", (0, 0), (-1, -1), 3),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 3),
+    ]
+    for i in range(1, len(body)):
+        if i % 2 == 0:
+            style.append(("BACKGROUND", (0, i), (-1, i), ROW_ALT))
+        style.append(("LINEBELOW", (0, i), (-1, i), 0.25, GRID_LINE))
+    t.setStyle(TableStyle(style))
+    t.hAlign = "LEFT"
+    return t
 
 
 def body(text):
@@ -183,8 +242,11 @@ story.append(keyterm("<b>Radial symmetry:</b> when any plane passing through the
 story.append(keyterm("<b>Bilateral symmetry:</b> animals like annelids, arthropods, etc., where "
                      "the body can be divided into identical left and right halves in only one "
                      "plane (Figure 4.1b)."))
-story.append(figure("fig_4_1a.png", "<b>Fig. 4.1(a)</b> - Radial symmetry.", max_width_cm=6.0))
-story.append(figure("fig_4_1b.png", "<b>Fig. 4.1(b)</b> - Bilateral symmetry.", max_width_cm=7.5))
+story.append(figure_pair(
+    ("fig_4_1a.png", "<b>Fig. 4.1(a)</b> - Radial symmetry.", 6.2),
+    ("fig_4_1b.png", "<b>Fig. 4.1(b)</b> - Bilateral symmetry.", 6.2),
+    gutter=12
+))
 
 # ---- 4.1.3 Diploblastic and Triploblastic Organisation ----
 story.append(heading("4.1.3", "Diploblastic and Triploblastic Organisation", level=2))
@@ -302,12 +364,12 @@ story.append(b1("Those cnidarians which exist in both forms exhibit <b>alternati
 story.append(b1("<b>Examples:</b> <i>Physalia</i> (Portuguese man-of-war), <i>Adamsia</i> (Sea "
                 "anemone), <i>Pennatula</i> (Sea-pen), <i>Gorgonia</i> (Sea-fan) and "
                 "<i>Meandrina</i> (Brain coral)."))
-story.append(figure("fig_4_6ab.png",
-                    "<b>Fig. 4.6</b> - Examples of Coelenterata indicating outline of their body "
-                    "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).",
-                    max_width_cm=11.5))
-story.append(figure("fig_4_7.png", "<b>Fig. 4.7</b> - Diagrammatic view of Cnidoblast.",
-                    max_width_cm=5.0))
+story.append(figure_pair(
+    ("fig_4_6ab.png", "<b>Fig. 4.6</b> - Examples of Coelenterata indicating outline of their body "
+                      "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).", 9.6),
+    ("fig_4_7.png", "<b>Fig. 4.7</b> - Diagrammatic view of Cnidoblast.", 4.0),
+    gutter=10
+))
 
 # ---- 4.2.3 Phylum - Ctenophora ----
 story.append(heading("4.2.3", "Phylum - Ctenophora", level=2))
@@ -690,36 +752,39 @@ story.append(figure("fig_4_24abcd.png",
                     "(c) Pteropus (d) Balaenoptera.",
                     max_width_cm=13.0))
 
-# TABLE 4.2 — salient features of all phyla
+# TABLE 4.2 — salient features of all phyla (fits on a single page)
+story.append(PageBreak())
 story.append(body("The salient distinguishing features of all phyla under the animal kingdom "
                   "are comprehensively given in Table 4.2."))
-story.append(body("<b>TABLE 4.2</b> Salient Features of Different Phyla in the Animal Kingdom"))
-story.append(data_table([
-    ["Phylum", "Level of Organisation", "Symmetry", "Coelom", "Segmen-tation",
-     "Digestive System", "Circula-tory", "Respira-tory", "Distinctive Features"],
-    ["Porifera", "Cellular", "Various", "Absent", "Absent", "Absent", "Absent", "Absent",
-     "Body with pores and canals in walls."],
-    ["Coelenterata (Cnidaria)", "Tissue", "Radial", "Absent", "Absent", "Incomplete", "Absent",
-     "Absent", "Cnidoblasts present."],
-    ["Ctenophora", "Tissue", "Radial", "Absent", "Absent", "Incomplete", "Absent", "Absent",
-     "Comb plates for locomotion."],
-    ["Platyhelminthes", "Organ &amp; Organ-system", "Bilateral", "Absent", "Absent", "Incomplete",
-     "Absent", "Absent", "Flat body, suckers."],
-    ["Aschelminthes", "Organ-system", "Bilateral", "Pseudo-coelomate", "Absent", "Complete",
-     "Absent", "Absent", "Often worm-shaped, elongated."],
-    ["Annelida", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
-     "Absent", "Body segmentation like rings."],
-    ["Arthropoda", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
-     "Present", "Exoskeleton of cuticle, jointed appendages."],
-    ["Mollusca", "Organ-system", "Bilateral", "Coelomate", "Absent", "Complete", "Present",
-     "Present", "External skeleton of shell usually present."],
-    ["Echinodermata", "Organ-system", "Radial", "Coelomate", "Absent", "Complete", "Present",
-     "Present", "Water vascular system, radial symmetry."],
-    ["Hemichordata", "Organ-system", "Bilateral", "Coelomate", "Absent", "Complete", "Present",
-     "Present", "Worm-like with proboscis, collar and trunk."],
-    ["Chordata", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
-     "Present", "Notochord, dorsal hollow nerve cord, gill slits with limbs or fins."],
-], col_widths=[1.15, 1.2, 0.85, 1.05, 0.95, 1.05, 0.9, 0.9, 1.95]))
+story.append(KeepTogether([
+    body("<b>TABLE 4.2</b> Salient Features of Different Phyla in the Animal Kingdom"),
+    compact_table([
+        ["Phylum", "Level of Organisation", "Symmetry", "Coelom", "Segmen-tation",
+         "Digestive System", "Circula-tory", "Respira-tory", "Distinctive Features"],
+        ["Porifera", "Cellular", "Various", "Absent", "Absent", "Absent", "Absent", "Absent",
+         "Body with pores and canals in walls."],
+        ["Coelenterata (Cnidaria)", "Tissue", "Radial", "Absent", "Absent", "Incomplete", "Absent",
+         "Absent", "Cnidoblasts present."],
+        ["Ctenophora", "Tissue", "Radial", "Absent", "Absent", "Incomplete", "Absent", "Absent",
+         "Comb plates for locomotion."],
+        ["Platyhelminthes", "Organ &amp; Organ-system", "Bilateral", "Absent", "Absent", "Incomplete",
+         "Absent", "Absent", "Flat body, suckers."],
+        ["Aschelminthes", "Organ-system", "Bilateral", "Pseudo-coelomate", "Absent", "Complete",
+         "Absent", "Absent", "Often worm-shaped, elongated."],
+        ["Annelida", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
+         "Absent", "Body segmentation like rings."],
+        ["Arthropoda", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
+         "Present", "Exoskeleton of cuticle, jointed appendages."],
+        ["Mollusca", "Organ-system", "Bilateral", "Coelomate", "Absent", "Complete", "Present",
+         "Present", "External skeleton of shell usually present."],
+        ["Echinodermata", "Organ-system", "Radial", "Coelomate", "Absent", "Complete", "Present",
+         "Present", "Water vascular system, radial symmetry."],
+        ["Hemichordata", "Organ-system", "Bilateral", "Coelomate", "Absent", "Complete", "Present",
+         "Present", "Worm-like with proboscis, collar and trunk."],
+        ["Chordata", "Organ-system", "Bilateral", "Coelomate", "Present", "Complete", "Present",
+         "Present", "Notochord, dorsal hollow nerve cord, gill slits with limbs or fins."],
+    ], col_widths=[1.15, 1.2, 0.85, 1.05, 0.95, 1.05, 0.9, 0.9, 1.95])
+]))
 
 # ---- SUMMARY ----
 story.append(heading("Summary", "Summary", level=1))
