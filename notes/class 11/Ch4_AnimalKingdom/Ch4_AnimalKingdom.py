@@ -27,7 +27,7 @@ while not os.path.exists(os.path.join(ROOT, "neet_template.py")):
     ROOT = parent
 sys.path.insert(0, ROOT)
 
-from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether
+from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether, PageBreak
 from reportlab.lib.units import cm
 from neet_template import (
     STYLES, heading, keyterm, process_flow, note, memory_aid,
@@ -492,7 +492,7 @@ story.append(b1("They possess a <b>post-anal part</b> (tail) and a <b>closed cir
 story.append(figure("fig_4_16.png",
                     "<b>Fig. 4.16</b> - Chordata characteristics. Labels: Nerve cord, "
                     "Notochord, Post-anal part and Gill slits.",
-                    max_width_cm=11.30))
+                    max_width_cm=8.60))
 story.append(b1("Phylum Chordata is divided into three subphyla: <b>Urochordata</b> or "
                 "Tunicata, <b>Cephalochordata</b> and <b>Vertebrata</b>."))
 story.append(b1("Subphyla Urochordata and Cephalochordata are often referred to as "
@@ -503,7 +503,7 @@ story.append(b1("<b>Examples:</b> Urochordata - <i>Ascidia</i>, <i>Salpa</i>, <i
                 "Cephalochordata - <i>Branchiostoma</i> (Amphioxus or Lancelet)."))
 story.append(figure("fig_4_17.png",
                     "<b>Fig. 4.17</b> - Ascidia (a urochordate protochordate).",
-                    max_width_cm=4.37))
+                    max_width_cm=3.50))
 story.append(b1("The members of subphylum Vertebrata possess notochord during the embryonic "
                 "period. The notochord is replaced by a cartilaginous or bony vertebral column "
                 "in the adult. Thus <b>all vertebrates are chordates but all chordates are not "
@@ -512,17 +512,19 @@ story.append(b1("Besides the basic chordate characters, vertebrates have a ventr
                 "heart with two, three or four chambers, kidneys for excretion and "
                 "osmoregulation and paired appendages which may be fins or limbs."))
 
-# TABLE 4.1
-story.append(body("<b>TABLE 4.1</b> Comparison of Chordates and Non-chordates"))
-story.append(data_table([
-    ["Chordates", "Non-chordates"],
-    ["Notochord present.", "Notochord absent."],
-    ["Central nervous system is dorsal, hollow and single.",
-     "Central nervous system is ventral, solid and double."],
-    ["Pharynx perforated by gill slits.", "Gill slits are absent."],
-    ["Heart is ventral.", "Heart is dorsal (if present)."],
-    ["A post-anal part (tail) is present.", "Post-anal tail is absent."],
-], col_widths=[1, 1]))
+# TABLE 4.1 — kept on a single page (label + full table never split)
+story.append(KeepTogether([
+    body("<b>TABLE 4.1</b> Comparison of Chordates and Non-chordates"),
+    data_table([
+        ["Chordates", "Non-chordates"],
+        ["Notochord present.", "Notochord absent."],
+        ["Central nervous system is dorsal, hollow and single.",
+         "Central nervous system is ventral, solid and double."],
+        ["Pharynx perforated by gill slits.", "Gill slits are absent."],
+        ["Heart is ventral.", "Heart is dorsal (if present)."],
+        ["A post-anal part (tail) is present.", "Post-anal tail is absent."],
+    ], col_widths=[1, 1]),
+]))
 
 # Vertebrata classification chart
 story.append(body("<b>The subphylum Vertebrata is further divided as follows:</b>"))
@@ -544,6 +546,11 @@ story.append(figure("fig_vertebrata_chart.png",
                     max_width_cm=14.85))
 
 # ---- 4.2.11.1 Class - Cyclostomata ----
+# Flattened flow (NOT wrapped in an outer KeepTogether): the heading() helper
+# already returns KeepTogether([CondPageBreak, banner]); nesting that inside
+# another KeepTogether makes the CondPageBreak report a sentinel height and
+# forces the whole section onto the next page, leaving a half-empty page.
+# Appending normally lets the section flow into the free space on page 11.
 story.append(heading("4.2.11.1", "Class - Cyclostomata", level=3))
 story.append(b1("All living members of the class Cyclostomata are ectoparasites on some fishes. "
                 "They are the <b>most primitive chordates</b>."))
@@ -555,10 +562,17 @@ story.append(b1("Their body is devoid of scales and paired fins. Cranium and ver
 story.append(b1("Cyclostomes are marine but migrate for spawning to fresh water. After "
                 "spawning, within a few days, they die. Their larvae, after metamorphosis, "
                 "return to the ocean."))
-story.append(b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."))
-story.append(figure("fig_4_18.png",
-                    "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
-                    max_width_cm=14.59))
+# Bind the Examples line to Fig. 4.18 so the figure never orphans to the next
+# page. figure() itself returns a KeepTogether; nesting one KeepTogether inside
+# another mis-measures and pushes the figure to the next page, so we splice the
+# figure's inner flowables (framed image + caption) into ONE flat KeepTogether.
+_fig418 = figure("fig_4_18.png",
+                 "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
+                 max_width_cm=10.50)
+story.append(KeepTogether([
+    b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."),
+    *_fig418._content,
+]))
 
 # ---- 4.2.11.2 Class - Chondrichthyes ----
 story.append(heading("4.2.11.2", "Class - Chondrichthyes", level=3))
@@ -693,7 +707,10 @@ story.append(figure("fig_4_24abcd.png",
                     "(c) Pteropus (d) Balaenoptera.",
                     max_width_cm=13.08))
 
-# TABLE 4.2 — salient features of all phyla
+# TABLE 4.2 — salient features of all phyla.
+# Force a page break so this section opens a fresh page (the second-to-last
+# page), beginning with the "salient distinguishing features" sentence.
+story.append(PageBreak())
 story.append(body("The salient distinguishing features of all phyla under the animal kingdom "
                   "are comprehensively given in Table 4.2."))
 story.append(body("<b>TABLE 4.2</b> Salient Features of Different Phyla in the Animal Kingdom"))
