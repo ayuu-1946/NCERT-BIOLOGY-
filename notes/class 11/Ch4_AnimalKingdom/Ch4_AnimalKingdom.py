@@ -27,10 +27,11 @@ while not os.path.exists(os.path.join(ROOT, "neet_template.py")):
     ROOT = parent
 sys.path.insert(0, ROOT)
 
-from reportlab.platypus import Paragraph
+from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether
+from reportlab.lib.units import cm
 from neet_template import (
     STYLES, heading, keyterm, process_flow, note, memory_aid,
-    data_table, title_block, build_pdf,
+    data_table, title_block, build_pdf, FRAME_WIDTH, GRID_LINE,
 )
 from neet_template import figure as _shared_figure
 
@@ -40,6 +41,51 @@ OUT_PDF = os.path.join(HERE, "Ch4_AnimalKingdom.pdf")
 
 def figure(asset_name, caption_text, max_width_cm=15.9):
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+
+
+def _framed_image(asset_name, width_cm):
+    """Frame a single figure at an exact rendered width (cm), same box styling as
+    the shared figure() helper. Returns (framed_flowable, framed_outer_width_pt)."""
+    from PIL import Image as PILImage
+    path = os.path.join(ASSETS, asset_name)
+    with PILImage.open(path) as im:
+        px_w, px_h = im.size
+    width = width_cm * cm
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+    framed = Table([[img]], colWidths=[width + 10])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    return framed, width + 10
+
+
+def figure_row(specs, cell_pad=6):
+    """Place several figures side by side in one row, each with its own caption
+    stacked beneath it. `specs` is a list of (asset_name, caption_text, width_cm).
+    The whole row is kept together across page breaks."""
+    cells, colwidths = [], []
+    for asset_name, caption_text, width_cm in specs:
+        framed, outer_w = _framed_image(asset_name, width_cm)
+        cells.append([framed, Paragraph(caption_text, STYLES["Caption"])])
+        colwidths.append(outer_w + 2 * cell_pad)
+    row = Table([cells], colWidths=colwidths)
+    row.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), cell_pad),
+        ("RIGHTPADDING", (0, 0), (-1, -1), cell_pad),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    row.hAlign = "CENTER"
+    return KeepTogether(row)
 
 
 def body(text):
@@ -110,8 +156,10 @@ story.append(keyterm("<b>Radial symmetry:</b> when any plane passing through the
 story.append(keyterm("<b>Bilateral symmetry:</b> animals like annelids, arthropods, etc., where "
                      "the body can be divided into identical left and right halves in only one "
                      "plane (Figure 4.1b)."))
-story.append(figure("fig_4_1a.png", "<b>Fig. 4.1(a)</b> - Radial symmetry.", max_width_cm=6.0))
-story.append(figure("fig_4_1b.png", "<b>Fig. 4.1(b)</b> - Bilateral symmetry.", max_width_cm=7.5))
+story.append(figure_row([
+    ("fig_4_1a.png", "<b>Fig. 4.1(a)</b> - Radial symmetry.", 5.5),
+    ("fig_4_1b.png", "<b>Fig. 4.1(b)</b> - Bilateral symmetry.", 5.5),
+]))
 
 # ---- 4.1.3 Diploblastic and Triploblastic Organisation ----
 story.append(heading("4.1.3", "Diploblastic and Triploblastic Organisation", level=2))
@@ -125,7 +173,7 @@ story.append(b1("<b>Triploblastic animals:</b> those in which the developing emb
 story.append(figure("fig_4_2ab.png",
                     "<b>Fig. 4.2</b> - Showing germinal layers : (a) Diploblastic (b) Triploblastic. "
                     "Labels: Ectoderm, Mesoglea, Endoderm and Mesoderm.",
-                    max_width_cm=11.0))
+                    max_width_cm=6.5))
 
 # ---- 4.1.4 Coelom ----
 story.append(heading("4.1.4", "Coelom", level=2))
@@ -143,7 +191,7 @@ story.append(b1("<b>Acoelomates:</b> animals in which the body cavity is absent,
 story.append(figure("fig_4_3abc.png",
                     "<b>Fig. 4.3</b> - Diagrammatic sectional view of : (a) Coelomate "
                     "(b) Pseudocoelomate (c) Acoelomate. Labels: Coelom and Pseudocoelom.",
-                    max_width_cm=11.5))
+                    max_width_cm=6.5))
 
 # ---- 4.1.5 Segmentation ----
 story.append(heading("4.1.5", "Segmentation", level=2))
@@ -206,7 +254,7 @@ story.append(b1("<b>Examples:</b> <i>Sycon</i> (Scypha), <i>Spongilla</i> (Fresh
                 "<i>Euspongia</i> (Bath sponge)."))
 story.append(figure("fig_4_5abc.png",
                     "<b>Fig. 4.5</b> - Examples of Porifera : (a) Sycon (b) Euspongia (c) Spongilla.",
-                    max_width_cm=10.5))
+                    max_width_cm=6.0))
 
 # ---- 4.2.2 Phylum - Coelenterata (Cnidaria) ----
 story.append(heading("4.2.2", "Phylum - Coelenterata (Cnidaria)", level=2))
@@ -229,12 +277,12 @@ story.append(b1("Those cnidarians which exist in both forms exhibit <b>alternati
 story.append(b1("<b>Examples:</b> <i>Physalia</i> (Portuguese man-of-war), <i>Adamsia</i> (Sea "
                 "anemone), <i>Pennatula</i> (Sea-pen), <i>Gorgonia</i> (Sea-fan) and "
                 "<i>Meandrina</i> (Brain coral)."))
-story.append(figure("fig_4_6ab.png",
-                    "<b>Fig. 4.6</b> - Examples of Coelenterata indicating outline of their body "
-                    "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).",
-                    max_width_cm=11.5))
-story.append(figure("fig_4_7.png", "<b>Fig. 4.7</b> - Diagrammatic view of Cnidoblast.",
-                    max_width_cm=5.0))
+story.append(figure_row([
+    ("fig_4_6ab.png",
+     "<b>Fig. 4.6</b> - Examples of Coelenterata indicating outline of their body "
+     "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).", 9.0),
+    ("fig_4_7.png", "<b>Fig. 4.7</b> - Diagrammatic view of Cnidoblast.", 3.2),
+]))
 
 # ---- 4.2.3 Phylum - Ctenophora ----
 story.append(heading("4.2.3", "Phylum - Ctenophora", level=2))
@@ -248,7 +296,7 @@ story.append(b1("Sexes are not separate. Reproduction takes place only by sexual
                 "Fertilisation is external with indirect development."))
 story.append(b1("<b>Examples:</b> <i>Pleurobrachia</i> and <i>Ctenoplana</i>."))
 story.append(figure("fig_4_8.png", "<b>Fig. 4.8</b> - Example of Ctenophora (Pleurobrachia).",
-                    max_width_cm=5.5))
+                    max_width_cm=4.0))
 
 # ---- 4.2.4 Phylum - Platyhelminthes ----
 story.append(heading("4.2.4", "Phylum - Platyhelminthes", level=2))
@@ -265,7 +313,7 @@ story.append(b1("Sexes are not separate. Fertilisation is internal and developme
 story.append(b1("<b>Examples:</b> <i>Taenia</i> (Tapeworm), <i>Fasciola</i> (Liver fluke)."))
 story.append(figure("fig_4_9ab.png",
                     "<b>Fig. 4.9</b> - Examples of Platyhelminthes : (a) Tape worm (b) Liver fluke.",
-                    max_width_cm=11.0))
+                    max_width_cm=8.0))
 
 # ---- 4.2.5 Phylum - Aschelminthes ----
 story.append(heading("4.2.5", "Phylum - Aschelminthes", level=2))
@@ -285,7 +333,7 @@ story.append(b1("<b>Examples:</b> <i>Ascaris</i> (Roundworm), <i>Wuchereria</i> 
 story.append(figure("fig_4_10.png",
                     "<b>Fig. 4.10</b> - Example of Aschelminthes : Roundworm. Labels: Male and "
                     "Female.",
-                    max_width_cm=6.5))
+                    max_width_cm=4.8))
 
 # ---- 4.2.6 Phylum - Annelida ----
 story.append(heading("4.2.6", "Phylum - Annelida", level=2))
@@ -308,7 +356,7 @@ story.append(b1("<b>Examples:</b> <i>Nereis</i>, <i>Pheretima</i> (Earthworm) an
                 "<i>Hirudinaria</i> (Blood sucking leech)."))
 story.append(figure("fig_4_11ab.png",
                     "<b>Fig. 4.11</b> - Examples of Annelida : (a) Nereis (b) Hirudinaria.",
-                    max_width_cm=9.0))
+                    max_width_cm=5.2))
 
 # ---- 4.2.7 Phylum - Arthropoda ----
 story.append(heading("4.2.7", "Phylum - Arthropoda", level=2))
@@ -332,7 +380,7 @@ story.append(b1("<b>Examples:</b> Economically important insects - <i>Apis</i> (
 story.append(figure("fig_4_12abcd.png",
                     "<b>Fig. 4.12</b> - Examples of Arthropoda : (a) Locust (b) Butterfly "
                     "(c) Scorpion (d) Prawn.",
-                    max_width_cm=11.0))
+                    max_width_cm=8.0))
 
 # ---- 4.2.8 Phylum - Mollusca ----
 story.append(heading("4.2.8", "Phylum - Mollusca", level=2))
@@ -354,7 +402,7 @@ story.append(b1("<b>Examples:</b> <i>Pila</i> (Apple snail), <i>Pinctada</i> (Pe
                 "(Chiton)."))
 story.append(figure("fig_4_13ab.png",
                     "<b>Fig. 4.13</b> - Examples of Mollusca : (a) Pila (b) Octopus.",
-                    max_width_cm=9.0))
+                    max_width_cm=6.3))
 
 # ---- 4.2.9 Phylum - Echinodermata ----
 story.append(heading("4.2.9", "Phylum - Echinodermata", level=2))
@@ -375,7 +423,7 @@ story.append(b1("<b>Examples:</b> <i>Asterias</i> (Star fish), <i>Echinus</i> (S
                 "(Brittle star)."))
 story.append(figure("fig_4_14ab.png",
                     "<b>Fig. 4.14</b> - Examples of Echinodermata : (a) Asterias (b) Ophiura.",
-                    max_width_cm=9.0))
+                    max_width_cm=6.5))
 
 # ---- 4.2.10 Phylum - Hemichordata ----
 story.append(heading("4.2.10", "Phylum - Hemichordata", level=2))
@@ -394,7 +442,7 @@ story.append(b1("Circulatory system is of open type. Respiration takes place thr
 story.append(b1("<b>Examples:</b> <i>Balanoglossus</i> and <i>Saccoglossus</i>."))
 story.append(figure("fig_4_15.png",
                     "<b>Fig. 4.15</b> - Balanoglossus. Labels: Proboscis, Collar and Trunk.",
-                    max_width_cm=6.0))
+                    max_width_cm=4.6))
 
 # ############################################################################
 # ### PASS 2b CONTINUES HERE ###
@@ -416,7 +464,7 @@ story.append(b1("They possess a <b>post-anal part</b> (tail) and a <b>closed cir
 story.append(figure("fig_4_16.png",
                     "<b>Fig. 4.16</b> - Chordata characteristics. Labels: Nerve cord, "
                     "Notochord, Post-anal part and Gill slits.",
-                    max_width_cm=11.0))
+                    max_width_cm=7.5))
 story.append(b1("Phylum Chordata is divided into three subphyla: <b>Urochordata</b> or "
                 "Tunicata, <b>Cephalochordata</b> and <b>Vertebrata</b>."))
 story.append(b1("Subphyla Urochordata and Cephalochordata are often referred to as "
@@ -427,7 +475,7 @@ story.append(b1("<b>Examples:</b> Urochordata - <i>Ascidia</i>, <i>Salpa</i>, <i
                 "Cephalochordata - <i>Branchiostoma</i> (Amphioxus or Lancelet)."))
 story.append(figure("fig_4_17.png",
                     "<b>Fig. 4.17</b> - Ascidia (a urochordate protochordate).",
-                    max_width_cm=5.0))
+                    max_width_cm=3.0))
 story.append(b1("The members of subphylum Vertebrata possess notochord during the embryonic "
                 "period. The notochord is replaced by a cartilaginous or bony vertebral column "
                 "in the adult. Thus <b>all vertebrates are chordates but all chordates are not "
@@ -482,7 +530,7 @@ story.append(b1("Cyclostomes are marine but migrate for spawning to fresh water.
 story.append(b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."))
 story.append(figure("fig_4_18.png",
                     "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
-                    max_width_cm=11.0))
+                    max_width_cm=7.0))
 
 # ---- 4.2.11.2 Class - Chondrichthyes ----
 story.append(heading("4.2.11.2", "Class - Chondrichthyes", level=3))
@@ -505,7 +553,7 @@ story.append(b1("<b>Examples:</b> <i>Scoliodon</i> (Dog fish), <i>Pristis</i> (S
                 "<i>Carcharodon</i> (Great white shark), <i>Trygon</i> (Sting ray)."))
 story.append(figure("fig_4_19ab.png",
                     "<b>Fig. 4.19</b> - Cartilaginous fishes : (a) Scoliodon (b) Pristis.",
-                    max_width_cm=11.0))
+                    max_width_cm=8.0))
 
 # ---- 4.2.11.3 Class - Osteichthyes ----
 story.append(heading("4.2.11.3", "Class - Osteichthyes", level=3))
@@ -523,7 +571,7 @@ story.append(b1("<b>Examples:</b> Marine - <i>Exocoetus</i> (Flying fish), <i>Hi
                 "<i>Pterophyllum</i> (Angel fish)."))
 story.append(figure("fig_4_20ab.png",
                     "<b>Fig. 4.20</b> - Bony fishes : (a) Hippocampus (b) Catla.",
-                    max_width_cm=9.0))
+                    max_width_cm=5.3))
 
 # ---- 4.2.11.4 Class - Amphibia ----
 story.append(heading("4.2.11.4", "Class - Amphibia", level=3))
@@ -544,7 +592,7 @@ story.append(b1("<b>Examples:</b> <i>Bufo</i> (Toad), <i>Rana</i> (Frog), <i>Hyl
                 "amphibia)."))
 story.append(figure("fig_4_21ab.png",
                     "<b>Fig. 4.21</b> - Examples of Amphibia : (a) Salamandra (b) Rana.",
-                    max_width_cm=9.0))
+                    max_width_cm=5.2))
 
 # ---- 4.2.11.5 Class - Reptilia ----
 story.append(heading("4.2.11.5", "Class - Reptilia", level=3))
@@ -566,7 +614,7 @@ story.append(b1("<b>Examples:</b> <i>Chelone</i> (Turtle), <i>Testudo</i> (Torto
 story.append(figure("fig_4_22abcd.png",
                     "<b>Fig. 4.22</b> - Reptiles : (a) Chameleon (b) Crocodilus (c) Chelone "
                     "(d) Naja.",
-                    max_width_cm=13.0))
+                    max_width_cm=10.0))
 
 # ---- 4.2.11.6 Class - Aves ----
 story.append(heading("4.2.11.6", "Class - Aves", level=3))
@@ -590,7 +638,7 @@ story.append(b1("<b>Examples:</b> <i>Corvus</i> (Crow), <i>Columba</i> (Pigeon),
 story.append(figure("fig_4_23abcd.png",
                     "<b>Fig. 4.23</b> - Some birds : (a) Neophron (b) Struthio (c) Psittacula "
                     "(d) Pavo.",
-                    max_width_cm=13.0))
+                    max_width_cm=10.0))
 
 # ---- 4.2.11.7 Class - Mammalia ----
 story.append(heading("4.2.11.7", "Class - Mammalia", level=3))
@@ -615,7 +663,7 @@ story.append(b1("<b>Examples:</b> Oviparous - <i>Ornithorhynchus</i> (Platypus);
 story.append(figure("fig_4_24abcd.png",
                     "<b>Fig. 4.24</b> - Some mammals : (a) Ornithorhynchus (b) Macropus "
                     "(c) Pteropus (d) Balaenoptera.",
-                    max_width_cm=13.0))
+                    max_width_cm=10.0))
 
 # TABLE 4.2 — salient features of all phyla
 story.append(body("The salient distinguishing features of all phyla under the animal kingdom "
