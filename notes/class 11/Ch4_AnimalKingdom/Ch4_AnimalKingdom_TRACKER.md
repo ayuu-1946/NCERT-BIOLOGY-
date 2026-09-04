@@ -388,6 +388,65 @@ the chapter — §4.2 intro, all 11 phyla, 7 vertebrate classes, both tables, su
 exercises — has not been cross-checked in either direction. Chapter 4 stays out of any
 "Done" tally.
 
+> **SUPERSEDED 2026-09-04 by §7e.** The §4.2→end read this section says is still owed was
+> never recorded until the §7e REDO actually performed it. §7e now closes Pass 3(b) over the
+> whole chapter with on-disk evidence (`scratch/ch4_gate3b_redo/FINDINGS.md`). This §7d record
+> remains valid for its §4.1 scope; read it together with §7e.
+
+---
+
+## 7e. Pass 3(b) REDO — §4.2 through EXERCISES, full bidirectional read (2026-09-04)
+
+**Why this section exists.** The earlier Gate ledger row and the header STATUS line asserted Pass 3(b) was
+complete "(§7d §4.1, §7e §4.2→end)", but **no §7e was ever written** — this file jumped straight from §7d
+(§4.1 only, 31 rows) to §8. Under GATE_3 §4 condition 4 + §7 rule 1 a closure with no reading evidence is a
+claim, not a fact, so on operator instruction ("redo Pass 3b … ignore current documentation") the entire
+§4.2→end read was performed from scratch. §4.1 (§7d) was also re-read as part of the whole-chapter sweep and
+re-confirmed. This section supplies the previously-missing evidence.
+
+**Method (GATE_3 §3 + §7):** full start-to-finish read, both directions — no grep / no coverage % / no
+similarity score as clearing evidence. Source read from `scratch/ch4_gate1/ch4_source.txt` (PyMuPDF, 18/18
+pages, page-marked); script read from `Ch4_AnimalKingdom.py` `# ---- N ----` blocks; inventory rows read from
+the frozen `Ch4_AnimalKingdom_inventory.md`. Full per-section reading log with row ranges and both-direction
+verdicts is preserved at **`scratch/ch4_gate3b_redo/FINDINGS.md`** (written incrementally, section by section).
+
+**Per-group reading claims (all rows F032–F352 + the §4.1 rows F001–F031/F015a re-confirmed):**
+
+| Group | Scope (source ↔ script) | Rows | Dir 1 | Dir 2 |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | §4.0 intro + §4.1 + §4.1.1–§4.1.6 (pp.37–39) | F001–F031, F015a, F155–F163, F175–F183, F343–F344 | all COVERED | ✓ (F015a antecedent confirmed present) |
+| 2 | §4.2 opener + §4.2.1–§4.2.10, the 10 non-chordates (pp.39–45) | F032–F154, F164–F174, F184–F194, F345–F347, F350 | all COVERED | ✓ |
+| 3 | §4.2.11 Chordata + Vertebrata chart + 7 classes (pp.45–51) | F195–F206, F213–F218, F219–F311, F325–F332, F335–F342, F348–F349, F351, F352 | all COVERED | ✓ |
+| 4 | TABLE 4.1 (5 rows) + TABLE 4.2 (11×8 cells) (pp.46, 51) | F207–F212, F312–F324 | all COVERED | ✓ (cell-by-cell) |
+| 5 | SUMMARY (34 sentences) + EXERCISES (2 GAP defs) + figure-label matrix (pp.52–54) | summary rows 1–34, Q4/Q12 gaps, F343–F349 | all COVERED | ✓ |
+
+**Totals (whole chapter): all 353 inventory rows (F001–F352 + F015a) COVERED both directions. 0 MISSING,
+0 FABRICATED, 0 DRIFTED, 0 UNINVENTORIED.**
+- All 3 folded SUMMARY-UNIQUE facts confirmed present in the body at topic: F350 "flagellated" choanocytes
+  (§4.2.1), F351 "most primitive chordates" (§4.2.11.1), F352 "limbs absent in snakes" (§4.2.11.5).
+- Both exercise GAP items (Q4 intracellular/extracellular digestion; Q12 oviparous/viviparous) resolved in the
+  Exercises section. All 7 figure-label rows and both tables verified.
+- **No UNINVENTORIED row this pass.** The only UNINVENTORIED item in the chapter's history (F015a, §4.1.2
+  antecedent) had already been found and resolved by §7d; this redo re-confirms F015a is both in the inventory
+  and in the PDF. Live Facts count stays **353**.
+
+**Benign divergences investigated and dismissed (GATE_3 §3 — do NOT "re-fix"):** list connective "and" (§4.1);
+subject–verb "occur"→"occurs" (§4.1.1); safe bullet compression of the 4 organisation levels (§4.1.1); water-
+path reorder in Porifera (§4.2.1); "freeliving"→"free-living", "feather like"→"feather-like"; caption trims on
+Figs 4.17/4.19/4.20/4.22; TABLE 4.1 dropping the cosmetic S.No. column; TABLE 4.2 header line-wrap hyphenation;
+and the summary re-attaching "external skeleton made of chitin" to arthropods (matches body F105 + biology).
+None alter a fact; none are re-fixable without introducing error. Full list in `FINDINGS.md`.
+
+**Deliverable integrity re-confirmed this session:** `python Ch4_AnimalKingdom.py` rebuilds cleanly (16 pp,
+~6.1 MB); `python check_pdf.py "notes/class 11/Ch4_AnimalKingdom"` → **exit 0, VERDICT PASS (0 fail, 0 warn)**,
+353/353 Facts ticked, 56/56 labels in text, 26/26 images monochrome, all 16 pages A4 portrait. No `.py` or PDF
+change was required by the redo — the content faithfully represents the frozen inventory.
+
+**Provenance correction:** §7d's method note cites the source as the NCERT `.docx` `word/document.xml`; this
+redo (and all Pass-1 work) uses the machine-extracted PyMuPDF snapshot `scratch/ch4_gate1/ch4_source.txt` as
+the source of truth. Both render the same §4.1 wording; the redo standardises on the PyMuPDF snapshot named in
+§1/§7 as the arc's text snapshot.
+
 ---
 
 ## 8. Gate ledger
