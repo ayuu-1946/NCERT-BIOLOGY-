@@ -492,7 +492,7 @@ story.append(b1("They possess a <b>post-anal part</b> (tail) and a <b>closed cir
 story.append(figure("fig_4_16.png",
                     "<b>Fig. 4.16</b> - Chordata characteristics. Labels: Nerve cord, "
                     "Notochord, Post-anal part and Gill slits.",
-                    max_width_cm=11.30))
+                    max_width_cm=8.60))
 story.append(b1("Phylum Chordata is divided into three subphyla: <b>Urochordata</b> or "
                 "Tunicata, <b>Cephalochordata</b> and <b>Vertebrata</b>."))
 story.append(b1("Subphyla Urochordata and Cephalochordata are often referred to as "
@@ -503,7 +503,7 @@ story.append(b1("<b>Examples:</b> Urochordata - <i>Ascidia</i>, <i>Salpa</i>, <i
                 "Cephalochordata - <i>Branchiostoma</i> (Amphioxus or Lancelet)."))
 story.append(figure("fig_4_17.png",
                     "<b>Fig. 4.17</b> - Ascidia (a urochordate protochordate).",
-                    max_width_cm=4.37))
+                    max_width_cm=3.50))
 story.append(b1("The members of subphylum Vertebrata possess notochord during the embryonic "
                 "period. The notochord is replaced by a cartilaginous or bony vertebral column "
                 "in the adult. Thus <b>all vertebrates are chordates but all chordates are not "
@@ -546,24 +546,32 @@ story.append(figure("fig_vertebrata_chart.png",
                     max_width_cm=14.85))
 
 # ---- 4.2.11.1 Class - Cyclostomata ----
-# Whole section (heading -> Fig. 4.18) kept together so the figure never
-# splits away from the Cyclostomata text onto the next page.
+# Flattened flow (NOT wrapped in an outer KeepTogether): the heading() helper
+# already returns KeepTogether([CondPageBreak, banner]); nesting that inside
+# another KeepTogether makes the CondPageBreak report a sentinel height and
+# forces the whole section onto the next page, leaving a half-empty page.
+# Appending normally lets the section flow into the free space on page 11.
+story.append(heading("4.2.11.1", "Class - Cyclostomata", level=3))
+story.append(b1("All living members of the class Cyclostomata are ectoparasites on some fishes. "
+                "They are the <b>most primitive chordates</b>."))
+story.append(b1("They have an elongated body bearing <b>6-15 pairs of gill slits</b> for "
+                "respiration. Cyclostomes have a sucking and circular mouth without jaws "
+                "(Fig. 4.18)."))
+story.append(b1("Their body is devoid of scales and paired fins. Cranium and vertebral column "
+                "are cartilaginous. Circulation is of closed type."))
+story.append(b1("Cyclostomes are marine but migrate for spawning to fresh water. After "
+                "spawning, within a few days, they die. Their larvae, after metamorphosis, "
+                "return to the ocean."))
+# Bind the Examples line to Fig. 4.18 so the figure never orphans to the next
+# page. figure() itself returns a KeepTogether; nesting one KeepTogether inside
+# another mis-measures and pushes the figure to the next page, so we splice the
+# figure's inner flowables (framed image + caption) into ONE flat KeepTogether.
+_fig418 = figure("fig_4_18.png",
+                 "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
+                 max_width_cm=10.50)
 story.append(KeepTogether([
-    heading("4.2.11.1", "Class - Cyclostomata", level=3),
-    b1("All living members of the class Cyclostomata are ectoparasites on some fishes. "
-       "They are the <b>most primitive chordates</b>."),
-    b1("They have an elongated body bearing <b>6-15 pairs of gill slits</b> for "
-       "respiration. Cyclostomes have a sucking and circular mouth without jaws "
-       "(Fig. 4.18)."),
-    b1("Their body is devoid of scales and paired fins. Cranium and vertebral column "
-       "are cartilaginous. Circulation is of closed type."),
-    b1("Cyclostomes are marine but migrate for spawning to fresh water. After "
-       "spawning, within a few days, they die. Their larvae, after metamorphosis, "
-       "return to the ocean."),
     b1("<b>Examples:</b> <i>Petromyzon</i> (Lamprey) and <i>Myxine</i> (Hagfish)."),
-    figure("fig_4_18.png",
-           "<b>Fig. 4.18</b> - A jawless vertebrate : Petromyzon.",
-           max_width_cm=14.59),
+    *_fig418._content,
 ]))
 
 # ---- 4.2.11.2 Class - Chondrichthyes ----
