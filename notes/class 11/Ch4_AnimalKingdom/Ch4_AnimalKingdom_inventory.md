@@ -574,3 +574,62 @@ Re-parsing the **frozen** table with the machine (`scratch/ch4_gate1/validate_1z
    - Every correction above is entered directly in the "Figure manifest" table with a `CORRECTED:` note explaining what was wrong; nothing was silently changed. No asset file needed re-cropping — this was purely a captioning/paging defect in the documentation, not a defect in the extracted images.
 
 10. **[COSMETIC — logged at 1-Z, does not block Gate 1]** `check_pdf.py._extract_labels` groups label rows by their **Section column** (`cells[1]`), not by figure number. F348 (Fig 4.16 "Chordata characteristics") and F349 (Vertebrata chart) both sit in **§4.2.11**, so the parser reports **6 fig-id groups for the 7 label-bearing rows** F343–F349. This is a reporting artifact of how the check keys figures — it is **not** a missing figure, a merged figure, or a dropped label (all 56 label strings are present and attributed to the correct row; 0 doubled, no phantom `Fig #` row). Any Pass-2 reader comparing "7 label rows" against the check's "6 figures" should expect this off-by-one and treat it as benign. If a future check revision keys on figure number instead of Section, the count becomes 7 with no change to the underlying rows.
+
+---
+
+## Pass 3(b) / Gate 3 — CLOSED (2026-09-04)
+
+**Scope this session:** the remaining ~90% of the chapter that §4.1's earlier Pass 3(b) session left unread — §4.2 opener, all ten non-chordate phyla (§4.2.1–§4.2.10), §4.2.11 Chordata with its three subphyla, all seven Vertebrata classes (§4.2.11.1–§4.2.11.7), TABLE 4.1, TABLE 4.2, the SUMMARY and the EXERCISES. Together with the §4.1 session (rows F003–F031 + F015a), Pass 3(b) has now read **every** section in both directions.
+
+**Method (GATE_3 §3 + §7):** one complete start-to-finish read, both directions, no grep and no coverage/similarity score used to clear any row. Source read fresh from `Chapter/class 11/Chapter 04 - Animal Kingdom.pdf` re-extracted with PyMuPDF (18 pages, 1022 lines, page-marked; matches the frozen inventory's machine-read page count). Script read from `Ch4_AnimalKingdom.py` blocks `# ---- 4.2 ----` through the EXERCISES block. Inventory rows read from this file (F032–F352). Linter re-run this session on the final rebuilt PDF: `check_pdf.py --strict` -> **exit 0, 0 fail, 0 warn, 16 pp, 353/353 Facts ticked, 26/26 mono images, 56/56 labels**.
+
+**Per-section reading claims (source pages against the named script blocks):**
+
+| Section(s) | Read (source ↔ script) | Rows | Dir 1 (inv->script) | Dir 2 (source->inv) |
+| :--- | :--- | :--- | :--- | :--- |
+| §4.2 opener + Fig 4.4 footnote | p.39–40 ↔ `# ---- 4.2 ----` + note box | F032–F034, F312–F313, F345 | COVERED | every sentence + footnote has a row |
+| §4.2.1 Porifera | p.40 ↔ `# ---- 4.2.1 ----` | F035–F047, F350 | COVERED (incl. "flagellated" fold) | clean |
+| §4.2.2 Coelenterata | p.41 ↔ `# ---- 4.2.2 ----` | F048–F059 | COVERED | clean |
+| §4.2.3 Ctenophora | p.42 ↔ `# ---- 4.2.3 ----` | F060–F068 | COVERED | clean |
+| §4.2.4 Platyhelminthes | p.42 ↔ `# ---- 4.2.4 ----` | F069–F078 | COVERED | clean |
+| §4.2.5 Aschelminthes | p.43 ↔ `# ---- 4.2.5 ----` | F079–F088 | COVERED | clean |
+| §4.2.6 Annelida | p.43 ↔ `# ---- 4.2.6 ----` | F089–F100 | COVERED | clean |
+| §4.2.7 Arthropoda | p.44 ↔ `# ---- 4.2.7 ----` | F101–F119 | COVERED | clean |
+| §4.2.8 Mollusca | p.44–45 ↔ `# ---- 4.2.8 ----` | F120–F130 | COVERED | clean |
+| §4.2.9 Echinodermata | p.45 ↔ `# ---- 4.2.9 ----` | F131–F142 | COVERED | clean |
+| §4.2.10 Hemichordata | p.45 ↔ `# ---- 4.2.10 ----` | F143–F154 | COVERED | clean |
+| §4.2.11 Chordata + TABLE 4.1 + chart | p.45–47 ↔ `# ---- 4.2.11 ----` | F195–F218, F335, F348–F349 | COVERED | clean |
+| §4.2.11.1 Cyclostomata | p.47 ↔ `# ---- 4.2.11.1 ----` | F219–F228, F336, F351 | COVERED (incl. "most primitive" fold) | clean |
+| §4.2.11.2 Chondrichthyes | p.47–48 ↔ `# ---- 4.2.11.2 ----` | F229–F244, F337 | COVERED | clean |
+| §4.2.11.3 Osteichthyes | p.48 ↔ `# ---- 4.2.11.3 ----` | F245–F256, F338 | COVERED | clean |
+| §4.2.11.4 Amphibia | p.48 ↔ `# ---- 4.2.11.4 ----` | F257–F271, F339 | COVERED | clean |
+| §4.2.11.5 Reptilia | p.49 ↔ `# ---- 4.2.11.5 ----` | F272–F283, F340, F352 | COVERED (incl. "limbs absent in snakes" fold) | clean |
+| §4.2.11.6 Aves | p.49–50 ↔ `# ---- 4.2.11.6 ----` | F284–F298, F341 | COVERED | clean |
+| §4.2.11.7 Mammalia | p.50–51 ↔ `# ---- 4.2.11.7 ----` | F299–F311, F342 | COVERED | clean |
+| TABLE 4.2 (11 phyla × 8 attributes) | p.51 ↔ TABLE 4.2 block | F314–F324 | COVERED — all 88 cells match source | clean |
+| SUMMARY | p.52–53 ↔ `# ---- SUMMARY ----` | F333 + 34 summary sentences | COVERED | all 34 sentences carried (3 folds F350–F352) |
+| EXERCISES | p.53–54 ↔ `# ---- EXERCISES ----` | F334 + 2 GAP fills | COVERED — both GAP terms defined | 15 exercises classified |
+
+**Totals across the whole chapter (both §4.1 and this session):** all Facts rows F001–F352 + F015a **COVERED**; **0 MISSING, 0 FABRICATED, 0 DRIFTED, 0 UNINVENTORIED** in the §4.2 arc. Direction 2 confirmed the first (antecedent) sentence and every sub-heading of each section is carried by a row — the Ch9-D9 failure class was checked explicitly and is clean here (the only such gap in the whole chapter was §4.1.2's antecedent, already caught and fixed as F015a in the §4.1 session).
+
+**Confirmed defects this session: NONE.** No `.py` edit and no PDF rebuild were required for correctness. The PDF was regenerated only to prove reproducibility (see below).
+
+**Annotations / compression decisions investigated and dismissed (kept per GATE_3 §3 — do not "re-fix"):**
+1. Fig 4.17 caption in the script reads "Ascidia (a urochordate protochordate)"; the verbatim source caption is just "Ascidia". The added descriptor is fully supported by F200/F202 (Ascidia is a Urochordata example, and Urochordata + Cephalochordata are the protochordates) and is a helpful annotation, not a fabricated fact. **Not a defect.**
+2. Several figure captions drop the source's leading "Example(s) of" or lightly re-order wording (e.g. Fig 4.19 "Cartilaginous fishes : (a) Scoliodon (b) Pristis"). Every species and sub-panel letter matches the source and the verified asset; caption wording is not a graded content fact outside the figure-label rows F343–F349. **Not a defect — captioning style.**
+3. The `memory_aid` box synthesises a Vertebrata ladder + heart-chamber climb (2 -> 3 -> 3/4 -> 4 -> 4). Every value is stated in the body (Chondrichthyes/Osteichthyes 2, Amphibia 3, Reptilia 3 usually / 4 crocodiles, Aves/Mammalia 4). Legitimate NEET study aid derived from sourced facts, not invented content. **Not a defect.**
+4. The two EXERCISES keyterm boxes (intracellular vs extracellular digestion; oviparous vs viviparous) are the two planned GAP fills (Q4, Q12) recorded in the Exercise-gap table — expected additions under Rule 2, not fabrications. **Not a defect.**
+
+### Coverage note (Gate 3 — fixed headings per GATE_3 §5)
+
+- **Compression decisions** — §4.1.1's four organisation levels and §4.1.4's three coelom classes are rendered as bold lead-in bullet labels rather than the source's inline "i.e., X level" prose; each level/term name is preserved verbatim (recorded in the §4.1 session). §4.2.1's water-transport pathway is rendered as a `process_flow` (ostia -> spongocoel -> osculum), all three terms verbatim. TABLE 4.2's column header "Segmentation" is wrapped as "Segmen-tation" and "Circulatory/Respiratory" as "Circula-tory/Respira-tory" for column fit; values unchanged. All safe — no fact merged away or reworded in meaning.
+- **Exercise classification** — 15 exercises: **13 COVERED**, **2 GAP** (both filled in the EXERCISES block). Q1 §4.1/Fig 4.4; Q2 §4.1–§4.1.6; Q3 §4.1.4; **Q4 GAP** -> intracellular vs extracellular digestion keyterm; Q5 §4.2.11.3/.5/.6/.7 + §4.2.8/.11.4; Q6 §4.2.4; Q7 §4.2.7; Q8 (c) Echinodermata §4.2.9; Q9 §4.2.11; Q10 §4.2.11.2–3; Q11 §4.2.11.6; **Q12 GAP** -> oviparous vs viviparous keyterm; Q13 (c) Annelida §4.2.6; Q14 match-pairs across §4.2.3/.6/.8/.11.2–7/.1; Q15 §4.2.4–§4.2.6 parasite examples.
+- **Drift caught and fixed** — None in the §4.2 arc (0 DRIFTED). The chapter's only Pass-3(b) finding was §4.1.2's UNINVENTORIED antecedent sentence, resolved as F015a in the §4.1 session (already in script/PDF; no rebuild needed).
+- **Figures requiring manual attention** — None. All 26 assets are `mode=L` mono, individually verified at 1-F; captions/pages re-pinned (carry-over #9). 56/56 in-figure labels appear in the running text (check 6 green).
+- **Color-dependent figures** — None. Every figure is a labelled line diagram whose meaning does not rely on colour.
+- **Source problems** — None unrecoverable. Known source quirks handled without altering meaning: page-5 out-of-reading-order §4.2.2 opener (carry-over #1), the ×5 faux-bold class-heading overprint on pp.11–15 (carry-over #6), and TABLE 4.2's column-major extraction (carry-over #7) — all reassembled correctly and cross-checked against the per-phylum prose.
+- **Linter verdict** — `check_pdf.py --strict` on the final rebuilt 16-page PDF: **exit 0, VERDICT PASS, 0 fail / 0 warn** across all 10 checks (16/16 A4 portrait, 26/26 mono images, 56/56 labels in text, 353/353 Facts ticked, smallest glyph 6.0pt, 61 banners 0 orphaned, 70 plates 0 collisions). No accepted WARN. Check 4 (no person photograph) legitimately does not fire — this chapter embeds only line diagrams and has no scientist profile; that is a true negative, not a suppressed finding.
+
+**Reproducibility (Gate 3 condition 5):** regenerated the PDF from the final `Ch4_AnimalKingdom.py`; the rebuild matches the committed PDF at **16 pages / 30832 extracted characters / 26 images** (embedded timestamp is the only byte difference).
+
+**All five Gate 3 conditions hold -> GATE 3 CLOSED, chapter DELIVERED (2026-09-04).** Cross-document agreement (GATE_3 §7 rule 2): this inventory, `Ch4_AnimalKingdom_TRACKER.md`, `CHAPTER_TRACKER.md`, and `CHAPTER_STATUS.md` were all updated in this same session to state Ch4 Done.
