@@ -317,6 +317,79 @@ section is the single current source of truth for page count (**16**, not 19).
 
 ---
 
+## 7d. Pass 3(b) — content cross-check, §4.1 only (2026-09-04)
+
+**Scope this session:** §4.1 *Basis of Classification* and all six sub-sections
+§4.1.1–§4.1.6 **only** (operator-scoped: "not full, just section 4.1"). §4.2 and
+everything below it (§4.2.1–§4.2.11.7, TABLE 4.1/4.2, SUMMARY, EXERCISES) remain
+**unread** and Pass 3(b) stays open for them.
+
+**Method (per GATE_3 §3 + §7 rules):** full start-to-finish read, both directions — no
+grep, no coverage %, no similarity score. Source read from the original NCERT `.docx`
+body stream (`word/document.xml`, section extracted from the "BASIS**OF** CLASSIFICATION"
+body heading to the "4.2" heading); script read from `Ch4_AnimalKingdom.py` blocks
+`# ---- 4.1 ----` through `# ---- 4.1.6 ----`; inventory rows read from
+`Ch4_AnimalKingdom_inventory.md` (F003–F031). Linter re-run this session:
+`check_pdf.py` → **exit 0, 0 fail, 0 warn, 16 pp, 352/352 ticked**.
+
+**Per-section reading claims (source pages 37–39 against the named script blocks):**
+
+| Section | Read (source ↔ script) | Rows | Dir 1 (inv→script) | Dir 2 (source→inv) |
+| :--- | :--- | :--- | :--- | :--- |
+| §4.1 opener | p.37 "Inspite of differences…discussed here." ↔ `# ---- 4.1 ----` | F003–F004 | 2/2 COVERED | every sentence has a row ✓ |
+| §4.1.1 Levels of Organisation | pp.37–38 full para ↔ `# ---- 4.1.1 ----` | F005–F015 | 11/11 COVERED | every sentence has a row ✓ |
+| §4.1.2 Symmetry | p.38 full para ↔ `# ---- 4.1.2 ----` | F016–F019 | 4/4 COVERED | **1 UNINVENTORIED** (see below) |
+| §4.1.3 Diploblastic/Triploblastic | pp.38–39 ↔ `# ---- 4.1.3 ----` | F020–F022 | 3/3 COVERED | every sentence has a row ✓ |
+| §4.1.4 Coelom | p.39 full para ↔ `# ---- 4.1.4 ----` | F023–F027 | 5/5 COVERED | every sentence has a row ✓ |
+| §4.1.5 Segmentation | p.39 ↔ `# ---- 4.1.5 ----` | F028–F029 | 2/2 COVERED | every sentence has a row ✓ |
+| §4.1.6 Notochord | p.39 ↔ `# ---- 4.1.6 ----` | F030–F031 | 2/2 COVERED | every sentence has a row ✓ |
+
+**Totals (§4.1):** 29 inventory rows (F003–F031) all **COVERED**; **0 MISSING, 0
+FABRICATED, 0 DRIFTED**. Figure-label rows Fig 4.1(a/b), 4.2, 4.3 confirmed: correct
+asset, caption number/text verbatim, placed at their topic, and each label appears in
+the running text (4.1a/4.1b in F018/F019, 4.2a/4.2b in F021/F022, 4.3a/4.3b/4.3c in
+F025/F026/F027).
+
+**CONFIRMED finding — 1 UNINVENTORIED (Pass 1 freeze gap, Ch9-D9 class):**
+- Direction 2 walk of §4.1.2 found its **opening antecedent sentence** — *"Animals can
+  be categorised on the basis of their symmetry."* — carried by the script/PDF
+  (`Ch4_AnimalKingdom.py` line 178, rendered on the page) but with **no inventory row**
+  (F015 was the last 4.1.1 row; F016 began directly at "Sponges are mostly
+  asymmetrical"). This is the single most-commonly-dropped item class per GATE_3 §3.
+- **Resolution:** added row **F015a** (`4.1.2`, ticked — the fact is already in the
+  PDF) to `Ch4_AnimalKingdom_inventory.md`, and annotated the 1a-S census in place
+  (4.1.2: 4→5; 1a-S total 154→**155**). Logged plainly as a real Pass 1 gap; **not**
+  back-dated into the freeze. IDs F016–F154 unchanged (suffix insertion, per the Ch9
+  F194a/F221a/F225a precedent).
+- **Reader impact: none.** No `.py` edit and no PDF rebuild were required — the sentence
+  was never absent from the deliverable, only from the checklist. `check_pdf.py`
+  therefore stays green with no regeneration.
+
+**False positives investigated and dismissed (kept per GATE_3 §3 evidence discipline —
+do not "re-fix"):**
+1. §4.1 opener — script reads "nature of coelom, **and** patterns of digestive…"; source
+   omits the "and". Trivial list connective; no meaning change. **Not** a defect.
+2. §4.1.1 — script "division of labour (activities) **occurs**" vs source "**occur**".
+   Subject-verb normalisation; no content change. **Not** a defect.
+3. §4.1.1 — the four organisation levels are rendered as bold lead-in labels
+   (**Cellular / Tissue / Organ / Organ system level:**) rather than the source's inline
+   "…i.e., X level of organisation" phrasing. Deliberate safe compression: each level
+   name is preserved verbatim in its label; the corresponding inventory rows (F006–F010)
+   are fully represented. **Not** a defect — logged as a compression decision.
+
+**Cross-document agreement (GATE_3 §7 rule 2):** after this session, the inventory
+(F015a added, census annotated), this tracker (§7d + ledger row), and
+`CHAPTER_TRACKER.md` (Ch4 row) all state the same thing — §4.1 verified both directions,
+one UNINVENTORIED resolved, Pass 3(b) still open for §4.2 onward. `CHAPTER_STATUS.md` has
+no Ch4 row yet (correct — Ch4 is not Done; it is added only at Gate-3 closure).
+
+**Gate 3(b) is NOT closed.** Only §4.1 (31 of 352 rows) was read. The remaining ~90% of
+the chapter — §4.2 intro, all 11 phyla, 7 vertebrate classes, both tables, summary and
+exercises — has not been cross-checked in either direction. Chapter 4 stays out of any
+"Done" tally.
+
+---
+
 ## 8. Gate ledger
 
 | Pass | Scope | Status |
@@ -325,7 +398,7 @@ section is the single current source of truth for page count (**16**, not 19).
 | **Pass 2a** | Script + PDF build, **first half** (non-chordates, Figs 4.1–4.15) | **✅ DONE (2026-09-03) — 200/352 rows ticked (`F001`–`F194`, `F343`–`F347`, `F350`); PDF 12 pp; all 9 mechanical/1a lint checks green.** |
 | **Pass 2b** | Script + PDF build, **second half** (Chordata + 7 classes, TABLE 4.1/4.2, summary, `check_pdf.py` fully green) | **✅ DONE (2026-09-03) — 352/352 rows ticked (`F195`–`F352`); PDF 19 pp at close; `check_pdf.py` exit 0, 0 fail, 0 warn. GATE 2 CLOSED (GREEN).** |
 | Pass 3(a) | Visual render check (zero confirmed pixel-level defects) | **✅ DONE (2026-09-04) — all 16 pages individually inspected post-pagination-fix; style consistency confirmed; `check_pdf.py` re-run green at the corrected 16-page count (0 fail, 0 warn). See §7c.** |
-| Pass 3(b) | Content/text verification | ⬜ not started |
+| Pass 3(b) | Content/text verification | 🟨 IN PROGRESS (2026-09-04) — **§4.1 (Basis of Classification, incl. 4.1.1–4.1.6) done, both directions.** 29 rows (F003–F031) COVERED; 0 MISSING/FABRICATED/DRIFTED; 1 UNINVENTORIED antecedent found & resolved (F015a). §4.2 and all of §4.2.1–§4.2.11.7 + tables + summary + exercises still to read. See §7d. |
 
 **GATE 1 VERDICT: CLOSED (GREEN), 2026-09-03.** All nine Pass-1 sessions ran (1a-S, 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F, 1-F resumed, 1-Z) and 1-Z froze the inventory over the whole chapter at **352 rows (F001–F352, contiguous, 0 gaps/dupes)**, machine-validated.
 

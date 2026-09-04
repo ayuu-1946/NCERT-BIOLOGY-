@@ -42,6 +42,8 @@ Re-parsing the finished table with `check_pdf.py`'s own row logic gives **154 Fa
 
 `4.0`=2, `4.1`=2, `4.1.1`=11, `4.1.2`=4, `4.1.3`=3, `4.1.4`=5, `4.1.5`=2, `4.1.6`=2, `4.2`=3, `4.2.1`=13, `4.2.2`=12, `4.2.3`=9, `4.2.4`=10, `4.2.5`=10, `4.2.6`=12, `4.2.7`=19, `4.2.8`=11, `4.2.9`=12, `4.2.10`=12 — 19 sections, 154 rows.
 
+> **Pass 3(b) amendment (§4.1 verify):** one antecedent row, **F015a** (`4.1.2` — "Animals can be categorised on the basis of their symmetry."), was added during Pass 3(b) as an honest Pass 1 freeze gap (see §4.1 verification log below). It was **not** back-dated into the 1a-S census above; with it, `4.1.2` = 5 and the 1a-S total is **155**. IDs `F016`–`F154` are unchanged (suffix insertion, per the Ch9 F194a/F221a/F225a precedent).
+
 `Type` histogram (machine-grouped, all lowercase, no casing split): feature 86, definition 24, example 17, term 10, number 4, etymology 4, comparison 4, process 3, list 1, exception 1 = 154.
 
 ### 1a-H census — re-parsed from the Facts table itself (step 10)
@@ -120,6 +122,7 @@ Re-parsing the **frozen** table with the machine (`scratch/ch4_gate1/validate_1z
 | F013 | 4.1.1 | definition | "A complete digestive system has two openings, mouth and anus." | x |
 | F014 | 4.1.1 | definition | "(i) open type in which the blood is pumped out of the heart and the cells and tissues are directly bathed in it" | x |
 | F015 | 4.1.1 | definition | "(ii) closed type in which the blood is circulated through a series of vessels of varying diameters (arteries, veins and capillaries)" | x |
+| F015a | 4.1.2 | feature | "Animals can be categorised on the basis of their symmetry." *(added in Pass 3(b) — §4.1.2 antecedent sentence; Pass 1 freeze gap, already present in script/PDF)* | x |
 | F016 | 4.1.2 | definition | "Sponges are mostly asymmetrical, i.e., any plane that passes through the centre does not divide them into equal halves." | x |
 | F017 | 4.1.2 | definition | "When any plane passing through the central axis of the body divides the organism into two identical halves, it is called radial symmetry." | x |
 | F018 | 4.1.2 | example | "Coelenterates, ctenophores and echinoderms have this kind of body plan (Figure 4.1a)." | x |
