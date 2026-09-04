@@ -5,7 +5,7 @@
 **Text snapshot for this arc:** `scratch/ch4_gate1/ch4_source.txt` (1022 lines, PyMuPDF, page markers `===== PAGE n =====`).
 **Protocol:** `GATE_1_PASS_1_SOURCE_MASTERY.md`, run as a **big chapter** (§8) — halves 1a and 1b into one inventory.
 
-> **GATE 1 IS CLOSED (GREEN), 2026-09-03. Pass 1 is complete — all nine sessions done (Pass 1a + Pass 1b + 1-F + 1-F resumed + 1-Z). Inventory FROZEN at 352 rows (F001–F352, machine-validated). Pass 2 has NOT started: no script, no PDF, all 352 rows unticked — so Chapter 4 must NOT appear in any "Done" completion tally.**
+> **STATUS AS OF 2026-09-04: GATE 1 CLOSED (GREEN), GATE 2 CLOSED (GREEN), Pass 3(a) DONE (GREEN).** Pass 1 (all nine sessions) froze the inventory at 352 rows (F001–F352). Pass 2a+2b wrote the script/PDF and ticked all 352 rows; `check_pdf.py` exits 0 (0 fail, 0 warn). Post-close pagination-only fixes re-flowed the PDF from 19 to **16 pages** (§7c) with no content change; the lint was re-run green at 16 pages. Pass 3(a) individually inspected all 16 rendered pages — zero defects found. **Pass 3(b) (content/text verification) has not started — Chapter 4 must NOT appear in any "Done" completion tally until it closes.**
 
 ---
 
@@ -197,7 +197,12 @@ judged on the whole merged PDF **after 2b**, per v6 §7. No mechanical regressio
 
 Second half of the notes script — the chordate arc — appended at the
 `### PASS 2b CONTINUES HERE ###` seam in the same file, `Ch4_AnimalKingdom.py`. No
-2a block was touched. The build now renders `Ch4_AnimalKingdom.pdf` at **19 pages**.
+2a block was touched. The build originally rendered `Ch4_AnimalKingdom.pdf` at **19
+pages**; that count is superseded by §7c below — three post-2b pagination-only
+fixes (commits `d9ec7e0`, `8c05176`) re-flowed the same 352 ticked rows onto
+**16 pages**, with no content change. Wherever this section still says "19 pages"
+below, read it as the as-built figure at the moment Pass 2b closed; **16 pages is
+the current, correct count** and is what Pass 3(a) verified.
 
 - **Scope written (1b half):** §4.2.11 Chordata opener + the three subphyla
   (Urochordata, Cephalochordata, Vertebrata) + the distinguishing chordate features;
@@ -219,9 +224,10 @@ Second half of the notes script — the chordate arc — appended at the
 
 ### Pass 2b lint (`check_pdf.py`, whole PDF) — all-green Gate 2 verdict
 
-Ran `python check_pdf.py "notes/class 11/Ch4_AnimalKingdom"` against the merged 19-page
-PDF. All nine mechanical/1a checks stay green, and both checks that were 1b-scoped FAILs
-in 2a flip to PASS:
+Ran `python check_pdf.py "notes/class 11/Ch4_AnimalKingdom"` against the merged PDF
+**as it stood at the moment Pass 2b closed — 19 pages** (superseded by §7c: pagination-only
+fixes later re-flowed the identical content onto 16 pages; see the note below). All nine
+mechanical/1a checks stay green, and both checks that were 1b-scoped FAILs in 2a flip to PASS:
 
 | Check | Result |
 | :--- | :--- |
@@ -232,11 +238,82 @@ in 2a flip to PASS:
 | 5 Banned glyphs | ✅ PASS |
 | 6 Figure-label coverage | ✅ PASS — 56/56 labels in running text (0 missing, 0 partial) |
 | 7 Inventory fully ticked | ✅ PASS — 352/352 rows ticked |
-| 8 Page geometry | ✅ PASS — all 19 pages A4 portrait (595×842pt) |
+| 8 Page geometry | ✅ PASS — all 19 pages A4 portrait (595×842pt) *(as-built at Pass 2b close; now 16 pages — see §7c)* |
 | 9 Orphaned headings | ✅ PASS |
 | 10 Badge-plate collision | ✅ PASS |
 
-**VERDICT: PASS (0 fail, 0 warn)** over the whole 19-page merged PDF.
+**VERDICT: PASS (0 fail, 0 warn)** over the whole PDF, 19 pages **at that moment**. §7c
+records the post-2b pagination fixes and the re-run of this same lint at 16 pages.
+
+---
+
+## 7c. Post-2b pagination fixes + Pass 3(a) — visual render check (2026-09-04)
+
+Between Gate 2 closing and Pass 3 starting, the operator applied **three pagination-only
+fixes** directly against the frozen 352-row content (no Facts, headings, captions, labels,
+or table cells were added, removed, or reworded):
+
+| Commit | Change |
+| :--- | :--- |
+| `d9ec7e0` | Fix Ch4 pagination: keep TABLE 4.1 and Cyclostomata + Fig 4.18 unsplit; open TABLE 4.2's section on its own page |
+| `8c05176` | Fit TABLE 4.1 with Figs 4.16/4.17 on one page; move Cyclostomata + Fig 4.18 to page 11 (shrink figures, flatten `KeepTogether` nesting) |
+| `f3376e3` | Document the resulting pagination/figure-sizing learnings in `LEARNINGS.md` |
+
+Net effect: the same 352 ticked Facts and 26 figure assets **re-flow from 19 pages down to
+16 pages**. This is the authoritative, current page count — every earlier "19 pages" figure
+in §7b above is stale and is superseded by this section.
+
+**Gate 2 re-verified green at the corrected page count.** Re-ran
+`python check_pdf.py "notes/class 11/Ch4_AnimalKingdom"` against the current 16-page build:
+
+| Check | Result |
+| :--- | :--- |
+| 1 Footer/header band | ✅ PASS |
+| 2 Legibility floor | ✅ PASS — smallest rendered text 6.0pt |
+| 3 Grayscale-only images | ✅ PASS — all 26 embedded images monochrome |
+| 4 No person photograph | ✅ PASS |
+| 5 Banned glyphs | ✅ PASS |
+| 6 Figure-label coverage | ✅ PASS — 56/56 labels in running text, 0 partial, 0 missing |
+| 7 Inventory fully ticked | ✅ PASS — 352/352 Facts rows ticked |
+| 8 Page geometry | ✅ PASS — **all 16 pages A4 portrait (595×842pt)** |
+| 9 Orphaned headings | ✅ PASS — 61 banner headings, none stranded |
+| 10 Badge-plate collision | ✅ PASS — 70 filled plates, all clear |
+
+**VERDICT: PASS (0 fail, 0 warn)** over the whole 16-page merged PDF.
+
+**Pass 3(a) — visual render check, all 16 pages, individually inspected:**
+
+- Every page rendered at screen DPI and read directly (not just linted): no overflow,
+  clipping, or orphaned headings on any of the 16 pages.
+- **Headings** — chapter title, `§4.1`/`§4.2` banners, all numbered sub-section banners
+  (4.1.1–4.2.11.7), Summary/Exercises banners — render as filled white-on-dark bands with
+  numeral tags correctly aligned.
+- **Figures 4.1–4.24 + the unnumbered Vertebrata chart** — all sized within their frames at
+  correct aspect ratio, no stretching or clipping; verbatim italic captions sit directly
+  beneath each figure. The page-11 Cyclostomata + Fig 4.18 pairing and the Table 4.1 + Figs
+  4.16/4.17 one-page fit (the two changes from `d9ec7e0`/`8c05176`) both render cleanly with
+  no crowding.
+- **TABLE 4.1** and **TABLE 4.2** (the 11-phylum × 9-attribute matrix) — header bands and
+  zebra striping intact; Table 4.2's nine columns wrap headers cleanly with no clipped cells
+  and no rows overrunning the page.
+- **Special boxes** — the NOTE box, the MEMORY AID star box, and the Exercises term-pair list
+  all render with correct dashed borders and glyphs.
+- **Style-consistency check** (Pass 3(a)'s cross-page requirement): body text is a single
+  `Times-Roman 10.8` throughout; bold runs are `Times-Bold 10.8`; italics `Times-Italic
+  9.5`/`10.8`; banner headings are white-on-dark `Times-Bold` at consistent sizes; badge
+  numerals are 6.0/6.2pt white. Each element type was confirmed visually identical across
+  ≥3 occurrences, spanning the full chapter — no drift introduced by the pagination fixes.
+
+**Zero pixel-level defects found.** No further edits to `Ch4_AnimalKingdom.py` or the PDF
+were required by Pass 3(a).
+
+**Discrepancy resolved:** prior to this session, §7b/§8 and the header line at the top of
+this file disagreed on page count ("19 pages" vs. the on-disk PDF's actual 16 pages). The
+19-page figure was the true as-built count at the moment Pass 2b closed; the operator's
+post-2b pagination fixes (this section) are what changed it to 16. Both historical claims
+were accurate for their moment — the discrepancy was this tracker failing to record the
+intervening fix, not a factual error in either pass. §7b is now annotated in place; this
+section is the single current source of truth for page count (**16**, not 19).
 
 ---
 
@@ -246,9 +323,10 @@ in 2a flip to PASS:
 | :--- | :--- | :--- |
 | **Pass 1** | Source mastery & frozen inventory | **✅ COMPLETE — all nine sessions done; inventory FROZEN at 352 rows. GATE 1 CLOSED (GREEN).** |
 | **Pass 2a** | Script + PDF build, **first half** (non-chordates, Figs 4.1–4.15) | **✅ DONE (2026-09-03) — 200/352 rows ticked (`F001`–`F194`, `F343`–`F347`, `F350`); PDF 12 pp; all 9 mechanical/1a lint checks green.** |
-| **Pass 2b** | Script + PDF build, **second half** (Chordata + 7 classes, TABLE 4.1/4.2, summary, `check_pdf.py` fully green) | **✅ DONE (2026-09-03) — 352/352 rows ticked (`F195`–`F352`); PDF 19 pp; `check_pdf.py` exit 0, 0 fail, 0 warn. GATE 2 CLOSED (GREEN).** |
-| Pass 3 | Verify & deliver (zero confirmed defects) | ⬜ not started — Gate 2 is closed; Chapter 4 stays out of any "Done" tally until Pass 3 delivers a defect-free PDF |
+| **Pass 2b** | Script + PDF build, **second half** (Chordata + 7 classes, TABLE 4.1/4.2, summary, `check_pdf.py` fully green) | **✅ DONE (2026-09-03) — 352/352 rows ticked (`F195`–`F352`); PDF 19 pp at close; `check_pdf.py` exit 0, 0 fail, 0 warn. GATE 2 CLOSED (GREEN).** |
+| Pass 3(a) | Visual render check (zero confirmed pixel-level defects) | **✅ DONE (2026-09-04) — all 16 pages individually inspected post-pagination-fix; style consistency confirmed; `check_pdf.py` re-run green at the corrected 16-page count (0 fail, 0 warn). See §7c.** |
+| Pass 3(b) | Content/text verification | ⬜ not started |
 
 **GATE 1 VERDICT: CLOSED (GREEN), 2026-09-03.** All nine Pass-1 sessions ran (1a-S, 1a-H, 1a-O, 1b-S, 1b-H, 1b-O, 1-F, 1-F resumed, 1-Z) and 1-Z froze the inventory over the whole chapter at **352 rows (F001–F352, contiguous, 0 gaps/dupes)**, machine-validated.
 
-**GATE 2 VERDICT: CLOSED (GREEN), 2026-09-03.** Pass 2a (non-chordates, 200 rows) and Pass 2b (chordates + tables + summary, 152 rows) together tick all 352 inventory rows and drive `check_pdf.py` to **exit 0 (0 fail, 0 warn)** over the full 19-page merged PDF. **Gate 2 closed is NOT chapter closed:** Pass 3 (verify & deliver) has not started, so Chapter 4 stays out of any "Done" tally until Pass 3 confirms zero defects.
+**GATE 2 VERDICT: CLOSED (GREEN), 2026-09-03; page count corrected 2026-09-04.** Pass 2a (non-chordates, 200 rows) and Pass 2b (chordates + tables + summary, 152 rows) together tick all 352 inventory rows and drive `check_pdf.py` to **exit 0 (0 fail, 0 warn)**. The merged PDF was 19 pages at the moment Gate 2 closed; post-close pagination-only fixes (§7c) re-flowed it to **16 pages**, re-verified green against the same lint. **Gate 2 closed is NOT chapter closed:** Pass 3(b) (content/text verification) has not started, so Chapter 4 stays out of any "Done" tally until all of Pass 3 delivers a defect-free PDF.

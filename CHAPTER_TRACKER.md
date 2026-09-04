@@ -77,7 +77,7 @@ For the evidence behind every Done, see `CHAPTER_STATUS.md`.
 | 1. The Living World | ✅ Done |
 | 2. Biological Classification | ✅ Done |
 | 3. Plant Kingdom | ✅ Done |
-| 4. Animal Kingdom | 🟥 **Not done — GATE 1 OPEN.** Rebuilt from zero (2026-09-03): the prior "Gate 1 passed" claim was untrusted and reversed (14-vs-18 page error, no real Facts table on disk). Run as a **big chapter**; **Pass 1a complete (3 of 8 sessions: 1a-S/1a-H/1a-O = 194 inventory rows)**, Pass 1b + whole-chapter 1-F + 1-Z pending, inventory **NOT frozen**. Consistent with the Class 11 tally below ("Only Ch4, Ch5 and Ch7 remain Not done"). See `notes/class 11/Ch4_AnimalKingdom/Ch4_AnimalKingdom_TRACKER.md` |
+| 4. Animal Kingdom | ▶️ **Not done yet, but GATE 1 + GATE 2 CLOSED (GREEN) and Pass 3(a) DONE (2026-09-04).** Rebuilt from zero on 2026-09-03 after the prior "Gate 1 passed" claim was untrusted and reversed. Run as a **big chapter**: Pass 1 (all nine sessions) froze the inventory at **352 rows (F001–F352)**; Pass 2a+2b wrote the script/PDF and ticked all 352 rows, `check_pdf.py` exit 0 (0 fail, 0 warn). Post-Gate-2 pagination-only fixes re-flowed the same content from 19 to **16 pages** (no Facts/captions/labels changed); the lint was re-run green at 16 pages. Pass 3(a) individually inspected all 16 rendered pages — zero pixel-level defects. **Pass 3(b) (content/text verification) not started — still excluded from the "Done" tally below until it closes.** See `notes/class 11/Ch4_AnimalKingdom/Ch4_AnimalKingdom_TRACKER.md` §7c and §8. |
 
 ### Unit II — Structural Organisation in Plants and Animals
 
