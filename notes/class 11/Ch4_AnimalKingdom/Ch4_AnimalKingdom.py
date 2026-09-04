@@ -27,10 +27,11 @@ while not os.path.exists(os.path.join(ROOT, "neet_template.py")):
     ROOT = parent
 sys.path.insert(0, ROOT)
 
-from reportlab.platypus import Paragraph
+from reportlab.platypus import Paragraph, Image, Table, TableStyle, KeepTogether
+from reportlab.lib.units import cm
 from neet_template import (
     STYLES, heading, keyterm, process_flow, note, memory_aid,
-    data_table, title_block, build_pdf,
+    data_table, title_block, build_pdf, FRAME_WIDTH, GRID_LINE,
 )
 from neet_template import figure as _shared_figure
 
@@ -40,6 +41,51 @@ OUT_PDF = os.path.join(HERE, "Ch4_AnimalKingdom.pdf")
 
 def figure(asset_name, caption_text, max_width_cm=15.9):
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+
+
+def _framed_image(asset_name, width_cm):
+    """Frame a single figure at an exact rendered width (cm), same box styling as
+    the shared figure() helper. Returns (framed_flowable, framed_outer_width_pt)."""
+    from PIL import Image as PILImage
+    path = os.path.join(ASSETS, asset_name)
+    with PILImage.open(path) as im:
+        px_w, px_h = im.size
+    width = width_cm * cm
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+    framed = Table([[img]], colWidths=[width + 10])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    return framed, width + 10
+
+
+def figure_row(specs, cell_pad=6):
+    """Place several figures side by side in one row, each with its own caption
+    stacked beneath it. `specs` is a list of (asset_name, caption_text, width_cm).
+    The whole row is kept together across page breaks."""
+    cells, colwidths = [], []
+    for asset_name, caption_text, width_cm in specs:
+        framed, outer_w = _framed_image(asset_name, width_cm)
+        cells.append([framed, Paragraph(caption_text, STYLES["Caption"])])
+        colwidths.append(outer_w + 2 * cell_pad)
+    row = Table([cells], colWidths=colwidths)
+    row.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), cell_pad),
+        ("RIGHTPADDING", (0, 0), (-1, -1), cell_pad),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    row.hAlign = "CENTER"
+    return KeepTogether(row)
 
 
 def body(text):
@@ -110,8 +156,10 @@ story.append(keyterm("<b>Radial symmetry:</b> when any plane passing through the
 story.append(keyterm("<b>Bilateral symmetry:</b> animals like annelids, arthropods, etc., where "
                      "the body can be divided into identical left and right halves in only one "
                      "plane (Figure 4.1b)."))
-story.append(figure("fig_4_1a.png", "<b>Fig. 4.1(a)</b> - Radial symmetry.", max_width_cm=6.0))
-story.append(figure("fig_4_1b.png", "<b>Fig. 4.1(b)</b> - Bilateral symmetry.", max_width_cm=7.5))
+story.append(figure_row([
+    ("fig_4_1a.png", "<b>Fig. 4.1(a)</b> - Radial symmetry.", 7.0),
+    ("fig_4_1b.png", "<b>Fig. 4.1(b)</b> - Bilateral symmetry.", 7.0),
+]))
 
 # ---- 4.1.3 Diploblastic and Triploblastic Organisation ----
 story.append(heading("4.1.3", "Diploblastic and Triploblastic Organisation", level=2))
@@ -229,12 +277,12 @@ story.append(b1("Those cnidarians which exist in both forms exhibit <b>alternati
 story.append(b1("<b>Examples:</b> <i>Physalia</i> (Portuguese man-of-war), <i>Adamsia</i> (Sea "
                 "anemone), <i>Pennatula</i> (Sea-pen), <i>Gorgonia</i> (Sea-fan) and "
                 "<i>Meandrina</i> (Brain coral)."))
-story.append(figure("fig_4_6ab.png",
-                    "<b>Fig. 4.6</b> - Examples of Coelenterata indicating outline of their body "
-                    "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).",
-                    max_width_cm=11.5))
-story.append(figure("fig_4_7.png", "<b>Fig. 4.7</b> - Diagrammatic view of Cnidoblast.",
-                    max_width_cm=5.0))
+story.append(figure_row([
+    ("fig_4_6ab.png",
+     "<b>Fig. 4.6</b> - Examples of Coelenterata indicating outline of their body "
+     "form : (a) Aurelia (Medusa) (b) Adamsia (Polyp).", 11.5),
+    ("fig_4_7.png", "<b>Fig. 4.7</b> - Diagrammatic view of Cnidoblast.", 4.0),
+]))
 
 # ---- 4.2.3 Phylum - Ctenophora ----
 story.append(heading("4.2.3", "Phylum - Ctenophora", level=2))
