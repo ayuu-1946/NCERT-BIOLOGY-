@@ -59,12 +59,9 @@ def labels_line(labels):
 story = []
 
 story.extend(title_block("Cell: The Unit of Life"))
-story.append(P("<i>Class 11 - Chapter 8 - NEET replacement notes built from the NCERT "
-               "chapter text, its 13 figures, its summary and its 14 exercises.</i>"))
-story.append(Spacer(1, 0.18 * cm))
 
 # ---- 0.1 ---- Unit 3 opener: why the cell is the unit of study  (F001-F011)
-story.append(heading("U3", "Unit Opener - Cell: Structure and Functions", level=1))
+story.append(heading("U3", "Cell: Structure and Functions", level=1))
 story.append(keyterm("<b>Biology</b> is the study of living organisms."))
 story.append(P("The detailed description of their form and appearance only brought out their "
                "diversity. It is the cell theory that emphasised the unity underlying this "
@@ -89,7 +86,7 @@ story.append(note("Throughout these notes the micron unit of the source is writt
                   "image and is reproduced here as the true micrometre."))
 
 # ---- 0.2 ---- Scientist profile, text-only (F012-F019)
-story.append(heading("U3", "Scientist Profile (printed in the unit opener)", level=2))
+story.append(heading("U3", "Scientist Profile", level=2))
 story.append(note("<b>G.N. RAMACHANDRAN (1922 - 2001).</b> Born on October 8, 1922, in a small "
                   "town, not far from Cochin on the southwestern coast of India. He passed away "
                   "at the age of 78, on April 7, 2001. He was an outstanding figure in the field "
