@@ -314,6 +314,60 @@ into the content extent. Text renders as ink, so the ink bbox already covers eve
 words only drags in the neighbouring prose column (it put Fig 5.1's extent at `x=330.0`, the
 left edge of page 4's right-hand column) and the rotated watermark `(a)`.
 
+### 7. Reconciling parallel figure work that landed on `main` mid-session
+
+While this was in progress, two commits reached `main` adding *derived* figure layers — and
+both were built from the pre-re-pin assets, so both had inherited the defects.
+
+**`assets/caption_free/`** was 17 copies produced by a `remove_captions.py` that pixel-crops
+the caption band off an already-extracted PNG. Its own record listed 10 of 17 figures as
+"unchanged", which is exactly what you would expect: those were the plates whose crop excluded
+the caption already. So `caption_free/fig_5_2.png` still read **"erals"**, and
+`caption_free/fig_5_4.png` still had no `(b)`/`(c)` markers. Cropping a caption off a defective
+plate leaves a defective plate.
+
+It was removed, for three reasons that compound:
+
+1. it carried the defects;
+2. its crop boxes were hardcoded pixels measured against the old dimensions — `fig_5_12.png`
+   went from 684x2180 to 430x2230, so a box of `(0, 0, 592, 2240)` now *pads with black*
+   instead of trimming;
+3. it is subsumed. Excluding the caption in the PDF rect is one reproducible step instead of
+   two, and it is what surfaced the 12 defective rectangles in the first place.
+
+**The two horizontal composites were kept**, because they solve a real problem rather than a
+duplicated one. Fig 5.12 is 430x2230 natively — about 1:5.2 — and §4.4 forbids squashing a
+plate to fit, so re-flowing its five panels into a strip is the correct remedy, not a
+cosmetic one.
+
+But they needed regenerating, and doing so exposed a defect that would have failed Gate 2:
+
+```python
+canvas = Image.new("RGB", (...), "white")     # ← both committed composites were 3-channel
+```
+
+`check_pdf.py` check 3 fails any build that embeds a non-greyscale image, so neither composite
+could have been used as it stood. They are now `mode="L"`.
+
+Their panel coordinates were also hardcoded pixels, and several already reached past the image
+bounds *before* the re-pin — the script cropped `fig_5_12.png` to `y=2240` when that asset was
+2180 px tall. So the constants were replaced with row projection, and two details were needed
+to make it work:
+
+- **"Blank" has to mean "holds no pixel darker than 215", not "is white."** Same watermark
+  problem in a new place: at a pure-white threshold every watermarked row counts as content and
+  the whole of Fig 5.12 segments as one band.
+- **Short bands attach to a neighbouring panel, keyed on height, not on gap.** A gap rule
+  cannot separate the two cases in Fig 5.12 — panel (a) sits **1 px** above panel (b) and must
+  stay separate, while each panel sits ~27 px above its own marker and must merge with it.
+  Heights are unambiguous: markers 33–37 px, panels 373–413 px.
+
+The payoff is visible: the regenerated `fig_5_4_horizontal.png` **contains the `(b)` and `(c)`
+markers its predecessor could not**, because its source plate now has them.
+
+The reasoning is recorded in `HORIZONTAL_FIGURES.md`, which §4.4 sanctions as a *decisions
+file* — the same role Ch11's `figure_layout_decisions.md` plays.
+
 ### 7. What the reading found
 
 Beyond the figures, the source read produced four findings about the **source**, not the
@@ -351,6 +405,7 @@ ovary** — exists nowhere in the text layer.
 | `audit_figures.py` A / B2 / C / D | **0 grazing · B2 clean 17/17 · C clean 17/17 · D 17/17 `mode=L` @ 300 dpi** |
 | Visual verification | **all 17 assets opened and read** — twice for Figs 5.5 and 5.17, after their corrections |
 | `check_pdf.py` | correctly reports `SETUP ERROR: no .pdf found` — Gate 2's deliverable does not exist yet |
+| Derived composites | regenerated from the corrected assets, both **`mode=L`** (were RGB), both opened and read |
 
 The gate check was re-run **after** the documentation was written, because the Ch19 lesson is
 that documentation can degrade a gate it only describes — Ch11's inventory once produced a

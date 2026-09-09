@@ -151,6 +151,28 @@ omitted, and none is a photograph of a person, so the PDF needs no "Figures requ
 attention" block. The Katherine Esau portrait on source page 2 is **never embedded** (section
 4.4 hard no); its caption is a text-only row and the profile facts are `F014`–`F022`.
 
+### Reconciled with parallel figure work on `main`
+
+Two commits landed on `main` mid-session adding derived figure layers, both built from the
+**pre-re-pin** assets and both therefore carrying the crop defects.
+
+- **`assets/caption_free/`, `remove_captions.py`, `CAPTION_FREE_FIGURES.md` — removed.** The
+  layer pixel-cropped the caption band off each already-extracted PNG; its own record listed 10
+  of 17 figures as "unchanged", and opening `caption_free/fig_5_2.png` confirms it still
+  rendered `Laterals` as "erals" while `caption_free/fig_5_4.png` still lacked its `(b)`/`(c)`
+  markers. Its crop boxes were hardcoded pixels measured against the old dimensions, so after
+  the re-pin they would pad rather than trim. Excluding the caption in the PDF rect subsumes the
+  whole layer in one reproducible step.
+- **The two horizontal composites — kept and regenerated.** They address a genuine constraint:
+  Fig 5.12 is 430x2230 natively (about 1:5.2) and §4.4 forbids squashing a plate to fit. Two
+  defects were fixed while regenerating: both committed composites were **`mode=RGB`,
+  3-channel** (`check_pdf.py` check 3 fails a build embedding a non-greyscale image, so neither
+  was usable), and their panel coordinates were hardcoded pixels, several already past the image
+  bounds before the re-pin. The script now segments by row projection with "blank" defined as
+  *no pixel darker than 215* — a pure-white test treats every watermarked row as content — and
+  the Fig 5.4 composite now carries the `(b)`/`(c)` markers its predecessor could not. See
+  `HORIZONTAL_FIGURES.md`.
+
 ### Figure census
 
 Caption census (Fig 5.1–Fig 5.17) and page-image census **agree at 17**; every artwork page was

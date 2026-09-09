@@ -200,10 +200,16 @@ From the repository root, with the venv rebuilt per the section-1 preamble:
 
 ```bash
 /vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/extract_figures.py'
+/vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/compose_horizontal_figures.py'
 /vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/audit_figures.py'
 /vercel/share/neetenv/bin/python scratch/ch5morph_gate1/build_inventory.py
 /vercel/share/neetenv/bin/python scratch/ch5morph_gate1/gate1_close.py   # must print VERDICT GREEN
+/vercel/share/neetenv/bin/python scratch/ch5morph_gate1/adjudicate_inherited.py
 ```
+
+`compose_horizontal_figures.py` must run **after** `extract_figures.py`: the composites are
+derived assets, and running them against stale primaries is how the previous pair came to
+carry Fig 5.4's missing markers.
 
 `gate1_close.py` must be re-run after **any** edit to the inventory — documentation can
 degrade a gate it only describes.
@@ -219,9 +225,38 @@ The mandatory 440 dpi / 5-PDF-point grid overlays are in `scratch/ch5_figs/grid_
 | `assets/fig_5_1.png` … `fig_5_17.png` | ✅ 17/17 `mode=L` @ 300 dpi, all verified |
 | `extract_figures.py` | ✅ reproducible, re-pinned rects |
 | `audit_figures.py` + `Ch5_figure_audit.txt` | ✅ audit + output on disk |
+| `compose_horizontal_figures.py` + 2 composites | ✅ Pass-2 layout aids, `mode=L`, regenerated |
+| `HORIZONTAL_FIGURES.md` | ✅ figure-layout decisions record |
 | `Ch5_TRACKER.md` | ✅ this file |
 | `Ch5_MorphologyOfFloweringPlants.py` | ⬜ Pass 2 |
 | `Ch5_MorphologyOfFloweringPlants.pdf` | ⬜ Pass 2 |
+
+## Reconciled with the parallel figure work on `main`
+
+While this session ran, two commits landed on `main` adding derived figure layers:
+`assets/caption_free/` (via `remove_captions.py`) and two horizontal composites (via
+`compose_horizontal_figures.py`). Both were built from the **pre-re-pin** assets, so both
+inherited the crop defects. They were reconciled rather than merged blindly:
+
+- **`assets/caption_free/`, `remove_captions.py`, `CAPTION_FREE_FIGURES.md` — removed.** That
+  layer pixel-cropped the printed caption off each already-extracted PNG. Its own record listed
+  10 of 17 figures as "unchanged", so `caption_free/fig_5_2.png` still rendered `Laterals` as
+  **"erals"** (confirmed by opening it) and `caption_free/fig_5_4.png` was still missing its
+  `(b)`/`(c)` markers. Its crop boxes were hardcoded pixels measured against the old
+  dimensions, so after the re-pin boxes like `(0, 0, 592, 2240)` would pad `fig_5_12.png`
+  (now 430x2230) with black rather than trim it. And it is **subsumed**: excluding the caption
+  in the PDF rect is one reproducible step instead of two, and it is what surfaced the 12
+  defective rectangles.
+- **The two horizontal composites — kept and regenerated.** These solve a real problem:
+  Fig 5.12 is 430x2230 natively, about 1:5.2, and §4.4 forbids squashing a plate to fit, so
+  re-flowing its five panels into a strip is the correct remedy. Two defects were fixed while
+  regenerating them. First, both committed composites were **`mode=RGB`, 3-channel**, because
+  the canvas was built with `Image.new("RGB", ...)` — `check_pdf.py` check 3 fails any build
+  embedding a non-greyscale image, so neither could have been used. Second, all panel
+  coordinates were hardcoded pixels, several already past the image bounds before the re-pin
+  (it cropped `fig_5_12.png` to `y=2240` when that asset was 2180 px tall). The script now
+  locates panels by row projection, and the Fig 5.4 composite consequently contains the `(b)`
+  and `(c)` markers its predecessor could not. Reasoning is in `HORIZONTAL_FIGURES.md`.
 
 `Ch5_MorphologyOfFloweringPlants_assets.zip` was **deleted** this session: it held the 17
 pre-re-pin assets, so it had become a stale copy of superseded, defective crops sitting

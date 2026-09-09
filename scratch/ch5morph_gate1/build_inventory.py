@@ -576,6 +576,16 @@ def main() -> None:
       "a phantom label. Their emptiness is recorded here instead, and each was confirmed by opening the asset: Fig 5.7 "
       "is a plain photograph, Fig 5.8 a bare branching diagram, and Figs 5.9, 5.11, 5.12 and 5.17 are multi-panel "
       "plates whose only text is the panel markers, which the caption maps.\n")
+    W("**Two derived composites exist alongside the 17 primary assets**, and are Pass-2 layout aids rather than "
+      "Gate 1 deliverables: `assets/fig_5_12_horizontal.png` and `assets/fig_5_4_horizontal.png` re-flow those two "
+      "plates' panels into a horizontal strip, because at their native aspect ratios (Fig 5.12 is 430x2230, about "
+      "1:5.2) they cannot be placed on an A4-portrait page and section 4.4 forbids squashing a plate to fit. Both are "
+      "single-channel `mode=L` at 300 dpi, both preserve every panel marker, and both are regenerated from the "
+      "primary assets by `compose_horizontal_figures.py`. Reasoning and regeneration order are in "
+      "`HORIZONTAL_FIGURES.md`. A third derived layer, `assets/caption_free/`, was **removed** at this gate: it "
+      "pixel-cropped the caption band off each already-extracted PNG, so it inherited the crop defects (its own "
+      "record listed 10 of 17 as \u201cunchanged\u201d, leaving `Laterals` as \u201cerals\u201d), its hardcoded boxes were measured "
+      "against the pre-re-pin dimensions, and excluding the caption in the PDF rect subsumes it entirely.\n")
     W("**Panel markers are not counted as labels.** `(a)`\u2026`(f)` carry no biological content of their own \u2014 the caption "
       "supplies their meaning, and it is captured verbatim in the `caption` row. Counting them would put tokens like "
       "\u201c(a)\u201d into check 6, which requires every listed label to appear in running text.\n")
@@ -685,8 +695,17 @@ def main() -> None:
       "named only in the heading. If Pass 2 rewrites the heading, the opener\u2019s antecedent disappears.")
     W("7. **`audit_figures.py` check B is not authoritative** on watermarked pages; read B2. Both are kept so the "
       "disagreement stays visible rather than being silently resolved.")
-    W("8. **`numpy` is an extra dependency** of this chapter\u2019s `audit_figures.py`, beyond the four packages in the "
-      f"section-1 venv recipe: `uv pip install --python /vercel/share/neetenv/bin/python numpy`.\n")
+    W("8. **`numpy` is an extra dependency** of this chapter\u2019s `audit_figures.py` and "
+      "`compose_horizontal_figures.py`, beyond the four packages in the section-1 venv recipe: "
+      "`uv pip install --python /vercel/share/neetenv/bin/python numpy`.")
+    W("9. **Regenerate the horizontal composites after any re-pin.** They are derived from the primary assets, so "
+      "running `extract_figures.py` without then running `compose_horizontal_figures.py` leaves them stale \u2014 which "
+      "is exactly how the previous pair came to carry Fig 5.4\u2019s missing `(b)`/`(c)` markers. Both scripts assert "
+      "their expected panel counts and exit non-zero on a structural mismatch, so a silent mis-segmentation cannot "
+      "happen.")
+    W("10. **Whether to embed the composite or the native plate for Figs 5.4 and 5.12 is Pass 2\u2019s call.** Both forms "
+      "are on disk, monochrome and reproducible. If the native plate is used for Fig 5.12, note its 1:5.2 aspect "
+      "ratio \u2014 it must not be squashed to fit (section 4.4), so it will need most of a page column.\n")
 
     W("## References\n")
     W(f"[1]: `../../../{SRC}` \u2014 NCERT Class 11 Biology, Chapter 5 source PDF (16 pages).")
