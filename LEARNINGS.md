@@ -2,6 +2,70 @@
 
 Running log of non-obvious findings from building/fixing chapter PDFs. Add new entries at the top of the relevant section. Keep entries short and actionable — link to the exact file/line pattern, not a narrative.
 
+## Figure extraction / crop auditing
+
+### The three-part crop audit is structurally blind to a label that was cropped away entirely
+Found on Ch5 Morphology, where the inherited audit was green and the inherited tracker
+recorded Fig 5.2's `Laterals` label as "intentionally retained" — the asset in fact rendered
+it as "erals".
+
+Both text-based checks discount text-layer words:
+- **check A (word grazing)** only reports a word it can see is *partly* inside the rect;
+- **check C (border-band ink)** deletes any dark pixel that a text-layer word explains.
+
+A label that falls *outside* the rect therefore grazes no boundary and leaves no unexplained
+ink. Both checks pass, and the label is simply gone. On Ch5, **12 of 17 inherited crops carried
+a defect** — 8 clipping artwork or a label, 4 cutting the caption mid-glyph — and the audit was
+green on all of them.
+
+**There is no mechanical substitute — open every rendered asset and read it.** This is why
+§4.4 Step 3 makes the visual pass mandatory rather than a spot-check, and why session `1-F`
+gets its own context budget: when context runs short the harvest silently degrades to text
+extraction, which returns an empty label set that passes Gate 1 and check 6 trivially.
+
+A cheap catch for the *specific* case of a clipped label: compare the text-layer bbox of every
+word the caption/label set expects against the rect, rather than only the words already inside
+it.
+
+### NCERT's page watermark is vector artwork, so `get_drawings()` mis-measures every figure
+The diagonal "not to be republished" and © marks are drawn as vector strokes spanning the
+whole page. `page.get_drawings()` therefore attributes them to whichever plate happens to sit
+behind them, and a union of drawing rects reports a figure far wider than it is.
+
+On Ch5 this put Fig 5.14's right edge at `x=299.9` when its real ink ends at `x=276.9` — and
+the neighbouring prose column starts at `x=303.1`, so the phantom 23 pt left no room for a
+margin and the "corrected" crop bled prose. Fig 5.12's union was 40 pt too wide the same way.
+
+**Measure dark ink instead.** The watermark renders around grey 230–245; figure outlines and
+label text sit below 215, so a threshold separates them cleanly:
+
+```python
+pix = page.get_pixmap(clip=band, dpi=200, alpha=False)
+img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples).convert("L")
+bbox = img.point(lambda v: 255 if v < 215 else 0, mode="L").getbbox()
+```
+
+See `scratch/ch5morph_gate1/ink_bbox.py`, and check **B2** in
+`notes/class 11/Ch5_MorphologyOfFloweringPlants/audit_figures.py`, which supersedes the
+drawings-based check B. Keep both so the disagreement stays visible.
+
+Two corollaries:
+- **A photograph's ink bbox under-reports its edge** (light background). Union the ink bbox
+  with the raster `get_image_info()` bbox for photographic plates.
+- **Rotated text spans belong to the watermark layer and do not render in place.** Exclude
+  them from check A, or page 11's rotated duplicate `(a)` reports as a grazing word against
+  Fig 5.12.
+
+### A heading sweep keyed on styling can silently drop a whole heading level
+On Ch5, 26 of 30 headings are cyan (`colour int 44783`), but `5.5.1.1 Calyx` through
+`5.5.1.4 Gynoecium` are 10.5 pt `Bookman-LightItalic` in `colour int 7171953`, **each drawn
+five times** to fake a bold weight. A sweep keyed on the heading colour returns 26 and looks
+plausible — while having dropped the entire fourth level of the flower section.
+
+Ch19 hit the same class via inconsistent heading *font names*. **Do not derive the heading set
+from styling alone**; walk the headings as their own list (session `1-H`) and reconcile against
+the chapter's contents box.
+
 ## ReportLab / `neet_template.py` pagination
 
 ### Nesting `KeepTogether` around `heading()` breaks pagination

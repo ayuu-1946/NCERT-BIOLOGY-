@@ -1,53 +1,271 @@
-## Current status
+# Ch5 Morphology of Flowering Plants (Class 11) — Tracker
 
-**Figure extraction stage:** Complete.
+**Status: ▶️ GATE 1 CLOSED (2026-09-09). Pass 2 not started.**
 
-**Figure census:** 17 numbered figures → 17 assets. No bonus unnumbered plates were added.
+Gate 1 closed is **not** chapter closed. There is no script, no PDF, and all 280 inventory
+rows are unticked. This chapter must not appear in any "Done" tally — Done requires Gate 3.
 
-**Assets:** 17/17 present under `assets/`; all are true grayscale (`mode=L`), rendered at approximately 300 dpi, and visually reviewed through a contact sheet with individual full-resolution inspection of the densest asset.
+| Gate | State |
+|---|---|
+| **Gate 1** — frozen, machine-validated inventory | ✅ **CLOSED 2026-09-09** |
+| **Gate 2** — `check_pdf.py` exits 0 | ⬜ not started (no script, no PDF) |
+| **Gate 3** — zero confirmed defects | ⬜ not started |
 
-**Three-part crop audit:** Complete. The extraction was repinned after the first pass exposed header/prose bleed and incorrect vertical offsets. The final audit recorded no unexplained edge-ink clusters. Small residual drawing-extent warnings for Figures 5.3, 5.8, 5.12, 5.14, and 5.16 are documented as source-PDF geometry tails within the compact crop boundary; visual review confirmed no label or meaningful artwork edge is clipped. Figure 5.2’s `Laterals` word is an in-figure label and is intentionally retained. Figure 5.8’s caption words and Figure 5.17’s caption words are retained as printed figure identification, not neighboring prose.
+## Environment (section 1 preamble)
 
-**Full chapter replacement/PDF gate:** Not started by this figure-extraction task; no chapter notes PDF was generated.
+The venv was **absent at session start** — the expected state, since the sandbox resets
+between sessions — and was rebuilt and version-verified **before anything was diagnosed**:
 
-## Re-pin log
+```
+Python 3.13.15 @ /vercel/share/neetenv · reportlab 5.0.1 · pdfplumber OK
+pymupdf 1.28.2 · Pillow 12.3.0
+```
 
-| Asset | Final change | Reason |
+This matches the known-good baseline. `numpy` was additionally installed for this chapter's
+`audit_figures.py` (carry-over 8 in the inventory).
+
+## Starting state
+
+`CHAPTER_TRACKER.md` listed this chapter as "⬜ Not done". On disk, session **1-F** had
+already run in a prior task: 17 assets `fig_5_1.png`…`fig_5_17.png`, a re-pin log, and a
+three-part crop audit recorded as clean.
+
+The inventory, however, was **extraction-only**. It held a figure table and production notes
+but **no Facts table, no heading sweep, no opener sweep, no summary classification, no
+exercise-gap classification, and no figure-label matrix in the format `check_pdf.py`'s
+`_extract_labels` parses**. Had a script ever been built against it, check 6 would have had
+nothing to verify and check 7 nothing to tick.
+
+This is the same shape previously hit on Ch12 (Respiration in Plants) and Ch6 (Anatomy of
+Flowering Plants), where the standing decision is that a substandard inventory is **rebuilt
+to the section-6 Gate 1 standard rather than patched**. That is what this session did.
+
+## Pass 1 — all five sessions ran, each reporting its own machine-derived count
+
+| Session | Work | Rows contributed |
 |---|---|---|
-| `fig_5_1.png` | Moved to `(78, 95, 315, 405)` | Removed the page header and restored the full plant, root-system brackets, and right-side labels. |
-| `fig_5_2.png` | Moved to `(78, 420, 555, 665)` | Captured the complete three-panel root plate and labels instead of the upper prose region. |
-| `fig_5_3.png` | Final rect `(285, 112, 520, 345)` | User review found the root-hair leader slightly tight; the final crop adds label margin and preserves the full root cap and caption while the audit remains clean. |
-| `fig_5_4.png` | Moved to `(45, 95, 278, 435)` | Captured all leaf-part and venation panels with callouts. |
-| `fig_5_5.png` | Final rect `(45, 505, 265, 750)` | User review found the upper leaf edge and lower panel/caption lines cut off; the final crop restores them and tightens the right edge away from prose. |
-| `fig_5_6.png` | Moved to `(275, 85, 505, 335)` | Restored all three phyllotaxy examples and plant-name labels. |
-| `fig_5_7.png` | Moved to `(275, 405, 515, 675)` | Recentered the racemose inflorescence photograph. |
-| `fig_5_8.png` | Moved to `(50, 95, 278, 245)` | Recentered the cymose diagram and removed the page header. |
-| `fig_5_9.png` | Moved to `(62, 480, 515, 660)` | Removed the preceding prose line and retained all four floral-position panels. |
-| `fig_5_10.png` | Moved to `(42, 565, 510, 685)` | Tightened around the complete flower-parts plate. |
-| `fig_5_11.png` | Moved to `(125, 95, 475, 305)` | Removed the page header while preserving all four aestivation panels. |
-| `fig_5_12.png` | Moved to `(378, 85, 520, 735)` | Extended the lower boundary enough to preserve panel (e), the complete label list, and the printed caption. |
-| `fig_5_13.png` | Moved to `(188, 90, 505, 265)` | Recentered the mango/coconut fruit plate. |
-| `fig_5_14.png` | Moved to `(48, 465, 285, 605)` | Recentered both dicot-seed views and all callout labels. |
-| `fig_5_15.png` | Moved to `(72, 90, 485, 345)` | Restored both monocot-seed views and the complete label set. |
-| `fig_5_16.png` | Moved to `(335, 445, 515, 710)` | Removed left-column prose and retained the complete floral diagram and formula. |
-| `fig_5_17.png` | Moved to `(102, 455, 475, 690)` | Restored all six Solanum panels and their labels in one compact plate. |
+| **1-S** | Full source read, then two independent prose sweeps over all 16 pages | **211** content rows |
+| **1-H** | Heading sweep, walked as its own list | **30** `heading` rows (20 numbered + 4 structural + 6 unnumbered) |
+| **1-O** | Opener sweep, first sentence of every section | **21** `opener` rows |
+| **1-F** | Figures re-run: 17 assets re-pinned, regenerated, re-verified by opening | **11** `figure-labels` rows / **56** labels |
+| **1-Z** | Exercise-gap scan, summary classification and folds, freeze, machine counts | **7** `summary-unique` fold rows |
+
+Inventory **FROZEN at 280 rows, `F001`–`F280`** — contiguous, monotonic, 0 gaps, 0 duplicate
+IDs, **0 ticked**. Type census: 14 values, all lowercase, summing to 280.
+
+## Gate 1 closure — earned by machine
+
+`scratch/ch5morph_gate1/gate1_close.py` returns **VERDICT GREEN, 37 pass / 0 fail**. It
+imports `check_pdf.py`'s own `_extract_labels` rather than replicating it, and asserts:
+
+- **Label parse:** **11 label-bearing figures / 56 in-figure labels, no doubling, no phantom
+  `Fig #` row.** Per figure — 5.1=11 · 5.2=4 · 5.3=5 · 5.4=5 · 5.5=3 · 5.6=3 · 5.10=5 ·
+  5.13=4 · 5.14=6 · 5.15=9 · 5.16=1.
+- **ID integrity:** `F001`–`F280`, contiguous, monotonic, no gaps, no duplicates, 0 ticked.
+- **Header agreement:** every count restated in the header block equals a re-parse of the
+  Facts table, including each census total against the length of its own adjacent list.
+- **Structure:** all 20 numbered source headings have a `heading` row *in source order*, and
+  every numbered section plus the chapter intro has exactly one `opener` row.
+- **Manifest agreement:** every manifest crop rect and source page equals
+  `extract_figures.py`'s — the script that actually produced the assets on disk.
+- **Assets:** 17/17 single-channel `mode=L` at 300 dpi, read off disk.
+
+Also machine-derived: summary **20 sentences = 13 BODY-PRESENT + 7 SUMMARY-UNIQUE** (folds
+`F273`–`F279`, each with a named body home) and exercises **10 exercises, 0 GAP, 10 COVERED,
+0 overlooked**.
+
+## Session 1-F re-verification — 12 of 17 inherited crops carried a defect
+
+Every inherited asset was **opened and read**, not spot-checked, and every verdict is
+machine-adjudicated by `scratch/ch5morph_gate1/adjudicate_inherited.py`, which measures each
+inherited rectangle against its plate's ink-and-image extent:
+
+- **8 of 17 clipped artwork, an in-figure label or a panel marker** — Figs 5.1, 5.2, 5.4, 5.5,
+  5.6, 5.9, 5.10, 5.16.
+- **4 of 17 cut the printed caption through its glyph row** — Figs 5.3, 5.8, 5.12, 5.17.
+- **12 of 17 therefore carried at least one defect.** Five were clean: Figs 5.7, 5.11, 5.13,
+  5.14, 5.15.
+
+The inherited three-part audit had passed the whole set as clean, and the inherited tracker
+specifically recorded Fig 5.2's `Laterals` as "intentionally retained" — the asset in fact
+rendered it as "erals".
+
+The label and marker losses are the marks-critical ones. The largest: **Fig 5.2's `Laterals`
+cut off entirely** (14.6 pt), **Fig 5.4's `(b)` and `(c)` panel markers absent altogether**
+(14.9 pt), **Fig 5.9's `(a)`–`(d)` cut mid-glyph** (6.2 pt), and **Fig 5.10's `Gynoecium`
+clipped** (4.0 pt) — the last of these baked into the raster artwork rather than present in the
+text layer, so no text-based check could have seen it. Figs 5.1 and 5.16 lost under a point
+each, but of a label and of the floral diagram's outermost whorl respectively. The worst
+caption cut was Fig 5.17, with only 11% of its caption line inside the rect.
+
+**Three further defects were introduced by this session's own first re-pin** and caught before
+the freeze — Fig 5.14 bleeding the neighbouring prose column, Fig 5.5 bleeding Fig 5.4's
+caption tail, and Fig 5.13 clipping markers baked into the artwork. Two of the three came from
+trusting the watermark-polluted drawings union; they are logged rather than quietly corrected.
+
+An earlier draft of this tracker claimed "15 defects" and attributed a right-edge clip to
+Fig 5.14. That was wrong on both counts: the number was asserted rather than derived, and the
+Fig 5.14 claim rested on the very `get_drawings()` union this session went on to reject — its
+inherited rect was clean. The numbers above are re-derived by machine.
+
+All 17 were re-pinned and regenerated, then **re-opened and read again**; the adjudicator
+confirms the current rectangles clip **nothing**. The full re-pin log, with the measured extent
+behind every rectangle, is in the inventory's `### Session 1-F re-verification and re-pin log`.
+
+### Why the inherited audit was green
+
+Two independent reasons, both now recorded so they are not rediscovered:
+
+1. **The audit's blind spot.** Checks A (text-layer word grazing) and C (border-band ink)
+   both *discount text-layer words* — A only reports a word it can see is partly outside, and
+   C deletes any dark pixel a word explains. Neither can see a label cropped away
+   **entirely**: `Laterals` sat outside the rect, so no word grazed the boundary and no
+   unexplained ink remained. Only opening every rendered asset catches this class.
+2. **A watermark that measures like artwork.** NCERT's diagonal "not to be republished" and
+   (c) marks are **vector artwork drawn across the whole page**, so `page.get_drawings()`
+   attributes their strokes to whichever plate sits behind them. Pinning Fig 5.14 from a
+   drawings union reported its right edge at `x=299.9` when the real ink ends at `x=276.9`
+   and the prose column starts at `x=303.1` — a 23 pt phantom that left no room for a margin.
+   Fig 5.12's union was 40 pt too wide the same way.
+
+The fix was to measure **dark ink** instead: the watermark renders around grey 230–245 while
+figure outlines and label text sit below 215, so thresholding separates them.
+`scratch/ch5morph_gate1/ink_bbox.py` does this, and `audit_figures.py` gained check **B2
+(ink-extent overflow)** as the authoritative version of check B.
+
+## Three-part crop audit + print-asset check
+
+Run by `audit_figures.py`; full output in `Ch5_figure_audit.txt`.
+
+| Audit | Result |
+|---|---|
+| A — text-layer word grazing | **0 across all 17.** Rotated spans excluded: page 11 carries a rotated, non-rendering duplicate `(a)` from the watermark layer, reported against Fig 5.12 on the first run as a true negative. |
+| B — drawings-extent overflow | 4 reports (Figs 5.3, 5.8, 5.14, 5.15) — **all watermark artefacts**, adjudicated by B2. No longer authoritative. |
+| B2 — ink-extent overflow | **Clean for all 17.** Proves B's four reports are not clipping. |
+| C — border-band ink | **Clean for all 17.** |
+| D — print-asset check | **17/17** `mode=L`, single channel, 300 dpi. |
+
+No figure failed extraction, none is deliberately omitted, and none is a photograph of a
+person — so the PDF needs no "Figures requiring manual attention" block. The one
+human-subject image in the source, the **Katherine Esau portrait on page 2, is never
+embedded** (section 4.4 hard no); its caption is preserved as a text-only row and the profile
+facts as `F014`–`F022`.
+
+## Figure census
+
+Caption census (Fig 5.1–Fig 5.17) and page-image census **agree at 17**, and no additional
+unnumbered plate exists. Every artwork page was rendered and inspected, so the census is not
+resting on caption numbers alone.
+
+## Source notes carried into Pass 2
+
+Four findings about the **source**, not defects in the inventory. Full detail in the
+inventory's `## Source notes`.
+
+- **SRC-1** — section 5.5.1.4 names **six** placentation types ("marginal, axile, parietal,
+  basal, central and free central") but defines and figures only **five**. "Central
+  placentation" is named and never explained, which makes exercise Q7 impossible to answer
+  exhaustively from the chapter. Logged rather than opened as a Rule 2 GAP because closing it
+  would need a definition from outside this chapter, which Rule 5 forbids. **Pass 2 must
+  reproduce the six-name list verbatim and must not silently "correct" it to five.**
+- **SRC-2** — section 5.9 has two titles: "Description of Some Important Families" in the
+  contents box, "SOLANACEAE" in the body. Both preserved.
+- **SRC-3** — the source prints "bicarpellary **obligately** placed" (standard term:
+  *obliquely*). Rule 4 bans term drift, so it is preserved exactly. Same for "physiologial",
+  "adaptions", "encyclopediac", "leafbase", "monoadelphous", "placentaion", "exogeneously".
+- **SRC-4** — the floral-formula symbols are **invisible to text extraction**: `get_text()`
+  drops the male, female, bisexual and zygomorphic glyphs entirely and cannot distinguish the
+  two `G` variants. The symbol key (`F192`) and the Solanaceae formula (`F251`) were read off
+  the page images at 250–280 dpi. The printed distinction is **G underlined = superior
+  ovary**, **G overlined = inferior ovary**.
+
+## Carry-overs for Pass 2 / Pass 3
+
+Eight numbered carry-overs are in the inventory's `## Carry-over list`. The two most likely
+to bite:
+
+- **The four section 5.5.1.x headings are typographically invisible to a colour-based heading
+  sweep.** Every other heading in the chapter is cyan (colour int 44783); `5.5.1.1 Calyx`
+  through `5.5.1.4 Gynoecium` are 10.5 pt `Bookman-LightItalic` in colour int 7171953, each
+  drawn **five times** to fake a bold weight. A sweep keyed on the heading colour silently
+  drops all four — a whole level of the flower section. Do not re-derive the heading set from
+  styling alone.
+- **Captions are now typeset by the script, not baked into assets.** No asset contains a
+  printed caption any more, so nothing double-prints; the corollary is that a figure with no
+  typeset caption will have none at all.
 
 ## Reproduction commands
 
-From the repository root:
+From the repository root, with the venv rebuilt per the section-1 preamble:
 
 ```bash
 /vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/extract_figures.py'
-/vercel/share/neetenv/bin/python audit_figures.py
+/vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/compose_horizontal_figures.py'
+/vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/audit_figures.py'
+/vercel/share/neetenv/bin/python scratch/ch5morph_gate1/build_inventory.py
+/vercel/share/neetenv/bin/python scratch/ch5morph_gate1/gate1_close.py   # must print VERDICT GREEN
+/vercel/share/neetenv/bin/python scratch/ch5morph_gate1/adjudicate_inherited.py
 ```
 
-The mandatory source grids are in `scratch/ch5_figs/grid_4x/`. The final visual-review contact sheet is in `scratch/ch5_figs/assets_contact_sheet_final_1788141206.png`.
+`compose_horizontal_figures.py` must run **after** `extract_figures.py`: the composites are
+derived assets, and running them against stale primaries is how the previous pair came to
+carry Fig 5.4's missing markers.
 
-## Deliverables
+`gate1_close.py` must be re-run after **any** edit to the inventory — documentation can
+degrade a gate it only describes.
 
-The chapter folder contains the reproducible extraction script, the frozen inventory with the figure-label matrix, this tracker, and 17 grayscale PNG assets under `assets/`. The source PDF remains untouched.
+The mandatory 440 dpi / 5-PDF-point grid overlays are in `scratch/ch5_figs/grid_4x/`
+(16 pages, 3520x4796 px each, verified at 440.0 dpi).
+
+## Deliverables present
+
+| File | State |
+|---|---|
+| `Ch5_MorphologyOfFloweringPlants_inventory.md` | ✅ frozen, 280 rows |
+| `assets/fig_5_1.png` … `fig_5_17.png` | ✅ 17/17 `mode=L` @ 300 dpi, all verified |
+| `extract_figures.py` | ✅ reproducible, re-pinned rects |
+| `audit_figures.py` + `Ch5_figure_audit.txt` | ✅ audit + output on disk |
+| `compose_horizontal_figures.py` + 2 composites | ✅ Pass-2 layout aids, `mode=L`, regenerated |
+| `HORIZONTAL_FIGURES.md` | ✅ figure-layout decisions record |
+| `Ch5_TRACKER.md` | ✅ this file |
+| `Ch5_MorphologyOfFloweringPlants.py` | ⬜ Pass 2 |
+| `Ch5_MorphologyOfFloweringPlants.pdf` | ⬜ Pass 2 |
+
+## Reconciled with the parallel figure work on `main`
+
+While this session ran, two commits landed on `main` adding derived figure layers:
+`assets/caption_free/` (via `remove_captions.py`) and two horizontal composites (via
+`compose_horizontal_figures.py`). Both were built from the **pre-re-pin** assets, so both
+inherited the crop defects. They were reconciled rather than merged blindly:
+
+- **`assets/caption_free/`, `remove_captions.py`, `CAPTION_FREE_FIGURES.md` — removed.** That
+  layer pixel-cropped the printed caption off each already-extracted PNG. Its own record listed
+  10 of 17 figures as "unchanged", so `caption_free/fig_5_2.png` still rendered `Laterals` as
+  **"erals"** (confirmed by opening it) and `caption_free/fig_5_4.png` was still missing its
+  `(b)`/`(c)` markers. Its crop boxes were hardcoded pixels measured against the old
+  dimensions, so after the re-pin boxes like `(0, 0, 592, 2240)` would pad `fig_5_12.png`
+  (now 430x2230) with black rather than trim it. And it is **subsumed**: excluding the caption
+  in the PDF rect is one reproducible step instead of two, and it is what surfaced the 12
+  defective rectangles.
+- **The two horizontal composites — kept and regenerated.** These solve a real problem:
+  Fig 5.12 is 430x2230 natively, about 1:5.2, and §4.4 forbids squashing a plate to fit, so
+  re-flowing its five panels into a strip is the correct remedy. Two defects were fixed while
+  regenerating them. First, both committed composites were **`mode=RGB`, 3-channel**, because
+  the canvas was built with `Image.new("RGB", ...)` — `check_pdf.py` check 3 fails any build
+  embedding a non-greyscale image, so neither could have been used. Second, all panel
+  coordinates were hardcoded pixels, several already past the image bounds before the re-pin
+  (it cropped `fig_5_12.png` to `y=2240` when that asset was 2180 px tall). The script now
+  locates panels by row projection, and the Fig 5.4 composite consequently contains the `(b)`
+  and `(c)` markers its predecessor could not. Reasoning is in `HORIZONTAL_FIGURES.md`.
+
+`Ch5_MorphologyOfFloweringPlants_assets.zip` was **deleted** this session: it held the 17
+pre-re-pin assets, so it had become a stale copy of superseded, defective crops sitting
+beside the corrected ones. It is not one of the four per-chapter deliverables.
+`Ch5_extraction.log` was deleted for the same reason — it logged the superseded rects.
 
 ## References
 
-[1]: `../../../../SUPREME COMMAND PROMPT.md` "Repository SUPREME COMMAND prompt"
-[2]: `../../../../skills/ncert-figure-extraction/SKILL.md` "ncert-figure-extraction workflow"
+[1]: `../../../Chapter/class 11/Chapter 05 - Morphology of Flowering Plants.pdf` — source PDF (16 pages).
+[2]: `../../../GATE_1_PASS_1_SOURCE_MASTERY.md` — Gate 1 criteria, five-session Pass 1 split.
+[3]: `../../../skills/ncert-figure-extraction/SKILL.md` — grid pinning, three-part audit, visual confirmation.
+[4]: `../../../scratch/ch5morph_gate1/` — Pass 1 build evidence and the Gate 1 closure check.

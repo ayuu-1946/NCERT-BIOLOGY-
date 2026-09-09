@@ -23,6 +23,7 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | 2 | Biological Classification | 11 | ✅ 192 facts frozen · 26/26 labels · 2 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 15 pp · 6 mono imgs | ✅ zero confirmed defects (2 found + fixed) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 3 | Plant Kingdom | 11 | ✅ **PASSED** — 215 facts frozen · 35/35 genuine labels (30 distinct, 11 rows) · 6 summary-unique folded · 11/11 mono assets | ✅ WARN (0 fail, **1 inspected benign warn**) · **10 pp** · 11 mono imgs · re-run confirmed | ✅ zero confirmed defects (215/215 covered) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 4 | Animal Kingdom | 11 | ✅ **GATE 1 CLOSED (2026-09-03).** Big-chapter run, all nine Pass-1 sessions · inventory **FROZEN at 352 rows, `F001`–`F352`, contiguous, 0 gaps, 0 duplicate IDs** · Pass 3(b) later added the honest §4.1.2 antecedent row **F015a** (Pass 1 freeze gap, already present in script/PDF; suffix insertion per the Ch9 precedent), so the live Facts count is **353** · 7 figure-label matrix rows / 56 in-figure labels · both comparison tables (TABLE 4.1 5-row, TABLE 4.2 11×8) captured | ✅ **GATE 2 CLOSED (2026-09-03; page count corrected 2026-09-04).** Script written linearly from the freeze importing repo-level `neet_template.py` · 19-page PDF at Gate-2 close; post-close pagination-only fixes (no Facts/captions/labels changed) re-flowed the same content to **16 A4-portrait pages (595×842pt), ~6.1 MB, 26 embedded mono images** · `check_pdf.py` re-run green at 16 pp · **353/353 rows ticked** | ✅ **PASS — zero confirmed defects.** **Gate 3(a):** all 16 rendered pages individually inspected, 0 layout/orphan/overflow/clipping defects, cross-page style consistency confirmed. **Gate 3(b) REDONE from scratch (2026-09-04)** after the prior closure was found to cite a never-written "§7e" (a claim, not evidence): full bidirectional read of the whole chapter (§4.0/§4.1 + §4.2 through EXERCISES) — **all 353 rows COVERED, 0 MISSING / 0 FABRICATED / 0 DRIFTED / 0 UNINVENTORIED**, both tables cell-by-cell, 7/7 figure-label rows and 3/3 SUMMARY-UNIQUE folds (F350/F351/F352) confirmed, benign divergences dismissed (not re-fixed). Redo log `scratch/ch4_gate3b_redo/FINDINGS.md`, folded into the tracker §7e + inventory `## Pass 3(b) / Gate 3 — CLOSED`. Rebuild reproducible (**16 pp / 30832 chars / 26 imgs**), `check_pdf.py --strict` exit 0 (0 fail / 0 warn) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 re-earned with evidence)** |
+| 5 | Morphology of Flowering Plants | 11 | ✅ **PASS 1 COMPLETE — GATE 1 CLOSED (2026-09-09).** Normal 3-pass protocol (16 source pages). Session `1-F` had already run in a prior task, but the inventory on disk was **extraction-only** — a figure table with no Facts table, no heading or opener sweep, no summary classification, no exercise-gap classification and no parseable figure-label matrix — so per the Ch12/Ch6 standing decision it was **rebuilt to the section-6 standard rather than patched**. All five Pass 1 sessions ran with their own machine-derived counts (`1-S` 211 · `1-H` 30 · `1-O` 21 · `1-F` 11 label rows/56 labels · `1-Z` 7). Inventory **FROZEN at 280 rows, `F001`–`F280`, contiguous, monotonic, 0 gaps, 0 duplicate IDs, 0 ticked**; type census 14 values all lowercase summing to 280; headings **20 numbered + 4 structural + 6 unnumbered = 30**; openers **1 intro + 20 numbered = 21**; summary **20 = 13 BODY-PRESENT + 7 SUMMARY-UNIQUE** (`F273`–`F279`); exercises **10 total, 0 GAP, 10 COVERED, 0 overlooked**; figures **17/17 `Mono: yes` + `Verified: yes`**. `check_pdf.py`'s own `_extract_labels` returns **11 figures / 56 labels, no doubling, no phantom row**; `gate1_close.py` returns **VERDICT GREEN 37/0**. `1-F` re-run found that **12 of 17 inherited crops carried a defect** (8 clipping artwork/labels/markers, 4 cutting the caption mid-glyph) while the inherited audit was green on all of them; all 17 assets re-pinned, regenerated and re-verified by opening, with the verdicts machine-adjudicated. | ⬜ not started — no script, no PDF | ⬜ not started | ▶️ inventory · assets · extract/audit scripts · tracker (no `.py`, no `.pdf` yet) | **▶️ GATE 1 ONLY — NOT DONE** |
 | 6 | Anatomy of Flowering Plants | 11 | ✅ **PASS 1 COMPLETE — GATE 1 CLOSED (2026-09-02).** Normal 3-pass protocol (8 source pages) · figure extraction (`1-F`) had already run in a prior task — **5 verified `mode=L` monochrome assets, `Fig 6.1`–`Fig 6.5`**, each individually opened and audited (text-layer grazing, drawings-extent overflow, border-band ink), left untouched · remaining Pass 1 sessions (`1-S`, `1-H`, `1-O`, `1-Z`) run this session on the full 8-page source text · inventory **FROZEN at 132 rows, `F001`–`F132`, contiguous, 0 gaps, 0 duplicate IDs** · type census (13 values, all lowercase, machine-derived): `fact` 36 · `term` 30 · `heading` 14 · `opener` 11 · `qualifier` 9 · `number` 6 · `summary-unique` 6 · `comparison` 5 · `caption` 5 · `figure-labels` 5 · `exception` 3 · `definition` 1 · `exercise-gap` 1 = 132 · heading census **14** · opener census **11** (one per numbered section 6.1–6.2.3; `F057`'s 6.2.1 opener was initially mistyped `example` and corrected to `opener` when the machine check caught 10 openers against 11 sections) · summary classification: **6 SUMMARY-UNIQUE, all folded pre-freeze** · exercise-gap scan **7 exercises / 1 gap** (Q6), 6 COVERED · `_extract_labels` **imported from `check_pdf.py`** (not replicated) returns **44 labels / 5 label-bearing figures (5/3/9/16/11 for Fig 6.1–6.5), no doubling, no phantom `Fig #` row**, cross-consistent with the 5 label + 5 caption rows | ✅ **PASS 2 COMPLETE — GATE 2 CLOSED (2026-09-02).** Script written **linearly from the freeze** in Content Order (§5) importing the repo-level `neet_template.py`; no style/geometry/colour/font re-declared; every block `# ---- N.N ----` marked with its row IDs · all 6 SUMMARY-UNIQUE facts (`F125`–`F130`) folded into their body homes AND restated in the Quick Recap · PDF **6 A4 portrait pages (595×842pt), 4.6 MB, 5 embedded mono images** · `check_pdf.py` **exit 0 — VERDICT WARN (0 fail / 1 inspected-benign warn)** (checks: footer band clean · smallest glyph **6.0pt** ≥ floor · 5/5 grayscale images · no banned glyphs · **44/44 labels in running text** · **132/132 Facts rows ticked** · 6/6 A4 portrait · 26 banners, no orphan · 41 badge plates, no collision) · the sole WARN is **check 4** keyword-firing on the substring "photo" inside *photosynthesis*/*photosynthates* rows (`F106`, `F126`, `S3`) — verified **true-negative**: check 3 confirms all 5 embedded assets are monochrome T.S. diagrams, no scientist/person photograph exists in Ch6 · a chapter-local `tick_rows.py` (token screen, Pass-2 evidence only) auto-ticked 121 rows; the remaining 11 (`F008`/`F057` paraphrased openers, `F071`/`F098`/`F115` fig captions, `F124` recap heading, `F125`/`F127`/`F128`/`F129`/`F130` summary-unique folds) were **hand-verified present in the generated PDF text** and ticked  | ✅ **3(a)+3(b) PASS (2026-09-02) — 0 confirmed defects.** Dual-direction full read of all 8 source pages against the `# ---- N.N ----` blocks: Direction 1 (inventory→script) 132/132 COVERED, 0 MISSING/FABRICATED/DRIFTED; Direction 2 (source→inventory) every sentence + all 14 headings mapped, **0 UNINVENTORIED**; 45/45 figure labels confirmed in running text by full read. **Gate 3(a) CLOSED (2026-09-02):** whole-chapter visual render — final PDF is **7 pp** (the D2 `Xylem`-label commit reflowed the tail onto a 7th page); 7/7 pages rendered (150 dpi colour + 1-bit B&W) and inspected individually, **0 layout/orphan/overflow/clipping/squashed-figure defects**, cross-page style consistency confirmed; `check_pdf.py` re-run from disk this session → **exit 0, WARN (0 fail / 1 benign warn)**, 45/45 labels, 132/132 ticked, 5/5 mono images; reproducible rebuild 7 pp · 14,034 chars · 5 imgs (findings `scratch/ch6_gate3a/PASS3A_FINDINGS.md`) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (2026-09-02)** |
 | 8 | Cell: The Unit of Life | 11 | ✅ 325 facts frozen · 82/82 labels · 6 summary-unique folded | ✅ WARN (0 fail, **1 benign warn**) · 18 pp · 14 mono imgs | ✅ zero confirmed defects | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED** |
 | 9 | Biomolecules | 11 | ✅ **PASSED** — **280 facts** (277 frozen F001-F277 + F194a/F221a/F225a added at Pass 3(b)) · 15 label rows / 49 in-figure labels (48 distinct) · 13 summary-unique folded · 15/15 mono assets | ✅ **PASS (0 fail, 0 warn under `--strict`, exit 0)** · **15 pp** · 15 mono imgs · 280/280 rows ticked · rebuild text-identical | ✅ **PASS — full-read Pass 3(b): 3 confirmed defects (D9 MISSING, D4 MISSING ×2, D6 DRIFTED) → all fixed** · 280/280 verified present in PDF · 15/15 pages inspected · Gate 2 re-confirmed green after rebuild | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 earned on full-read evidence)** |
@@ -46,6 +47,173 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 | 11 | Organisms and Populations | 12 | ✅ **COMPLETE — third full re-audit of all 268 rows (2026-08-21)** — **268 facts** (F001-F265 + F030a/F189a/F252a) · 5 label rows / 22 in-figure labels re-read off the images · 18/18 headings · 16 opener rows · 17/17 summary sentences classified, 5 summary-unique folded · 10/10 exercises · 6/6 mono assets re-verified · **direction 2 clean — 0 UNINVENTORIED content** · 3 mechanical defects found + fixed (F146 unescaped pipes, F001 half-frozen heading, F252a markdown inside quote) | ✅ **PASS (0 fail, 1 inspected benign warn)** · **14 pp** · 6 mono imgs · 268/268 rows ticked · 22/22 labels in text · **checks 9 + 10 (orphaned headings, badge/banner collision) added and green** | ✅ **PASS — re-audited: 4 confirmed defects (D1 orphaned caption, **D2 + D3 orphaned headings**, **D4 badge plate clipped by banner**) → all fixed** · 14/14 pages inspected (4 D4 sites re-rendered at 700 dpi) · full read both directions, 0 UNINVENTORIED · rebuild reproducible (text-identical, only timestamps differ) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 re-earned at session 6 after D4 was found by pixel inspection and fixed at template level)** |
 | 12 | Ecosystem | 12 | ✅ 196 facts frozen (F001-F196, contiguous, 0 unticked — re-parsed) · 7 label rows / 67 label strings (67 unique, no doubling, no phantom row) · 10 heading rows · 6 opener rows · 8 summary-unique folded · 5 exercise-gap terms · 7/7 mono assets re-viewed | ✅ **PASS (0 fail, 1 benign warn) · exit 0 — GATE 2 GREEN**, re-run on the **post-D4 rebuild** · **10 pp** · 7 mono imgs · 196/196 rows ticked · **67/67 figure labels in text** · checks 1,2,3,5,6,7,8,9,10 all green | ✅ **PASS — Gate 3 CLOSED.** 3(a): 10/10 pages inspected (110 + 300 dpi 1-bit); 3(b): **bidirectional full read re-run three times**, most recently under an explicit **grep prohibition**, 11/11 source pages read start to finish, **0 UNINVENTORIED** (×3). **4 confirmed defects (D1 row-ID leak · D2 F114 drift · D3 contradictory Ex 1(e) answers · D4 mislabelled fix comments) → all fixed.** Reproducibility: 3 builds identical (10 pp / 25,683 chars / 7 imgs / same text SHA-256) | ✅ pdf · py · inventory · assets | **✅ FULLY COMPLETE — CLOSED (Gate 3 earned on the third full-read audit; two earlier PASSes withdrawn as premature)** |
 | 13 | Biodiversity and Conservation | 12 | ✅ **PASS 1 COMPLETE — GATE 1 CLOSED (2026-08-22).** Figure census closed 4 ways (2 numbered figures, no 13.3+ exists) · 2/2 assets 300 dpi clip-rendered, `mode=="L"`, 0 colour px, each opened and read against checks (a)-(f) · **23 in-figure labels** harvested off the images (18 + 5; text layer yields **zero**), **folded into the Facts table as F039/F081 and confirmed by the real `_extract_labels`: 23 labels / 2 figures / 0 duplicate pairs / no phantom `Fig #` row** · **189 facts frozen, F001-F189 contiguous, 0 gaps, 0 dup IDs** (the Pass 1 freeze; **now 196 rows** after the 7 `a`-suffixed Pass 3(b) additions) · **21 heading rows · 8 opener rows at the freeze** (both corrected from a hand-tally slip of 22/9 — no row added, removed or reclassified; openers are **9** once `F112a` joins at 3(b)) · 25 summary sentences classified (19 BODY-PRESENT, 6 SUMMARY-UNIQUE) · exercise-gap table done · every header count re-derived by machine parse and matching | ✅ **PASS 2 COMPLETE — GATE 2 GREEN (2026-08-22), exit 0 (0 fail, 1 inspected benign warn)** · **11 pp** · 2 mono imgs · **189/189 rows ticked at Gate 2** (**196/196** on the post-3(b) rebuild, re-confirmed at the closure session) · **23/23 figure labels in running text** · smallest text 6.0pt · checks 1,2,3,5,6,7,8,9,10 all green · the lone WARN is check 4 matching "**photo**synthesis" in F143, not a portrait row | ✅ **PASS — GATE 3 CLOSED (2026-08-22d).** 3(b) bidirectional full read done: 13/13 source pages read start to finish against the named `# ---- 13.n ----` blocks, per-section reading claim recorded, **no grep/coverage evidence used to clear any row**. **7 confirmed defects, all UNINVENTORIED (direction 2 only): D1 insect-diversification question · D2 the two "inventory of our biological wealth" questions · D3 the tropics framing sentence · D4 "What exactly is stability���?" · D5 "no direct answers to such naive questions" · D6 the Evil Quartet opening sentence · D7 the ex-situ "beyond enclosures" sentence → all 7 fixed**, 7 rows added (`F035a`, `F048a`, `F065a`, `F085a`, `F092a`, `F112a`, `F171a`) and logged as a real Pass 1 gap, never back-dated. 0 MISSING · 0 FABRICATED · 0 DRIFTED. 3 further flags dismissed as false positives (FP-B1/B2/B3). Gate 2 re-run on the rebuilt PDF: exit 0, **196/196 rows ticked**. **11/11 pages re-rendered and re-inspected** after the reflow. Rebuild reproducible: 2 builds identical (11 pp · 2 imgs · 35,632 chars · same text SHA-256). Prior record: **3(a) COMPLETE (2026-08-22c) — 11/11 pages inspected, 0 confirmed defects.** Every page rendered twice (150 dpi + 300 dpi 1-bit B&W) and opened · figure aspect ratios exact to 4 dp (1.0467 / 1.1648), both `colorspace=1` · style census returns one size per element class (H1 10.5 · H2/table-head 9.5 · H3 9.0 · badge 6.0/6.21 · step digit 8.0) and exactly 6 template greys · NOTE vs MEMORY AID still distinct at 1-bit · Gate 2 **re-run this session, exit 0** · 3 flags raised → all 3 dismissed as false positives (FP-A1 inherited badge numbers, FP-A2 p2 KeepTogether whitespace, FP-A3 2.3pt table-stroke overhang). That prior record's closing line ("3(b) not started") is **superseded** — 3(b) is done, as the head of this same cell records. | ✅ pdf · py · inventory (196/196 ticked + Gate 3 record) · assets (2 figs) | **✅ FULLY COMPLETE — CLOSED (Gate 3 earned on a bidirectional full read; re-derived from the artefacts at the closure session, when the three status documents were also reconciled)** |
+
+---
+
+## Chapter 5 (Class 11) — Morphology of Flowering Plants — ▶️ GATE 1 CLOSED (2026-09-09); Gates 2 and 3 OPEN
+
+**Gate 1 closed is not chapter closed.** No script, no PDF, all 280 rows unticked. This chapter
+must not enter any Done tally; the repo totals were re-derived after this session and are
+unchanged at 24 / 32.
+
+### Environment (section 1 preamble)
+
+The venv was **absent at session start** — the expected state — and was rebuilt and
+version-verified **before anything was diagnosed**: Python 3.13.15 @ `/vercel/share/neetenv`,
+reportlab 5.0.1, pdfplumber OK, pymupdf 1.28.2, Pillow 12.3.0. Matches the known-good baseline.
+`numpy` was additionally installed for this chapter's `audit_figures.py`.
+
+### Starting state
+
+`CHAPTER_TRACKER.md` read "⬜ Not done". On disk, session `1-F` had already run: 17 assets, a
+re-pin log, and a three-part crop audit recorded as clean. The inventory was **extraction-only** —
+a figure table and production notes, with **no Facts table, no heading sweep, no opener sweep, no
+summary classification, no exercise-gap classification, and no figure-label matrix in the format
+`check_pdf.py`'s `_extract_labels` parses**. Had a script been built against it, check 6 would have
+had nothing to verify and check 7 nothing to tick. Same shape as Ch12 and Ch6, where the standing
+decision is that a substandard inventory is rebuilt to standard rather than patched.
+
+### Pass 1 — all five sessions ran
+
+| Session | Rows contributed |
+|---|---|
+| `1-S` source read + two independent prose sweeps | **211** content rows |
+| `1-H` heading sweep, walked as its own list | **30** `heading` rows |
+| `1-O` opener sweep, first sentence of every section | **21** `opener` rows |
+| `1-F` figures re-pinned, regenerated, re-verified by opening | **11** `figure-labels` rows / **56** labels |
+| `1-Z` gaps, summary folds, freeze, machine counts | **7** `summary-unique` rows |
+
+### Gate 1 — closed 2026-09-09, earned by machine
+
+`scratch/ch5morph_gate1/gate1_close.py` → **VERDICT GREEN, 37 pass / 0 fail**. It imports
+`check_pdf.py`'s own `_extract_labels` rather than replicating it, and asserts:
+
+- **11 label-bearing figures / 56 in-figure labels, no doubling, no phantom `Fig #` row.**
+  Per figure: 5.1=11 · 5.2=4 · 5.3=5 · 5.4=5 · 5.5=3 · 5.6=3 · 5.10=5 · 5.13=4 · 5.14=6 ·
+  5.15=9 · 5.16=1. The remaining 6 plates are genuinely label-free and carry **no**
+  `figure-labels` row on purpose — a row reading "Figure labels: none" would be parsed as a
+  phantom label, because `_extract_labels` falls back to splitting on `;` when it finds no
+  quoted strings.
+- `F001`–`F280` contiguous, monotonic, 0 gaps, 0 duplicates, **0 ticked**.
+- Every count restated in the header equals a re-parse, and every census total equals the
+  length of its own adjacent list.
+- All **20** numbered source headings have a `heading` row **in source order**; every numbered
+  section plus the chapter intro has exactly one `opener` row (**21**).
+- Every manifest crop rect and source page equals `extract_figures.py`'s — the script that
+  actually produced the assets on disk.
+- All **17** assets on disk are single-channel `mode=L` at 300 dpi.
+
+### Session `1-F` re-run — 12 of 17 inherited crops carried a defect, and the audit was green on all of them
+
+Every inherited asset was opened and read, and every verdict is machine-adjudicated by
+`scratch/ch5morph_gate1/adjudicate_inherited.py`, which measures each inherited rectangle
+against its plate's ink-and-image extent: **8 of 17 clipped artwork, an in-figure label or a
+panel marker** (Figs 5.1, 5.2, 5.4, 5.5, 5.6, 5.9, 5.10, 5.16), **4 of 17 cut the printed
+caption through its glyph row** (Figs 5.3, 5.8, 5.12, 5.17), so **12 of 17 carried at least one
+defect** and 5 were clean (Figs 5.7, 5.11, 5.13, 5.14, 5.15).
+
+The label and marker losses are the marks-critical ones: Fig 5.2's `Laterals` cut off entirely
+(14.6 pt, and the inherited tracker recorded it as "intentionally retained"), Fig 5.4's `(b)`
+and `(c)` markers absent altogether (14.9 pt), Fig 5.9's `(a)`–`(d)` cut mid-glyph (6.2 pt),
+and Fig 5.10's `Gynoecium` clipped (4.0 pt) — the last **baked into the raster artwork** rather
+than present in the text layer, so no text-based check could have seen it. Fig 5.17 was the
+worst caption cut, with only 11% of its caption line inside the rect.
+
+**Three further defects were introduced by this session's own first re-pin** and caught before
+the freeze (Fig 5.14 bleeding the prose column, Fig 5.5 bleeding Fig 5.4's caption tail, Fig
+5.13 clipping markers baked into the artwork); two of the three came from trusting the
+watermark-polluted drawings union. An earlier draft of this record claimed "15 defects" and
+attributed a right-edge clip to Fig 5.14 — both wrong: the count was asserted rather than
+derived, and Fig 5.14's inherited rect was clean. All 17 were re-pinned, regenerated and
+**re-opened and read again**; the adjudicator confirms the current rectangles clip nothing.
+
+**Two root causes, both recorded so they are not rediscovered:**
+
+1. **The audit's blind spot.** Checks A (text-layer word grazing) and C (border-band ink) both
+   *discount text-layer words* — A only reports a word it can see is partly outside, C deletes
+   any dark pixel a word explains. Neither can see a label cropped away **entirely**:
+   `Laterals` sat outside the rect, so no word grazed the boundary and no unexplained ink
+   remained. Only opening every asset catches this class, which is exactly why section 4.4
+   Step 3 makes the visual pass mandatory and why `1-F` owns its own context budget.
+2. **A watermark that measures like artwork.** NCERT's diagonal "not to be republished" and
+   (c) marks are **vector artwork drawn across the whole page**, so `page.get_drawings()`
+   attributes their strokes to whichever plate sits behind them. Pinning Fig 5.14 from a
+   drawings union put its right edge at `x=299.9` when the real ink ends at `x=276.9` and the
+   neighbouring prose column starts at `x=303.1`. Fig 5.12's union was 40 pt too wide the same
+   way. The fix is to measure **dark ink** — the watermark renders at grey 230–245, artwork
+   below 215 — which is what `scratch/ch5morph_gate1/ink_bbox.py` does and what
+   `audit_figures.py`'s new check **B2 (ink-extent overflow)** enforces. B2 is **clean for all
+   17**, which is what adjudicates check B's four remaining (watermark) reports.
+
+Audit result: **A 0 grazing · B 4 watermark artefacts (superseded by B2) · B2 clean 17/17 ·
+C clean 17/17 · D 17/17 `mode=L` @ 300 dpi.** No figure failed extraction, none is deliberately
+omitted, and none is a photograph of a person, so the PDF needs no "Figures requiring manual
+attention" block. The Katherine Esau portrait on source page 2 is **never embedded** (section
+4.4 hard no); its caption is a text-only row and the profile facts are `F014`–`F022`.
+
+### Reconciled with parallel figure work on `main`
+
+Two commits landed on `main` mid-session adding derived figure layers, both built from the
+**pre-re-pin** assets and both therefore carrying the crop defects.
+
+- **`assets/caption_free/`, `remove_captions.py`, `CAPTION_FREE_FIGURES.md` — removed.** The
+  layer pixel-cropped the caption band off each already-extracted PNG; its own record listed 10
+  of 17 figures as "unchanged", and opening `caption_free/fig_5_2.png` confirms it still
+  rendered `Laterals` as "erals" while `caption_free/fig_5_4.png` still lacked its `(b)`/`(c)`
+  markers. Its crop boxes were hardcoded pixels measured against the old dimensions, so after
+  the re-pin they would pad rather than trim. Excluding the caption in the PDF rect subsumes the
+  whole layer in one reproducible step.
+- **The two horizontal composites — kept and regenerated.** They address a genuine constraint:
+  Fig 5.12 is 430x2230 natively (about 1:5.2) and §4.4 forbids squashing a plate to fit. Two
+  defects were fixed while regenerating: both committed composites were **`mode=RGB`,
+  3-channel** (`check_pdf.py` check 3 fails a build embedding a non-greyscale image, so neither
+  was usable), and their panel coordinates were hardcoded pixels, several already past the image
+  bounds before the re-pin. The script now segments by row projection with "blank" defined as
+  *no pixel darker than 215* — a pure-white test treats every watermarked row as content — and
+  the Fig 5.4 composite now carries the `(b)`/`(c)` markers its predecessor could not. See
+  `HORIZONTAL_FIGURES.md`.
+
+### Figure census
+
+Caption census (Fig 5.1–Fig 5.17) and page-image census **agree at 17**; every artwork page was
+rendered and inspected, so the census does not rest on caption numbers alone. No unnumbered
+plate exists.
+
+### Source-level findings carried to Pass 2
+
+- **SRC-1** — section 5.5.1.4 names **six** placentation types but defines and figures **five**;
+  "central placentation" is named and never explained, so exercise Q7 cannot be answered
+  exhaustively from the chapter. Logged as a source inconsistency rather than opened as a
+  Rule 2 GAP, because closing it would require a definition from outside this chapter, which
+  Rule 5 forbids. **Pass 2 must reproduce the six-name list verbatim.**
+- **SRC-2** — section 5.9 is titled "Description of Some Important Families" in the contents box
+  and "SOLANACEAE" in the body; both preserved.
+- **SRC-3** — the source prints "bicarpellary **obligately** placed" (standard term
+  *obliquely*); preserved exactly under Rule 4, along with "physiologial", "adaptions",
+  "encyclopediac", "leafbase", "monoadelphous", "placentaion", "exogeneously".
+- **SRC-4** — the floral-formula glyphs are **invisible to `get_text()`**; the symbol key
+  (`F192`) and the Solanaceae formula (`F251`) were read off the page images at 250–280 dpi.
+  Printed distinction: **G underlined = superior ovary**, **G overlined = inferior ovary**.
+
+### Carry-overs
+
+Eight are listed in the inventory. The sharpest: **the four section 5.5.1.x headings are
+typographically invisible to a colour-based heading sweep.** Every other heading in the chapter
+is cyan (colour int 44783); `5.5.1.1 Calyx` through `5.5.1.4 Gynoecium` are 10.5 pt
+`Bookman-LightItalic` in colour int 7171953, each drawn **five times** to fake a bold weight. A
+sweep keyed on the heading colour silently drops all four — a whole level of the flower section.
+
+### Files removed
+
+`Ch5_MorphologyOfFloweringPlants_assets.zip` and `Ch5_extraction.log` were **deleted**: both
+described the superseded, defective crops, so after the re-pin they were stale copies sitting
+beside the corrected ones. Neither is one of the four per-chapter deliverables.
+
+### Closure accounting
+
+**Gate 1 closed; Pass 2 not started.** Gates 2 and 3 are OPEN. The repo tally was re-derived by
+parsing the ✅ rows in `CHAPTER_TRACKER.md` (never incremented) and returns **24 / 32 — Class 11
+17/19, Class 12 7/13** — unchanged by this session, and in agreement with that file's header.
 
 ---
 
