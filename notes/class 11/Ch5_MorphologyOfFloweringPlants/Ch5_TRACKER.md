@@ -1,13 +1,13 @@
 # Ch5 Morphology of Flowering Plants (Class 11) — Tracker
 
-**Status: ⚠️ GATE 2 BUILT WITH DOCUMENTED CONTENT DEVIATION (2026-09-09).**
+**Status: ⚠️ GATE 2 BUILT WITH DOCUMENTED CONTENT DEVIATION (2026-09-09). Final PDF: 12 pages.**
 
-Gate 1 is closed. Pass 2 now has a rendered script and PDF, but the Unit 2 opener and narrative chapter introduction were deliberately removed on request. The 20 corresponding Facts rows are annotated rather than ticked. Gate 2 therefore remains non-green until that deviation is accepted or the content is restored. This chapter must not appear in any "Done" tally — Done requires Gate 3.
+Gate 1 is closed. Pass 2 has a rendered script and PDF, and the final Quick Recap is fully contained on page 12 after reducing Fig. 5.16. The Unit 2 opener and narrative chapter introduction were deliberately removed on request. The 20 corresponding Facts rows are annotated rather than ticked. Gate 2 therefore remains non-green until that deviation is accepted or the content is restored. This chapter must not appear in any "Done" tally — Done requires Gate 3.
 
 | Gate | State |
 |---|---|
 | **Gate 1** — frozen, machine-validated inventory | ✅ **CLOSED 2026-09-09** |
-| **Gate 2** — `check_pdf.py` exits 0 | ⚠️ rendered; mechanical checks pass, but 20 deliberately removed Facts rows remain unticked |
+| **Gate 2** — `check_pdf.py` exits 0 | ⚠️ rendered; checks 1, 2, 3, 5, 6, 8, 9 and 10 pass; check 4 is an accepted manual-review warning; check 7 fails only on 20 deliberately removed Facts rows |
 | **Gate 3** — zero confirmed defects | ⬜ not started |
 
 ## Environment (section 1 preamble)
@@ -16,7 +16,7 @@ The venv was **absent at session start** — the expected state, since the sandb
 between sessions — and was rebuilt and version-verified **before anything was diagnosed**:
 
 ```
-Python 3.13.15 @ /vercel/share/neetenv · reportlab 5.0.1 · pdfplumber OK
+Python 3.13.14 @ /vercel/share/neetenv · reportlab 5.0.1 · pdfplumber OK
 pymupdf 1.28.2 · Pillow 12.3.0
 ```
 
@@ -225,15 +225,16 @@ The mandatory 440 dpi / 5-PDF-point grid overlays are in `scratch/ch5_figs/grid_
 | `extract_figures.py` | ✅ reproducible, re-pinned rects |
 | `audit_figures.py` + `Ch5_figure_audit.txt` | ✅ audit + output on disk |
 | `compose_horizontal_figures.py` + 2 composites | ✅ Pass-2 layout aids, `mode=L`, regenerated |
+| `compose_layout_figures.py` + Fig. 5.7–5.8 composite | ✅ Pass-2 layout aid, `mode=L`, generated reproducibly |
 | `HORIZONTAL_FIGURES.md` | ✅ figure-layout decisions record |
 | `Ch5_TRACKER.md` | ✅ this file |
 | `Ch5_MorphologyOfFloweringPlants.py` | ✅ Pass 2 build, with documented removal deviation |
-| `Ch5_MorphologyOfFloweringPlants.pdf` | ✅ rendered, 13 pages, A4 portrait |
+| `Ch5_MorphologyOfFloweringPlants.pdf` | ✅ rendered, 12 pages, A4 portrait |
 
 ## Reconciled with the parallel figure work on `main`
 
 While this session ran, two commits landed on `main` adding derived figure layers:
-`assets/caption_free/` (via `remove_captions.py`) and two horizontal composites (via
+`assets/caption_free/` (via `remove_captions.py`) and two earlier horizontal composites (via
 `compose_horizontal_figures.py`). Both were built from the **pre-re-pin** assets, so both
 inherited the crop defects. They were reconciled rather than merged blindly:
 
@@ -246,7 +247,7 @@ inherited the crop defects. They were reconciled rather than merged blindly:
   (now 430x2230) with black rather than trim it. And it is **subsumed**: excluding the caption
   in the PDF rect is one reproducible step instead of two, and it is what surfaced the 12
   defective rectangles.
-- **The two horizontal composites — kept and regenerated.** These solve a real problem:
+- **The two original horizontal composites — kept and regenerated.** These solve a real problem:
   Fig 5.12 is 430x2230 natively, about 1:5.2, and §4.4 forbids squashing a plate to fit, so
   re-flowing its five panels into a strip is the correct remedy. Two defects were fixed while
   regenerating them. First, both committed composites were **`mode=RGB`, 3-channel**, because
@@ -273,4 +274,4 @@ beside the corrected ones. It is not one of the four per-chapter deliverables.
 
 The replacement Pass 2 package deliberately removes the Unit 2 opener and the narrative chapter introduction: **F001–F012 and F025–F032**. This is documented in `PASS2_DECISIONS.md`. Those 20 inventory rows are annotated with `removed by Pass 2 on request; see PASS2_DECISIONS.md` and are intentionally not ticked as written content.
 
-Verification of the committed build: the PDF renders as 13 A4 pages; checks 1, 2, 3, 5, 6, 8, 9, and 10 pass; check 4 gives the expected person-photo manual-review warning; check 7 fails only because the 20 deliberate removals remain unticked. The honest verdict is therefore **FAIL (1 fail, 1 warn)** until the deviation is accepted or the omitted content is restored.
+Verification of the final build: the PDF renders as 12 A4 pages; checks 1, 2, 3, 5, 6, 8, 9, and 10 pass; check 4 gives the expected person-photo manual-review warning; check 7 fails only because the 20 deliberate removals remain unticked. The final Fig. 5.16 reduction from 6.0 cm to 5.0 cm removes the former page-13 Quick Recap leak. The honest verdict is therefore **FAIL (1 fail, 1 warn)** until the deviation is accepted or the omitted content is restored.

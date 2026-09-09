@@ -33,7 +33,7 @@ each already-extracted PNG. That layer was removed at Gate 1 for three reasons:
    source and strictly better than post-cropping a raster: it is one step instead
    of two, and it is what surfaced the 12 defective rectangles in the first place.
 
-## Decision 2 — two plates are re-flowed horizontally
+## Decision 2 — tall plates are re-flowed horizontally
 
 Two figures cannot be placed at their native aspect ratio on an A4-portrait page.
 §4.4 forbids squashing a plate to fit, so the panels are re-laid out instead,
@@ -53,6 +53,16 @@ asset. This was a real defect in the previous version, which built its canvas as
 `Image.new("RGB", ...)`: both committed composites were 3-channel, and
 `check_pdf.py` check 3 fails any build that embeds a non-greyscale image, so they
 could not have been used as they stood.
+
+## Decision 3 — Fig. 5.7 and Fig. 5.8 share one horizontal plate
+
+The racemose and cymose inflorescence plates are both label-free and were
+originally stacked vertically. The final Pass 2 layout pairs them horizontally
+in `assets/fig_5_7_5_8_horizontal.png`, preserving their aspect ratios while
+reducing the combined vertical cost. The composite is a single-channel `mode="L"`
+PNG at 300 dpi with dimensions **2661 x 1071**. Its caption explicitly maps the
+left and right panels to Figs. 5.7 and 5.8, so the figure numbers remain visible
+in the text layer.
 
 ### Panels are located by projection, not by hardcoded pixels
 
@@ -84,8 +94,11 @@ From the repository root, with the venv rebuilt per §1 of `GATE_1_PASS_1_SOURCE
 # 1. the 17 primary assets, from the source PDF
 /vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/extract_figures.py'
 
-# 2. the two horizontal composites, from those assets
+# 2. the Fig. 5.12 and Fig. 5.4 composites, from those assets
 /vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/compose_horizontal_figures.py'
+
+# 3. the Pass-2 Fig. 5.7–5.8 paired plate
+/vercel/share/neetenv/bin/python 'notes/class 11/Ch5_MorphologyOfFloweringPlants/compose_layout_figures.py'
 ```
 
 Step 2 must follow step 1: the composites are derived assets, and running them
@@ -99,4 +112,5 @@ The composites are **Pass-2 layout aids, not Gate 1 deliverables.** Gate 1 cover
 the 17 primary assets, all `Mono: yes` / `Verified: yes` in the inventory's figure
 manifest. Whether Pass 2 embeds the horizontal composite or the native plate for
 Figs 5.4 and 5.12 is a layout decision for that pass; both forms are on disk, both
-are monochrome, and both are reproducible.
+are monochrome, and both are reproducible. The Fig. 5.7–5.8 pairing is generated
+by the chapter-local `compose_layout_figures.py` helper and is likewise reproducible.

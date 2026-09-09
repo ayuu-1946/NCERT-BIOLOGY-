@@ -7,15 +7,16 @@ Deliverable of this pass: `Ch5_MorphologyOfFloweringPlants.py`
 
 ## Gate status, stated plainly
 
-**Gate 2 is intentionally non-green.** The script has been rendered and linted in the available
-environment. Mechanical checks pass; check 4 gives the expected person-photo manual-review
-warning, and check 7 fails because 20 deliberately removed Facts rows remain unticked.
+**Gate 2 is intentionally non-green.** The final script has been rendered and linted in the
+available environment. Mechanical checks pass; check 4 gives the expected person-photo
+manual-review warning, and check 7 fails because 20 deliberately removed Facts rows remain
+unticked. The final PDF is 12 pages after the Fig. 5.16 pagination correction.
 
 What *was* verified here:
 
 | Verification | Result |
 |---|---|
-| `python3 -m py_compile` on the script | pass |
+| `/vercel/share/neetenv/bin/python -m py_compile` on the script | pass |
 | Non-ASCII characters anywhere in the script | **0** - so check 5 (banned glyphs) cannot fail on source characters |
 | `# ---- N.N ----` section markers | 27 blocks marked |
 | All 56 in-figure labels present verbatim in running text or tables (check 6 precondition) | 56/56 present |
@@ -165,14 +166,13 @@ Policy applied per plate rather than uniformly:
 
 | Fig | Crop rect w x h (pt) | Source width | Before | After | Scale | Labels | Height saved |
 |---|---|---:|---:|---:|---:|---:|---:|
-| 5.1 | 237 x 306 | 8.36 cm | 8.0 | **7.5** | 0.90 | 11 | 0.6 cm |
-| 5.2 | 488 x 218 | 17.21 cm | 15.0 | **14.8** | 0.86 | 4 | 0.1 cm |
+| 5.1 | 237 x 306 | 8.36 cm | 8.0 | **6.3** | 0.75 | 11 | final pagination retune |
+| 5.2 | 488 x 218 | 17.21 cm | 15.0 | **9.5** | 0.55 | 4 | final pagination retune |
 | 5.3 | 242 x 206 | 8.54 cm | 8.5 | **7.3** | 0.85 | 5 | 1.0 cm |
-| 5.4 | 217 x 359 | 7.65 cm | 7.0 | **6.6** | 0.86 | 5 | 0.7 cm |
+| 5.4 | horizontal composite | n/a | 6.6 native | **14.5** | n/a | 5 | split panels; final layout |
 | 5.5 | 225 x 170 | 7.94 cm | 9.0 (capped) | **7.0** | 0.88 | 3 | 0.7 cm |
 | 5.6 | 226 x 247 | 7.97 cm | 8.0 | **6.8** | 0.85 | 3 | 1.3 cm |
-| 5.7 | 215 x 257 | 7.58 cm | 7.5 | **6.0** | 0.79 | none | 1.8 cm |
-| 5.8 | 226 x 140 | 7.97 cm | 9.0 (capped) | **6.0** | 0.75 | none | 1.2 cm |
+| 5.7–5.8 | horizontal composite | n/a | stacked native plates | **14.5** | n/a | none | final paired layout |
 | 5.9 | 450 x 194 | 15.87 cm | 15.0 | **11.5** | 0.72 | none | 1.5 cm |
 | 5.10 | 484 x 121 | 17.07 cm | 15.0 | **14.0** | 0.82 | 5 | 0.3 cm |
 | 5.11 | 337 x 203 | 11.89 cm | 12.0 | **9.0** | 0.76 | none | 1.8 cm |
@@ -180,7 +180,7 @@ Policy applied per plate rather than uniformly:
 | 5.13 | 286 x 145 | 10.09 cm | 12.0 (capped) | **8.8** | 0.87 | 4 | 0.7 cm |
 | 5.14 | 232 x 130 | 8.18 cm | 10.0 (capped) | **7.6** | 0.93 | 6 | 0.3 cm |
 | 5.15 | 387 x 206 | 13.65 cm | 14.0 | **12.5** | 0.92 | 9 | 0.6 cm |
-| 5.16 | 192 x 229 | 6.77 cm | 7.0 | **6.0** | 0.89 | 1 | 1.2 cm |
+| 5.16 | 192 x 229 | 6.77 cm | 7.0 | **5.0** | 0.74 | 1 | final page-13 removal |
 | 5.17 | 356 x 214 | 12.56 cm | 13.0 (capped) | **10.0** | 0.80 | none | 1.5 cm |
 
 Estimated total vertical recovery: **roughly 15 cm of image height**, a little under half
@@ -211,10 +211,12 @@ in the script needs touching.
 - **Fig 5.12 uses `fig_5_12_horizontal.png`.** The native plate is 103 x 535 pt, about
   1:5.2. At any width that keeps its panels legible it is taller than an A4 text column,
   and section 4.4 forbids squashing a plate to fit. The composite is the only placeable form.
-- **Fig 5.4 uses the native `fig_5_4.png`.** Its 217 x 359 pt rect is about 1:1.65, which
-  places cleanly in a column at 7.0 cm, so the composite is not needed. If a rendered pass
-  shows it forcing a bad break, switching to `fig_5_4_horizontal.png` is the first remedy -
-  record the before/after here if that happens.
+- **Fig 5.4 uses `fig_5_4_horizontal.png`.** The final render showed that splitting the
+  three panels into a horizontal composite keeps the structure and both venation panels
+  together while preserving the artwork. The composite is embedded at 14.5 cm.
+- **Figs 5.7–5.8 use `fig_5_7_5_8_horizontal.png`.** The two label-free inflorescence
+  plates are paired horizontally at 14.5 cm to reduce vertical cost and keep the two
+  inflorescence types together.
 - If either plate is ever re-pinned, `compose_horizontal_figures.py` must be re-run
   (carry-over 9) or the composite goes stale.
 
@@ -279,3 +281,45 @@ docstring, never inside a `Paragraph`, table cell, note or caption.
    ("Vegetative", "Floral", "Economic") because those headings are unnumbered in the
    source. If the badge column looks wrong, that is check 10's concern and the badge
    auto-widens; confirm against a render.
+
+
+## Final post-render layout amendment — 2026-09-09
+
+The first rendered layout was 13 pages. Direct page inspection showed that the final Quick Recap bullet, containing the sequence habit, vegetative characters, floral characters, floral diagram and floral formula, leaked onto page 13 by one to two lines. This was a pagination defect, not a content deletion.
+
+The correction was made through the documented §4.4 pagination lever: `FIG_W["fig_5_16.png"]` was reduced from **6.0 cm to 5.0 cm**. Fig. 5.16 is a single-label floral diagram/formula plate, so the downward resize is bounded and preserves the printed label's readability while recovering enough vertical space for the final recap lines. The call site remains the same and the width decision is commented in the script.
+
+The final rendered layout also records the earlier requested adjustments:
+
+| Layout item | Final decision | Result |
+|---|---|---|
+| Fig. 5.1 | 7.5 cm to 6.3 cm | The phrase “called adventitious roots” moves onto page 1. |
+| Fig. 5.2 | 14.8 cm to 9.5 cm | Fig. 5.3 and its Regions of the Root block move onto page 2. |
+| Fig. 5.4 | Native plate replaced by `fig_5_4_horizontal.png` at 14.5 cm | Panels (a), (b) and (c) remain together. |
+| Figs. 5.7–5.8 | New `fig_5_7_5_8_horizontal.png` composite at 14.5 cm | Racemose and cymose inflorescences are placed horizontally together. |
+| Fig. 5.16 | 6.0 cm to 5.0 cm | The PDF contracts from 13 pages to 12 pages with no text left on page 13. |
+
+### Final pagination evidence
+
+The final PDF has **12 A4 portrait pages**. Machine extraction confirms the requested anchors: “called adventitious roots” is on page 1; Fig. 5.3 is on page 2; Fig. 5.4 is on page 3; Venation begins on page 4; Figs. 5.7–5.8 are on page 5; and the complete Quick Recap, including the formerly leaked final bullet, ends on page 12. A direct render of page 12 was inspected and shows no clipping or overflow.
+
+### Final Gate 2 lint evidence
+
+Command executed:
+
+```bash
+/vercel/share/neetenv/bin/python check_pdf.py --json "notes/class 11/Ch5_MorphologyOfFloweringPlants"
+```
+
+Result: **FAIL (1 fail, 1 warn)**, with 12 pages. Checks 1, 2, 3, 5, 6, 8, 9 and 10 pass. Check 4 is the expected manual-review warning because the inventory mentions the Katherine Esau portrait, while the script embeds no profile photograph. Check 7 is the sole failure: **20/280** rows remain unticked, specifically F001–F012 and F025–F032, because those introductory passages were removed by explicit request and are annotated in the inventory rather than falsely marked as written.
+
+The final machine details are: all 16 embedded PDF images are monochrome; figure-label coverage is 56/56; the smallest rendered text is 6.0 pt; all pages are 595 x 842 pt; and no orphaned headings or badge collisions are reported. Gate 2 therefore remains honestly documented as **non-green due only to the accepted content-removal deviation**, not due to a layout, figure, geometry, glyph, or grayscale defect.
+
+### Rebuild and verification record
+
+```bash
+python3 "notes/class 11/Ch5_MorphologyOfFloweringPlants/Ch5_MorphologyOfFloweringPlants.py"
+/vercel/share/neetenv/bin/python check_pdf.py "notes/class 11/Ch5_MorphologyOfFloweringPlants"
+```
+
+The rebuild is reproducible: it returns 12 pages, 26,734 extracted text characters, and 16 embedded image entries. The final files are the chapter PDF, chapter script, frozen inventory, verified primary assets, the existing horizontal composites, and the new Fig. 5.7–5.8 composition helper and asset.

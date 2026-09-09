@@ -86,14 +86,15 @@ OUT_PDF = os.path.join(HERE, "Ch5_MorphologyOfFloweringPlants.pdf")
 # why the scale floors above are judgement calls to confirm on a rendered page.
 FIG_W = {
     # asset                     cm     source cm   scale   labels
-    "fig_5_1.png":               7.5,  #  8.36     0.90    11
-    "fig_5_2.png":              14.8,  # 17.21     0.86     4
+    "fig_5_1.png":               6.3,  # reduced to bring the adventitious-roots sentence onto page 1
+    "fig_5_2.png":               9.5,  # reduced to bring Fig. 5.3 onto page 2
     "fig_5_3.png":               7.3,  #  8.54     0.85     5
-    "fig_5_4.png":               6.6,  #  7.65     0.86     5
+    "fig_5_4_horizontal.png":   14.5,  # split panels (a)-(c), then composed horizontally
     "fig_5_5.png":               7.0,  #  7.94     0.88     3
     "fig_5_6.png":               6.8,  #  7.97     0.85     3
-    "fig_5_7.png":               6.0,  #  7.58     0.79     none
-    "fig_5_8.png":               6.0,  #  7.97     0.75     none
+    "fig_5_7.png":               6.0,  # source plate; composite below is used in the story
+    "fig_5_8.png":               6.0,  # source plate; composite below is used in the story
+    "fig_5_7_5_8_horizontal.png": 14.5,  # racemose + cymose side by side
     "fig_5_9.png":              11.5,  # 15.87     0.72     none
     "fig_5_10.png":             14.0,  # 17.07     0.82     5
     "fig_5_11.png":              9.0,  # 11.89     0.76     none
@@ -101,7 +102,7 @@ FIG_W = {
     "fig_5_13.png":              8.8,  # 10.09     0.87     4
     "fig_5_14.png":              7.6,  #  8.18     0.93     6
     "fig_5_15.png":             12.5,  # 13.65     0.92     9
-    "fig_5_16.png":              6.0,  #  6.77     0.89     1
+    "fig_5_16.png":              5.0,  # reduced to keep the final Quick Recap on page 12
     "fig_5_17.png":             10.0,  # 12.56     0.80     none
 }
 
@@ -283,11 +284,10 @@ story.append(data_table([
 ], col_widths=[20, 80]))
 story.append(P(
     "The shape, margin, apex, surface and extent of incision of lamina varies in different leaves."))
-# Fig 5.4: native plate (217 x 359 pt) rather than the horizontal composite -
-# its 1:1.65 aspect places cleanly in an A4 column (carry-over 10). This is the
-# tallest remaining plate, so it is the first to revisit if a page breaks badly.
+# Fig 5.4: use the split-and-composed horizontal plate so the leaf structure and
+# both venation panels stay together without pushing Venation to a later page.
 story.append(figure(
-    "fig_5_4.png",
+    "fig_5_4_horizontal.png",
     "Fig. 5.4 - Structure of a leaf : (a) Parts of a leaf (b) Reticulate venation (c) Parallel venation"))
 story.append(P(
     "Panel (a) names the parts in order from the stem outwards: the <b>Leaf base</b> with its "
@@ -362,8 +362,9 @@ story.append(data_table([
     ["Racemose", "The main axis continues to grow", "Flowers are borne laterally in an acropetal succession"],
     ["Cymose", "The main axis terminates in a flower, hence is limited in growth", "The flowers are borne in a basipetal order"],
 ], col_widths=[18, 40, 42]))
-story.append(figure("fig_5_7.png", "Fig. 5.7 - Racemose inflorescence"))
-story.append(figure("fig_5_8.png", "Fig. 5.8 - Cymose inflorescence"))
+story.append(figure(
+    "fig_5_7_5_8_horizontal.png",
+    "Figs. 5.7-5.8 - (5.7) Racemose inflorescence; (5.8) Cymose inflorescence"))
 story.append(memory_aid(
     "Acropetal points to the apex, so the youngest flower is at the top and the axis is still "
     "growing - that is racemose. Basipetal runs the other way, towards the base, because the tip "
