@@ -230,7 +230,7 @@ story.append(body(
 
 story.append(gap())
 story.append(figure("fig_19_1.png", "Figure 19.1 Location of endocrine glands",
-                    max_width_cm=10.4))
+                    max_width_cm=9.1))
 
 story.append(note(
     "<b>Read the plate (Figure 19.1 labels).</b> Working down the body the plate marks the "
@@ -325,7 +325,7 @@ story.append(note(
 story.append(gap())
 story.append(figure("fig_19_2.png",
                     "Figure 19.2 Diagrammatic representation of pituitary and its relationship "
-                    "with hypothalamus", max_width_cm=10.2))
+                    "with hypothalamus", max_width_cm=9.1))
 
 story.append(note(
     "<b>Read the plate (Figure 19.2 labels).</b> The plate marks the <b>Hypothalamus</b> at the "
@@ -452,7 +452,7 @@ story.append(body(
 story.append(gap())
 story.append(figure("fig_19_3a.png",
                     "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
-                    "(a) Ventral side", max_width_cm=7.6))
+                    "(a) Ventral side", max_width_cm=5.3))
 
 story.append(note(
     "<b>Read the plate (Figure 19.3 (a) labels).</b> On the ventral side the plate marks the "
@@ -461,7 +461,7 @@ story.append(note(
 story.append(gap())
 story.append(figure("fig_19_3b.png",
                     "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
-                    "(b) Dorsal side", max_width_cm=7.6))
+                    "(b) Dorsal side", max_width_cm=5.3))
 
 story.append(note(
     "<b>Read the plate (Figure 19.3 (b) labels).</b> The dorsal view marks the four "
@@ -590,7 +590,7 @@ story.append(body(
 story.append(gap())
 story.append(figure("fig_19_4.png",
                     "Figure 19.4  Diagrammatic representation of : (a) Adrenal gland above kidney "
-                    "(b) Section showing two parts of adrenal gland"))
+                    "(b) Section showing two parts of adrenal gland", max_width_cm=8.3))
 
 story.append(note(
     "<b>Read the plate (Figure 19.4 labels).</b> Panel (a) marks the <b>Adrenal gland</b> sitting "
@@ -979,7 +979,7 @@ story.append(note(
 story.append(gap())
 story.append(figure("fig_19_5a.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
-                    "(a) Protein hormone"))
+                    "(a) Protein hormone", max_width_cm=10.9))
 
 story.append(note(
     "<b>Read the plate (Figure 19.5 (a) labels).</b> A <b>Hormone (e.g., FSH)</b> reaches a "
@@ -991,7 +991,7 @@ story.append(note(
 story.append(gap())
 story.append(figure("fig_19_5b.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
-                    "(b) Steroid hormone"))
+                    "(b) Steroid hormone", max_width_cm=10.9))
 
 story.append(note(
     "<b>Read the plate (Figure 19.5 (b) labels).</b> A <b>Hormone (e.g., estrogen)</b> crosses the "

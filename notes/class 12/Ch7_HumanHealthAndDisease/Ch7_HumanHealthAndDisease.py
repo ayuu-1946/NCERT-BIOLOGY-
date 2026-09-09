@@ -383,7 +383,7 @@ story.append(figure("fig_7_2.png",
                     "Fig. 7.2 - Diagram showing inflammation in one of the lower limbs due to "
                     "elephantiasis. The plate is an unlabelled illustration; the swelling shown is "
                     "the chronic inflammation of the lymphatic vessels of the lower limb described "
-                    "above."))
+                    "above.", max_width_cm=7.0))
 story.append(gap())
 
 # ---- 7.1 (g) Ringworm (F063-F066) + Figure 7.3 ----
@@ -406,7 +406,7 @@ story.append(b1(
 story.append(figure("fig_7_3.png",
                     "Fig. 7.3 - Diagram showing ringworm affected area of the skin. The plate is "
                     "an unlabelled photograph of a lesion on the chin and jaw - one of the dry, "
-                    "scaly, intensely itching lesions described above."))
+                    "scaly, intensely itching lesions described above.", max_width_cm=9.5))
 story.append(gap())
 
 # ---- 7.1 (h) Prevention and control of infectious diseases (F067-F078) ----
@@ -564,7 +564,8 @@ story.append(body(
     "<b>carboxyl terminus</b>. The <b>S-S</b> marks are <b>disulfide bonds</b> - the two heavy "
     "chains are held to each other, and each light chain to its heavy chain, by <b>disulfide "
     "bonds</b>."))
-story.append(figure("fig_7_4.png", "Fig. 7.4 - Structure of an antibody molecule."))
+story.append(figure("fig_7_4.png", "Fig. 7.4 - Structure of an antibody molecule.",
+                    max_width_cm=9.0))
 story.append(gap())
 # F095, F096, F097
 story.append(body(
@@ -783,7 +784,7 @@ story.append(body(
     "<b>Reading Figure 7.5:</b> the plate marks the <b>Lymph nodes</b> at points along the body, the "
     "<b>Thymus</b> behind the breastbone, and the <b>Lymphatic vessels</b> that connect them."))
 story.append(figure("fig_7_5.png",
-                    "Fig. 7.5 - Diagrammatic representation of Lymph nodes.", max_width_cm=8.5))
+                    "Fig. 7.5 - Diagrammatic representation of Lymph nodes.", max_width_cm=4.9))
 story.append(gap())
 # F143, F144
 story.append(keyterm(
@@ -867,7 +868,7 @@ story.append(body(
     "the cell's <b>Plasma membrane</b>, releases its contents into the <b>Cytoplasm</b>, where "
     "reverse transcriptase makes <b>DNA</b> from the viral RNA, and that DNA then travels into the "
     "<b>Nucleus</b> to join the host genome."))
-story.append(figure("fig_7_6.png", "Fig. 7.6 - Replication of retrovirus."))
+story.append(figure("fig_7_6.png", "Fig. 7.6 - Replication of retrovirus.", max_width_cm=12.6))
 story.append(gap())
 # F157, F158, F159
 story.append(b1(
@@ -1112,12 +1113,12 @@ story.append(gap())
 story.append(figure("fig_7_7.png",
                     "Fig. 7.7 - Chemical structure of Morphine. The plate is a skeletal formula "
                     "carrying only atom and group symbols (HO, O, H, N and CH<sub>3</sub>) and no "
-                    "descriptive labels.", max_width_cm=7.5))
+                    "descriptive labels.", max_width_cm=4.9))
 # F343 - fig 7.8 is unlabelled
 story.append(figure("fig_7_8.png",
                     "Fig. 7.8 - Opium poppy. An unlabelled illustration of the poppy plant "
                     "<i>Papaver somniferum</i>, from whose latex morphine is extracted.",
-                    max_width_cm=6.5))
+                    max_width_cm=3.7))
 story.append(gap())
 
 # ---- 7.5 (b) Cannabinoids (F212-F215, F220) + Figures 7.9, 7.10 ----
@@ -1144,12 +1145,12 @@ story.append(gap())
 story.append(figure("fig_7_9.png",
                     "Fig. 7.9 - Skeletal structure of cannabinoid molecule. The plate is a skeletal "
                     "formula carrying only atom and group symbols (OH, O and H) and no descriptive "
-                    "labels.", max_width_cm=8.0))
+                    "labels.", max_width_cm=5.3))
 # F345 - fig 7.10 is unlabelled
 story.append(figure("fig_7_10.png",
                     "Fig. 7.10 - Leaves of <i>Cannabis sativa</i>. An unlabelled framed "
                     "illustration of the leaf of the plant whose inflorescences yield the natural "
-                    "cannabinoids.", max_width_cm=6.0))
+                    "cannabinoids.", max_width_cm=3.3))
 story.append(gap())
 
 # ---- 7.5 (c) Coca alkaloids and hallucinogens (F216-F219) + Figure 7.11 ----
@@ -1171,7 +1172,7 @@ story.append(b1(
 story.append(figure("fig_7_11.png",
                     "Fig. 7.11 - Flowering branch of <i>Datura</i>. An unlabelled illustration of a "
                     "flowering branch of <i>Datura</i>, one of the two well-known plants with "
-                    "hallucinogenic properties named above.", max_width_cm=7.0))
+                    "hallucinogenic properties named above.", max_width_cm=4.2))
 story.append(gap())
 
 # ---- 7.5 (d) Drugs abused as medicines, and what drug abuse means (F221-F224) ----

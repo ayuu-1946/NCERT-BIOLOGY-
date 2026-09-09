@@ -265,7 +265,7 @@ story.append(data_table([
 ], col_widths=[16, 46, 38]))
 
 story.append(gap())
-story.append(figure("fig_18_1.png", "Fig. 18.1 - Structure of a neuron"))
+story.append(figure("fig_18_1.png", "Fig. 18.1 - Structure of a neuron", max_width_cm=5.9))
 
 story.append(note(
     "<b>Read the plate (Figure 18.1 labels).</b> The diagram marks the <b>Dendrites</b>, the "
@@ -394,7 +394,7 @@ story.append(gap())
 story.append(figure(
     "fig_18_2.png",
     "Fig. 18.2 - Diagrammatic representation of impulse conduction through an axon (at points A "
-    "and B)"))
+    "and B)", max_width_cm=9.3))
 
 story.append(note(
     f"<b>Read the plate (Figure 18.2 labels).</b> The plate marks the stimulated site <b>A</b> "
@@ -471,7 +471,8 @@ story.append(data_table([
 ], col_widths=[18, 41, 41]))
 
 story.append(gap())
-story.append(figure("fig_18_3.png", "Fig. 18.3 - Diagram showing axon terminal and synapse"))
+story.append(figure("fig_18_3.png", "Fig. 18.3 - Diagram showing axon terminal and synapse",
+                    max_width_cm=6.4))
 
 story.append(note(
     "<b>Read the plate (Figure 18.3 labels).</b> The plate follows the <b>Axon</b> into its "
@@ -542,7 +543,8 @@ story.append(body(
 story.append(figure(
     "fig_18_4.png",
     "Fig. 18.4 - Diagram showing sagital section of the human brain "
-    "(NCERT prints 'sagital'; the conventional spelling is 'sagittal')"))
+    "(NCERT prints 'sagital'; the conventional spelling is 'sagittal')",
+    max_width_cm=10.1))
 
 story.append(note(
     "<b>Read the plate (Figure 18.4 labels).</b> A bracket marks the <b>Forebrain</b>, inside "
