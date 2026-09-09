@@ -1,14 +1,13 @@
 # Ch5 Morphology of Flowering Plants (Class 11) — Tracker
 
-**Status: ▶️ GATE 1 CLOSED (2026-09-09). Pass 2 not started.**
+**Status: ⚠️ GATE 2 BUILT WITH DOCUMENTED CONTENT DEVIATION (2026-09-09).**
 
-Gate 1 closed is **not** chapter closed. There is no script, no PDF, and all 280 inventory
-rows are unticked. This chapter must not appear in any "Done" tally — Done requires Gate 3.
+Gate 1 is closed. Pass 2 now has a rendered script and PDF, but the Unit 2 opener and narrative chapter introduction were deliberately removed on request. The 20 corresponding Facts rows are annotated rather than ticked. Gate 2 therefore remains non-green until that deviation is accepted or the content is restored. This chapter must not appear in any "Done" tally — Done requires Gate 3.
 
 | Gate | State |
 |---|---|
 | **Gate 1** — frozen, machine-validated inventory | ✅ **CLOSED 2026-09-09** |
-| **Gate 2** — `check_pdf.py` exits 0 | ⬜ not started (no script, no PDF) |
+| **Gate 2** — `check_pdf.py` exits 0 | ⚠️ rendered; mechanical checks pass, but 20 deliberately removed Facts rows remain unticked |
 | **Gate 3** — zero confirmed defects | ⬜ not started |
 
 ## Environment (section 1 preamble)
@@ -228,8 +227,8 @@ The mandatory 440 dpi / 5-PDF-point grid overlays are in `scratch/ch5_figs/grid_
 | `compose_horizontal_figures.py` + 2 composites | ✅ Pass-2 layout aids, `mode=L`, regenerated |
 | `HORIZONTAL_FIGURES.md` | ✅ figure-layout decisions record |
 | `Ch5_TRACKER.md` | ✅ this file |
-| `Ch5_MorphologyOfFloweringPlants.py` | ⬜ Pass 2 |
-| `Ch5_MorphologyOfFloweringPlants.pdf` | ⬜ Pass 2 |
+| `Ch5_MorphologyOfFloweringPlants.py` | ✅ Pass 2 build, with documented removal deviation |
+| `Ch5_MorphologyOfFloweringPlants.pdf` | ✅ rendered, 13 pages, A4 portrait |
 
 ## Reconciled with the parallel figure work on `main`
 
@@ -269,3 +268,9 @@ beside the corrected ones. It is not one of the four per-chapter deliverables.
 [2]: `../../../GATE_1_PASS_1_SOURCE_MASTERY.md` — Gate 1 criteria, five-session Pass 1 split.
 [3]: `../../../skills/ncert-figure-extraction/SKILL.md` — grid pinning, three-part audit, visual confirmation.
 [4]: `../../../scratch/ch5morph_gate1/` — Pass 1 build evidence and the Gate 1 closure check.
+
+## Pass 2 — deliberate removal decision
+
+The replacement Pass 2 package deliberately removes the Unit 2 opener and the narrative chapter introduction: **F001–F012 and F025–F032**. This is documented in `PASS2_DECISIONS.md`. Those 20 inventory rows are annotated with `removed by Pass 2 on request; see PASS2_DECISIONS.md` and are intentionally not ticked as written content.
+
+Verification of the committed build: the PDF renders as 13 A4 pages; checks 1, 2, 3, 5, 6, 8, 9, and 10 pass; check 4 gives the expected person-photo manual-review warning; check 7 fails only because the 20 deliberate removals remain unticked. The honest verdict is therefore **FAIL (1 fail, 1 warn)** until the deviation is accepted or the omitted content is restored.

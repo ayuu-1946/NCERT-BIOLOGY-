@@ -29,286 +29,286 @@ Session log (Pass 1, five mandatory sessions, each reporting its own machine-der
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
-| F001 | unit2 | heading | Unit banner heading: "UNIT 2 — STRUCTURAL ORGANISATION IN PLANTS AND ANIMALS" |  |
-| F002 | unit2 | fact | "The description of the diverse forms of life on earth was made only by observation – through naked eyes or later through magnifying lenses and microscopes." |  |
-| F003 | unit2 | fact | "This description is mainly of gross structural features, both external and internal." |  |
-| F004 | unit2 | fact | "In addition, observable and perceivable living phenomena were also recorded as part of this description." |  |
-| F005 | unit2 | fact | "Before experimental biology or more specifically, physiology, was established as a part of biology, naturalists described only biology." |  |
-| F006 | unit2 | fact | "Hence, biology remained as a natural history for a long time." |  |
-| F007 | unit2 | fact | "The description, by itself, was amazing in terms of detail." |  |
-| F008 | unit2 | fact | "While the initial reaction of a student could be boredom, one should keep in mind that the detailed description, was utilised in the later day reductionist biology where living processes drew more attention from scientists than the description of life forms and their structure." |  |
-| F009 | unit2 | fact | "Hence, this description became meaningful and helpful in framing research questions in physiology or evolutionary biology." |  |
-| F010 | unit2 | fact | "In the following chapters of this unit, the structural organisation of plants and animals, including the structural basis of physiologial or behavioural phenomena, is described." (NCERT spelling "physiologial" preserved) |  |
-| F011 | unit2 | fact | "For convenience, this description of morphological and anatomical features is presented separately for plants and animals." |  |
-| F012 | unit2 | term | Unit 2 contents listed as "Chapter 5 Morphology of Flowering Plants", "Chapter 6 Anatomy of Flowering Plants", "Chapter 7 Structural Organisation in Animals" |  |
-| F013 | esau | heading | Unnumbered scientist-profile heading: "Katherine Esau" |  |
-| F014 | esau | number | "KATHERINE ESAU was born in Ukraine in 1898." (date: 1898) |  |
-| F015 | esau | number | "She studied agriculture in Russia and Germany and received her doctorate in 1931 in United States." (date: 1931) |  |
-| F016 | esau | fact | "She reported in her early publications that the curly top virus spreads through a plant via the food-conducting or phloem tissue." |  |
-| F017 | esau | number | "Dr Esau’s Plant Anatomy published in 1954 took a dynamic, developmental approach designed to enhance one’s understanding of plant structure and an enormous impact worldwide, literally bringing about a revival of the discipline." (date: 1954) |  |
-| F018 | esau | number | "The Anatomy of Seed Plants by Katherine Esau was published in 1960." (date: 1960) |  |
-| F019 | esau | fact | "It was referred to as Webster’s of plant biology – it is encyclopediac." (NCERT spelling "encyclopediac" preserved) |  |
-| F020 | esau | number | "In 1957 she was elected to the National Academy of Sciences, becoming the sixth woman to receive that honour." (date: 1957; count: sixth) |  |
-| F021 | esau | number | "In addition to this prestigious award, she received the National Medal of Science from President George Bush in 1989." (date: 1989) |  |
-| F022 | esau | number | "When Katherine Esau died in the year 1997, Peter Raven, director of Anatomy and Morphology, Missouri Botanical Garden, remembered that she ‘absolutely dominated’ the field of plant biology even at the age of 99." (dates: 1997; age 99) |  |
-| F023 | esau | caption | Profile caption (verbatim): "Katherine Esau (1898 – 1997)" — human-subject photograph; NEVER embedded, text-only per section 4.4 hard-no |  |
-| F024 | Ch5 | heading | Chapter 5 title: "MORPHOLOGY OF FLOWERING PLANTS" / "CHAPTER 5" |  |
-| F025 | intro | opener | "The wide range in the structure of higher plants will never fail to fascinate us." |  |
-| F026 | intro | qualifier | "Even though the angiosperms show such a large diversity in external structure or morphology, they are all characterised by presence of roots, stems, leaves, flowers and fruits." (qualifier: even though, all) |  |
-| F027 | intro | fact | "In chapters 2 and 3, we talked about classification of plants based on morphological and other characteristics." |  |
-| F028 | intro | fact | "For any successful attempt at classification and at understanding any higher plant (or for that matter any living organism) we need to know standard technical terms and standard definitions." |  |
-| F029 | intro | example | "We also need to know about the possible variations in different parts, found as adaptations of the plants to their environment, e.g., adaptions to various habitats, for protection, climbing, storage, etc." (NCERT spelling "adaptions" preserved) |  |
-| F030 | intro | qualifier | "If you pull out any weed you will see that all of them have roots, stems and leaves. They may be bearing flowers and fruits." (qualifiers: all, may) |  |
-| F031 | intro | definition | "The underground part of the flowering plant is the root system while the portion above the ground forms the shoot system (Figure 5.1)." |  |
-| F032 | intro | term | Chapter contents box lists: "5.1 The Root", "5.2 The Stem", "5.3 The Leaf", "5.4 The Inflorescence", "5.5 The Flower", "5.6 The Fruit", "5.7 The Seed", "5.8 Semi-technical Description of a Typical Flowering Plant", "5.9 Description of Some Important Families" |  |
-| F033 | Fig 5.1 | caption | Figure caption (verbatim): "Figure 5.1  Parts of a flowering plant" |  |
-| F034 | Fig 5.1 | figure-labels | Figure labels: "Flower"; "Fruit"; "Stem"; "Leaf"; "Node"; "Internode"; "Bud"; "Primary root"; "Secondary root"; "Shoot system"; "Root system" |  |
-| F035 | 5.1 | heading | Numbered section heading: "5.1 THE ROOT" |  |
-| F036 | 5.1 | opener | "In majority of the dicotyledonous plants, the direct elongation of the radicle leads to the formation of primary root which grows inside the soil." (qualifier: majority) |  |
-| F037 | 5.1 | term | "It bears lateral roots of several orders that are referred to as secondary, tertiary, etc. roots." |  |
-| F038 | 5.1 | example | "The primary roots and its branches constitute the tap root system, as seen in the mustard plant (Figure 5.2a)." |  |
-| F039 | 5.1 | comparison | "In monocotyledonous plants, the primary root is short lived and is replaced by a large number of roots." |  |
-| F040 | 5.1 | example | "These roots originate from the base of the stem and constitute the fibrous root system, as seen in the wheat plant (Figure 5.2b)." |  |
-| F041 | 5.1 | example | "In some plants, like grass, Monstera and the banyan tree, roots arise from parts of the plant other than the radicle and are called adventitious roots (Figure 5.2c)." (qualifier: some) |  |
-| F042 | 5.1 | number | "The main functions of the root system are absorption of water and minerals from the soil, providing a proper anchorage to the plant parts, storing reserve food material and synthesis of plant growth regulators." (four functions) |  |
-| F043 | Fig 5.2 | caption | Figure caption (verbatim): "Figure 5.2 Different types of roots : (a) Tap  (b) Fibrous  (c) Adventitious" |  |
-| F044 | Fig 5.2 | figure-labels | Figure labels: "Main root"; "Laterals"; "Fibrous roots"; "Adventitious roots" |  |
-| F045 | 5.1.1 | heading | Numbered section heading: "5.1.1 Regions of the Root" |  |
-| F046 | 5.1.1 | opener | "The root is covered at the apex by a thimble-like structure called the root cap (Figure 5.3)." |  |
-| F047 | 5.1.1 | fact | "It protects the tender apex of the root as it makes its way through the soil." |  |
-| F048 | 5.1.1 | number | "A few millimetres above the root cap is the region of meristematic activity." (distance: a few millimetres) |  |
-| F049 | 5.1.1 | fact | "The cells of this region are very small, thin-walled and with dense protoplasm." |  |
-| F050 | 5.1.1 | fact | "They divide repeatedly." |  |
-| F051 | 5.1.1 | process | "The cells proximal to this region undergo rapid elongation and enlargement and are responsible for the growth of the root in length." |  |
-| F052 | 5.1.1 | term | "This region is called the region of elongation." |  |
-| F053 | 5.1.1 | process | "The cells of the elongation zone gradually differentiate and mature." |  |
-| F054 | 5.1.1 | term | "Hence, this zone, proximal to region of elongation, is called the region of maturation." |  |
-| F055 | 5.1.1 | qualifier | "From this region some of the epidermal cells form very fine and delicate, thread-like structures called root hairs." (qualifier: some) |  |
-| F056 | 5.1.1 | fact | "These root hairs absorb water and minerals from the soil." |  |
-| F057 | Fig 5.3 | caption | Figure caption (verbatim): "Figure 5.3  The regions of the root-tip" |  |
-| F058 | Fig 5.3 | figure-labels | Figure labels: "Region of maturation"; "Root hair"; "Region of elongation"; "Region of meristematic activity"; "Root cap" |  |
-| F059 | 5.2 | heading | Numbered section heading: "5.2 THE STEM" |  |
-| F060 | 5.2 | opener | "What are the features that distinguish a stem from a root?" (in-text question that opens 5.2; answered by the rows below and by summary row S7) |  |
-| F061 | 5.2 | definition | "The stem is the ascending part of the axis bearing branches, leaves, flowers and fruits." |  |
-| F062 | 5.2 | fact | "It develops from the plumule of the embryo of a germinating seed." |  |
-| F063 | 5.2 | term | "The stem bears nodes and internodes." |  |
-| F064 | 5.2 | definition | "The region of the stem where leaves are born are called nodes while internodes are the portions between two nodes." |  |
-| F065 | 5.2 | qualifier | "The stem bears buds, which may be terminal or axillary." (qualifier: may) |  |
-| F066 | 5.2 | qualifier | "Stem is generally green when young and later often become woody and dark brown." (qualifiers: generally, often) |  |
-| F067 | 5.2 | fact | "The main function of the stem is spreading out branches bearing leaves, flowers and fruits." |  |
-| F068 | 5.2 | fact | "It conducts water, minerals and photosynthates." |  |
-| F069 | 5.2 | qualifier | "Some stems perform the function of storage of food, support, protection and of vegetative propagation." (qualifier: some) |  |
-| F070 | 5.3 | heading | Numbered section heading: "5.3 THE LEAF" |  |
-| F071 | 5.3 | opener | "The leaf is a lateral, generally flattened structure borne on the stem." (qualifier: generally) |  |
-| F072 | 5.3 | fact | "It develops at the node and bears a bud in its axil." |  |
-| F073 | 5.3 | fact | "The axillary bud later develops into a branch." |  |
-| F074 | 5.3 | fact | "Leaves originate from shoot apical meristems and are arranged in an acropetal order." |  |
-| F075 | 5.3 | fact | "They are the most important vegetative organs for photosynthesis." |  |
-| F076 | 5.3 | number | "A typical leaf consists of three main parts:  leaf base, petiole and lamina (Figure 5.4 a)." (count: three) |  |
-| F077 | 5.3 | number | "The leaf is attached to the stem by the leaf base and may bear two lateral small leaf like structures called stipules." (qualifier: may; count: two) |  |
-| F078 | 5.3 | comparison | "In monocotyledons, the leaf base expands into a sheath covering the stem partially or wholly." |  |
-| F079 | 5.3 | qualifier | "In some leguminous plants the leafbase may become swollen, which is called the pulvinus." (qualifiers: some, may; NCERT spelling "leafbase" preserved) |  |
-| F080 | 5.3 | fact | "The petiole help hold the blade to light." |  |
-| F081 | 5.3 | fact | "Long thin flexible petioles allow leaf blades to flutter in wind, thereby cooling the leaf and bringing fresh air to leaf surface." |  |
-| F082 | 5.3 | definition | "The lamina or the leaf blade is the green expanded part of the leaf with veins and veinlets." |  |
-| F083 | 5.3 | qualifier | "There is, usually, a middle prominent vein, which is known as the midrib." (qualifier: usually) |  |
-| F084 | 5.3 | fact | "Veins provide rigidity to the leaf blade and act as channels of transport for water, minerals and food materials." |  |
-| F085 | 5.3 | fact | "The shape, margin, apex, surface and extent of incision of lamina varies in different leaves." |  |
-| F086 | Fig 5.4 | caption | Figure caption (verbatim): "Figure 5.4 Structure of a leaf : (a) Parts of a leaf (b) Reticulate venation (c) Parallel venation" |  |
-| F087 | Fig 5.4 | figure-labels | Figure labels: "Lamina"; "Stipule"; "Petiole"; "Leaf base"; "Axillary bud" |  |
-| F088 | 5.3.1 | heading | Numbered section heading: "5.3.1 Venation" |  |
-| F089 | 5.3.1 | opener | "The arrangement of veins and the veinlets in the lamina of leaf is termed as venation." |  |
-| F090 | 5.3.1 | definition | "When the veinlets form a network, the venation is termed as reticulate (Figure 5.4 b)." |  |
-| F091 | 5.3.1 | definition | "When the veins run parallel to each other within a lamina, the venation is termed as parallel (Figure 5.4 c)." |  |
-| F092 | 5.3.1 | qualifier | "Leaves of dicotyledonous plants generally possess reticulate venation, while parallel venation is the characteristic of most monocotyledons." (qualifiers: generally, most) |  |
-| F093 | 5.3.2 | heading | Numbered section heading: "5.3.2 Types of Leaves" |  |
-| F094 | 5.3.2 | opener | "A leaf is said to be simple, when its lamina is entire or when incised, the incisions do not touch the midrib." |  |
-| F095 | 5.3.2 | definition | "When the incisions of the lamina reach up to the midrib breaking it into a number of leaflets, the leaf is called compound." |  |
-| F096 | 5.3.2 | exception | "A bud is present in the axil of petiole in both simple and compound leaves, but not in the axil of leaflets of the compound leaf." (exception: but not) |  |
-| F097 | 5.3.2 | number | "The compound leaves may be of two types (Figure 5.5)." (count: two) |  |
-| F098 | 5.3.2 | example | "In a pinnately compound leaf a number of leaflets are present on a common axis, the rachis, which represents the midrib of the leaf as in neem." |  |
-| F099 | 5.3.2 | example | "In palmately compound leaves, the leaflets are attached at a common point, i.e., at the tip of petiole, as in silk cotton." |  |
-| F100 | Fig 5.5 | caption | Figure caption (verbatim): "Figure 5.5 Compound leaves : (a) pinnately compound leaf (b) palmately compound leaf" |  |
-| F101 | Fig 5.5 | figure-labels | Figure labels: "Rachis"; "Neem"; "Silk Cotton" |  |
-| F102 | 5.3.3 | heading | Numbered section heading: "5.3.3 Phyllotaxy" |  |
-| F103 | 5.3.3 | opener | "Phyllotaxy is the pattern of arrangement of leaves on the stem or branch." |  |
-| F104 | 5.3.3 | number | "This is usually of three types – alternate, opposite and whorled (Figure 5.6)." (qualifier: usually; count: three) |  |
-| F105 | 5.3.3 | example | "In alternate type of phyllotaxy,  a single leaf arises at each node in alternate manner, as in china rose, mustard and sun flower plants." |  |
-| F106 | 5.3.3 | example | "In opposite type, a pair of leaves arise at each node and lie opposite to each other as in Calotropis and guava plants." |  |
-| F107 | 5.3.3 | example | "If more than two leaves arise at a node and form a whorl, it is called whorled, as in Alstonia." |  |
-| F108 | Fig 5.6 | caption | Figure caption (verbatim): "Figure 5.6 Different types of phyllotaxy : (a) Alternate (b) Opposite (c) Whorled" |  |
-| F109 | Fig 5.6 | figure-labels | Figure labels: "China rose"; "Guava"; "Alstonia" |  |
-| F110 | 5.4 | heading | Numbered section heading: "5.4 THE INFLORESCENCE" |  |
-| F111 | 5.4 | opener | "A flower is a modified shoot wherein the shoot apical meristem changes to floral meristem." |  |
-| F112 | 5.4 | fact | "Internodes do not elongate and the axis gets condensed." |  |
-| F113 | 5.4 | fact | "The apex produces different kinds of floral appendages laterally at successive nodes instead of leaves." |  |
-| F114 | 5.4 | qualifier | "When a shoot tip transforms into a flower, it is always solitary." (qualifier: always) |  |
-| F115 | 5.4 | definition | "The arrangement of flowers on the floral axis is termed as inflorescence." |  |
-| F116 | 5.4 | number | "Depending on whether the apex gets developed into a flower or continues to grow, two major types of inflorescences are defined – racemose and cymose." (count: two) |  |
-| F117 | 5.4 | definition | "In racemose type of inflorescences the main axis continues to grow, the flowers are borne laterally in an acropetal succession (Figure 5.7)." |  |
-| F118 | 5.4 | definition | "In cymose type of  inflorescence the main axis terminates in a flower, hence is limited in growth." |  |
-| F119 | 5.4 | fact | "The flowers are borne in a basipetal order (Figure 5.8)." |  |
-| F120 | Fig 5.7 | caption | Figure caption (verbatim): "Figure 5.7  Racemose inflorescence" |  |
-| F121 | Fig 5.8 | caption | Figure caption (verbatim): "Figure 5.8  Cymose inflorescence" |  |
-| F122 | 5.5 | heading | Numbered section heading: "5.5 THE FLOWER" |  |
-| F123 | 5.5 | opener | "The flower is the reproductive unit in the angiosperms." |  |
-| F124 | 5.5 | fact | "It is meant for sexual reproduction." |  |
-| F125 | 5.5 | number | "A typical flower has four different kinds of whorls arranged successively on the swollen end of the stalk or pedicel, called thalamus or receptacle." (count: four) |  |
-| F126 | 5.5 | term | "These are calyx, corolla, androecium and gynoecium." |  |
-| F127 | 5.5 | comparison | "Calyx and corolla are accessory organs, while androecium and gynoecium are reproductive organs." |  |
-| F128 | 5.5 | qualifier | "In some flowers like lily, the calyx and corolla are not distinct and are termed as perianth." (qualifier: some) |  |
-| F129 | 5.5 | definition | "When a flower has both androecium and gynoecium, it is bisexual." |  |
-| F130 | 5.5 | qualifier | "A flower having either only stamens or only carpels is unisexual." (qualifier: only) |  |
-| F131 | 5.5 | qualifier | "In symmetry, the flower may be actinomorphic (radial symmetry) or zygomorphic (bilateral symmetry)." (qualifier: may) |  |
-| F132 | 5.5 | definition | "When a flower can be divided into two equal radial halves in any radial plane passing through the centre, it is said to be actinomorphic, e.g., mustard, datura, chilli." |  |
-| F133 | 5.5 | definition | "When it can be divided into two similar halves only in one particular vertical plane, it is zygomorphic, e.g., pea, gulmohur, bean, Cassia." (qualifier: only) |  |
-| F134 | 5.5 | definition | "A flower is asymmetric (irregular) if it cannot be divided into two similar halves by any vertical plane passing through the centre, as in canna." |  |
-| F135 | 5.5 | number | "A flower may be trimerous, tetramerous or pentamerous when the floral appendages are in multiple of 3, 4 or 5, respectively." (counts: 3, 4, 5) |  |
-| F136 | 5.5 | definition | "Flowers with bracts-reduced leaf found at the base of the pedicel-are called bracteate and those without bracts, ebracteate." |  |
-| F137 | 5.5 | term | "Based on the position of calyx, corolla and androecium in respect of the ovary on thalamus, the flowers are described as hypogynous, perigynous and epigynous (Figure 5.9)." |  |
-| F138 | 5.5 | definition | "In the hypogynous flower the gynoecium occupies the highest position while the other parts are situated below it." |  |
-| F139 | 5.5 | example | "The ovary in such flowers is said to be superior, e.g., mustard, china rose and brinjal." |  |
-| F140 | 5.5 | definition | "If gynoecium is situated in the centre and other parts of the flower are located on the rim of the thalamus almost at the same level, it is called perigynous." |  |
-| F141 | 5.5 | example | "The ovary here is said to be half inferior, e.g., plum, rose, peach." |  |
-| F142 | 5.5 | definition | "In epigynous flowers, the margin of thalamus grows upward enclosing the ovary completely and getting fused with it, the other parts of flower arise above the ovary." |  |
-| F143 | 5.5 | example | "Hence, the ovary is said to be inferior as in flowers of guava and cucumber, and the ray florets of sunflower." |  |
-| F144 | Fig 5.9 | caption | Figure caption (verbatim): "Figure 5.9 Position of floral parts on thalamus : (a) Hypogynous (b)  and (c) Perigynous  (d) Epigynous" |  |
-| F145 | 5.5.1 | heading | Numbered section heading: "5.5.1 Parts of a Flower" |  |
-| F146 | 5.5.1 | opener | "Each flower normally has four floral whorls, viz., calyx, corolla, androecium and gynoecium (Figure 5.10)." (qualifier: normally; count: four) |  |
-| F147 | Fig 5.10 | caption | Figure caption (verbatim): "Figure 5.10  Parts of a flower" |  |
-| F148 | Fig 5.10 | figure-labels | Figure labels: "Androecium"; "Gynoecium"; "Corolla"; "Calyx"; "Pedicel" |  |
-| F149 | 5.5.1.1 | heading | Numbered section heading: "5.5.1.1 Calyx" |  |
-| F150 | 5.5.1.1 | opener | "The calyx is the outermost whorl of the flower and the members are called sepals." |  |
-| F151 | 5.5.1.1 | qualifier | "Generally, sepals are green, leaf like and protect the flower in the bud stage." (qualifier: generally) |  |
-| F152 | 5.5.1.1 | definition | "The calyx may be gamosepalous (sepals united) or polysepalous (sepals free)." (qualifier: may) |  |
-| F153 | 5.5.1.2 | heading | Numbered section heading: "5.5.1.2 Corolla" |  |
-| F154 | 5.5.1.2 | opener | "Corolla is composed of petals." |  |
-| F155 | 5.5.1.2 | qualifier | "Petals are usually brightly coloured to attract insects for pollination." (qualifier: usually) |  |
-| F156 | 5.5.1.2 | definition | "Like calyx, corolla may also be gamopetalous (petals united) or polypetalous (petals free)." |  |
-| F157 | 5.5.1.2 | fact | "The shape and colour of corolla vary greatly in plants." |  |
-| F158 | 5.5.1.2 | qualifier | "Corolla may be tubular, bell-shaped, funnel-shaped or wheel-shaped." (qualifier: may) |  |
-| F159 | 5.5.1.2 | heading | Unnumbered run-in sub-heading: "Aestivation:" |  |
-| F160 | 5.5.1.2 | definition | "Aestivation: The mode of arrangement of sepals or petals in floral bud with respect to the other members of the same whorl is known as aestivation." |  |
-| F161 | 5.5.1.2 | number | "The main types of aestivation are valvate, twisted, imbricate and vexillary (Figure 5.11)." (count: four) |  |
-| F162 | 5.5.1.2 | definition | "When sepals or petals in a whorl just touch one another at the margin, without overlapping, as in Calotropis, it is said to be valvate." |  |
-| F163 | 5.5.1.2 | definition | "If one margin of  the appendage overlaps that of the next one and so on as in china rose, lady’s finger and cotton, it is called twisted." |  |
-| F164 | 5.5.1.2 | definition | "If the margins of sepals or petals overlap one another but not in any particular direction as in Cassia and gulmohur, the aestivation is called imbricate." |  |
-| F165 | 5.5.1.2 | number | "In pea and bean flowers, there are five petals, the largest (standard) overlaps the two lateral petals (wings) which in turn overlap the two smallest anterior petals (keel);  this type of aestivation is known as vexillary or papilionaceous." (counts: five, two, two) |  |
-| F166 | Fig 5.11 | caption | Figure caption (verbatim): "Figure 5.11 Types of aestivation in corolla : (a) Valvate (b) Twisted (c) Imbricate (d) Vexillary" |  |
-| F167 | 5.5.1.3 | heading | Numbered section heading: "5.5.1.3 Androecium" |  |
-| F168 | 5.5.1.3 | opener | "Androecium is composed of stamens." |  |
-| F169 | 5.5.1.3 | definition | "Each stamen which represents the male reproductive organ consists of a stalk or a filament and an anther." |  |
-| F170 | 5.5.1.3 | number | "Each anther is usually bilobed and each lobe has two chambers, the pollen-sacs." (qualifier: usually; count: two) |  |
-| F171 | 5.5.1.3 | fact | "The pollen grains are produced in pollen-sacs." |  |
-| F172 | 5.5.1.3 | definition | "A sterile stamen is called staminode." |  |
-| F173 | 5.5.1.3 | qualifier | "Stamens of flower may be united with other members such as petals or among themselves." (qualifier: may) |  |
-| F174 | 5.5.1.3 | example | "When stamens are attached to the petals, they are epipetalous as in brinjal, or epiphyllous when attached to the perianth as in the flowers of lily." |  |
-| F175 | 5.5.1.3 | qualifier | "The stamens in a flower may either remain free (polyandrous) or may be united in varying degrees." (qualifier: may) |  |
-| F176 | 5.5.1.3 | example | "The stamens may be united into one bunch or one bundle (monoadelphous) as in china rose, or two bundles (diadelphous) as in pea, or into more than two  bundles (polyadelphous) as in citrus." (NCERT spelling "monoadelphous" preserved) |  |
-| F177 | 5.5.1.3 | example | "There may be a variation in the length of filaments within a flower, as in Salvia and mustard." |  |
-| F178 | 5.5.1.4 | heading | Numbered section heading: "5.5.1.4 Gynoecium" |  |
-| F179 | 5.5.1.4 | opener | "Gynoecium is the female reproductive part of the flower and is made up of one or more carpels." |  |
-| F180 | 5.5.1.4 | number | "A carpel consists of three parts namely stigma, style and ovary." (count: three) |  |
-| F181 | 5.5.1.4 | definition | "Ovary is the enlarged basal part, on which lies the elongated tube, the style." |  |
-| F182 | 5.5.1.4 | fact | "The style connects the ovary to the stigma." |  |
-| F183 | 5.5.1.4 | qualifier | "The stigma is usually at the tip of the style and is the receptive surface for pollen grains." (qualifier: usually) |  |
-| F184 | 5.5.1.4 | definition | "Each ovary bears one or more ovules attached to a flattened, cushion-like placenta." |  |
-| F185 | 5.5.1.4 | example | "When more than one carpel is present, they may be free (as in lotus and rose) and are called apocarpous." |  |
-| F186 | 5.5.1.4 | example | "They are termed syncarpous when carpels are fused, as in mustard and tomato." |  |
-| F187 | 5.5.1.4 | process | "After fertilisation, the ovules develop into seeds and the ovary matures into a fruit." |  |
-| F188 | 5.5.1.4 | heading | Unnumbered run-in sub-heading: "Placentation:" |  |
-| F189 | 5.5.1.4 | definition | "Placentation: The arrangement of ovules within the ovary is known as placentation." |  |
-| F190 | 5.5.1.4 | number | "The placentation are of different types namely, marginal, axile, parietal, basal, central and free central (Figure 5.12)." (six names listed; the chapter describes and figures five — see source note SRC-1) |  |
-| F191 | 5.5.1.4 | definition | "In marginal  placentation the placenta forms a ridge along the ventral suture of the ovary and the ovules are borne on this ridge forming two rows, as in pea." |  |
-| F192 | 5.5.1.4 | definition | "When the  placenta is axial and the ovules are attached to it in a multilocular ovary, the placentaion is said to be axile, as in china rose, tomato and lemon." (NCERT spelling "placentaion" preserved) |  |
-| F193 | 5.5.1.4 | definition | "In parietal placentation, the ovules develop on the inner wall of the ovary or on peripheral part." |  |
-| F194 | 5.5.1.4 | example | "Ovary is one-chambered but it becomes two-chambered due to the formation of the false septum, e.g., mustard and Argemone." |  |
-| F195 | 5.5.1.4 | definition | "When the ovules are borne on central axis and septa are absent, as in Dianthus and Primrose the placentation is called free central." |  |
-| F196 | 5.5.1.4 | definition | "In basal placentation, the placenta develops at the base of ovary and a single ovule is attached to it, as in sunflower, marigold." |  |
-| F197 | Fig 5.12 | caption | Figure caption (verbatim): "Figure 5.12 Types of placentation : (a) Marginal (b) Axile (c) Parietal (d) Free central (e) Basal" |  |
-| F198 | 5.6 | heading | Numbered section heading: "5.6 THE FRUIT" |  |
-| F199 | 5.6 | opener | "The fruit is a characteristic feature of the flowering plants." |  |
-| F200 | 5.6 | definition | "It is a mature or ripened ovary, developed after fertilisation." |  |
-| F201 | 5.6 | definition | "If a fruit is formed without fertilisation of the ovary, it is called a parthenocarpic fruit." |  |
-| F202 | 5.6 | qualifier | "Generally, the fruit consists of a wall or pericarp and seeds." (qualifier: generally) |  |
-| F203 | 5.6 | qualifier | "The pericarp may be dry or fleshy." (qualifier: may) |  |
-| F204 | 5.6 | term | "When pericarp is thick and fleshy, it is differentiated into the outer epicarp, the middle mesocarp and the inner endocarp." |  |
-| F205 | 5.6 | example | "In mango and coconut, the fruit is known as a drupe (Figure 5.13)." |  |
-| F206 | 5.6 | number | "They develop from monocarpellary superior ovaries and are one seeded." (count: one) |  |
-| F207 | 5.6 | example | "In mango the pericarp is well differentiated into an outer thin epicarp, a middle fleshy edible mesocarp and an inner stony hard endocarp." |  |
-| F208 | 5.6 | comparison | "In coconut which is also a drupe, the mesocarp is fibrous." |  |
-| F209 | Fig 5.13 | caption | Figure caption (verbatim): "Figure 5.13  Parts of a fruit : (a) Mango  (b) Coconut" |  |
-| F210 | Fig 5.13 | figure-labels | Figure labels: "Epicarp"; "Mesocarp"; "Seed"; "Endocarp" |  |
-| F211 | 5.7 | heading | Numbered section heading: "5.7 THE SEED" |  |
-| F212 | 5.7 | opener | "The ovules after fertilisation, develop into seeds." |  |
-| F213 | 5.7 | definition | "A seed is made up of a seed coat and an embryo." |  |
-| F214 | 5.7 | number | "The embryo is made up of a radicle, an embryonal axis and one (as in wheat, maize) or two cotyledons (as in gram and pea)." (counts: one, two) |  |
-| F215 | 5.7.1 | heading | Numbered section heading: "5.7.1 Structure of a Dicotyledonous Seed" |  |
-| F216 | 5.7.1 | opener | "The outermost covering of a seed is the seed coat." |  |
-| F217 | 5.7.1 | number | "The seed coat has two layers, the outer testa and the inner tegmen." (count: two) |  |
-| F218 | 5.7.1 | definition | "The hilum is a scar on the seed coat through which the developing seeds were attached to the fruit." |  |
-| F219 | 5.7.1 | definition | "Above the hilum is a small pore called the micropyle." |  |
-| F220 | 5.7.1 | number | "Within the seed coat is the embryo, consisting of an embryonal axis and two cotyledons." (count: two) |  |
-| F221 | 5.7.1 | qualifier | "The cotyledons are often fleshy and full of reserve food materials." (qualifier: often) |  |
-| F222 | 5.7.1 | number | "At the two ends of the embryonal axis are present the radicle and the plumule (Figure 5.14)." (count: two) |  |
-| F223 | 5.7.1 | example | "In some seeds such as castor the endosperm formed as a result of double fertilisation, is a food storing tissue and called endospermic seeds." (qualifier: some) |  |
-| F224 | 5.7.1 | example | "In plants such as bean, gram and pea, the endosperm is not present in mature seeds and such seeds are called non-endospermous." |  |
-| F225 | Fig 5.14 | caption | Figure caption (verbatim): "Figure 5.14 Structure of dicotyledonous seed" |  |
-| F226 | Fig 5.14 | figure-labels | Figure labels: "Seed coat"; "Cotyledon"; "Plumule"; "Hilum"; "Micropyle"; "Radicle" |  |
-| F227 | 5.7.2 | heading | Numbered section heading: "5.7.2 Structure of Monocotyledonous Seed" |  |
-| F228 | 5.7.2 | opener | "Generally, monocotyledonous seeds are endospermic but some as in orchids are non-endospermic." (qualifiers: generally, but some) |  |
-| F229 | 5.7.2 | qualifier | "In the seeds of cereals such as maize the seed coat is membranous and generally fused with the fruit wall." (qualifier: generally) |  |
-| F230 | 5.7.2 | fact | "The endosperm is bulky and stores food." |  |
-| F231 | 5.7.2 | definition | "The outer covering of endosperm separates the embryo by a proteinous layer called aleurone layer." |  |
-| F232 | 5.7.2 | fact | "The embryo is   small and situated in a groove at one end of the endosperm." |  |
-| F233 | 5.7.2 | definition | "It consists of one large and shield shaped cotyledon known as scutellum and a short axis with a plumule and a radicle." |  |
-| F234 | 5.7.2 | definition | "The plumule and radicle are enclosed in sheaths which are called coleoptile and coleorhiza  respectively (Figure 5.15)." |  |
-| F235 | Fig 5.15 | caption | Figure caption (verbatim): "Figure 5.15 Structure of a monocotyledonous seed" |  |
-| F236 | Fig 5.15 | figure-labels | Figure labels: "Seed coat & fruit-wall"; "Aleurone layer"; "Endosperm"; "Scutellum"; "Coleoptile"; "Plumule"; "Radicle"; "Coleorhiza"; "Embryo" |  |
-| F237 | 5.8 | heading | Numbered section heading: "5.8 SEMI-TECHNICAL DESCRIPTION OF A TYPICAL FLOWERING PLANT" |  |
-| F238 | 5.8 | opener | "Various morphological features are used to describe a flowering plant." |  |
-| F239 | 5.8 | fact | "The description has to be brief, in a simple and scientific language and presented in a proper sequence." |  |
-| F240 | 5.8 | process | "The plant is described beginning with its habit, vegetative characters – roots, stem and leaves and then floral characters inflorescence and flower parts." |  |
-| F241 | 5.8 | process | "After describing various parts of plant, a floral diagram and a floral formula are presented." |  |
-| F242 | 5.8 | fact | "The floral formula is represented by some symbols." |  |
-| F243 | 5.8 | term | Floral-formula symbol key (verbatim, read from the page image because the text layer drops the glyphs): "Br stands for bracteate", "K stands for calyx", "C for corolla", "P for perianth", "A for androecium", "G for Gynoecium", G underlined "for superior ovary", G overlined "for inferior ovary", male symbol "for male", female symbol "for female", combined male-female symbol "for bisexual plants", circled-plus "for actinomorphic", per-cent symbol "for zygomorphic nature of flower" |  |
-| F244 | 5.8 | term | "Fusion is indicated by enclosing the figure within bracket and adhesion by a line drawn above the symbols of the floral parts." |  |
-| F245 | 5.8 | fact | "A floral diagram provides information about the number of parts of a flower, their arrangement and the relation they have with one another (Figure 5.16)." |  |
-| F246 | 5.8 | fact | "The position of the mother axis with respect to the flower is represented by a dot on the top of the floral diagram." |  |
-| F247 | 5.8 | process | "Calyx, corolla, androecium and gynoecium are drawn in successive whorls, calyx being the outermost and the gynoecium being in the centre." |  |
-| F248 | 5.8 | fact | "Floral formula also shows cohesion and adhesion within parts of whorls and between whorls." |  |
-| F249 | 5.8 | example | "The floral diagram and floral formula in Figure 5.16 represents the mustard plant (Family: Brassicaceae)." |  |
-| F250 | Fig 5.16 | caption | Figure caption (verbatim): "Figure 5.16 Floral diagram with floral formula" |  |
-| F251 | Fig 5.16 | figure-labels | Figure labels: "K2+2 C4 A2+4 G(2)" |  |
-| F252 | 5.9 | heading | Numbered section heading: "5.9 SOLANACEAE" (the chapter contents box titles this section "5.9 Description of Some Important Families" — see source note SRC-2) |  |
-| F253 | 5.9 | opener | "It is a large family, commonly called as the ‘potato family’." ("It" = Solanaceae, named only in the section heading) |  |
-| F254 | 5.9 | fact | "It is widely distributed in tropics, subtropics and even temperate zones (Figure 5.17)." |  |
-| F255 | 5.9 | heading | Unnumbered sub-heading: "Vegetative Characters" |  |
-| F256 | 5.9 | qualifier | "Plants mostly herbs, shrubs and rarely small trees" (qualifiers: mostly, rarely) |  |
-| F257 | 5.9 | example | "Stem: herbaceous rarely woody, aerial; erect, cylindrical, branched, solid or hollow, hairy or glabrous, underground stem in potato (Solanum tuberosum)" (qualifier: rarely) |  |
-| F258 | 5.9 | qualifier | "Leaves: alternate, simple, rarely pinnately compound, exstipulate; venation reticulate" (qualifier: rarely) |  |
-| F259 | 5.9 | heading | Unnumbered sub-heading: "Floral Characters" |  |
-| F260 | 5.9 | example | "Inflorescence : Solitary, axillary or cymose as in Solanum" |  |
-| F261 | 5.9 | term | "Flower: bisexual, actinomorphic" |  |
-| F262 | 5.9 | number | "Calyx: sepals five, united, persistent, valvate aestivation" (count: five) |  |
-| F263 | 5.9 | number | "Corolla: petals five, united; valvate aestivation" (count: five) |  |
-| F264 | 5.9 | number | "Androecium: stamens five, epipetalous" (count: five) |  |
-| F265 | 5.9 | term | "Gynoecium: bicarpellary obligately placed, syncarpous; ovary superior, bilocular, placenta swollen with many ovules, axile" (NCERT wording "obligately" preserved — see source note SRC-3) |  |
-| F266 | 5.9 | term | "Fruits: berry or capsule" |  |
-| F267 | 5.9 | qualifier | "Seeds: many, endospermous" (qualifier: many) |  |
-| F268 | 5.9 | term | Solanaceae floral formula (verbatim, read from the page image): "Floral Formula:" circled-plus, bisexual symbol, "K(5) C(5) A5 G(2)" with an adhesion arc over C and A and G underlined for superior ovary |  |
-| F269 | 5.9 | heading | Unnumbered sub-heading: "Economic Importance" |  |
-| F270 | 5.9 | example | "Many plants belonging to this family are source of food (tomato, brinjal, potato), spice (chilli); medicine (belladonna, ashwagandha);  fumigatory (tobacco); ornamentals (petunia)." (qualifier: many) |  |
-| F271 | Fig 5.17 | caption | Figure caption (verbatim): "Figure 5.17 Solanum nigrum (makoi) plant :  (a) Flowering twig  (b) Flower (c) L.S. of flower  (d) Stamens  (e) Carpel  (f) Floral diagram" |  |
-| F272 | SUMMARY | heading | Structural heading: "SUMMARY" |  |
-| F273 | summary | summary-unique | "Flowering plants exhibit enormous variation in shape, size, structure, mode of nutrition, life span, habit and habitat." (SUMMARY-UNIQUE — mode of nutrition, life span, habit and habitat are named nowhere in the body; fold into the chapter intro) |  |
-| F274 | summary | summary-unique | "The roots in some plants get modified for storage of food, mechanical support and respiration." (SUMMARY-UNIQUE — root modification for mechanical support and respiration is absent from the rationalised body; fold into 5.1; qualifier: some) |  |
-| F275 | summary | summary-unique | "The shoot system is differentiated into stem, leaves, flowers and fruits." (SUMMARY-UNIQUE — the body defines the shoot system only as the portion above ground; fold into the chapter intro) |  |
-| F276 | summary | summary-unique | "The morphological features of stems like the presence of nodes and internodes, multicellular hair and positively phototropic nature help to differentiate the stems from roots." (SUMMARY-UNIQUE — multicellular hair and positively phototropic nature are absent from the body; fold into 5.2, where it answers the section’s opening question) |  |
-| F277 | summary | summary-unique | "Leaf is a lateral outgrowth of stem developed exogeneously at the node." (SUMMARY-UNIQUE — exogenous development is absent from the body; fold into 5.3; NCERT spelling "exogeneously" preserved) |  |
-| F278 | summary | summary-unique | "They vary in shape, size and period of viability." (SUMMARY-UNIQUE — seed shape, size and period of viability are absent from the body; fold into 5.7) |  |
-| F279 | summary | summary-unique | "The floral characteristics form the basis of classification and identification of flowering plants." (SUMMARY-UNIQUE — the body never states that floral characters are the basis of classification/identification; fold into 5.8) |  |
-| F280 | EXERCISES | heading | Structural heading: "EXERCISES" |  |
+| F001 | unit2 | heading | Unit banner heading: "UNIT 2 — STRUCTURAL ORGANISATION IN PLANTS AND ANIMALS" | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F002 | unit2 | fact | "The description of the diverse forms of life on earth was made only by observation – through naked eyes or later through magnifying lenses and microscopes." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F003 | unit2 | fact | "This description is mainly of gross structural features, both external and internal." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F004 | unit2 | fact | "In addition, observable and perceivable living phenomena were also recorded as part of this description." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F005 | unit2 | fact | "Before experimental biology or more specifically, physiology, was established as a part of biology, naturalists described only biology." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F006 | unit2 | fact | "Hence, biology remained as a natural history for a long time." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F007 | unit2 | fact | "The description, by itself, was amazing in terms of detail." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F008 | unit2 | fact | "While the initial reaction of a student could be boredom, one should keep in mind that the detailed description, was utilised in the later day reductionist biology where living processes drew more attention from scientists than the description of life forms and their structure." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F009 | unit2 | fact | "Hence, this description became meaningful and helpful in framing research questions in physiology or evolutionary biology." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F010 | unit2 | fact | "In the following chapters of this unit, the structural organisation of plants and animals, including the structural basis of physiologial or behavioural phenomena, is described." (NCERT spelling "physiologial" preserved) | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F011 | unit2 | fact | "For convenience, this description of morphological and anatomical features is presented separately for plants and animals." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F012 | unit2 | term | Unit 2 contents listed as "Chapter 5 Morphology of Flowering Plants", "Chapter 6 Anatomy of Flowering Plants", "Chapter 7 Structural Organisation in Animals" | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F013 | esau | heading | Unnumbered scientist-profile heading: "Katherine Esau" | x |
+| F014 | esau | number | "KATHERINE ESAU was born in Ukraine in 1898." (date: 1898) | x |
+| F015 | esau | number | "She studied agriculture in Russia and Germany and received her doctorate in 1931 in United States." (date: 1931) | x |
+| F016 | esau | fact | "She reported in her early publications that the curly top virus spreads through a plant via the food-conducting or phloem tissue." | x |
+| F017 | esau | number | "Dr Esau’s Plant Anatomy published in 1954 took a dynamic, developmental approach designed to enhance one’s understanding of plant structure and an enormous impact worldwide, literally bringing about a revival of the discipline." (date: 1954) | x |
+| F018 | esau | number | "The Anatomy of Seed Plants by Katherine Esau was published in 1960." (date: 1960) | x |
+| F019 | esau | fact | "It was referred to as Webster’s of plant biology – it is encyclopediac." (NCERT spelling "encyclopediac" preserved) | x |
+| F020 | esau | number | "In 1957 she was elected to the National Academy of Sciences, becoming the sixth woman to receive that honour." (date: 1957; count: sixth) | x |
+| F021 | esau | number | "In addition to this prestigious award, she received the National Medal of Science from President George Bush in 1989." (date: 1989) | x |
+| F022 | esau | number | "When Katherine Esau died in the year 1997, Peter Raven, director of Anatomy and Morphology, Missouri Botanical Garden, remembered that she ‘absolutely dominated’ the field of plant biology even at the age of 99." (dates: 1997; age 99) | x |
+| F023 | esau | caption | Profile caption (verbatim): "Katherine Esau (1898 – 1997)" — human-subject photograph; NEVER embedded, text-only per section 4.4 hard-no | x |
+| F024 | Ch5 | heading | Chapter 5 title: "MORPHOLOGY OF FLOWERING PLANTS" / "CHAPTER 5" | x |
+| F025 | intro | opener | "The wide range in the structure of higher plants will never fail to fascinate us." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F026 | intro | qualifier | "Even though the angiosperms show such a large diversity in external structure or morphology, they are all characterised by presence of roots, stems, leaves, flowers and fruits." (qualifier: even though, all) | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F027 | intro | fact | "In chapters 2 and 3, we talked about classification of plants based on morphological and other characteristics." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F028 | intro | fact | "For any successful attempt at classification and at understanding any higher plant (or for that matter any living organism) we need to know standard technical terms and standard definitions." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F029 | intro | example | "We also need to know about the possible variations in different parts, found as adaptations of the plants to their environment, e.g., adaptions to various habitats, for protection, climbing, storage, etc." (NCERT spelling "adaptions" preserved) | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F030 | intro | qualifier | "If you pull out any weed you will see that all of them have roots, stems and leaves. They may be bearing flowers and fruits." (qualifiers: all, may) | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F031 | intro | definition | "The underground part of the flowering plant is the root system while the portion above the ground forms the shoot system (Figure 5.1)." | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F032 | intro | term | Chapter contents box lists: "5.1 The Root", "5.2 The Stem", "5.3 The Leaf", "5.4 The Inflorescence", "5.5 The Flower", "5.6 The Fruit", "5.7 The Seed", "5.8 Semi-technical Description of a Typical Flowering Plant", "5.9 Description of Some Important Families" | removed by Pass 2 on request; see PASS2_DECISIONS.md |
+| F033 | Fig 5.1 | caption | Figure caption (verbatim): "Figure 5.1  Parts of a flowering plant" | x |
+| F034 | Fig 5.1 | figure-labels | Figure labels: "Flower"; "Fruit"; "Stem"; "Leaf"; "Node"; "Internode"; "Bud"; "Primary root"; "Secondary root"; "Shoot system"; "Root system" | x |
+| F035 | 5.1 | heading | Numbered section heading: "5.1 THE ROOT" | x |
+| F036 | 5.1 | opener | "In majority of the dicotyledonous plants, the direct elongation of the radicle leads to the formation of primary root which grows inside the soil." (qualifier: majority) | x |
+| F037 | 5.1 | term | "It bears lateral roots of several orders that are referred to as secondary, tertiary, etc. roots." | x |
+| F038 | 5.1 | example | "The primary roots and its branches constitute the tap root system, as seen in the mustard plant (Figure 5.2a)." | x |
+| F039 | 5.1 | comparison | "In monocotyledonous plants, the primary root is short lived and is replaced by a large number of roots." | x |
+| F040 | 5.1 | example | "These roots originate from the base of the stem and constitute the fibrous root system, as seen in the wheat plant (Figure 5.2b)." | x |
+| F041 | 5.1 | example | "In some plants, like grass, Monstera and the banyan tree, roots arise from parts of the plant other than the radicle and are called adventitious roots (Figure 5.2c)." (qualifier: some) | x |
+| F042 | 5.1 | number | "The main functions of the root system are absorption of water and minerals from the soil, providing a proper anchorage to the plant parts, storing reserve food material and synthesis of plant growth regulators." (four functions) | x |
+| F043 | Fig 5.2 | caption | Figure caption (verbatim): "Figure 5.2 Different types of roots : (a) Tap  (b) Fibrous  (c) Adventitious" | x |
+| F044 | Fig 5.2 | figure-labels | Figure labels: "Main root"; "Laterals"; "Fibrous roots"; "Adventitious roots" | x |
+| F045 | 5.1.1 | heading | Numbered section heading: "5.1.1 Regions of the Root" | x |
+| F046 | 5.1.1 | opener | "The root is covered at the apex by a thimble-like structure called the root cap (Figure 5.3)." | x |
+| F047 | 5.1.1 | fact | "It protects the tender apex of the root as it makes its way through the soil." | x |
+| F048 | 5.1.1 | number | "A few millimetres above the root cap is the region of meristematic activity." (distance: a few millimetres) | x |
+| F049 | 5.1.1 | fact | "The cells of this region are very small, thin-walled and with dense protoplasm." | x |
+| F050 | 5.1.1 | fact | "They divide repeatedly." | x |
+| F051 | 5.1.1 | process | "The cells proximal to this region undergo rapid elongation and enlargement and are responsible for the growth of the root in length." | x |
+| F052 | 5.1.1 | term | "This region is called the region of elongation." | x |
+| F053 | 5.1.1 | process | "The cells of the elongation zone gradually differentiate and mature." | x |
+| F054 | 5.1.1 | term | "Hence, this zone, proximal to region of elongation, is called the region of maturation." | x |
+| F055 | 5.1.1 | qualifier | "From this region some of the epidermal cells form very fine and delicate, thread-like structures called root hairs." (qualifier: some) | x |
+| F056 | 5.1.1 | fact | "These root hairs absorb water and minerals from the soil." | x |
+| F057 | Fig 5.3 | caption | Figure caption (verbatim): "Figure 5.3  The regions of the root-tip" | x |
+| F058 | Fig 5.3 | figure-labels | Figure labels: "Region of maturation"; "Root hair"; "Region of elongation"; "Region of meristematic activity"; "Root cap" | x |
+| F059 | 5.2 | heading | Numbered section heading: "5.2 THE STEM" | x |
+| F060 | 5.2 | opener | "What are the features that distinguish a stem from a root?" (in-text question that opens 5.2; answered by the rows below and by summary row S7) | x |
+| F061 | 5.2 | definition | "The stem is the ascending part of the axis bearing branches, leaves, flowers and fruits." | x |
+| F062 | 5.2 | fact | "It develops from the plumule of the embryo of a germinating seed." | x |
+| F063 | 5.2 | term | "The stem bears nodes and internodes." | x |
+| F064 | 5.2 | definition | "The region of the stem where leaves are born are called nodes while internodes are the portions between two nodes." | x |
+| F065 | 5.2 | qualifier | "The stem bears buds, which may be terminal or axillary." (qualifier: may) | x |
+| F066 | 5.2 | qualifier | "Stem is generally green when young and later often become woody and dark brown." (qualifiers: generally, often) | x |
+| F067 | 5.2 | fact | "The main function of the stem is spreading out branches bearing leaves, flowers and fruits." | x |
+| F068 | 5.2 | fact | "It conducts water, minerals and photosynthates." | x |
+| F069 | 5.2 | qualifier | "Some stems perform the function of storage of food, support, protection and of vegetative propagation." (qualifier: some) | x |
+| F070 | 5.3 | heading | Numbered section heading: "5.3 THE LEAF" | x |
+| F071 | 5.3 | opener | "The leaf is a lateral, generally flattened structure borne on the stem." (qualifier: generally) | x |
+| F072 | 5.3 | fact | "It develops at the node and bears a bud in its axil." | x |
+| F073 | 5.3 | fact | "The axillary bud later develops into a branch." | x |
+| F074 | 5.3 | fact | "Leaves originate from shoot apical meristems and are arranged in an acropetal order." | x |
+| F075 | 5.3 | fact | "They are the most important vegetative organs for photosynthesis." | x |
+| F076 | 5.3 | number | "A typical leaf consists of three main parts:  leaf base, petiole and lamina (Figure 5.4 a)." (count: three) | x |
+| F077 | 5.3 | number | "The leaf is attached to the stem by the leaf base and may bear two lateral small leaf like structures called stipules." (qualifier: may; count: two) | x |
+| F078 | 5.3 | comparison | "In monocotyledons, the leaf base expands into a sheath covering the stem partially or wholly." | x |
+| F079 | 5.3 | qualifier | "In some leguminous plants the leafbase may become swollen, which is called the pulvinus." (qualifiers: some, may; NCERT spelling "leafbase" preserved) | x |
+| F080 | 5.3 | fact | "The petiole help hold the blade to light." | x |
+| F081 | 5.3 | fact | "Long thin flexible petioles allow leaf blades to flutter in wind, thereby cooling the leaf and bringing fresh air to leaf surface." | x |
+| F082 | 5.3 | definition | "The lamina or the leaf blade is the green expanded part of the leaf with veins and veinlets." | x |
+| F083 | 5.3 | qualifier | "There is, usually, a middle prominent vein, which is known as the midrib." (qualifier: usually) | x |
+| F084 | 5.3 | fact | "Veins provide rigidity to the leaf blade and act as channels of transport for water, minerals and food materials." | x |
+| F085 | 5.3 | fact | "The shape, margin, apex, surface and extent of incision of lamina varies in different leaves." | x |
+| F086 | Fig 5.4 | caption | Figure caption (verbatim): "Figure 5.4 Structure of a leaf : (a) Parts of a leaf (b) Reticulate venation (c) Parallel venation" | x |
+| F087 | Fig 5.4 | figure-labels | Figure labels: "Lamina"; "Stipule"; "Petiole"; "Leaf base"; "Axillary bud" | x |
+| F088 | 5.3.1 | heading | Numbered section heading: "5.3.1 Venation" | x |
+| F089 | 5.3.1 | opener | "The arrangement of veins and the veinlets in the lamina of leaf is termed as venation." | x |
+| F090 | 5.3.1 | definition | "When the veinlets form a network, the venation is termed as reticulate (Figure 5.4 b)." | x |
+| F091 | 5.3.1 | definition | "When the veins run parallel to each other within a lamina, the venation is termed as parallel (Figure 5.4 c)." | x |
+| F092 | 5.3.1 | qualifier | "Leaves of dicotyledonous plants generally possess reticulate venation, while parallel venation is the characteristic of most monocotyledons." (qualifiers: generally, most) | x |
+| F093 | 5.3.2 | heading | Numbered section heading: "5.3.2 Types of Leaves" | x |
+| F094 | 5.3.2 | opener | "A leaf is said to be simple, when its lamina is entire or when incised, the incisions do not touch the midrib." | x |
+| F095 | 5.3.2 | definition | "When the incisions of the lamina reach up to the midrib breaking it into a number of leaflets, the leaf is called compound." | x |
+| F096 | 5.3.2 | exception | "A bud is present in the axil of petiole in both simple and compound leaves, but not in the axil of leaflets of the compound leaf." (exception: but not) | x |
+| F097 | 5.3.2 | number | "The compound leaves may be of two types (Figure 5.5)." (count: two) | x |
+| F098 | 5.3.2 | example | "In a pinnately compound leaf a number of leaflets are present on a common axis, the rachis, which represents the midrib of the leaf as in neem." | x |
+| F099 | 5.3.2 | example | "In palmately compound leaves, the leaflets are attached at a common point, i.e., at the tip of petiole, as in silk cotton." | x |
+| F100 | Fig 5.5 | caption | Figure caption (verbatim): "Figure 5.5 Compound leaves : (a) pinnately compound leaf (b) palmately compound leaf" | x |
+| F101 | Fig 5.5 | figure-labels | Figure labels: "Rachis"; "Neem"; "Silk Cotton" | x |
+| F102 | 5.3.3 | heading | Numbered section heading: "5.3.3 Phyllotaxy" | x |
+| F103 | 5.3.3 | opener | "Phyllotaxy is the pattern of arrangement of leaves on the stem or branch." | x |
+| F104 | 5.3.3 | number | "This is usually of three types – alternate, opposite and whorled (Figure 5.6)." (qualifier: usually; count: three) | x |
+| F105 | 5.3.3 | example | "In alternate type of phyllotaxy,  a single leaf arises at each node in alternate manner, as in china rose, mustard and sun flower plants." | x |
+| F106 | 5.3.3 | example | "In opposite type, a pair of leaves arise at each node and lie opposite to each other as in Calotropis and guava plants." | x |
+| F107 | 5.3.3 | example | "If more than two leaves arise at a node and form a whorl, it is called whorled, as in Alstonia." | x |
+| F108 | Fig 5.6 | caption | Figure caption (verbatim): "Figure 5.6 Different types of phyllotaxy : (a) Alternate (b) Opposite (c) Whorled" | x |
+| F109 | Fig 5.6 | figure-labels | Figure labels: "China rose"; "Guava"; "Alstonia" | x |
+| F110 | 5.4 | heading | Numbered section heading: "5.4 THE INFLORESCENCE" | x |
+| F111 | 5.4 | opener | "A flower is a modified shoot wherein the shoot apical meristem changes to floral meristem." | x |
+| F112 | 5.4 | fact | "Internodes do not elongate and the axis gets condensed." | x |
+| F113 | 5.4 | fact | "The apex produces different kinds of floral appendages laterally at successive nodes instead of leaves." | x |
+| F114 | 5.4 | qualifier | "When a shoot tip transforms into a flower, it is always solitary." (qualifier: always) | x |
+| F115 | 5.4 | definition | "The arrangement of flowers on the floral axis is termed as inflorescence." | x |
+| F116 | 5.4 | number | "Depending on whether the apex gets developed into a flower or continues to grow, two major types of inflorescences are defined – racemose and cymose." (count: two) | x |
+| F117 | 5.4 | definition | "In racemose type of inflorescences the main axis continues to grow, the flowers are borne laterally in an acropetal succession (Figure 5.7)." | x |
+| F118 | 5.4 | definition | "In cymose type of  inflorescence the main axis terminates in a flower, hence is limited in growth." | x |
+| F119 | 5.4 | fact | "The flowers are borne in a basipetal order (Figure 5.8)." | x |
+| F120 | Fig 5.7 | caption | Figure caption (verbatim): "Figure 5.7  Racemose inflorescence" | x |
+| F121 | Fig 5.8 | caption | Figure caption (verbatim): "Figure 5.8  Cymose inflorescence" | x |
+| F122 | 5.5 | heading | Numbered section heading: "5.5 THE FLOWER" | x |
+| F123 | 5.5 | opener | "The flower is the reproductive unit in the angiosperms." | x |
+| F124 | 5.5 | fact | "It is meant for sexual reproduction." | x |
+| F125 | 5.5 | number | "A typical flower has four different kinds of whorls arranged successively on the swollen end of the stalk or pedicel, called thalamus or receptacle." (count: four) | x |
+| F126 | 5.5 | term | "These are calyx, corolla, androecium and gynoecium." | x |
+| F127 | 5.5 | comparison | "Calyx and corolla are accessory organs, while androecium and gynoecium are reproductive organs." | x |
+| F128 | 5.5 | qualifier | "In some flowers like lily, the calyx and corolla are not distinct and are termed as perianth." (qualifier: some) | x |
+| F129 | 5.5 | definition | "When a flower has both androecium and gynoecium, it is bisexual." | x |
+| F130 | 5.5 | qualifier | "A flower having either only stamens or only carpels is unisexual." (qualifier: only) | x |
+| F131 | 5.5 | qualifier | "In symmetry, the flower may be actinomorphic (radial symmetry) or zygomorphic (bilateral symmetry)." (qualifier: may) | x |
+| F132 | 5.5 | definition | "When a flower can be divided into two equal radial halves in any radial plane passing through the centre, it is said to be actinomorphic, e.g., mustard, datura, chilli." | x |
+| F133 | 5.5 | definition | "When it can be divided into two similar halves only in one particular vertical plane, it is zygomorphic, e.g., pea, gulmohur, bean, Cassia." (qualifier: only) | x |
+| F134 | 5.5 | definition | "A flower is asymmetric (irregular) if it cannot be divided into two similar halves by any vertical plane passing through the centre, as in canna." | x |
+| F135 | 5.5 | number | "A flower may be trimerous, tetramerous or pentamerous when the floral appendages are in multiple of 3, 4 or 5, respectively." (counts: 3, 4, 5) | x |
+| F136 | 5.5 | definition | "Flowers with bracts-reduced leaf found at the base of the pedicel-are called bracteate and those without bracts, ebracteate." | x |
+| F137 | 5.5 | term | "Based on the position of calyx, corolla and androecium in respect of the ovary on thalamus, the flowers are described as hypogynous, perigynous and epigynous (Figure 5.9)." | x |
+| F138 | 5.5 | definition | "In the hypogynous flower the gynoecium occupies the highest position while the other parts are situated below it." | x |
+| F139 | 5.5 | example | "The ovary in such flowers is said to be superior, e.g., mustard, china rose and brinjal." | x |
+| F140 | 5.5 | definition | "If gynoecium is situated in the centre and other parts of the flower are located on the rim of the thalamus almost at the same level, it is called perigynous." | x |
+| F141 | 5.5 | example | "The ovary here is said to be half inferior, e.g., plum, rose, peach." | x |
+| F142 | 5.5 | definition | "In epigynous flowers, the margin of thalamus grows upward enclosing the ovary completely and getting fused with it, the other parts of flower arise above the ovary." | x |
+| F143 | 5.5 | example | "Hence, the ovary is said to be inferior as in flowers of guava and cucumber, and the ray florets of sunflower." | x |
+| F144 | Fig 5.9 | caption | Figure caption (verbatim): "Figure 5.9 Position of floral parts on thalamus : (a) Hypogynous (b)  and (c) Perigynous  (d) Epigynous" | x |
+| F145 | 5.5.1 | heading | Numbered section heading: "5.5.1 Parts of a Flower" | x |
+| F146 | 5.5.1 | opener | "Each flower normally has four floral whorls, viz., calyx, corolla, androecium and gynoecium (Figure 5.10)." (qualifier: normally; count: four) | x |
+| F147 | Fig 5.10 | caption | Figure caption (verbatim): "Figure 5.10  Parts of a flower" | x |
+| F148 | Fig 5.10 | figure-labels | Figure labels: "Androecium"; "Gynoecium"; "Corolla"; "Calyx"; "Pedicel" | x |
+| F149 | 5.5.1.1 | heading | Numbered section heading: "5.5.1.1 Calyx" | x |
+| F150 | 5.5.1.1 | opener | "The calyx is the outermost whorl of the flower and the members are called sepals." | x |
+| F151 | 5.5.1.1 | qualifier | "Generally, sepals are green, leaf like and protect the flower in the bud stage." (qualifier: generally) | x |
+| F152 | 5.5.1.1 | definition | "The calyx may be gamosepalous (sepals united) or polysepalous (sepals free)." (qualifier: may) | x |
+| F153 | 5.5.1.2 | heading | Numbered section heading: "5.5.1.2 Corolla" | x |
+| F154 | 5.5.1.2 | opener | "Corolla is composed of petals." | x |
+| F155 | 5.5.1.2 | qualifier | "Petals are usually brightly coloured to attract insects for pollination." (qualifier: usually) | x |
+| F156 | 5.5.1.2 | definition | "Like calyx, corolla may also be gamopetalous (petals united) or polypetalous (petals free)." | x |
+| F157 | 5.5.1.2 | fact | "The shape and colour of corolla vary greatly in plants." | x |
+| F158 | 5.5.1.2 | qualifier | "Corolla may be tubular, bell-shaped, funnel-shaped or wheel-shaped." (qualifier: may) | x |
+| F159 | 5.5.1.2 | heading | Unnumbered run-in sub-heading: "Aestivation:" | x |
+| F160 | 5.5.1.2 | definition | "Aestivation: The mode of arrangement of sepals or petals in floral bud with respect to the other members of the same whorl is known as aestivation." | x |
+| F161 | 5.5.1.2 | number | "The main types of aestivation are valvate, twisted, imbricate and vexillary (Figure 5.11)." (count: four) | x |
+| F162 | 5.5.1.2 | definition | "When sepals or petals in a whorl just touch one another at the margin, without overlapping, as in Calotropis, it is said to be valvate." | x |
+| F163 | 5.5.1.2 | definition | "If one margin of  the appendage overlaps that of the next one and so on as in china rose, lady’s finger and cotton, it is called twisted." | x |
+| F164 | 5.5.1.2 | definition | "If the margins of sepals or petals overlap one another but not in any particular direction as in Cassia and gulmohur, the aestivation is called imbricate." | x |
+| F165 | 5.5.1.2 | number | "In pea and bean flowers, there are five petals, the largest (standard) overlaps the two lateral petals (wings) which in turn overlap the two smallest anterior petals (keel);  this type of aestivation is known as vexillary or papilionaceous." (counts: five, two, two) | x |
+| F166 | Fig 5.11 | caption | Figure caption (verbatim): "Figure 5.11 Types of aestivation in corolla : (a) Valvate (b) Twisted (c) Imbricate (d) Vexillary" | x |
+| F167 | 5.5.1.3 | heading | Numbered section heading: "5.5.1.3 Androecium" | x |
+| F168 | 5.5.1.3 | opener | "Androecium is composed of stamens." | x |
+| F169 | 5.5.1.3 | definition | "Each stamen which represents the male reproductive organ consists of a stalk or a filament and an anther." | x |
+| F170 | 5.5.1.3 | number | "Each anther is usually bilobed and each lobe has two chambers, the pollen-sacs." (qualifier: usually; count: two) | x |
+| F171 | 5.5.1.3 | fact | "The pollen grains are produced in pollen-sacs." | x |
+| F172 | 5.5.1.3 | definition | "A sterile stamen is called staminode." | x |
+| F173 | 5.5.1.3 | qualifier | "Stamens of flower may be united with other members such as petals or among themselves." (qualifier: may) | x |
+| F174 | 5.5.1.3 | example | "When stamens are attached to the petals, they are epipetalous as in brinjal, or epiphyllous when attached to the perianth as in the flowers of lily." | x |
+| F175 | 5.5.1.3 | qualifier | "The stamens in a flower may either remain free (polyandrous) or may be united in varying degrees." (qualifier: may) | x |
+| F176 | 5.5.1.3 | example | "The stamens may be united into one bunch or one bundle (monoadelphous) as in china rose, or two bundles (diadelphous) as in pea, or into more than two  bundles (polyadelphous) as in citrus." (NCERT spelling "monoadelphous" preserved) | x |
+| F177 | 5.5.1.3 | example | "There may be a variation in the length of filaments within a flower, as in Salvia and mustard." | x |
+| F178 | 5.5.1.4 | heading | Numbered section heading: "5.5.1.4 Gynoecium" | x |
+| F179 | 5.5.1.4 | opener | "Gynoecium is the female reproductive part of the flower and is made up of one or more carpels." | x |
+| F180 | 5.5.1.4 | number | "A carpel consists of three parts namely stigma, style and ovary." (count: three) | x |
+| F181 | 5.5.1.4 | definition | "Ovary is the enlarged basal part, on which lies the elongated tube, the style." | x |
+| F182 | 5.5.1.4 | fact | "The style connects the ovary to the stigma." | x |
+| F183 | 5.5.1.4 | qualifier | "The stigma is usually at the tip of the style and is the receptive surface for pollen grains." (qualifier: usually) | x |
+| F184 | 5.5.1.4 | definition | "Each ovary bears one or more ovules attached to a flattened, cushion-like placenta." | x |
+| F185 | 5.5.1.4 | example | "When more than one carpel is present, they may be free (as in lotus and rose) and are called apocarpous." | x |
+| F186 | 5.5.1.4 | example | "They are termed syncarpous when carpels are fused, as in mustard and tomato." | x |
+| F187 | 5.5.1.4 | process | "After fertilisation, the ovules develop into seeds and the ovary matures into a fruit." | x |
+| F188 | 5.5.1.4 | heading | Unnumbered run-in sub-heading: "Placentation:" | x |
+| F189 | 5.5.1.4 | definition | "Placentation: The arrangement of ovules within the ovary is known as placentation." | x |
+| F190 | 5.5.1.4 | number | "The placentation are of different types namely, marginal, axile, parietal, basal, central and free central (Figure 5.12)." (six names listed; the chapter describes and figures five — see source note SRC-1) | x |
+| F191 | 5.5.1.4 | definition | "In marginal  placentation the placenta forms a ridge along the ventral suture of the ovary and the ovules are borne on this ridge forming two rows, as in pea." | x |
+| F192 | 5.5.1.4 | definition | "When the  placenta is axial and the ovules are attached to it in a multilocular ovary, the placentaion is said to be axile, as in china rose, tomato and lemon." (NCERT spelling "placentaion" preserved) | x |
+| F193 | 5.5.1.4 | definition | "In parietal placentation, the ovules develop on the inner wall of the ovary or on peripheral part." | x |
+| F194 | 5.5.1.4 | example | "Ovary is one-chambered but it becomes two-chambered due to the formation of the false septum, e.g., mustard and Argemone." | x |
+| F195 | 5.5.1.4 | definition | "When the ovules are borne on central axis and septa are absent, as in Dianthus and Primrose the placentation is called free central." | x |
+| F196 | 5.5.1.4 | definition | "In basal placentation, the placenta develops at the base of ovary and a single ovule is attached to it, as in sunflower, marigold." | x |
+| F197 | Fig 5.12 | caption | Figure caption (verbatim): "Figure 5.12 Types of placentation : (a) Marginal (b) Axile (c) Parietal (d) Free central (e) Basal" | x |
+| F198 | 5.6 | heading | Numbered section heading: "5.6 THE FRUIT" | x |
+| F199 | 5.6 | opener | "The fruit is a characteristic feature of the flowering plants." | x |
+| F200 | 5.6 | definition | "It is a mature or ripened ovary, developed after fertilisation." | x |
+| F201 | 5.6 | definition | "If a fruit is formed without fertilisation of the ovary, it is called a parthenocarpic fruit." | x |
+| F202 | 5.6 | qualifier | "Generally, the fruit consists of a wall or pericarp and seeds." (qualifier: generally) | x |
+| F203 | 5.6 | qualifier | "The pericarp may be dry or fleshy." (qualifier: may) | x |
+| F204 | 5.6 | term | "When pericarp is thick and fleshy, it is differentiated into the outer epicarp, the middle mesocarp and the inner endocarp." | x |
+| F205 | 5.6 | example | "In mango and coconut, the fruit is known as a drupe (Figure 5.13)." | x |
+| F206 | 5.6 | number | "They develop from monocarpellary superior ovaries and are one seeded." (count: one) | x |
+| F207 | 5.6 | example | "In mango the pericarp is well differentiated into an outer thin epicarp, a middle fleshy edible mesocarp and an inner stony hard endocarp." | x |
+| F208 | 5.6 | comparison | "In coconut which is also a drupe, the mesocarp is fibrous." | x |
+| F209 | Fig 5.13 | caption | Figure caption (verbatim): "Figure 5.13  Parts of a fruit : (a) Mango  (b) Coconut" | x |
+| F210 | Fig 5.13 | figure-labels | Figure labels: "Epicarp"; "Mesocarp"; "Seed"; "Endocarp" | x |
+| F211 | 5.7 | heading | Numbered section heading: "5.7 THE SEED" | x |
+| F212 | 5.7 | opener | "The ovules after fertilisation, develop into seeds." | x |
+| F213 | 5.7 | definition | "A seed is made up of a seed coat and an embryo." | x |
+| F214 | 5.7 | number | "The embryo is made up of a radicle, an embryonal axis and one (as in wheat, maize) or two cotyledons (as in gram and pea)." (counts: one, two) | x |
+| F215 | 5.7.1 | heading | Numbered section heading: "5.7.1 Structure of a Dicotyledonous Seed" | x |
+| F216 | 5.7.1 | opener | "The outermost covering of a seed is the seed coat." | x |
+| F217 | 5.7.1 | number | "The seed coat has two layers, the outer testa and the inner tegmen." (count: two) | x |
+| F218 | 5.7.1 | definition | "The hilum is a scar on the seed coat through which the developing seeds were attached to the fruit." | x |
+| F219 | 5.7.1 | definition | "Above the hilum is a small pore called the micropyle." | x |
+| F220 | 5.7.1 | number | "Within the seed coat is the embryo, consisting of an embryonal axis and two cotyledons." (count: two) | x |
+| F221 | 5.7.1 | qualifier | "The cotyledons are often fleshy and full of reserve food materials." (qualifier: often) | x |
+| F222 | 5.7.1 | number | "At the two ends of the embryonal axis are present the radicle and the plumule (Figure 5.14)." (count: two) | x |
+| F223 | 5.7.1 | example | "In some seeds such as castor the endosperm formed as a result of double fertilisation, is a food storing tissue and called endospermic seeds." (qualifier: some) | x |
+| F224 | 5.7.1 | example | "In plants such as bean, gram and pea, the endosperm is not present in mature seeds and such seeds are called non-endospermous." | x |
+| F225 | Fig 5.14 | caption | Figure caption (verbatim): "Figure 5.14 Structure of dicotyledonous seed" | x |
+| F226 | Fig 5.14 | figure-labels | Figure labels: "Seed coat"; "Cotyledon"; "Plumule"; "Hilum"; "Micropyle"; "Radicle" | x |
+| F227 | 5.7.2 | heading | Numbered section heading: "5.7.2 Structure of Monocotyledonous Seed" | x |
+| F228 | 5.7.2 | opener | "Generally, monocotyledonous seeds are endospermic but some as in orchids are non-endospermic." (qualifiers: generally, but some) | x |
+| F229 | 5.7.2 | qualifier | "In the seeds of cereals such as maize the seed coat is membranous and generally fused with the fruit wall." (qualifier: generally) | x |
+| F230 | 5.7.2 | fact | "The endosperm is bulky and stores food." | x |
+| F231 | 5.7.2 | definition | "The outer covering of endosperm separates the embryo by a proteinous layer called aleurone layer." | x |
+| F232 | 5.7.2 | fact | "The embryo is   small and situated in a groove at one end of the endosperm." | x |
+| F233 | 5.7.2 | definition | "It consists of one large and shield shaped cotyledon known as scutellum and a short axis with a plumule and a radicle." | x |
+| F234 | 5.7.2 | definition | "The plumule and radicle are enclosed in sheaths which are called coleoptile and coleorhiza  respectively (Figure 5.15)." | x |
+| F235 | Fig 5.15 | caption | Figure caption (verbatim): "Figure 5.15 Structure of a monocotyledonous seed" | x |
+| F236 | Fig 5.15 | figure-labels | Figure labels: "Seed coat & fruit-wall"; "Aleurone layer"; "Endosperm"; "Scutellum"; "Coleoptile"; "Plumule"; "Radicle"; "Coleorhiza"; "Embryo" | x |
+| F237 | 5.8 | heading | Numbered section heading: "5.8 SEMI-TECHNICAL DESCRIPTION OF A TYPICAL FLOWERING PLANT" | x |
+| F238 | 5.8 | opener | "Various morphological features are used to describe a flowering plant." | x |
+| F239 | 5.8 | fact | "The description has to be brief, in a simple and scientific language and presented in a proper sequence." | x |
+| F240 | 5.8 | process | "The plant is described beginning with its habit, vegetative characters – roots, stem and leaves and then floral characters inflorescence and flower parts." | x |
+| F241 | 5.8 | process | "After describing various parts of plant, a floral diagram and a floral formula are presented." | x |
+| F242 | 5.8 | fact | "The floral formula is represented by some symbols." | x |
+| F243 | 5.8 | term | Floral-formula symbol key (verbatim, read from the page image because the text layer drops the glyphs): "Br stands for bracteate", "K stands for calyx", "C for corolla", "P for perianth", "A for androecium", "G for Gynoecium", G underlined "for superior ovary", G overlined "for inferior ovary", male symbol "for male", female symbol "for female", combined male-female symbol "for bisexual plants", circled-plus "for actinomorphic", per-cent symbol "for zygomorphic nature of flower" | x |
+| F244 | 5.8 | term | "Fusion is indicated by enclosing the figure within bracket and adhesion by a line drawn above the symbols of the floral parts." | x |
+| F245 | 5.8 | fact | "A floral diagram provides information about the number of parts of a flower, their arrangement and the relation they have with one another (Figure 5.16)." | x |
+| F246 | 5.8 | fact | "The position of the mother axis with respect to the flower is represented by a dot on the top of the floral diagram." | x |
+| F247 | 5.8 | process | "Calyx, corolla, androecium and gynoecium are drawn in successive whorls, calyx being the outermost and the gynoecium being in the centre." | x |
+| F248 | 5.8 | fact | "Floral formula also shows cohesion and adhesion within parts of whorls and between whorls." | x |
+| F249 | 5.8 | example | "The floral diagram and floral formula in Figure 5.16 represents the mustard plant (Family: Brassicaceae)." | x |
+| F250 | Fig 5.16 | caption | Figure caption (verbatim): "Figure 5.16 Floral diagram with floral formula" | x |
+| F251 | Fig 5.16 | figure-labels | Figure labels: "K2+2 C4 A2+4 G(2)" | x |
+| F252 | 5.9 | heading | Numbered section heading: "5.9 SOLANACEAE" (the chapter contents box titles this section "5.9 Description of Some Important Families" — see source note SRC-2) | x |
+| F253 | 5.9 | opener | "It is a large family, commonly called as the ‘potato family’." ("It" = Solanaceae, named only in the section heading) | x |
+| F254 | 5.9 | fact | "It is widely distributed in tropics, subtropics and even temperate zones (Figure 5.17)." | x |
+| F255 | 5.9 | heading | Unnumbered sub-heading: "Vegetative Characters" | x |
+| F256 | 5.9 | qualifier | "Plants mostly herbs, shrubs and rarely small trees" (qualifiers: mostly, rarely) | x |
+| F257 | 5.9 | example | "Stem: herbaceous rarely woody, aerial; erect, cylindrical, branched, solid or hollow, hairy or glabrous, underground stem in potato (Solanum tuberosum)" (qualifier: rarely) | x |
+| F258 | 5.9 | qualifier | "Leaves: alternate, simple, rarely pinnately compound, exstipulate; venation reticulate" (qualifier: rarely) | x |
+| F259 | 5.9 | heading | Unnumbered sub-heading: "Floral Characters" | x |
+| F260 | 5.9 | example | "Inflorescence : Solitary, axillary or cymose as in Solanum" | x |
+| F261 | 5.9 | term | "Flower: bisexual, actinomorphic" | x |
+| F262 | 5.9 | number | "Calyx: sepals five, united, persistent, valvate aestivation" (count: five) | x |
+| F263 | 5.9 | number | "Corolla: petals five, united; valvate aestivation" (count: five) | x |
+| F264 | 5.9 | number | "Androecium: stamens five, epipetalous" (count: five) | x |
+| F265 | 5.9 | term | "Gynoecium: bicarpellary obligately placed, syncarpous; ovary superior, bilocular, placenta swollen with many ovules, axile" (NCERT wording "obligately" preserved — see source note SRC-3) | x |
+| F266 | 5.9 | term | "Fruits: berry or capsule" | x |
+| F267 | 5.9 | qualifier | "Seeds: many, endospermous" (qualifier: many) | x |
+| F268 | 5.9 | term | Solanaceae floral formula (verbatim, read from the page image): "Floral Formula:" circled-plus, bisexual symbol, "K(5) C(5) A5 G(2)" with an adhesion arc over C and A and G underlined for superior ovary | x |
+| F269 | 5.9 | heading | Unnumbered sub-heading: "Economic Importance" | x |
+| F270 | 5.9 | example | "Many plants belonging to this family are source of food (tomato, brinjal, potato), spice (chilli); medicine (belladonna, ashwagandha);  fumigatory (tobacco); ornamentals (petunia)." (qualifier: many) | x |
+| F271 | Fig 5.17 | caption | Figure caption (verbatim): "Figure 5.17 Solanum nigrum (makoi) plant :  (a) Flowering twig  (b) Flower (c) L.S. of flower  (d) Stamens  (e) Carpel  (f) Floral diagram" | x |
+| F272 | SUMMARY | heading | Structural heading: "SUMMARY" | x |
+| F273 | summary | summary-unique | "Flowering plants exhibit enormous variation in shape, size, structure, mode of nutrition, life span, habit and habitat." (SUMMARY-UNIQUE — mode of nutrition, life span, habit and habitat are named nowhere in the body; fold into the chapter intro) | x |
+| F274 | summary | summary-unique | "The roots in some plants get modified for storage of food, mechanical support and respiration." (SUMMARY-UNIQUE — root modification for mechanical support and respiration is absent from the rationalised body; fold into 5.1; qualifier: some) | x |
+| F275 | summary | summary-unique | "The shoot system is differentiated into stem, leaves, flowers and fruits." (SUMMARY-UNIQUE — the body defines the shoot system only as the portion above ground; fold into the chapter intro) | x |
+| F276 | summary | summary-unique | "The morphological features of stems like the presence of nodes and internodes, multicellular hair and positively phototropic nature help to differentiate the stems from roots." (SUMMARY-UNIQUE — multicellular hair and positively phototropic nature are absent from the body; fold into 5.2, where it answers the section’s opening question) | x |
+| F277 | summary | summary-unique | "Leaf is a lateral outgrowth of stem developed exogeneously at the node." (SUMMARY-UNIQUE — exogenous development is absent from the body; fold into 5.3; NCERT spelling "exogeneously" preserved) | x |
+| F278 | summary | summary-unique | "They vary in shape, size and period of viability." (SUMMARY-UNIQUE — seed shape, size and period of viability are absent from the body; fold into 5.7) | x |
+| F279 | summary | summary-unique | "The floral characteristics form the basis of classification and identification of flowering plants." (SUMMARY-UNIQUE — the body never states that floral characters are the basis of classification/identification; fold into 5.8) | x |
+| F280 | EXERCISES | heading | Structural heading: "EXERCISES" | x |
 
 ## Summary classification
 
