@@ -1,0 +1,99 @@
+########## SOURCE PAGE 21 ##########
+
+[p21.B00  x 60-239  y 80-88]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p21.B01  x 59-422  y 105-182]
+   chromosomes,areproduced by females,i.e.,femaleheterogamety.In
+   order to have a distinction with the mechanism of sexdetermination
+   describedearlier,thetwodifferentsexchromosomesofafemalebirdhas
+   beendesignatedtobetheZandWchromosomes.Intheseorganismsthe
+   femaleshaveoneZandoneWchromosome,whereasmaleshaveapairof
+   Z-chromosomesbesidestheautosomes.
+
+[p21.B02  x 61-283  y 196-207]
+   4.6.1 Sex Determination in Humans
+
+[p21.B03  x 59-422  y 216-409]
+   Ithas already been mentioned that the sex determining mechanism in
+   case of humans is XY type.Outof23pairsofchromosomespresent,
+   22pairsareexactlysameinbothmalesandfemales:thesearethe
+   autosomes.A pair ofX-chromosomesarepresentin thefemale,whereas
+   thepresenceofanXandYchromosomearedeterminantofthemale
+   characteristic.During spermatogenesis among males,two types of
+   gametesareproduced.5opercentofthetotalspermproducedcarry
+   theX-chromosomeandtherest50percenthasY-chromosomebesides
+   the autosomes.Females,however,produce only one type of ovum with
+   anX-chromosome.Thereisanequalprobabilityoffertilisationofthe
+   ovumwiththespermcarryingeitherXorY chromosome.In case the
+   ovumfertiliseswithaspermcarryingX-chromosomethezygotedevelops
+   intoafemale(XX)andthefertilisationofovumwithY-chromosome
+   carrying sperm results into a male offspring.Thus,it is evident that it
+   isthegeneticmakeupofthespermthatdeterminesthesexofthechild.
+
+[p21.B04  x 59-421  y 423-460]
+   probability of either a male or afemalechild.Itisunfortunatethatin
+   our society women are blamed for giving birth to female children and
+   havebeenostracisedandill-treatedbecauseofthisfalsenotion.
+
+[p21.B05  x 60-300  y 474-487]
+   4.6.2 SexDetermination in HoneyBee
+
+[p21.B06  x 59-420  y 495-732]
+   The sex determination in honeybee is
+   based on the number of sets of
+   Parents
+   chromosomesanindividualreceives.An
+   offspring formed from the union ofa
+   sperm and an egg develops a safe male
+   Gametes:
+   (queen or worker).andan unf ert ili sed
+   eggdevelopsasamale(drone)bymeans
+   ofparthenogenesis.Thismeans that the
+   F,:
+   males have half the number of
+   chromosomesthanthatofafemale.The
+   females are diploidhaving32
+   chromosomes and males are haploid,i.e.,having 16 chromosomes.
+   Thisiscalledashaplodiploidsex-determinationsystemandhasspecial
+   characteristic features such as the males produce sperms by mitosis
+   (Figure4.13),theydonothavefatherand thuscannothavesons,but
+   haveagrandfatherandcanhavegrandsons.
+   Howis thesex-determinationmechanismdifferentinthebirds?
+   Isthespermortheeggresponsibleforthesexofthechicks?
+
+[p21.B07  x 507-531  y 508-527]
+   Male
+   16
+
+[p21.B08  x 374-408  y 510-529]
+   Female
+   32
+
+[p21.B09  x 374-409  y 535-546]
+   Meiosis
+
+[p21.B10  x 502-536  y 535-546]
+   Mitosis
+
+[p21.B11  x 362-397  y 561-568]
+   16
+   16
+
+[p21.B12  x 512-525  y 562-572]
+   16
+
+[p21.B13  x 500-535  y 588-608]
+   Female
+   32
+
+[p21.B14  x 298-520  y 590-626]
+   Male
+   16
+   Figure 4.13 Sex determination in honey bee
+
+[p21.B15  x 508-525  y 639-652]
+   71
+
+[p21.B16  x 277-335  y 777-787]
+   Reprint2026-27

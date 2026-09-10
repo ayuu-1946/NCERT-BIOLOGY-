@@ -1,0 +1,124 @@
+########## SOURCE PAGE 4 ##########
+
+[p04.B00  x 515-553  y 79-90]
+   BIOLOGY
+
+[p04.B01  x 90-553  y 104-201]
+   Character Dominant trait
+   Recessive trait
+   wildcows,we have well-known Indian
+   breeds,e.g.,Sahiwal cows in Punjab.We
+   must,however.recognise that though our
+   ancestors knew about the inheritance of
+   characters and variation,they had very
+   little idea about the scientific basis of these
+   phenomena.
+
+[p04.B02  x 88-142  y 122-134]
+   Seed shape
+
+[p04.B03  x 168-200  y 139-149]
+   Round
+
+[p04.B04  x 257-300  y 139-149]
+   Wrinkled
+
+[p04.B05  x 86-142  y 159-170]
+   Seed colour
+
+[p04.B06  x 168-199  y 176-187]
+   Yellow
+
+[p04.B07  x 262-292  y 176-186]
+   Green
+
+[p04.B08  x 78-142  y 204-214]
+   Flower colour
+
+[p04.B09  x 328-550  y 215-228]
+   4.1 MENDEL'S LAWS OF INHERITANCE
+
+[p04.B10  x 176-203  y 231-241]
+   Violet
+
+[p04.B11  x 260-288  y 232-242]
+   White
+
+[p04.B12  x 80-554  y 238-726]
+   Itwasduringthemid-nineteenthcenturythat
+   head way was made in the understanding of
+   inheritance.Gregor Mendel,conducted
+   hybridisation experiments on garden peas for
+   seven years (1856-1863) and proposed the
+   laws ofinheritance in living organisms.During
+   Mendel's investigations into inheritance
+   pattern sit was for the first time that statistical
+   analysis and mathematical logic were applied
+   to problems inbiology.His experiments had a
+   large sampling size,which gave greater
+   credibility to the data thathecollected.Also,
+   the confirmation of his inferences from
+   experiments on successive generations of his
+   testplants,proved that his results pointed to
+   general rules ofinheritance rather than being
+   unsubstantiated ideas.Mendel investigated
+   characters in the garden pea plant that were
+   manifestedastwoopposingtraits,e.g.,tallor
+   dwarfplants,yellow or green seeds.This
+   allowed him to setup a basic framework of
+   rules governing inheritance,which was
+   expanded on by later scientists to account for
+   all the diverse natural observation sand the
+   complexityinherentinthem.
+   Mendel conducted such artificial
+   Dwarf
+   Tall
+   pollination/crosspollination experiments
+   Figure 4.1 Seven pairs of contrasting traits in
+   using several true-breeding pealines.A true-
+   pea plant studied by Mendel
+   breeding line is onethat,havingundergone
+   continuous self-pollination,shows the stable trait inheritance and
+   expressionforseveralgenerations.Mendelselected14true-breedingpea
+   plantvarieties,aspairswhichweresimilarexceptforonecharacterwith
+   contrastingtraits.Someofthecontrastingtraitsselectedweresmoothor
+   wrinkledseeds.yellow orgreenseeds.inflated(full)or constricted green
+   or yellow pods and tall or dwarf plants(Figure 4.1,Table4.1).
+
+[p04.B13  x 92-142  y 261-274]
+   Pod shape
+
+[p04.B14  x 242-297  y 288-300]
+   Constricted
+
+[p04.B15  x 163-183  y 289-300]
+   Full
+
+[p04.B16  x 90-142  y 328-342]
+   Podcolour
+
+[p04.B17  x 245-276  y 356-366]
+   Yellow
+
+[p04.B18  x 157-185  y 356-365]
+   Green
+
+[p04.B19  x 102-142  y 402-426]
+   Flower
+   position
+
+[p04.B20  x 253-297  y 444-456]
+   Terminal
+
+[p04.B21  x 164-188  y 445-455]
+   Axial
+
+[p04.B22  x 110-143  y 546-568]
+   Stem
+   height
+
+[p04.B23  x 83-102  y 638-653]
+   54
+
+[p04.B24  x 277-335  y 777-787]
+   Reprint2026-27

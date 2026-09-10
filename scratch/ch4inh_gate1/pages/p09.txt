@@ -1,0 +1,96 @@
+########## SOURCE PAGE 9 ##########
+
+[p09.B00  x 59-240  y 79-89]
+   PRINCIPLESOFINHERITANCE AND VARIATION
+
+[p09.B01  x 223-284  y 112-136]
+   Homozygous
+   recessive
+
+[p09.B02  x 392-453  y 112-136]
+   Homozygous
+   recessive
+
+[p09.B03  x 452-467  y 152-161]
+   Ww
+
+[p09.B04  x 162-217  y 235-244]
+   Ww
+   Ww
+
+[p09.B05  x 431-485  y 236-244]
+   Ww
+   Ww
+
+[p09.B06  x 266-295  y 239-248]
+   -WW
+
+[p09.B07  x 356-382  y 239-248]
+   Ww-
+
+[p09.B08  x 279-379  y 255-280]
+   Dominant Phenotype
+   (Genotypeunknown)
+
+[p09.B09  x 198-217  y 275-283]
+   Ww
+
+[p09.B10  x 93-238  y 292-304]
+   Result
+   All flowers are violet
+
+[p09.B11  x 382-534  y 292-315]
+   Half ofthe flowers are violet and
+   half ofthe flowers arewhite.
+
+[p09.B12  x 61-252  y 311-336]
+   Interpretation
+   Unknownflower
+   is homozygous dominant
+
+[p09.B13  x 383-535  y 324-337]
+   Unknownflower is heterozygous
+
+[p09.B14  x 163-434  y 352-364]
+   Figure 4.5 Diagrammatic representation ofa test cross
+
+[p09.B15  x 59-421  y 383-451]
+   Based on his observation son monohybrid crosses Mendel proposed
+   two general rules to consolidate his understanding ofinheritance in
+   monohybrid crosses.Today these rules are called the Principles or
+   LawsofInheritance:theFirst Law or Law of Dominance and the
+   SecondLaworLawofSegregation.
+
+[p09.B16  x 60-210  y 464-476]
+   4.2.1 Law of Dominance
+
+[p09.B17  x 60-422  y 484-588]
+   Characters arecontrolledbydiscreteunitscalledfactors.
+   i)
+   Factors occur in pairs.
+   (ii)
+   In a dissimilar pair of factors one member ofthe pair dominates
+   (iii)
+   (dominant) theother(recessive).
+   The law of dominance is used to explain the expression of only oneof
+   the parental charactersinamonohybridcrossintheF,and the expression
+   of both intheF.It also explains the proportion of3:1obtained atthe F
+
+[p09.B18  x 60-212  y 600-613]
+   4.2.2 Law of Segregation
+
+[p09.B19  x 58-421  y 619-731]
+   This law is based on the fact that the alleles do not show any blending
+   and that both the characters are recovered as such in the Fgeneration
+   though oneof these isnotseenattheF,stage.Thoughtheparentscontain
+   twoallelesduringgameteformation,thefactorsorallelesofapairsegregate
+   from each other such that a gamete receives only oneof thetwofactors.
+   Of course, a homozygous parent produces all gametes that are similar
+   while a heterozygous one produces two kinds of gametes each having
+   oneallelewithequalproportion.
+
+[p09.B20  x 507-526  y 638-654]
+   59
+
+[p09.B21  x 277-335  y 777-787]
+   Reprint2026-27

@@ -1,0 +1,63 @@
+########## SOURCE PAGE 15 ##########
+
+[p15.B00  x 60-240  y 79-89]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p15.B01  x 59-422  y 106-484]
+   communicationwasnoteasy(asitisnow)inthosedaysandhiswork
+   could not bewidelypublicised.Secondly.his conceptofgenes(or
+   factors,inMendel'swords)asstableand discrete units that controlled
+   theexpressionoftraitsand,ofthepairofalleleswhichdidnotblend
+   with eachother,wasnotacceptedbyhis contemporaries a san
+   explanation for the apparently continuous variation seen innature.
+   Thirdly,Mendel'sapproachofusingmathematicstoexplainbiological
+   phenomena was totally new and unacceptable tom any ofthe
+   biologistsofhistime.Finally,thoughMendel'sworksuggested that
+   factors(genes)were discreteunits,he could not provide any physical
+   proof for the existence of factors or say what they were made of.
+   In 19o0,three Scientists(de Vries,Correns and von Tschermak)
+   independently rediscovered Mendel's result son the inheritance of
+   characters.Also,by this time due to advancements in microscopy that
+   weretakingplace,scientistswereabletocarefullyobservecell division.
+   This led to the discovery of structures in the nucleus that appeared to
+   double and dividejustbeforeeachcelldivision.Thesewere called
+   chromosomes(coloredbodies,astheywerevisualisedbystaining).By
+   1902,thechromosomemovement during meiosis had been worked out.
+   Walter Sutton and Theodore Boveri noted that the behaviour of
+   chromosomes was parallel to the behaviour of gene sand used
+   chromosome movement(Figure 4.8)to explain Mendel's laws (Table 4.3).
+   Recall that you have studied the behaviour of chromosomes during mitosis
+   (equational division)and during meiosis (reduction division).The
+   important things to remember are that chromosomes as well as genes
+   occurinpairs.Thetwoallelesof a gene pair are located on homologous
+   sitesonhomologouschromosomes.
+
+[p15.B02  x 152-256  y 529-569]
+   MeiosisI
+   anaphase
+   Biv a lent
+
+[p15.B03  x 280-400  y 529-553]
+   Germ cells
+   Meiosis II
+   anaphase
+
+[p15.B04  x 152-161  y 531-540]
+   G2
+
+[p15.B05  x 384-400  y 566-574]
+   Q00
+
+[p15.B06  x 382-401  y 590-598]
+   000
+
+[p15.B07  x 508-526  y 638-654]
+   65
+
+[p15.B08  x 63-418  y 694-727]
+   Figure4.8Meiosis and germ cell formation in a cell with four chromosomes.
+   Can you see how chromosomes segregate when germ cells
+   areformed?
+
+[p15.B09  x 276-336  y 776-788]
+   Reprint2026-27

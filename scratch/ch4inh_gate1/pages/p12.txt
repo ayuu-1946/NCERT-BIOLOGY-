@@ -1,0 +1,61 @@
+########## SOURCE PAGE 12 ##########
+
+[p12.B00  x 516-553  y 79-91]
+   BIOLOGY
+
+[p12.B01  x 191-553  y 105-400]
+   Do you realise that the example of ABo blood grouping also provides
+   agood example of multiple alleles?Hereyoucan see that there are
+   more than two,i.e.,three alleles,governing the same character.Since in
+   anindividualonlytwoallelescanbepresent,multiple alleles can be found
+   onlywhenpopulationstudiesaremade.
+   Occasionally,a single gene product may produce more than one effect.
+   Forexample,starchsynthesisinpeaseedsiscontrolledbyonegene.It
+   hastwoalleles(Bandb).Starchissynthesised effectively by BB
+   homozygotes and therefore,largestarchgrainsareproduced.In contrast,
+   bbhomozygoteshavelesserefficiencyinstarchsynthesisandproduce
+   smallerstarchgrains.Aftermaturationoftheseeds,BBseedsareround
+   and thebb seeds are wrinkled.Heterozygotesproduce round seeds,and
+   soB seems to be the dominant allele.But,thestarchgrainsproducedare
+   ofintermediatesizeinBbseeds.Soifstarchgrainsizeis considered as
+   the phenotype,then from this angle,the alleles show incomplete
+   dominance.
+   Therefore,dominanceisnotanautonomousfeatureofageneorthe
+   product that it has information for.Itdepends as much on thegene
+   product and the production ofa particular phenotype from this product
+   asit does on the particular phenotypethatwechoosetoexamine,incase
+   more than one phenotype is influenced by the same gene.
+
+[p12.B02  x 192-388  y 413-426]
+   4.3 INHERITANCE OF TWO GENES
+
+[p12.B03  x 192-553  y 436-448]
+   Mendel also worked with and crossed pea plants that differed in two
+
+[p12.B04  x 190-553  y 463-616]
+   yellow colour and round shape an done that had seeds of green colour
+   andwrinkled shape(Figure 4.7).Mendel found that the seeds resulting
+   from the crossing of theparents,hadyellowcoloured and round shaped
+   seeds.Herecanyoutellwhichofthecharactersinthepairsyellow/
+   greencolourandround/wrinkledshapewasdominant?
+   Thus,yellow colour was dominant over green and round shape
+   dominantoverwrinkled.Theseresultswereidentical to those that he got
+   when he made separate monohybrid crosses between yellow and green
+   seededplantsandbetweenroundandwrinkledseededplants.
+   LetususethegenotypicsymbolsYfordominantyellowseed colour
+   andy for recessive green seed colour,Rfor round shaped seeds and r for
+
+[p12.B05  x 191-553  y 633-728]
+   RRYYandrryy.Thecrossbetweenthetwoplantscanbewrittendown
+   asinFigure4.7showingthegenotypesof theparentplants.Thegametes
+   RYan dry unite on fertilisation toproducetheF,hybridRrYy.When
+   MendelselfhybridisedtheF,plantshefound that3/4thofFplantshad
+   yellow seeds and1/4thhadgreen.Theyellowandgreencoloursegregated
+   in a3:1 ratio.Round andwrinkled seed shape also segregated in a3:1
+   ratio: just like in a monohybrid cross.
+
+[p12.B06  x 83-102  y 639-654]
+   62
+
+[p12.B07  x 277-336  y 776-788]
+   Reprint2026-27

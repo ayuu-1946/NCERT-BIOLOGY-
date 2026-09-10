@@ -1,0 +1,235 @@
+########## SOURCE PAGE 18 ##########
+
+[p18.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p18.B01  x 190-554  y 105-145]
+   are extensively used as a starting point in the sequencing of whole
+   genomes as was done in the case of the Human Genome Sequencing
+   Project,described later.
+
+[p18.B02  x 225-274  y 151-166]
+   Cross A
+
+[p18.B03  x 416-464  y 152-166]
+   Cross B
+
+[p18.B04  x 267-293  y 193-204]
+   yw+
+
+[p18.B05  x 181-204  y 194-206]
+   MK
+
+[p18.B06  x 375-385  y 198-206]
+   W
+
+[p18.B07  x 461-473  y 198-206]
+   W
+
+[p18.B08  x 409-420  y 199-207]
+   m
+
+[p18.B09  x 495-505  y 199-206]
+   1m1
+
+[p18.B10  x 96-138  y 207-218]
+   Parental
+
+[p18.B11  x 182-229  y 220-240]
+   yw
+   Yellow,white
+
+[p18.B12  x 373-430  y 220-239]
+   W
+   m
+   White,miniature
+
+[p18.B13  x 274-310  y 228-240]
+   Wild type
+
+[p18.B14  x 466-502  y 228-240]
+   Wild type
+
+[p18.B15  x 96-221  y 295-341]
+   yw
+   F,generation
+   MA
+   Wild type
+
+[p18.B16  x 269-291  y 296-305]
+   MA
+
+[p18.B17  x 460-471  y 298-306]
+   W
+
+[p18.B18  x 376-385  y 299-306]
+   W
+
+[p18.B19  x 408-420  y 299-307]
+   m
+
+[p18.B20  x 494-505  y 299-306]
+   Im1
+
+[p18.B21  x 375-420  y 321-340]
+   W
+   m
+   wild type
+
+[p18.B22  x 271-317  y 329-339]
+   Yellow,white
+
+[p18.B23  x 456-515  y 329-340]
+   White,miniature
+
+[p18.B24  x 261-428  y 364-403]
+   Gametes
+   Recombinant
+   Parental
+   types(1.3%)
+   type(62.8%)
+
+[p18.B25  x 177-234  y 379-403]
+   Parental
+   type(98.7%)
+
+[p18.B26  x 457-519  y 379-402]
+   Recombinant
+   types(37.2%)
+
+[p18.B27  x 408-422  y 416-427]
+   m'
+
+[p18.B28  x 182-206  y 416-426]
+   y'w
+
+[p18.B29  x 268-290  y 417-427]
+   y'w
+
+[p18.B30  x 466-504  y 418-426]
+   m
+   W
+
+[p18.B31  x 376-384  y 419-425]
+   W
+
+[p18.B32  x 185-221  y 443-456]
+   wild type
+
+[p18.B33  x 383-419  y 443-456]
+   wild type
+
+[p18.B34  x 280-301  y 444-453]
+   white
+
+[p18.B35  x 466-503  y 445-454]
+   miniature
+
+[p18.B36  x 266-293  y 470-484]
+   yw
+
+[p18.B37  x 182-205  y 472-483]
+   yw
+
+[p18.B38  x 466-506  y 475-484]
+   m
+   W
+
+[p18.B39  x 374-385  y 477-484]
+   W
+
+[p18.B40  x 408-420  y 477-485]
+   m
+
+[p18.B41  x 474-495  y 502-510]
+   white
+
+[p18.B42  x 180-226  y 502-515]
+   yellow,white
+
+[p18.B43  x 277-302  y 503-515]
+   yellow
+
+[p18.B44  x 373-431  y 503-512]
+   White,miniature
+
+[p18.B45  x 96-161  y 522-535]
+   F,generation
+
+[p18.B46  x 269-290  y 543-552]
+   yw
+
+[p18.B47  x 194-204  y 544-551]
+   W
+
+[p18.B48  x 374-433  y 545-563]
+   W*
+   m'
+   8
+
+[p18.B49  x 465-504  y 547-556]
+   W'
+   m
+
+[p18.B50  x 181-220  y 568-588]
+   yw
+   Wild type
+
+[p18.B51  x 266-301  y 568-586]
+   yw
+   white
+
+[p18.B52  x 466-504  y 570-588]
+   m
+   W
+   miniature
+
+[p18.B53  x 374-420  y 570-589]
+   W
+   m
+   Wild type
+
+[p18.B54  x 266-293  y 597-611]
+   yw
+
+[p18.B55  x 181-205  y 598-610]
+   MA
+
+[p18.B56  x 466-505  y 605-613]
+   W
+   m
+
+[p18.B57  x 375-385  y 606-612]
+   W
+
+[p18.B58  x 408-419  y 606-612]
+   m1
+
+[p18.B59  x 180-225  y 622-644]
+   yw
+   yellow,white
+
+[p18.B60  x 267-302  y 622-644]
+   yw
+   yellow
+
+[p18.B61  x 374-431  y 625-642]
+   m
+   M
+   White,miniature
+
+[p18.B62  x 467-504  y 626-640]
+   m
+   W
+   white
+
+[p18.B63  x 83-102  y 638-654]
+   68
+
+[p18.B64  x 161-529  y 689-726]
+   crossing between gene y and w; Cross B shows crossing between genes w and m.
+   Here dominant wild type allelesarerepresentedwith(+)sign in superscript
+   Note: The strength of linkage bet weeny and w is higher than w and m.
+
+[p18.B65  x 276-335  y 777-787]
+   Reprint2026-27

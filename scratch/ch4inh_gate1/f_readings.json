@@ -1,0 +1,939 @@
+[
+ {
+  "page": 2,
+  "line": 20,
+  "text": "wasmadeanF.R.S.in1959.",
+  "readings": [
+   {
+    "char": 9,
+    "digit": null,
+    "toks": [
+     [
+      "F.R",
+      0.92
+     ],
+     [
+      "e",
+      0.97
+     ],
+     [
+      "an",
+      0.97
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 5,
+  "line": 47,
+  "text": "progeny or the F,.Mendel observed that all",
+  "readings": [
+   {
+    "char": 15,
+    "digit": null,
+    "toks": [
+     [
+      "leF",
+      0.9
+     ],
+     [
+      "M",
+      1.0
+     ],
+     [
+      "1",
+      0.98
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 5,
+  "line": 51,
+  "text": "of traits-he found that theF,always",
+  "readings": [
+   {
+    "char": 27,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "alv",
+      0.82
+     ],
+     [
+      "03",
+      0.61
+     ],
+     [
+      "1",
+      0.6
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 5,
+  "line": 60,
+  "text": "the F,generation was now expressed.The",
+  "readings": [
+   {
+    "char": 4,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      0.99
+     ],
+     [
+      "gen",
+      1.0
+     ],
+     [
+      "e",
+      0.97
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 5,
+  "line": 68,
+  "text": "only one oftheparental traitswasexpressed intheF,generationwhile at",
+  "readings": [
+   {
+    "char": 47,
+    "digit": null,
+    "toks": [
+     [
+      "leF",
+      0.85
+     ],
+     [
+      "gen",
+      1.0
+     ],
+     [
+      "1",
+      0.89
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 5,
+  "line": 70,
+  "text": "contrastingtraitsdidnot showanyblending ateitherF,orF,stage.",
+  "readings": [
+   {
+    "char": 48,
+    "digit": null,
+    "toks": [
+     [
+      "erF",
+      0.97
+     ],
+     [
+      "Or",
+      0.76
+     ],
+     [
+      "1",
+      0.63
+     ]
+    ]
+   },
+   {
+    "char": 52,
+    "digit": "2",
+    "toks": [
+     [
+      "sta",
+      0.92
+     ],
+     [
+      "orF",
+      0.98
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 6,
+  "line": 18,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "gen",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 6,
+  "line": 29,
+  "text": "F,stage and the small alphabetfor",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "sta",
+      0.99
+     ],
+     [
+      "1",
+      0.85
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 6,
+  "line": 32,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "F,gen",
+      0.89
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 6,
+  "line": 52,
+  "text": "factors,onedominatestheother(asin theF,)andhenceiscalled the",
+  "readings": [
+   {
+    "char": 37,
+    "digit": null,
+    "toks": [
+     [
+      "1",
+      0.81
+     ],
+     [
+      "F",
+      1.0
+     ],
+     [
+      "le",
+      0.84
+     ],
+     [
+      "ar",
+      0.96
+     ],
+     [
+      "1",
+      0.79
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 7,
+  "line": 19,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": []
+   }
+  ]
+ },
+ {
+  "page": 7,
+  "line": 40,
+  "text": "of the zygotes,the F,and F,plants can be",
+  "readings": [
+   {
+    "char": 19,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "pue",
+      0.81
+     ]
+    ]
+   },
+   {
+    "char": 25,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "pla",
+      0.93
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 8,
+  "line": 11,
+  "text": "dominanceofonecharacterovertheotherthatalltheF,aretall(though",
+  "readings": [
+   {
+    "char": 45,
+    "digit": null,
+    "toks": [
+     [
+      "hel",
+      0.93
+     ],
+     [
+      "F",
+      1.0
+     ],
+     [
+      "ar",
+      0.95
+     ],
+     [
+      "1",
+      0.82
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 8,
+  "line": 19,
+  "text": "Mendel self-pollinated theFplantsandfoundthatdwarf F,plants",
+  "readings": [
+   {
+    "char": 51,
+    "digit": null,
+    "toks": [
+     [
+      "rfF",
+      0.98
+     ],
+     [
+      "pla",
+      0.96
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 8,
+  "line": 26,
+  "text": "or F,has TT or Tt composition, cannot be predicted.Therefore,to determine",
+  "readings": [
+   {
+    "char": 3,
+    "digit": null,
+    "toks": [
+     [
+      "orF",
+      0.81
+     ],
+     [
+      "has",
+      0.99
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 8,
+  "line": 27,
+  "text": "the genotype of a tall plant at F,Mendel crossed the tall plant from F",
+  "readings": [
+   {
+    "char": 32,
+    "digit": "2",
+    "toks": [
+     [
+      "Men",
+      0.99
+     ],
+     [
+      "F",
+      1.0
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 9,
+  "line": 38,
+  "text": "theparental charactersinamonohybridcrossintheF,and theexpression",
+  "readings": [
+   {
+    "char": 45,
+    "digit": null,
+    "toks": [
+     [
+      "heF",
+      0.99
+     ],
+     [
+      "an",
+      0.97
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 9,
+  "line": 39,
+  "text": "ofboth intheF.It alsoexplains theproportion of3:1obtained atthe F",
+  "readings": [
+   {
+    "char": 12,
+    "digit": null,
+    "toks": [
+     [
+      "heF",
+      0.99
+     ],
+     [
+      "It",
+      0.99
+     ],
+     [
+      "2\u00b0",
+      0.64
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 9,
+  "line": 44,
+  "text": "though oneof these isnotseenattheF,stage.Thoughtheparentscontain",
+  "readings": [
+   {
+    "char": 33,
+    "digit": "1",
+    "toks": [
+     [
+      "stag",
+      0.99
+     ],
+     [
+      "eF",
+      0.99
+     ],
+     [
+      "1",
+      0.99
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 10,
+  "line": 14,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "gen",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 10,
+  "line": 15,
+  "text": "breedingwhite-floweredplants(rr).theF,(Rr)was",
+  "readings": [
+   {
+    "char": 36,
+    "digit": null,
+    "toks": [
+     [
+      "(Rr)",
+      0.99
+     ],
+     [
+      "eF",
+      0.99
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 10,
+  "line": 16,
+  "text": "pink (Figure 4.6).When the F,wasself-pollinated",
+  "readings": [
+   {
+    "char": 27,
+    "digit": null,
+    "toks": [
+     [
+      "leF",
+      0.77
+     ],
+     [
+      "was",
+      0.86
+     ],
+     [
+      "T",
+      0.91
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 10,
+  "line": 18,
+  "text": "the F,resulted in the followingratio 1 (RR)Red:2",
+  "readings": [
+   {
+    "char": 4,
+    "digit": null,
+    "toks": [
+     [
+      "leF",
+      0.86
+     ],
+     [
+      "res",
+      1.0
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 10,
+  "line": 30,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": "2",
+    "toks": [
+     [
+      "F2",
+      0.79
+     ],
+     [
+      "2gen",
+      0.91
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 11,
+  "line": 11,
+  "text": "Tillnowwewere discussingcrosseswheretheF,resembledeitherof the",
+  "readings": [
+   {
+    "char": 39,
+    "digit": null,
+    "toks": [
+     [
+      "he",
+      0.99
+     ],
+     [
+      "F",
+      0.98
+     ],
+     [
+      "re:",
+      0.78
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 11,
+  "line": 13,
+  "text": "in the caseof co-dominance theF,generationresemblesbothparents.A",
+  "readings": [
+   {
+    "char": 30,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "gene",
+      1.0
+     ],
+     [
+      "1",
+      0.67
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 12,
+  "line": 38,
+  "text": "RYandryuniteonfertilisation toproducetheF,hybridRrYy.When",
+  "readings": [
+   {
+    "char": 40,
+    "digit": "1",
+    "toks": [
+     [
+      "hybr",
+      0.98
+     ],
+     [
+      "F",
+      1.0
+     ],
+     [
+      "1",
+      0.59
+     ],
+     [
+      "th",
+      0.73
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 12,
+  "line": 39,
+  "text": "MendelselfhybridisedtheF,plantshefound that3/4thofFplantshad",
+  "readings": [
+   {
+    "char": 23,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      0.99
+     ],
+     [
+      "plar",
+      0.94
+     ],
+     [
+      "le",
+      0.71
+     ],
+     [
+      "1",
+      0.98
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 13,
+  "line": 12,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "gern",
+      0.75
+     ],
+     [
+      "1",
+      0.63
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 14,
+  "line": 17,
+  "text": "theproduction ofeggs andpollen in theF,RrYyplant.Considerthe",
+  "readings": [
+   {
+    "char": 37,
+    "digit": null,
+    "toks": [
+     [
+      "RrYy",
+      0.93
+     ],
+     [
+      "F",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 14,
+  "line": 32,
+  "text": "at the F,stage and fill in the format given? Is the genotypic ratio",
+  "readings": [
+   {
+    "char": 7,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "st",
+      0.99
+     ],
+     [
+      "e",
+      0.99
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 17,
+  "line": 27,
+  "text": "F,progeny.He observed that the twogenes did not segregate independently",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "pro",
+      0.98
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 17,
+  "line": 28,
+  "text": "ofeachotherandtheF,ratiodeviatedverysignificantlyfromthe9:3:3:1",
+  "readings": [
+   {
+    "char": 17,
+    "digit": "2",
+    "toks": [
+     [
+      "theF",
+      0.99
+     ],
+     [
+      "2",
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 18,
+  "line": 26,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "F,gen",
+      0.91
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 18,
+  "line": 63,
+  "text": "F,generation",
+  "readings": [
+   {
+    "char": 0,
+    "digit": null,
+    "toks": [
+     [
+      "Fgen",
+      0.99
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 21,
+  "line": 47,
+  "text": "F,:",
+  "readings": [
+   {
+    "char": 0,
+    "digit": "1",
+    "toks": [
+     [
+      "F",
+      1.0
+     ],
+     [
+      "1",
+      0.99
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 27,
+  "line": 12,
+  "text": "generations(F).second(F.)and so on.Some characters are dominant",
+  "readings": [
+   {
+    "char": 22,
+    "digit": null,
+    "toks": [
+     [
+      "(F)",
+      0.81
+     ],
+     [
+      "d",
+      1.0
+     ],
+     [
+      "ar",
+      0.89
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "page": 28,
+  "line": 36,
+  "text": "would be thedistribution ofphenotypicfeatures inF,generation fora",
+  "readings": [
+   {
+    "char": 48,
+    "digit": null,
+    "toks": [
+     [
+      "F",
+      0.99
+     ],
+     [
+      "n",
+      0.97
+     ],
+     [
+      "gen",
+      1.0
+     ],
+     [
+      "1",
+      0.85
+     ]
+    ]
+   }
+  ]
+ }
+]

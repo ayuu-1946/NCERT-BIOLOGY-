@@ -1,0 +1,41 @@
+########## SOURCE PAGE 1 ##########
+
+[p01.B00  x 44-158  y 198-225]
+   UNIT VII
+
+[p01.B01  x 44-545  y 238-271]
+   GENETIC SAND EVOLUTION
+
+[p01.B02  x 59-174  y 309-350]
+   Chapter4
+   PrinciplesofInheritance
+   andVariation
+
+[p01.B03  x 240-557  y 309-406]
+   The work of Mendel and others who followed him gave us an
+   ideaofinheritancepatterns.Howeverthenatureofthosefactors
+   whichdeterminethephenotypewasnotveryclear.Asthese
+   factors'representthegeneticbasisofinheritance,understanding
+   the structure of genetic material and the structural basis of
+   genotype and phenotype conversion became the focus of
+   attentioninbiologyforthenextcentury.Theentirebodyof
+
+[p01.B04  x 59-202  y 364-391]
+   Chapter5
+   Molecular Basis ofInheritance
+
+[p01.B05  x 59-110  y 408-434]
+   Chapter6
+   Evolution
+
+[p01.B06  x 240-556  y 421-518]
+   contributions fromWatson,Crick,Nirenberg.Khorana,Kornbergs
+   (fatherandson),Benzer,Monod,Brenner,etc.Aparallelproblem
+   beingtackledwasthemechanismofevolution.Awarenessinthe
+   areasofmoleculargenetics,structuralbiologyandbioinformatics
+   have enriched our understanding ofthe molecular basis of
+   evolution.InthisunitthestructureandfunctionofDNAandthe
+   story and theory of evolution have been examined and explained.
+
+[p01.B07  x 277-336  y 776-787]
+   Reprint2026-27

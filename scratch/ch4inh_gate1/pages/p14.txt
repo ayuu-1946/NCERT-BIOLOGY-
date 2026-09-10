@@ -1,0 +1,69 @@
+########## SOURCE PAGE 14 ##########
+
+[p14.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p14.B01  x 192-425  y 105-117]
+   4.3.1 Law of Independent Assortment
+
+[p14.B02  x 191-553  y 125-291]
+   In the dihybrid cross (Figure 4.7).the phenotypes round,yellow;
+   wrinkled,yellow;round,green and wrinkled,green appeared in the
+   ratio9:3:3:1.Sucharatiowasobservedforseveralpairsofcharacters
+   thatMendelstudied.
+   Theratioof9:3:3:1canbe derived as a combination series of3yellow:
+   1green,with 3round:1 wrinkled.Thisderivation canbe written
+   as follows:
+   (3Round:1Wrinkled)(3Yellow:1Green)=9Round,Yellow:3
+   Wrinkled,Yellow:3Round,Green:1Wrinkled,Green
+   Based upon such observations ondihybridcrosses(crossesbetween
+   plantsdifferingintwotraits)Mendelproposed a second set of generalisations
+   thatwecallMendel'sLawofIndependentAssortment.Thelawstatesthat
+
+[p14.B03  x 191-553  y 307-418]
+   of characters is independent of theotherpairofcharacters'.
+   The Punnett square can be effectively used to understand the
+   independent segregation ofthe two pairs of genes during meiosis and
+   the production of eggs and pollen in theF,RrYyplant.Considerthe
+   segregationofonepairofgenesRandr.Fiftypercentof thegametes
+   have thegene Rand theother5opercenthave r.Nowbesideseach
+   gamete having either Ror r,it should also have the alleleYory.The
+   important thing to remember here is that segregation of50percent R
+
+[p14.B04  x 190-553  y 432-474]
+   Y and 50per centy.Therefore,50per cent of the r bearing gametes
+   hasYand theother50percenthasy.Similarly.50per cent oft heR
+   bearinggameteshasYand theother5opercenthasy.Thus there are
+
+[p14.B05  x 191-553  y 489-558]
+   The four typesareRY,Ry.rYandryeachwithafrequencyof25per
+   centor1/4ofthetotalgametesproduced.Whenyouwritedownthe
+   four types of eggs and pollen on the two sides ofa Punnett square it is
+   very easy to derive the composition of the zygote sth at give rise to the
+   Fplants(Figure4.7).Althoughthereare16squareshowmany
+
+[p14.B06  x 191-553  y 573-626]
+   downintheformatgiven.
+   Canyou,usingthePunnettsquaredataworkoutthegenotypicratio
+   at the F,stage and fill in the format given? Is the genotypic ratio
+   also 9:3:3:1?
+
+[p14.B07  x 83-102  y 638-654]
+   64
+
+[p14.B08  x 393-542  y 640-652]
+   Their expected Phenotypes
+
+[p14.B09  x 201-370  y 640-652]
+   S.No.
+   Genotypes found in F
+
+[p14.B10  x 192-451  y 685-697]
+   4.3.2 Chromosomal TheoryofInheritance
+
+[p14.B11  x 191-552  y 706-733]
+   Mendelpublishedhisworkoninheritanceofcharactersin1865but
+   for several reasons,it remained unrecognised till 19oo.Firstly,
+
+[p14.B12  x 277-336  y 776-788]
+   Reprint2026-27

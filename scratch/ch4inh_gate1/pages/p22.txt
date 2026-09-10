@@ -1,0 +1,95 @@
+########## SOURCE PAGE 22 ##########
+
+[p22.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p22.B01  x 192-280  y 105-118]
+   4.7MUTATION
+
+[p22.B02  x 192-552  y 128-139]
+   Mutation is a phenomenon which results in alteration of DNA sequences
+
+[p22.B03  x 191-553  y 153-426]
+   ofan organism.In addition to recombination,mutation is another
+   phenomenonthatleadstovariationinDNA.
+   AsyouwilllearninChapter5,oneDNAhelixrunscontinuouslyfrom
+   oneendtotheotherineachchromatid,inahighlysupercoiledform.
+   Thereforeloss(deletions)orgain(insertion/duplication)ofasegmentof
+   DNA,result in alteration in chromosomes. Since genes are known to be
+   located on chromosomes,alteration in chromosomes results in
+   abnormalities or aberrations.Chromosomal
+   aberrationsarecommonlyobservedincancercells.
+   In addition tothe above,mutation also arise due
+   tochangeinasinglebasepairofDNA.Thisisknown
+   as point mutation.A classical example of such a
+   mutationissicklecellanemia.Deletionsandinsertions
+   ofbasepairsofDNA,causesframe-shiftmutations
+   (see Chapter 5).
+   The mechanism of mutation is beyond the scope
+   ofthis discussion,at thislevel.However,thereare
+   many chemical and physical factors that induce
+   mutations. These are referred to as mutagens. UV
+   radiation scan cause mutations in organisms-itis a
+   mutagen.
+
+[p22.B04  x 146-170  y 258-268]
+   Male
+
+[p22.B05  x 146-177  y 284-295]
+   female
+
+[p22.B06  x 146-218  y 312-324]
+   sex unspecified
+
+[p22.B07  x 147-237  y 340-350]
+   affected individuals
+
+[p22.B08  x 146-181  y 364-376]
+   mating
+
+[p22.B09  x 147-263  y 389-412]
+   mating between relatives
+   (consanguineous mating)
+
+[p22.B10  x 146-442  y 425-474]
+   parents above and
+   children below
+   4.8 GENETICDISORDERS
+   (inorderofbirth-left toright)
+   4.8.1 Pedigree Analysis
+
+[p22.B11  x 80-554  y 481-726]
+   The idea that disorders are inherited has been
+   prevailing in thehuman society since long. This was
+   based on the her it ability of certain characteristic
+   featuresinfamilies.After there discovery of Mendel's
+   work the practice of analysing inheritance pattern of
+   traits in human beings began.Since itis evident that
+   control crosses that can be performed in pea plant or
+   some other organisms,are not possible in case of
+   Figure 4.13 Symbols used in thehuman
+   human beings,study ofthe family history about
+   pedigree analysis
+   inheritance ofa particular trait provide san
+   alternative.Suchananalysisoftraitsinaseveralofgenerationsofafamily
+   is called thepedigreeanalysis.In the pedigree analysis the inheritance
+   ofaparticulartraitisrepresentedinthefamilytreeovergenerations.
+   Inhumangenetics.pedigree study provides a strong tool,which is
+   utilisedtotracetheinheritanceofaspecifictrait,abnormalityordisease.
+   Some ofthe important standard symbols used in the pedigree analysis
+   have been shown in Figure 4.13.
+   As you have studied in thischapter,eachandeveryfeatureinany
+   organism is controlled by one or the other gene located on the DNA present
+
+[p22.B12  x 146-257  y 489-511]
+   parents with male child
+   affected with disease
+
+[p22.B13  x 146-259  y 549-563]
+   five unaffected offspring
+
+[p22.B14  x 82-102  y 638-654]
+   72
+
+[p22.B15  x 277-336  y 776-788]
+   Reprint2026-27

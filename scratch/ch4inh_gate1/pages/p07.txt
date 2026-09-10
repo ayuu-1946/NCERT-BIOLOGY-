@@ -1,0 +1,107 @@
+########## SOURCE PAGE 7 ##########
+
+[p07.B00  x 60-240  y 79-89]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p07.B01  x 59-533  y 105-636]
+   the Tt plant is heterozygous for genes controlling
+   one character(height),it is a monohybrid and the
+   cross between TT and ttisamonohybridcross.
+   From the observation that the recessive parental
+   trait is expressed without any blending in theF
+   generation,we can infer that,when the tall and
+   dwarfplantproducegametes,by the process of
+   meiosis,theallelesoftheparentalpairseparateor
+   segregate from eachother and only one allele is
+   transmitted to agamete.Thissegregationof alleles
+   isarandomprocessandsothereisa50percent
+   chance ofa gamete containing either allele,ashas
+   F,generation
+   been verified by the results of the crossings.In this
+   way thegametes ofthe tall TT plants have the allele
+   Tand thegametes ofthe dwarf tt plants have the
+   allelet.Duringfertilisationthetwoalleles,Tfrom
+   oneparentsay.throughthepollen,and tfromthe
+   otherparent,thenthroughtheegg.areunitedto
+   produce zygote sth at have one Tall ele an do net
+   allele.InotherwordsthehybridshaveTt.Since
+   these hybrids contain alleles which express
+   contrastingtraits,theplantsareheterozygous.The
+   production of gametes by the parents,the formation
+   of the zygotes,the F,and F,plants can be
+   understood from a diagram called Punnett Square
+   Fgeneration
+   asshowninFigure4.4.ItwasdevelopedbyaBritish
+   geneticist,Reginald C.Punnett.It is a graphical
+   representation to calculate the probability of all
+   possible genotypes of offspring in a genetic cross.
+   The possible gametes are written on two sides,
+   usuallythetoprowandleftcolumns.Allpossible
+   combinations are represented in boxes below in the
+   squares,whichgeneratesa square output form.
+   The Punnett Square shows the parental tall TT Figure 4.4 A Punnett square used to
+   understand a typical monohybrid
+   (male)anddwarftt(female)plants,thegametes
+   cross conducted by Mendel
+   produced by them and,theFTtprogeny.The F
+   betweentrue-breedingtallplants
+   plants of genotype Tt are self-pollinated.The
+   andtrue-breedingdwarfplants
+   symbol sand dare used to denote the female
+
+[p07.B02  x 434-443  y 158-166]
+   X
+
+[p07.B03  x 483-508  y 180-188]
+   Dwarf
+
+[p07.B04  x 372-388  y 180-200]
+   Tall
+   TT
+
+[p07.B05  x 345-382  y 210-219]
+   Gametes
+
+[p07.B06  x 497-535  y 211-219]
+   Gametes
+
+[p07.B07  x 432-442  y 316-324]
+   Tt
+
+[p07.B08  x 426-457  y 350-373]
+   X
+   Selfing
+
+[p07.B09  x 487-503  y 367-386]
+   Tall
+   Tt
+
+[p07.B10  x 376-392  y 369-386]
+   Tall
+   Tt
+
+[p07.B11  x 342-380  y 400-410]
+   Gametes
+
+[p07.B12  x 498-535  y 400-410]
+   Gametes
+
+[p07.B13  x 376-506  y 520-559]
+   Phenotypicratio:tall:dwarf
+   3：
+   1
+   Genotypicratio:TT:Tt:tt
+   1:2:1
+
+[p07.B14  x 508-526  y 638-653]
+   57
+
+[p07.B15  x 59-422  y 652-724]
+   thegenotypeTtwhenself-pollinated,producesgametesofthegenotype
+   Tandtinequalproportion.Whenfertilisationtakesplace,thepollen
+   grainsofgenotypeT havea50percentchancetopollinateeggsof the
+   genotypeT, aswell as of genotype t.Also pollen grains of genotype t have
+   a 50per cent chance of pollinating eggs ofgenotypeT,aswell asof
+
+[p07.B16  x 277-335  y 777-787]
+   Reprint2026-27

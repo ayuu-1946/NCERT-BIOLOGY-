@@ -1,0 +1,120 @@
+########## SOURCE PAGE 13 ##########
+
+[p13.B00  x 59-240  y 80-88]
+   PRINCIPLESOFINHERITANCE AND VARIATION
+
+[p13.B01  x 72-134  y 120-133]
+   Pge ner at ion
+
+[p13.B02  x 292-364  y 148-169]
+   Wrinkled green
+   rr
+   yy
+
+[p13.B03  x 166-230  y 148-170]
+   Roundyellow
+   RR
+   YY
+
+[p13.B04  x 80-122  y 206-217]
+   Gametes
+
+[p13.B05  x 321-334  y 206-216]
+   ry
+
+[p13.B06  x 191-207  y 207-218]
+   RY
+
+[p13.B07  x 228-300  y 267-311]
+   Roundyellow
+   RrYy
+   Selfing
+
+[p13.B08  x 71-136  y 278-291]
+   F,generation
+
+[p13.B09  x 218-234  y 357-366]
+   RY
+
+[p13.B10  x 293-309  y 357-366]
+   RY
+
+[p13.B11  x 80-122  y 386-398]
+   Gametes
+
+[p13.B12  x 406-448  y 386-398]
+   Gametes
+
+[p13.B13  x 248-276  y 400-410]
+   RRYY
+
+[p13.B14  x 361-377  y 426-437]
+   Ry
+
+[p13.B15  x 151-168  y 426-438]
+   Ry
+
+[p13.B16  x 286-313  y 434-447]
+   RrYY
+
+[p13.B17  x 212-238  y 436-446]
+   RrYY
+
+[p13.B18  x 319-348  y 470-484]
+   RRYy
+
+[p13.B19  x 177-205  y 471-483]
+   RRYy
+
+[p13.B20  x 248-272  y 471-482]
+   rrYY
+
+[p13.B21  x 143-170  y 506-520]
+   RrYy
+
+[p13.B22  x 214-241  y 506-520]
+   RrYy
+
+[p13.B23  x 285-312  y 506-520]
+   RrYy
+
+[p13.B24  x 357-383  y 507-520]
+   RrYy
+
+[p13.B25  x 73-136  y 532-543]
+   Fgeneration
+
+[p13.B26  x 248-277  y 542-556]
+   RRyy
+
+[p13.B27  x 178-200  y 544-554]
+   rrYy
+
+[p13.B28  x 324-346  y 544-554]
+   rrYy
+
+[p13.B29  x 285-310  y 579-594]
+   Rryy
+
+[p13.B30  x 214-239  y 579-594]
+   Rryy
+
+[p13.B31  x 251-272  y 619-629]
+   rryy
+
+[p13.B32  x 508-526  y 638-653]
+   63
+
+[p13.B33  x 74-452  y 658-680]
+   Phenotypicratio:roundyellow:round green:wrinkledyellow:wrinkledgreen
+   9
+   3
+   3
+   1
+
+[p13.B34  x 64-452  y 702-725]
+   Figure 4.7 Results ofa dihybrid cross where the two parents differed in two pairs
+   ofcontrastingtraits:seedcolourandseedshape
+
+[p13.B35  x 276-335  y 777-787]
+   Reprint2026-27

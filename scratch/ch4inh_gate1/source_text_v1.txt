@@ -1,0 +1,2479 @@
+########## SOURCE PAGE 1 ##########
+
+[p01.B00  x 44-158  y 198-225]
+   UNIT VII
+
+[p01.B01  x 44-545  y 238-271]
+   GENETIC SAND EVOLUTION
+
+[p01.B02  x 59-174  y 309-350]
+   Chapter4
+   PrinciplesofInheritance
+   andVariation
+
+[p01.B03  x 240-557  y 309-406]
+   The work of Mendel and others who followed him gave us an
+   ideaofinheritancepatterns.Howeverthenatureofthosefactors
+   whichdeterminethephenotypewasnotveryclear.Asthese
+   factors'representthegeneticbasisofinheritance,understanding
+   the structure of genetic material and the structural basis of
+   genotype and phenotype conversion became the focus of
+   attentioninbiologyforthenextcentury.Theentirebodyof
+
+[p01.B04  x 59-202  y 364-391]
+   Chapter5
+   Molecular Basis ofInheritance
+
+[p01.B05  x 59-110  y 408-434]
+   Chapter6
+   Evolution
+
+[p01.B06  x 240-556  y 421-518]
+   contributions fromWatson,Crick,Nirenberg.Khorana,Kornbergs
+   (fatherandson),Benzer,Monod,Brenner,etc.Aparallelproblem
+   beingtackledwasthemechanismofevolution.Awarenessinthe
+   areasofmoleculargenetics,structuralbiologyandbioinformatics
+   have enriched our understanding ofthe molecular basis of
+   evolution.InthisunitthestructureandfunctionofDNAandthe
+   story and theory of evolution have been examined and explained.
+
+[p01.B07  x 277-336  y 776-787]
+   Reprint2026-27
+########## SOURCE PAGE 2 ##########
+
+[p02.B00  x 192-553  y 205-444]
+   JamesDeweyWatsonwasborninChicagoon6April1928.In1947,he
+   received B.Sc.degree in Zoology.During these years his interest in
+   bird-watchinghadmaturedintoaseriousdesiretolearngenetics.This
+   became possible when he received a Fellowship for graduate study in
+   ZoologyatIndianaUniversity,Bloomington,wherehereceived hisPh.D
+   degreein1950onastudyoftheeffectofhardX-raysonbacteriophage
+   multiplication.
+   He met Crick and discovered their common interest in solving the
+   DNAstructure.Theirfirstseriouseffort,wasunsatisfactory.Theirsecondeffort
+   based upon more experimental evidence and better appreciation of
+   thenucleicacidliteratureresulted,earlyinMarch1953,intheproposal
+   ofthecomplementarydouble-helical configuration.
+   FrancisHarryComptonCrickwasbornon8June1916,atNorthampton,
+   England.HestudiedphysicsatUniversityCollege,Londonandobtained
+   a B.Sc.in 1937.He completed Ph.D.in 1954 on a thesis entitledX-ray
+   Diffraction:PolypeptidesandProteins".
+   A critical influence inC rick's career washisfriendshipwithJ.D.
+
+[p02.B01  x 103-161  y 393-415]
+   JAMES WATSON
+   FRANCIS CRICK
+
+[p02.B02  x 193-553  y 460-540]
+   thedouble-helical structureforDNAandthereplicationscheme.Crick
+   wasmadeanF.R.S.in1959.
+   ThehonourstoWatsonwithCrickinclude:theJohnCollinsWarren
+   PrizeoftheMassachusettsGeneralHospital,in1959;theLaskerAward
+   in1960;theResearch Corporation Prize,in 1962andaboveall,the
+   Nobel Prize in 1962.
+
+[p02.B03  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 3 ##########
+
+[p03.B00  x 62-197  y 172-193]
+   CHAPTER4
+
+[p03.B01  x 339-366  y 196-203]
+   12083CH05
+
+[p03.B02  x 61-463  y 244-268]
+   PRINCIPLESOFINHERITANCE
+
+[p03.B03  x 61-293  y 280-304]
+   ANDVARIATION
+
+[p03.B04  x 66-177  y 369-395]
+   Mendel's Laws of
+   4.1
+   Inheritance
+
+[p03.B05  x 250-535  y 399-425]
+   Have you ever wondered why an elephant always gives
+   birth only to a baby elephant and not some other animal?
+
+[p03.B06  x 66-206  y 404-414]
+   Inheritance of One Gene
+   4.2
+
+[p03.B07  x 66-212  y 424-434]
+   Inheritance of Two Genes
+   4.3
+
+[p03.B08  x 249-536  y 441-732]
+   any otherplant?
+   Given that they do.arethe offspring identical to their
+   parents?Or do they show differences in some of their
+   characteristics?Have you ever wondered why siblings
+   sometimeslooksosimilartoeachother?Orsometimes
+   evensodifferent?
+   These andseveralrelatedquestionsaredealtwith,
+   scientifically,inabranchofbiologyknownasGenetics.
+   This subject deals with theinheritance,as well as the
+   variationofcharactersfromparentstooffspring.
+   Inheritance is the process by which characters are passed
+   on from parent to progeny;it is the basis of heredity.
+   Variation is the degree by which progeny differ from their
+   parents.
+   Humans knew from asearlyas8000-1000B.C.that
+   one of the causes of variation was hidden in sexual
+   reproduction.Theyexploited the variations that were
+   naturally present in the wild populations of plants and
+   animals to selectively breed and select for organisms that
+   possessed desirable characters.For example,through
+   artificial selection and domestication from ancestral
+
+[p03.B09  x 66-179  y 444-454]
+   SexDetermination
+   4.4
+
+[p03.B10  x 66-136  y 462-474]
+   Mutation
+   4.5
+
+[p03.B11  x 66-177  y 483-494]
+   GeneticDisorders
+   4.6
+
+[p03.B12  x 276-336  y 776-787]
+   Reprint2026-27
+########## SOURCE PAGE 4 ##########
+
+[p04.B00  x 515-553  y 79-90]
+   BIOLOGY
+
+[p04.B01  x 90-553  y 104-201]
+   Character Dominant trait
+   Recessive trait
+   wildcows,we have well-known Indian
+   breeds,e.g.,Sahiwal cows in Punjab.We
+   must,however.recognise that though our
+   ancestors knew about the inheritance of
+   characters and variation,they had very
+   little idea about the scientific basis of these
+   phenomena.
+
+[p04.B02  x 88-142  y 122-134]
+   Seed shape
+
+[p04.B03  x 168-200  y 139-149]
+   Round
+
+[p04.B04  x 257-300  y 139-149]
+   Wrinkled
+
+[p04.B05  x 86-142  y 159-170]
+   Seed colour
+
+[p04.B06  x 168-199  y 176-187]
+   Yellow
+
+[p04.B07  x 262-292  y 176-186]
+   Green
+
+[p04.B08  x 78-142  y 204-214]
+   Flower colour
+
+[p04.B09  x 328-550  y 215-228]
+   4.1 MENDEL'S LAWS OF INHERITANCE
+
+[p04.B10  x 176-203  y 231-241]
+   Violet
+
+[p04.B11  x 260-288  y 232-242]
+   White
+
+[p04.B12  x 80-554  y 238-726]
+   Itwasduringthemid-nineteenthcenturythat
+   head way was made in the understanding of
+   inheritance.Gregor Mendel,conducted
+   hybridisation experiments on garden peas for
+   seven years (1856-1863) and proposed the
+   laws ofinheritance in living organisms.During
+   Mendel's investigations into inheritance
+   pattern sit was for the first time that statistical
+   analysis and mathematical logic were applied
+   to problems inbiology.His experiments had a
+   large sampling size,which gave greater
+   credibility to the data thathecollected.Also,
+   the confirmation of his inferences from
+   experiments on successive generations of his
+   testplants,proved that his results pointed to
+   general rules ofinheritance rather than being
+   unsubstantiated ideas.Mendel investigated
+   characters in the garden pea plant that were
+   manifestedastwoopposingtraits,e.g.,tallor
+   dwarfplants,yellow or green seeds.This
+   allowed him to setup a basic framework of
+   rules governing inheritance,which was
+   expanded on by later scientists to account for
+   all the diverse natural observation sand the
+   complexityinherentinthem.
+   Mendel conducted such artificial
+   Dwarf
+   Tall
+   pollination/crosspollination experiments
+   Figure 4.1 Seven pairs of contrasting traits in
+   using several true-breeding pealines.A true-
+   pea plant studied by Mendel
+   breeding line is onethat,havingundergone
+   continuous self-pollination,shows the stable trait inheritance and
+   expressionforseveralgenerations.Mendelselected14true-breedingpea
+   plantvarieties,aspairswhichweresimilarexceptforonecharacterwith
+   contrastingtraits.Someofthecontrastingtraitsselectedweresmoothor
+   wrinkledseeds.yellow orgreenseeds.inflated(full)or constricted green
+   or yellow pods and tall or dwarf plants(Figure 4.1,Table4.1).
+
+[p04.B13  x 92-142  y 261-274]
+   Pod shape
+
+[p04.B14  x 242-297  y 288-300]
+   Constricted
+
+[p04.B15  x 163-183  y 289-300]
+   Full
+
+[p04.B16  x 90-142  y 328-342]
+   Podcolour
+
+[p04.B17  x 245-276  y 356-366]
+   Yellow
+
+[p04.B18  x 157-185  y 356-365]
+   Green
+
+[p04.B19  x 102-142  y 402-426]
+   Flower
+   position
+
+[p04.B20  x 253-297  y 444-456]
+   Terminal
+
+[p04.B21  x 164-188  y 445-455]
+   Axial
+
+[p04.B22  x 110-143  y 546-568]
+   Stem
+   height
+
+[p04.B23  x 83-102  y 638-653]
+   54
+
+[p04.B24  x 277-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 5 ##########
+
+[p05.B00  x 59-239  y 80-88]
+   PRINCIPLESOFINHERITANCE AND VARIATION
+
+[p05.B01  x 58-277  y 102-127]
+   Table 4.1:Contrasting Traits Studied by
+   Mendel in Pea
+
+[p05.B02  x 468-494  y 113-125]
+   Petal
+
+[p05.B03  x 468-506  y 132-190]
+   Stigma
+   Anther
+   Stamen
+   Car pel
+
+[p05.B04  x 61-157  y 134-146]
+   Characters
+   S.No.
+
+[p05.B05  x 181-271  y 134-146]
+   Contrasting Traits
+
+[p05.B06  x 102-238  y 152-182]
+   Tall/dwarf
+   Flouwer colour
+   Violet/white
+
+[p05.B07  x 101-154  y 153-164]
+   Stem height
+
+[p05.B08  x 63-72  y 154-163]
+   1.
+
+[p05.B09  x 63-72  y 171-181]
+   2.
+
+[p05.B10  x 101-248  y 187-217]
+   Axial/terminal
+   Flower position
+   Pod shape
+
+[p05.B11  x 62-72  y 188-199]
+   3.
+
+[p05.B12  x 62-73  y 205-216]
+   4.
+
+[p05.B13  x 182-269  y 205-216]
+   Inflated/constricted
+
+[p05.B14  x 62-72  y 223-234]
+   5.
+
+[p05.B15  x 101-155  y 223-269]
+   Podcolour
+   Seed shape
+   Seed colour
+
+[p05.B16  x 182-245  y 223-234]
+   Green/yellow
+
+[p05.B17  x 435-522  y 225-246]
+   Removal of anthers
+   (Emasculation)
+
+[p05.B18  x 62-72  y 240-251]
+   6.
+
+[p05.B19  x 182-257  y 240-251]
+   Round/wrinkled
+
+[p05.B20  x 181-243  y 256-270]
+   Yellow/green
+
+[p05.B21  x 62-73  y 257-268]
+   7.
+
+[p05.B22  x 301-332  y 267-276]
+   Parent
+
+[p05.B23  x 498-528  y 267-276]
+   Parent
+
+[p05.B24  x 60-249  y 283-295]
+   4.2 INHERITANCE OF ONE GENE
+
+[p05.B25  x 59-421  y 305-724]
+   Let us take the example of one such
+   hybridisation experiment carried outby
+   Mendel where he crossed tall and dwarf pea
+   plants to study the inheritance of one gene
+   (Figure 4.2).He collected the seeds produced
+   as a result of this cross and grew them to
+   generate plants of thefirsthybridgeneration.
+   This generation is also called the Filial
+   progeny or the F,.Mendel observed that all
+   the Fprogeny plants were tall,like one of
+   itsparents;nonewere dwarf(Figure4.3).He
+   made similar observations for the other pairs
+   of traits-he found that theF,always
+   resembledeitheroneoftheparents,andthat
+   the trait ofthe other parent was not seen in
+   them.
+   Mendelthenself-pollinatedthe tall F
+   plants and to his surprise found that in the
+   Filial generation some of theoffspringwere
+   dwarf';thecharacterthatwasnotseenin
+   the F,generation was now expressed.The
+   proportion of plants that were dwarf were
+   1/4thof theFplantswhile3/4hoftheFplantsweretall.Thetalland
+   dwarf traits were identical to their parental type and did not show any
+   blending.thatis all theoffspringwere either tall ordwarf,nonewere of in-
+   between height (Figure 4.3).
+   Similarresultswereobtainedwiththeothertraitsthathestudied:
+   only one ofthe parental traits was expressed intheF,generationwhile at
+   the Fst age both the traits were expressed in the proportion 3:1. The
+   contrasting traits did not show any blending ateitherF,orF,stage.
+
+[p05.B26  x 383-463  y 335-356]
+   Transfer of pollen
+   (Pollination)
+
+[p05.B27  x 311-518  y 581-594]
+   Figure 4.2 Steps in making a cross in pea
+
+[p05.B28  x 507-526  y 638-654]
+   55
+
+[p05.B29  x 277-336  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 6 ##########
+
+[p06.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p06.B01  x 191-553  y 105-733]
+   Based on these observations,
+   Mendel proposed that something
+   was being stably passed down,
+   unchanged,fromparent to offspring
+   through
+   thegametes,
+   over
+   successive generations.He called
+   these thingsasfactors'.Nowwe call
+   them asgenes.Genes,therefore,are
+   the unitsofinheritance.They
+   contain the information thatis
+   required to express a particular trait
+   in an organism.Geneswhich code
+   for apair of contrasting traits are
+   known as alleles,i.e.,they are
+   slightly different forms ofthe same
+   gene.
+   If we use alphabetical symbols
+   foreachgene,thenthecapitalletter
+   is used for the trait expressed at the
+   F,stage and the small alphabet for
+   theothertrait.Forexample,in case
+   of thecharacterofheight,isused
+   fortheTalltraitandtforthe'dwarf',
+   and T and tare allelesofeachother.
+   Hence,inplantsthepairofalleles
+   Dwarf
+   for height would be TT,Ttor tt.
+   Mendel also proposed that in a true
+   breeding.tallor dwarf pea variety
+   the allelic pair of genes for height are
+   identical or homozygous,TT and tt,respectively.TT and tt are called
+   the genotype ofthe plant while the descriptive terms tall and dwarf are
+   thephenotype.Whatthenwouldbethephenotypeofaplant that had a
+   genotype Tt?
+   As Mendel found the phenotype oft heF heterozygote Tt to be exactly
+   liketheTTparentinappearance,heproposedthatinapairofdissimilar
+   factors,onedominatestheother(asin theF,)andhenceiscalled the
+   dominantfactorwhiletheotherfactorisrecessive.InthiscaseT(for
+   tallness)isdominant overt(fordwarfness),thatisrecessive.Heobserved
+   identicalbehaviourforalltheothercharacters/trait-pairsthathestudied.
+   Itisconvenient(andlogical)tousethecapital and lower case of an
+   alphabetical symbol to remember this concept of dominance and
+   recessiveness.(Do notuseT for tall and d for dwarf because you will
+   find it difficult to remember whether Tan dda real lele soft he same
+   gene/characterornot).Allelescanbesimilarasinthecaseof homozygotes
+   TTandttorcanbedissimilarasinthecaseoftheheterozygoteTt.Since
+
+[p06.B02  x 158-196  y 142-152]
+   Parental
+
+[p06.B03  x 294-323  y 186-196]
+   Dwarf
+
+[p06.B04  x 220-238  y 187-196]
+   Tall
+
+[p06.B05  x 147-206  y 270-280]
+   F,generation
+
+[p06.B06  x 220-319  y 307-328]
+   Selfing
+   Tall
+   Tall
+
+[p06.B07  x 88-146  y 410-420]
+   F,generation
+
+[p06.B08  x 160-179  y 448-458]
+   Tall
+
+[p06.B09  x 282-301  y 448-458]
+   Tall
+
+[p06.B10  x 220-239  y 448-458]
+   Tall
+
+[p06.B11  x 137-340  y 473-496]
+   Figure 4.3 Diagrammatic representation
+   ofmonohybrid cross
+
+[p06.B12  x 83-102  y 638-654]
+   56
+
+[p06.B13  x 277-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 7 ##########
+
+[p07.B00  x 60-240  y 79-89]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p07.B01  x 59-533  y 105-636]
+   the Tt plant is heterozygous for genes controlling
+   one character(height),it is a monohybrid and the
+   cross between TT and ttisamonohybridcross.
+   From the observation that the recessive parental
+   trait is expressed without any blending in theF
+   generation,we can infer that,when the tall and
+   dwarfplantproducegametes,by the process of
+   meiosis,theallelesoftheparentalpairseparateor
+   segregate from eachother and only one allele is
+   transmitted to agamete.Thissegregationof alleles
+   isarandomprocessandsothereisa50percent
+   chance ofa gamete containing either allele,ashas
+   F,generation
+   been verified by the results of the crossings.In this
+   way thegametes ofthe tall TT plants have the allele
+   Tand thegametes ofthe dwarf tt plants have the
+   allelet.Duringfertilisationthetwoalleles,Tfrom
+   oneparentsay.throughthepollen,and tfromthe
+   otherparent,thenthroughtheegg.areunitedto
+   produce zygote sth at have one Tall ele an do net
+   allele.InotherwordsthehybridshaveTt.Since
+   these hybrids contain alleles which express
+   contrastingtraits,theplantsareheterozygous.The
+   production of gametes by the parents,the formation
+   of the zygotes,the F,and F,plants can be
+   understood from a diagram called Punnett Square
+   Fgeneration
+   asshowninFigure4.4.ItwasdevelopedbyaBritish
+   geneticist,Reginald C.Punnett.It is a graphical
+   representation to calculate the probability of all
+   possible genotypes of offspring in a genetic cross.
+   The possible gametes are written on two sides,
+   usuallythetoprowandleftcolumns.Allpossible
+   combinations are represented in boxes below in the
+   squares,whichgeneratesa square output form.
+   The Punnett Square shows the parental tall TT Figure 4.4 A Punnett square used to
+   understand a typical monohybrid
+   (male)anddwarftt(female)plants,thegametes
+   cross conducted by Mendel
+   produced by them and,theFTtprogeny.The F
+   betweentrue-breedingtallplants
+   plants of genotype Tt are self-pollinated.The
+   andtrue-breedingdwarfplants
+   symbol sand dare used to denote the female
+
+[p07.B02  x 434-443  y 158-166]
+   X
+
+[p07.B03  x 483-508  y 180-188]
+   Dwarf
+
+[p07.B04  x 372-388  y 180-200]
+   Tall
+   TT
+
+[p07.B05  x 345-382  y 210-219]
+   Gametes
+
+[p07.B06  x 497-535  y 211-219]
+   Gametes
+
+[p07.B07  x 432-442  y 316-324]
+   Tt
+
+[p07.B08  x 426-457  y 350-373]
+   X
+   Selfing
+
+[p07.B09  x 487-503  y 367-386]
+   Tall
+   Tt
+
+[p07.B10  x 376-392  y 369-386]
+   Tall
+   Tt
+
+[p07.B11  x 342-380  y 400-410]
+   Gametes
+
+[p07.B12  x 498-535  y 400-410]
+   Gametes
+
+[p07.B13  x 376-506  y 520-559]
+   Phenotypicratio:tall:dwarf
+   3：
+   1
+   Genotypicratio:TT:Tt:tt
+   1:2:1
+
+[p07.B14  x 508-526  y 638-653]
+   57
+
+[p07.B15  x 59-422  y 652-724]
+   thegenotypeTtwhenself-pollinated,producesgametesofthegenotype
+   Tandtinequalproportion.Whenfertilisationtakesplace,thepollen
+   grainsofgenotypeT havea50percentchancetopollinateeggsof the
+   genotypeT, aswell as of genotype t.Also pollen grains of genotype t have
+   a 50per cent chance of pollinating eggs ofgenotypeT,aswell asof
+
+[p07.B16  x 277-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 8 ##########
+
+[p08.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p08.B01  x 190-553  y 105-257]
+   genotypet.Asa result ofrandomfertilisation,theresultantzygotes can
+   be of thegenotypesTT,Tt or tt.
+   FromthePunnettsquareitiseasilyseenthat1/4hoftherandom
+   fertilisationsleadtoTT,1/2lead toTtand1/4htott.ThoughtheF
+   have a genotype ofTt,but the phenotypic character seen is‘tall'.At F
+   3/4thof theplantsaretall,wheresomeof them are TT while others are
+   Tt.Externallyitisnotpossibletodistinguishbetweentheplantswith
+   the genotypes TT and Tt.Hence,withinthegenopyticpairTtonlyone
+   characterT'tallisexpressed.HencethecharacterTor‘tall'issaid to
+   dominateovertheotheralleletor'dwarf'character.Itisthusduetothis
+   dominanceofonecharacterovertheotherthatalltheF,aretall(though
+
+[p08.B02  x 191-553  y 274-373]
+   genotypically1/2areTt and only1/4thareTT).Thisleads to a phenotypic
+   ratioof3/4tall:(1/4TT+1/2Tt)and1/4tt,i.e.,a3:1ratio,buta
+   genotypicratioof1:2:1.
+   The1/4:1/2:1/4ratio ofTT:Tt:ttismathematicallycondensable
+   totheformofthebinomialexpression(ax+by)²,thathasthegametes
+   bearinggenesTortinequalfrequencyof/2.Theexpressionisexpanded
+   as given below:
+
+[p08.B03  x 191-553  y 407-434]
+   Mendel self-pollinated the Fpl ant sand found that dwarf F,plants
+   continued to generate dwarf plants in Fand Fgenerations.Heconcluded
+
+[p08.B04  x 190-554  y 450-567]
+   he would have got had he self-pollinated a tall Fplant?
+   From the pre cee ding paragraphs itis clear that though thegenotypic
+   ratios can be calculated using mathematical probability,by simply looking
+   at thephenotypeofadominanttrait,itisnotpossibletoknow the
+   genotypiccomposition.Thatis,forexample,whetheratall plant from F
+   or F,has TT or Tt composition, cannot be predicted.Therefore,to determine
+   the genotype of a tall plant at F,Mendel crossed the tall plant from F
+   with a dwarfplant.Thishe called a testcross.Ina typical testcross an
+
+[p08.B05  x 191-554  y 583-654]
+   genotype is to be determined)iscrossedwiththerecessiveparent instead
+   of self-crossing.Theprogenies of such a cross can easily be analysed to
+   predict the genotype ofthetestorganism.Figure4.5showstheresultsof
+   typical testcrosswherevioletcolourflower(V)isdominantoverwhite
+   colourflower(v).
+
+[p08.B06  x 83-102  y 638-654]
+   58
+
+[p08.B07  x 193-542  y 663-676]
+   UsingPunnettsquare,trytofindoutthenatureofoffspringofatestcross.
+
+[p08.B08  x 193-312  y 683-695]
+   Whatratiodidyouget?
+
+[p08.B09  x 192-553  y 702-728]
+   Usingthegenotypesofthiscross,canyougiveageneraldefinitionfora
+   testcross?
+
+[p08.B10  x 277-335  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 9 ##########
+
+[p09.B00  x 59-240  y 79-89]
+   PRINCIPLESOFINHERITANCE AND VARIATION
+
+[p09.B01  x 223-284  y 112-136]
+   Homozygous
+   recessive
+
+[p09.B02  x 392-453  y 112-136]
+   Homozygous
+   recessive
+
+[p09.B03  x 452-467  y 152-161]
+   Ww
+
+[p09.B04  x 162-217  y 235-244]
+   Ww
+   Ww
+
+[p09.B05  x 431-485  y 236-244]
+   Ww
+   Ww
+
+[p09.B06  x 266-295  y 239-248]
+   -WW
+
+[p09.B07  x 356-382  y 239-248]
+   Ww-
+
+[p09.B08  x 279-379  y 255-280]
+   Dominant Phenotype
+   (Genotypeunknown)
+
+[p09.B09  x 198-217  y 275-283]
+   Ww
+
+[p09.B10  x 93-238  y 292-304]
+   Result
+   All flowers are violet
+
+[p09.B11  x 382-534  y 292-315]
+   Half ofthe flowers are violet and
+   half ofthe flowers arewhite.
+
+[p09.B12  x 61-252  y 311-336]
+   Interpretation
+   Unknownflower
+   is homozygous dominant
+
+[p09.B13  x 383-535  y 324-337]
+   Unknownflower is heterozygous
+
+[p09.B14  x 163-434  y 352-364]
+   Figure 4.5 Diagrammatic representation ofa test cross
+
+[p09.B15  x 59-421  y 383-451]
+   Based on his observation son monohybrid crosses Mendel proposed
+   two general rules to consolidate his understanding ofinheritance in
+   monohybrid crosses.Today these rules are called the Principles or
+   LawsofInheritance:theFirst Law or Law of Dominance and the
+   SecondLaworLawofSegregation.
+
+[p09.B16  x 60-210  y 464-476]
+   4.2.1 Law of Dominance
+
+[p09.B17  x 60-422  y 484-588]
+   Characters arecontrolledbydiscreteunitscalledfactors.
+   i)
+   Factors occur in pairs.
+   (ii)
+   In a dissimilar pair of factors one member ofthe pair dominates
+   (iii)
+   (dominant) theother(recessive).
+   The law of dominance is used to explain the expression of only oneof
+   the parental charactersinamonohybridcrossintheF,and the expression
+   of both intheF.It also explains the proportion of3:1obtained atthe F
+
+[p09.B18  x 60-212  y 600-613]
+   4.2.2 Law of Segregation
+
+[p09.B19  x 58-421  y 619-731]
+   This law is based on the fact that the alleles do not show any blending
+   and that both the characters are recovered as such in the Fgeneration
+   though oneof these isnotseenattheF,stage.Thoughtheparentscontain
+   twoallelesduringgameteformation,thefactorsorallelesofapairsegregate
+   from each other such that a gamete receives only oneof thetwofactors.
+   Of course, a homozygous parent produces all gametes that are similar
+   while a heterozygous one produces two kinds of gametes each having
+   oneallelewithequalproportion.
+
+[p09.B20  x 507-526  y 638-654]
+   59
+
+[p09.B21  x 277-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 10 ##########
+
+[p10.B00  x 515-553  y 79-90]
+   BIOLOGY
+
+[p10.B01  x 313-489  y 106-116]
+   4.2.2.1IncompleteDominance
+
+[p10.B02  x 77-135  y 118-129]
+   P generation
+
+[p10.B03  x 191-553  y 124-672]
+   When experiments on peas were repeated using other
+   traitsinotherplants,itwasfoundthatsometimes
+   theFhad a phenotype that did not resemble either
+   ofthetwoparentsandwasinbetweenthetwo.The
+   inheritance of flower colour in the dog flower
+   (snapdragon orAntirrhinumsp.)isagoodexample
+   tounderstandincompletedominance.In a cross
+   betweentrue-breedingred-flowered(RR) and true-
+   breedingwhite-floweredplants(rr).theF,(Rr)was
+   pink (Figure 4.6).When the F,wasself-pollinated
+   the F,resulted in the following ratio 1 (RR)Red:2
+   (Rr)Pink:1 (rr) White.Here the genotype ratios were
+   exactly as we would expect in any mendelian
+   Gametes
+   monohybrid cross,but the phenotype ratios had
+   changedfromthe3:1dominant:recessiveratio.
+   What happened was that Rwa snot completely
+   dominant over rand this made it possible to
+   distinguish Rr as pink from RR(red)andrr(white).
+   Explanation of the concept of dominance:
+   Whatexactlyisdominance?Whyaresome alleles
+   dominantandsomerecessive?To tackle these
+   questions,we must understand what a gene does.
+   Everygene,asyou know bynow,contains the
+   information toexpressaparticulartrait.Ina
+   diploid organism,there are two copies ofeach
+   gene,i.e.,as a pair ofalleles.Now,these two alleles
+   need not alwaysbeidentical,asin aheterozygote.
+   Oneof them maybe different due to some changes
+   thatithasundergone(aboutwhichyouwillread
+   furtheron,and in the next chapter)whichmodifies
+   the information thatparticularallelecontains.
+   Let's take an example ofa gene that contains
+   the information for producing an enzyme.Now
+   there are two copies of thisgene,thetwo allelic
+   forms.Let us assume(as is more common) that
+   the normal allele produces the normal enzyme
+   thatis needed for the transformation ofa
+   substrateS.Theoretically.themodifiedallelecould be responsible for
+   production of-
+
+[p10.B04  x 141-180  y 147-157]
+   Red (RR)
+
+[p10.B05  x 210-252  y 147-157]
+   White(rr)
+
+[p10.B06  x 77-117  y 177-187]
+   Gametes
+
+[p10.B07  x 76-138  y 234-247]
+   F,generation
+
+[p10.B08  x 169-224  y 265-275]
+   Allpink(Rr)
+
+[p10.B09  x 77-118  y 299-308]
+   Gametes
+
+[p10.B10  x 188-200  y 341-348]
+   RR
+
+[p10.B11  x 160-171  y 370-377]
+   Rr
+
+[p10.B12  x 77-138  y 372-384]
+   F,generation
+
+[p10.B13  x 77-254  y 415-461]
+   Phenotypicratio:red:pink:white
+   1:2:
+   Genotypicratio:RR:Rr:rr
+   1:2:1
+
+[p10.B14  x 80-282  y 583-628]
+   Figure 4.6 Results ofmonohybrid cross in
+   the plant Snapdragon,where
+   one allele is in completely
+   dominant over the other allele
+
+[p10.B15  x 83-102  y 638-654]
+   60
+
+[p10.B16  x 218-427  y 678-723]
+   (i)the normal/less efficient enzyme,or
+   (i)a non-functional enzyme,or
+   (ii)no enzyme atall
+
+[p10.B17  x 277-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 11 ##########
+
+[p11.B00  x 60-240  y 79-89]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p11.B01  x 59-421  y 105-230]
+   Inthefirstcase,themodifiedalleleisequivalenttotheunmodified allele,
+   i.e.,itwillproducethesamephenotype/trait,i.e.,resultinthetransformation
+   ofsubstrateS.Such equivalentallelepairsareverycommon.But,if the
+   allele produces anon-functional enzyme ornoenzyme,thephenotypemay
+   be effected.Thephenotype/traitwill only be dependent on the functioning
+   ofthe unmodified allele.Theunmodified(functioning)allele,whichrepresents
+   the original phenotype is the dominant allele and the modified allele is
+   generallytherecessiveallele.Hence,intheexample above the recessive trait
+   isseenduetonon-functional enzyme or because no enzyme isproduced.
+
+[p11.B02  x 61-188  y 243-254]
+   4.2.2.2Co-dominance
+
+[p11.B03  x 59-421  y 264-319]
+   Till now we were discussingcrosseswheretheF,resembledeitherof the
+   twoparents(dominance)orwasin-between(incompletedominance).But,
+   in the case of co-dominance theF,generationresemblesbothparents.A
+   good example is different types of red blood cells that determine ABO
+
+[p11.B04  x 59-422  y 335-533]
+   thegene I.Theplasmamembrane of thered blood cells has sugar polymers
+   that protrude from its surface and the kind of sugar is controlled by the
+   gene.Thegene(has three allelesI,Pand i.The allelesPand Pproduce
+   a slightly different form of the sugar while alle lei does not produce any
+   sugar.Becausehumansarediploidorganisms,eachpersonpossesses
+   anytwoofthethreeIgenealleles.PandParecompletelydominantover
+   i.in otherwordswhenPand ia represent onlyPexpresses(becausei
+   does not produce any sugar),and when Pand iare present Pexpresses.
+   But when A and Pare present together they both express their own types
+   ofsugars:thisisbecauseof co-dominance.Hencered blood cells have
+   bothA and Btypesof sugars.Since there arethreedifferentalleles,there
+   aresixdifferentcombinationsofthesethreeallelesthatarepossible,and
+   therefore,atotalofsixdifferentgenotypesofthehumanABOblood types
+   (Table4.2).Howmanyphenotypesarepossible?
+
+[p11.B05  x 83-389  y 539-563]
+   Table 4.2:Table Showing the Genetic Basis of Blood Groups
+   in Human Population
+
+[p11.B06  x 88-223  y 571-595]
+   Allele from
+   Allele from
+   Parent 2
+   Parent 1
+
+[p11.B07  x 251-386  y 571-607]
+   Genotype of
+   Blood
+   offspring
+   types of
+   offspring
+
+[p11.B08  x 250-276  y 611-640]
+   IATA
+   IAIB
+
+[p11.B09  x 89-102  y 612-622]
+   IA
+
+[p11.B10  x 338-347  y 613-623]
+   A
+
+[p11.B11  x 167-179  y 613-621]
+   IA
+
+[p11.B12  x 88-102  y 628-640]
+   IA
+
+[p11.B13  x 166-180  y 629-640]
+   IB
+
+[p11.B14  x 337-354  y 629-641]
+   AB
+
+[p11.B15  x 508-526  y 638-654]
+   61
+
+[p11.B16  x 89-102  y 647-657]
+   IA
+
+[p11.B17  x 251-269  y 647-657]
+   IAi
+
+[p11.B18  x 338-347  y 647-657]
+   A
+
+[p11.B19  x 168-173  y 649-656]
+   i
+
+[p11.B20  x 250-276  y 663-676]
+   IAIB
+
+[p11.B21  x 89-102  y 664-674]
+   IB
+
+[p11.B22  x 167-179  y 664-675]
+   IA
+
+[p11.B23  x 337-354  y 664-676]
+   AB
+
+[p11.B24  x 88-103  y 680-692]
+   IB
+
+[p11.B25  x 166-180  y 681-692]
+   IB
+
+[p11.B26  x 251-277  y 681-692]
+   IBIB
+
+[p11.B27  x 337-348  y 681-693]
+   B
+
+[p11.B28  x 88-102  y 698-710]
+   IB
+
+[p11.B29  x 251-271  y 699-710]
+   IBi
+
+[p11.B30  x 338-347  y 700-710]
+   B
+
+[p11.B31  x 168-173  y 701-708]
+   i
+
+[p11.B32  x 251-263  y 717-727]
+   ii
+
+[p11.B33  x 339-347  y 717-728]
+   0
+
+[p11.B34  x 278-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 12 ##########
+
+[p12.B00  x 516-553  y 79-91]
+   BIOLOGY
+
+[p12.B01  x 191-553  y 105-400]
+   Do you realise that the example of ABo blood grouping also provides
+   agood example of multiple alleles?Hereyoucan see that there are
+   more than two,i.e.,three alleles,governing the same character.Since in
+   anindividualonlytwoallelescanbepresent,multiple alleles can be found
+   onlywhenpopulationstudiesaremade.
+   Occasionally,a single gene product may produce more than one effect.
+   Forexample,starchsynthesisinpeaseedsiscontrolledbyonegene.It
+   hastwoalleles(Bandb).Starchissynthesised effectively by BB
+   homozygotes and therefore,largestarchgrainsareproduced.In contrast,
+   bbhomozygoteshavelesserefficiencyinstarchsynthesisandproduce
+   smallerstarchgrains.Aftermaturationoftheseeds,BBseedsareround
+   and thebb seeds are wrinkled.Heterozygotesproduce round seeds,and
+   soB seems to be the dominant allele.But,thestarchgrainsproducedare
+   ofintermediatesizeinBbseeds.Soifstarchgrainsizeis considered as
+   the phenotype,then from this angle,the alleles show incomplete
+   dominance.
+   Therefore,dominanceisnotanautonomousfeatureofageneorthe
+   product that it has information for.Itdepends as much on thegene
+   product and the production ofa particular phenotype from this product
+   asit does on the particular phenotypethatwechoosetoexamine,incase
+   more than one phenotype is influenced by the same gene.
+
+[p12.B02  x 192-388  y 413-426]
+   4.3 INHERITANCE OF TWO GENES
+
+[p12.B03  x 192-553  y 436-448]
+   Mendel also worked with and crossed pea plants that differed in two
+
+[p12.B04  x 190-553  y 463-616]
+   yellow colour and round shape an done that had seeds of green colour
+   andwrinkled shape(Figure 4.7).Mendel found that the seeds resulting
+   from the crossing of theparents,hadyellowcoloured and round shaped
+   seeds.Herecanyoutellwhichofthecharactersinthepairsyellow/
+   greencolourandround/wrinkledshapewasdominant?
+   Thus,yellow colour was dominant over green and round shape
+   dominantoverwrinkled.Theseresultswereidentical to those that he got
+   when he made separate monohybrid crosses between yellow and green
+   seededplantsandbetweenroundandwrinkledseededplants.
+   LetususethegenotypicsymbolsYfordominantyellowseed colour
+   andy for recessive green seed colour,Rfor round shaped seeds and r for
+
+[p12.B05  x 191-553  y 633-728]
+   RRYYandrryy.Thecrossbetweenthetwoplantscanbewrittendown
+   asinFigure4.7showingthegenotypesof theparentplants.Thegametes
+   RYan dry unite on fertilisation toproducetheF,hybridRrYy.When
+   MendelselfhybridisedtheF,plantshefound that3/4thofFplantshad
+   yellow seeds and1/4thhadgreen.Theyellowandgreencoloursegregated
+   in a3:1 ratio.Round andwrinkled seed shape also segregated in a3:1
+   ratio: just like in a monohybrid cross.
+
+[p12.B06  x 83-102  y 639-654]
+   62
+
+[p12.B07  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 13 ##########
+
+[p13.B00  x 59-240  y 80-88]
+   PRINCIPLESOFINHERITANCE AND VARIATION
+
+[p13.B01  x 72-134  y 120-133]
+   Pge ner at ion
+
+[p13.B02  x 292-364  y 148-169]
+   Wrinkled green
+   rr
+   yy
+
+[p13.B03  x 166-230  y 148-170]
+   Roundyellow
+   RR
+   YY
+
+[p13.B04  x 80-122  y 206-217]
+   Gametes
+
+[p13.B05  x 321-334  y 206-216]
+   ry
+
+[p13.B06  x 191-207  y 207-218]
+   RY
+
+[p13.B07  x 228-300  y 267-311]
+   Roundyellow
+   RrYy
+   Selfing
+
+[p13.B08  x 71-136  y 278-291]
+   F,generation
+
+[p13.B09  x 218-234  y 357-366]
+   RY
+
+[p13.B10  x 293-309  y 357-366]
+   RY
+
+[p13.B11  x 80-122  y 386-398]
+   Gametes
+
+[p13.B12  x 406-448  y 386-398]
+   Gametes
+
+[p13.B13  x 248-276  y 400-410]
+   RRYY
+
+[p13.B14  x 361-377  y 426-437]
+   Ry
+
+[p13.B15  x 151-168  y 426-438]
+   Ry
+
+[p13.B16  x 286-313  y 434-447]
+   RrYY
+
+[p13.B17  x 212-238  y 436-446]
+   RrYY
+
+[p13.B18  x 319-348  y 470-484]
+   RRYy
+
+[p13.B19  x 177-205  y 471-483]
+   RRYy
+
+[p13.B20  x 248-272  y 471-482]
+   rrYY
+
+[p13.B21  x 143-170  y 506-520]
+   RrYy
+
+[p13.B22  x 214-241  y 506-520]
+   RrYy
+
+[p13.B23  x 285-312  y 506-520]
+   RrYy
+
+[p13.B24  x 357-383  y 507-520]
+   RrYy
+
+[p13.B25  x 73-136  y 532-543]
+   Fgeneration
+
+[p13.B26  x 248-277  y 542-556]
+   RRyy
+
+[p13.B27  x 178-200  y 544-554]
+   rrYy
+
+[p13.B28  x 324-346  y 544-554]
+   rrYy
+
+[p13.B29  x 285-310  y 579-594]
+   Rryy
+
+[p13.B30  x 214-239  y 579-594]
+   Rryy
+
+[p13.B31  x 251-272  y 619-629]
+   rryy
+
+[p13.B32  x 508-526  y 638-653]
+   63
+
+[p13.B33  x 74-452  y 658-680]
+   Phenotypicratio:roundyellow:round green:wrinkledyellow:wrinkledgreen
+   9
+   3
+   3
+   1
+
+[p13.B34  x 64-452  y 702-725]
+   Figure 4.7 Results ofa dihybrid cross where the two parents differed in two pairs
+   ofcontrastingtraits:seedcolourandseedshape
+
+[p13.B35  x 276-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 14 ##########
+
+[p14.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p14.B01  x 192-425  y 105-117]
+   4.3.1 Law of Independent Assortment
+
+[p14.B02  x 191-553  y 125-291]
+   In the dihybrid cross (Figure 4.7).the phenotypes round,yellow;
+   wrinkled,yellow;round,green and wrinkled,green appeared in the
+   ratio9:3:3:1.Sucharatiowasobservedforseveralpairsofcharacters
+   thatMendelstudied.
+   Theratioof9:3:3:1canbe derived as a combination series of3yellow:
+   1green,with 3round:1 wrinkled.Thisderivation canbe written
+   as follows:
+   (3Round:1Wrinkled)(3Yellow:1Green)=9Round,Yellow:3
+   Wrinkled,Yellow:3Round,Green:1Wrinkled,Green
+   Based upon such observations ondihybridcrosses(crossesbetween
+   plantsdifferingintwotraits)Mendelproposed a second set of generalisations
+   thatwecallMendel'sLawofIndependentAssortment.Thelawstatesthat
+
+[p14.B03  x 191-553  y 307-418]
+   of characters is independent of theotherpairofcharacters'.
+   The Punnett square can be effectively used to understand the
+   independent segregation ofthe two pairs of genes during meiosis and
+   the production of eggs and pollen in theF,RrYyplant.Considerthe
+   segregationofonepairofgenesRandr.Fiftypercentof thegametes
+   have thegene Rand theother5opercenthave r.Nowbesideseach
+   gamete having either Ror r,it should also have the alleleYory.The
+   important thing to remember here is that segregation of50percent R
+
+[p14.B04  x 190-553  y 432-474]
+   Y and 50per centy.Therefore,50per cent of the r bearing gametes
+   hasYand theother50percenthasy.Similarly.50per cent oft heR
+   bearinggameteshasYand theother5opercenthasy.Thus there are
+
+[p14.B05  x 191-553  y 489-558]
+   The four typesareRY,Ry.rYandryeachwithafrequencyof25per
+   centor1/4ofthetotalgametesproduced.Whenyouwritedownthe
+   four types of eggs and pollen on the two sides ofa Punnett square it is
+   very easy to derive the composition of the zygote sth at give rise to the
+   Fplants(Figure4.7).Althoughthereare16squareshowmany
+
+[p14.B06  x 191-553  y 573-626]
+   downintheformatgiven.
+   Canyou,usingthePunnettsquaredataworkoutthegenotypicratio
+   at the F,stage and fill in the format given? Is the genotypic ratio
+   also 9:3:3:1?
+
+[p14.B07  x 83-102  y 638-654]
+   64
+
+[p14.B08  x 393-542  y 640-652]
+   Their expected Phenotypes
+
+[p14.B09  x 201-370  y 640-652]
+   S.No.
+   Genotypes found in F
+
+[p14.B10  x 192-451  y 685-697]
+   4.3.2 Chromosomal TheoryofInheritance
+
+[p14.B11  x 191-552  y 706-733]
+   Mendelpublishedhisworkoninheritanceofcharactersin1865but
+   for several reasons,it remained unrecognised till 19oo.Firstly,
+
+[p14.B12  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 15 ##########
+
+[p15.B00  x 60-240  y 79-89]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p15.B01  x 59-422  y 106-484]
+   communicationwasnoteasy(asitisnow)inthosedaysandhiswork
+   could not bewidelypublicised.Secondly.his conceptofgenes(or
+   factors,inMendel'swords)asstableand discrete units that controlled
+   theexpressionoftraitsand,ofthepairofalleleswhichdidnotblend
+   with eachother,wasnotacceptedbyhis contemporaries a san
+   explanation for the apparently continuous variation seen innature.
+   Thirdly,Mendel'sapproachofusingmathematicstoexplainbiological
+   phenomena was totally new and unacceptable tom any ofthe
+   biologistsofhistime.Finally,thoughMendel'sworksuggested that
+   factors(genes)were discreteunits,he could not provide any physical
+   proof for the existence of factors or say what they were made of.
+   In 19o0,three Scientists(de Vries,Correns and von Tschermak)
+   independently rediscovered Mendel's result son the inheritance of
+   characters.Also,by this time due to advancements in microscopy that
+   weretakingplace,scientistswereabletocarefullyobservecell division.
+   This led to the discovery of structures in the nucleus that appeared to
+   double and dividejustbeforeeachcelldivision.Thesewere called
+   chromosomes(coloredbodies,astheywerevisualisedbystaining).By
+   1902,thechromosomemovement during meiosis had been worked out.
+   Walter Sutton and Theodore Boveri noted that the behaviour of
+   chromosomes was parallel to the behaviour of gene sand used
+   chromosome movement(Figure 4.8)to explain Mendel's laws (Table 4.3).
+   Recall that you have studied the behaviour of chromosomes during mitosis
+   (equational division)and during meiosis (reduction division).The
+   important things to remember are that chromosomes as well as genes
+   occurinpairs.Thetwoallelesof a gene pair are located on homologous
+   sitesonhomologouschromosomes.
+
+[p15.B02  x 152-256  y 529-569]
+   MeiosisI
+   anaphase
+   Biv a lent
+
+[p15.B03  x 280-400  y 529-553]
+   Germ cells
+   Meiosis II
+   anaphase
+
+[p15.B04  x 152-161  y 531-540]
+   G2
+
+[p15.B05  x 384-400  y 566-574]
+   Q00
+
+[p15.B06  x 382-401  y 590-598]
+   000
+
+[p15.B07  x 508-526  y 638-654]
+   65
+
+[p15.B08  x 63-418  y 694-727]
+   Figure4.8Meiosis and germ cell formation in a cell with four chromosomes.
+   Can you see how chromosomes segregate when germ cells
+   areformed?
+
+[p15.B09  x 276-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 16 ##########
+
+[p16.B00  x 515-553  y 79-90]
+   BIOLOGY
+
+[p16.B01  x 193-531  y 104-127]
+   Table 4.3:A Comparison between the Behaviour of Chromosomes
+   and Genes
+
+[p16.B02  x 274-283  y 137-147]
+   A
+
+[p16.B03  x 454-463  y 137-146]
+   B
+
+[p16.B04  x 196-263  y 154-166]
+   Occur in pairs
+
+[p16.B05  x 367-434  y 154-165]
+   Occur inpairs
+
+[p16.B06  x 195-551  y 171-235]
+   Segregate at the time of gamete
+   Segregate at gamete formation and only
+   formation such that only one ofeach
+   one ofeach pair is transmitted to a
+   gamete
+   pair is transmitted to a gamete
+   Independent pairs segregate
+   One pair seg reg a tes independently of
+   independently ofeach other
+   another pair
+
+[p16.B07  x 204-542  y 241-267]
+   Can you tell which of these columns A orB represent the chromosome
+   andwhichrepresentsthegene?Howdidyoudecide?
+
+[p16.B08  x 191-553  y 276-361]
+   During Anaphase of meiosis I,thetwo chromosome pairs can align at
+   the meta phase plate independently of each other(Figure 4.9).To
+   understand this,compare the chromosomes of four different colour in
+   the left and right columns.In theleftcolumn(Possibility I) orange and
+   green is segregating together. But in the right hand column (Possibility
+   I1) the orange chromosome is segregating with thered chromosomes.
+
+[p16.B09  x 209-551  y 372-448]
+   Possibility I
+   Possibility II
+   One long orange and short green
+   One long orange and short red
+   chromosome and long yellow and
+   chromosome and long yellow and
+   short red chromosome at the
+   short green chromosome at the
+   same pole
+   same pole
+   MeiosisI-anaphase
+   MeiosisI-anaphase
+
+[p16.B10  x 410-512  y 532-543]
+   Meiosis II-anaphase
+
+[p16.B11  x 224-326  y 532-544]
+   Meiosis II-anaphase
+
+[p16.B12  x 241-524  y 623-728]
+   Germ cells
+   []
+   Figure4.9Independentassortmentofchromosomes
+
+[p16.B13  x 250-301  y 623-633]
+   Germ cells
+
+[p16.B14  x 83-102  y 638-654]
+   66
+
+[p16.B15  x 277-336  y 776-787]
+   Reprint2026-27
+########## SOURCE PAGE 17 ##########
+
+[p17.B00  x 60-239  y 80-88]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p17.B01  x 58-529  y 106-350]
+   Sutton and Boveri argued that the pairing and separation ofa
+   pair of chromosomes would lead to the segregation of apair of
+   factorstheycarried.Suttonunitedtheknowledgeofchromosomal
+   segregation with Mendelian principles and called it the
+   chromosomal theoryofinheritance.
+   Following this synthesis ofideas,experimental verification of
+   the chromosomal theoryofinheritance by Thomas Hunt Morgan
+   andhiscolleagues,led to discovering the basis for the variation
+   Figure4.10Drosophila
+   melanogaster(a)Male
+   fruitflies,Drosophilamelanogaster(Figure4.10),whichwere
+   (b)Female
+   foundverysuitableforsuchstudies.Theycouldbegrownon
+   simplesyntheticmediuminthelaboratory.Theycompletetheirlife
+   cycle in about two weeks,and a single mating could produce a large
+   numberofprogenyflies.Also,therewas a clear differentiation of the
+   sexes-themaleandfemalefliesareeasilydistinguishable.Also,it
+   has many types of hereditary variations that can be seen with low
+   power microscopes.
+
+[p17.B02  x 429-443  y 204-215]
+   (a)
+
+[p17.B03  x 490-504  y 204-216]
+   (b)
+
+[p17.B04  x 60-269  y 363-376]
+   4.3.3 Linkage and Recombination
+
+[p17.B05  x 59-422  y 384-719]
+   Morgan carried out several dihybrid crosses in Drosophila to study genes
+   thatweresex-linked.Thecrossesweresimilartothedihybridcrossescarried
+   outbyMendelinpeas.ForexampleMorganhybridisedyellow-bodied,
+   white-eyedfemalestobrown-bodied,red-eyedmalesandintercrossedtheir
+   F,progeny.He observed that the two genes did not segregate independently
+   ofeachotherandtheF,ratiodeviatedverysignificantlyfromthe9:3:3:1
+   ratio(expectedwhenthetwogenesareindependent).
+   Morgan and his group knew that the genes were located on theX
+   chromosome(Section 4.4)and saw quickly that when the two genes in a
+   dihybridcrossweresituatedonthesamechromosome,theproportion
+   ofparentalgenecombinationsweremuchhigherthanthenon-parental
+   type.Morgan attributed this due to the physical association or linkage
+   ofthe two gene sand coined the term linkage to describe this physical
+   association of gene son a chromosome and the term recombination to
+   describe the generation ofnon-parentalgene combinations(Figure 4.11).
+   Morgan and his group also found that even when genes were grouped
+   on the same chromosome,some genes were very tightly linked (showed
+   verylowrecombination)(Figure4.11,CrossA)whileotherswereloosely
+   linked (showed higher recombination)(Figure 4.1l,Cross B).For
+   example he found that the genes white and yellow were very tightly linked
+   andshowedonly1.3percentrecombinationwhilewhiteandminiature
+   wingshowed37.2percentrecombination.HisstudentAlfred
+   Sturtevant used the frequency of recombination between gene pairs
+   on the same chromosome as a measure of the distance between genes
+
+[p17.B06  x 508-526  y 639-654]
+   67
+
+[p17.B07  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 18 ##########
+
+[p18.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p18.B01  x 190-554  y 105-145]
+   are extensively used as a starting point in the sequencing of whole
+   genomes as was done in the case of the Human Genome Sequencing
+   Project,described later.
+
+[p18.B02  x 225-274  y 151-166]
+   Cross A
+
+[p18.B03  x 416-464  y 152-166]
+   Cross B
+
+[p18.B04  x 267-293  y 193-204]
+   yw+
+
+[p18.B05  x 181-204  y 194-206]
+   MK
+
+[p18.B06  x 375-385  y 198-206]
+   W
+
+[p18.B07  x 461-473  y 198-206]
+   W
+
+[p18.B08  x 409-420  y 199-207]
+   m
+
+[p18.B09  x 495-505  y 199-206]
+   1m1
+
+[p18.B10  x 96-138  y 207-218]
+   Parental
+
+[p18.B11  x 182-229  y 220-240]
+   yw
+   Yellow,white
+
+[p18.B12  x 373-430  y 220-239]
+   W
+   m
+   White,miniature
+
+[p18.B13  x 274-310  y 228-240]
+   Wild type
+
+[p18.B14  x 466-502  y 228-240]
+   Wild type
+
+[p18.B15  x 96-221  y 295-341]
+   yw
+   F,generation
+   MA
+   Wild type
+
+[p18.B16  x 269-291  y 296-305]
+   MA
+
+[p18.B17  x 460-471  y 298-306]
+   W
+
+[p18.B18  x 376-385  y 299-306]
+   W
+
+[p18.B19  x 408-420  y 299-307]
+   m
+
+[p18.B20  x 494-505  y 299-306]
+   Im1
+
+[p18.B21  x 375-420  y 321-340]
+   W
+   m
+   wild type
+
+[p18.B22  x 271-317  y 329-339]
+   Yellow,white
+
+[p18.B23  x 456-515  y 329-340]
+   White,miniature
+
+[p18.B24  x 261-428  y 364-403]
+   Gametes
+   Recombinant
+   Parental
+   types(1.3%)
+   type(62.8%)
+
+[p18.B25  x 177-234  y 379-403]
+   Parental
+   type(98.7%)
+
+[p18.B26  x 457-519  y 379-402]
+   Recombinant
+   types(37.2%)
+
+[p18.B27  x 408-422  y 416-427]
+   m'
+
+[p18.B28  x 182-206  y 416-426]
+   y'w
+
+[p18.B29  x 268-290  y 417-427]
+   y'w
+
+[p18.B30  x 466-504  y 418-426]
+   m
+   W
+
+[p18.B31  x 376-384  y 419-425]
+   W
+
+[p18.B32  x 185-221  y 443-456]
+   wild type
+
+[p18.B33  x 383-419  y 443-456]
+   wild type
+
+[p18.B34  x 280-301  y 444-453]
+   white
+
+[p18.B35  x 466-503  y 445-454]
+   miniature
+
+[p18.B36  x 266-293  y 470-484]
+   yw
+
+[p18.B37  x 182-205  y 472-483]
+   yw
+
+[p18.B38  x 466-506  y 475-484]
+   m
+   W
+
+[p18.B39  x 374-385  y 477-484]
+   W
+
+[p18.B40  x 408-420  y 477-485]
+   m
+
+[p18.B41  x 474-495  y 502-510]
+   white
+
+[p18.B42  x 180-226  y 502-515]
+   yellow,white
+
+[p18.B43  x 277-302  y 503-515]
+   yellow
+
+[p18.B44  x 373-431  y 503-512]
+   White,miniature
+
+[p18.B45  x 96-161  y 522-535]
+   F,generation
+
+[p18.B46  x 269-290  y 543-552]
+   yw
+
+[p18.B47  x 194-204  y 544-551]
+   W
+
+[p18.B48  x 374-433  y 545-563]
+   W*
+   m'
+   8
+
+[p18.B49  x 465-504  y 547-556]
+   W'
+   m
+
+[p18.B50  x 181-220  y 568-588]
+   yw
+   Wild type
+
+[p18.B51  x 266-301  y 568-586]
+   yw
+   white
+
+[p18.B52  x 466-504  y 570-588]
+   m
+   W
+   miniature
+
+[p18.B53  x 374-420  y 570-589]
+   W
+   m
+   Wild type
+
+[p18.B54  x 266-293  y 597-611]
+   yw
+
+[p18.B55  x 181-205  y 598-610]
+   MA
+
+[p18.B56  x 466-505  y 605-613]
+   W
+   m
+
+[p18.B57  x 375-385  y 606-612]
+   W
+
+[p18.B58  x 408-419  y 606-612]
+   m1
+
+[p18.B59  x 180-225  y 622-644]
+   yw
+   yellow,white
+
+[p18.B60  x 267-302  y 622-644]
+   yw
+   yellow
+
+[p18.B61  x 374-431  y 625-642]
+   m
+   M
+   White,miniature
+
+[p18.B62  x 467-504  y 626-640]
+   m
+   W
+   white
+
+[p18.B63  x 83-102  y 638-654]
+   68
+
+[p18.B64  x 161-529  y 689-726]
+   crossing between gene y and w; Cross B shows crossing between genes w and m.
+   Here dominant wild type allelesarerepresentedwith(+)sign in superscript
+   Note: The strength of linkage bet weeny and w is higher than w and m.
+
+[p18.B65  x 276-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 19 ##########
+
+[p19.B00  x 61-239  y 80-88]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p19.B01  x 61-231  y 106-118]
+   4.4POLYGENIC INHERITANCE
+
+[p19.B02  x 59-421  y 127-191]
+   Mendel's studies mainly described those traits that have distinct alternate
+   formssuchasflowercolourwhichareeitherpurpleorwhite.Butifyou
+   look around you will find that there are many traits which are not so
+   distinct in their occurrence and are spread across agradient.Forexample,
+   in humans we don't just have tall or short people as two distinct
+
+[p19.B03  x 59-421  y 204-241]
+   controlled by three or more genes and arethuscalledaspolygenictraits.
+   Besides the involvement of multiple genes polygenic inheritance also takes
+   into account theinfluenceofenvironment.Humanskincolourisanother
+
+[p19.B04  x 59-420  y 256-382]
+   contribution ofeach allele,i.e.,theeffectofeachalleleisadditive.To
+   understand thisbetterletusassumethatthreegenesA,B,Ccontrol skin
+   colour in human with the dominantformsA,B and Crespo nsi ble for
+   dark skin colour and therecessiveformsa,b andcforlightskincolour.
+   Thegenotypewithallthedominantalleles(AABBCC)willhavethedarkest
+   skincolourandthatwithalltherecessivealleles(aabbcc)willhavethe
+   lightestskincolour.Asexpected the genotype with three dominant alleles
+   andthreerecessivealleleswillhaveanintermediateskincolour.Inthis
+   manner the number ofeach type of alleles in the genotype would determine
+   the darkness or lightness ofthe skin in anindividual.
+
+[p19.B05  x 60-163  y 396-409]
+   4.5PLEIOTROPY
+
+[p19.B06  x 59-420  y 414-467]
+   We have so far seen the effectof age neon a single phenotype or trait.
+   There are however instances where a single gene can exhibit multiple
+   phenotypic expression.Such a gene is called a pleiotropic gene.The
+   underlying mechanism of pleiotropy in most cases is the effectof agene
+
+[p19.B07  x 59-421  y 479-543]
+   An example of this is the disease phenylketonuria,which occurs in
+   humans.The disease is caused by mutation in thegene that codes for the
+   enzymephenylalaninehydroxylase(singlegenemutation).Thismanifests
+   itself through phenotypic expression characterised by mental
+   retardation and areductioninhairandskinpigmentation.
+
+[p19.B08  x 60-209  y 559-572]
+   4.6SEXDETERMINATION
+
+[p19.B09  x 59-422  y 578-642]
+   The mechanism of sexdetermination has always been a puzzle before the
+   geneticists.Theinitialclueaboutthegenetic/chromosomalmechanism
+   of sexdetermination can be traced back to some ofthe experiments carried
+   outininsects.In fact,thecytologicalobservationsmadeinanumber of
+   insectsledtothedevelopmentoftheconceptofgenetic/chromosomal
+
+[p19.B10  x 508-526  y 639-654]
+   69
+
+[p19.B11  x 59-421  y 654-667]
+   structure all through spermatogenesis in a fewinsects,and itwas also
+
+[p19.B12  x 60-420  y 707-730]
+   explainitssignificance.Furtherinvestigationsbyotherscientistsled to
+   the conclusion tha tt heX body 'of Hen king was in fact a chromosome
+
+[p19.B13  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 20 ##########
+
+[p20.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p20.B01  x 79-554  y 105-728]
+   and thatis why it was given the name
+   X-chromosome.Itwasalsoobservedthatin
+   a large number of insects the mechanism of
+   sexdetermination is of theXO type,i.e.,all
+   eggs bear anadditionalX-chromosome
+   the other chromosomes
+   besides
+   (autosomes).Ontheotherhand,someofthe
+   sperms bear theX-chromosome whereas
+   some donot.Eggsfertilised by sperm having
+   anX-chromosomebecome femalesand.
+   those fertilised by sperms that do not have
+   anX-chromosomebecomemales.Doyou
+   think the number of chromosomes in the
+   maleandfemaleareequal?Duetothe
+   involvementoftheX-chromosomeinthe
+   determination ofsex,itwasdesignatedto
+   be the sexchromosome.and the rest ofthe
+   XX
+   chromosomes
+   named
+   were
+   as
+   autosomes.Grasshopper isan example of
+   XOtypeofsexdeterminationinwhichthe
+   maleshaveonlyoneX-chromosomebesides
+   theautosomes,whereasfemaleshave apair
+   ofX-chromosomes.
+   These observations led to the
+   investigation ofa number of species to
+   understand the mechanism of sex
+   determination.Inanumberofotherinsects
+   Figure4.12Determinationofsexby chromosomal
+   and mammalsincludingman,XY type of sex
+   differences:(a,b)Both in humans and
+   determination is seen where both male and
+   in Drosophila the female has apair of
+   femalehavesamenumberofchromosomes.
+   XXchromosomes(homogametic) and the
+   male XY (heterogametic) composition:
+   Among themalesanX-chromosomeis
+   (c)）In many birds,female has a pair of
+   present but its counter part is distinctly
+   dissimilar chromosomes Zw and male
+   smallerandcalledtheY-chromosome.
+   twosimilarZZchromosomes
+   Females,however,have a pair of X-
+   chromosomes.Bothmalesandfemalesbear
+   samenumberofautosomes.Hence,themaleshaveautosomesplusXY,
+   while female have autosomesplusXX.In human being sand in
+   DrosophilathemaleshaveoneXandoneYchromosome,whereasfemales
+   have apairofX-chromosomesbesidesautosomes(Figure 4.12a,b).
+   In the above description you have studied about two types of sex
+   determiningmechanisms,i.e.,XO type and XY type.Butinboth cases
+   malesproducetwodifferenttypesofgametes,(a)eitherwithorwithout
+   X-chromosomeor(b)somegameteswithX-chromosomeandsomewith
+   Y-chromosome.Suchtypesofsexdeterminationmechanismisdesignated
+   to be the example of maleheterogamety.Insome otherorganisms,e.g.,
+   birds,adifferentmechanismofsexdeterminationisobserved(Figure
+   4.12c).Inthiscasethetotalnumberofchromosomeissameinboth
+   male sand females.Buttwodifferenttypesofgametesin terms of the sex
+
+[p20.B02  x 267-287  y 192-200]
+   XX
+
+[p20.B03  x 123-140  y 195-203]
+   XY
+
+[p20.B04  x 204-214  y 223-232]
+   [a)
+
+[p20.B05  x 90-128  y 273-324]
+   iP
+   AX
+
+[p20.B06  x 202-214  y 307-317]
+   (b)
+
+[p20.B07  x 292-313  y 414-422]
+   ZW
+
+[p20.B08  x 87-105  y 416-425]
+   ZZ
+
+[p20.B09  x 204-216  y 419-429]
+   (c)
+
+[p20.B10  x 83-102  y 638-653]
+   70
+
+[p20.B11  x 277-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 21 ##########
+
+[p21.B00  x 60-239  y 80-88]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p21.B01  x 59-422  y 105-182]
+   chromosomes,areproduced by females,i.e.,femaleheterogamety.In
+   order to have a distinction with the mechanism of sexdetermination
+   describedearlier,thetwodifferentsexchromosomesofafemalebirdhas
+   beendesignatedtobetheZandWchromosomes.Intheseorganismsthe
+   femaleshaveoneZandoneWchromosome,whereasmaleshaveapairof
+   Z-chromosomesbesidestheautosomes.
+
+[p21.B02  x 61-283  y 196-207]
+   4.6.1 Sex Determination in Humans
+
+[p21.B03  x 59-422  y 216-409]
+   Ithas already been mentioned that the sex determining mechanism in
+   case of humans is XY type.Outof23pairsofchromosomespresent,
+   22pairsareexactlysameinbothmalesandfemales:thesearethe
+   autosomes.A pair ofX-chromosomesarepresentin thefemale,whereas
+   thepresenceofanXandYchromosomearedeterminantofthemale
+   characteristic.During spermatogenesis among males,two types of
+   gametesareproduced.5opercentofthetotalspermproducedcarry
+   theX-chromosomeandtherest50percenthasY-chromosomebesides
+   the autosomes.Females,however,produce only one type of ovum with
+   anX-chromosome.Thereisanequalprobabilityoffertilisationofthe
+   ovumwiththespermcarryingeitherXorY chromosome.In case the
+   ovumfertiliseswithaspermcarryingX-chromosomethezygotedevelops
+   intoafemale(XX)andthefertilisationofovumwithY-chromosome
+   carrying sperm results into a male offspring.Thus,it is evident that it
+   isthegeneticmakeupofthespermthatdeterminesthesexofthechild.
+
+[p21.B04  x 59-421  y 423-460]
+   probability of either a male or afemalechild.Itisunfortunatethatin
+   our society women are blamed for giving birth to female children and
+   havebeenostracisedandill-treatedbecauseofthisfalsenotion.
+
+[p21.B05  x 60-300  y 474-487]
+   4.6.2 SexDetermination in HoneyBee
+
+[p21.B06  x 59-420  y 495-732]
+   The sex determination in honeybee is
+   based on the number of sets of
+   Parents
+   chromosomesanindividualreceives.An
+   offspring formed from the union ofa
+   sperm and an egg develops a safe male
+   Gametes:
+   (queen or worker).andan unf ert ili sed
+   eggdevelopsasamale(drone)bymeans
+   ofparthenogenesis.Thismeans that the
+   F,:
+   males have half the number of
+   chromosomesthanthatofafemale.The
+   females are diploidhaving32
+   chromosomes and males are haploid,i.e.,having 16 chromosomes.
+   Thisiscalledashaplodiploidsex-determinationsystemandhasspecial
+   characteristic features such as the males produce sperms by mitosis
+   (Figure4.13),theydonothavefatherand thuscannothavesons,but
+   haveagrandfatherandcanhavegrandsons.
+   Howis thesex-determinationmechanismdifferentinthebirds?
+   Isthespermortheeggresponsibleforthesexofthechicks?
+
+[p21.B07  x 507-531  y 508-527]
+   Male
+   16
+
+[p21.B08  x 374-408  y 510-529]
+   Female
+   32
+
+[p21.B09  x 374-409  y 535-546]
+   Meiosis
+
+[p21.B10  x 502-536  y 535-546]
+   Mitosis
+
+[p21.B11  x 362-397  y 561-568]
+   16
+   16
+
+[p21.B12  x 512-525  y 562-572]
+   16
+
+[p21.B13  x 500-535  y 588-608]
+   Female
+   32
+
+[p21.B14  x 298-520  y 590-626]
+   Male
+   16
+   Figure 4.13 Sex determination in honey bee
+
+[p21.B15  x 508-525  y 639-652]
+   71
+
+[p21.B16  x 277-335  y 777-787]
+   Reprint2026-27
+########## SOURCE PAGE 22 ##########
+
+[p22.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p22.B01  x 192-280  y 105-118]
+   4.7MUTATION
+
+[p22.B02  x 192-552  y 128-139]
+   Mutation is a phenomenon which results in alteration of DNA sequences
+
+[p22.B03  x 191-553  y 153-426]
+   ofan organism.In addition to recombination,mutation is another
+   phenomenonthatleadstovariationinDNA.
+   AsyouwilllearninChapter5,oneDNAhelixrunscontinuouslyfrom
+   oneendtotheotherineachchromatid,inahighlysupercoiledform.
+   Thereforeloss(deletions)orgain(insertion/duplication)ofasegmentof
+   DNA,result in alteration in chromosomes. Since genes are known to be
+   located on chromosomes,alteration in chromosomes results in
+   abnormalities or aberrations.Chromosomal
+   aberrationsarecommonlyobservedincancercells.
+   In addition tothe above,mutation also arise due
+   tochangeinasinglebasepairofDNA.Thisisknown
+   as point mutation.A classical example of such a
+   mutationissicklecellanemia.Deletionsandinsertions
+   ofbasepairsofDNA,causesframe-shiftmutations
+   (see Chapter 5).
+   The mechanism of mutation is beyond the scope
+   ofthis discussion,at thislevel.However,thereare
+   many chemical and physical factors that induce
+   mutations. These are referred to as mutagens. UV
+   radiation scan cause mutations in organisms-itis a
+   mutagen.
+
+[p22.B04  x 146-170  y 258-268]
+   Male
+
+[p22.B05  x 146-177  y 284-295]
+   female
+
+[p22.B06  x 146-218  y 312-324]
+   sex unspecified
+
+[p22.B07  x 147-237  y 340-350]
+   affected individuals
+
+[p22.B08  x 146-181  y 364-376]
+   mating
+
+[p22.B09  x 147-263  y 389-412]
+   mating between relatives
+   (consanguineous mating)
+
+[p22.B10  x 146-442  y 425-474]
+   parents above and
+   children below
+   4.8 GENETICDISORDERS
+   (inorderofbirth-left toright)
+   4.8.1 Pedigree Analysis
+
+[p22.B11  x 80-554  y 481-726]
+   The idea that disorders are inherited has been
+   prevailing in thehuman society since long. This was
+   based on the her it ability of certain characteristic
+   featuresinfamilies.After there discovery of Mendel's
+   work the practice of analysing inheritance pattern of
+   traits in human beings began.Since itis evident that
+   control crosses that can be performed in pea plant or
+   some other organisms,are not possible in case of
+   Figure 4.13 Symbols used in thehuman
+   human beings,study ofthe family history about
+   pedigree analysis
+   inheritance ofa particular trait provide san
+   alternative.Suchananalysisoftraitsinaseveralofgenerationsofafamily
+   is called thepedigreeanalysis.In the pedigree analysis the inheritance
+   ofaparticulartraitisrepresentedinthefamilytreeovergenerations.
+   Inhumangenetics.pedigree study provides a strong tool,which is
+   utilisedtotracetheinheritanceofaspecifictrait,abnormalityordisease.
+   Some ofthe important standard symbols used in the pedigree analysis
+   have been shown in Figure 4.13.
+   As you have studied in thischapter,eachandeveryfeatureinany
+   organism is controlled by one or the other gene located on the DNA present
+
+[p22.B12  x 146-257  y 489-511]
+   parents with male child
+   affected with disease
+
+[p22.B13  x 146-259  y 549-563]
+   five unaffected offspring
+
+[p22.B14  x 82-102  y 638-654]
+   72
+
+[p22.B15  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 23 ##########
+
+[p23.B00  x 60-239  y 80-88]
+   PRINCIPLES OFINHERITANCE AND VARIATION
+
+[p23.B01  x 59-422  y 105-181]
+   in thechromosome.DNAis the carrier ofgeneticinformation.Itishence
+   transmitted from one generation to the other without any change or
+   alteration.However,changesoralteration do takeplaceoccasionally.Such
+   analterationorchangeinthegeneticmaterialisreferredtoasmutation.
+   A number of disorders in human beings have been found to be associated
+   withtheinheritanceofchangedoralteredgenesorchromosomes.
+
+[p23.B02  x 61-222  y 195-207]
+   4.8.2MendelianDisorders
+
+[p23.B03  x 60-422  y 215-423]
+   Broadly,genetic disorders maybe grouped into two categories-Mendelian
+   disorder sand Chromosomal disorders.Mendeliandisordersaremainly
+   determined by alteration or mutation in thesinglegene.Thesedisorders
+   are transmitted to the offspring on the same lines as we have studied in
+   the principle ofinheritance.Thepattern ofinheritance of such Mendelian
+   disorderscanbetracedinafamilybythepedigreeanalysis.Mostcommon
+   andprevalentMendeliandisordersareHaemophilia,Cysticfibrosis,Sickle
+   cellanaemia,Colourblindness,Phenylketonuria,Thalassemia,etc.Itis
+   important to mention here that such Mendelian disorders maybe
+   dominantorrecessive.Bypedigree analysis one can easily understand
+   whetherthetraitinquestionisdominantorrecessive.Similarly.thetrait
+   mayalsobelinkedtothesexchromosomeasincaseofhaemophilia.Itis
+   evidentthatthisX-linkedrecessivetraitshowstransmissionfromcarrier
+   femaletomaleprogeny.ArepresentativepedigreeisshowninFigure4.14
+   for dominant andrecessivetraits.Discusswithyourteacheranddesign
+   pedigrees for characters linked to both autosomesandsexchromosome.
+
+[p23.B04  x 137-151  y 564-576]
+   (a)
+
+[p23.B05  x 406-420  y 564-577]
+   (b)
+
+[p23.B06  x 65-529  y 594-618]
+   Figure 4.14Representative pedigree analysis of(a)Autosomal dominant trait(forexample:
+   Myo tonic dystrophy)(b) Autosomal recessive trait (for example:Sickle-cell anaemia)
+
+[p23.B07  x 59-421  y 636-725]
+   ColourBlindness:Itisasex-linkedrecessivedisorderduetodefectin
+   either red or green cone of eye resulting in failure to discriminate between
+   red and green colour.Thisdefectisdue to mutation in certain genes
+   presentintheXchromosome.Itoccursinabout8per cent of males and
+   only aboutO.4percentoffemales.Thisisbecausethegenesthatleadto
+   red-greencolourblindnessareontheXchromosome.Maleshaveonly
+   oneXchromosomeandfemaleshavetwo.Thesonofawomanwhocarries
+
+[p23.B08  x 508-527  y 638-654]
+   73
+
+[p23.B09  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 24 ##########
+
+[p24.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p24.B01  x 191-554  y 104-322]
+   thegenehasa50percentchanceofbeingcolourblind.Themotheris
+   not herself colour blind because the gene is recessive.That means that its
+   effectissuppressedbyhermatchingdominantnormalgene.A daughter
+   will notnormallybecolourblind,unlesshermotheris a carrier and her
+   fatheriscolourblind.
+   Haemophilia:This sex linked recessive disease,which shows its
+   transmission from unaffected carrier female to some ofthe male progeny
+   hasbeenwidelystudied.In this disease,a single protein thatis apart of
+   thecascadeofproteinsinvolvedintheclottingofbloodisaffected.Dueto
+   this,inan affected individualasimplecutwillresultinnon-stopbleeding.
+   Theheterozygousfemale(carrier)forhaemophiliamaytransmit thedisease
+   tosons.Thepossibilityofafemalebecomingahaemophilicisextremely
+   rare because mother of such a female has to beat least carrier and the
+   father should behaemophilic(unviableinthelaterstageof life).Thefamily
+   pedigree of Queen Victoria shows a number of haemophilic descendents
+   asshewasacarrierofthedisease.
+   Sickle-cellanaemia:Thisisanautosomelinkedrecessivetraitthat
+
+[p24.B02  x 192-552  y 348-360]
+   single pair of allele,Hb and Hbs.Out of the three possible genotypes only
+
+[p24.B03  x 191-553  y 373-423]
+   Heterozygous (Hb*Hbs) individuals appear apparently unaffected but they
+   are carrier of thediseaseasthereis50percentprobabilityof transmission
+   ofthe mutant gene to theprogeny.thus exhibitingsickle-cell trait
+   (Figure 4.15).Thedefectis caused by the substitution of Glutamic acid
+
+[p24.B04  x 165-284  y 549-568]
+   .GAG...
+   NormalHb(A)gene
+   CTC..
+
+[p24.B05  x 344-481  y 549-568]
+   .GTG...
+   Sickle-cell Hb(S)gene
+   ...CAC..
+
+[p24.B06  x 211-282  y 595-604]
+   mRNA GAG
+
+[p24.B07  x 406-480  y 595-604]
+   mRNAGUG
+
+[p24.B08  x 83-102  y 638-654]
+   74
+
+[p24.B09  x 167-270  y 658-680]
+   2
+   5
+   6
+   HbA peptide
+
+[p24.B10  x 364-466  y 658-680]
+   6
+   2
+   HbS peptide
+
+[p24.B11  x 84-549  y 690-725]
+   Figure 4.15 Micro graph of the red blood cells and the amino acid composition of the relevant
+   portion ofβ-chainof haemoglobin:(a)From a normalindividual;(b) From an individual
+   with sickle-cellanaemia
+
+[p24.B12  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 25 ##########
+
+[p25.B00  x 60-239  y 80-88]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p25.B01  x 60-422  y 105-192]
+   (Glu)byValine(Val)atthesixthpositionofthebetaglobinchainofthe
+   haemoglobinmolecule.Thesubstitutionofaminoacidintheglobin
+   protein results due to the single base substitution at the sixth codon of
+   the beta glob in gene from GAG toGUG.Themutanthaemoglobinmolecule
+   under goes polymer is at ion under low oxygen tension causing the change
+   in the shape ofthe RBC from bic on cave disc to elongated sickle like
+   structure(Figure4.15).
+
+[p25.B02  x 60-422  y 199-260]
+   Phenylketonuria:Thisinbornerrorofmetabolismisalsoinheritedas
+   theautosomalrecessivetrait.The affected individual lack san enzyme
+   thatconvertstheaminoacidphenylalanineintotyrosine.As a result of
+   this phenylalanine is accumulated andconvertedintophenylpyruvic acid
+   andotherderivatives.Accumulationoftheseinbrainresultsinmental
+
+[p25.B03  x 61-172  y 274-288]
+   absorptionbykidney.
+
+[p25.B04  x 60-422  y 294-532]
+   Thalassemia:Thisisalsoanautosome-linkedrecessiveblooddisease
+   transmitted from parents to the offspring when both the partners are
+   unaffected carrier forthegene(orheterozygous).The defect could bedue
+   to either mutation or deletion which ultimately results in reduced rate of
+   synthesisofoneoftheglobinchains(aandβchains)thatmakeup
+   haemoglobin.Thiscausestheformationofabnormalhaemoglobin
+   molecules resulting into anaemia which is characteristic of thedisease.
+   Thalassemia can be classified according to which chain ofthe haemoglobin
+   moleculeisaffected.InoThalassemia,productionofaglobinchainis
+   affectedwhileinβThalassemia,productionofβglobinchainisaffected.
+   aThalassemiaiscontrolledbytwocloselylinkedgenesHBAlandHBA2
+   onchromosome16ofeachparentanditisobservedduetomutationor
+   deletion of one or more of thefourgenes.Themore genes affected,the
+   lessalphaglobinmoleculesproduced.WhileβThalassemia is controlled
+   byasinglegeneHBBonchromosome1lofeachparentandoccursdue
+   to mutation of one or both thegenes.Thalassemiadiffersfromsickle-cell
+   anaemia in that the former is a quantitative problem of synthesis ing too
+   few glob in molecules while the latter is a qualitative problem of
+   synthesisinganincorrectlyfunctioningglobin.
+
+[p25.B05  x 60-421  y 539-618]
+   4.8.3 Chromosomal Disorders
+   The chromosomal disorder son the other hand are caused due to absence
+   or excess or abnormal arrangement of one or more chromosomes.
+   Failure of segregation of chromatids during cell division cycle results
+   inthegainorlossofachromosome(s),calledaneuploidy.Forexample
+   Down's syndrome results in thegainofextracopyofchromosome21.
+
+[p25.B06  x 60-422  y 631-731]
+   humanfemales.Failureofcytokinesisaftertelophasestageofcell division
+   results in an increase in a whole set of chromosomes in an organismand,
+   this phenomenon is known aspolyploidy.Thiscondition is often seen in
+   plants.
+   Thetotalnumberofchromosomesinanormalhumancellis46
+   (23pairs).Outof these22 pairs are autosome san done pair of
+   chromosomesaresexchromosome.Sometimes,thoughrarely.eitheran
+   additional copy ofa chromosome maybe included in an individual or an
+
+[p25.B07  x 507-526  y 638-654]
+   75
+
+[p25.B08  x 277-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 26 ##########
+
+[p26.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p26.B01  x 317-383  y 121-130]
+   Broad flat face
+
+[p26.B02  x 150-231  y 121-171]
+   Flat back of head
+   Many“loops"on
+   finger tips
+   Palm crease
+
+[p26.B03  x 316-392  y 153-176]
+   Big and wrinkled
+   tongue
+
+[p26.B04  x 316-393  y 185-207]
+   Congenital heart
+   disease
+
+[p26.B05  x 464-480  y 208-219]
+   60
+
+[p26.B06  x 153-542  y 261-286]
+   Figure 4.16
+   A representative figure showing an individual inflicted with Down's
+   syndrome and the corresponding chromosomes ofthe individual
+
+[p26.B07  x 284-554  y 314-402]
+   individual may lack one of any one pair of
+   chromosomes.These situations are known as trisomy
+   or monosomy ofa chromosome,respectively.Such a
+   situation leads to very serious consequences in the
+   individual.Down's syndrome,Turner's syndrome,
+   Klinefelter's syndrome are common examples of
+   chromosomal disorders.
+
+[p26.B08  x 284-553  y 408-523]
+   Down'sSyndrome:Thecauseof thisgenetic disorder
+   is the presence of an additional copy of the
+   chromosome number 21(trisomyof21).This disorder
+   wasfirstdescribedbyLangdonDown(1866).The
+   affected individual is short stature dwi ths mall round
+   head.furrowed tongue and partially open mouth
+   (Figure 4.16).Palm is broad with characteristic palm
+   crease.Physical,psychomotor and mental
+   developmentisretarded.
+
+[p26.B09  x 212-228  y 484-497]
+   (b)
+
+[p26.B10  x 81-260  y 500-549]
+   (a)
+   Tall stature
+   Short stature and
+   with fem ini sed
+   under developed
+   character
+   feminine character
+
+[p26.B11  x 85-553  y 532-621]
+   Klinefelter's Syndrome: Thisgenetic disorder is also
+   caused duetothepresenceofanadditionalcopyofX
+   chromosome resulting into a karyotype of47,XXY.
+   Figure 4.17 Diagrammatic represe-
+   Suchanindividualhasoverallmasculinedevelopment,
+   nta tion of genetic disorders due tosex
+   however,the feminine development(development
+   chromosome compositioninhumans:
+   ofbreast,i.e.,Gynaecomastia)is also expressed
+   (a)Klinefelter Syndrome;(b) Turner's
+   (Figure 4.17a). Such individuals are sterile.
+   Syndrome
+
+[p26.B12  x 189-553  y 628-683]
+   Turner'sSyndrome:Sucha disorder is caused due
+   totheabsenceofoneoftheXchromosomes,i.e.,45withX0,Suchfemales
+   are sterile as ovaries are rudimentary besides other features including
+   lack of other secondarysexualcharacters(Figure 4.17b).
+
+[p26.B13  x 83-102  y 638-653]
+   76
+
+[p26.B14  x 277-336  y 776-787]
+   Reprint2026-27
+########## SOURCE PAGE 27 ##########
+
+[p27.B00  x 60-240  y 80-88]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p27.B01  x 208-278  y 118-130]
+   SUMMARY
+
+[p27.B02  x 74-413  y 141-312]
+   Genetics is a branch of biology which deals with principlesofinheritance
+   anditspractices.Progenyresemblingtheparentsinmorphological and
+   physiologicalfeatureshasattractedtheattentionofmanybiologists.
+   Mendel was the first to study this phenomenon systematically. While
+   studying the pattern ofinheritance in pea plants of contrasting
+   characters,Mendel proposed the principles ofinheritance,which are
+   today referred to as Mendel's Laws of Inheritance'.He proposed that
+   thefactors'(laternamed asgenes)regulatingthe characters are found
+   inpairs known as alleles.Heobserved that the expression ofthe
+   characters in the offspring follow a definite pattern indifferent-first
+   generations(F).second(F.)and so on.Some characters are dominant
+   over others.Thedominantcharacters are expressed when factors are
+   in heterozygous condition (Law of Dominance).The recessive characters
+   are only expressed in homozygous conditions.The characters never
+   blend in heterozygous condition.A recessive character that was not
+
+[p27.B03  x 74-413  y 323-722]
+   becomes homozygous.Hence,characters segregate while formation of
+   gametes (Law of Segregation).
+   Notallcharactersshowtruedominance.Somecharacters show
+   incomplete,and some showco-dominance.When Mendel studied the
+   inheritance oftwo characters together,itwas found that the factors
+   independently as sort and combine in all per mutation sand
+   combinations(LawofIndependentAssortment).Differentcombinations
+   of gametes are theoretically represented in a square tabular form known
+   as Punnett Square'.The factors(nowknown as gene) on chromosomes
+   regulating the characters are called the genotype and the physical
+   expression ofthe chr a rac ter sis called phenotype.
+   After knowing that the genes are located on thechromosomes,a
+   good correlation was drawn between Mendel'slaws:segregation and
+   assortmentofchromosomesduringmeiosis.TheMendel'slaws were
+   extendedintheformof'ChromosomalTheoryofInheritance'.Later,it
+   was found that Mendel's law of independent assortment does not hold
+   true for thegenesthatwerelocatedonthesamechromosomes.These
+   genes were called as linked genes 'Closely located genes assorted
+   together,and distantly located genes,due to recombination,assorted
+   independently.Linkage maps,therefore,corresponded to arrangement
+   of genes on a chromosome.
+   Many genes were linked to sexes also,and called as sex-linked
+   genes.The two sexes(maleand female)were found to have a set of
+   chromosomeswhichwerecommon,andanother set which was
+   different.Thechromosomeswhichweredifferentin two sexes were
+   named as sex chromosomes.The remaining set was named as
+   autosomes.In humans,anormalfemalehas 22pairsofautosomes
+   andapairofsexchromosomes(Xx).Amalehas22pairsofautosomes
+   and apairofsexchromosomeasXY.In chicken,sexchromosomesin
+   male are ZZ,and in females are ZW.
+   Mutation is defined as change in thegeneticmaterial.Apoint
+   mutationisachangeofasinglebasepairinDNA.Sickle-cellanemiais
+   causedduetochangeofonebaseinthegenecodingforbeta-chainof
+   hemoglobin.Inheritable mutations can be studied by generating a
+   pedigree ofa family.Somemutations involve changes in whole set of
+
+[p27.B04  x 507-526  y 638-653]
+   77
+
+[p27.B05  x 276-336  y 776-788]
+   Reprint2026-27
+########## SOURCE PAGE 28 ##########
+
+[p28.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p28.B01  x 201-540  y 108-201]
+   chromosomes(polyploidy)orchangein a subset of chromosome number
+   (aneuploidy). This helped in understanding the mutational basis of
+   geneticdisorders.Down'ssyndrome isdue to trisomy of chromosome 21.
+   where there isan extra copy of chromosome 21and consequently the
+   total number ofchromosomebecomes47.In Turner's syndrome,oneX
+   chromosome is missing and the sex chromosome is as Xo.and in
+   Klinefelter's syndrome,the condition isXXY.Thesecan be easily studied
+   by analysis ofKaryotypes.
+
+[p28.B02  x 303-448  y 225-251]
+   EXERCISES
+
+[p28.B03  x 194-557  y 268-707]
+   Mention the advantages of selectingpeaplantforexperimentbyMendel.
+   1.
+   Differentiatebetweenthefollowing-
+   2.
+   (a)Dominance and Recessive
+   (b)Homozygous and Heterozygous
+   (c)Monohybrid and Dihybrid.
+   A diploid organism is heterozygous for 4loci.howmany types of gametes
+   3.
+   can be produced?
+   Explain the Law of Dominance using a monohybrid cross.
+   4.
+   Define and design a test-cross.
+   5.
+   UsingaPunnettSquare,workoutthe distribution of phenotypic features
+   6.
+   in the first filial generation after across between a homozygous female
+   and a heterozygous male for a single locus.
+   When a cross in made between tall plantwithyellowseeds(TtYy)and
+   7.
+   tall plant with green seed(Ttyy).whatproportionsofphenotypein the
+   offspring could be expected tobe
+   (a) tall and green.
+   (b) dwarf and green.
+   Two heterozygous parents are crossed.If the two loci are linked what
+   8.
+   would be the distribution of phenotypic features inF,generation fora
+   dibybrid cross?
+   Briefly mention the contribution of T.H.Morgan in genetics.
+   9.
+   What is pedigree analysis?Suggest how such an analysis,can be useful.
+   10.
+   How is sex determined in human beings?
+   11.
+   A child hasbloodgroupO.IfthefatherhasbloodgroupAandmother
+   12.
+   bloodgroupB,workoutthegenotypesof the parents and the possible
+   genotypes of the other offsprings.
+   13.Explainthefollowingtermswithexample
+   (a) Co-dominance
+   (b)Incomplete dominance
+   Whatispointmutation?Give oneexample.
+   14.
+   Who had proposed thechromosomaltheoryoftheinheritance?
+   15.
+
+[p28.B04  x 82-102  y 638-654]
+   78
+
+[p28.B05  x 195-542  y 714-725]
+   Mentionanytwoautosomalgeneticdisorderswiththeirsymptoms.
+   16.
+
+[p28.B06  x 277-335  y 777-787]
+   Reprint2026-27

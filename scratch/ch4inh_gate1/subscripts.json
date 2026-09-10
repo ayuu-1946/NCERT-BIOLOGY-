@@ -1,0 +1,400 @@
+[
+ {
+  "page": 2,
+  "line": 20,
+  "text": "wasmadeanF.R.S.in1959.",
+  "base": 73,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 5,
+  "line": 47,
+  "text": "progeny or the F,.Mendel observed that all",
+  "base": 79,
+  "cap": 44,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 5,
+  "line": 51,
+  "text": "of traits-he found that theF,always",
+  "base": 78,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 5,
+  "line": 60,
+  "text": "the F,generation was now expressed.The",
+  "base": 72,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 5,
+  "line": 68,
+  "text": "only one oftheparental traitswasexpressed intheF,generationwhile at",
+  "base": 74,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [
+   {
+    "x": 665,
+    "Fscore": 0.5462961792945862,
+    "digit": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 5,
+  "line": 70,
+  "text": "contrastingtraitsdidnot showanyblending ateitherF,orF,stage.",
+  "base": 77,
+  "cap": 40,
+  "expected": 2,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 6,
+  "line": 18,
+  "text": "F,generation",
+  "base": 75,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [
+   {
+    "x": 41,
+    "Fscore": 0.6257484555244446,
+    "digit": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 6,
+  "line": 29,
+  "text": "F,stage and the small alphabetfor",
+  "base": 74,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 6,
+  "line": 32,
+  "text": "F,generation",
+  "base": 67,
+  "cap": 37,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 6,
+  "line": 52,
+  "text": "factors,onedominatestheother(asin theF,)andhenceiscalled the",
+  "base": 75,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 7,
+  "line": 19,
+  "text": "F,generation",
+  "base": 82,
+  "cap": 59,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 7,
+  "line": 40,
+  "text": "of the zygotes,the F,and F,plants can be",
+  "base": 77,
+  "cap": 44,
+  "expected": 2,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 8,
+  "line": 11,
+  "text": "dominanceofonecharacterovertheotherthatalltheF,aretall(though",
+  "base": 72,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 8,
+  "line": 19,
+  "text": "Mendel self-pollinated theFplantsandfoundthatdwarf F,plants",
+  "base": 68,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 8,
+  "line": 26,
+  "text": "or F,has TT or Tt composition, cannot be predicted.Therefore,to determine",
+  "base": 68,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 8,
+  "line": 27,
+  "text": "the genotype of a tall plant at F,Mendel crossed the tall plant from F",
+  "base": 85,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 9,
+  "line": 38,
+  "text": "theparental charactersinamonohybridcrossintheF,and theexpression",
+  "base": 72,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 9,
+  "line": 39,
+  "text": "ofboth intheF.It alsoexplains theproportion of3:1obtained atthe F",
+  "base": 71,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 9,
+  "line": 44,
+  "text": "though oneof these isnotseenattheF,stage.Thoughtheparentscontain",
+  "base": 74,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 10,
+  "line": 14,
+  "text": "F,generation",
+  "base": 76,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 10,
+  "line": 15,
+  "text": "breedingwhite-floweredplants(rr).theF,(Rr)was",
+  "base": 80,
+  "cap": 52,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 10,
+  "line": 16,
+  "text": "pink (Figure 4.6).When the F,wasself-pollinated",
+  "base": 74,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 10,
+  "line": 18,
+  "text": "the F,resulted in the followingratio 1 (RR)Red:2",
+  "base": 72,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 10,
+  "line": 30,
+  "text": "F,generation",
+  "base": 65,
+  "cap": 34,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 11,
+  "line": 11,
+  "text": "Tillnowwewere discussingcrosseswheretheF,resembledeitherof the",
+  "base": 73,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 11,
+  "line": 13,
+  "text": "in the caseof co-dominance theF,generationresemblesbothparents.A",
+  "base": 73,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 12,
+  "line": 38,
+  "text": "RYandryuniteonfertilisation toproducetheF,hybridRrYy.When",
+  "base": 64,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 12,
+  "line": 39,
+  "text": "MendelselfhybridisedtheF,plantshefound that3/4thofFplantshad",
+  "base": 70,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 13,
+  "line": 12,
+  "text": "F,generation",
+  "base": 74,
+  "cap": 37,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 14,
+  "line": 17,
+  "text": "theproduction ofeggs andpollen in theF,RrYyplant.Considerthe",
+  "base": 73,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 14,
+  "line": 32,
+  "text": "at the F,stage and fill in the format given? Is the genotypic ratio",
+  "base": 73,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [
+   {
+    "x": 714,
+    "Fscore": 0.546296238899231,
+    "digit": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 17,
+  "line": 27,
+  "text": "F,progeny.He observed that the twogenes did not segregate independently",
+  "base": 69,
+  "cap": 40,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 17,
+  "line": 28,
+  "text": "ofeachotherandtheF,ratiodeviatedverysignificantlyfromthe9:3:3:1",
+  "base": 68,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 18,
+  "line": 26,
+  "text": "F,generation",
+  "base": 69,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 18,
+  "line": 63,
+  "text": "F,generation",
+  "base": 81,
+  "cap": 46,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 21,
+  "line": 47,
+  "text": "F,:",
+  "base": 60,
+  "cap": 31,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 27,
+  "line": 12,
+  "text": "generations(F).second(F.)and so on.Some characters are dominant",
+  "base": 71,
+  "cap": 43,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 28,
+  "line": 36,
+  "text": "would be thedistribution ofphenotypicfeatures inF,generation fora",
+  "base": 72,
+  "cap": 37,
+  "expected": 1,
+  "glyphs": [],
+  "nF": 0
+ }
+]
