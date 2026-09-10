@@ -1,0 +1,78 @@
+########## SOURCE PAGE 16 ##########
+
+[p16.B00  x 515-553  y 79-90]
+   BIOLOGY
+
+[p16.B01  x 193-531  y 104-127]
+   Table 4.3:A Comparison between the Behaviour of Chromosomes
+   and Genes
+
+[p16.B02  x 274-283  y 137-147]
+   A
+
+[p16.B03  x 454-463  y 137-146]
+   B
+
+[p16.B04  x 196-263  y 154-166]
+   Occur in pairs
+
+[p16.B05  x 367-434  y 154-165]
+   Occur inpairs
+
+[p16.B06  x 195-551  y 171-235]
+   Segregate at the time of gamete
+   Segregate at gamete formation and only
+   formation such that only one ofeach
+   one ofeach pair is transmitted to a
+   gamete
+   pair is transmitted to a gamete
+   Independent pairs segregate
+   One pair seg reg a tes independently of
+   independently ofeach other
+   another pair
+
+[p16.B07  x 204-542  y 241-267]
+   Can you tell which of these columns A orB represent the chromosome
+   andwhichrepresentsthegene?Howdidyoudecide?
+
+[p16.B08  x 191-553  y 276-361]
+   During Anaphase of meiosis I,thetwo chromosome pairs can align at
+   the meta phase plate independently of each other(Figure 4.9).To
+   understand this,compare the chromosomes of four different colour in
+   the left and right columns.In theleftcolumn(Possibility I) orange and
+   green is segregating together. But in the right hand column (Possibility
+   I1) the orange chromosome is segregating with thered chromosomes.
+
+[p16.B09  x 209-551  y 372-448]
+   Possibility I
+   Possibility II
+   One long orange and short green
+   One long orange and short red
+   chromosome and long yellow and
+   chromosome and long yellow and
+   short red chromosome at the
+   short green chromosome at the
+   same pole
+   same pole
+   MeiosisI-anaphase
+   MeiosisI-anaphase
+
+[p16.B10  x 410-512  y 532-543]
+   Meiosis II-anaphase
+
+[p16.B11  x 224-326  y 532-544]
+   Meiosis II-anaphase
+
+[p16.B12  x 241-524  y 623-728]
+   Germ cells
+   []
+   Figure4.9Independentassortmentofchromosomes
+
+[p16.B13  x 250-301  y 623-633]
+   Germ cells
+
+[p16.B14  x 83-102  y 638-654]
+   66
+
+[p16.B15  x 277-336  y 776-787]
+   Reprint2026-27

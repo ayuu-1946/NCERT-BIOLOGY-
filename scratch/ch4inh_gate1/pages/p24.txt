@@ -1,0 +1,70 @@
+########## SOURCE PAGE 24 ##########
+
+[p24.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p24.B01  x 191-554  y 104-322]
+   thegenehasa50percentchanceofbeingcolourblind.Themotheris
+   not herself colour blind because the gene is recessive.That means that its
+   effectissuppressedbyhermatchingdominantnormalgene.A daughter
+   will notnormallybecolourblind,unlesshermotheris a carrier and her
+   fatheriscolourblind.
+   Haemophilia:This sex linked recessive disease,which shows its
+   transmission from unaffected carrier female to some ofthe male progeny
+   hasbeenwidelystudied.In this disease,a single protein thatis apart of
+   thecascadeofproteinsinvolvedintheclottingofbloodisaffected.Dueto
+   this,inan affected individualasimplecutwillresultinnon-stopbleeding.
+   Theheterozygousfemale(carrier)forhaemophiliamaytransmit thedisease
+   tosons.Thepossibilityofafemalebecomingahaemophilicisextremely
+   rare because mother of such a female has to beat least carrier and the
+   father should behaemophilic(unviableinthelaterstageof life).Thefamily
+   pedigree of Queen Victoria shows a number of haemophilic descendents
+   asshewasacarrierofthedisease.
+   Sickle-cellanaemia:Thisisanautosomelinkedrecessivetraitthat
+
+[p24.B02  x 192-552  y 348-360]
+   single pair of allele,Hb and Hbs.Out of the three possible genotypes only
+
+[p24.B03  x 191-553  y 373-423]
+   Heterozygous (Hb*Hbs) individuals appear apparently unaffected but they
+   are carrier of thediseaseasthereis50percentprobabilityof transmission
+   ofthe mutant gene to theprogeny.thus exhibitingsickle-cell trait
+   (Figure 4.15).Thedefectis caused by the substitution of Glutamic acid
+
+[p24.B04  x 165-284  y 549-568]
+   .GAG...
+   NormalHb(A)gene
+   CTC..
+
+[p24.B05  x 344-481  y 549-568]
+   .GTG...
+   Sickle-cell Hb(S)gene
+   ...CAC..
+
+[p24.B06  x 211-282  y 595-604]
+   mRNA GAG
+
+[p24.B07  x 406-480  y 595-604]
+   mRNAGUG
+
+[p24.B08  x 83-102  y 638-654]
+   74
+
+[p24.B09  x 167-270  y 658-680]
+   2
+   5
+   6
+   HbA peptide
+
+[p24.B10  x 364-466  y 658-680]
+   6
+   2
+   HbS peptide
+
+[p24.B11  x 84-549  y 690-725]
+   Figure 4.15 Micro graph of the red blood cells and the amino acid composition of the relevant
+   portion ofβ-chainof haemoglobin:(a)From a normalindividual;(b) From an individual
+   with sickle-cellanaemia
+
+[p24.B12  x 277-336  y 776-788]
+   Reprint2026-27

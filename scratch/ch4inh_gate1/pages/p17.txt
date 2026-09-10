@@ -1,0 +1,66 @@
+########## SOURCE PAGE 17 ##########
+
+[p17.B00  x 60-239  y 80-88]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p17.B01  x 58-529  y 106-350]
+   Sutton and Boveri argued that the pairing and separation ofa
+   pair of chromosomes would lead to the segregation of apair of
+   factorstheycarried.Suttonunitedtheknowledgeofchromosomal
+   segregation with Mendelian principles and called it the
+   chromosomal theoryofinheritance.
+   Following this synthesis ofideas,experimental verification of
+   the chromosomal theoryofinheritance by Thomas Hunt Morgan
+   andhiscolleagues,led to discovering the basis for the variation
+   Figure4.10Drosophila
+   melanogaster(a)Male
+   fruitflies,Drosophilamelanogaster(Figure4.10),whichwere
+   (b)Female
+   foundverysuitableforsuchstudies.Theycouldbegrownon
+   simplesyntheticmediuminthelaboratory.Theycompletetheirlife
+   cycle in about two weeks,and a single mating could produce a large
+   numberofprogenyflies.Also,therewas a clear differentiation of the
+   sexes-themaleandfemalefliesareeasilydistinguishable.Also,it
+   has many types of hereditary variations that can be seen with low
+   power microscopes.
+
+[p17.B02  x 429-443  y 204-215]
+   (a)
+
+[p17.B03  x 490-504  y 204-216]
+   (b)
+
+[p17.B04  x 60-269  y 363-376]
+   4.3.3 Linkage and Recombination
+
+[p17.B05  x 59-422  y 384-719]
+   Morgan carried out several dihybrid crosses in Drosophila to study genes
+   thatweresex-linked.Thecrossesweresimilartothedihybridcrossescarried
+   outbyMendelinpeas.ForexampleMorganhybridisedyellow-bodied,
+   white-eyedfemalestobrown-bodied,red-eyedmalesandintercrossedtheir
+   F,progeny.He observed that the two genes did not segregate independently
+   ofeachotherandtheF,ratiodeviatedverysignificantlyfromthe9:3:3:1
+   ratio(expectedwhenthetwogenesareindependent).
+   Morgan and his group knew that the genes were located on theX
+   chromosome(Section 4.4)and saw quickly that when the two genes in a
+   dihybridcrossweresituatedonthesamechromosome,theproportion
+   ofparentalgenecombinationsweremuchhigherthanthenon-parental
+   type.Morgan attributed this due to the physical association or linkage
+   ofthe two gene sand coined the term linkage to describe this physical
+   association of gene son a chromosome and the term recombination to
+   describe the generation ofnon-parentalgene combinations(Figure 4.11).
+   Morgan and his group also found that even when genes were grouped
+   on the same chromosome,some genes were very tightly linked (showed
+   verylowrecombination)(Figure4.11,CrossA)whileotherswereloosely
+   linked (showed higher recombination)(Figure 4.1l,Cross B).For
+   example he found that the genes white and yellow were very tightly linked
+   andshowedonly1.3percentrecombinationwhilewhiteandminiature
+   wingshowed37.2percentrecombination.HisstudentAlfred
+   Sturtevant used the frequency of recombination between gene pairs
+   on the same chromosome as a measure of the distance between genes
+
+[p17.B06  x 508-526  y 639-654]
+   67
+
+[p17.B07  x 277-336  y 776-788]
+   Reprint2026-27

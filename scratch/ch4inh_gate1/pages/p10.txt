@@ -1,0 +1,102 @@
+########## SOURCE PAGE 10 ##########
+
+[p10.B00  x 515-553  y 79-90]
+   BIOLOGY
+
+[p10.B01  x 313-489  y 106-116]
+   4.2.2.1IncompleteDominance
+
+[p10.B02  x 77-135  y 118-129]
+   P generation
+
+[p10.B03  x 191-553  y 124-672]
+   When experiments on peas were repeated using other
+   traitsinotherplants,itwasfoundthatsometimes
+   theFhad a phenotype that did not resemble either
+   ofthetwoparentsandwasinbetweenthetwo.The
+   inheritance of flower colour in the dog flower
+   (snapdragon orAntirrhinumsp.)isagoodexample
+   tounderstandincompletedominance.In a cross
+   betweentrue-breedingred-flowered(RR) and true-
+   breedingwhite-floweredplants(rr).theF,(Rr)was
+   pink (Figure 4.6).When the F,wasself-pollinated
+   the F,resulted in the following ratio 1 (RR)Red:2
+   (Rr)Pink:1 (rr) White.Here the genotype ratios were
+   exactly as we would expect in any mendelian
+   Gametes
+   monohybrid cross,but the phenotype ratios had
+   changedfromthe3:1dominant:recessiveratio.
+   What happened was that Rwa snot completely
+   dominant over rand this made it possible to
+   distinguish Rr as pink from RR(red)andrr(white).
+   Explanation of the concept of dominance:
+   Whatexactlyisdominance?Whyaresome alleles
+   dominantandsomerecessive?To tackle these
+   questions,we must understand what a gene does.
+   Everygene,asyou know bynow,contains the
+   information toexpressaparticulartrait.Ina
+   diploid organism,there are two copies ofeach
+   gene,i.e.,as a pair ofalleles.Now,these two alleles
+   need not alwaysbeidentical,asin aheterozygote.
+   Oneof them maybe different due to some changes
+   thatithasundergone(aboutwhichyouwillread
+   furtheron,and in the next chapter)whichmodifies
+   the information thatparticularallelecontains.
+   Let's take an example ofa gene that contains
+   the information for producing an enzyme.Now
+   there are two copies of thisgene,thetwo allelic
+   forms.Let us assume(as is more common) that
+   the normal allele produces the normal enzyme
+   thatis needed for the transformation ofa
+   substrateS.Theoretically.themodifiedallelecould be responsible for
+   production of-
+
+[p10.B04  x 141-180  y 147-157]
+   Red (RR)
+
+[p10.B05  x 210-252  y 147-157]
+   White(rr)
+
+[p10.B06  x 77-117  y 177-187]
+   Gametes
+
+[p10.B07  x 76-138  y 234-247]
+   F,generation
+
+[p10.B08  x 169-224  y 265-275]
+   Allpink(Rr)
+
+[p10.B09  x 77-118  y 299-308]
+   Gametes
+
+[p10.B10  x 188-200  y 341-348]
+   RR
+
+[p10.B11  x 160-171  y 370-377]
+   Rr
+
+[p10.B12  x 77-138  y 372-384]
+   F,generation
+
+[p10.B13  x 77-254  y 415-461]
+   Phenotypicratio:red:pink:white
+   1:2:
+   Genotypicratio:RR:Rr:rr
+   1:2:1
+
+[p10.B14  x 80-282  y 583-628]
+   Figure 4.6 Results ofmonohybrid cross in
+   the plant Snapdragon,where
+   one allele is in completely
+   dominant over the other allele
+
+[p10.B15  x 83-102  y 638-654]
+   60
+
+[p10.B16  x 218-427  y 678-723]
+   (i)the normal/less efficient enzyme,or
+   (i)a non-functional enzyme,or
+   (ii)no enzyme atall
+
+[p10.B17  x 277-335  y 777-787]
+   Reprint2026-27

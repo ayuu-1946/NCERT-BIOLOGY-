@@ -1,0 +1,58 @@
+########## SOURCE PAGE 23 ##########
+
+[p23.B00  x 60-239  y 80-88]
+   PRINCIPLES OFINHERITANCE AND VARIATION
+
+[p23.B01  x 59-422  y 105-181]
+   in thechromosome.DNAis the carrier ofgeneticinformation.Itishence
+   transmitted from one generation to the other without any change or
+   alteration.However,changesoralteration do takeplaceoccasionally.Such
+   analterationorchangeinthegeneticmaterialisreferredtoasmutation.
+   A number of disorders in human beings have been found to be associated
+   withtheinheritanceofchangedoralteredgenesorchromosomes.
+
+[p23.B02  x 61-222  y 195-207]
+   4.8.2MendelianDisorders
+
+[p23.B03  x 60-422  y 215-423]
+   Broadly,genetic disorders maybe grouped into two categories-Mendelian
+   disorder sand Chromosomal disorders.Mendeliandisordersaremainly
+   determined by alteration or mutation in thesinglegene.Thesedisorders
+   are transmitted to the offspring on the same lines as we have studied in
+   the principle ofinheritance.Thepattern ofinheritance of such Mendelian
+   disorderscanbetracedinafamilybythepedigreeanalysis.Mostcommon
+   andprevalentMendeliandisordersareHaemophilia,Cysticfibrosis,Sickle
+   cellanaemia,Colourblindness,Phenylketonuria,Thalassemia,etc.Itis
+   important to mention here that such Mendelian disorders maybe
+   dominantorrecessive.Bypedigree analysis one can easily understand
+   whetherthetraitinquestionisdominantorrecessive.Similarly.thetrait
+   mayalsobelinkedtothesexchromosomeasincaseofhaemophilia.Itis
+   evidentthatthisX-linkedrecessivetraitshowstransmissionfromcarrier
+   femaletomaleprogeny.ArepresentativepedigreeisshowninFigure4.14
+   for dominant andrecessivetraits.Discusswithyourteacheranddesign
+   pedigrees for characters linked to both autosomesandsexchromosome.
+
+[p23.B04  x 137-151  y 564-576]
+   (a)
+
+[p23.B05  x 406-420  y 564-577]
+   (b)
+
+[p23.B06  x 65-529  y 594-618]
+   Figure 4.14Representative pedigree analysis of(a)Autosomal dominant trait(forexample:
+   Myo tonic dystrophy)(b) Autosomal recessive trait (for example:Sickle-cell anaemia)
+
+[p23.B07  x 59-421  y 636-725]
+   ColourBlindness:Itisasex-linkedrecessivedisorderduetodefectin
+   either red or green cone of eye resulting in failure to discriminate between
+   red and green colour.Thisdefectisdue to mutation in certain genes
+   presentintheXchromosome.Itoccursinabout8per cent of males and
+   only aboutO.4percentoffemales.Thisisbecausethegenesthatleadto
+   red-greencolourblindnessareontheXchromosome.Maleshaveonly
+   oneXchromosomeandfemaleshavetwo.Thesonofawomanwhocarries
+
+[p23.B08  x 508-527  y 638-654]
+   73
+
+[p23.B09  x 277-336  y 776-788]
+   Reprint2026-27

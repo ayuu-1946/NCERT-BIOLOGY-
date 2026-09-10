@@ -1,0 +1,93 @@
+########## SOURCE PAGE 6 ##########
+
+[p06.B00  x 516-553  y 80-90]
+   BIOLOGY
+
+[p06.B01  x 191-553  y 105-733]
+   Based on these observations,
+   Mendel proposed that something
+   was being stably passed down,
+   unchanged,fromparent to offspring
+   through
+   thegametes,
+   over
+   successive generations.He called
+   these thingsasfactors'.Nowwe call
+   them asgenes.Genes,therefore,are
+   the unitsofinheritance.They
+   contain the information thatis
+   required to express a particular trait
+   in an organism.Geneswhich code
+   for apair of contrasting traits are
+   known as alleles,i.e.,they are
+   slightly different forms ofthe same
+   gene.
+   If we use alphabetical symbols
+   foreachgene,thenthecapitalletter
+   is used for the trait expressed at the
+   F,stage and the small alphabet for
+   theothertrait.Forexample,in case
+   of thecharacterofheight,isused
+   fortheTalltraitandtforthe'dwarf',
+   and T and tare allelesofeachother.
+   Hence,inplantsthepairofalleles
+   Dwarf
+   for height would be TT,Ttor tt.
+   Mendel also proposed that in a true
+   breeding.tallor dwarf pea variety
+   the allelic pair of genes for height are
+   identical or homozygous,TT and tt,respectively.TT and tt are called
+   the genotype ofthe plant while the descriptive terms tall and dwarf are
+   thephenotype.Whatthenwouldbethephenotypeofaplant that had a
+   genotype Tt?
+   As Mendel found the phenotype oft heF heterozygote Tt to be exactly
+   liketheTTparentinappearance,heproposedthatinapairofdissimilar
+   factors,onedominatestheother(asin theF,)andhenceiscalled the
+   dominantfactorwhiletheotherfactorisrecessive.InthiscaseT(for
+   tallness)isdominant overt(fordwarfness),thatisrecessive.Heobserved
+   identicalbehaviourforalltheothercharacters/trait-pairsthathestudied.
+   Itisconvenient(andlogical)tousethecapital and lower case of an
+   alphabetical symbol to remember this concept of dominance and
+   recessiveness.(Do notuseT for tall and d for dwarf because you will
+   find it difficult to remember whether Tan dda real lele soft he same
+   gene/characterornot).Allelescanbesimilarasinthecaseof homozygotes
+   TTandttorcanbedissimilarasinthecaseoftheheterozygoteTt.Since
+
+[p06.B02  x 158-196  y 142-152]
+   Parental
+
+[p06.B03  x 294-323  y 186-196]
+   Dwarf
+
+[p06.B04  x 220-238  y 187-196]
+   Tall
+
+[p06.B05  x 147-206  y 270-280]
+   F,generation
+
+[p06.B06  x 220-319  y 307-328]
+   Selfing
+   Tall
+   Tall
+
+[p06.B07  x 88-146  y 410-420]
+   F,generation
+
+[p06.B08  x 160-179  y 448-458]
+   Tall
+
+[p06.B09  x 282-301  y 448-458]
+   Tall
+
+[p06.B10  x 220-239  y 448-458]
+   Tall
+
+[p06.B11  x 137-340  y 473-496]
+   Figure 4.3 Diagrammatic representation
+   ofmonohybrid cross
+
+[p06.B12  x 83-102  y 638-654]
+   56
+
+[p06.B13  x 277-335  y 777-787]
+   Reprint2026-27

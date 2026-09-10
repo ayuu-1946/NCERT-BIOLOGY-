@@ -56,6 +56,101 @@ Tracking every chapter against the **v6 gated pass workflow** defined in `SUPREM
 
 ---
 
+## Chapter 4 (Class 12) — Principles of Inheritance and Variation — ▶️ GATE 1 CLOSED (2026-09-10); Gates 2 and 3 OPEN
+
+**Gate 1 closed is not chapter closed.** No script, no PDF, all 415 rows unticked. This chapter
+must not enter any Done tally; the repo totals were re-derived after this session (by counting the
+✅ rows, never incremented) and now read **25 / 32 — Class 11 18/19, Class 12 7/13**.
+
+### Environment (§0.2–0.3)
+
+The sandbox has no `/vercel/share/neetenv`; per the "closest available environment" instruction the
+venv was built at `/tmp/neetenv` (CPython 3.11.2) with reportlab 5.0.1 · pdfplumber 0.11.10 ·
+pymupdf 1.28.2 · Pillow 12.3.0, plus `rapidocr-onnxruntime` + `opencv-python-headless` (the
+ordinary `opencv-python` wheel cannot load `libGL.so.1` here) and `wordfreq`. Verified by printing
+`sys.version` and `sys.prefix` alongside the package versions before any source work.
+
+### Starting state
+
+`notes/class 12/Ch4_PrinciplesOfInheritanceAndVariation/` did not exist. The tracker row read
+"⬜ Not done".
+
+### The source is a scan — the fact that shaped the whole session
+
+`Chapter/class 12/Chapter 4 - Principles of Inheritance and Variation.pdf` is **not** a text PDF:
+all 28 pages are single 1105x1482 DeviceRGB page rasters and `page.get_text()` returns `''` on every
+one of them (checked page by page — it is the only chapter in `Chapter/class 12/` with 0 characters;
+the next-worst is Ch6 *Evolution*, also 0). There is no text layer, no outline and no embedded text.
+Everything below is therefore **OCR-derived**, and the OCR is the source of record.
+
+### Pass 1 — all five sessions ran, each closing on a machine-derived count
+
+| Session | Deliverable | Machine-derived count |
+|---|---|---|
+| `1-S` | three readings; OCR pipeline; residual-ink sweep | 415 Facts rows |
+| `1-H` | heading sweep, prose ignored | **26** heading rows (20 numbered 4.1–4.8.3 + 6 unnumbered) |
+| `1-O` | opener sweep, headings ignored | **21** opener rows (one per numbered section + the unit and chapter openers) |
+| `1-F` | figure session — **operator decision: no extraction**; 18 plates enumerated, captions verbatim, labels harvested from the scanned page | 18 caption rows + 18 label rows / **163** labels |
+| `1-Z` | exercise scan, summary classification, freeze, every count re-parsed, `_extract_labels` validation | contiguity `F001..F415`; 32 summary sentences (27 + 5); 16 exercises (12 + 4) |
+
+Three things the OCR made necessary, all recorded in `scratch/ch4inh_gate1/`:
+
+1. **A residual-ink sweep** (`band_scan.py`) re-read every horizontal band of page ink the line-level
+   detector never covered. It recovered eleven printed lines the OCR dropped outright — the unit
+   opener's "molecular biology was a consequent development…" clause, Crick's "friendship with J.D.
+   Watson, then a young man of 23…", the mango-seed question, "ABO blood groups are controlled by",
+   the p8 displayed binomial expansion `(1/2 T + 1/2 t)2 = … = 1/4 TT + 1/2 Tt + 1/4 tt`, "He
+   concluded that the genotype of the dwarfs was homozygous-tt", the whole test-cross definition
+   clause, four polygenic/pleiotropy/sex-determination clauses, "Turner's syndrome results due to
+   loss of an X chromosome in human females", and the Figure 4.11 caption's opening line.
+2. **F1 / F2 resolution.** The OCR flattens every printed subscript to a comma, so `F1` and `F2` both
+   arrive as `F,`. Each was resolved from the glyph below the baseline (`f_digits.py`, `all_subs.py`),
+   cross-checked against the sense of the sentence; `Filial1` / `Filial2` the same way.
+3. **Word-spacing repair** (`fix_spacing.py`) — the recogniser runs tightly-kerned words together; a
+   strict dictionary segmenter splits them and reports anything it cannot explain rather than guessing.
+
+### Gate 1 — closed 2026-09-10
+
+Earned by machine, not asserted. `scratch/ch4inh_gate1/build_inventory.py` writes the table, then
+re-parses the file it just wrote and derives every count from that parse, asserts ID contiguity and
+zero duplicate IDs, and runs `check_pdf.py`'s own imported `_extract_labels` over the finished file:
+**163 label strings across 16 figures, 0 within-figure duplicates, 0 phantom `Fig #` rows, 0 rows
+wrongly ticked at freeze.** Every count restated in the file (header table, Gate 1 block, censuses,
+coverage note) is substituted from that same parse, so no two copies of a number can disagree.
+
+### Figure decision — 18 plates, 0 extracted, 0 embedded
+
+The user directed that no figure be extracted for this chapter: the source is a scan, so every plate
+would reproduce as an illegible bitmap. This is §4.4's **third state** (operator omission), and it is
+documented the way that state requires — in the manifest with an explicit "not extracted (operator
+decision 2026-09-10)" annotation, in a chapter-level `FIGURE_DECISIONS.md`, and as a carry-over for
+the script's docstring. It is **not** flagged in the PDF as "figures requiring manual attention"
+(that heading is reserved for a plate that failed). Every caption and all 163 labels are Facts rows,
+which is what lets the text stand alone.
+
+### Source problems carried to Pass 2
+
+* everything is OCR-derived, so wording carries OCR-level uncertainty;
+* NCERT's own oddities kept verbatim — `Flouwer colour` (Table 4.1 row 2), `conditon` and
+  `chraracters` (summary), `Micro graph`, `Myo tonic dystrophy`, `in completely`, `Zw`, `Xx`,
+  `the x body`, `homozygous-tt`;
+* **the p3 contents box lists only six sections ending at "4.6 Genetic Disorders" while the printed
+  body runs to 4.8** — both inventoried as printed, body numbering authoritative for the PDF;
+* **two different plates are both printed as Figure 4.13** (honey bee on p21, pedigree symbols on
+  p22) — carried as `Fig 4.13a` / `Fig 4.13b`;
+* Figure 4.9 carries its meaning in colour (orange / green / red / yellow) — the only colour-dependent
+  plate, and its distinction is carried in words.
+
+### Closure accounting
+
+Deliverables present: **frozen inventory** (415 rows) + `FIGURE_DECISIONS.md`. Absent by design:
+script, PDF, `assets/`. `CHAPTER_TRACKER.md` was updated in the same session (row flipped from
+"⬜ Not done" to "▶️ Gate 1 CLOSED", and the header / Class 11 footer / Class 12 footer roll-ups
+re-derived by counting ✅ rows to **25 / 32 — Class 11 18/19, Class 12 7/13**; Ch4 is deliberately
+not counted, because Gate 1 is not Gate 3).
+
+---
+
 ## Chapter 5 (Class 11) — Morphology of Flowering Plants — ▶️ GATE 1 CLOSED (2026-09-09); Gates 2 and 3 OPEN
 
 **Gate 1 closed is not chapter closed.** No script, no PDF, all 280 rows unticked. This chapter

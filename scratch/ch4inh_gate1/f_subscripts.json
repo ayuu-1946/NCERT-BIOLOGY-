@@ -1,0 +1,1465 @@
+[
+ {
+  "page": 2,
+  "line": 20,
+  "text": "wasmadeanF.R.S.in1959.",
+  "base": 73,
+  "cap": 43,
+  "glyphs": [
+   {
+    "x": 445,
+    "digit": "'",
+    "score": 0.772,
+    "top4": [
+     [
+      "'",
+      0.772
+     ],
+     [
+      ",",
+      0.635
+     ],
+     [
+      ".",
+      0.521
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 5,
+  "line": 47,
+  "text": "progeny or the F,.Mendel observed that all",
+  "base": 79,
+  "cap": 43,
+  "glyphs": [
+   {
+    "x": 381,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 701,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 751,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1015,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1071,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1212,
+    "digit": ",",
+    "score": 0.642,
+    "top4": [
+     [
+      ",",
+      0.642
+     ],
+     [
+      "'",
+      0.583
+     ],
+     [
+      ":",
+      0.5
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1231,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 7
+ },
+ {
+  "page": 5,
+  "line": 51,
+  "text": "of traits-he found that theF,always",
+  "base": 78,
+  "cap": 43,
+  "glyphs": [
+   {
+    "x": 474,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 631,
+    "digit": "'",
+    "score": 0.768,
+    "top4": [
+     [
+      "'",
+      0.768
+     ],
+     [
+      ",",
+      0.615
+     ],
+     [
+      ".",
+      0.547
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 966,
+    "digit": "1",
+    "score": 0.667,
+    "top4": [
+     [
+      "1",
+      0.667
+     ],
+     [
+      "'",
+      0.588
+     ],
+     [
+      ":",
+      0.444
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1080,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 4
+ },
+ {
+  "page": 5,
+  "line": 60,
+  "text": "the F,generation was now expressed.The",
+  "base": 72,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 140,
+    "digit": "'",
+    "score": 0.458,
+    "top4": [
+     [
+      "'",
+      0.458
+     ],
+     [
+      ":",
+      0.444
+     ],
+     [
+      ";",
+      0.417
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1150,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 5,
+  "line": 68,
+  "text": "only one oftheparental traitswasexpressed intheF,generationwhile at",
+  "base": 74,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 300,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 651,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1227,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1430,
+    "digit": "1",
+    "score": 0.759,
+    "top4": [
+     [
+      "1",
+      0.759
+     ],
+     [
+      "'",
+      0.531
+     ],
+     [
+      ":",
+      0.442
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 4
+ },
+ {
+  "page": 5,
+  "line": 70,
+  "text": "contrastingtraitsdidnot showanyblending ateitherF,orF,stage.",
+  "base": 77,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 1536,
+    "digit": "1",
+    "score": 0.603,
+    "top4": [
+     [
+      "1",
+      0.603
+     ],
+     [
+      "'",
+      0.547
+     ],
+     [
+      ",",
+      0.466
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1681,
+    "digit": ":",
+    "score": 0.667,
+    "top4": [
+     [
+      ":",
+      0.667
+     ],
+     [
+      ";",
+      0.552
+     ],
+     [
+      "4",
+      0.466
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 6,
+  "line": 18,
+  "text": "F,generation",
+  "base": 62,
+  "cap": 33,
+  "glyphs": [
+   {
+    "x": 28,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 6,
+  "line": 29,
+  "text": "F,stage and the small alphabetfor",
+  "base": 74,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 34,
+    "digit": "1",
+    "score": 0.603,
+    "top4": [
+     [
+      "1",
+      0.603
+     ],
+     [
+      "'",
+      0.547
+     ],
+     [
+      ":",
+      0.444
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 631,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 6,
+  "line": 32,
+  "text": "F,generation",
+  "base": 63,
+  "cap": 34,
+  "glyphs": [
+   {
+    "x": 28,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 6,
+  "line": 52,
+  "text": "factors,onedominatestheother(asin theF,)andhenceiscalled the",
+  "base": 75,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 1263,
+    "digit": "1",
+    "score": 0.603,
+    "top4": [
+     [
+      "1",
+      0.603
+     ],
+     [
+      "'",
+      0.547
+     ],
+     [
+      ":",
+      0.444
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1460,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1900,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 3
+ },
+ {
+  "page": 7,
+  "line": 19,
+  "text": "F,generation",
+  "base": 68,
+  "cap": 37,
+  "glyphs": [
+   {
+    "x": 27,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 7,
+  "line": 40,
+  "text": "of the zygotes,the F,and F,plants can be",
+  "base": 77,
+  "cap": 44,
+  "glyphs": [
+   {
+    "x": 541,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 645,
+    "digit": "1",
+    "score": 0.627,
+    "top4": [
+     [
+      "1",
+      0.627
+     ],
+     [
+      "'",
+      0.564
+     ],
+     [
+      ":",
+      0.419
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 833,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 885,
+    "digit": ":",
+    "score": 0.519,
+    "top4": [
+     [
+      ":",
+      0.519
+     ],
+     [
+      ";",
+      0.5
+     ],
+     [
+      "4",
+      0.411
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1014,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1338,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 6
+ },
+ {
+  "page": 8,
+  "line": 11,
+  "text": "dominanceofonecharacterovertheotherthatalltheF,aretall(though",
+  "base": 72,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 384,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1529,
+    "digit": "1",
+    "score": 0.607,
+    "top4": [
+     [
+      "1",
+      0.607
+     ],
+     [
+      "'",
+      0.583
+     ],
+     [
+      ":",
+      0.5
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1775,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 3
+ },
+ {
+  "page": 8,
+  "line": 19,
+  "text": "Mendel self-pollinated theFplantsandfoundthatdwarf F,plants",
+  "base": 68,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 329,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 637,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 781,
+    "digit": ";",
+    "score": 0.567,
+    "top4": [
+     [
+      ";",
+      0.567
+     ],
+     [
+      ":",
+      0.5
+     ],
+     [
+      ",",
+      0.466
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1326,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1637,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1674,
+    "digit": ":",
+    "score": 0.688,
+    "top4": [
+     [
+      ":",
+      0.688
+     ],
+     [
+      ";",
+      0.655
+     ],
+     [
+      "4",
+      0.468
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 6
+ },
+ {
+  "page": 8,
+  "line": 26,
+  "text": "or F,has TT or Tt composition, cannot be predicted.Therefore,to determine",
+  "base": 68,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 94,
+    "digit": ":",
+    "score": 0.688,
+    "top4": [
+     [
+      ":",
+      0.688
+     ],
+     [
+      ";",
+      0.655
+     ],
+     [
+      ",",
+      0.461
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1024,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1236,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1366,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1418,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 5
+ },
+ {
+  "page": 8,
+  "line": 27,
+  "text": "the genotype of a tall plant at F,Mendel crossed the tall plant from F",
+  "base": 85,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 609,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 886,
+    "digit": ":",
+    "score": 0.75,
+    "top4": [
+     [
+      ":",
+      0.75
+     ],
+     [
+      ";",
+      0.606
+     ],
+     [
+      ",",
+      0.516
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1169,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1403,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1622,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1976,
+    "digit": ";",
+    "score": 0.545,
+    "top4": [
+     [
+      ";",
+      0.545
+     ],
+     [
+      "'",
+      0.512
+     ],
+     [
+      ",",
+      0.5
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 6
+ },
+ {
+  "page": 9,
+  "line": 38,
+  "text": "theparental charactersinamonohybridcrossintheF,and theexpression",
+  "base": 72,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 1445,
+    "digit": "1",
+    "score": 0.765,
+    "top4": [
+     [
+      "1",
+      0.765
+     ],
+     [
+      "'",
+      0.554
+     ],
+     [
+      ":",
+      0.429
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1602,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 9,
+  "line": 39,
+  "text": "ofboth intheF.It alsoexplains theproportion of3:1obtained atthe F",
+  "base": 71,
+  "cap": 43,
+  "glyphs": [
+   {
+    "x": 56,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1946,
+    "digit": ":",
+    "score": 0.714,
+    "top4": [
+     [
+      ":",
+      0.714
+     ],
+     [
+      ";",
+      0.586
+     ],
+     [
+      "4",
+      0.452
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 9,
+  "line": 44,
+  "text": "though oneof these isnotseenattheF,stage.Thoughtheparentscontain",
+  "base": 74,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 377,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1033,
+    "digit": "1",
+    "score": 0.827,
+    "top4": [
+     [
+      "1",
+      0.827
+     ],
+     [
+      "'",
+      0.561
+     ],
+     [
+      ":",
+      0.421
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 10,
+  "line": 14,
+  "text": "F,generation",
+  "base": 70,
+  "cap": 34,
+  "glyphs": [
+   {
+    "x": 31,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 10,
+  "line": 15,
+  "text": "breedingwhite-floweredplants(rr).theF,(Rr)was",
+  "base": 71,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 437,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 643,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 705,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 917,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 994,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1074,
+    "digit": "1",
+    "score": 0.827,
+    "top4": [
+     [
+      "1",
+      0.827
+     ],
+     [
+      "'",
+      0.561
+     ],
+     [
+      ":",
+      0.421
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1136,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1157,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1225,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 9
+ },
+ {
+  "page": 10,
+  "line": 16,
+  "text": "pink (Figure 4.6).When the F,wasself-pollinated",
+  "base": 74,
+  "cap": 43,
+  "glyphs": [
+   {
+    "x": 175,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 775,
+    "digit": "'",
+    "score": 0.716,
+    "top4": [
+     [
+      "'",
+      0.716
+     ],
+     [
+      ":",
+      0.5
+     ],
+     [
+      "1",
+      0.487
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 10,
+  "line": 18,
+  "text": "the F,resulted in the followingratio 1 (RR)Red:2",
+  "base": 72,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 127,
+    "digit": ":",
+    "score": 0.694,
+    "top4": [
+     [
+      ":",
+      0.694
+     ],
+     [
+      ";",
+      0.606
+     ],
+     [
+      ",",
+      0.516
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1004,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 10,
+  "line": 30,
+  "text": "F,generation",
+  "base": 65,
+  "cap": 34,
+  "glyphs": [
+   {
+    "x": 28,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 11,
+  "line": 11,
+  "text": "Tillnowwewere discussingcrosseswheretheF,resembledeitherof the",
+  "base": 73,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 38,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 96,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1309,
+    "digit": "'",
+    "score": 0.458,
+    "top4": [
+     [
+      "'",
+      0.458
+     ],
+     [
+      ":",
+      0.444
+     ],
+     [
+      ";",
+      0.417
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1656,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1903,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 5
+ },
+ {
+  "page": 11,
+  "line": 13,
+  "text": "in the caseof co-dominance theF,generationresemblesbothparents.A",
+  "base": 73,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 121,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 373,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 509,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 921,
+    "digit": "1",
+    "score": 0.667,
+    "top4": [
+     [
+      "1",
+      0.667
+     ],
+     [
+      "'",
+      0.588
+     ],
+     [
+      ":",
+      0.444
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1509,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1690,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 6
+ },
+ {
+  "page": 12,
+  "line": 38,
+  "text": "RYandryuniteonfertilisation toproducetheF,hybridRrYy.When",
+  "base": 64,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 1390,
+    "digit": "1",
+    "score": 0.667,
+    "top4": [
+     [
+      "1",
+      0.667
+     ],
+     [
+      "'",
+      0.588
+     ],
+     [
+      ":",
+      0.444
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1636,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 2
+ },
+ {
+  "page": 12,
+  "line": 39,
+  "text": "MendelselfhybridisedtheF,plantshefound that3/4thofFplantshad",
+  "base": 70,
+  "cap": 43,
+  "glyphs": [
+   {
+    "x": 1656,
+    "digit": ":",
+    "score": 0.667,
+    "top4": [
+     [
+      ":",
+      0.667
+     ],
+     [
+      ";",
+      0.552
+     ],
+     [
+      "4",
+      0.466
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 13,
+  "line": 12,
+  "text": "F,generation",
+  "base": 74,
+  "cap": 37,
+  "glyphs": [
+   {
+    "x": 34,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 14,
+  "line": 17,
+  "text": "theproduction ofeggs andpollen in theF,RrYyplant.Considerthe",
+  "base": 73,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 510,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 787,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1209,
+    "digit": ":",
+    "score": 0.419,
+    "top4": [
+     [
+      ":",
+      0.419
+     ],
+     [
+      ";",
+      0.403
+     ],
+     [
+      "'",
+      0.377
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 3
+ },
+ {
+  "page": 14,
+  "line": 32,
+  "text": "at the F,stage and fill in the format given? Is the genotypic ratio",
+  "base": 73,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 598,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 700,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 857,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 955,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1389,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 5
+ },
+ {
+  "page": 17,
+  "line": 27,
+  "text": "F,progeny.He observed that the twogenes did not segregate independently",
+  "base": 69,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 25,
+    "digit": "'",
+    "score": 0.568,
+    "top4": [
+     [
+      "'",
+      0.568
+     ],
+     [
+      ":",
+      0.5
+     ],
+     [
+      ";",
+      0.424
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 348,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 655,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 773,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 828,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1246,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1342,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 7
+ },
+ {
+  "page": 17,
+  "line": 28,
+  "text": "ofeachotherandtheF,ratiodeviatedverysignificantlyfromthe9:3:3:1",
+  "base": 68,
+  "cap": 40,
+  "glyphs": [
+   {
+    "x": 57,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 627,
+    "digit": ":",
+    "score": 0.714,
+    "top4": [
+     [
+      ":",
+      0.714
+     ],
+     [
+      ";",
+      0.586
+     ],
+     [
+      "4",
+      0.467
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 1999,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 3
+ },
+ {
+  "page": 18,
+  "line": 26,
+  "text": "F,generation",
+  "base": 69,
+  "cap": 43,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 18,
+  "line": 63,
+  "text": "F,generation",
+  "base": 75,
+  "cap": 46,
+  "glyphs": [],
+  "nF": 0
+ },
+ {
+  "page": 21,
+  "line": 47,
+  "text": "F,:",
+  "base": 60,
+  "cap": 31,
+  "glyphs": [
+   {
+    "x": 26,
+    "digit": "'",
+    "score": 0.683,
+    "top4": [
+     [
+      "'",
+      0.683
+     ],
+     [
+      ",",
+      0.676
+     ],
+     [
+      ".",
+      0.45
+     ]
+    ],
+    "art": null
+   }
+  ],
+  "nF": 1
+ },
+ {
+  "page": 27,
+  "line": 12,
+  "text": "generations(F).second(F.)and so on.Some characters are dominant",
+  "base": 71,
+  "cap": 37,
+  "glyphs": [
+   {
+    "x": 692,
+    "digit": ":",
+    "score": 0.75,
+    "top4": [
+     [
+      ":",
+      0.75
+     ],
+     [
+      ";",
+      0.688
+     ],
+     [
+      ",",
+      0.542
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 745,
+    "digit": "'",
+    "score": 0.753,
+    "top4": [
+     [
+      "'",
+      0.753
+     ],
+     [
+      "1",
+      0.6
+     ],
+     [
+      ",",
+      0.526
+     ]
+    ],
+    "art": null
+   },
+   {
+    "x": 865,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 3
+ },
+ {
+  "page": 28,
+  "line": 36,
+  "text": "would be thedistribution ofphenotypicfeatures inF,generation fora",
+  "base": 72,
+  "cap": 37,
+  "glyphs": [
+   {
+    "x": 135,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 751,
+    "digit": null,
+    "art": null
+   },
+   {
+    "x": 1403,
+    "digit": null,
+    "art": null
+   }
+  ],
+  "nF": 3
+ }
+]

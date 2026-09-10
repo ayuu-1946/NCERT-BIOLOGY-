@@ -1,0 +1,139 @@
+########## SOURCE PAGE 11 ##########
+
+[p11.B00  x 60-240  y 79-89]
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+[p11.B01  x 59-421  y 105-230]
+   Inthefirstcase,themodifiedalleleisequivalenttotheunmodified allele,
+   i.e.,itwillproducethesamephenotype/trait,i.e.,resultinthetransformation
+   ofsubstrateS.Such equivalentallelepairsareverycommon.But,if the
+   allele produces anon-functional enzyme ornoenzyme,thephenotypemay
+   be effected.Thephenotype/traitwill only be dependent on the functioning
+   ofthe unmodified allele.Theunmodified(functioning)allele,whichrepresents
+   the original phenotype is the dominant allele and the modified allele is
+   generallytherecessiveallele.Hence,intheexample above the recessive trait
+   isseenduetonon-functional enzyme or because no enzyme isproduced.
+
+[p11.B02  x 61-188  y 243-254]
+   4.2.2.2Co-dominance
+
+[p11.B03  x 59-421  y 264-319]
+   Till now we were discussingcrosseswheretheF,resembledeitherof the
+   twoparents(dominance)orwasin-between(incompletedominance).But,
+   in the case of co-dominance theF,generationresemblesbothparents.A
+   good example is different types of red blood cells that determine ABO
+
+[p11.B04  x 59-422  y 335-533]
+   thegene I.Theplasmamembrane of thered blood cells has sugar polymers
+   that protrude from its surface and the kind of sugar is controlled by the
+   gene.Thegene(has three allelesI,Pand i.The allelesPand Pproduce
+   a slightly different form of the sugar while alle lei does not produce any
+   sugar.Becausehumansarediploidorganisms,eachpersonpossesses
+   anytwoofthethreeIgenealleles.PandParecompletelydominantover
+   i.in otherwordswhenPand ia represent onlyPexpresses(becausei
+   does not produce any sugar),and when Pand iare present Pexpresses.
+   But when A and Pare present together they both express their own types
+   ofsugars:thisisbecauseof co-dominance.Hencered blood cells have
+   bothA and Btypesof sugars.Since there arethreedifferentalleles,there
+   aresixdifferentcombinationsofthesethreeallelesthatarepossible,and
+   therefore,atotalofsixdifferentgenotypesofthehumanABOblood types
+   (Table4.2).Howmanyphenotypesarepossible?
+
+[p11.B05  x 83-389  y 539-563]
+   Table 4.2:Table Showing the Genetic Basis of Blood Groups
+   in Human Population
+
+[p11.B06  x 88-223  y 571-595]
+   Allele from
+   Allele from
+   Parent 2
+   Parent 1
+
+[p11.B07  x 251-386  y 571-607]
+   Genotype of
+   Blood
+   offspring
+   types of
+   offspring
+
+[p11.B08  x 250-276  y 611-640]
+   IATA
+   IAIB
+
+[p11.B09  x 89-102  y 612-622]
+   IA
+
+[p11.B10  x 338-347  y 613-623]
+   A
+
+[p11.B11  x 167-179  y 613-621]
+   IA
+
+[p11.B12  x 88-102  y 628-640]
+   IA
+
+[p11.B13  x 166-180  y 629-640]
+   IB
+
+[p11.B14  x 337-354  y 629-641]
+   AB
+
+[p11.B15  x 508-526  y 638-654]
+   61
+
+[p11.B16  x 89-102  y 647-657]
+   IA
+
+[p11.B17  x 251-269  y 647-657]
+   IAi
+
+[p11.B18  x 338-347  y 647-657]
+   A
+
+[p11.B19  x 168-173  y 649-656]
+   i
+
+[p11.B20  x 250-276  y 663-676]
+   IAIB
+
+[p11.B21  x 89-102  y 664-674]
+   IB
+
+[p11.B22  x 167-179  y 664-675]
+   IA
+
+[p11.B23  x 337-354  y 664-676]
+   AB
+
+[p11.B24  x 88-103  y 680-692]
+   IB
+
+[p11.B25  x 166-180  y 681-692]
+   IB
+
+[p11.B26  x 251-277  y 681-692]
+   IBIB
+
+[p11.B27  x 337-348  y 681-693]
+   B
+
+[p11.B28  x 88-102  y 698-710]
+   IB
+
+[p11.B29  x 251-271  y 699-710]
+   IBi
+
+[p11.B30  x 338-347  y 700-710]
+   B
+
+[p11.B31  x 168-173  y 701-708]
+   i
+
+[p11.B32  x 251-263  y 717-727]
+   ii
+
+[p11.B33  x 339-347  y 717-728]
+   0
+
+[p11.B34  x 278-335  y 777-787]
+   Reprint2026-27
