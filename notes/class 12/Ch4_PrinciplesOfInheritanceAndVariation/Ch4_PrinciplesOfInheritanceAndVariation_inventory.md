@@ -1099,7 +1099,7 @@ One plate carries its meaning in colour: **Figure 4.9** (independent assortment 
 
 ### Linter verdict
 
-`check_pdf.py` exit 0 against the rebuilt PDF (Pass 2, 2026-09-10):
+`check_pdf.py` exit 0 against the rebuilt PDF (Pass 2, Ch19-style rewrite, 2026-09-10):
 
 ```
 [PASS] 1. Footer/header band                          - no text in margin bands
@@ -1108,9 +1108,9 @@ One plate carries its meaning in colour: **Figure 4.9** (independent assortment 
 [PASS] 5. Banned glyphs                                - no Unicode arrows / sub-superscripts / Greek / emoji
 [PASS] 6. Figure-label coverage                       - 163/163 labels in text; 0 partial; 0 missing
 [PASS] 7. Inventory fully ticked                       - all 376 rows ticked
-[PASS] 8. Page geometry                                - 14 pages, A4 portrait
-[PASS] 9. Orphaned headings                            - 62 banner headings all followed by content
-[PASS] 10. Badge plate not colliding                   - 87 plates, all clear
+[PASS] 8. Page geometry                                - 20 pages, A4 portrait
+[PASS] 9. Orphaned headings                            - all banner headings followed by content
+[PASS] 10. Badge plate not colliding                   - all plates clear
 [WARN] 4. No person photograph                         - false positive (substring match on "profile" / "portrait"); scientist profiles are text-only, no image embedded
 VERDICT: WARN   (0 fail, 2 warn)
 ```
