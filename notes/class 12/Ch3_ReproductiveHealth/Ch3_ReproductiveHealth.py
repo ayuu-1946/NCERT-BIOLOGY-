@@ -87,60 +87,33 @@ story.append(Spacer(1, 4))
 # =============================== 3.1 PROBLEMS AND STRATEGIES ==========================
 # ---- 3.1 Reproductive Health -- Problems and Strategies (F011-F030) ----
 story.append(heading("3.1", "REPRODUCTIVE HEALTH -- PROBLEMS AND STRATEGIES", 1))
-story.append(Paragraph("India moved early on reproductive health -- the timeline and goal as NCERT states:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Milestone / fact", "NCERT wording"],
-    ["<b>Programme launch</b>", "<b>India was amongst the first countries in the world</b> to initiate action plans at national level for total reproductive health; Summary puts it even stronger as <b>the first nation in the world</b>; called <b>family planning, initiated in 1951</b> and <b>periodically assessed over past decades</b>"],
-    ["<b>Current name</b>", "Improved programmes covering <b>wider reproduction-related areas</b> now run as <b>Reproductive and Child Health Care (RCH) programmes</b>"],
-    ["<b>Major tasks under RCH</b>", "<b>Creating awareness</b> about reproduction-related aspects and <b>providing facilities and support</b> for building a reproductively healthy society"],
-], col_widths=[1.6, 4.8])))
+story.append(Paragraph("India moved early on reproductive health -- timeline as NCERT states:", STYLES["Body"]))
+story.append(Paragraph("&bull; <b>Programme launch -- 1951:</b> <b>India was amongst the first countries in the world</b> (Summary: <b>the first nation</b>) to launch action plans at national level for total reproductive health as <b>family planning</b>; <b>periodically assessed over past decades</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Current name:</b> improved programmes covering <b>wider reproduction-related areas</b> now run as <b>Reproductive and Child Health Care (RCH) programmes</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Major tasks under RCH:</b> <b>creating awareness</b> about reproduction-related aspects and <b>providing facilities and support</b> for a reproductively healthy society.", STYLES["Bullet1"]))
 story.append(Spacer(1, 3))
 
 # ---- 3.1 Creating awareness (F016-F021) ----
 story.append(heading("3.1", "Creating awareness", 2))
 story.append(Paragraph(
-    "Under RCH, <b>creating awareness</b> and <b>providing facilities and support</b> are the two major tasks. "
-    "For awareness, different actors play distinct roles:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Who creates awareness", "How"],
-    ["<b>Governmental and non-governmental agencies</b>", "Steps through <b>audio-visual and print-media</b>"],
-    ["<b>Parents, close relatives, teachers, friends</b>", "Major role in <b>dissemination</b> of reproduction-related information"],
-    ["<b>Schools</b>", "<b>Sex education</b> encouraged -- gives right information, discourages <b>myths and misconceptions</b> about sex"],
-], col_widths=[2.3, 4.1])))
+    "Under RCH, <b>creating awareness</b> is a major task. Different actors play distinct roles:", STYLES["Body"]))
+story.append(Paragraph("&bull; <b>Governmental and non-governmental agencies</b> -- steps through <b>audio-visual and print-media</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Parents, close relatives, teachers, friends</b> -- major role in <b>dissemination</b> of reproduction-related information.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Schools</b> -- <b>sex education</b> encouraged, gives right information and discourages <b>myths and misconceptions</b> about sex.", STYLES["Bullet1"]))
 story.append(Paragraph("What information is given depends on the audience:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Audience", "Information to provide", "Intended outcome"],
-    ["<b>Adolescent age group</b> especially",
-     "<b>Reproductive organs, adolescence and related changes, safe and hygienic sexual practices, STDs, AIDS</b>",
-     "Lead a <b>reproductively healthy life</b>"],
-    ["<b>Fertile couples and those in marriageable age</b>",
-     "<b>Birth control options, care of pregnant mothers, post-natal care of mother and child, importance of breast feeding, equal opportunities for male and female child</b>",
-     "Bring up <b>socially conscious healthy families of desired size</b>"],
-    ["<b>General society</b>",
-     "Problems of <b>uncontrolled population growth</b> and social evils like <b>sex-abuse and sex-related crimes</b>",
-     "Enable people to take steps to prevent them and build a <b>socially responsible and healthy society</b>"],
-], col_widths=[1.9, 2.9, 1.8])))
+story.append(Paragraph("&bull; <b>Adolescent age group especially --</b> <b>reproductive organs, adolescence and related changes, safe and hygienic sexual practices, STDs, AIDS</b> -- to lead a <b>reproductively healthy life</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Fertile couples and those in marriageable age --</b> <b>birth control options, care of pregnant mothers, post-natal care of mother and child, importance of breast feeding, equal opportunities for male and female child</b> -- to bring up <b>socially conscious healthy families of desired size</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>General society --</b> problems of <b>uncontrolled population growth</b> and social evils like <b>sex-abuse and sex-related crimes</b> -- to enable people to prevent them and build a <b>socially responsible and healthy society</b>.", STYLES["Bullet1"]))
 story.append(Spacer(1, 3))
 
 # ---- 3.1 Infrastructure, programmes and research (F022-F030) ----
 story.append(heading("3.1", "Infrastructure, programmes and research", 2))
 story.append(Paragraph("Execution needs more than awareness -- it needs systems and science on the ground:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["What is required", "For what purpose", "Example from NCERT"],
-    ["<b>Strong infrastructural facilities, professional expertise and material support</b>",
-     "Provide <b>medical assistance and care</b> for reproduction-related problems",
-     "<b>Pregnancy, delivery, STDs, abortions, contraception, menstrual problems, infertility</b>"],
-    ["<b>Better techniques and new strategies from time to time</b>",
-     "More <b>efficient care and assistance</b>",
-     "Research on reproduction-related areas -- <b>governmental and non-governmental agencies</b> encourage and support it"],
-], col_widths=[2.2, 2.0, 2.4])))
+story.append(Paragraph("&bull; <b>Strong infrastructural facilities, professional expertise and material support</b> -- to provide <b>medical assistance and care for pregnancy, delivery, STDs, abortions, contraception, menstrual problems, infertility</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Better techniques and new strategies from time to time</b> -- for <b>more efficient care</b>; research on reproduction-related areas is <b>encouraged and supported by governmental and non-governmental agencies</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("Two programmes NCERT singles out as examples of that infrastructure in action:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Programme / law", "What it does"],
-    ["<b>Statutory ban on amniocentesis for sex-determination</b> (source prints <i>aminocentesis</i>)",
-     "Legally checks the increasing menace of <b>female foeticides</b>"],
-    ["<b>Massive child immunisation</b>", "Merits mention in this connection as a successful public-health programme"],
-], col_widths=[3.0, 3.4])))
+story.append(Paragraph("&bull; <b>Statutory ban on amniocentesis for sex-determination</b> (source prints <i>aminocentesis</i>) -- legally checks the menace of <b>female foeticides</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Massive child immunisation</b> -- merits mention as a successful public-health programme.", STYLES["Bullet1"]))
 story.append(keyterm(
     "<b>Amniocentesis:</b> <b>some of the amniotic fluid of the developing foetus is taken to analyse the fetal "
     "cells and dissolved substances</b>. This procedure is used to test for the presence of certain genetic disorders "
@@ -151,16 +124,13 @@ story.append(note(
     "<b>Saheli -- a new oral contraceptive for the females -- was developed by scientists at Central Drug Research "
     "Institute (CDRI) in Lucknow, India.</b>"))
 story.append(Paragraph("That the system works is visible in outcome indicators:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Indicator of improved reproductive health", "Trend / note"],
-    ["<b>Better awareness</b> about sex-related matters", "Up"],
-    ["<b>Medically assisted deliveries</b>", "Increased in number"],
-    ["<b>Post-natal care</b>", "Better -- <b>decreased MMR and IMR</b>"],
-    ["<b>Couples with small families</b>", "Increased in number"],
-    ["<b>Detection and cure of STDs</b>", "Better"],
-    ["<b>Overall medical facilities</b> for all sex-related problems", "Increased"],
-    ["<b>Assistance to infertile couples</b>", "Added in Summary as an extra indicator"],
-], col_widths=[3.6, 2.2])))
+story.append(Paragraph("&bull; <b>Better awareness</b> about sex-related matters -- up.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Medically assisted deliveries</b> -- increased in number.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Better post-natal care</b> -- <b>decreased MMR and IMR</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Couples with small families</b> -- increased in number.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Better detection and cure of STDs</b> -- better.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Overall medical facilities</b> for all sex-related problems -- increased.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Assistance to infertile couples</b> -- added in Summary as an extra indicator.", STYLES["Bullet1"]))
 story.append(Spacer(1, 4))
 
 # =============================== 3.2 POPULATION AND BIRTH CONTROL =====================
@@ -184,31 +154,21 @@ story.append(KeepTogether(data_table([
     ["<b>India</b>", "about <b>350 million</b> at independence (1947)", "close to the <b>billion mark</b>", "crossed <b>1.2 billion</b> in May 2011"],
 ], col_widths=[1.6, 1.6, 1.6, 1.6])))
 story.append(Paragraph("Why it exploded -- probable reasons NCERT lists:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Probable reason", "What changed"],
-    ["<b>Death rate</b>", "<b>Rapid decline</b>"],
-    ["<b>Maternal mortality rate (MMR)</b>", "<b>Rapid decline</b>"],
-    ["<b>Infant mortality rate (IMR)</b>", "<b>Rapid decline</b>"],
-    ["<b>Number of people in reproducible age</b>", "<b>Increase</b>"],
-], col_widths=[3.0, 2.8])))
+story.append(Paragraph("&bull; <b>Rapid decline in death rate</b>, <b>MMR</b> and <b>IMR</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Increase in number of people in reproducible age</b>.", STYLES["Bullet1"]))
 story.append(Paragraph(
-    "Through the <b>Reproductive Child Health (RCH) programme</b> the growth rate was brought down, but only marginally:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["2011 census report", "Meaning", "Consequence"],
-    ["<b>Less than 2 per cent, i.e., 20/1000/year</b>", "Still a <b>rapid increase</b> at this rate", "Could lead to <b>absolute scarcity of food, shelter and clothing</b> despite progress"],
-], col_widths=[1.9, 1.9, 2.6])))
+    "Through the <b>RCH programme</b> the growth rate was brought down, but only marginally -- <b>2011 census: less than 2 per cent (20/1000/year)</b> -- still a <b>rapid increase</b> that could lead to <b>absolute scarcity of food, shelter and clothing</b> despite progress.", STYLES["Body"]))
 story.append(Spacer(1, 3))
 
 # ---- 3.2 Steps to stabilise the population (F041-F045) ----
 story.append(heading("3.2", "Steps to stabilise the population", 2))
-story.append(Paragraph("Faced with explosive growth, the government was forced to act. NCERT ranks the steps as:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Priority / measure", "What NCERT says"],
-    ["<b>Most important step</b>", "<b>Motivate smaller families by using various contraceptive methods</b>"],
-    ["<b>Slogan and media</b>", "<b>Advertisements in media, posters/bills showing a happy couple with two children -- <i>Hum Do Hamare Do</i> (we two, our two)</b>; many <b>young, urban, working couples have even adopted an 'one child norm'</b>"],
-    ["<b>Law</b>", "<b>Statutory raising of marriageable age: female to 18 years, male to 21 years</b>"],
-    ["<b>Incentive</b>", "<b>Incentives given to couples with small families</b>"],
-], col_widths=[1.8, 4.8])))
+story.append(Paragraph("Faced with explosive growth, the government was forced to act:", STYLES["Body"]))
+story.append(process_flow([
+    "<b>Most important step -- motivate smaller families by using various contraceptive methods</b>.",
+    "Carry the message via <b>advertisements in media, posters/bills showing a happy couple with two children -- <i>Hum Do Hamare Do</i> (we two, our two)</b>; many <b>young, urban, working couples have even adopted an 'one child norm'</b>.",
+    "<b>Statutory raising of marriageable age: female to 18 years, male to 21 years</b>.",
+    "<b>Incentives given to couples with small families</b>.",
+]))
 story.append(Spacer(1, 3))
 
 # ---- 3.2 What makes an ideal contraceptive (F047-F049) ----
@@ -443,13 +403,10 @@ story.append(Spacer(1, 3))
 
 # ---- 3.2 Closing on contraceptive choice ----
 story.append(Paragraph("Putting contraception in perspective -- NCERT caveats at the end of 3.2:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Context point", "What NCERT says"],
-    ["<b>Who decides</b>", "<b>Selection and use should always be in consultation with qualified medical professionals</b>"],
-    ["<b>Nature of contraception</b>", "<b>Not regular requirements for maintenance of reproductive health</b>; practiced <b>against a natural event -- conception/pregnancy</b>; one is <b>forced to use them either to prevent or to delay/space pregnancy due to personal reasons</b>"],
-    ["<b>Population role</b>", "<b>Widespread use has significant role in checking uncontrolled growth of population</b>"],
-    ["<b>Caution -- possible ill-effects</b>", "<b>Nausea, abdominal pain, breakthrough bleeding, irregular menstrual bleeding or even breast cancer -- though not very significant, should not be totally ignored</b>"],
-], col_widths=[1.6, 4.8])))
+story.append(Paragraph("&bull; <b>Who decides:</b> selection and use should always be in <b>consultation with qualified medical professionals</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Nature:</b> <b>not regular requirements for maintenance of reproductive health</b>; practiced <b>against a natural event -- conception/pregnancy</b>; one is <b>forced to use them either to prevent or to delay/space pregnancy due to personal reasons</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Population role:</b> <b>widespread use has significant role in checking uncontrolled growth of population</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Caution -- possible ill-effects:</b> <b>nausea, abdominal pain, breakthrough bleeding, irregular menstrual bleeding or even breast cancer -- though not very significant, should not be totally ignored</b>.", STYLES["Bullet1"]))
 story.append(memory_aid(
     "Recall the seven NCERT contraceptive groups in order: <b>N-B-I-O-I-I-S</b> -- <b>N</b>atural, <b>B</b>arrier, <b>I</b>UDs, "
     "<b>O</b>ral pills, <b>I</b>njectables, <b>I</b>mplants, <b>S</b>urgical. Timings: pills <b>21 + 7</b> days, emergency "
@@ -462,26 +419,17 @@ story.append(heading("3.3", "MEDICAL TERMINATION OF PREGNANCY (MTP)", 1))
 story.append(keyterm(
     "<b>Intentional or voluntary termination of pregnancy before full term is called medical termination of pregnancy "
     "(MTP) or induced abortion</b> -- the opener defines the term used in its own section heading."))
-story.append(KeepTogether(data_table([
-    ["Scale / law", "What NCERT records"],
-    ["<b>Global scale</b>", "<b>Nearly 45 to 50 million MTPs performed in a year worldwide = 1/5th of total conceived pregnancies</b>; whether to accept/legalise is debated for <b>emotional, ethical, religious and social issues</b>"],
-    ["<b>Indian law</b>", "<b>Government of India legalised MTP in 1971 with strict conditions to avoid misuse</b>; restrictions important to <b>check indiscriminate and illegal female foeticides reported high in India</b>"],
-], col_widths=[1.6, 4.8])))
+story.append(Paragraph("&bull; <b>Global scale:</b> <b>nearly 45 to 50 million MTPs per year worldwide = 1/5th of total conceived pregnancies</b>; whether to accept/legalise is debated for <b>emotional, ethical, religious and social issues</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Indian law:</b> <b>Government of India legalised MTP in 1971 with strict conditions to avoid misuse</b>; restrictions important to <b>check indiscriminate and illegal female foeticides reported high in India</b>.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
 # ---- 3.3 Why MTP, and its safety window ----
 story.append(heading("3.3", "Why MTP, and when it is safest", 2))
-story.append(KeepTogether(data_table([
-    ["Question", "What NCERT answers"],
-    ["<b>Why MTP?</b>", "<b>To get rid of unwanted pregnancies</b> -- due to <b>casual unprotected intercourse, failure of contraceptive used during coitus, or rapes</b>; also <b>essential where continuation could be harmful or even fatal to mother or foetus or both</b>"],
-    ["<b>When is it safest?</b>", "<b>Relatively safe during first trimester -- upto 12 weeks</b>; <b>second trimester abortions are much more risky</b>"],
-], col_widths=[1.6, 4.8])))
-story.append(KeepTogether(data_table([
-    ["Disturbing / dangerous trend", "What it means"],
-    ["<b>Majority of MTPs performed illegally by unqualified quacks</b>", "<b>Not only unsafe but could be fatal</b>"],
-    ["<b>Misuse of amniocentesis to determine sex of unborn child</b>", "If <b>foetus found to be female, it is followed by MTP -- totally against what is legal</b>; dangerous for <b>young mother and foetus</b>"],
-    ["<b>Reversal</b>", "<b>Effective counselling to avoid unprotected coitus and on risk factors of illegal abortions</b>, plus <b>more health care facilities</b>, could reverse these trends"],
-], col_widths=[2.2, 4.2])))
+story.append(Paragraph("&bull; <b>Why MTP?</b> <b>To get rid of unwanted pregnancies</b> -- due to <b>casual unprotected intercourse, failure of contraceptive used during coitus, or rapes</b>; also <b>essential where continuation could be harmful or even fatal to mother or foetus or both</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>When is it safest?</b> <b>Relatively safe during first trimester -- upto 12 weeks</b>; <b>second trimester abortions are much more risky</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Majority of MTPs performed illegally by unqualified quacks</b> -- <b>not only unsafe but could be fatal</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Misuse of amniocentesis to determine sex of unborn child</b> -- if <b>foetus found female, followed by MTP -- totally against what is legal</b>; dangerous for <b>young mother and foetus</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Reversal:</b> <b>effective counselling to avoid unprotected coitus and on risk factors of illegal abortions</b>, plus <b>more health care facilities</b>, could reverse these trends.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
 # ---- 3.3 The MTP (Amendment) Act, 2017 ----
@@ -512,27 +460,18 @@ story.append(keyterm(
     "<b>Infections or diseases which are transmitted through sexual intercourse are collectively called sexually transmitted "
     "infections (STI) or venereal diseases (VD) or reproductive tract infections (RTI)</b> -- the opener defines the term used in "
     "its own heading."))
-story.append(KeepTogether(data_table([
-    ["STI facts NCERT lists", "Details"],
-    ["<b>Common examples</b> (8 named)",
-     "<b>Gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, hepatitis-B and HIV leading to AIDS</b> -- among these <b>HIV is most dangerous (Chapter 7)</b>"],
-    ["<b>Other routes for hepatitis-B and HIV</b>",
-     "Also transmitted by <b>sharing injection needles, surgical instruments with infected persons, transfusion of blood, or from infected mother to foetus</b>"],
-    ["<b>Curability</b>",
-     "<b>All except hepatitis-B, genital herpes and HIV are completely curable if detected early and treated properly</b>"],
-], col_widths=[1.8, 4.6])))
+story.append(Paragraph("&bull; <b>Common examples (8 named):</b> <b>gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, hepatitis-B and HIV leading to AIDS</b> -- among these <b>HIV is most dangerous (Chapter 7)</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Other routes for hepatitis-B and HIV:</b> also transmitted by <b>sharing injection needles, surgical instruments with infected persons, transfusion of blood, or from infected mother to foetus</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Curability:</b> <b>all except hepatitis-B, genital herpes and HIV are completely curable if detected early and treated properly</b>.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
 # ---- 3.4 Symptoms, stigma and complications ----
 story.append(heading("3.4", "Symptoms, stigma and complications", 2))
-story.append(KeepTogether(data_table([
-    ["Aspect", "What NCERT lists"],
-    ["<b>Early symptoms</b> (minor)", "<b>Itching, fluid discharge, slight pain, swellings, etc., in genital region</b>"],
-    ["<b>Asymptomatic cases</b>", "<b>Infected females may often be asymptomatic</b> and remain undetected for long"],
-    ["<b>Why timely treatment is deterred</b>", "<b>Absence or less significant early symptoms</b> plus <b>social stigma</b> attached to STIs deter infected persons from timely detection and proper treatment"],
-    ["<b>Late complications if untreated</b>", "<b>PID, abortions, still births, ectopic pregnancies, infertility or even cancer of reproductive tract</b> -- STIs are a <b>major threat to healthy society</b>; <b>prevention / early detection and cure given prime consideration under RCH</b>"],
-    ["<b>Most vulnerable age group</b>", "All persons vulnerable but <b>incidences very high among 15-24 years -- the age group to which you also belong</b>"],
-], col_widths=[1.9, 4.5])))
+story.append(Paragraph("&bull; <b>Early symptoms (minor):</b> <b>itching, fluid discharge, slight pain, swellings, etc., in genital region</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Asymptomatic cases:</b> <b>infected females may often be asymptomatic</b> and remain undetected for long.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Why timely treatment is deterred:</b> <b>absence or less significant early symptoms</b> plus <b>social stigma</b> attached to STIs deter infected persons from timely detection and proper treatment.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Late complications if untreated:</b> <b>PID, abortions, still births, ectopic pregnancies, infertility or even cancer of reproductive tract</b> -- STIs are a <b>major threat to healthy society</b>; <b>prevention / early detection and cure given prime consideration under RCH</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Most vulnerable age group:</b> all persons vulnerable but <b>incidences very high among 15-24 years -- the age group to which you also belong</b>.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
 # ---- 3.4 Prevention is possible ----
@@ -583,19 +522,11 @@ story.append(Spacer(1, 2))
 
 # ---- 3.5 AI / IUI and the limits of ART ----
 story.append(heading("3.5", "Artificial insemination and the limits of ART", 2))
-story.append(KeepTogether(data_table([
-    ["Technique", "When used", "How"],
-    ["<b>AI -- artificial insemination</b> / <b>IUI -- intra-uterine insemination</b>",
-     "Infertility due to <b>inability of male partner to inseminate the female</b> or <b>very low sperm counts</b>",
-     "<b>Semen from husband or healthy donor collected and artificially introduced into vagina or uterus (IUI)</b> of female"],
-], col_widths=[1.8, 2.0, 2.6])))
-story.append(Paragraph("Why it does not reach everyone:", STYLES["Body"]))
-story.append(KeepTogether(data_table([
-    ["Bottleneck", "What NCERT says"],
-    ["<b>Technical</b>", "<b>Extremely high precision handling by specialised professionals and expensive instrumentation required</b>"],
-    ["<b>Access</b>", "<b>Available only in very few centres in the country; affordable to only a limited number of people</b>"],
-    ["<b>Acceptance</b>", "<b>Emotional, religious and social factors are deterrents in adoption</b>"],
-], col_widths=[1.4, 5.0])))
+story.append(Paragraph("&bull; <b>AI -- artificial insemination / IUI -- intra-uterine insemination:</b> for infertility due to <b>inability of male partner to inseminate the female</b> or <b>very low sperm counts</b> -- <b>semen from husband or healthy donor artificially introduced into vagina or uterus (IUI)</b> of female.", STYLES["Bullet1"]))
+story.append(Paragraph("Why ART does not reach everyone:", STYLES["Body"]))
+story.append(Paragraph("&bull; <b>Technical:</b> <b>extremely high precision handling by specialised professionals and expensive instrumentation required</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Access:</b> <b>available only in very few centres in the country; affordable to only a limited number of people</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Acceptance:</b> <b>emotional, religious and social factors are deterrents in adoption</b>.", STYLES["Bullet1"]))
 story.append(note(
     "ZIFT vs IUT is a numbers test: <b>ZIFT -- zygote or early embryo upto 8 blastomeres -- into the fallopian tube; IUT -- embryos "
     "with more than 8 blastomeres -- into the uterus</b>. GIFT transfers an <b>unfertilised ovum</b>, IVF transfers an <b>embryo</b>, "
