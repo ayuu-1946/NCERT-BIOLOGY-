@@ -6,7 +6,7 @@ Unit: Class 12, Unit VI — Reproduction (chapters 2, 3, 4)
 | Stage | State |
 |---|---|
 | Pass 1 | ✅ complete — five sessions (1-S, 1-H, 1-O, 1-F, 1-Z), all with machine-derived counts |
-| **Gate 1** | ✅ **CLOSED (2026-09-12)** — inventory frozen at **162 rows `F001`–`F162`, contiguous, 0 gaps, 0 duplicate IDs**, 53/53 machine checks pass |
+| **Gate 1** | ✅ **CLOSED (2026-09-12)** — inventory frozen at **162 rows `F001`–`F162`, contiguous, 0 gaps, 0 duplicate IDs**, **62/62 machine checks pass** |
 | Pass 2 | ⬜ not started |
 | Gate 2 | ⬜ not started |
 | Pass 3 | ⬜ not started |
@@ -76,7 +76,7 @@ environmental, not a workaround for a missing library.
 ### Machine validation
 
 `scratch/ch3/validate_gate1.py` re-parses the **saved inventory file** (not the generator's
-in-memory rows) and asserts every Gate-1 criterion — **53/53 PASS**:
+in-memory rows) and asserts every Gate-1 criterion — **62/62 PASS**:
 
 - IDs contiguous, no gaps/dupes; `Type` casing normalised; every row unticked at freeze.
 - every header census equals a re-parse of the table, and the two `numpy`-free census lists
@@ -91,7 +91,7 @@ Reproduce with:
 
 ```bash
 .venv/bin/python scratch/ch3/freeze_inventory.py     # regenerate the frozen inventory from the row set
-.venv/bin/python scratch/ch3/validate_gate1.py       # 53/53 PASS
+.venv/bin/python scratch/ch3/validate_gate1.py       # 62/62 PASS
 ```
 
 ## Post-freeze cosmetic cleanup (2026-09-12, operator-approved)
@@ -116,7 +116,8 @@ removed. Everything removable was **duplication inside metadata**, never a fact:
 content changes are the 19 listed above, each a pure deletion of duplicated text. Type census,
 session counts, summary split (15+3), exercise split (15 COVERED + 3 GAP) and the
 `_extract_labels` parse (**2 labels / 2 figures, no doubling, no phantom row**) all unchanged.
-`scratch/ch3/validate_gate1.py` **53/53 PASS** after regeneration. Net effect: 44,451 -> 41,695
+`scratch/ch3/validate_gate1.py` **53/53 PASS** after regeneration (now **62/62** since the disposition
+checks were added). Net effect: 44,451 -> 41,695
 chars (6% smaller).
 
 **Do not re-add any of it** — removed on operator instruction; the text is in git history.
@@ -136,6 +137,45 @@ The exercise-gap table (18 rows) was also left intact: it reproduces the questio
 COVERED parts, which the master prompt forbids *in the PDF*, not in the inventory — here the
 question text is the audit evidence that every exercise is numbered and each COVERED verdict is the
 right one.
+
+## Pass 2 printing dispositions — what must NOT be printed (added 2026-09-12)
+
+The operator asked that the trivial, fact-free rows not waste space in the PDF. Two separate
+answers, both verified rather than assumed:
+
+1. **The inventory is never pasted into the PDF.** Rows are checklist items; the script rewrites
+   them in tutor style. Verified against the house style: Ch2's row `F013` reads
+   *"Scrotum maintains the low temperature of the testes ("2-2.5oC lower ...") necessary for
+   spermatogenesis."* and the shipped script renders it as running prose with bolded key terms
+   (`Ch2_HumanReproduction.py` lines 108-112). No row text carries over verbatim, so a trivial row
+   cannot leak space by itself.
+2. **"Rewrite" is not licence to print everything, so the inventory now names what gives way.**
+   Rule 3 allows exactly three cuts - a sentence restating an already-given fact, purely rhetorical
+   scene-setting, transitional filler - and each qualifying row is listed in the inventory's
+   **Pass 2 printing dispositions** with its reason:
+
+| Class | Rows | Instruction |
+|---|---|---|
+| **B - fold, never a standalone sentence** (11) | `F035` `F041` `F070` `F113` `F132` `F135` `F151` `F157`-`F160` | the fact must still appear, carried *inside* a neighbouring sentence, table cell or figure caption, so the tick stays honest |
+| **C - Rule 3 filler, never printed** (5) | `F005` `F010` `F046` `F053` `F063` | zero fact content beyond its neighbours; printing any of them would itself be the defect |
+| **A - normal content** (146) | the rest | prose, bullet, table cell or process step as the row's `Type` suggests |
+
+The five class C rows hold 503 characters of source sentence; all 16 disposed rows hold 1,311 - i.e.
+roughly 12-15 printed lines at most. **Honest size estimate: this is not what makes the PDF short.**
+The levers that move page count are the ones already in the Pass 2 brief: the seven contraceptive
+categories as one comparison table, the IUD/oral/injectable lists as table rows, the vasectomy /
+tubectomy / STI-precautions / MTP-grounds material as process flows, and one Quick Recap instead of a
+repeated summary. Target remains **≈ source page count (10 pp)**, and every page is inspected in
+Pass 3(a).
+
+**Tick convention (deliberate, and it changes check 7's meaning for 5 rows).** `check_pdf.py` check 7
+accepts `x` / `[x]` / `done` / `yes` / `✓` in the last cell and fails any other marker, so a class C row
+cannot be left blank without making Gate 2 un-passable. The inventory's tick legend therefore states
+that for a class C row `x` means *accounted for by Rule 3* - deliberately not printed - rather than
+"present in the PDF". That is a real reinterpretation, it is documented at the top of the file, and it
+is asserted by `validate_gate1.py` (which also checks that no `Figure labels:` row is ever disposed
+of: those two rows are the only thing check 6 can fail on, so disposing of them would silently disable
+the label check).
 
 ## Carry-overs for Pass 2 (found while looking at something else)
 
@@ -186,7 +226,7 @@ notes/class 12/Ch3_ReproductiveHealth/
 scratch/ch3/
   ch3_rows.py                           ← the row set (session-tagged, one tuple per row)
   freeze_inventory.py                   ← derives every count; assigns contiguous IDs
-  validate_gate1.py                     ← 53/53 Gate 1 machine checks
+  validate_gate1.py                     ← 62/62 Gate 1 machine checks
   ch3_source.txt, sentences.txt         ← extracted source text + the 143-sentence walk
   figs/grid_4x/p01,p04,p05,p06.png      ← mandatory 440 dpi / 5-point grids
   figs/contact_sheet.png, figs/seam/…   ← visual verification evidence

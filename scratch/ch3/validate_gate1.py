@@ -189,6 +189,43 @@ def main():
     check("no COVERED row reproduces an answer (classification only)",
           all("(no appendix entry)" in e[1] for e in cov))
 
+    # ---- Pass 2 printing dispositions (Rule 3) -----------------------------
+    disp = text.split("**Pass 2 printing dispositions (Rule 3).**")[1].split("**Exercise classification.")[0] \
+        if "**Pass 2 printing dispositions (Rule 3).**" in text else ""
+    check("dispositions block present in the Coverage note", bool(disp))
+    b_ids = re.findall(r"\*\*(F\d{3}(?:-F\d{3})?)\*\*", disp.split("Class C")[0]) if disp else []
+    c_ids = re.findall(r"\*\*(F\d{3}(?:-F\d{3})?)\*\*", disp.split("Class C")[1]) if "Class C" in disp else []
+    def _expand(tags):
+        out = []
+        for t in tags:
+            if "-" in t:
+                a, b2 = t.split("-")
+                out += [f"F{i:03d}" for i in range(int(a[1:]), int(b2[1:]) + 1)]
+            else:
+                out.append(t)
+        return out
+    B, Cc = _expand(b_ids), _expand(c_ids)
+    check("class B lists IDs and class C lists IDs",
+          len(B) > 0 and len(Cc) > 0, f"B={len(B)} C={len(Cc)}")
+    check("every disposed ID exists in the Facts table", all(i in ids for i in B + Cc),
+          str([i for i in B + Cc if i not in ids]))
+    check("no ID is in both classes", not (set(B) & set(Cc)), str(sorted(set(B) & set(Cc))))
+    check("no `Figure labels:` row is disposed of (it is the only thing check 6 can fail on)",
+          not any(by_id_i in Cc for by_id_i in
+                  [r[0] for r in rows if r[3].lower().startswith("figure labels")]),
+          "class C is clean of label rows")
+    m = re.search(r"\*\*Printing dispositions:\*\* (\d+) class B \(fold\) \+ (\d+) class C[^=]*= (\d+) flagged, (\d+) class A", text)
+    check("header states the disposition counts", bool(m))
+    if m:
+        check("disposition counts match the lists",
+              (int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))) ==
+              (len(B), len(Cc), len(set(B) | set(Cc)), len(rows) - len(set(B) | set(Cc))),
+              f"header {m.groups()} vs lists B={len(B)} C={len(Cc)}")
+        check("class A + B + C = total rows",
+              int(m.group(4)) + int(m.group(3)) == len(rows))
+    check("tick legend documents the class C sense of `x`",
+          "accounted for by Rule 3" in text)
+
     # ---- coverage note headings (Rule 6 / Gate 3 deliverable) ---------------
     for h in ("Compression decisions", "Exercise classification", "Drift caught and fixed",
               "Figures requiring manual attention", "Color-dependent figures",

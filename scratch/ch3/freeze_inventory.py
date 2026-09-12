@@ -31,6 +31,32 @@ def load_extract_labels():
     return mod._extract_labels
 
 
+# Pass 2 printing dispositions. Keys are distinctive substrings resolved to row IDs by
+# _resolve() below, so no ID is ever hand-typed here. Reasons are short enough to read as
+# an instruction at the point of use.
+DISPOSITIONS = [
+    ("B", "fold - never a standalone sentence (the fact must still appear; it is carried inside a "
+          "neighbouring sentence, table cell or figure caption, so the row is ticked honestly)", [
+        ("A similar trend was observed in India too", "transitional lead-in - fold into the India figures sentence (F036)"),
+        ("the government was forced to take up serious measures", "lead-in - fold into the sentence introducing the measures"),
+        ("Another effective and popular method is the use of Intra Uterine", "transitional - fold into the IUD paragraph or its table row"),
+        ("Such practices should be avoided because these are dangerous", "fold onto the MTP-misuse sentence it concludes (F112)"),
+        ("There is no reason to panic because prevention is possible", "fold as a clause leading into the three precautions (F133)"),
+        ("incomplete without a mention of infertility", "section opener - fold into the 3.5 lead sentence"),
+        ("affordable to only a limited number of people", "fold with F150, which already states \"very few centres\""),
+        ("No in-figure text labels", "figure metadata - the asset and its caption carry it; the \"no labels\" fact is not printed"),
+    ]),
+    ("C", "Rule 3 filler - never printed (zero fact content beyond its neighbours; printing any of "
+          "these would itself be the defect)", [
+        ("Now, let's discuss a closely related topic", "transitional - F004 and F008 already open the chapter"),
+        ("Framing questions that set up the chapter", "rhetorical scene-setting - the tutor-style lead poses the question once, not as a printed line"),
+        ("Let us describe some of the commonly used contraceptive methods", "transitional - F042 already states the purpose"),
+        ("Therefore, by abstaining from coitus during this period", "restates F051 + F052"),
+        ("This can prevent conception.", "restates the condom mechanism sentence above it"),
+    ]),
+]
+
+
 def main():
     rows = list(R.ROWS) + list(R.FIGURE_ROWS)
     ids = [f"F{i:03d}" for i in range(1, len(rows) + 1)]
@@ -41,6 +67,29 @@ def main():
         hits = [ids[i] for i, r in enumerate(rows) if key.lower() in r[3].lower()]
         assert len(hits) >= 1, f"summary search key not found: {key!r}"
         return hits[0]
+
+    def _resolve(key, expand=False):
+        hits = [ids[i] for i, r in enumerate(rows) if key.lower() in r[3].lower()]
+        assert hits, f"disposition key not found: {key!r}"
+        if not expand:
+            assert len(hits) == 1, f"ambiguous disposition key {key!r} -> {hits}"
+            return hits[0]
+        return hits
+
+    by_id = {ids[i]: rows[i][3] for i in range(len(rows))}
+    dispositions = [(cls, label, [(_resolve(k, expand=(k == "No in-figure text labels")), why)
+                                  for k, why in items])
+                    for cls, label, items in DISPOSITIONS]
+    def _ids_of(cls):
+        out = []
+        for c, _label, items in dispositions:
+            if c != cls:
+                continue
+            for resolved, _why in items:
+                out.extend(resolved if isinstance(resolved, list) else [resolved])
+        return out
+
+    flagged = {cls: _ids_of(cls) for cls in ("B", "C")}
 
     summary_rows = []
     for sent, cls, key, note in R.SUMMARY_CLASSIFICATION:
@@ -71,7 +120,9 @@ def main():
     A("")
     A(f"Source: `{SRC_REL}` | Frozen: {date.today().isoformat()} | Rows: {len(rows)}")
     A("")
-    A("Tick legend: `x` = written into the script and verified present in the generated PDF. "
+    A("Tick legend: `x` = written into the script and verified present in the generated PDF. For a row "
+      "listed below as class C (Rule 3 filler - zero fact content), `x` means *accounted for by Rule 3*: "
+      "deliberately not printed, because printing such a sentence would itself be the defect. "
       "Blank = not yet written (freeze state; ticks are entered during Pass 2).")
     A("")
     A("Pass 1 ran as the five mandatory sessions; each session's machine-derived deliverable:")
@@ -175,6 +226,27 @@ def main():
       "vasectomy/tubectomy steps become process flows. Rhetorical and transitional sentences are folded "
       "into surrounding prose; every fact, number, name and qualifier they carried is preserved.")
     A("")
+    A("**Pass 2 printing dispositions (Rule 3).** No inventory row is ever pasted into the PDF - rows are "
+      "checklist items and the script rewrites them (see Ch2_HumanReproduction.py for the house style). "
+      "But \"rewrite\" must not become \"print everything\": Rule 3 allows exactly three things to go "
+      "(a sentence restating an already-given fact, purely rhetorical scene-setting, transitional "
+      "filler), and every row that falls in one of them is listed here so Pass 2 does not print it as a "
+      "standalone line. Every other row is class A - normal content, written as prose, a bullet, a table "
+      "cell or a process step.")
+    A("")
+    for cls, label, why in dispositions:   # resolved IDs, not the search keys
+        parts = []
+        for rids, reason in why:
+            rids = rids if isinstance(rids, list) else [rids]
+            tag = f"{rids[0]}-{rids[-1]}" if len(rids) > 1 else rids[0]
+            wording = by_id[rids[0]]
+            wording = wording.strip().strip('"')
+            quote = wording if len(wording) <= 46 else wording[:43].rstrip() + "..."
+            parts.append(f"**{tag}** \"{quote}\" - {reason}")
+        A(f"- **Class {cls} - {label}:**")
+        for part in parts:
+            A(f"    - {part}")
+    A("")
     A("**Exercise classification.** 12 exercises (18 numbered parts): 15 parts are answered by the "
       "body text (Q1-Q6, Q8-Q10, and the Q11/Q12 parts whose answers are stated in the chapter - "
       "lactational amenorrhea, awareness creation, gamete *transport* not formation, the three "
@@ -210,6 +282,13 @@ def main():
     A("**Linter verdict.** Not run yet - Gate 2 has not started. Gate 1's machine validation is the "
       "`_extract_labels` parse in Ch3_TRACKER.md, reproducible with scratch/ch3/validate_gate1.py.")
     A("")
+
+    n_flagged = len(set(flagged["B"]) | set(flagged["C"]))
+    lines.insert(lines.index("## Facts") - 1,
+                 f"- **Printing dispositions:** {len(flagged['B'])} class B (fold) + {len(flagged['C'])} "
+                 f"class C (Rule 3 filler, not printed) = {n_flagged} flagged, "
+                 f"{len(rows) - n_flagged} class A content rows. See the Coverage note.")
+    lines.insert(lines.index("## Facts") - 1, "")
 
     text = "\n".join(lines) + "\n"
 

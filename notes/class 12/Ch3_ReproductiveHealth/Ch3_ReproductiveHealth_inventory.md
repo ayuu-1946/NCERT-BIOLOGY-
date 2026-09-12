@@ -2,7 +2,7 @@
 
 Source: `Chapter/class 12/Chapter 3 - Reproductive Health.pdf` | Frozen: 2026-09-12 | Rows: 162
 
-Tick legend: `x` = written into the script and verified present in the generated PDF. Blank = not yet written (freeze state; ticks are entered during Pass 2).
+Tick legend: `x` = written into the script and verified present in the generated PDF. For a row listed below as class C (Rule 3 filler - zero fact content), `x` means *accounted for by Rule 3*: deliberately not printed, because printing such a sentence would itself be the defect. Blank = not yet written (freeze state; ticks are entered during Pass 2).
 
 Pass 1 ran as the five mandatory sessions; each session's machine-derived deliverable:
 
@@ -22,6 +22,8 @@ Census (each total derivable from the list beside it):
 - **Figure labels:** 2 in-figure labels, both on Fig 3.4 (`Vas deferens tied and cut`, `Fallopian tubes tied and cut`); the other 4 assets are unlabelled line-art or photographs, each confirmed label-free by opening the asset.
 - **Summary sentences (18):** 15 BODY-PRESENT + 3 SUMMARY-UNIQUE.
 - **Exercises (18 numbered parts over 12 exercises):** 15 COVERED + 3 GAP. Arithmetic: **12 exercises, 3 answered by design (GAP: Q7, Q11a, Q12c), 15 unanswered by design (COVERED), 0 overlooked.** At exercise level: 9 wholly answered + 2 partly answered (Q11, Q12) + 1 wholly a gap (Q7) = 12.
+- **Printing dispositions:** 11 class B (fold) + 5 class C (Rule 3 filler, not printed) = 16 flagged, 146 class A content rows. See the Coverage note.
+
 
 ## Facts
 
@@ -250,6 +252,24 @@ Census (each total derivable from the list beside it):
 ## Coverage note
 
 **Compression decisions.** Pass-2 brief: the seven contraceptive categories become one comparison table; the three IUD classes and the three oral/injectable routes keep every named example (Lippes loop; CuT, Cu7, Multiload 375; Progestasert, LNG-20; Saheli; Nirodh); the three STI precautions, the two grounds for termination under the MTP (Amendment) Act, 2017, and the vasectomy/tubectomy steps become process flows. Rhetorical and transitional sentences are folded into surrounding prose; every fact, number, name and qualifier they carried is preserved.
+
+**Pass 2 printing dispositions (Rule 3).** No inventory row is ever pasted into the PDF - rows are checklist items and the script rewrites them (see Ch2_HumanReproduction.py for the house style). But "rewrite" must not become "print everything": Rule 3 allows exactly three things to go (a sentence restating an already-given fact, purely rhetorical scene-setting, transitional filler), and every row that falls in one of them is listed here so Pass 2 does not print it as a standalone line. Every other row is class A - normal content, written as prose, a bullet, a table cell or a process step.
+
+- **Class B - fold - never a standalone sentence (the fact must still appear; it is carried inside a neighbouring sentence, table cell or figure caption, so the row is ticked honestly):**
+    - **F035** "A similar trend was observed in India too." - transitional lead-in - fold into the India figures sentence (F036)
+    - **F041** "Therefore, the government was forced to tak..." - lead-in - fold into the sentence introducing the measures
+    - **F070** "Another effective and popular method is the..." - transitional - fold into the IUD paragraph or its table row
+    - **F113** "Such practices should be avoided because th..." - fold onto the MTP-misuse sentence it concludes (F112)
+    - **F132** "There is no reason to panic because prevent..." - fold as a clause leading into the three precautions (F133)
+    - **F135** "A discussion on reproductive health is inco..." - section opener - fold into the 3.5 lead sentence
+    - **F151** "Obviously their benefits is affordable to o..." - fold with F150, which already states "very few centres"
+    - **F157-F160** "No in-figure text labels - unlabelled line-..." - figure metadata - the asset and its caption carry it; the "no labels" fact is not printed
+- **Class C - Rule 3 filler - never printed (zero fact content beyond its neighbours; printing any of these would itself be the defect):**
+    - **F005** "Now, let's discuss a closely related topic..." - transitional - F004 and F008 already open the chapter
+    - **F010** "Framing questions that set up the chapter:..." - rhetorical scene-setting - the tutor-style lead poses the question once, not as a printed line
+    - **F046** "Let us describe some of the commonly used c..." - transitional - F042 already states the purpose
+    - **F053** "Therefore, by abstaining from coitus during..." - restates F051 + F052
+    - **F063** "This can prevent conception." - restates the condom mechanism sentence above it
 
 **Exercise classification.** 12 exercises (18 numbered parts): 15 parts are answered by the body text (Q1-Q6, Q8-Q10, and the Q11/Q12 parts whose answers are stated in the chapter - lactational amenorrhea, awareness creation, gamete *transport* not formation, the three non-curable STIs, and ZIFT versus IUT), i.e. 9 exercises wholly covered and 2 exercises (Q11, Q12) with one gap part each. The remaining 3 parts are gaps.
 **Gaps answered in the appendix "Terms used in the exercises":** Q7 (gonad removal is not a contraceptive option - sterilisation blocks gamete transport, it does not remove the gonads, and castration was never an NCERT contraceptive method); Q11(a) (abortions can occur spontaneously - NCERT defines only intentional/voluntary, i.e. induced, abortion); Q12(c) (oral pills are *not* popular among rural women - the chapter states only that pills are "well accepted by the females"). Three gaps, written once each.
