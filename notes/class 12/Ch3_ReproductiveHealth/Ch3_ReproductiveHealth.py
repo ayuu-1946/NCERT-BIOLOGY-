@@ -315,7 +315,7 @@ story.append(KeepTogether(data_table([
     ["<b>Copper-releasing</b>", "CuT, Cu7, Multiload 375", "<b>Cu ions suppress sperm motility and fertilising capacity</b>"],
     ["<b>Hormone-releasing</b>", "Progestasert, LNG-20", "Make <b>uterus unsuitable for implantation and cervix hostile to sperms</b> (in addition to phagocytosis)"],
 ], col_widths=[1.5, 1.8, 3.1])))
-story.append(Spacer(1, 120))
+story.append(Spacer(1, 6))
 
 # ---- 3.2 Oral, injectable, implant and emergency ----
 story.append(heading("3.2", "Oral contraceptives, injectables, implants and emergency contraception", 3))
@@ -502,7 +502,7 @@ story.append(process_flow([
     "Ground <b>(ii): there is a substantial risk that if the child were born, it would suffer from such physical or mental "
     "abnormalities as to be seriously handicapped</b>.",
 ]))
-story.append(Spacer(1, 54))
+story.append(Spacer(1, 12))
 
 # =============================== 3.4 STIs ===========================================
 # ---- 3.4 Sexually Transmitted Infections (F119-F133) ----
