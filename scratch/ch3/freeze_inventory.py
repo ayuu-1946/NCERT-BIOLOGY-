@@ -74,8 +74,7 @@ def main():
     A("Tick legend: `x` = written into the script and verified present in the generated PDF. "
       "Blank = not yet written (freeze state; ticks are entered during Pass 2).")
     A("")
-    A("Pass 1 ran as the five mandatory sessions (the inventory is the only state that crosses a "
-      "session boundary). Each session's sole machine-derived deliverable, re-parsed from the table below:")
+    A("Pass 1 ran as the five mandatory sessions; each session's machine-derived deliverable:")
     A("")
     A(f"- **1-S** (source read + facts inventory, steps 1-3): {scount['1-S']} content rows - every "
       "fact / number / term / definition / process / comparison / exception / contents row.")
@@ -83,7 +82,7 @@ def main():
       f"{sum(1 for i, r in enumerate(rows) if r[0] == '1-H' and r[2] == 'heading')} `heading` + "
       f"1 `title` + 1 `contents` [{', '.join(ids[i] for i, r in enumerate(rows) if r[0] == '1-H')}].")
     A(f"- **1-O** (opener sweep, step 5): {scount['1-O']} opener rows "
-      f"[{', '.join(opener_ids)}] - list length {len(opener_ids)}.")
+      f"[{', '.join(opener_ids)}].")
     A(f"- **1-F** (figures, step 6 / §4.4): {scount['1-F']} figure rows - "
       f"{len(figure_ids)} rendered assets, {sum(1 for r in rows if r[2] == 'caption' and r[3].lower().startswith('figure labels'))} of them "
       "label-bearing; all assets `Mono: yes`, `Verified: yes` (see Figure manifest).")
@@ -91,7 +90,7 @@ def main():
       f"({len(summary_rows)} sentences) + exercise-gap scan ({len(ex_rows)} numbered parts over "
       f"{len(q_numbers)} exercises) + freeze.")
     A("")
-    A("Census (every total is derivable from the list beside it; nothing here is a hand tally):")
+    A("Census (each total derivable from the list beside it):")
     A("")
     A(f"- **Total rows = {len(rows)}**, IDs contiguous `F001`..`F{len(rows):03d}`, no gaps, no duplicates. "
       f"Breakdown: 1 `title` + 1 `contents` + {len(opener_ids)} opener + {len(heading_ids)} heading + "
@@ -99,20 +98,18 @@ def main():
     A(f"- **Type census ({len(tcount)} values, all lower-case):** "
       + " · ".join(f"`{k}` {v}" for k, v in sorted(tcount.items(), key=lambda kv: (-kv[1], kv[0])))
       + f" = {sum(tcount.values())}.")
-    A(f"- **Session census:** " + " · ".join(f"`{k}` {v}" for k, v in sorted(scount.items()))
-      + f" = {sum(scount.values())}.")
     A(f"- **Heading rows ({len(heading_ids)}):** {len(heading_ids)} `heading` "
       f"[{', '.join(heading_ids)}]; the chapter title and the contents box are carried separately as "
       "`title` F001 and `contents` F002, so no printed section heading is missing a `heading` row.")
-    A(f"- **Opener rows ({len(opener_ids)}):** [{', '.join(opener_ids)}]; list length = {len(opener_ids)}. "
+    A(f"- **Opener rows ({len(opener_ids)}):** [{', '.join(opener_ids)}]. "
       "One per printed section plus the unnumbered chapter introduction.")
     A(f"- **Figure rows ({len(figure_ids)}):** [{', '.join(figure_ids)}] for asset numbers "
-      f"[{', '.join(fig_nums)}] = {len(figure_ids)} - one row per rendered asset.")
+      f"[{', '.join(fig_nums)}], one row per rendered asset.")
     A(f"- **Figure labels:** 2 in-figure labels, both on Fig 3.4 "
       "(`Vas deferens tied and cut`, `Fallopian tubes tied and cut`); the other 4 assets are unlabelled "
       "line-art or photographs, each confirmed label-free by opening the asset.")
     A(f"- **Summary sentences ({len(summary_rows)}):** {len(body_present)} BODY-PRESENT + "
-      f"{len(summ_unique)} SUMMARY-UNIQUE; {len(body_present)} + {len(summ_unique)} = {len(summary_rows)}.")
+      f"{len(summ_unique)} SUMMARY-UNIQUE.")
     gap_ex = sorted({re.match(r"Q\d+", g[0]).group(0) for g in gaps}, key=lambda q: int(q[1:]))
     # exercises whose every numbered part is a gap (a wholly-unanswered exercise)
     wholly = [q for q in q_numbers
@@ -121,11 +118,10 @@ def main():
       f"{len(covered)} COVERED + {len(gaps)} GAP. Arithmetic: **{len(q_numbers)} exercises, "
       f"{len(gaps)} answered by design (GAP: {', '.join(g[0] for g in gaps)}), "
       f"{len(covered)} unanswered by design (COVERED), 0 overlooked.** At exercise level: "
-      f"{len(q_numbers) - len(gap_ex)} of the {len(q_numbers)} exercises are wholly answered by the body; "
-      f"{len([q for q in gap_ex if q not in wholly])} ({', '.join(q for q in gap_ex if q not in wholly)}) "
-      f"are partly answered (one gap part each); {len(wholly)} ({', '.join(wholly)}) is wholly a gap. "
-      f"{len(q_numbers) - len(gap_ex)}+{len([q for q in gap_ex if q not in wholly])}+{len(wholly)}"
-      f" = {len(q_numbers)} exercises (wholly answered + partly answered + wholly a gap).")
+      f"{len(q_numbers) - len(gap_ex)} wholly answered + "
+      f"{len([q for q in gap_ex if q not in wholly])} partly answered "
+      f"({', '.join(q for q in gap_ex if q not in wholly)}) + {len(wholly)} wholly a gap "
+      f"({', '.join(wholly)}) = {len(q_numbers)}.")
     A("")
     A("## Facts")
     A("")
@@ -170,21 +166,14 @@ def main():
     for num, cap, asset, page, mono, ver in manifest:
         A(f"| {num} | {cap} | {asset} | {page} | {mono} | {ver} |")
     A("")
-    A(f"{len(manifest)} assets for {len({n.replace('(a)', '').replace('(b)', '') for n, *_ in manifest})} "
-      "numbered figures - Figures 3.1 and 3.4 each carry two labelled parts.")
-    A("")
     A("## Coverage note")
     A("")
-    A("**Compression decisions.** The rewrite keeps the full NCERT fact list and re-casts enumerable "
-      "prose as tables and process flows: the seven contraceptive categories (natural/traditional, "
-      "barrier, IUDs, oral contraceptives, injectables, implants and surgical methods) become one "
+    A("**Compression decisions.** Pass-2 brief: the seven contraceptive categories become one "
       "comparison table; the three IUD classes and the three oral/injectable routes keep every named "
       "example (Lippes loop; CuT, Cu7, Multiload 375; Progestasert, LNG-20; Saheli; Nirodh); the three "
       "STI precautions, the two grounds for termination under the MTP (Amendment) Act, 2017, and the "
-      "vasectomy/tubectomy steps become process flows. Rhetorical and transitional sentences (\"What do "
-      "we understand by this term?\", \"Let us examine them.\", \"Another effective and popular method is "
-      "the use of...\") are folded into the surrounding prose rather than printed as standalone lines; "
-      "every fact, number, name and qualifier they carried is preserved.")
+      "vasectomy/tubectomy steps become process flows. Rhetorical and transitional sentences are folded "
+      "into surrounding prose; every fact, number, name and qualifier they carried is preserved.")
     A("")
     A("**Exercise classification.** 12 exercises (18 numbered parts): 15 parts are answered by the "
       "body text (Q1-Q6, Q8-Q10, and the Q11/Q12 parts whose answers are stated in the chapter - "
@@ -198,23 +187,11 @@ def main():
       "popular among rural women - the chapter states only that pills are \"well accepted by the females\"). "
       "Three gaps, written once each.")
     A("")
-    A("**Drift caught and fixed.** None yet - Pass 3 has not run. The figure-label harvest is the audit's "
-      "principal finding so far: both Fig 3.4 labels are vector artwork and are absent from the PDF text "
-      "layer, so they can only be harvested by opening the rendered asset (a text-layer harvest would "
-      "have returned an empty set and passed check 6 vacuously).")
+    A("**Drift caught and fixed.** None yet - Pass 3 has not run.")
     A("")
-    A("**Figures requiring manual attention.** None - all 6 assets cleared the three-part crop audit "
-      "(text-layer grazing, dark-ink extent overflow, unexplained border-band ink) and were individually "
-      "opened and confirmed for completeness and legibility. Two page artefacts had to be handled rather "
-      "than flagged: the orange \"45\" page-number tab overlaps Fig 3.4(b)'s right ovary inside the "
-      "figure's own bounding box, so the tab is painted out after extraction with a guard asserting the "
-      "box holds no artwork ink; and the SUMMARY page's orange scroll decoration (page 9) is page "
-      "furniture, not a figure.")
-    A("")
-    A("**Deliberately NOT embedded.** The page-1 chapter-opening decorative plate (a framed "
-      "uterus-with-IUD illustration, xref 180) is not extracted, matching the sibling convention set by "
-      "Ch2 Human Reproduction, which covers the chapter opening with the title-block motif instead. The "
-      "page-1 QR code (xref 181) is likewise not a figure.")
+    A("**Figures requiring manual attention.** None - all 6 assets cleared the three-part crop audit and "
+      "were individually opened; the two NCERT page artefacts that had to be handled during extraction "
+      "are recorded in Ch3_figure_audit.md, never silently dropped.")
     A("")
     A("**Color-dependent figures.** None that lose meaning: Fig 3.1(a)/3.4(a)/3.4(b) are line-art whose "
       "only color-carried distinction is the yellow ligature marks, which survive conversion and are in "
@@ -231,7 +208,7 @@ def main():
       "the summary use the first).")
     A("")
     A("**Linter verdict.** Not run yet - Gate 2 has not started. Gate 1's machine validation is the "
-      "`_extract_labels` parse recorded below.")
+      "`_extract_labels` parse in Ch3_TRACKER.md, reproducible with scratch/ch3/validate_gate1.py.")
     A("")
 
     text = "\n".join(lines) + "\n"

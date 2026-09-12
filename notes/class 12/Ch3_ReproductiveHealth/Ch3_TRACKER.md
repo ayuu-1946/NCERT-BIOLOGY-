@@ -94,6 +94,49 @@ Reproduce with:
 .venv/bin/python scratch/ch3/validate_gate1.py       # 53/53 PASS
 ```
 
+## Post-freeze cosmetic cleanup (2026-09-12, operator-approved)
+
+After the freeze the operator asked for the useless lines in the inventory to be identified and
+removed. Everything removable was **duplication inside metadata**, never a fact:
+
+| What | Rows / lines | Why it was safe |
+|---|---|---|
+| `(qualifier: …)` annotations that merely re-quote words **already inside that row's own quotation marks** | 14 rows: `F009` "might be called" · `F044` "mostly the young, urban, working ones" · `F056` "almost nil" · `F057` "only"/"maximum" · `F069` "usually" · `F079` "preferably" · `F088` "generally advised" · `F094` "should always" · `F099` "though not very significant" · `F108` "relatively safe" · `F110` "a majority" · `F116` "may be terminated" · `F126` "may often"/"may" · `F150` "only"/"very few" | Rule 4 is satisfied by the quoted wording itself, so the annotation added nothing. Annotations carrying a **contrast** (e.g. `F012` "amongst the first" - *not* "the first") were kept. |
+| the 107-char tail *"harvest confirmed by opening the rendered asset and by a zero text-layer word count inside the pinned rect."* repeated verbatim on all four label-free caption rows | `F157`–`F160` | the same statement is already made once, for all four, in the header's Figure-labels census line |
+| the note *"(the opener defines the term used in its own section heading)"* carried by **both** opener rows 3.3 and 3.4 | `F120` (kept on `F101`) | one copy is enough; the tracker names both IDs |
+| **Session census** line — repeated the five per-session counts already in the session log, plus `= 162` already in the totals line | 1 header line | pure restatement inside one file |
+| `list length = 6` · `= 6 - one row per rendered asset` · `; 15 + 3 = 18` · the `9+2+1 = 12 …` recap | 4 census lines | each total is already printed **and derivable** from the list in the same line |
+| doctrine narration — *"the inventory is the only state that crosses a session boundary"*, *"re-parsed from the table below"*, *"nothing here is a hand tally"* | 2 header lines | process description, not inventory content |
+| manifest footnote restating the header figure census; the *Deliberately NOT embedded* paragraph (not one of the seven fixed Coverage headings) | 2 blocks | second/third copies — the exclusion is recorded in `Ch3_figure_audit.md` and `extract_figures.py` |
+| `Compression decisions` / `Drift caught and fixed` / `Figures requiring manual attention` trimmed to the Pass-2 brief | 3 paragraphs | long-form detail lives in `Ch3_figure_audit.md`, this tracker and `LEARNINGS.md` |
+| dangling forward reference in `Linter verdict` (*"the parse recorded below"* — nothing was below it) | 1 line | replaced with the two places the parse actually lives |
+
+**Invariants asserted after the cleanup, not assumed:** 162 Facts rows, `F001`–`F162` contiguous,
+**every ID and every `Section:Type` pair byte-identical to the pre-cleanup file**; the only row
+content changes are the 19 listed above, each a pure deletion of duplicated text. Type census,
+session counts, summary split (15+3), exercise split (15 COVERED + 3 GAP) and the
+`_extract_labels` parse (**2 labels / 2 figures, no doubling, no phantom row**) all unchanged.
+`scratch/ch3/validate_gate1.py` **53/53 PASS** after regeneration. Net effect: 44,451 -> 41,695
+chars (6% smaller).
+
+**Do not re-add any of it** — removed on operator instruction; the text is in git history.
+
+Two removable-looking items were **deliberately kept**, both for mechanical reasons:
+
+1. **The two `Figure labels:` rows (`F161`, `F162`)** are the shortest lines in the file and the
+   most tempting to delete. Tested, not assumed: remove them and `check_pdf.py` check 6 stops being
+   a check at all — the two label failures vanish and it reports only the WARN *"No 'Figure labels:'
+   rows found in inventory — labels may not be catalogued"*. The chapter would then pass Gate 2 with
+   **zero** label verification: the silent-failure class in `LEARNINGS.md`.
+2. **Every other Facts row**, however trivial it reads (`F063` "This can prevent conception.",
+   `F035` "A similar trend was observed in India too."). Each is the only record of an NCERT
+   sentence; deleting one hands Pass 3(b) direction 2 an UNINVENTORIED finding.
+
+The exercise-gap table (18 rows) was also left intact: it reproduces the question text for the 15
+COVERED parts, which the master prompt forbids *in the PDF*, not in the inventory — here the
+question text is the audit evidence that every exercise is numbered and each COVERED verdict is the
+right one.
+
 ## Carry-overs for Pass 2 (found while looking at something else)
 
 1. **The seven contraceptive categories must survive as named categories** — NCERT groups them

@@ -4,25 +4,24 @@ Source: `Chapter/class 12/Chapter 3 - Reproductive Health.pdf` | Frozen: 2026-09
 
 Tick legend: `x` = written into the script and verified present in the generated PDF. Blank = not yet written (freeze state; ticks are entered during Pass 2).
 
-Pass 1 ran as the five mandatory sessions (the inventory is the only state that crosses a session boundary). Each session's sole machine-derived deliverable, re-parsed from the table below:
+Pass 1 ran as the five mandatory sessions; each session's machine-derived deliverable:
 
 - **1-S** (source read + facts inventory, steps 1-3): 140 content rows - every fact / number / term / definition / process / comparison / exception / contents row.
 - **1-H** (heading sweep, step 4): 10 heading rows - 8 `heading` + 1 `title` + 1 `contents` [F001, F002, F003, F011, F031, F100, F119, F134, F155, F156].
-- **1-O** (opener sweep, step 5): 6 opener rows [F004, F012, F032, F101, F120, F135] - list length 6.
+- **1-O** (opener sweep, step 5): 6 opener rows [F004, F012, F032, F101, F120, F135].
 - **1-F** (figures, step 6 / §4.4): 6 figure rows - 6 rendered assets, 2 of them label-bearing; all assets `Mono: yes`, `Verified: yes` (see Figure manifest).
 - **1-Z** (gaps, summary, freeze, steps 7-10): summary classification (18 sentences) + exercise-gap scan (18 numbered parts over 12 exercises) + freeze.
 
-Census (every total is derivable from the list beside it; nothing here is a hand tally):
+Census (each total derivable from the list beside it):
 
 - **Total rows = 162**, IDs contiguous `F001`..`F162`, no gaps, no duplicates. Breakdown: 1 `title` + 1 `contents` + 6 opener + 8 heading + 6 caption + 140 content rows.
 - **Type census (11 values, all lower-case):** `fact` 103 · `number` 17 · `term` 14 · `heading` 8 · `caption` 6 · `opener` 6 · `process` 3 · `definition` 2 · `contents` 1 · `exception` 1 · `title` 1 = 162.
-- **Session census:** `1-F` 6 · `1-H` 10 · `1-O` 6 · `1-S` 140 = 162.
 - **Heading rows (8):** 8 `heading` [F003, F011, F031, F100, F119, F134, F155, F156]; the chapter title and the contents box are carried separately as `title` F001 and `contents` F002, so no printed section heading is missing a `heading` row.
-- **Opener rows (6):** [F004, F012, F032, F101, F120, F135]; list length = 6. One per printed section plus the unnumbered chapter introduction.
-- **Figure rows (6):** [F157, F158, F159, F160, F161, F162] for asset numbers [3.1a, 3.1b, 3.2, 3.3, 3.4a, 3.4b] = 6 - one row per rendered asset.
+- **Opener rows (6):** [F004, F012, F032, F101, F120, F135]. One per printed section plus the unnumbered chapter introduction.
+- **Figure rows (6):** [F157, F158, F159, F160, F161, F162] for asset numbers [3.1a, 3.1b, 3.2, 3.3, 3.4a, 3.4b], one row per rendered asset.
 - **Figure labels:** 2 in-figure labels, both on Fig 3.4 (`Vas deferens tied and cut`, `Fallopian tubes tied and cut`); the other 4 assets are unlabelled line-art or photographs, each confirmed label-free by opening the asset.
-- **Summary sentences (18):** 15 BODY-PRESENT + 3 SUMMARY-UNIQUE; 15 + 3 = 18.
-- **Exercises (18 numbered parts over 12 exercises):** 15 COVERED + 3 GAP. Arithmetic: **12 exercises, 3 answered by design (GAP: Q7, Q11a, Q12c), 15 unanswered by design (COVERED), 0 overlooked.** At exercise level: 9 of the 12 exercises are wholly answered by the body; 2 (Q11, Q12) are partly answered (one gap part each); 1 (Q7) is wholly a gap. 9+2+1 = 12 exercises (wholly answered + partly answered + wholly a gap).
+- **Summary sentences (18):** 15 BODY-PRESENT + 3 SUMMARY-UNIQUE.
+- **Exercises (18 numbered parts over 12 exercises):** 15 COVERED + 3 GAP. Arithmetic: **12 exercises, 3 answered by design (GAP: Q7, Q11a, Q12c), 15 unanswered by design (COVERED), 0 overlooked.** At exercise level: 9 wholly answered + 2 partly answered (Q11, Q12) + 1 wholly a gap (Q7) = 12.
 
 ## Facts
 
@@ -36,7 +35,7 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F006 | Intro | term | "The term simply refers to healthy reproductive organs with normal functions." | |
 | F007 | Intro | fact | "However, it has a broader perspective and includes the emotional and social aspects of reproduction also." | |
 | F008 | Intro | definition | According to the "World Health Organisation (WHO)", reproductive health means "a total well-being in all aspects of reproduction, i.e., physical, emotional, behavioural and social". | |
-| F009 | Intro | definition | "Therefore, a society with people having physically and functionally normal reproductive organs and normal emotional and behavioural interactions among them in all sex-related aspects might be called reproductively healthy." (qualifier: "might be called") | |
+| F009 | Intro | definition | "Therefore, a society with people having physically and functionally normal reproductive organs and normal emotional and behavioural interactions among them in all sex-related aspects might be called reproductively healthy." | |
 | F010 | Intro | fact | Framing questions that set up the chapter: "What do we understand by this term?" and "Why is it significant to maintain reproductive health and what are the methods taken up to achieve it? Let us examine them." | |
 | F011 | 3.1 | heading | "3.1 REPRODUCTIVE HEALTH - PROBLEMS AND STRATEGIES" | |
 | F012 | 3.1 | opener | "India was amongst the first countries in the world to initiate action plans and programmes at a national level to attain total reproductive health as a social goal." (qualifier: "amongst the first" - not "the first") [SUMMARY-UNIQUE fold: the summary states it more strongly as "the first nation in the world" - carry both wordings here] | |
@@ -71,7 +70,7 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F041 | 3.2 | fact | "Therefore, the government was forced to take up serious measures to check this population growth rate." | |
 | F042 | 3.2 | fact | "The most important step to overcome this problem is to motivate smaller families by using various contraceptive methods." | |
 | F043 | 3.2 | fact | "advertisements in the media as well as posters/bills, etc., showing a happy couple with two children with a slogan Hum Do Hamare Do (we two, our two)". | |
-| F044 | 3.2 | fact | "Many couples, mostly the young, urban, working ones have even adopted an 'one child norm'." (qualifiers: "mostly the young, urban, working ones") | |
+| F044 | 3.2 | fact | "Many couples, mostly the young, urban, working ones have even adopted an 'one child norm'." | |
 | F045 | 3.2 | number | "Statutory raising of marriageable age of the female to 18 years and that of males to 21 years, and incentives given to couples with small families are two of the other measures taken to tackle this problem." | |
 | F046 | 3.2 | fact | "Let us describe some of the commonly used contraceptive methods, which help prevent unwanted pregnancies." | |
 | F047 | 3.2 | term | "An ideal contraceptive should be user-friendly, easily available, effective and reversible with no or least side-effects." | |
@@ -83,8 +82,8 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F053 | 3.2 | fact | "Therefore, by abstaining from coitus during this period, conception could be prevented." | |
 | F054 | 3.2 | term | "Withdrawal or coitus interruptus is another method in which the male partner withdraws his penis from the vagina just before ejaculation so as to avoid insemination." | |
 | F055 | 3.2 | term | "Lactational amenorrhea (absence of menstruation) method is based on the fact that ovulation and therefore the cycle do not occur during the period of intense lactation following parturition." | |
-| F056 | 3.2 | fact | "Therefore, as long as the mother breast-feeds the child fully, chances of conception are almost nil." (qualifier: "almost nil") | |
-| F057 | 3.2 | number | "However, this method has been reported to be effective only upto a maximum period of six months following parturition." (qualifiers: "only", "maximum") | |
+| F056 | 3.2 | fact | "Therefore, as long as the mother breast-feeds the child fully, chances of conception are almost nil." | |
+| F057 | 3.2 | number | "However, this method has been reported to be effective only upto a maximum period of six months following parturition." | |
 | F058 | 3.2 | fact | "As no medicines or devices are used in these methods, side effects are almost nil." | |
 | F059 | 3.2 | fact | "Chances of failure, though, of this method are also high." | |
 | F060 | 3.2 | fact | "In barrier methods, ovum and sperms are prevented from physically meeting with the help of barriers." | |
@@ -96,7 +95,7 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F066 | 3.2 | fact | "Both the male and the female condoms are disposable, can be self-inserted and thereby gives privacy to the user." | |
 | F067 | 3.2 | term | "Diaphragms, cervical caps and vaults are also barriers made of rubber that are inserted into the female reproductive tract to cover the cervix during coitus." | |
 | F068 | 3.2 | fact | "They prevent conception by blocking the entry of sperms through the cervix." "They are reusable." | |
-| F069 | 3.2 | fact | "Spermicidal creams, jellies and foams are usually used alongwith these barriers to increase their contraceptive efficiency." (qualifier: "usually") | |
+| F069 | 3.2 | fact | "Spermicidal creams, jellies and foams are usually used alongwith these barriers to increase their contraceptive efficiency." | |
 | F070 | 3.2 | fact | "Another effective and popular method is the use of Intra Uterine Devices (IUDs)." | |
 | F071 | 3.2 | fact | "These devices are inserted by doctors or expert nurses in the uterus through vagina." | |
 | F072 | 3.2 | fact | "These Intra Uterine Devices are presently available as the non-medicated IUDs (e.g., Lippes loop), copper releasing IUDs (CuT, Cu7, Multiload 375) and the hormone releasing IUDs (Progestasert, LNG-20) (Figure 3.2)." | |
@@ -106,7 +105,7 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F076 | 3.2 | fact | "It is one of most widely accepted methods of contraception in India." | |
 | F077 | 3.2 | fact | "Oral administration of small doses of either progestogens or progestogen-estrogen combinations is another contraceptive method used by the females." | |
 | F078 | 3.2 | term | "They are used in the form of tablets and hence are popularly called the pills." | |
-| F079 | 3.2 | number | "Pills have to be taken daily for a period of 21 days starting preferably within the first five days of menstrual cycle." (qualifier: "preferably") | |
+| F079 | 3.2 | number | "Pills have to be taken daily for a period of 21 days starting preferably within the first five days of menstrual cycle." | |
 | F080 | 3.2 | number | "After a gap of 7 days (during which menstruation occurs) it has to be repeated in the same pattern till the female desires to prevent conception." | |
 | F081 | 3.2 | fact | "They inhibit ovulation and implantation as well as alter the quality of cervical mucus to prevent/retard entry of sperms." | |
 | F082 | 3.2 | fact | "Pills are very effective with lesser side effects and are well accepted by the females." | |
@@ -115,18 +114,18 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F085 | 3.2 | fact | "Progestogens alone or in combination with estrogen can also be used by females as injections or implants under the skin (Figure 3.3)." | |
 | F086 | 3.2 | fact | "Their mode of action is similar to that of pills and their effective periods are much longer." | |
 | F087 | 3.2 | number | "Administration of progestogens or progestogen-estrogen combinations or IUDs within 72 hours of coitus have been found to be very effective as emergency contraceptives as they could be used to avoid possible pregnancy due to rape or casual unprotected intercourse." | |
-| F088 | 3.2 | term | "Surgical methods, also called sterilisation, are generally advised for the male/female partner as a terminal method to prevent any more pregnancies." (qualifier: "generally advised") | |
+| F088 | 3.2 | term | "Surgical methods, also called sterilisation, are generally advised for the male/female partner as a terminal method to prevent any more pregnancies." | |
 | F089 | 3.2 | fact | "Surgical intervention blocks gamete transport and thereby prevent conception." | |
 | F090 | 3.2 | term | "Sterilisation procedure in the male is called 'vasectomy' and that in the female, 'tubectomy'." | |
 | F091 | 3.2 | process | Vasectomy: "a small part of the vas deferens is removed or tied up through a small incision on the scrotum (Figure 3.4a)". | |
 | F092 | 3.2 | process | Tubectomy: "a small part of the fallopian tube is removed (Figure 3.4b) or tied up through a small incision in the abdomen or through vagina". | |
 | F093 | 3.2 | fact | "These techniques are highly effective but their reversibility is very poor." | |
-| F094 | 3.2 | fact | "It needs to be emphasised that the selection of a suitable contraceptive method and its use should always be undertaken in consultation with qualified medical professionals." (qualifier: "should always") | |
+| F094 | 3.2 | fact | "It needs to be emphasised that the selection of a suitable contraceptive method and its use should always be undertaken in consultation with qualified medical professionals." | |
 | F095 | 3.2 | fact | "One must also remember that contraceptives are not regular requirements for the maintenance of reproductive health." | |
 | F096 | 3.2 | fact | "In fact, they are practiced against a natural reproductive event, i.e., conception/pregnancy." | |
 | F097 | 3.2 | fact | "One is forced to use these methods either to prevent pregnancy or to delay or space pregnancy due to personal reasons." | |
 | F098 | 3.2 | fact | "No doubt, the widespread use of these methods have a significant role in checking uncontrolled growth of population." | |
-| F099 | 3.2 | fact | "However, their possible ill-effects like nausea, abdominal pain, breakthrough bleeding, irregular menstrual bleeding or even breast cancer, though not very significant, should not be totally ignored." (qualifier: "though not very significant") | |
+| F099 | 3.2 | fact | "However, their possible ill-effects like nausea, abdominal pain, breakthrough bleeding, irregular menstrual bleeding or even breast cancer, though not very significant, should not be totally ignored." | |
 | F100 | 3.3 | heading | "3.3 MEDICAL TERMINATION OF PREGNANCY (MTP)" | |
 | F101 | 3.3 | opener | "Intentional or voluntary termination of pregnancy before full term is called medical termination of pregnancy (MTP) or induced abortion." (the opener defines the term used in its own section heading) | |
 | F102 | 3.3 | number | "Nearly 45 to 50 million MTPs are performed in a year all over the world which accounts to 1/5th of the total number of conceived pregnancies in a year." | |
@@ -135,25 +134,25 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F105 | 3.3 | fact | "Such restrictions are all the more important to check indiscriminate and illegal female foeticides which are reported to be high in India." | |
 | F106 | 3.3 | fact | Question-and-answer pair: "Why MTP? Obviously the answer is - to get rid of unwanted pregnancies either due to casual unprotected intercourse or failure of the contraceptive used during coitus or rapes." | |
 | F107 | 3.3 | fact | "MTPs are also essential in certain cases where continuation of the pregnancy could be harmful or even fatal either to the mother or to the foetus or both." | |
-| F108 | 3.3 | number | "MTPs are considered relatively safe during the first trimester, i.e., upto 12 weeks of pregnancy." (qualifier: "relatively safe") | |
+| F108 | 3.3 | number | "MTPs are considered relatively safe during the first trimester, i.e., upto 12 weeks of pregnancy." | |
 | F109 | 3.3 | fact | "Second trimester abortions are much more riskier." | |
-| F110 | 3.3 | fact | "One disturbing trend observed is that a majority of the MTPs are performed illegally by unqualified quacks which are not only unsafe but could be fatal too." (qualifier: "a majority") | |
+| F110 | 3.3 | fact | "One disturbing trend observed is that a majority of the MTPs are performed illegally by unqualified quacks which are not only unsafe but could be fatal too." | |
 | F111 | 3.3 | fact | "Another dangerous trend is the misuse of amniocentesis to determine the sex of the unborn child." | |
 | F112 | 3.3 | fact | "Frequently, if the foetus is found to be female, it is followed by MTP - this is totally against what is legal." | |
 | F113 | 3.3 | fact | "Such practices should be avoided because these are dangerous both for the young mother and the foetus." | |
 | F114 | 3.3 | fact | "Effective counselling on the need to avoid unprotected coitus and the risk factors involved in illegal abortions as well as providing more health care facilities could reverse the mentioned unhealthy trend." | |
 | F115 | 3.3 | fact | Box: "The Medical Termination of Pregnancy (Amendment) Act, 2017 was enacted by the government of India with the intension of reducing the incidence of illegal abortion and consequent maternal mortality and morbidity." | |
-| F116 | 3.3 | number | "According to this Act, a pregnancy may be terminated on certain considered grounds within the first 12 weeks of pregnancy on the opinion of one registered medical practitioner." (qualifier: "may be terminated") | |
+| F116 | 3.3 | number | "According to this Act, a pregnancy may be terminated on certain considered grounds within the first 12 weeks of pregnancy on the opinion of one registered medical practitioner." | |
 | F117 | 3.3 | number | "If the pregnancy has lasted more than 12 weeks, but fewer than 24 weeks, two registered medical practitioners must be of the opinion, formed in good faith, that the required ground exist." | |
 | F118 | 3.3 | fact | Grounds for termination under the Act: "(i) The continuation of the pregnancy would involve a risk to the life of the pregnant woman or of grave injury physical or mental health; or (ii) There is a substantial risk that of the child were born, it would suffer from such physical or mental abnormalities as to be seriously handicapped." | |
 | F119 | 3.4 | heading | "3.4 SEXUALLY TRANSMITTED INFECTIONS (STIS)" (the page-1 contents box lists the same section as "Sexually Transmitted Diseases"; the summary calls them "Sexually Transmitted Diseases (STIs)") | |
-| F120 | 3.4 | opener | "Infections or diseases which are transmitted through sexual intercourse are collectively called sexually transmitted infections (STI) or venereal diseases (VD) or reproductive tract infections (RTI)." (the opener defines the term used in its own section heading) | |
+| F120 | 3.4 | opener | "Infections or diseases which are transmitted through sexual intercourse are collectively called sexually transmitted infections (STI) or venereal diseases (VD) or reproductive tract infections (RTI)." | |
 | F121 | 3.4 | fact | "Gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, hepatitis-B and of course, the most discussed infection in the recent years, HIV leading to AIDS are some of the common STIs." | |
 | F122 | 3.4 | fact | "Among these, HIV infection is most dangerous and is discussed in detail in Chapter 7." | |
 | F123 | 3.4 | fact | "Some of these infections like hepatitis-B and HIV can also be transmitted by sharing of injection needles, surgical instruments, etc., with infected persons, transfusion of blood, or from an infected mother to the foetus too." | |
 | F124 | 3.4 | exception | "Except for hepatitis-B, genital herpes and HIV infections, other diseases are completely curable if detected early and treated properly." | |
 | F125 | 3.4 | fact | "Early symptoms of most of these are minor and include itching, fluid discharge, slight pain, swellings, etc., in the genital region." | |
-| F126 | 3.4 | fact | "Infected females may often be asymptomatic and hence, may remain undetected for long." (qualifiers: "may often", "may") | |
+| F126 | 3.4 | fact | "Infected females may often be asymptomatic and hence, may remain undetected for long." | |
 | F127 | 3.4 | fact | "Absence or less significant symptoms in the early stages of infection and the social stigma attached to the STIs, deter the infected persons from going for timely detection and proper treatment." | |
 | F128 | 3.4 | fact | "This could lead to complications later, which include pelvic inflammatory diseases (PID), abortions, still births, ectopic pregnancies, infertility or even cancer of the reproductive tract." | |
 | F129 | 3.4 | fact | "STIs are a major threat to a healthy society." | |
@@ -177,17 +176,17 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | F147 | 3.5 | fact | "Infertility cases either due to inability of the male partner to inseminate the female or due to very low sperm counts in the ejaculates, could be corrected by artificial insemination (AI) technique." | |
 | F148 | 3.5 | fact | "In this technique, the semen collected either from the husband or a healthy donor is artificially introduced either into the vagina or into the uterus (IUI - intra-uterine insemination) of the female." | |
 | F149 | 3.5 | fact | "Though options are many, all these techniques require extremely high precision handling by specialised professionals and expensive instrumentation." | |
-| F150 | 3.5 | fact | "Therefore, these facilities are presently available only in very few centres in the country." (qualifiers: "only", "very few") | |
+| F150 | 3.5 | fact | "Therefore, these facilities are presently available only in very few centres in the country." | |
 | F151 | 3.5 | fact | "Obviously their benefits is affordable to only a limited number of people." | |
 | F152 | 3.5 | fact | "Emotional, religious and social factors are also deterrents in the adoption of these methods." | |
 | F153 | 3.5 | fact | "Since the ultimate aim of all these procedures is to have children, in India we have so many orphaned and destitute children, who would probably not survive till maturity, unless taken care of." | |
 | F154 | 3.5 | fact | "Our laws permit legal adoption and it is as yet, one of the best methods for couples looking for parenthood." | |
 | F155 | SUMMARY | heading | "SUMMARY" | |
 | F156 | EXERCISES | heading | "EXERCISES" | |
-| F157 | 3.1a | caption | No in-figure text labels - unlabelled line-art diagram; harvest confirmed by opening the rendered asset and by a zero text-layer word count inside the pinned rect. | |
-| F158 | 3.1b | caption | No in-figure text labels - unlabelled photograph; harvest confirmed by opening the rendered asset and by a zero text-layer word count inside the pinned rect. | |
-| F159 | 3.2 | caption | No in-figure text labels - unlabelled photograph (Copper T device); harvest confirmed by opening the rendered asset and by a zero text-layer word count inside the pinned rect. | |
-| F160 | 3.3 | caption | No in-figure text labels - unlabelled photograph (implants held between fingers); harvest confirmed by opening the rendered asset and by a zero text-layer word count inside the pinned rect. | |
+| F157 | 3.1a | caption | No in-figure text labels - unlabelled line-art diagram. | |
+| F158 | 3.1b | caption | No in-figure text labels - unlabelled photograph. | |
+| F159 | 3.2 | caption | No in-figure text labels - unlabelled photograph (Copper T device). | |
+| F160 | 3.3 | caption | No in-figure text labels - unlabelled photograph (implants held between fingers). | |
 | F161 | 3.4a | caption | Figure labels: "Vas deferens tied and cut" | |
 | F162 | 3.4b | caption | Figure labels: "Fallopian tubes tied and cut" | |
 
@@ -248,24 +247,20 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 | 3.4(a) | Vasectomy | fig_3_4a.png | 5 | yes | yes |
 | 3.4(b) | Tubectomy | fig_3_4b.png | 5 | yes | yes |
 
-6 assets for 4 numbered figures - Figures 3.1 and 3.4 each carry two labelled parts.
-
 ## Coverage note
 
-**Compression decisions.** The rewrite keeps the full NCERT fact list and re-casts enumerable prose as tables and process flows: the seven contraceptive categories (natural/traditional, barrier, IUDs, oral contraceptives, injectables, implants and surgical methods) become one comparison table; the three IUD classes and the three oral/injectable routes keep every named example (Lippes loop; CuT, Cu7, Multiload 375; Progestasert, LNG-20; Saheli; Nirodh); the three STI precautions, the two grounds for termination under the MTP (Amendment) Act, 2017, and the vasectomy/tubectomy steps become process flows. Rhetorical and transitional sentences ("What do we understand by this term?", "Let us examine them.", "Another effective and popular method is the use of...") are folded into the surrounding prose rather than printed as standalone lines; every fact, number, name and qualifier they carried is preserved.
+**Compression decisions.** Pass-2 brief: the seven contraceptive categories become one comparison table; the three IUD classes and the three oral/injectable routes keep every named example (Lippes loop; CuT, Cu7, Multiload 375; Progestasert, LNG-20; Saheli; Nirodh); the three STI precautions, the two grounds for termination under the MTP (Amendment) Act, 2017, and the vasectomy/tubectomy steps become process flows. Rhetorical and transitional sentences are folded into surrounding prose; every fact, number, name and qualifier they carried is preserved.
 
 **Exercise classification.** 12 exercises (18 numbered parts): 15 parts are answered by the body text (Q1-Q6, Q8-Q10, and the Q11/Q12 parts whose answers are stated in the chapter - lactational amenorrhea, awareness creation, gamete *transport* not formation, the three non-curable STIs, and ZIFT versus IUT), i.e. 9 exercises wholly covered and 2 exercises (Q11, Q12) with one gap part each. The remaining 3 parts are gaps.
 **Gaps answered in the appendix "Terms used in the exercises":** Q7 (gonad removal is not a contraceptive option - sterilisation blocks gamete transport, it does not remove the gonads, and castration was never an NCERT contraceptive method); Q11(a) (abortions can occur spontaneously - NCERT defines only intentional/voluntary, i.e. induced, abortion); Q12(c) (oral pills are *not* popular among rural women - the chapter states only that pills are "well accepted by the females"). Three gaps, written once each.
 
-**Drift caught and fixed.** None yet - Pass 3 has not run. The figure-label harvest is the audit's principal finding so far: both Fig 3.4 labels are vector artwork and are absent from the PDF text layer, so they can only be harvested by opening the rendered asset (a text-layer harvest would have returned an empty set and passed check 6 vacuously).
+**Drift caught and fixed.** None yet - Pass 3 has not run.
 
-**Figures requiring manual attention.** None - all 6 assets cleared the three-part crop audit (text-layer grazing, dark-ink extent overflow, unexplained border-band ink) and were individually opened and confirmed for completeness and legibility. Two page artefacts had to be handled rather than flagged: the orange "45" page-number tab overlaps Fig 3.4(b)'s right ovary inside the figure's own bounding box, so the tab is painted out after extraction with a guard asserting the box holds no artwork ink; and the SUMMARY page's orange scroll decoration (page 9) is page furniture, not a figure.
-
-**Deliberately NOT embedded.** The page-1 chapter-opening decorative plate (a framed uterus-with-IUD illustration, xref 180) is not extracted, matching the sibling convention set by Ch2 Human Reproduction, which covers the chapter opening with the title-block motif instead. The page-1 QR code (xref 181) is likewise not a figure.
+**Figures requiring manual attention.** None - all 6 assets cleared the three-part crop audit and were individually opened; the two NCERT page artefacts that had to be handled during extraction are recorded in Ch3_figure_audit.md, never silently dropped.
 
 **Color-dependent figures.** None that lose meaning: Fig 3.1(a)/3.4(a)/3.4(b) are line-art whose only color-carried distinction is the yellow ligature marks, which survive conversion and are in any case stated in words ("tied and cut"); Fig 3.1(b), 3.2 and 3.3 are photographs of physical devices whose identity is carried by shape, not hue. The blue arrows on Fig 3.4(b) survive as arrows in greyscale and the caption states the distinction in words.
 
 **Source problems.** Two in the source itself, both reproduced as NCERT prints them rather than silently corrected: NCERT's "In aminocentesis" (spelling) and "haemoplilia" for haemophilia, and the garbled sentence "...such as, down syndrome, haemoplilia, sickle-cell anemia, etc., determine the survivability of the foetus." NCERT also prints the contents-box entry for 3.2 as "Population Explosion and Birth Control" while the section heading on page 43 reads "3.2 POPULATION STABILISATION AND BIRTH CONTROL"; both wordings are recorded (Exercise Q5 and the summary use the first).
 
-**Linter verdict.** Not run yet - Gate 2 has not started. Gate 1's machine validation is the `_extract_labels` parse recorded in `Ch3_TRACKER.md` and reproducible with `scratch/ch3/validate_gate1.py`.
+**Linter verdict.** Not run yet - Gate 2 has not started. Gate 1's machine validation is the `_extract_labels` parse in Ch3_TRACKER.md, reproducible with scratch/ch3/validate_gate1.py.
 
