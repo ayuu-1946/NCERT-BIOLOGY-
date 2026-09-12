@@ -66,6 +66,35 @@ Ch19 hit the same class via inconsistent heading *font names*. **Do not derive t
 from styling alone**; walk the headings as their own list (session `1-H`) and reconcile against
 the chapter's contents box.
 
+### A crop rectangle can be forced to include page furniture — assert, then paint it out
+Found on Ch3 Reproductive Health. Fig 3.4(b) (tubectomy) has its right ovary reaching **x = 485**,
+while NCERT's orange **"45" page-number tab** is a full-bleed block starting at **x = 476.6**. No
+rectangle can hold the artwork without the tab, so the choice is a clipped ovary or a baked-in page
+number — and simply excluding the tab is impossible because it *overlaps the artwork's x-range*.
+
+The fix that generalises: include the furniture, then **paint it out with a guard that proves the
+box held nothing else**:
+
+```python
+TAB_WHITEOUT = {"3_4b": (476.6, 604.0, 490.0, 695.0)}   # in PDF points
+inner = img.crop(box)                                    # before conversion
+non_tab = sum(1 for r, g, b in inner.getdata()
+              if not (r > 150 and b < 150 and r - b > 60)      # orange tab colour
+              and (0.299*r + 0.587*g + 0.114*b) < 200)         # anything dark
+assert non_tab == 0, "whiteout box contains artwork - fix the rect"
+```
+
+The assertion is the point: a future repin that shifts artwork into that box fails loudly instead
+of silently deleting a label. Record the box, its colour test and the reason in the extraction
+script's docstring — the audit's check C will keep reporting the tab's pixels in the border band,
+and that hit is a **by-construction false positive** that must be documented rather than silenced.
+
+Corollary: the same page can carry *other* furniture inside a figure's own y-range. Ch3 p5 also has
+a pale-gray tint band (min 227) that is part of the caption strip's background, not artwork — caught
+only by scanning the converted asset's rows for "pale but not white" (`row.mean() < 252 and
+row.min() > 200`). That per-row scan found three real defects on this chapter (a clipped ovary, a
+truncated label line, two tint bands) that all three crop audits had passed.
+
 ## ReportLab / `neet_template.py` pagination
 
 ### Nesting `KeepTogether` around `heading()` breaks pagination
