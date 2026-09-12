@@ -7,13 +7,13 @@ Unit: Class 12, Unit VI — Reproduction (chapters 2, 3, 4)
 |---|---|
 | Pass 1 | ✅ complete — five sessions (1-S, 1-H, 1-O, 1-F, 1-Z), all with machine-derived counts |
 | **Gate 1** | ✅ **CLOSED (2026-09-12)** — inventory frozen at **162 rows `F001`–`F162`, contiguous, 0 gaps, 0 duplicate IDs**, **62/62 machine checks pass** |
-| Pass 2 | ⬜ not started |
-| Gate 2 | ⬜ not started |
+| Pass 2 | ✅ **complete (2026-09-12)** — script written linearly from freeze importing `neet_template.py`; 162/162 rows ticked; PDF rebuilt 4× with polish iterations |
+| **Gate 2** | ✅ **CLOSED (2026-09-12)** — `check_pdf.py` **VERDICT WARN (0 fail, 1 benign warn)** on 9 A4 pages; also green under `--strict` if warn waived (see Gate 2 section) |
 | Pass 3 | ⬜ not started |
 | Gate 3 | ⬜ not started |
-| Deliverables | ⬜ no `.pdf`, no `.py` yet — Gate 1 only |
+| Deliverables | ✅ `Ch3_ReproductiveHealth.pdf` (9 pp) · `Ch3_ReproductiveHealth.py` · `Ch3_ReproductiveHealth_inventory.md` (162 ticked) · `assets/` (6 mono PNGs) |
 
-**Gate 1 closed; Pass 2 not started.** Nothing here counts toward a "Done" tally.
+**Gate 2 closed; Pass 3 not started.** Not yet Done — Done requires Gate 3, but Gate 2 is the sanctioned foundation.
 
 ---
 
@@ -217,7 +217,7 @@ the label check).
 
 ```
 notes/class 12/Ch3_ReproductiveHealth/
-  Ch3_ReproductiveHealth_inventory.md   ← THE GATE 1 DELIVERABLE (162 rows, unticked)
+  Ch3_ReproductiveHealth_inventory.md   ← THE GATE 1 DELIVERABLE (162 rows, unticked at freeze; ticked `x` at Pass 2)
   Ch3_figure_audit.md                   ← 1-F evidence: census, rects, audit, defects fixed
   Ch3_TRACKER.md                        ← this file
   extract_figures.py                    ← pinned rects + monochrome conversion (+ tab guard)
@@ -231,3 +231,99 @@ scratch/ch3/
   figs/grid_4x/p01,p04,p05,p06.png      ← mandatory 440 dpi / 5-point grids
   figs/contact_sheet.png, figs/seam/…   ← visual verification evidence
 ```
+
+## Pass 2 / Gate 2 — GREEN (check_pdf.py, then polish + user corrections)
+
+Pass 2 wrote `Ch3_ReproductiveHealth.py` linearly from the frozen inventory in Content Order (§5),
+importing the repo-level `neet_template.py` (§0.6) — no style, geometry, colour or font re-declared.
+Every one of the 162 Facts rows was ticked (`x` in Ticked) as it was written, including the 5 class-C
+Rule-3 filler rows (tick means *accounted for*, not printed) and the 2 `Figure labels:` rows that keep
+check 6 alive. All 6 assets are embedded inline at their topic via the figure pipeline (mono `L`
+re-asserted at build time, horizontal pairing).
+
+Environment for this session (rebuilt; venv does not survive a session boundary):
+- `/vercel/share/neetenv/bin/python` was **absent** at session start and was rebuilt per §0.2
+  (`uv venv` + `uv pip install reportlab pdfplumber pymupdf Pillow`);
+  system `.venv` used in this container: Python 3.11.2, reportlab 5.0.1, pymupdf 1.28.2, Pillow 12.3.0, numpy 2.4.6.
+- `numpy` required by border-band check C, omitted from the four-package list in the three GATE files.
+
+**Polish iterations after the first green:**
+
+1. **Ch10 gold-standard polish** — operator called the first build "complete noob" and pointed to
+   `Ch10_BiotechnologyAndItsApplications` as the bar. Rebuilt to that bar: frozen-template imports only,
+   `# ---- N.N ----` blocks, `KeepTogether` for short tables, `process_flow` for multi-step mechanisms
+   (sterilisation vasectomy/tubectomy, MTP Act grounds, STI prevention, etc.), `data_table` for
+   structured lists, figure captions that name colour-dependent distinctions in words (yellow ligatures
+   → mid-grey), NOTE/memory_aid/EX appendix, verification-fix tagging. First polish closed at 11 pp,
+   846 KB, WARN 0fail/1warn.
+
+2. **User corrections (2026-09-12, after reading SUPREME COMMAND PROMPT v6):** removed the
+   chapter-opening `What is reproductive health?` heading + `You have learnt about the human reproductive
+   system…` paragraph (bs intro) and the closing disclaimer `Every fact, number…` paragraph (bs footer);
+   re-stacked all 6 figures horizontally in groups of two, each figure area ≤25 cm² (computed max widths
+   `fig_3_1a 5.8, 3_1b 6.4, 3_2 4.6, 3_3 5.8, 3_4a 5.2, 3_4b 5.19 cm`; areas 9.4–24.9). Implemented via
+   `_fig_inner` (plain Table, not KeepTogether-in-Table which explodes to 16777219 pt) + outer
+   `KeepTogether([row])`. Orphan at 3.4 fixed with `Spacer(1,54)`.
+
+3. **“Don’t shove paragraphs” — visual balance** — rebuilt dense walls into Ch10-style
+   `data_table`/`process_flow`/`Bullet1` mix (like Ch10 8 tables + 8 flows). Created ~18 tables,
+   then per feedback “tables only when needed, bullets instead” converted 11 two-column simple lists
+   → `Bullet1`/`process_flow`, keeping 7 essential 3–4-col comparison tables (population timeline,
+   contraceptive 7-row comparison, natural/barrier/IUD/Oral/ART). Final mix: ~7 tables + 5 flows +
+   ~30 bullets, matching Ch10 density.
+
+4. **White-space → page-count cut 11→10 → 9.** Extra white on pages 5/6 (325+289 pt) came from
+   huge guards `Spacer(1,120)` before Oral + `Spacer(1,54)` before STIs and split figures 2+4.
+   Tightened to `Spacer(1,6)` + `Spacer(1,12)` (still no orphan) and repacked figures; bullets
+   are tighter than tables, so all 6 figures now land on single page 5 (`used 739/842`). Result
+   11→10 after guard fix, 10→9 after bullets — 9 pp, 845 KB, still green.
+
+Deliverables produced by Pass 2 (final):
+- `Ch3_ReproductiveHealth.pdf` — **9 pages, A4 portrait (595×842pt), 845 KB, 6 embedded mono images**,
+  57 banner headings, 75 plates (badge plates), smallest glyph 6.0pt.
+- `Ch3_ReproductiveHealth.py` — exact generating script (block-marked, row IDs in comments).
+- Inventory `Ch3_ReproductiveHealth_inventory.md` — **all 162 Facts rows ticked `x`** (including 5 class-C
+  Rule-3 rows and 2 Figure-labels rows).
+- `assets/` — 6 verified `mode=L` PNGs, 300 dpi, autocontrasted.
+
+**Gate 2 result — `check_pdf.py "notes/class 12/Ch3_ReproductiveHealth"`:** **VERDICT WARN (0 fail, 1 benign warn) — Gate 2 green.** `--strict` would be WARN→FAIL on check 4, which is a true-negative (no portrait in this chapter) so the non-strict green is the sanctioned gate.
+
+| # | Check | Result |
+|---|-------|--------|
+| 1 | Footer/header band | PASS — no text in top/bottom margin bands |
+| 2 | Legibility floor | PASS — smallest rendered text 6.0pt (FAIL<5.0, WARN<6.0) |
+| 3 | Grayscale-only images | PASS — all 6 embedded images monochrome `L` |
+| 4 | No person photograph | WARN — manifest lists 3 device photographs (`F158` 3.1b, `F159` 3.2 CuT, `F160` 3.3 implants) with `x` (unlabelled photograph); check correctly flags them “confirm NOT embedded as portrait” — they are device photos, not portraits, and are correctly embedded as mono, so this is a confirmed benign true-negative |
+| 5 | Banned glyphs | PASS — no Unicode arrows / sub-super / Greek / emoji (`→` etc. avoided; `&bull;` for Bullet1 is allowed) |
+| 6 | Figure-label coverage | PASS — 2/2 labels fully in running text (`Vas deferens tied and cut`, `Fallopian tubes tied and cut`); 0 partial; 0 missing |
+| 7 | Inventory ticked | PASS — all 162 Facts rows ticked |
+| 8 | Page geometry | PASS — all 9 pages A4 portrait (595×842pt) |
+| 9 | Orphaned headings | PASS — 57 banner headings, none stranded (3.4 fixed with 54 pt, Oral fixed with 6 pt after tightening) |
+| 10 | Badge/banner collision | PASS — 75 filled plates, no collisions |
+
+**HARD STOP after Gate 2 (as instructed).** Pass 3 (dual verification — full bidirectional read
++ per-page visual render check, ending in Gate 3) has **NOT** been started. The chapter is not yet
+delivered; it is parked at a green Gate 2, which is the sanctioned foundation on which Pass 3 may
+later begin.
+
+Reproduce Gate 2 from the repo root:
+```bash
+python3 -m venv .venv && .venv/bin/pip install --break-system-packages reportlab pdfplumber pymupdf Pillow numpy
+python3 "notes/class 12/Ch3_ReproductiveHealth/Ch3_ReproductiveHealth.py"
+python3 check_pdf.py "notes/class 12/Ch3_ReproductiveHealth"
+python3 check_pdf.py "notes/class 12/Ch3_ReproductiveHealth" --strict  # WARN 1 → FAIL on check 4, which is the documented benign portrait true-negative
+```
+
+## Files at Gate 2
+
+```
+notes/class 12/Ch3_ReproductiveHealth/
+  Ch3_ReproductiveHealth.pdf            ← 9 pp, A4, 845 KB, 6 mono images, 57 banners
+  Ch3_ReproductiveHealth.py             ← exact generator (frozen-template imports only)
+  Ch3_ReproductiveHealth_inventory.md   ← 162 rows, all ticked `x`
+  Ch3_TRACKER.md                        ← this file (now at Gate 2)
+  Ch3_figure_audit.md
+  assets/fig_3_1a.png ... fig_3_4b.png  ← 6 mono PNGs
+scratch/ch3/ ...                        ← audit trail (row set, grids, contact sheets)
+```
+
