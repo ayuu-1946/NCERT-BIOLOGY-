@@ -1,6 +1,8 @@
 # Frozen Inventory — Chapter 7: Human Health and Disease (Class XII)
 
-**Status: PASS 1 COMPLETE — GATE 1 CLOSED (2026-08-23). Pass 2 not started.**
+**Status: ✅ FULLY COMPLETE — GATES 1 + 2 + 3 CLOSED.** Gate 1 freeze 2026-08-23 · Gate 2 green 2026-08-23 · Gate 3(a) visual clean (`scratch/ch7_pass3a/PASS3A_FINDINGS.md`) · Gate 3(b) bidirectional read with Pass-1 gaps `F001a`/`F001b`/`F232a` fixed in body. Disk re-check 2026-09-12: 19 pp · 338/338 Facts ticked · 21/21 labels · 11 mono imgs · `check_pdf.py` exit 0 (0 fail / 1 accepted warn). Roll-up reconciled into `CHAPTER_TRACKER.md` / `CHAPTER_STATUS.md` same session.
+
+*(Superseded header, kept per §7:)* ~~PASS 1 COMPLETE — GATE 1 CLOSED (2026-08-23). Pass 2 not started.~~
 
 Source PDF: `Chapter/class 12/Chapter 7 - Human Health and Disease.pdf` (22 pages)
 | Frozen: 2026-08-23 | **Rows: 346 (`F001`..`F346`, contiguous)**
@@ -1282,3 +1284,21 @@ the full ID set rather than trusting either number here.
 
 **Gate 3 status is unchanged by this edit.** No Pass 3(a) visual pass and no Pass 3(b)
 bidirectional read were performed. Ch7 remains **NOT in the Done tally**.
+
+
+---
+
+## Pass 3 / Gate 3 — CLOSED (reconciled 2026-09-12)
+
+Chapter-level Pass 3 work was already on disk; this block records the closure that the inventory header previously left open.
+
+| Condition | State |
+|---|---|
+| 1. Zero confirmed defects remain | ✅ 3(b) D1 (`F001a`/`F001b` humors/Hippocrates/Ayurveda) + D2 (`F232a` smoking prevalent) added and present in PDF |
+| 2. `check_pdf.py` green on final rebuild | ✅ exit 0 (0 fail / 1 accepted check-4 warn) |
+| 3. Pass 3(a) every page | ✅ 20/20 pages inspected — `scratch/ch7_pass3a/PASS3A_FINDINGS.md` (0 Ch7-specific defects) |
+| 4. Pass 3(b) bidirectional full read | ✅ source↔inventory; Pass-1 gaps fixed as lettered rows (not back-dated into freeze narrative) |
+| 5. Rebuild reproducible | ✅ 19 pp · 51,555 chars · 11 imgs · SHA `3c02aaa18189555a` (re-derived 2026-09-12) |
+
+**Note on page count:** earlier Gate 2 notes said 20 pp; the committed PDF on disk at reconciliation is **19** A4 pages. Check 8 confirms 19/19 A4 portrait. Use the disk figure.
+
