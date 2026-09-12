@@ -267,5 +267,5 @@ Census (every total is derivable from the list beside it; nothing here is a hand
 
 **Source problems.** Two in the source itself, both reproduced as NCERT prints them rather than silently corrected: NCERT's "In aminocentesis" (spelling) and "haemoplilia" for haemophilia, and the garbled sentence "...such as, down syndrome, haemoplilia, sickle-cell anemia, etc., determine the survivability of the foetus." NCERT also prints the contents-box entry for 3.2 as "Population Explosion and Birth Control" while the section heading on page 43 reads "3.2 POPULATION STABILISATION AND BIRTH CONTROL"; both wordings are recorded (Exercise Q5 and the summary use the first).
 
-**Linter verdict.** Not run yet - Gate 2 has not started. Gate 1's machine validation is the `_extract_labels` parse recorded below.
+**Linter verdict.** Not run yet - Gate 2 has not started. Gate 1's machine validation is the `_extract_labels` parse recorded in `Ch3_TRACKER.md` and reproducible with `scratch/ch3/validate_gate1.py`.
 
