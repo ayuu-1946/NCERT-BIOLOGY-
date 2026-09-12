@@ -1,0 +1,112 @@
+===== SOURCE PAGE 14 =====
+
+
+   BIOLOGY
+
+   4.3.1 Law of Independent Assortment
+
+   In the dihybrid cross (Figure 4.7).the phenotypes round,yellow;
+   wrinkled,yellow;round,green and wrinkled,green appeared in the
+   ratio9:3:3:1.Sucharatiowasobservedforseveralpairsofcharacters
+   thatMendelstudied.
+   Theratioof9:3:3:1canbe derived as a combination series of3yellow:
+   1green,with 3round:1 wrinkled.Thisderivation canbe written
+   as follows:
+   (3Round:1Wrinkled)(3Yellow:1Green)=9Round,Yellow:3
+   Wrinkled,Yellow:3Round,Green:1Wrinkled,Green
+   Based upon such observations ondihybridcrosses(crossesbetween
+   plantsdifferingintwotraits)Mendelproposed a second set of generalisations
+   thatwecallMendel'sLawofIndependentAssortment.Thelawstatesthat
+
+   of characters is independent of theotherpairofcharacters'.
+   The Punnett square can be effectively used to understand the
+   independent segregation ofthe two pairs of genes during meiosis and
+   the production of eggs and pollen in theF,RrYyplant.Considerthe
+   segregationofonepairofgenesRandr.Fiftypercentof thegametes
+   have thegene Rand theother5opercenthave r.Nowbesideseach
+   gamete having either Ror r,it should also have the alleleYory.The
+   important thing to remember here is that segregation of50percent R
+
+   Y and 50per centy.Therefore,50per cent of the r bearing gametes
+   hasYand theother50percenthasy.Similarly.50per cent oft heR
+   bearinggameteshasYand theother5opercenthasy.Thus there are
+
+   The four typesareRY,Ry.rYandryeachwithafrequencyof25per
+   centor1/4ofthetotalgametesproduced.Whenyouwritedownthe
+   four types of eggs and pollen on the two sides ofa Punnett square it is
+   very easy to derive the composition of the zygote sth at give rise to the
+   Fplants(Figure4.7).Althoughthereare16squareshowmany
+
+   downintheformatgiven.
+   Canyou,usingthePunnettsquaredataworkoutthegenotypicratio
+   at the F,stage and fill in the format given? Is the genotypic ratio
+   also 9:3:3:1?
+
+   64
+
+   Their expected Phenotypes
+
+   S.No.
+   Genotypes found in F
+
+   4.3.2 Chromosomal TheoryofInheritance
+
+   Mendelpublishedhisworkoninheritanceofcharactersin1865but
+   for several reasons,it remained unrecognised till 19oo.Firstly,
+
+   Reprint2026-27
+
+===== SOURCE PAGE 15 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   communicationwasnoteasy(asitisnow)inthosedaysandhiswork
+   could not bewidelypublicised.Secondly.his conceptofgenes(or
+   factors,inMendel'swords)asstableand discrete units that controlled
+   theexpressionoftraitsand,ofthepairofalleleswhichdidnotblend
+   with eachother,wasnotacceptedbyhis contemporaries a san
+   explanation for the apparently continuous variation seen innature.
+   Thirdly,Mendel'sapproachofusingmathematicstoexplainbiological
+   phenomena was totally new and unacceptable tom any ofthe
+   biologistsofhistime.Finally,thoughMendel'sworksuggested that
+   factors(genes)were discreteunits,he could not provide any physical
+   proof for the existence of factors or say what they were made of.
+   In 19o0,three Scientists(de Vries,Correns and von Tschermak)
+   independently rediscovered Mendel's result son the inheritance of
+   characters.Also,by this time due to advancements in microscopy that
+   weretakingplace,scientistswereabletocarefullyobservecell division.
+   This led to the discovery of structures in the nucleus that appeared to
+   double and dividejustbeforeeachcelldivision.Thesewere called
+   chromosomes(coloredbodies,astheywerevisualisedbystaining).By
+   1902,thechromosomemovement during meiosis had been worked out.
+   Walter Sutton and Theodore Boveri noted that the behaviour of
+   chromosomes was parallel to the behaviour of gene sand used
+   chromosome movement(Figure 4.8)to explain Mendel's laws (Table 4.3).
+   Recall that you have studied the behaviour of chromosomes during mitosis
+   (equational division)and during meiosis (reduction division).The
+   important things to remember are that chromosomes as well as genes
+   occurinpairs.Thetwoallelesof a gene pair are located on homologous
+   sitesonhomologouschromosomes.
+
+   MeiosisI
+   anaphase
+   Biv a lent
+
+   Germ cells
+   Meiosis II
+   anaphase
+
+   G2
+
+   Q00
+
+   000
+
+   65
+
+   Figure4.8Meiosis and germ cell formation in a cell with four chromosomes.
+   Can you see how chromosomes segregate when germ cells
+   areformed?
+
+   Reprint2026-27

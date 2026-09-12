@@ -1,0 +1,86 @@
+# ---- 4.2.2.1 Incomplete Dominance ---- F123-F142 + Fig 4.6
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.2.2.1", "Incomplete Dominance", level=2))
+# F124, F125
+story.append(b1(
+    "<b>When experiments on peas were repeated using other traits in other plants, it was "
+    "found that sometimes the F<sub>1</sub> had a phenotype that did not resemble either "
+    "of the two parents and was in between the two.</b>"))
+story.append(b1(
+    "<b>The inheritance of flower colour in the dog flower (snapdragon or Antirrhinum sp.) "
+    "is a good example to understand incomplete dominance.</b>"))
+# F126, F127
+story.append(b1(
+    "<b>In a cross between true-breeding red-flowered (RR) and true-breeding white-flowered "
+    "plants (rr), the F<sub>1</sub> (Rr) was pink (Figure 4.6).</b>"))
+story.append(b1(
+    "<b>When the F<sub>1</sub> was self-pollinated the F<sub>2</sub> resulted in the "
+    "following ratio 1 (RR) Red : 2 (Rr) Pink : 1 (rr) White.</b>"))
+# F128, F129
+story.append(b1(
+    "<b>Here the genotype ratios were exactly as we would expect in any mendelian "
+    "monohybrid cross, but the phenotype ratios had changed from the 3:1 dominant:recessive "
+    "ratio.</b>"))
+story.append(b1(
+    "<b>What happened was that R was not completely dominant over r and this made it "
+    "possible to distinguish Rr as pink from RR (red) and rr (white).</b>"))
+
+# F137-F138 - Fig 4.6 caption + labels
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.6 labels).</b> The plate is the <b>Results of monohybrid "
+    "cross in the plant Snapdragon, where one allele is incompletely dominant over the other "
+    "allele</b>. The <b>P generation</b> row shows <b>Red (RR)</b> and <b>White (rr)</b>; "
+    "the <b>Gametes</b> row carries <b>R</b> and <b>r</b>. The <b>F<sub>1</sub> "
+    "generation</b> row reads <b>All pink (Rr)</b>. The <b>F<sub>2</sub> generation</b> "
+    "grid is the four cells of a Punnett square - <b>RR</b>, <b>Rr</b>, <b>Rr</b>, "
+    "<b>rr</b> - and the two ratio lines under it: <b>Phenotypic ratio: red:pink:white "
+    "1:2:1</b> and <b>Genotypic ratio: RR:Rr:rr 1:2:1</b>."))
+
+# F130-F133 - "What exactly is dominance?" + the enzyme-based explanation
+story.append(gap())
+story.append(Paragraph(
+    "<b>What the snapdragon result forces us to ask:</b>", STYLES["Body"]))
+story.append(b1(
+    "<b>Explanation of the concept of dominance: What exactly is dominance? Why are some "
+    "alleles dominant and some recessive?</b>"))
+story.append(b1(
+    "<b>To tackle these questions, we must understand what a gene does.</b> Every gene, as "
+    "you know by now, contains the information to express a particular trait."))
+story.append(b1(
+    "<b>In a diploid organism, there are two copies of each gene, i.e., as a pair of "
+    "alleles. Now, these two alleles need not always be identical, as in a heterozygote.</b>"))
+story.append(b1(
+    "<b>One of them may be different due to some changes that it has undergone</b> "
+    "(about which you will read further on, and in the next chapter) <b>which modifies the "
+    "information that particular allele contains.</b>"))
+# F134, F135, F136 - enzyme example
+story.append(b1(
+    "<b>Let's take an example of a gene that contains the information for producing an "
+    "enzyme.</b> Now there are two copies of this gene, the two allelic forms."))
+story.append(b1(
+    "<b>Let us assume (as is more common) that the normal allele produces the normal enzyme "
+    "that is needed for the transformation of a substrate S.</b>"))
+story.append(b1(
+    "<b>Theoretically, the modified allele could be responsible for production of - "
+    "(i) the normal/less efficient enzyme, or (ii) a non-functional enzyme, or (iii) no "
+    "enzyme at all</b>"))
+# F139-F142 - the three cases
+story.append(b1(
+    "<b>In the first case, the modified allele is equivalent to the unmodified allele,</b> "
+    "i.e., it will produce the same phenotype/trait, i.e., result in the transformation of "
+    "substrate S. Such equivalent allele pairs are very common."))
+story.append(b1(
+    "<b>But, if the allele produces a non-functional enzyme or no enzyme, the phenotype "
+    "may be effected.</b> The phenotype/trait will only be dependent on the functioning of "
+    "the unmodified allele."))
+story.append(b1(
+    "<b>The unmodified (functioning) allele, which represents the original phenotype is the "
+    "dominant allele and the modified allele is generally the recessive allele.</b>"))
+story.append(b1(
+    "<b>Hence, in the example above the recessive trait is seen due to non-functional "
+    "enzyme or because no enzyme is produced.</b>"))
+
+# ======================================================================================

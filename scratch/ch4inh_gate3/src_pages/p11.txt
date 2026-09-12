@@ -1,0 +1,68 @@
+PRINCIPLESOFINHERITANCE ANDVARIATION
+Inthefirstcase,themodifiedalleleisequivalenttotheunmodified allele,
+i.e.,itwillproducethesamephenotype/trait,i.e.,resultinthetransformation
+ofsubstrateS.Such equivalentallelepairsareverycommon.But,if the
+allele produces anon-functional enzyme ornoenzyme,thephenotypemay
+be effected.Thephenotype/traitwill only be dependent on the functioning
+ofthe unmodified allele.Theunmodified(functioning)allele,whichrepresents
+the original phenotype is the dominant allele and the modified allele is
+generallytherecessiveallele.Hence,intheexample above the recessive trait
+isseenduetonon-functional enzyme or because no enzyme isproduced.
+4.2.2.2Co-dominance
+Till now we were discussingcrosseswheretheF,resembledeitherof the
+twoparents(dominance)orwasin-between(incompletedominance).But,
+in the case of co-dominance theF,generationresemblesbothparents.A
+good example is different types of red blood cells that determine ABO
+thegene I.Theplasmamembrane of thered blood cells has sugar polymers
+that protrude from its surface and the kind of sugar is controlled by the
+gene.Thegene(has three allelesI,Pand i.The allelesPand Pproduce
+a slightly different form of the sugar while alle lei does not produce any
+sugar.Becausehumansarediploidorganisms,eachpersonpossesses
+anytwoofthethreeIgenealleles.PandParecompletelydominantover
+i.in otherwordswhenPand ia represent onlyPexpresses(becausei
+does not produce any sugar),and when Pand iare present Pexpresses.
+But when A and Pare present together they both express their own types
+ofsugars:thisisbecauseof co-dominance.Hencered blood cells have
+bothA and Btypesof sugars.Since there arethreedifferentalleles,there
+aresixdifferentcombinationsofthesethreeallelesthatarepossible,and
+therefore,atotalofsixdifferentgenotypesofthehumanABOblood types
+(Table4.2).Howmanyphenotypesarepossible?
+Table 4.2:Table Showing the Genetic Basis of Blood Groups
+in Human Population
+Allele from
+Allele from
+Parent 2
+Parent 1
+Genotype of
+Blood
+offspring
+types of
+offspring
+IATA
+IAIB
+IA
+A
+IA
+IA
+IB
+AB
+61
+IA
+IAi
+A
+i
+IAIB
+IB
+IA
+AB
+IB
+IB
+IBIB
+B
+IB
+IBi
+B
+i
+ii
+0
+Reprint2026-27

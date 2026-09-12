@@ -1,0 +1,38 @@
+# ---- 4.7 MUTATION ---- F291-F299
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.7", "MUTATION", level=1))
+# F292, F293
+story.append(keyterm(
+    "<b>Mutation is a phenomenon which results in alteration of DNA sequences and "
+    "consequently results in changes in the genotype and the phenotype of an "
+    "organism.</b>"))
+story.append(b1(
+    "<b>In addition to recombination, mutation is another phenomenon that leads to "
+    "variation in DNA.</b>"))
+# F294-F296
+story.append(b1(
+    "<b>As you will learn in Chapter 5, one DNA helix runs continuously from one end to "
+    "the other in each chromatid, in a highly supercoiled form.</b>"))
+story.append(b1(
+    "<b>Therefore loss (deletions) or gain (insertion/duplication) of a segment of DNA, "
+    "result in alteration in chromosomes.</b> Since genes are known to be located on "
+    "chromosomes, alteration in chromosomes results in abnormalities or aberrations."))
+story.append(b1(
+    "<b>Chromosomal aberrations are commonly observed in cancer cells.</b>"))
+# F297, F298
+story.append(keyterm(
+    "<b>In addition to the above, mutation also arise due to change in a single base pair "
+    "of DNA. This is known as point mutation.</b> A classical example of such a mutation "
+    "is sickle cell anemia."))
+story.append(b1(
+    "<b>Deletions and insertions of base pairs of DNA, causes frame-shift mutations</b> "
+    "(see Chapter 5)."))
+# F299
+story.append(keyterm(
+    "<b>However, there are many chemical and physical factors that induce mutations. "
+    "These are referred to as mutagens. UV radiations can cause mutations in organisms - "
+    "it is a mutagen.</b>"))
+
+# ======================================================================================

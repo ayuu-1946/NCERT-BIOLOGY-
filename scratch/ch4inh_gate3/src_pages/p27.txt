@@ -1,0 +1,54 @@
+PRINCIPLESOFINHERITANCE ANDVARIATION
+SUMMARY
+Genetics is a branch of biology which deals with principlesofinheritance
+anditspractices.Progenyresemblingtheparentsinmorphological and
+physiologicalfeatureshasattractedtheattentionofmanybiologists.
+Mendel was the first to study this phenomenon systematically. While
+studying the pattern ofinheritance in pea plants of contrasting
+characters,Mendel proposed the principles ofinheritance,which are
+today referred to as Mendel's Laws of Inheritance'.He proposed that
+thefactors'(laternamed asgenes)regulatingthe characters are found
+inpairs known as alleles.Heobserved that the expression ofthe
+characters in the offspring follow a definite pattern indifferent-first
+generations(F).second(F.)and so on.Some characters are dominant
+over others.Thedominantcharacters are expressed when factors are
+in heterozygous condition (Law of Dominance).The recessive characters
+are only expressed in homozygous conditions.The characters never
+blend in heterozygous condition.A recessive character that was not
+becomes homozygous.Hence,characters segregate while formation of
+gametes (Law of Segregation).
+Notallcharactersshowtruedominance.Somecharacters show
+incomplete,and some showco-dominance.When Mendel studied the
+inheritance oftwo characters together,itwas found that the factors
+independently as sort and combine in all per mutation sand
+combinations(LawofIndependentAssortment).Differentcombinations
+of gametes are theoretically represented in a square tabular form known
+as Punnett Square'.The factors(nowknown as gene) on chromosomes
+regulating the characters are called the genotype and the physical
+expression ofthe chr a rac ter sis called phenotype.
+After knowing that the genes are located on thechromosomes,a
+good correlation was drawn between Mendel'slaws:segregation and
+assortmentofchromosomesduringmeiosis.TheMendel'slaws were
+extendedintheformof'ChromosomalTheoryofInheritance'.Later,it
+was found that Mendel's law of independent assortment does not hold
+true for thegenesthatwerelocatedonthesamechromosomes.These
+genes were called as linked genes 'Closely located genes assorted
+together,and distantly located genes,due to recombination,assorted
+independently.Linkage maps,therefore,corresponded to arrangement
+of genes on a chromosome.
+Many genes were linked to sexes also,and called as sex-linked
+genes.The two sexes(maleand female)were found to have a set of
+chromosomeswhichwerecommon,andanother set which was
+different.Thechromosomeswhichweredifferentin two sexes were
+named as sex chromosomes.The remaining set was named as
+autosomes.In humans,anormalfemalehas 22pairsofautosomes
+andapairofsexchromosomes(Xx).Amalehas22pairsofautosomes
+and apairofsexchromosomeasXY.In chicken,sexchromosomesin
+male are ZZ,and in females are ZW.
+Mutation is defined as change in thegeneticmaterial.Apoint
+mutationisachangeofasinglebasepairinDNA.Sickle-cellanemiais
+causedduetochangeofonebaseinthegenecodingforbeta-chainof
+hemoglobin.Inheritable mutations can be studied by generating a
+pedigree ofa family.Somemutations involve changes in whole set of
+77
+Reprint2026-27

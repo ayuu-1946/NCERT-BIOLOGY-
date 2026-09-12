@@ -1,0 +1,102 @@
+BIOLOGY
+are extensively used as a starting point in the sequencing of whole
+genomes as was done in the case of the Human Genome Sequencing
+Project,described later.
+Cross A
+Cross B
+yw+
+MK
+W
+W
+m
+1m1
+Parental
+yw
+Yellow,white
+W
+m
+White,miniature
+Wild type
+Wild type
+yw
+F,generation
+MA
+Wild type
+MA
+W
+W
+m
+Im1
+W
+m
+wild type
+Yellow,white
+White,miniature
+Gametes
+Recombinant
+Parental
+types(1.3%)
+type(62.8%)
+Parental
+type(98.7%)
+Recombinant
+types(37.2%)
+m'
+y'w
+y'w
+m
+W
+W
+wild type
+wild type
+white
+miniature
+yw
+yw
+m
+W
+W
+m
+white
+yellow,white
+yellow
+White,miniature
+F,generation
+yw
+W
+W*
+m'
+8
+W'
+m
+yw
+Wild type
+yw
+white
+m
+W
+miniature
+W
+m
+Wild type
+yw
+MA
+W
+m
+W
+m1
+yw
+yellow,white
+yw
+yellow
+m
+M
+White,miniature
+m
+W
+white
+68
+crossing between gene y and w; Cross B shows crossing between genes w and m.
+Here dominant wild type allelesarerepresentedwith(+)sign in superscript
+Note: The strength of linkage bet weeny and w is higher than w and m.
+Reprint2026-27

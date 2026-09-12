@@ -1,0 +1,118 @@
+===== SOURCE PAGE 15 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   communicationwasnoteasy(asitisnow)inthosedaysandhiswork
+   could not bewidelypublicised.Secondly.his conceptofgenes(or
+   factors,inMendel'swords)asstableand discrete units that controlled
+   theexpressionoftraitsand,ofthepairofalleleswhichdidnotblend
+   with eachother,wasnotacceptedbyhis contemporaries a san
+   explanation for the apparently continuous variation seen innature.
+   Thirdly,Mendel'sapproachofusingmathematicstoexplainbiological
+   phenomena was totally new and unacceptable tom any ofthe
+   biologistsofhistime.Finally,thoughMendel'sworksuggested that
+   factors(genes)were discreteunits,he could not provide any physical
+   proof for the existence of factors or say what they were made of.
+   In 19o0,three Scientists(de Vries,Correns and von Tschermak)
+   independently rediscovered Mendel's result son the inheritance of
+   characters.Also,by this time due to advancements in microscopy that
+   weretakingplace,scientistswereabletocarefullyobservecell division.
+   This led to the discovery of structures in the nucleus that appeared to
+   double and dividejustbeforeeachcelldivision.Thesewere called
+   chromosomes(coloredbodies,astheywerevisualisedbystaining).By
+   1902,thechromosomemovement during meiosis had been worked out.
+   Walter Sutton and Theodore Boveri noted that the behaviour of
+   chromosomes was parallel to the behaviour of gene sand used
+   chromosome movement(Figure 4.8)to explain Mendel's laws (Table 4.3).
+   Recall that you have studied the behaviour of chromosomes during mitosis
+   (equational division)and during meiosis (reduction division).The
+   important things to remember are that chromosomes as well as genes
+   occurinpairs.Thetwoallelesof a gene pair are located on homologous
+   sitesonhomologouschromosomes.
+
+   MeiosisI
+   anaphase
+   Biv a lent
+
+   Germ cells
+   Meiosis II
+   anaphase
+
+   G2
+
+   Q00
+
+   000
+
+   65
+
+   Figure4.8Meiosis and germ cell formation in a cell with four chromosomes.
+   Can you see how chromosomes segregate when germ cells
+   areformed?
+
+   Reprint2026-27
+
+===== SOURCE PAGE 16 =====
+
+
+   BIOLOGY
+
+   Table 4.3:A Comparison between the Behaviour of Chromosomes
+   and Genes
+
+   A
+
+   B
+
+   Occur in pairs
+
+   Occur inpairs
+
+   Segregate at the time of gamete
+   Segregate at gamete formation and only
+   formation such that only one ofeach
+   one ofeach pair is transmitted to a
+   gamete
+   pair is transmitted to a gamete
+   Independent pairs segregate
+   One pair seg reg a tes independently of
+   independently ofeach other
+   another pair
+
+   Can you tell which of these columns A orB represent the chromosome
+   andwhichrepresentsthegene?Howdidyoudecide?
+
+   During Anaphase of meiosis I,thetwo chromosome pairs can align at
+   the meta phase plate independently of each other(Figure 4.9).To
+   understand this,compare the chromosomes of four different colour in
+   the left and right columns.In theleftcolumn(Possibility I) orange and
+   green is segregating together. But in the right hand column (Possibility
+   I1) the orange chromosome is segregating with thered chromosomes.
+
+   Possibility I
+   Possibility II
+   One long orange and short green
+   One long orange and short red
+   chromosome and long yellow and
+   chromosome and long yellow and
+   short red chromosome at the
+   short green chromosome at the
+   same pole
+   same pole
+   MeiosisI-anaphase
+   MeiosisI-anaphase
+
+   Meiosis II-anaphase
+
+   Meiosis II-anaphase
+
+   Germ cells
+   []
+   Figure4.9Independentassortmentofchromosomes
+
+   Germ cells
+
+   66
+
+   Reprint2026-27

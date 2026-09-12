@@ -1,0 +1,193 @@
+===== SOURCE PAGE 24 =====
+
+
+   BIOLOGY
+
+   thegenehasa50percentchanceofbeingcolourblind.Themotheris
+   not herself colour blind because the gene is recessive.That means that its
+   effectissuppressedbyhermatchingdominantnormalgene.A daughter
+   will notnormallybecolourblind,unlesshermotheris a carrier and her
+   fatheriscolourblind.
+   Haemophilia:This sex linked recessive disease,which shows its
+   transmission from unaffected carrier female to some ofthe male progeny
+   hasbeenwidelystudied.In this disease,a single protein thatis apart of
+   thecascadeofproteinsinvolvedintheclottingofbloodisaffected.Dueto
+   this,inan affected individualasimplecutwillresultinnon-stopbleeding.
+   Theheterozygousfemale(carrier)forhaemophiliamaytransmit thedisease
+   tosons.Thepossibilityofafemalebecomingahaemophilicisextremely
+   rare because mother of such a female has to beat least carrier and the
+   father should behaemophilic(unviableinthelaterstageof life).Thefamily
+   pedigree of Queen Victoria shows a number of haemophilic descendents
+   asshewasacarrierofthedisease.
+   Sickle-cellanaemia:Thisisanautosomelinkedrecessivetraitthat
+
+   single pair of allele,Hb and Hbs.Out of the three possible genotypes only
+
+   Heterozygous (Hb*Hbs) individuals appear apparently unaffected but they
+   are carrier of thediseaseasthereis50percentprobabilityof transmission
+   ofthe mutant gene to theprogeny.thus exhibitingsickle-cell trait
+   (Figure 4.15).Thedefectis caused by the substitution of Glutamic acid
+
+   .GAG...
+   NormalHb(A)gene
+   CTC..
+
+   .GTG...
+   Sickle-cell Hb(S)gene
+   ...CAC..
+
+   mRNA GAG
+
+   mRNAGUG
+
+   74
+
+   2
+   5
+   6
+   HbA peptide
+
+   6
+   2
+   HbS peptide
+
+   Figure 4.15 Micro graph of the red blood cells and the amino acid composition of the relevant
+   portion ofβ-chainof haemoglobin:(a)From a normalindividual;(b) From an individual
+   with sickle-cellanaemia
+
+   Reprint2026-27
+
+===== SOURCE PAGE 25 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   (Glu)byValine(Val)atthesixthpositionofthebetaglobinchainofthe
+   haemoglobinmolecule.Thesubstitutionofaminoacidintheglobin
+   protein results due to the single base substitution at the sixth codon of
+   the beta glob in gene from GAG toGUG.Themutanthaemoglobinmolecule
+   under goes polymer is at ion under low oxygen tension causing the change
+   in the shape ofthe RBC from bic on cave disc to elongated sickle like
+   structure(Figure4.15).
+
+   Phenylketonuria:Thisinbornerrorofmetabolismisalsoinheritedas
+   theautosomalrecessivetrait.The affected individual lack san enzyme
+   thatconvertstheaminoacidphenylalanineintotyrosine.As a result of
+   this phenylalanine is accumulated andconvertedintophenylpyruvic acid
+   andotherderivatives.Accumulationoftheseinbrainresultsinmental
+
+   absorptionbykidney.
+
+   Thalassemia:Thisisalsoanautosome-linkedrecessiveblooddisease
+   transmitted from parents to the offspring when both the partners are
+   unaffected carrier forthegene(orheterozygous).The defect could bedue
+   to either mutation or deletion which ultimately results in reduced rate of
+   synthesisofoneoftheglobinchains(aandβchains)thatmakeup
+   haemoglobin.Thiscausestheformationofabnormalhaemoglobin
+   molecules resulting into anaemia which is characteristic of thedisease.
+   Thalassemia can be classified according to which chain ofthe haemoglobin
+   moleculeisaffected.InoThalassemia,productionofaglobinchainis
+   affectedwhileinβThalassemia,productionofβglobinchainisaffected.
+   aThalassemiaiscontrolledbytwocloselylinkedgenesHBAlandHBA2
+   onchromosome16ofeachparentanditisobservedduetomutationor
+   deletion of one or more of thefourgenes.Themore genes affected,the
+   lessalphaglobinmoleculesproduced.WhileβThalassemia is controlled
+   byasinglegeneHBBonchromosome1lofeachparentandoccursdue
+   to mutation of one or both thegenes.Thalassemiadiffersfromsickle-cell
+   anaemia in that the former is a quantitative problem of synthesis ing too
+   few glob in molecules while the latter is a qualitative problem of
+   synthesisinganincorrectlyfunctioningglobin.
+
+   4.8.3 Chromosomal Disorders
+   The chromosomal disorder son the other hand are caused due to absence
+   or excess or abnormal arrangement of one or more chromosomes.
+   Failure of segregation of chromatids during cell division cycle results
+   inthegainorlossofachromosome(s),calledaneuploidy.Forexample
+   Down's syndrome results in thegainofextracopyofchromosome21.
+
+   humanfemales.Failureofcytokinesisaftertelophasestageofcell division
+   results in an increase in a whole set of chromosomes in an organismand,
+   this phenomenon is known aspolyploidy.Thiscondition is often seen in
+   plants.
+   Thetotalnumberofchromosomesinanormalhumancellis46
+   (23pairs).Outof these22 pairs are autosome san done pair of
+   chromosomesaresexchromosome.Sometimes,thoughrarely.eitheran
+   additional copy ofa chromosome maybe included in an individual or an
+
+   75
+
+   Reprint2026-27
+
+===== SOURCE PAGE 26 =====
+
+
+   BIOLOGY
+
+   Broad flat face
+
+   Flat back of head
+   Many“loops"on
+   finger tips
+   Palm crease
+
+   Big and wrinkled
+   tongue
+
+   Congenital heart
+   disease
+
+   60
+
+   Figure 4.16
+   A representative figure showing an individual inflicted with Down's
+   syndrome and the corresponding chromosomes ofthe individual
+
+   individual may lack one of any one pair of
+   chromosomes.These situations are known as trisomy
+   or monosomy ofa chromosome,respectively.Such a
+   situation leads to very serious consequences in the
+   individual.Down's syndrome,Turner's syndrome,
+   Klinefelter's syndrome are common examples of
+   chromosomal disorders.
+
+   Down'sSyndrome:Thecauseof thisgenetic disorder
+   is the presence of an additional copy of the
+   chromosome number 21(trisomyof21).This disorder
+   wasfirstdescribedbyLangdonDown(1866).The
+   affected individual is short stature dwi ths mall round
+   head.furrowed tongue and partially open mouth
+   (Figure 4.16).Palm is broad with characteristic palm
+   crease.Physical,psychomotor and mental
+   developmentisretarded.
+
+   (b)
+
+   (a)
+   Tall stature
+   Short stature and
+   with fem ini sed
+   under developed
+   character
+   feminine character
+
+   Klinefelter's Syndrome: Thisgenetic disorder is also
+   caused duetothepresenceofanadditionalcopyofX
+   chromosome resulting into a karyotype of47,XXY.
+   Figure 4.17 Diagrammatic represe-
+   Suchanindividualhasoverallmasculinedevelopment,
+   nta tion of genetic disorders due tosex
+   however,the feminine development(development
+   chromosome compositioninhumans:
+   ofbreast,i.e.,Gynaecomastia)is also expressed
+   (a)Klinefelter Syndrome;(b) Turner's
+   (Figure 4.17a). Such individuals are sterile.
+   Syndrome
+
+   Turner'sSyndrome:Sucha disorder is caused due
+   totheabsenceofoneoftheXchromosomes,i.e.,45withX0,Suchfemales
+   are sterile as ovaries are rudimentary besides other features including
+   lack of other secondarysexualcharacters(Figure 4.17b).
+
+   76
+
+   Reprint2026-27

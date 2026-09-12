@@ -1,0 +1,54 @@
+• From the preceding paragraphs it is clear that though the genotypic ratios can be calculated using
+mathematical probability, by simply looking at the phenotype of a dominant trait, it is not possible to
+know the genotypic composition.
+• That is, for example, whether a tall plant from F1 or F2 has TT or Tt composition, cannot be predicted.
+4.2c
+Testcross - reading the genotype you cannot see
+Therefore, to determine the genotype of a tall plant at F2, Mendel crossed the tall plant from F2 with a
+dwarf plant. This he called a testcross.
+In a typical testcross an organism (pea plants here) showing a dominant phenotype (and whose genotype is
+to be determined) is crossed with the recessive parent instead of self-crossing.
+• The progenies of such a cross can easily be analysed to predict the genotype of the test organism.
+• Figure 4.5 shows the results of typical testcross where violet colour flower (V) is dominant over white
+colour flower (v).
+[NOTE] Read the plate (Figure 4.5 labels). The plate is a Diagrammatic representation of a test cross. Both
+panels place a Homozygous recessive tester (ww) at the top. The other parent in each panel is the Dominant
+Phenotype (Genotype unknown): left panel the unknown is labelled WW (homozygous dominant); right panel the
+unknown is labelled Ww (heterozygous). Left outcome: Result - All flowers are violet, Interpretation - Unknown
+flower is homozygous dominant. Right outcome: Half of the flowers are violet and half of the flowers are white.,
+Unknown flower is heterozygous.
+What the testcross distinguishes:
+If the unknown dominant parent
+is...
+Cross
+Offspring
+WW (homozygous dominant)
+WW × ww
+All Ww - all violet
+Ww (heterozygous)
+Ww × ww
+Half Ww (violet), half ww (white)
+[MEMORY AID - not in NCERT] Testcross in one line: cross the unknown with the recessive; if any offspring
+show the recessive phenotype, the unknown was heterozygous. The recessive parent contributes only one kind of
+gamete, so every recessive offspring is a fingerprint of the dominant parent's hidden recessive allele.
+4.2d
+What the one-gene cross gives you: two laws
+• Based on his observations on monohybrid crosses Mendel proposed two general rules to consolidate his
+understanding of inheritance in monohybrid crosses. Today these rules are called the Principles or Laws of
+Inheritance: the First Law or Law of Dominance and the Second Law or Law of Segregation.
+4.2.1
+Law of Dominance
+• (i) Characters are controlled by discrete units called factors.
+• (ii) Factors occur in pairs.
+• (iii) In a dissimilar pair of factors one member of the pair dominates (dominant) the other (recessive).
+• The law of dominance is used to explain the expression of only one of the parental characters in a
+monohybrid cross in the F1 and the expression of both in the F2. It also explains the proportion of 3:1
+obtained at the F2.
+4.2.2
+Law of Segregation
+• This law is based on the fact that the alleles do not show any blending and that both the characters are
+recovered as such in the F2 generation though one of these is not seen at the F1 stage.
+• Though the parents contain two alleles during gamete formation, the factors or alleles of a pair segregate
+from each other such that a gamete receives only one of the two factors.
+• Of course, a homozygous parent produces all gametes that are similar while a heterozygous one produces
+two kinds of gametes each having one allele with equal proportion.

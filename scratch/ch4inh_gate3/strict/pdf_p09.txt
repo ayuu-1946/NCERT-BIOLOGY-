@@ -1,0 +1,51 @@
+• The genotype of the parents can then be written as RRYY and rryy.
+• The cross between the two plants can be written down as in Figure 4.7 showing the genotypes of the parent
+plants.
+• The gametes RY and ry unite on fertilisation to produce the F1 hybrid RrYy.
+• When Mendel self hybridised the F1 plants he found that 3/4th of F2 plants had yellow seeds and 1/4th had
+green. The yellow and green colours segregated in a 3:1 ratio. Round and wrinkled seed shape also segregated
+in a 3:1 ratio: just like in a monohybrid cross.
+[NOTE] Read the plate (Figure 4.7 labels). The plate is the Results of a dihybrid cross where the two parents
+differed in two pairs of contrasting traits: seed colour and seed shape. The P generation row carries Round
+yellow with RR and YY, and Wrinkled green with rr and yy. The Gametes row has RY and ry, uniting into the F1
+generation row of RrYy. The Selfing arrow runs to the dihybrid Punnett grid: RRYY, RrYY, RRYy, rrYY, RRyy,
+Rryy, rrYy, rryy in the F2 generation; the F1 gametes are the four-letter set RY, Ry, rY, ry. The ratio line under the
+grid: Phenotypic ratio: round yellow : round green : wrinkled yellow : wrinkled green 9:3:3:1.
+4.3.1
+Law of Independent Assortment
+• In the dihybrid cross (Figure 4.7), the phenotypes round, yellow; wrinkled, yellow; round, green and
+wrinkled, green appeared in the ratio 9:3:3:1. Such a ratio was observed for several pairs of characters that
+Mendel studied.
+• The ratio of 9:3:3:1 can be derived as a combination series of 3 yellow : 1 green, with 3 round : 1 wrinkled.
+This derivation can be written as follows:
+1
+(3 Round : 1 Wrinkled) (3 Yellow : 1 Green)
+2
+= 9 Round, Yellow : 3 Wrinkled, Yellow : 3 Round, Green : 1 Wrinkled, Green
+Based upon such observations on dihybrid crosses (crosses between plants differing in two traits) Mendel
+proposed a second set of generalisations that we call Mendel's Law of Independent Assortment. The law
+states that when two pairs of traits are combined in a hybrid, segregation of one pair of characters is
+independent of the other pair of characters.
+• The Punnett square can be effectively used to understand the independent segregation of the two pairs of
+genes during meiosis and the production of eggs and pollen in the F1 RrYy plant.
+• Consider the segregation of one pair of genes R and r. Fifty per cent of the gametes have the gene R and
+the other 50 per cent have r. Now besides each gamete having either R or r, it should also have the allele Y or
+y.
+• The important thing to remember here is that segregation of 50 per cent R and 50 per cent r is
+independent from the segregation of 50 per cent Y and 50 per cent y.
+• Therefore, 50 per cent of the r bearing gametes has Y and the other 50 per cent has y. Similarly, 50 per
+cent of the R bearing gametes has Y and the other 50 per cent has y.
+• Thus there are four genotypes of gametes (four types of pollen and four types of eggs).
+• The four types are RY, Ry, rY and ry each with a frequency of 25 per cent or 1/4 of the total gametes
+produced.
+• When you write down the four types of eggs and pollen on the two sides of a Punnett square it is very easy
+to derive the composition of the zygotes that give rise to the F2 plants (Figure 4.7).
+Activity (Figure 4.7 / 4.3.1): write down the 16 F2 genotypes the dihybrid Punnett square yields (RRYY, RRYy,
+RRyy, RrYY, ... rryy) and group each under one of the four phenotypes: Round Yellow, Round Green, Wrinkled
+Yellow, Wrinkled Green. The four phenotype totals should land at 9 : 3 : 3 : 1.
+4.3.2
+Chromosomal Theory of Inheritance
+• Mendel published his work on inheritance of characters in 1865 but for several reasons, it remained
+unrecognised till 1900.
+• Firstly, communication was not easy (as it is now) in those days and his work could not be widely
+publicised.

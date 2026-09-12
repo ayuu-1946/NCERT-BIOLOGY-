@@ -1,0 +1,17 @@
+# ---- Unit VII opener ---- F001, F002 (heading), F003, F004 (opener / fact)
+
+# ======================================================================================
+story.append(heading("Unit VII", "GENETICS AND EVOLUTION", level=1))
+
+# F003, F004 (the source's own opener, kept in tutor voice)
+story.append(body(
+    "The work of <b>Mendel</b> and others who followed him gave us an idea of inheritance "
+    "patterns."))
+story.append(body(
+    "The entire body of <b>molecular biology</b> was a consequent development with major "
+    "contributions from <b>Watson, Crick, Nirenberg, Khorana, Kornberg's (father and "
+    "son), Benzer, Monod, Brenner</b>, etc."))
+
+story.append(gap(6))
+
+# ======================================================================================

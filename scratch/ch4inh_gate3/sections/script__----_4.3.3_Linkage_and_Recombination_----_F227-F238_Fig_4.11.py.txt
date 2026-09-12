@@ -1,0 +1,69 @@
+# ---- 4.3.3 Linkage and Recombination ---- F227-F238 + Fig 4.11
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.3.3", "Linkage and Recombination", level=2))
+# F228
+story.append(b1(
+    "<b>Morgan carried out several dihybrid crosses in Drosophila to study genes that were "
+    "sex-linked.</b>"))
+# F229
+story.append(b1(
+    "<b>The crosses were similar to the dihybrid crosses carried out by Mendel in peas.</b> "
+    "For example Morgan hybridised <b>yellow-bodied, white-eyed females</b> to "
+    "<b>brown-bodied, red-eyed males</b> and intercrossed their F<sub>1</sub> progeny."))
+# F230
+story.append(b1(
+    "<b>He observed that the two genes did not segregate independently of each other and "
+    "the F<sub>2</sub> ratio deviated very significantly from the 9:3:3:1 ratio</b> "
+    "(expected when the two genes are independent)."))
+# F231
+story.append(b1(
+    "<b>Morgan and his group knew that the genes were located on the X chromosome (Section "
+    "4.4) and saw quickly that when the two genes in a dihybrid cross were situated on "
+    "the same chromosome, the proportion of parental gene combinations were much higher "
+    "than the non-parental type.</b>"))
+# F232 - linkage & recombination definitions
+story.append(keyterm(
+    "<b>Morgan attributed this due to the physical association or linkage of the two "
+    "genes and coined the term linkage to describe this physical association of genes on a "
+    "chromosome and the term recombination to describe the generation of non-parental gene "
+    "combinations (Figure 4.11).</b>"))
+# F233-F234
+story.append(b1(
+    "<b>Morgan and his group also found that even when genes were grouped on the same "
+    "chromosome, some genes were very tightly linked (showed very low recombination) "
+    "(Figure 4.11, Cross A) while others were loosely linked (showed higher recombination) "
+    "(Figure 4.11, Cross B).</b>"))
+story.append(b1(
+    "<b>For example he found that the genes white and yellow were very tightly linked and "
+    "showed only 1.3 per cent recombination while white and miniature wing showed 37.2 per "
+    "cent recombination.</b>"))
+# F235-F236
+story.append(b1(
+    "<b>His student Alfred Sturtevant used the frequency of recombination between gene "
+    "pairs on the same chromosome as a measure of the distance between genes and 'mapped' "
+    "their position on the chromosome.</b>"))
+story.append(b1(
+    "<b>Today genetic maps are extensively used as a starting point in the sequencing of "
+    "whole genomes as was done in the case of the Human Genome Sequencing Project, "
+    "described later.</b>"))
+
+# F237-F238 - Fig 4.11 read-the-plate
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.11 labels).</b> The plate is <b>Linkage: Results of two "
+    "dihybrid crosses conducted by Morgan. Cross A shows crossing between gene y and w; "
+    "Cross B shows crossing between genes w and m. Here dominant wild type alleles are "
+    "represented with (+) sign in superscript. Note: The strength of linkage between y and "
+    "w is higher than w and m.</b> The plate has two halves - <b>Cross A</b> on the left "
+    "and <b>Cross B</b> on the right. Cross A's pair is <b>Yellow, white</b>; Cross B's "
+    "pair is <b>White, miniature</b>. The <b>Wild type</b> parents sit at the top of each "
+    "cross. The <b>F<sub>1</sub> generation</b> row gives the heterozygous flies; the "
+    "next row is the <b>Gametes</b> each cross produces. Below the gametes, Cross A shows "
+    "<b>Parental type (98.7%)</b> and <b>Recombinant types (1.3%)</b>; Cross B shows "
+    "<b>Parental type (62.8%)</b> and <b>Recombinant types (37.2%)</b>. The phenotype "
+    "labels in each cross are <b>yellow</b>, <b>white</b>, <b>yellow, white</b>, "
+    "<b>miniature</b> and <b>wild type</b>."))
+
+# ======================================================================================

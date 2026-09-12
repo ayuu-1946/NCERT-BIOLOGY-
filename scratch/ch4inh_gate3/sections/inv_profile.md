@@ -1,0 +1,17 @@
+# Inventory section: profile (16 rows)
+- F005 [heading] Unnumbered scientist-profile heading: "JAMES WATSON"
+- F006 [number] "James Dewey Watson was born in Chicago on 6 April 1928." (date: 6 April 1928)
+- F007 [number] "In 1947, he received B.Sc. degree in Zoology." (date: 1947)
+- F008 [fact] "During these years his interest in bird-watching had matured into a serious desire to learn genetics."
+- F009 [number] "This became possible when he received a Fellowship for graduate study in Zoology at Indiana University, Bloomington, where he received his Ph.D degree in 1950 on a study of the effect of hard X-rays on bacteriophage multiplication." (date: 1950)
+- F010 [fact] "He met Crick and discovered their common interest in solving the DNA structure."
+- F011 [fact] "Their first serious effort, was unsatisfactory."
+- F012 [number] "Their second effort based upon more experimental evidence and better appreciation of the nucleic acid literature resulted, early in March 1953, in the proposal of the complementary double-helical configuration." (date: March 1953)
+- F013 [heading] Unnumbered scientist-profile heading: "FRANCIS CRICK"
+- F014 [number] "Francis Harry Compton Crick was born on 8 June 1916, at Northampton, England." (date: 8 June 1916)
+- F015 [fact] "He studied physics at University College, London and obtained a B.Sc. in 1937." (date: 1937)
+- F016 [number] "He completed Ph.D. in 1954 on a thesis entitled X-ray Diffraction: Polypeptides and Proteins". (date: 1954)
+- F017 [number] "A critical influence in Crick's career was his friendship with J.D. Watson, then a young man of 23, leading in 1953 to the proposal of the double-helical structure for DNA and the replication scheme." (ages/dates: 23, 1953)
+- F018 [number] "Crick was made an F.R.S. in 1959." (date: 1959)
+- F019 [number] "The honours to Watson with Crick include: the John Collins Warren Prize of the Massachusetts General Hospital, in 1959; the Lasker Award in 1960; the Research Corporation Prize, in 1962 and above all, the Nobel Prize in 1962." (dates: 1959, 1960, 1962)
+- F020 [caption] Scientist-portrait captions (verbatim): "JAMES WATSON", "FRANCIS CRICK" - human-subject plates, text-only by section 4.4 rule, never reproduced

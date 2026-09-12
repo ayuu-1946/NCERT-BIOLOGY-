@@ -1,0 +1,59 @@
+• The possible gametes are written on two sides, usually the top row and left columns. All possible
+combinations are represented in boxes below in the squares, which generates a square output form.
+First Punnett square: the parental cross and the F1:
+Tall parent gamete: T
+Tall parent gamete: T
+Dwarf parent gamete: t
+Tt (F1, tall)
+Tt (F1, tall)
+Dwarf parent gamete: t
+Tt (F1, tall)
+Tt (F1, tall)
+• The Punnett Square shows the parental tall TT (male) and dwarf tt (female) plants, the gametes produced
+by them and, the F1 Tt progeny.
+• The symbols for female and male are used to denote the female (eggs) and male (pollen) of the F1
+generation, respectively. (The printed glyphs are drawn symbols, not text - Pass 2 writes the words; the
+Unicode signs are banned by check 5.)
+• The F1 plant of genotype Tt when self-pollinated, produces gametes of the genotype T and t in equal
+proportion. When fertilisation takes place, the pollen grains of genotype T have a 50 per cent chance to
+pollinate eggs of the genotype T, as well as of genotype t. Also pollen grains of genotype t have a 50 per cent
+chance of pollinating eggs of genotype T, as well as of genotype t.
+[NOTE] Read the plate (Figure 4.4 labels). The plate is a Punnett square used to understand a typical
+monohybrid cross conducted by Mendel between true-breeding tall plants and true-breeding dwarf plants. The
+four corners carry the parental lines - a Tall plant with the TT genotype, a Dwarf plant with the tt genotype - with
+the Gametes row (a single T) and column (a single t). The middle of the grid is the F1 generation - four cells, all Tt.
+Below the grid, the Selfing arrow leads to the F2 generation, with two ratio lines: Phenotypic ratio: tall:dwarf 3:1
+and Genotypic ratio: TT:Tt:tt 1:2:1.
+Second Punnett square: the F1 selfed to give the F2:
+F1 gamete: T
+F1 gamete: t
+F1 gamete: T
+TT (tall)
+Tt (tall)
+F1 gamete: t
+Tt (tall)
+tt (dwarf)
+• As a result of random fertilisation, the resultant zygotes can be of the genotypes TT, Tt or tt.
+• From the Punnett square it is easily seen that 1/4th of the random fertilisations lead to TT, 1/2 lead to Tt
+and 1/4th to tt.
+• Though the F1 have a genotype of Tt, but the phenotypic character seen is 'tall'.
+• At F2 3/4th of the plants are tall, where some of them are TT while others are Tt.
+• Externally it is not possible to distinguish between the plants with the genotypes TT and Tt.
+• It is thus due to this dominance of one character over the other that all the F1 are tall (though the genotype
+is Tt) and in the F2 3/4th of the plants are tall (though genotypically 1/2 are Tt and only 1/4th are TT).
+• This leads to a phenotypic ratio of 3/4 tall : (1/4 TT + 1/2 Tt) and 1/4 tt, i.e., a 3:1 ratio, but a genotypic
+ratio of 1:2:1.
+4.2b
+The same cross, written as a binomial expansion
+• The 1/4 : 1/2 : 1/4 ratio of TT:Tt:tt is mathematically condensable to the form of the binomial expression
+(ax + by)2, that has the gametes bearing genes T or t in equal frequency of 1/2.
+• The expression is expanded as given below:
+1
+The gamete frequencies for a heterozygote Tt are 1/2 T and 1/2 t.
+2
+Squaring the gamete sum: (1/2 T + 1/2 t)2.
+3
+Expanding: 1/4 TT + 1/2 Tt + 1/4 tt.
+• Mendel self-pollinated the F2 plants and found that dwarf F2 plants continued to generate dwarf plants in
+F3 and F4 generations.
+• He concluded that the genotype of the dwarfs was homozygous-tt.

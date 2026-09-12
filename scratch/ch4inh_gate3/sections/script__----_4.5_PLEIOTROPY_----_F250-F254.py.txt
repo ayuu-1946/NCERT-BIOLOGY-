@@ -1,0 +1,25 @@
+# ---- 4.5 PLEIOTROPY ---- F250-F254
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.5", "PLEIOTROPY", level=1))
+# F251
+story.append(b1(
+    "<b>We have so far seen the effect of a gene on a single phenotype or trait.</b>"))
+# F252
+story.append(keyterm(
+    "<b>There are however instances where a single gene can exhibit multiple phenotypic "
+    "expression. Such a gene is called a pleiotropic gene.</b>"))
+# F253
+story.append(b1(
+    "<b>The underlying mechanism of pleiotropy in most cases is the effect of a gene on "
+    "metabolic pathways which contribute towards different phenotypes.</b>"))
+# F254 - phenylketonuria example
+story.append(b1(
+    "<b>An example of this is the disease phenylketonuria, which occurs in humans.</b> "
+    "The disease is caused by mutation in the gene that codes for the enzyme "
+    "phenylalanine hydroxylase (single gene mutation). This manifests itself through "
+    "phenotypic expression characterised by <b>mental retardation and a reduction in "
+    "hair and skin pigmentation</b>."))
+
+# ======================================================================================

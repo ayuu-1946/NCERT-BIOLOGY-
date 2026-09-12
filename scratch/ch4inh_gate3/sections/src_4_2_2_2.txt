@@ -1,0 +1,161 @@
+===== SOURCE PAGE 9 =====
+
+
+   PRINCIPLESOFINHERITANCE AND VARIATION
+
+   Homozygous
+   recessive
+
+   Homozygous
+   recessive
+
+   Ww
+
+   Ww
+   Ww
+
+   Ww
+   Ww
+
+   -WW
+
+   Ww-
+
+   Dominant Phenotype
+   (Genotypeunknown)
+
+   Ww
+
+   Result
+   All flowers are violet
+
+   Half ofthe flowers are violet and
+   half ofthe flowers arewhite.
+
+   Interpretation
+   Unknownflower
+   is homozygous dominant
+
+   Unknownflower is heterozygous
+
+   Figure 4.5 Diagrammatic representation ofa test cross
+
+   Based on his observation son monohybrid crosses Mendel proposed
+   two general rules to consolidate his understanding ofinheritance in
+   monohybrid crosses.Today these rules are called the Principles or
+   LawsofInheritance:theFirst Law or Law of Dominance and the
+   SecondLaworLawofSegregation.
+
+   4.2.1 Law of Dominance
+
+   Characters arecontrolledbydiscreteunitscalledfactors.
+   i)
+   Factors occur in pairs.
+   (ii)
+   In a dissimilar pair of factors one member ofthe pair dominates
+   (iii)
+   (dominant) theother(recessive).
+   The law of dominance is used to explain the expression of only oneof
+   the parental charactersinamonohybridcrossintheF,and the expression
+   of both intheF.It also explains the proportion of3:1obtained atthe F
+
+   4.2.2 Law of Segregation
+
+   This law is based on the fact that the alleles do not show any blending
+   and that both the characters are recovered as such in the Fgeneration
+   though oneof these isnotseenattheF,stage.Thoughtheparentscontain
+   twoallelesduringgameteformation,thefactorsorallelesofapairsegregate
+   from each other such that a gamete receives only oneof thetwofactors.
+   Of course, a homozygous parent produces all gametes that are similar
+   while a heterozygous one produces two kinds of gametes each having
+   oneallelewithequalproportion.
+
+   59
+
+   Reprint2026-27
+
+===== SOURCE PAGE 10 =====
+
+
+   BIOLOGY
+
+   4.2.2.1IncompleteDominance
+
+   P generation
+
+   When experiments on peas were repeated using other
+   traitsinotherplants,itwasfoundthatsometimes
+   theFhad a phenotype that did not resemble either
+   ofthetwoparentsandwasinbetweenthetwo.The
+   inheritance of flower colour in the dog flower
+   (snapdragon orAntirrhinumsp.)isagoodexample
+   tounderstandincompletedominance.In a cross
+   betweentrue-breedingred-flowered(RR) and true-
+   breedingwhite-floweredplants(rr).theF,(Rr)was
+   pink (Figure 4.6).When the F,wasself-pollinated
+   the F,resulted in the following ratio 1 (RR)Red:2
+   (Rr)Pink:1 (rr) White.Here the genotype ratios were
+   exactly as we would expect in any mendelian
+   Gametes
+   monohybrid cross,but the phenotype ratios had
+   changedfromthe3:1dominant:recessiveratio.
+   What happened was that Rwa snot completely
+   dominant over rand this made it possible to
+   distinguish Rr as pink from RR(red)andrr(white).
+   Explanation of the concept of dominance:
+   Whatexactlyisdominance?Whyaresome alleles
+   dominantandsomerecessive?To tackle these
+   questions,we must understand what a gene does.
+   Everygene,asyou know bynow,contains the
+   information toexpressaparticulartrait.Ina
+   diploid organism,there are two copies ofeach
+   gene,i.e.,as a pair ofalleles.Now,these two alleles
+   need not alwaysbeidentical,asin aheterozygote.
+   Oneof them maybe different due to some changes
+   thatithasundergone(aboutwhichyouwillread
+   furtheron,and in the next chapter)whichmodifies
+   the information thatparticularallelecontains.
+   Let's take an example ofa gene that contains
+   the information for producing an enzyme.Now
+   there are two copies of thisgene,thetwo allelic
+   forms.Let us assume(as is more common) that
+   the normal allele produces the normal enzyme
+   thatis needed for the transformation ofa
+   substrateS.Theoretically.themodifiedallelecould be responsible for
+   production of-
+
+   Red (RR)
+
+   White(rr)
+
+   Gametes
+
+   F,generation
+
+   Allpink(Rr)
+
+   Gametes
+
+   RR
+
+   Rr
+
+   F,generation
+
+   Phenotypicratio:red:pink:white
+   1:2:
+   Genotypicratio:RR:Rr:rr
+   1:2:1
+
+   Figure 4.6 Results ofmonohybrid cross in
+   the plant Snapdragon,where
+   one allele is in completely
+   dominant over the other allele
+
+   60
+
+   (i)the normal/less efficient enzyme,or
+   (i)a non-functional enzyme,or
+   (ii)no enzyme atall
+
+   Reprint2026-27

@@ -1,0 +1,10 @@
+# Inventory section: 4.7 (9 rows)
+- F291 [heading] "4.7 MUTATION"
+- F292 [opener] "Mutation is a phenomenon which results in alteration of DNA sequences and consequently results in changes in the genotype and the phenotype of an organism."
+- F293 [fact] "In addition to recombination, mutation is another phenomenon that leads to variation in DNA."
+- F294 [fact] "As you will learn in Chapter 5, one DNA helix runs continuously from one end to the other in each chromatid, in a highly supercoiled form."
+- F295 [fact] "Therefore loss (deletions) or gain (insertion/duplication) of a segment of DNA, result in alteration in chromosomes. Since genes are known to be located on chromosomes, alteration in chromosomes results in abnormalities or aberrations."
+- F296 [fact] "Chromosomal aberrations are commonly observed in cancer cells."
+- F297 [definition] "In addition to the above, mutation also arise due to change in a single base pair of DNA. This is known as point mutation. A classical example of such a mutation is sickle cell anemia."
+- F298 [fact] "Deletions and insertions of base pairs of DNA, causes frame-shift mutations (see Chapter 5)."
+- F299 [definition] "However, there are many chemical and physical factors that induce mutations. These are referred to as mutagens. UV radiations can cause mutations in organisms - it is a mutagen."

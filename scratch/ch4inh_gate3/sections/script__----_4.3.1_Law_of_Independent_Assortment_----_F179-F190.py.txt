@@ -1,0 +1,62 @@
+# ---- 4.3.1 Law of Independent Assortment ---- F179-F190
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.3.1", "Law of Independent Assortment", level=2))
+# F180
+story.append(b1(
+    "<b>In the dihybrid cross (Figure 4.7), the phenotypes round, yellow; wrinkled, yellow; "
+    "round, green and wrinkled, green appeared in the ratio 9:3:3:1.</b> Such a ratio was "
+    "observed for several pairs of characters that Mendel studied."))
+# F181 - the 9:3:3:1 derivation as a process
+story.append(b1(
+    "<b>The ratio of 9:3:3:1 can be derived as a combination series of 3 yellow : 1 green, "
+    "with 3 round : 1 wrinkled.</b> This derivation can be written as follows:"))
+story.append(process_flow([
+    "(3 Round : 1 Wrinkled) (3 Yellow : 1 Green)",
+    "= 9 Round, Yellow : 3 Wrinkled, Yellow : 3 Round, Green : 1 Wrinkled, Green",
+]))
+# F182 - the law
+story.append(keyterm(
+    "<b>Based upon such observations on dihybrid crosses (crosses between plants differing "
+    "in two traits) Mendel proposed a second set of generalisations that we call Mendel's "
+    "Law of Independent Assortment.</b> The law states that <b>when two pairs of traits "
+    "are combined in a hybrid, segregation of one pair of characters is independent of "
+    "the other pair of characters</b>."))
+# F183-F188 - the gamete probability
+story.append(b1(
+    "<b>The Punnett square can be effectively used to understand the independent "
+    "segregation of the two pairs of genes during meiosis and the production of eggs and "
+    "pollen in the F<sub>1</sub> RrYy plant.</b>"))
+story.append(b1(
+    "<b>Consider the segregation of one pair of genes R and r. Fifty per cent of the "
+    "gametes have the gene R and the other 50 per cent have r.</b> Now besides each "
+    "gamete having either R or r, it should also have the allele Y or y."))
+story.append(b1(
+    "<b>The important thing to remember here is that segregation of 50 per cent R and 50 "
+    "per cent r is independent from the segregation of 50 per cent Y and 50 per cent y.</b>"))
+story.append(b1(
+    "<b>Therefore, 50 per cent of the r bearing gametes has Y and the other 50 per cent "
+    "has y. Similarly, 50 per cent of the R bearing gametes has Y and the other 50 per "
+    "cent has y.</b>"))
+story.append(b1(
+    "<b>Thus there are four genotypes of gametes (four types of pollen and four types of "
+    "eggs).</b>"))
+story.append(b1(
+    "<b>The four types are RY, Ry, rY and ry each with a frequency of 25 per cent or 1/4 "
+    "of the total gametes produced.</b>"))
+story.append(b1(
+    "<b>When you write down the four types of eggs and pollen on the two sides of a "
+    "Punnett square it is very easy to derive the composition of the zygotes that give "
+    "rise to the F<sub>2</sub> plants (Figure 4.7).</b>"))
+
+# F190 - the activity table, presented as a small empty data_table for the student to fill
+story.append(gap())
+story.append(Paragraph(
+    "<b>Activity (Figure 4.7 / 4.3.1):</b> write down the <b>16 F<sub>2</sub> genotypes</b> "
+    "the dihybrid Punnett square yields (RRYY, RRYy, RRyy, RrYY, ... rryy) and group each "
+    "under one of the four phenotypes: <b>Round Yellow, Round Green, Wrinkled Yellow, "
+    "Wrinkled Green</b>. The four phenotype totals should land at <b>9 : 3 : 3 : 1</b>.",
+    STYLES["Body"]))
+
+# ======================================================================================

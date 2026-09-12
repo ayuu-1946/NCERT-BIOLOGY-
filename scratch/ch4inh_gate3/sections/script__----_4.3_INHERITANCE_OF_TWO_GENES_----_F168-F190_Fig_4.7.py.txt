@@ -1,0 +1,56 @@
+# ---- 4.3 INHERITANCE OF TWO GENES ---- F168-F190 + Fig 4.7
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.3", "INHERITANCE OF TWO GENES", level=1))
+# F169
+story.append(body(
+    "<b>Mendel also worked with and crossed pea plants that differed in two characters,</b> "
+    "as is seen in the cross between a pea plant that has seeds with <b>yellow colour "
+    "and round shape</b> and one that had seeds of <b>green colour and wrinkled shape</b> "
+    "(Figure 4.7)."))
+# F170, F171, F172, F173
+story.append(gap())
+story.append(b1(
+    "<b>Mendel found that the seeds resulting from the crossing of the parents, had yellow "
+    "coloured and round shaped seeds.</b>"))
+story.append(b1(
+    "<b>Thus, yellow colour was dominant over green and round shape dominant over "
+    "wrinkled.</b>"))
+story.append(b1(
+    "<b>Let us use the genotypic symbols Y for dominant yellow seed colour and y for "
+    "recessive green seed colour, R for round shaped seeds and r for wrinkled seed "
+    "shape.</b>"))
+story.append(b1(
+    "<b>The genotype of the parents can then be written as RRYY and rryy.</b>"))
+# F174
+story.append(b1(
+    "<b>The cross between the two plants can be written down as in Figure 4.7 showing the "
+    "genotypes of the parent plants.</b>"))
+# F175
+story.append(b1(
+    "<b>The gametes RY and ry unite on fertilisation to produce the F<sub>1</sub> hybrid "
+    "RrYy.</b>"))
+# F176
+story.append(b1(
+    "<b>When Mendel self hybridised the F<sub>1</sub> plants he found that 3/4th of "
+    "F<sub>2</sub> plants had yellow seeds and 1/4th had green.</b> The yellow and green "
+    "colours segregated in a 3:1 ratio. Round and wrinkled seed shape also segregated in a "
+    "3:1 ratio: just like in a monohybrid cross."))
+
+# F177-F178 - Fig 4.7 caption + labels (read-the-plate)
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.7 labels).</b> The plate is the <b>Results of a dihybrid "
+    "cross where the two parents differed in two pairs of contrasting traits: seed colour "
+    "and seed shape</b>. The <b>P generation</b> row carries <b>Round yellow</b> with "
+    "<b>RR</b> and <b>YY</b>, and <b>Wrinkled green</b> with <b>rr</b> and <b>yy</b>. "
+    "The <b>Gametes</b> row has <b>RY</b> and <b>ry</b>, uniting into the <b>F<sub>1</sub> "
+    "generation</b> row of <b>RrYy</b>. The <b>Selfing</b> arrow runs to the dihybrid "
+    "Punnett grid: <b>RRYY</b>, <b>RrYY</b>, <b>RRYy</b>, <b>rrYY</b>, <b>RRyy</b>, "
+    "<b>Rryy</b>, <b>rrYy</b>, <b>rryy</b> in the <b>F<sub>2</sub> generation</b>; the "
+    "F<sub>1</sub> gametes are the four-letter set <b>RY</b>, <b>Ry</b>, <b>rY</b>, "
+    "<b>ry</b>. The ratio line under the grid: <b>Phenotypic ratio: round yellow : round "
+    "green : wrinkled yellow : wrinkled green 9:3:3:1</b>."))
+
+# ======================================================================================

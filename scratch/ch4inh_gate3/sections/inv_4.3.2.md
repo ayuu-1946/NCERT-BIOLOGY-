@@ -1,0 +1,24 @@
+# Inventory section: 4.3.2 (23 rows)
+- F191 [heading] "4.3.2 Chromosomal Theory of Inheritance"
+- F192 [opener] "Mendel published his work on inheritance of characters in 1865 but for several reasons, it remained unrecognised till 1900." (dates: 1865, 1900)
+- F193 [fact] "Firstly, communication was not easy (as it is now) in those days and his work could not be widely publicised."
+- F194 [fact] "Secondly, his concept of genes (or factors, in Mendel's words) as stable and discrete units that controlled the expression of traits and, of the pair of alleles which did not blend with each other, was not accepted by his contemporaries as an explanation for the apparently continuous variation seen in nature."
+- F195 [fact] "Thirdly, Mendel's approach of using mathematics to explain biological phenomena was totally new and unacceptable to many of the biologists of his time."
+- F196 [fact] "Finally, though Mendel's work suggested that factors (genes) were discrete units, he could not provide any physical proof for the existence of factors or say what they were made of."
+- F197 [number] "In 1900, three Scientists (de Vries, Correns and von Tschermak) independently rediscovered Mendel's results on the inheritance of characters." (date: 1900; count: three Scientists)
+- F198 [fact] "Also, by this time due to advancements in microscopy that were taking place, scientists were able to carefully observe cell division."
+- F199 [fact] "This led to the discovery of structures in the nucleus that appeared to double and divide just before each cell division. These were called chromosomes (colored bodies, as they were visualised by staining)."
+- F200 [number] "By 1902, the chromosome movement during meiosis had been worked out." (date: 1902)
+- F201 [fact] "Walter Sutton and Theodore Boveri noted that the behaviour of chromosomes was parallel to the behaviour of genes and used chromosome movement (Figure 4.8) to explain Mendel's laws (Table 4.3)."
+- F202 [fact] "Recall that you have studied the behaviour of chromosomes during mitosis (equational division) and during meiosis (reduction division). The important things to remember are that chromosomes as well as genes occur in pairs."
+- F203 [fact] "The two alleles of a gene pair are located on homologous sites on homologous chromosomes."
+- F204 [fact] "Sutton and Boveri argued that the pairing and separation of a pair of chromosomes would lead to the segregation of a pair of factors they carried."
+- F205 [definition] "Sutton united the knowledge of chromosomal segregation with Mendelian principles and called it the chromosomal theory of inheritance."
+- F206 [fact] "Following this synthesis of ideas, experimental verification of the chromosomal theory of inheritance by Thomas Hunt Morgan and his colleagues, led to discovering the basis for the variation that sexual reproduction produced."
+- F207 [example] "Morgan worked with the tiny fruitflies, Drosophila melanogaster (Figure 4.10), which were found very suitable for such studies."
+- F208 [fact] "They could be grown on simple synthetic medium in the laboratory."
+- F209 [number] "They complete their life cycle in about two weeks, and a single mating could produce a large number of progeny flies." (duration: about two weeks)
+- F210 [fact] "Also, there was a clear differentiation of the sexes - the male and female flies are easily distinguishable."
+- F211 [fact] "Also, it has many types of hereditary variations that can be seen with low power microscopes."
+- F221 [fact] "During Anaphase of meiosis I, the two chromosome pairs can align at the metaphase plate independently of each other (Figure 4.9)."
+- F222 [fact] "To understand this, compare the chromosomes of four different colour in the left and right columns. In the left column (Possibility I) orange and green is segregating together. But in the right hand column (Possibility II) the orange chromosome is segregating with the red chromosomes."

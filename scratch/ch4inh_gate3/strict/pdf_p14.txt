@@ -1,0 +1,51 @@
+• Females, however, produce only one type of ovum with an X-chromosome.
+• There is an equal probability of fertilisation of the ovum with the sperm carrying either X or Y
+chromosome. In case the ovum fertilises with a sperm carrying X-chromosome the zygote develops into a
+female (XX) and the fertilisation of ovum with Y-chromosome carrying sperm results into a male offspring.
+• Thus, it is evident that it is the genetic make up of the sperm that determines the sex of the child.
+• It is also evident that in each pregnancy there is always 50 per cent probability of either a male or a female
+child.
+4.6.2
+Sex Determination in Honey Bee
+• The sex determination in honey bee is based on the number of sets of chromosomes an individual receives.
+• An offspring formed from the union of a sperm and an egg develops as a female (queen or worker), and an
+unfertilised egg develops as a male (drone) by means of parthenogenesis.
+• This means that the males have half the number of chromosomes than that of a female. The females are
+diploid having 32 chromosomes and males are haploid, i.e., having 16 chromosomes.
+This is called as haplodiploid sex-determination system and has special characteristic features such as the
+males produce sperms by mitosis (Figure 4.13), they do not have father and thus cannot have sons, but
+have a grandfather and can have grandsons.
+[NOTE] Read the plate (Figure 4.13 labels - the honey bee plate, p21). The plate is Figure 4.13 Sex determination
+in honey bee (NCERT prints a SECOND Figure 4.13 on p22, the pedigree-symbol plate - they share the same
+printed number). The honey bee plate's labels: Parents at the top, with the two columns labelled Female and Male;
+the row below carries Gametes: (the female contributes 32, the male contributes 16); the middle row is the
+meiotic/mitotic branch with Meiosis on the female side and Mitosis on the male side; the bottom row is F1: - 32 on
+the female side (fertilised eggs) and 16 on the male side (unfertilised eggs). The 32 and 16 chromosome counts on
+the right are the diploid and haploid numbers.
+4.7
+MUTATION
+Mutation is a phenomenon which results in alteration of DNA sequences and consequently results in
+changes in the genotype and the phenotype of an organism.
+• In addition to recombination, mutation is another phenomenon that leads to variation in DNA.
+• As you will learn in Chapter 5, one DNA helix runs continuously from one end to the other in each
+chromatid, in a highly supercoiled form.
+• Therefore loss (deletions) or gain (insertion/duplication) of a segment of DNA, result in alteration in
+chromosomes. Since genes are known to be located on chromosomes, alteration in chromosomes results in
+abnormalities or aberrations.
+• Chromosomal aberrations are commonly observed in cancer cells.
+In addition to the above, mutation also arise due to change in a single base pair of DNA. This is known as
+point mutation. A classical example of such a mutation is sickle cell anemia.
+• Deletions and insertions of base pairs of DNA, causes frame-shift mutations (see Chapter 5).
+However, there are many chemical and physical factors that induce mutations. These are referred to as
+mutagens. UV radiations can cause mutations in organisms - it is a mutagen.
+4.8
+GENETIC DISORDERS
+4.8.1
+Pedigree Analysis
+• The idea that disorders are inherited has been prevailing in the human society since long. This was based
+on the heritability of certain characteristic features in families.
+• After the rediscovery of Mendel's work the practice of analysing inheritance pattern of traits in human
+beings began.
+• Since it is evident that control crosses that can be performed in pea plant or some other organisms, are not
+possible in case of human beings, study of the family history about inheritance of a particular trait
+provides an alternative.

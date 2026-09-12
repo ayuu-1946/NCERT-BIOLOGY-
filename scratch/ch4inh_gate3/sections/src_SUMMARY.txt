@@ -1,0 +1,131 @@
+===== SOURCE PAGE 27 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   SUMMARY
+
+   Genetics is a branch of biology which deals with principlesofinheritance
+   anditspractices.Progenyresemblingtheparentsinmorphological and
+   physiologicalfeatureshasattractedtheattentionofmanybiologists.
+   Mendel was the first to study this phenomenon systematically. While
+   studying the pattern ofinheritance in pea plants of contrasting
+   characters,Mendel proposed the principles ofinheritance,which are
+   today referred to as Mendel's Laws of Inheritance'.He proposed that
+   thefactors'(laternamed asgenes)regulatingthe characters are found
+   inpairs known as alleles.Heobserved that the expression ofthe
+   characters in the offspring follow a definite pattern indifferent-first
+   generations(F).second(F.)and so on.Some characters are dominant
+   over others.Thedominantcharacters are expressed when factors are
+   in heterozygous condition (Law of Dominance).The recessive characters
+   are only expressed in homozygous conditions.The characters never
+   blend in heterozygous condition.A recessive character that was not
+
+   becomes homozygous.Hence,characters segregate while formation of
+   gametes (Law of Segregation).
+   Notallcharactersshowtruedominance.Somecharacters show
+   incomplete,and some showco-dominance.When Mendel studied the
+   inheritance oftwo characters together,itwas found that the factors
+   independently as sort and combine in all per mutation sand
+   combinations(LawofIndependentAssortment).Differentcombinations
+   of gametes are theoretically represented in a square tabular form known
+   as Punnett Square'.The factors(nowknown as gene) on chromosomes
+   regulating the characters are called the genotype and the physical
+   expression ofthe chr a rac ter sis called phenotype.
+   After knowing that the genes are located on thechromosomes,a
+   good correlation was drawn between Mendel'slaws:segregation and
+   assortmentofchromosomesduringmeiosis.TheMendel'slaws were
+   extendedintheformof'ChromosomalTheoryofInheritance'.Later,it
+   was found that Mendel's law of independent assortment does not hold
+   true for thegenesthatwerelocatedonthesamechromosomes.These
+   genes were called as linked genes 'Closely located genes assorted
+   together,and distantly located genes,due to recombination,assorted
+   independently.Linkage maps,therefore,corresponded to arrangement
+   of genes on a chromosome.
+   Many genes were linked to sexes also,and called as sex-linked
+   genes.The two sexes(maleand female)were found to have a set of
+   chromosomeswhichwerecommon,andanother set which was
+   different.Thechromosomeswhichweredifferentin two sexes were
+   named as sex chromosomes.The remaining set was named as
+   autosomes.In humans,anormalfemalehas 22pairsofautosomes
+   andapairofsexchromosomes(Xx).Amalehas22pairsofautosomes
+   and apairofsexchromosomeasXY.In chicken,sexchromosomesin
+   male are ZZ,and in females are ZW.
+   Mutation is defined as change in thegeneticmaterial.Apoint
+   mutationisachangeofasinglebasepairinDNA.Sickle-cellanemiais
+   causedduetochangeofonebaseinthegenecodingforbeta-chainof
+   hemoglobin.Inheritable mutations can be studied by generating a
+   pedigree ofa family.Somemutations involve changes in whole set of
+
+   77
+
+   Reprint2026-27
+
+===== SOURCE PAGE 28 =====
+
+
+   BIOLOGY
+
+   chromosomes(polyploidy)orchangein a subset of chromosome number
+   (aneuploidy). This helped in understanding the mutational basis of
+   geneticdisorders.Down'ssyndrome isdue to trisomy of chromosome 21.
+   where there isan extra copy of chromosome 21and consequently the
+   total number ofchromosomebecomes47.In Turner's syndrome,oneX
+   chromosome is missing and the sex chromosome is as Xo.and in
+   Klinefelter's syndrome,the condition isXXY.Thesecan be easily studied
+   by analysis ofKaryotypes.
+
+   EXERCISES
+
+   Mention the advantages of selectingpeaplantforexperimentbyMendel.
+   1.
+   Differentiatebetweenthefollowing-
+   2.
+   (a)Dominance and Recessive
+   (b)Homozygous and Heterozygous
+   (c)Monohybrid and Dihybrid.
+   A diploid organism is heterozygous for 4loci.howmany types of gametes
+   3.
+   can be produced?
+   Explain the Law of Dominance using a monohybrid cross.
+   4.
+   Define and design a test-cross.
+   5.
+   UsingaPunnettSquare,workoutthe distribution of phenotypic features
+   6.
+   in the first filial generation after across between a homozygous female
+   and a heterozygous male for a single locus.
+   When a cross in made between tall plantwithyellowseeds(TtYy)and
+   7.
+   tall plant with green seed(Ttyy).whatproportionsofphenotypein the
+   offspring could be expected tobe
+   (a) tall and green.
+   (b) dwarf and green.
+   Two heterozygous parents are crossed.If the two loci are linked what
+   8.
+   would be the distribution of phenotypic features inF,generation fora
+   dibybrid cross?
+   Briefly mention the contribution of T.H.Morgan in genetics.
+   9.
+   What is pedigree analysis?Suggest how such an analysis,can be useful.
+   10.
+   How is sex determined in human beings?
+   11.
+   A child hasbloodgroupO.IfthefatherhasbloodgroupAandmother
+   12.
+   bloodgroupB,workoutthegenotypesof the parents and the possible
+   genotypes of the other offsprings.
+   13.Explainthefollowingtermswithexample
+   (a) Co-dominance
+   (b)Incomplete dominance
+   Whatispointmutation?Give oneexample.
+   14.
+   Who had proposed thechromosomaltheoryoftheinheritance?
+   15.
+
+   78
+
+   Mentionanytwoautosomalgeneticdisorderswiththeirsymptoms.
+   16.
+
+   Reprint2026-27

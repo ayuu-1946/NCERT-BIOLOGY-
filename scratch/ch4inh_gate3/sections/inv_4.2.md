@@ -1,0 +1,55 @@
+# Inventory section: 4.2 (54 rows)
+- F052 [heading] "4.2 INHERITANCE OF ONE GENE"
+- F053 [opener] "Let us take the example of one such hybridisation experiment carried out by Mendel where he crossed tall and dwarf pea plants to study the inheritance of one gene (Figure 4.2)."
+- F054 [fact] "He collected the seeds produced as a result of this cross and grew them to generate plants of the first hybrid generation."
+- F055 [term] "This generation is also called the Filial1 progeny or the F1."
+- F056 [fact] "Mendel observed that all the F1 progeny plants were tall, like one of its parents; none were dwarf (Figure 4.3)."
+- F057 [fact] "Mendel then self-pollinated the tall F1 plants and to his surprise found that in the Filial2 generation some of the offspring were 'dwarf'; the character that was not seen in the F1 generation was now expressed."
+- F058 [number] "The proportion of plants that were dwarf were 1/4th of the F2 plants while 3/4th of the F2 plants were tall." (ratios: 1/4th, 3/4th)
+- F059 [fact] "The tall and dwarf traits were identical to their parental type and did not show any blending, that is all the offspring were either tall or dwarf, none were of in-between height (Figure 4.3)."
+- F060 [number] "Similar results were obtained with the other traits that he studied: only one of the parental traits was expressed in the F1 generation while at the F2 stage both the traits were expressed in the proportion 3:1." (ratio: 3:1)
+- F061 [exception] "The contrasting traits did not show any blending at either F1 or F2 stage."
+- F064 [fact] "Based on these observations, Mendel proposed that something was being stably passed down, unchanged, from parent to offspring through the gametes, over successive generations."
+- F065 [term] "He called these things as 'factors'. Now we call them as genes."
+- F066 [definition] "Genes, therefore, are the units of inheritance."
+- F067 [fact] "They contain the information that is required to express a particular trait in an organism."
+- F068 [definition] "Genes which code for a pair of contrasting traits are known as alleles, i.e., they are slightly different forms of the same gene."
+- F069 [fact] "If we use alphabetical symbols for each gene, then the capital letter is used for the trait expressed at the F1 stage and the small alphabet for the other trait."
+- F070 [example] "For example, in case of the character of height, T is used for the Tall trait and t for the 'dwarf', and T and t are alleles of each other."
+- F071 [example] "Hence, in plants the pair of alleles for height would be TT, Tt or tt."
+- F072 [definition] "Mendel also proposed that in a true breeding, tall or dwarf pea variety the allelic pair of genes for height are identical or homozygous, TT and tt, respectively. TT and tt are called the genotype of the plant while the descriptive terms tall and dwarf are the phenotype."
+- F073 [question] "What then would be the phenotype of a plant that had a genotype Tt?"
+- F074 [fact] "As Mendel found the phenotype of the F1 heterozygote Tt to be exactly like the TT parent in appearance, he proposed that in a pair of dissimilar factors, one dominates the other (as in the F1) and hence is called the dominant factor while the other factor is recessive."
+- F075 [example] "In this case T (for tallness) is dominant over t (for dwarfness), that is recessive."
+- F076 [qualifier] "(Do not use T for tall and d for dwarf because you will find it difficult to remember whether T and d are alleles of the same gene/character or not)."
+- F077 [fact] "Alleles can be similar as in the case of homozygotes TT and tt or can be dissimilar as in the case of the heterozygote Tt."
+- F078 [definition] "Since the Tt plant is heterozygous for genes controlling one character (height), it is a monohybrid and the cross between TT and tt is a monohybrid cross."
+- F081 [fact] "From the observation that the recessive parental trait is expressed without any blending in the F2 generation, we can infer that, when the tall and dwarf plant produce gametes, by the process of meiosis, the alleles of the parental pair separate or segregate from each other and only one allele is transmitted to a gamete."
+- F082 [number] "This segregation of alleles is a random process and so there is a 50 per cent chance of a gamete containing either allele, as has been verified by the results of the crossings." (percentage: 50 per cent)
+- F083 [fact] "In this way the gametes of the tall TT plants have the allele T and the gametes of the dwarf tt plants have the allele t."
+- F084 [fact] "During fertilisation the two alleles, T from one parent say, through the pollen, and t from the other parent, then through the egg, are united to produce zygotes that have one T allele and one t allele."
+- F085 [fact] "The production of gametes by the parents, the formation of the zygotes, the F1 and F2 plants can be understood from a diagram called Punnett Square as shown in Figure 4.4."
+- F086 [fact] "It was developed by a British geneticist, Reginald C. Punnett."
+- F087 [definition] "It is a graphical representation to calculate the probability of all possible genotypes of offspring in a genetic cross."
+- F088 [fact] "The possible gametes are written on two sides, usually the top row and left columns. All possible combinations are represented in boxes below in the squares, which generates a square output form."
+- F089 [fact] "The Punnett Square shows the parental tall TT (male) and dwarf tt (female) plants, the gametes produced by them and, the F1 Tt progeny. The F1 plants of genotype Tt are self-pollinated."
+- F090 [term] "The symbols for female and male are used to denote the female (eggs) and male (pollen) of the F1 generation, respectively." (the printed glyphs are the female and male signs - drawn symbols, NOT text: Pass 2 must draw them or use the words, because the Unicode signs are banned by check 5)
+- F091 [number] "The F1 plant of genotype Tt when self-pollinated, produces gametes of the genotype T and t in equal proportion. When fertilisation takes place, the pollen grains of genotype T have a 50 per cent chance to pollinate eggs of the genotype T, as well as of genotype t. Also pollen grains of genotype t have a 50 per cent chance of pollinating eggs of genotype T, as well as of genotype t." (percentage: 50 per cent)
+- F094 [fact] "As a result of random fertilisation, the resultant zygotes can be of the genotypes TT, Tt or tt."
+- F095 [number] "From the Punnett square it is easily seen that 1/4th of the random fertilisations lead to TT, 1/2 lead to Tt and 1/4th to tt." (fractions: 1/4th, 1/2, 1/4th)
+- F096 [fact] "Though the F1 have a genotype of Tt, but the phenotypic character seen is 'tall'."
+- F097 [number] "At F2 3/4th of the plants are tall, where some of them are TT while others are Tt." (fraction: 3/4th)
+- F098 [fact] "Externally it is not possible to distinguish between the plants with the genotypes TT and Tt."
+- F099 [fact] "It is thus due to this dominance of one character over the other that all the F1 are tall (though the genotype is Tt) and in the F2 3/4th of the plants are tall (though genotypically 1/2 are Tt and only 1/4th are TT)."
+- F100 [number] "This leads to a phenotypic ratio of 3/4 tall : (1/4 TT + 1/2 Tt) and 1/4 tt, i.e., a 3:1 ratio, but a genotypic ratio of 1:2:1." (ratios: 3:1 phenotypic, 1:2:1 genotypic)
+- F101 [number] "The 1/4 : 1/2 : 1/4 ratio of TT:Tt:tt is mathematically condensable to the form of the binomial expression (ax + by)2, that has the gametes bearing genes T or t in equal frequency of 1/2."
+- F102 [process] "The expression is expanded as given below: (1/2 T + 1/2 t)2 = (1/2 T + 1/2 t) x (1/2 T + 1/2 t) = 1/4 TT + 1/2 Tt + 1/4 tt" (displayed expansion)
+- F103 [fact] "Mendel self-pollinated the F2 plants and found that dwarf F2 plants continued to generate dwarf plants in F3 and F4 generations."
+- F104 [fact] "He concluded that the genotype of the dwarfs was homozygous-tt."
+- F105 [fact] "From the preceding paragraphs it is clear that though the genotypic ratios can be calculated using mathematical probability, by simply looking at the phenotype of a dominant trait, it is not possible to know the genotypic composition."
+- F106 [fact] "That is, for example, whether a tall plant from F1 or F2 has TT or Tt composition, cannot be predicted."
+- F107 [definition] "Therefore, to determine the genotype of a tall plant at F2, Mendel crossed the tall plant from F2 with a dwarf plant. This he called a testcross."
+- F108 [definition] "In a typical testcross an organism (pea plants here) showing a dominant phenotype (and whose genotype is to be determined) is crossed with the recessive parent instead of self-crossing."
+- F109 [fact] "The progenies of such a cross can easily be analysed to predict the genotype of the test organism."
+- F110 [fact] "Figure 4.5 shows the results of typical testcross where violet colour flower (V) is dominant over white colour flower (v)."
+- F113 [fact] "Based on his observations on monohybrid crosses Mendel proposed two general rules to consolidate his understanding of inheritance in monohybrid crosses. Today these rules are called the Principles or Laws of Inheritance: the First Law or Law of Dominance and the Second Law or Law of Segregation."

@@ -1,0 +1,20 @@
+# Inventory section: 4.6 (19 rows)
+- F255 [heading] "4.6 SEX DETERMINATION"
+- F256 [opener] "The mechanism of sex determination has always been a puzzle before the geneticists."
+- F257 [fact] "The initial clue about the genetic/chromosomal mechanism of sex determination can be traced back to some of the experiments carried out in insects."
+- F258 [fact] "In fact, the cytological observations made in a number of insects led to the development of the concept of genetic/chromosomal basis of sex-determination."
+- F259 [number] "Henking (1891) could trace a specific nuclear structure all through spermatogenesis in a few insects, and it was also observed by him that 50 per cent of the sperm received this structure after spermatogenesis, whereas the other 50 per cent sperm did not receive it." (date: 1891; percentage: 50 per cent)
+- F260 [fact] "Henking gave a name to this structure as the x body but he could not explain its significance."
+- F261 [fact] "Further investigations by other scientists led to the conclusion that the 'X body' of Henking was in fact a chromosome and that is why it was given the name X-chromosome."
+- F262 [fact] "It was also observed that in a large number of insects the mechanism of sex determination is of the XO type, i.e., all eggs bear an additional X-chromosome besides the other chromosomes (autosomes)."
+- F263 [fact] "On the other hand, some of the sperms bear the X-chromosome whereas some do not."
+- F264 [fact] "Eggs fertilised by sperm having an X-chromosome become females and, those fertilised by sperms that do not have an X-chromosome become males."
+- F265 [definition] "Due to the involvement of the X-chromosome in the determination of sex, it was designated to be the sex chromosome, and the rest of the chromosomes were named as autosomes."
+- F266 [example] "Grasshopper is an example of XO type of sex determination in which the males have only one X-chromosome besides the autosomes, whereas females have a pair of X-chromosomes."
+- F267 [fact] "In a number of other insects and mammals including man, XY type of sex determination is seen where both male and female have same number of chromosomes. Among the males an X-chromosome is present but its counterpart is distinctly smaller and called the Y-chromosome. Females, however, have a pair of X-chromosomes."
+- F268 [fact] "Both males and females bear same number of autosomes. Hence, the males have autosomes plus XY, while female have autosomes plus XX."
+- F269 [fact] "In human beings and in Drosophila the males have one X and one Y chromosome, whereas females have a pair of X-chromosomes besides autosomes (Figure 4.12a, b)."
+- F270 [term] "In the above description you have studied about two types of sex determining mechanisms, i.e., XO type and XY type. But in both cases males produce two different types of gametes, (a) either with or without X-chromosome or (b) some gametes with X-chromosome and some with Y-chromosome. Such type of sex determination mechanism is designated to be the example of male heterogamety."
+- F271 [fact] "In some other organisms, e.g., birds, a different mechanism of sex determination is observed (Figure 4.12 c). In this case the total number of chromosome is same in both males and females. But two different types of gametes in terms of the sex chromosomes, are produced by females, i.e., female heterogamety."
+- F272 [term] "In order to have a distinction with the mechanism of sex determination described earlier, the two different sex chromosomes of a female bird has been designated to be the Z and W chromosomes. In these organisms the females have one Z and one W chromosome, whereas males have a pair of Z-chromosomes besides the autosomes."
+- F375 [summary-unique] "In chicken, sex chromosomes in male are ZZ, and in females are ZW." (SUMMARY-UNIQUE - the body speaks of birds generally, never names the chicken)

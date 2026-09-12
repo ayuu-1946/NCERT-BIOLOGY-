@@ -1,0 +1,18 @@
+# Inventory section: 4.2.2.2 (17 rows)
+- F143 [heading] "4.2.2.2 Co-dominance"
+- F144 [opener] "Till now we were discussing crosses where the F1 resembled either of the two parents (dominance) or was in-between (incomplete dominance). But, in the case of co-dominance the F1 generation resembles both parents."
+- F145 [example] "A good example is different types of red blood cells that determine ABO blood grouping in human beings. ABO blood groups are controlled by the gene I."
+- F146 [fact] "The plasma membrane of the red blood cells has sugar polymers that protrude from its surface and the kind of sugar is controlled by the gene."
+- F147 [number] "The gene (I) has three alleles IA, IB and i." (count: three alleles; the A and B are printed as superscripts of I)
+- F148 [fact] "The alleles IA and IB produce a slightly different form of the sugar while allele i does not produce any sugar."
+- F149 [fact] "Because humans are diploid organisms, each person possesses any two of the three I gene alleles."
+- F150 [exception] "IA and IB are completely dominant over i, in other words when IA and i are present only IA expresses (because i does not produce any sugar), and when IB and i are present IB expresses."
+- F151 [definition] "But when IA and IB are present together they both express their own types of sugars: this is because of co-dominance. Hence red blood cells have both A and B types of sugars."
+- F152 [number] "Since there are three different alleles, there are six different combinations of these three alleles that are possible, and therefore, a total of six different genotypes of the human ABO blood types (Table 4.2)." (counts: three alleles, six combinations, six genotypes)
+- F161 [fact] "Do you realise that the example of ABO blood grouping also provides a good example of multiple alleles? Here you can see that there are more than two, i.e., three alleles, governing the same character."
+- F162 [fact] "Since in an individual only two alleles can be present, multiple alleles can be found only when population studies are made."
+- F163 [fact] "Occasionally, a single gene product may produce more than one effect."
+- F164 [example] "For example, starch synthesis in pea seeds is controlled by one gene. It has two alleles (B and b). Starch is synthesised effectively by BB homozygotes and therefore, large starch grains are produced. In contrast, bb homozygotes have lesser efficiency in starch synthesis and produce smaller starch grains."
+- F165 [fact] "After maturation of the seeds, BB seeds are round and the bb seeds are wrinkled. Heterozygotes produce round seeds, and so B seems to be the dominant allele."
+- F166 [exception] "But, the starch grains produced are of intermediate size in Bb seeds. So if starch grain size is considered as the phenotype, then from this angle, the alleles show incomplete dominance."
+- F167 [qualifier] "Therefore, dominance is not an autonomous feature of a gene or the product that it has information for. It depends as much on the gene product and the production of a particular phenotype from this product as it does on the particular phenotype that we choose to examine, in case more than one phenotype is influenced by the same gene."

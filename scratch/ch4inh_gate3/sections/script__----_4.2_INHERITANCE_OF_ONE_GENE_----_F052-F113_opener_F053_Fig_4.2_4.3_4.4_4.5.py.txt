@@ -1,0 +1,346 @@
+# ---- 4.2 INHERITANCE OF ONE GENE ---- F052-F113 (opener F053) + Fig 4.2, 4.3, 4.4, 4.5
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.2", "INHERITANCE OF ONE GENE", level=1))
+
+# F053, F054 - the first cross in tutor voice
+story.append(body(
+    "Take the example of <b>one such hybridisation experiment</b> carried out by Mendel, in "
+    "which he <b>crossed tall and dwarf pea plants</b> to study the inheritance of <b>one "
+    "gene</b> (Figure 4.2)."))
+story.append(b1(
+    "He collected the seeds produced as a result of this cross and grew them to generate "
+    "plants of the <b>first hybrid generation</b>."))
+story.append(b1(
+    "This generation is also called the <b>Filial<sub>1</sub> progeny or the F<sub>1</sub></b>."))
+
+# F055 + F062-F063 - Punnett was British + the cross technique plate
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.2 labels).</b> The plate shows <b>Steps in making a cross "
+    "in pea</b>: a <b>Parent</b> flower with the <b>Petal</b> lifted to reveal the "
+    "<b>Stigma</b>, the <b>Anther</b>, the <b>Stamen</b> and the <b>Carpel</b>; the "
+    "step <b>Removal of anthers (Emasculation)</b>; and the step <b>Transfer of pollen "
+    "(Pollination)</b>, performed between two <b>Parent</b> plants."))
+
+# F056, F057, F058, F059, F060, F061 - the F1 and F2 outcomes
+story.append(gap())
+story.append(b1(
+    "<b>Mendel observed that all the F<sub>1</sub> progeny plants were tall, like one of "
+    "its parents; none were dwarf (Figure 4.3).</b>"))
+story.append(b1(
+    "<b>Mendel then self-pollinated the tall F<sub>1</sub> plants and to his surprise "
+    "found that in the Filial<sub>2</sub> generation some of the offspring were 'dwarf';</b> "
+    "the character that was not seen in the F<sub>1</sub> generation was now expressed."))
+story.append(b1(
+    "<b>The proportion of plants that were dwarf were 1/4th of the F<sub>2</sub> plants "
+    "while 3/4th of the F<sub>2</sub> plants were tall.</b>"))
+story.append(b1(
+    "<b>The tall and dwarf traits were identical to their parental type and did not show "
+    "any blending,</b> that is all the offspring were either tall or dwarf, <b>none were "
+    "of in-between height</b> (Figure 4.3)."))
+story.append(b1(
+    "<b>Similar results were obtained with the other traits that he studied:</b> only one "
+    "of the parental traits was expressed in the F<sub>1</sub> generation while at the "
+    "F<sub>2</sub> stage both the traits were expressed in the proportion <b>3:1</b>."))
+story.append(b1(
+    "<b>The contrasting traits did not show any blending at either F<sub>1</sub> or "
+    "F<sub>2</sub> stage.</b>"))
+
+# F079-F080 - monohybrid cross diagram
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.3 labels).</b> The plate is a <b>Diagrammatic "
+    "representation of monohybrid cross</b>. On the <b>Parental</b> line it marks a "
+    "<b>Tall</b> plant and a <b>Dwarf</b> plant; the next line is the "
+    "<b>F<sub>1</sub> generation</b>, all <b>Tall</b>; the <b>Selfing</b> arrow runs "
+    "into the <b>F<sub>2</sub> generation</b>, where the <b>Tall</b> and <b>Dwarf</b> "
+    "ratio is 3:1."))
+
+# F064, F065, F066, F067, F068 - the gene / allele / factor trio
+story.append(gap())
+story.append(Paragraph(
+    "<b>What the cross told Mendel:</b>", STYLES["Body"]))
+story.append(b1(
+    "<b>Based on these observations, Mendel proposed that something was being stably passed "
+    "down, unchanged, from parent to offspring through the gametes, over successive "
+    "generations.</b>"))
+story.append(b1(
+    "He called these things as <b>'factors'</b>. Now we call them as <b>genes</b>."))
+story.append(keyterm(
+    "<b>Genes, therefore, are the units of inheritance.</b> They contain the information "
+    "that is required to express a particular trait in an organism."))
+story.append(keyterm(
+    "<b>Genes which code for a pair of contrasting traits are known as alleles,</b> i.e., "
+    "they are <b>slightly different forms of the same gene</b>."))
+
+# F069-F071 - the symbol convention
+story.append(gap())
+story.append(Paragraph(
+    "<b>Writing a cross in symbols:</b>", STYLES["Body"]))
+story.append(b1(
+    "<b>If we use alphabetical symbols for each gene, then the capital letter is used for "
+    "the trait expressed at the F<sub>1</sub> stage and the small alphabet for the other "
+    "trait.</b>"))
+story.append(b1(
+    "<b>For example, in case of the character of height, T is used for the Tall trait and "
+    "t for the 'dwarf',</b> and T and t are alleles of each other."))
+story.append(b1(
+    "<b>Hence, in plants the pair of alleles for height would be TT, Tt or tt.</b>"))
+
+# F072-F078 - the genotype/phenotype terminology + F073's question + the qualifier
+story.append(gap())
+story.append(data_table([
+    ["Term", "What it means", "How the height alleles map to it"],
+    ["<b>Genotype</b>", "The pair of alleles a plant actually carries.",
+     "<b>TT</b> (tall parent), <b>Tt</b> (F<sub>1</sub>), <b>tt</b> (dwarf parent)"],
+    ["<b>Phenotype</b>", "What the plant looks like.",
+     "<b>Tall</b> and <b>dwarf</b>"],
+    ["<b>Homozygous</b>", "Both alleles in the pair are the same.",
+     "True-breeding parents are <b>TT</b> and <b>tt</b>"],
+    ["<b>Heterozygous</b>", "The two alleles in the pair are different.",
+     "The F<sub>1</sub> is <b>Tt</b>"],
+    ["<b>Dominant</b> vs <b>recessive</b>",
+     "In a pair of dissimilar alleles, one is expressed in the phenotype and the other "
+     "is hidden.",
+     "<b>T</b> is dominant over <b>t</b>, so <b>Tt</b> is phenotypically tall"],
+], col_widths=[26, 36, 38]))
+
+# F072's homozygous / TT / tt definition + F073's "what would be the phenotype of Tt?"
+story.append(b1(
+    "<b>Mendel also proposed that in a true breeding, tall or dwarf pea variety the allelic "
+    "pair of genes for height are identical or homozygous, TT and tt, respectively.</b>"))
+story.append(b1(
+    "<b>TT and tt are called the genotype of the plant while the descriptive terms tall "
+    "and dwarf are the phenotype.</b>"))
+story.append(b1(
+    "<b>What then would be the phenotype of a plant that had a genotype Tt?</b>"))
+story.append(b1(
+    "<b>As Mendel found the phenotype of the F<sub>1</sub> heterozygote Tt to be exactly "
+    "like the TT parent in appearance, he proposed that in a pair of dissimilar factors, "
+    "one dominates the other (as in the F<sub>1</sub>) and hence is called the dominant "
+    "factor while the other factor is recessive.</b>"))
+story.append(b1(
+    "<b>In this case T (for tallness) is dominant over t (for dwarfness), that is "
+    "recessive.</b>"))
+story.append(b1(
+    "<b>(Do not use T for tall and d for dwarf because you will find it difficult to "
+    "remember whether T and d are alleles of the same gene/character or not).</b>"))
+story.append(b1(
+    "<b>Alleles can be similar as in the case of homozygotes TT and tt or can be "
+    "dissimilar as in the case of the heterozygote Tt.</b>"))
+story.append(keyterm(
+    "<b>Since the Tt plant is heterozygous for genes controlling one character (height), "
+    "it is a monohybrid</b> and the <b>cross between TT and tt is a monohybrid "
+    "cross</b>."))
+
+# F081-F084 - the segregation inference
+story.append(gap())
+story.append(Paragraph(
+    "<b>From the F<sub>1</sub> and F<sub>2</sub> outcomes, Mendel inferred the segregation "
+    "mechanism:</b>", STYLES["Body"]))
+story.append(b1(
+    "<b>From the observation that the recessive parental trait is expressed without any "
+    "blending in the F<sub>2</sub> generation, we can infer that, when the tall and dwarf "
+    "plant produce gametes, by the process of meiosis, the alleles of the parental pair "
+    "separate or segregate from each other and only one allele is transmitted to a "
+    "gamete.</b>"))
+story.append(b1(
+    "<b>This segregation of alleles is a random process and so there is a 50 per cent "
+    "chance of a gamete containing either allele,</b> as has been verified by the results "
+    "of the crossings."))
+story.append(b1(
+    "<b>In this way the gametes of the tall TT plants have the allele T and the gametes of "
+    "the dwarf tt plants have the allele t.</b>"))
+story.append(b1(
+    "<b>During fertilisation the two alleles, T from one parent say, through the pollen, "
+    "and t from the other parent, then through the egg, are united to produce zygotes that "
+    "have one T allele and one t allele.</b>"))
+
+# F085-F091 - the Punnett square
+story.append(gap())
+story.append(heading("4.2a", "Punnett Square - the cross on paper", level=2))
+# F085, F086, F087, F088
+story.append(b1(
+    "<b>The production of gametes by the parents, the formation of the zygotes, the "
+    "F<sub>1</sub> and F<sub>2</sub> plants can be understood from a diagram called "
+    "Punnett Square as shown in Figure 4.4.</b>"))
+story.append(b1(
+    "<b>It was developed by a British geneticist, Reginald C. Punnett.</b>"))
+story.append(keyterm(
+    "<b>It is a graphical representation to calculate the probability of all possible "
+    "genotypes of offspring in a genetic cross.</b>"))
+story.append(b1(
+    "<b>The possible gametes are written on two sides, usually the top row and left "
+    "columns. All possible combinations are represented in boxes below in the squares, "
+    "which generates a square output form.</b>"))
+
+# F089 - the first Punnett (parental cross -> F1)
+story.append(gap())
+story.append(Paragraph(
+    "<b>First Punnett square: the parental cross and the F<sub>1</sub>:</b>", STYLES["Body"]))
+story.append(data_table([
+    ["", "Tall parent gamete: <b>T</b>", "Tall parent gamete: <b>T</b>"],
+    ["Dwarf parent gamete: <b>t</b>", "<b>Tt</b> (F<sub>1</sub>, tall)",
+     "<b>Tt</b> (F<sub>1</sub>, tall)"],
+    ["Dwarf parent gamete: <b>t</b>", "<b>Tt</b> (F<sub>1</sub>, tall)",
+     "<b>Tt</b> (F<sub>1</sub>, tall)"],
+], col_widths=[34, 33, 33]))
+
+# F089 + F090 (female/male signs) + F091 (50-50 gamete probability)
+story.append(gap())
+story.append(b1(
+    "<b>The Punnett Square shows the parental tall TT (male) and dwarf tt (female) plants, "
+    "the gametes produced by them and, the F<sub>1</sub> Tt progeny.</b>"))
+story.append(b1(
+    "<b>The symbols for female and male are used to denote the female (eggs) and male "
+    "(pollen) of the F<sub>1</sub> generation, respectively.</b> (The printed glyphs are "
+    "drawn symbols, not text - Pass 2 writes the words; the Unicode signs are banned by "
+    "check 5.)"))
+story.append(b1(
+    "<b>The F<sub>1</sub> plant of genotype Tt when self-pollinated, produces gametes of "
+    "the genotype T and t in equal proportion.</b> When fertilisation takes place, the "
+    "pollen grains of genotype T have a <b>50 per cent chance</b> to pollinate eggs of the "
+    "genotype T, as well as of genotype t. Also pollen grains of genotype t have a "
+    "<b>50 per cent chance</b> of pollinating eggs of genotype T, as well as of genotype t."))
+
+# F092-F093 - Figure 4.4 caption + labels (read-the-plate)
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.4 labels).</b> The plate is a <b>Punnett square used to "
+    "understand a typical monohybrid cross conducted by Mendel between true-breeding tall "
+    "plants and true-breeding dwarf plants</b>. The four corners carry the parental lines - "
+    "a <b>Tall</b> plant with the <b>TT</b> genotype, a <b>Dwarf</b> plant with the "
+    "<b>tt</b> genotype - with the <b>Gametes</b> row (a single <b>T</b>) and column (a "
+    "single <b>t</b>). The middle of the grid is the <b>F<sub>1</sub> generation</b> - "
+    "four cells, all <b>Tt</b>. Below the grid, the <b>Selfing</b> arrow leads to the "
+    "<b>F<sub>2</sub> generation</b>, with two ratio lines: <b>Phenotypic ratio: "
+    "tall:dwarf 3:1</b> and <b>Genotypic ratio: TT:Tt:tt 1:2:1</b>."))
+
+# F094-F100 - the F2 ratios
+story.append(gap())
+story.append(Paragraph(
+    "<b>Second Punnett square: the F<sub>1</sub> selfed to give the F<sub>2</sub>:</b>",
+    STYLES["Body"]))
+story.append(data_table([
+    ["", "F<sub>1</sub> gamete: <b>T</b>", "F<sub>1</sub> gamete: <b>t</b>"],
+    ["F<sub>1</sub> gamete: <b>T</b>", "<b>TT</b> (tall)", "<b>Tt</b> (tall)"],
+    ["F<sub>1</sub> gamete: <b>t</b>", "<b>Tt</b> (tall)", "<b>tt</b> (dwarf)"],
+], col_widths=[34, 33, 33]))
+
+story.append(gap())
+story.append(b1(
+    "<b>As a result of random fertilisation, the resultant zygotes can be of the genotypes "
+    "TT, Tt or tt.</b>"))
+story.append(b1(
+    "<b>From the Punnett square it is easily seen that 1/4th of the random fertilisations "
+    "lead to TT, 1/2 lead to Tt and 1/4th to tt.</b>"))
+story.append(b1(
+    "<b>Though the F<sub>1</sub> have a genotype of Tt, but the phenotypic character seen "
+    "is 'tall'.</b>"))
+story.append(b1(
+    "<b>At F<sub>2</sub> 3/4th of the plants are tall, where some of them are TT while "
+    "others are Tt.</b>"))
+story.append(b1(
+    "<b>Externally it is not possible to distinguish between the plants with the genotypes "
+    "TT and Tt.</b>"))
+story.append(b1(
+    "<b>It is thus due to this dominance of one character over the other that all the "
+    "F<sub>1</sub> are tall (though the genotype is Tt)</b> and in the F<sub>2</sub> "
+    "3/4th of the plants are tall (though genotypically 1/2 are Tt and only 1/4th are TT)."))
+story.append(b1(
+    "<b>This leads to a phenotypic ratio of 3/4 tall : (1/4 TT + 1/2 Tt) and 1/4 tt, "
+    "i.e., a 3:1 ratio, but a genotypic ratio of 1:2:1.</b>"))
+
+# F101-F102 - the binomial expansion as a process flow
+story.append(gap())
+story.append(heading("4.2b", "The same cross, written as a binomial expansion", level=2))
+story.append(b1(
+    "<b>The 1/4 : 1/2 : 1/4 ratio of TT:Tt:tt is mathematically condensable to the form of "
+    "the binomial expression (ax + by)<super>2</super>,</b> that has the gametes bearing "
+    "genes T or t in equal frequency of 1/2."))
+story.append(b1(
+    "<b>The expression is expanded as given below:</b>"))
+story.append(process_flow([
+    "The gamete frequencies for a heterozygote Tt are <b>1/2 T and 1/2 t</b>.",
+    "Squaring the gamete sum: <b>(1/2 T + 1/2 t)<super>2</super></b>.",
+    "Expanding: <b>1/4 TT + 1/2 Tt + 1/4 tt</b>.",
+]))
+
+# F103-F106 - Mendel's confirmation, then the "by looking you can't tell" lesson
+story.append(gap())
+story.append(b1(
+    "<b>Mendel self-pollinated the F<sub>2</sub> plants and found that dwarf F<sub>2</sub> "
+    "plants continued to generate dwarf plants in F<sub>3</sub> and F<sub>4</sub> "
+    "generations.</b>"))
+story.append(b1(
+    "<b>He concluded that the genotype of the dwarfs was homozygous-tt.</b>"))
+story.append(b1(
+    "<b>From the preceding paragraphs it is clear that though the genotypic ratios can be "
+    "calculated using mathematical probability, by simply looking at the phenotype of a "
+    "dominant trait, it is not possible to know the genotypic composition.</b>"))
+story.append(b1(
+    "<b>That is, for example, whether a tall plant from F<sub>1</sub> or F<sub>2</sub> has "
+    "TT or Tt composition, cannot be predicted.</b>"))
+
+# F107-F110 - the testcross definition
+story.append(gap())
+story.append(heading("4.2c", "Testcross - reading the genotype you cannot see", level=2))
+story.append(keyterm(
+    "<b>Therefore, to determine the genotype of a tall plant at F<sub>2</sub>, Mendel "
+    "crossed the tall plant from F<sub>2</sub> with a dwarf plant. This he called a "
+    "testcross.</b>"))
+story.append(keyterm(
+    "<b>In a typical testcross an organism (pea plants here) showing a dominant phenotype "
+    "(and whose genotype is to be determined) is crossed with the recessive parent instead "
+    "of self-crossing.</b>"))
+story.append(b1(
+    "<b>The progenies of such a cross can easily be analysed to predict the genotype of "
+    "the test organism.</b>"))
+story.append(b1(
+    "<b>Figure 4.5 shows the results of typical testcross where violet colour flower (V) "
+    "is dominant over white colour flower (v).</b>"))
+
+# F111-F112 - Figure 4.5 caption + labels
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.5 labels).</b> The plate is a <b>Diagrammatic "
+    "representation of a test cross</b>. Across the top, two <b>Homozygous recessive</b> "
+    "parents - left panel labelled <b>WW</b> and right panel labelled <b>Ww</b>. The "
+    "right-hand <b>Dominant Phenotype (Genotype unknown)</b> parent sits below, with the "
+    "two outcomes. The left outcome: <b>Result - All flowers are violet</b>, "
+    "<b>Interpretation - Unknown flower is homozygous dominant</b>. The right outcome: "
+    "<b>Half of the flowers are violet and half of the flowers are white.</b>, "
+    "<b>Unknown flower is heterozygous</b>."))
+
+# Testcross outcomes as a data_table (using the WW/Ww labels from the plate)
+story.append(gap())
+story.append(Paragraph(
+    "<b>What the testcross distinguishes:</b>", STYLES["Body"]))
+story.append(data_table([
+    ["If the unknown dominant parent is...", "Cross", "Offspring"],
+    ["<b>WW</b> (homozygous dominant)",
+     "<b>WW &times; ww</b>",
+     "<b>All Ww</b> - all violet"],
+    ["<b>Ww</b> (heterozygous)",
+     "<b>Ww &times; ww</b>",
+     "<b>Half Ww (violet), half ww (white)</b>"],
+], col_widths=[28, 22, 50]))
+
+story.append(memory_aid(
+    "<b>Testcross in one line:</b> <b>cross the unknown with the recessive; if any "
+    "offspring show the recessive phenotype, the unknown was heterozygous</b>. The "
+    "recessive parent contributes only one kind of gamete, so every recessive offspring "
+    "is a fingerprint of the dominant parent's hidden recessive allele."))
+
+# F113 - the two laws, as a closure to 4.2
+story.append(gap())
+story.append(heading("4.2d", "What the one-gene cross gives you: two laws", level=2))
+story.append(b1(
+    "<b>Based on his observations on monohybrid crosses Mendel proposed two general rules "
+    "to consolidate his understanding of inheritance in monohybrid crosses.</b> Today these "
+    "rules are called the <b>Principles or Laws of Inheritance</b>: the <b>First Law or "
+    "Law of Dominance</b> and the <b>Second Law or Law of Segregation</b>."))
+
+# ======================================================================================

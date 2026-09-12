@@ -1,0 +1,17 @@
+# Inventory section: 4.8.3 (16 rows)
+- F353 [heading] "4.8.3 Chromosomal Disorders"
+- F354 [opener] "The chromosomal disorders on the other hand are caused due to absence or excess or abnormal arrangement of one or more chromosomes."
+- F355 [definition] "Failure of segregation of chromatids during cell division cycle results in the gain or loss of a chromosome(s), called aneuploidy."
+- F356 [example] "For example Down's syndrome results in the gain of extra copy of chromosome 21."
+- F357 [example] "Similarly, Turner's syndrome results due to loss of an X chromosome in human females."
+- F358 [definition] "Failure of cytokinesis after telophase stage of cell division results in an increase in a whole set of chromosomes in an organism and, this phenomenon is known as polyploidy. This condition is often seen in plants."
+- F359 [number] "The total number of chromosomes in a normal human cell is 46 (23 pairs). Out of these 22 pairs are autosomes and one pair of chromosomes are sex chromosome." (counts: 46, 23 pairs, 22 pairs)
+- F360 [definition] "These situations are known as trisomy or monosomy of a chromosome, respectively. Such a situation leads to very serious consequences in the individual."
+- F361 [example] "Down's Syndrome, Turner's syndrome, Klinefelter's syndrome are common examples of chromosomal disorders."
+- F362 [fact] "Down's Syndrome: The cause of this genetic disorder is the presence of an additional copy of the chromosome number 21 (trisomy of 21)."
+- F363 [number] "This disorder was first described by Langdon Down (1866)." (date: 1866)
+- F364 [fact] "The affected individual is short statured with small round head, furrowed tongue and partially open mouth (Figure 4.16). Palm is broad with characteristic palm crease. Physical, psychomotor and mental development is retarded."
+- F365 [number] "Klinefelter's Syndrome: This genetic disorder is also caused due to the presence of an additional copy of X chromosome resulting into a karyotype of 47, XXY." (karyotype: 47, XXY)
+- F366 [fact] "Such an individual has overall masculine development, however, the feminine development (development of breast, i.e., Gynaecomastia) is also expressed (Figure 4.17a). Such individuals are sterile."
+- F367 [number] "Turner's Syndrome: Such a disorder is caused due to the absence of one of the X chromosomes, i.e., 45 with X0, Such females are sterile as ovaries are rudimentary besides other features including lack of other secondary sexual characters (Figure 4.17b)." (karyotype: 45, X0)
+- F376 [summary-unique] "These can be easily studied by analysis of Karyotypes." (SUMMARY-UNIQUE - "Karyotypes" as an analytical tool appears only here; the body gives "a karyotype of 47, XXY")

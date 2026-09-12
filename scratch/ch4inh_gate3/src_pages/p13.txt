@@ -1,0 +1,47 @@
+PRINCIPLESOFINHERITANCE AND VARIATION
+Pge ner at ion
+Wrinkled green
+rr
+yy
+Roundyellow
+RR
+YY
+Gametes
+ry
+RY
+Roundyellow
+RrYy
+Selfing
+F,generation
+RY
+RY
+Gametes
+Gametes
+RRYY
+Ry
+Ry
+RrYY
+RrYY
+RRYy
+RRYy
+rrYY
+RrYy
+RrYy
+RrYy
+RrYy
+Fgeneration
+RRyy
+rrYy
+rrYy
+Rryy
+Rryy
+rryy
+63
+Phenotypicratio:roundyellow:round green:wrinkledyellow:wrinkledgreen
+9
+3
+3
+1
+Figure 4.7 Results ofa dihybrid cross where the two parents differed in two pairs
+ofcontrastingtraits:seedcolourandseedshape
+Reprint2026-27

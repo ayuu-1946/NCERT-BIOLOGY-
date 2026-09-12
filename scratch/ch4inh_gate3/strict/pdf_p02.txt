@@ -1,0 +1,56 @@
+Humans knew from as early as 8000-1000 B.C. that one of the causes of variation was hidden in sexual
+reproduction.
+• They exploited the variations that were naturally present in the wild populations of plants and animals to
+selectively breed and select for organisms that possessed desirable characters.
+• For example, through artificial selection and domestication from ancestral wild cows, we have well-known
+Indian breeds, e.g., Sahiwal cows in Punjab.
+One sentence the chapter summary adds and the body never does: Genetics is a branch of biology which deals with
+principles of inheritance and its practices.
+And another: Progeny resembling the parents in morphological and physiological features has attracted the attention of
+many biologists.
+And one more: Mendel was the first to study this phenomenon systematically.
+Chapter 4 map
+What it covers
+4.1 Mendel's Laws of Inheritance
+How Mendel set up the pea experiments and what he saw
+4.2 Inheritance of One Gene
+Monohybrid cross, Punnett square, testcross, Law of Dominance, Law of
+Segregation, incomplete dominance, co-dominance
+4.3 Inheritance of Two Genes
+Dihybrid cross, Law of Independent Assortment, chromosomal theory,
+linkage and recombination
+4.4 Polygenic Inheritance
+Traits that vary on a gradient rather than as two opposites (skin colour, height)
+4.5 Pleiotropy
+A single gene producing more than one phenotype
+4.6 Sex Determination
+XO, XY and ZW mechanisms; sex determination in humans and in honey bee
+4.7 Mutation
+How DNA sequences change, and what changes the genome
+4.8 Genetic Disorders
+Pedigree analysis, Mendelian disorders (colour blindness, haemophilia,
+sickle-cell anaemia, phenylketonuria, thalassemia), chromosomal disorders
+(Down's, Turner's, Klinefelter's)
+[MEMORY AID - not in NCERT] One chapter, three layers: 4.1-4.3 build Mendel's laws and tie them to
+chromosomes; 4.4-4.5 extend the one-gene, two-allele picture to many genes and many effects; 4.6-4.8 apply it -
+sex, mutation, and the disorders that fall out when any of it goes wrong. The Quick Recap at the end returns to this
+three-layer shape.
+4.1
+MENDEL'S LAWS OF INHERITANCE
+It was during the mid-nineteenth century that headway was made in the understanding of inheritance.
+Gregor Mendel, conducted hybridisation experiments on garden peas for seven years (1856-1863) and
+proposed the laws of inheritance in living organisms.
+• During Mendel's investigations into inheritance patterns it was for the first time that statistical analysis
+and mathematical logic were applied to problems in biology.
+• His experiments had a large sampling size, which gave greater credibility to the data that he collected.
+• Also, the confirmation of his inferences from experiments on successive generations of his test plants,
+proved that his results pointed to general rules of inheritance rather than being unsubstantiated ideas.
+What Mendel worked with:
+• Mendel investigated characters in the garden pea plant that were manifested as two opposing traits, e.g.,
+tall or dwarf plants, yellow or green seeds.
+• Mendel conducted such artificial pollination / cross pollination experiments using several true-breeding
+pea lines.
+A true-breeding line is one that, having undergone continuous self-pollination, shows the stable trait
+inheritance and expression for several generations.
+• Mendel selected 14 true-breeding pea plant varieties, as pairs which were similar except for one character
+with contrasting traits.

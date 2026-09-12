@@ -1,0 +1,58 @@
+• Male gametes: 1/2 T and 1/2 t.
+• Offspring: 1/2 TT and 1/2 Tt.
+• Genotypic ratio: 1:1.
+• Phenotypic ratio: all tall (1:0) - by the Law of Dominance (4.2.1), T is dominant over t, so both TT and Tt are
+phenotypically tall (F072, F074).
+[MEMORY AID - not in NCERT] Homozygous x heterozygous, single locus: 1 TT : 1 Tt genotypically, all tall
+phenotypically. Same gamete split as a testcross (1:1) but with a dominant parent instead of a recessive one, so no
+recessive phenotype appears.
+Q7
+Cross TtYy (tall, yellow) x Ttyy (tall, green)
+Worked-out answer, derived from the 4.3.1 gamete-frequency rows (not NCERT text):
+• Parent 1 (TtYy) gametes (4.3.1, F188): 1/4 TY, 1/4 Ty, 1/4 tY, 1/4 ty.
+• Parent 2 (Ttyy) gametes: 1/2 Ty and 1/2 ty (T/t segregates 1:1; only y is available on the colour locus).
+• Combine: 4 x 2 = 8 equally-likely cells (each at 1/8):
+Parent 1 gamete
+x Parent 2
+Offspring
+Phenotype
+TY (1/4)
+Ty (1/2)
+TTYy (1/8)
+Tall, yellow
+TY (1/4)
+ty (1/2)
+TtYy (1/8)
+Tall, yellow
+Ty (1/4)
+Ty (1/2)
+TTyy (1/8)
+Tall, green
+Ty (1/4)
+ty (1/2)
+Ttyy (1/8)
+Tall, green
+tY (1/4)
+Ty (1/2)
+TtYy (1/8)
+Tall, yellow
+tY (1/4)
+ty (1/2)
+ttYy (1/8)
+Dwarf, yellow
+ty (1/4)
+Ty (1/2)
+Ttyy (1/8)
+Tall, green
+ty (1/4)
+ty (1/2)
+ttyy (1/8)
+Dwarf, green
+• Phenotypic totals: tall-yellow 3/8 (TTYy 1/8 + TtYy 1/8 + TtYy 1/8); tall-green 3/8 (TTyy 1/8 + Ttyy 1/8 +
+Ttyy 1/8); dwarf-yellow 1/8 (ttYy); dwarf-green 1/8 (ttyy).
+• (a) Tall and green: 3/8.
+• (b) Dwarf and green: 1/8 - the t gametes from Parent 1 are required; without them the dwarf classes vanish,
+which is the error the corrected table removes.
+[MEMORY AID - not in NCERT] TtYy x Ttyy in one line: 3/8 tall-yellow : 3/8 tall-green : 1/8 dwarf-yellow : 1/8
+dwarf-green. Height still segregates 3 tall : 1 dwarf (Parent 1 is Tt; Parent 2 is Tt too), and colour segregates 1
+yellow : 1 green (only Parent 1 carries Y). Independent assortment multiplies the two monohybrid ratios.

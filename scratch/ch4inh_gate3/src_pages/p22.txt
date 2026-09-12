@@ -1,0 +1,62 @@
+BIOLOGY
+4.7MUTATION
+Mutation is a phenomenon which results in alteration of DNA sequences
+ofan organism.In addition to recombination,mutation is another
+phenomenonthatleadstovariationinDNA.
+AsyouwilllearninChapter5,oneDNAhelixrunscontinuouslyfrom
+oneendtotheotherineachchromatid,inahighlysupercoiledform.
+Thereforeloss(deletions)orgain(insertion/duplication)ofasegmentof
+DNA,result in alteration in chromosomes. Since genes are known to be
+located on chromosomes,alteration in chromosomes results in
+abnormalities or aberrations.Chromosomal
+aberrationsarecommonlyobservedincancercells.
+In addition tothe above,mutation also arise due
+tochangeinasinglebasepairofDNA.Thisisknown
+as point mutation.A classical example of such a
+mutationissicklecellanemia.Deletionsandinsertions
+ofbasepairsofDNA,causesframe-shiftmutations
+(see Chapter 5).
+The mechanism of mutation is beyond the scope
+ofthis discussion,at thislevel.However,thereare
+many chemical and physical factors that induce
+mutations. These are referred to as mutagens. UV
+radiation scan cause mutations in organisms-itis a
+mutagen.
+Male
+female
+sex unspecified
+affected individuals
+mating
+mating between relatives
+(consanguineous mating)
+parents above and
+children below
+4.8 GENETICDISORDERS
+(inorderofbirth-left toright)
+4.8.1 Pedigree Analysis
+The idea that disorders are inherited has been
+prevailing in thehuman society since long. This was
+based on the her it ability of certain characteristic
+featuresinfamilies.After there discovery of Mendel's
+work the practice of analysing inheritance pattern of
+traits in human beings began.Since itis evident that
+control crosses that can be performed in pea plant or
+some other organisms,are not possible in case of
+Figure 4.13 Symbols used in thehuman
+human beings,study ofthe family history about
+pedigree analysis
+inheritance ofa particular trait provide san
+alternative.Suchananalysisoftraitsinaseveralofgenerationsofafamily
+is called thepedigreeanalysis.In the pedigree analysis the inheritance
+ofaparticulartraitisrepresentedinthefamilytreeovergenerations.
+Inhumangenetics.pedigree study provides a strong tool,which is
+utilisedtotracetheinheritanceofaspecifictrait,abnormalityordisease.
+Some ofthe important standard symbols used in the pedigree analysis
+have been shown in Figure 4.13.
+As you have studied in thischapter,eachandeveryfeatureinany
+organism is controlled by one or the other gene located on the DNA present
+parents with male child
+affected with disease
+five unaffected offspring
+72
+Reprint2026-27

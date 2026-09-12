@@ -1,0 +1,87 @@
+# ---- Chapter 4 opener + chapter map ---- F021-F030
+
+#      Chapter map = data_table exactly as Ch19 SS19.intro does it.
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("Ch 4", "PRINCIPLES OF INHERITANCE AND VARIATION - Chapter Opener", level=1))
+
+# F023 - the chapter contents box as printed (printed body runs 4.1-4.8, contents box stops at 4.6)
+story.append(body(
+    "The chapter contents box lists six sections, ending at <b>4.6 Genetic Disorders</b>; the "
+    "printed body, however, runs to <b>4.8</b>, adding <b>4.4 Polygenic Inheritance, 4.5 "
+    "Pleiotropy, 4.6 Sex Determination, 4.7 Mutation</b> and <b>4.8 Genetic Disorders</b>. "
+    "The body numbering is authoritative for the chapter that follows."))
+
+# F024, F025, F026, F027 - the four definitions
+story.append(gap())
+story.append(keyterm(
+    "<b>Genetics</b> is the branch of biology that <b>deals with the inheritance, as well "
+    "as the variation of characters from parents to offspring</b>. These and several related "
+    "questions are dealt with, scientifically, in this branch."))
+story.append(keyterm(
+    "<b>Inheritance</b> is the process by which characters are passed on from parent to "
+    "progeny; it is the <b>basis of heredity</b>."))
+story.append(keyterm(
+    "<b>Variation</b> is the degree by which progeny differ from their parents."))
+
+# F028, F029, F030 - the historical context
+story.append(gap())
+story.append(body(
+    "<b>Humans knew from as early as 8000-1000 B.C.</b> that one of the causes of variation "
+    "was hidden in <b>sexual reproduction</b>."))
+story.append(b1(
+    "They <b>exploited the variations that were naturally present in the wild populations "
+    "of plants and animals</b> to <b>selectively breed and select for organisms that "
+    "possessed desirable characters</b>."))
+story.append(b1(
+    "For example, through <b>artificial selection and domestication from ancestral wild "
+    "cows</b>, we have well-known Indian breeds, e.g., <b>Sahiwal cows in Punjab</b>."))
+
+# F372, F373, F374 - the three SUMMARY-UNIQUE folds, body-absent
+story.append(gap())
+story.append(Paragraph(
+    "<b>One sentence the chapter summary adds and the body never does:</b> <i>Genetics is a "
+    "branch of biology which deals with principles of inheritance and its practices.</i>",
+    STYLES["NoteBox"]))
+story.append(Paragraph(
+    "<b>And another:</b> <i>Progeny resembling the parents in morphological and physiological "
+    "features has attracted the attention of many biologists.</i>", STYLES["NoteBox"]))
+story.append(Paragraph(
+    "<b>And one more:</b> <i>Mendel was the first to study this phenomenon systematically.</i>",
+    STYLES["NoteBox"]))
+
+# Chapter map as data_table (Ch19 §19.intro style)
+story.append(gap())
+story.append(data_table([
+    ["Chapter 4 map", "What it covers"],
+    ["<b>4.1 Mendel's Laws of Inheritance</b>",
+     "How Mendel set up the pea experiments and what he saw"],
+    ["<b>4.2 Inheritance of One Gene</b>",
+     "Monohybrid cross, Punnett square, testcross, Law of Dominance, Law of Segregation, "
+     "incomplete dominance, co-dominance"],
+    ["<b>4.3 Inheritance of Two Genes</b>",
+     "Dihybrid cross, Law of Independent Assortment, chromosomal theory, linkage and "
+     "recombination"],
+    ["<b>4.4 Polygenic Inheritance</b>",
+     "Traits that vary on a gradient rather than as two opposites (skin colour, height)"],
+    ["<b>4.5 Pleiotropy</b>",
+     "A single gene producing more than one phenotype"],
+    ["<b>4.6 Sex Determination</b>",
+     "XO, XY and ZW mechanisms; sex determination in humans and in honey bee"],
+    ["<b>4.7 Mutation</b>",
+     "How DNA sequences change, and what changes the genome"],
+    ["<b>4.8 Genetic Disorders</b>",
+     "Pedigree analysis, Mendelian disorders (colour blindness, haemophilia, sickle-cell "
+     "anaemia, phenylketonuria, thalassemia), chromosomal disorders (Down's, Turner's, "
+     "Klinefelter's)"],
+], col_widths=[40, 60]))
+
+story.append(gap())
+story.append(memory_aid(
+    "<b>One chapter, three layers:</b> <b>4.1-4.3</b> build Mendel's laws and tie them to "
+    "chromosomes; <b>4.4-4.5</b> extend the one-gene, two-allele picture to many genes and "
+    "many effects; <b>4.6-4.8</b> apply it - sex, mutation, and the disorders that fall out "
+    "when any of it goes wrong. The Quick Recap at the end returns to this three-layer "
+    "shape."))
+
+# ======================================================================================

@@ -1,0 +1,64 @@
+PRINCIPLESOFINHERITANCE ANDVARIATION
+chromosomes,areproduced by females,i.e.,femaleheterogamety.In
+order to have a distinction with the mechanism of sexdetermination
+describedearlier,thetwodifferentsexchromosomesofafemalebirdhas
+beendesignatedtobetheZandWchromosomes.Intheseorganismsthe
+femaleshaveoneZandoneWchromosome,whereasmaleshaveapairof
+Z-chromosomesbesidestheautosomes.
+4.6.1 Sex Determination in Humans
+Ithas already been mentioned that the sex determining mechanism in
+case of humans is XY type.Outof23pairsofchromosomespresent,
+22pairsareexactlysameinbothmalesandfemales:thesearethe
+autosomes.A pair ofX-chromosomesarepresentin thefemale,whereas
+thepresenceofanXandYchromosomearedeterminantofthemale
+characteristic.During spermatogenesis among males,two types of
+gametesareproduced.5opercentofthetotalspermproducedcarry
+theX-chromosomeandtherest50percenthasY-chromosomebesides
+the autosomes.Females,however,produce only one type of ovum with
+anX-chromosome.Thereisanequalprobabilityoffertilisationofthe
+ovumwiththespermcarryingeitherXorY chromosome.In case the
+ovumfertiliseswithaspermcarryingX-chromosomethezygotedevelops
+intoafemale(XX)andthefertilisationofovumwithY-chromosome
+carrying sperm results into a male offspring.Thus,it is evident that it
+isthegeneticmakeupofthespermthatdeterminesthesexofthechild.
+probability of either a male or afemalechild.Itisunfortunatethatin
+our society women are blamed for giving birth to female children and
+havebeenostracisedandill-treatedbecauseofthisfalsenotion.
+4.6.2 SexDetermination in HoneyBee
+The sex determination in honeybee is
+based on the number of sets of
+Parents
+chromosomesanindividualreceives.An
+offspring formed from the union ofa
+sperm and an egg develops a safe male
+Gametes:
+(queen or worker).andan unf ert ili sed
+eggdevelopsasamale(drone)bymeans
+ofparthenogenesis.Thismeans that the
+F,:
+males have half the number of
+chromosomesthanthatofafemale.The
+females are diploidhaving32
+chromosomes and males are haploid,i.e.,having 16 chromosomes.
+Thisiscalledashaplodiploidsex-determinationsystemandhasspecial
+characteristic features such as the males produce sperms by mitosis
+(Figure4.13),theydonothavefatherand thuscannothavesons,but
+haveagrandfatherandcanhavegrandsons.
+Howis thesex-determinationmechanismdifferentinthebirds?
+Isthespermortheeggresponsibleforthesexofthechicks?
+Male
+16
+Female
+32
+Meiosis
+Mitosis
+16
+16
+16
+Female
+32
+Male
+16
+Figure 4.13 Sex determination in honey bee
+71
+Reprint2026-27

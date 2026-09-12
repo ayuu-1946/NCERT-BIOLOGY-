@@ -1,0 +1,211 @@
+# ---- 4.8.3 Chromosomal Disorders ---- F353-F376 + Fig 4.16, 4.17
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.8.3", "Chromosomal Disorders", level=2))
+# F354, F355
+story.append(b1(
+    "<b>The chromosomal disorders on the other hand are caused due to absence or excess "
+    "or abnormal arrangement of one or more chromosomes.</b>"))
+story.append(keyterm(
+    "<b>Failure of segregation of chromatids during cell division cycle results in the "
+    "gain or loss of a chromosome(s), called aneuploidy.</b>"))
+# F356-F358
+story.append(b1(
+    "<b>For example Down's syndrome results in the gain of extra copy of chromosome "
+    "21.</b>"))
+story.append(b1(
+    "<b>Similarly, Turner's syndrome results due to loss of an X chromosome in human "
+    "females.</b>"))
+story.append(keyterm(
+    "<b>Failure of cytokinesis after telophase stage of cell division results in an "
+    "increase in a whole set of chromosomes in an organism and, this phenomenon is known "
+    "as polyploidy.</b> This condition is often seen in plants."))
+# F359
+story.append(b1(
+    "<b>The total number of chromosomes in a normal human cell is 46 (23 pairs). Out of "
+    "these 22 pairs are autosomes and one pair of chromosomes are sex chromosome.</b>"))
+# F360
+story.append(keyterm(
+    "<b>These situations are known as trisomy or monosomy of a chromosome, "
+    "respectively.</b> Such a situation leads to very serious consequences in the "
+    "individual."))
+# F361
+story.append(b1(
+    "<b>Down's Syndrome, Turner's syndrome, Klinefelter's syndrome are common examples "
+    "of chromosomal disorders.</b>"))
+
+# F362-F364 - Down's
+story.append(gap())
+story.append(heading("Down's", "Down's Syndrome (trisomy 21)", level=3))
+story.append(b1(
+    "<b>Down's Syndrome:</b> The cause of this genetic disorder is the presence of an "
+    "additional copy of the chromosome number 21 (trisomy of 21)."))
+story.append(b1(
+    "<b>This disorder was first described by Langdon Down (1866).</b>"))
+story.append(b1(
+    "<b>The affected individual is short statured with small round head, furrowed tongue "
+    "and partially open mouth (Figure 4.16).</b> Palm is broad with characteristic palm "
+    "crease. Physical, psychomotor and mental development is retarded."))
+
+# F368-F369 - Fig 4.16 read-the-plate
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.16 labels).</b> The plate is <b>A representative figure "
+    "showing an individual inflicted with Down's syndrome and the corresponding "
+    "chromosomes of the individual</b>. The label row of the plate is empty in the source, "
+    "and the only fact-bearing labels NCERT prints on the plate are the six physical "
+    "signs called out as: <b>Broad flat face</b>, <b>Flat back of head</b>, <b>Many "
+    "'loops' on finger tips</b>, <b>Palm crease</b>, <b>Big and wrinkled tongue</b>, and "
+    "<b>Congenital heart disease</b>."))
+
+# F365-F366 - Klinefelter's
+story.append(gap())
+story.append(heading("Klinefelter's", "Klinefelter's Syndrome (47, XXY)", level=3))
+story.append(b1(
+    "<b>Klinefelter's Syndrome:</b> This genetic disorder is also caused due to the "
+    "presence of an additional copy of X chromosome resulting into a karyotype of "
+    "<b>47, XXY</b>."))
+story.append(b1(
+    "<b>Such an individual has overall masculine development, however, the feminine "
+    "development (development of breast, i.e., Gynaecomastia) is also expressed (Figure "
+    "4.17a).</b> Such individuals are sterile."))
+
+# F367 - Turner's
+story.append(gap())
+story.append(heading("Turner's", "Turner's Syndrome (45, X0)", level=3))
+story.append(b1(
+    "<b>Turner's Syndrome:</b> Such a disorder is caused due to the absence of one of "
+    "the X chromosomes, i.e., <b>45 with X0</b>, Such females are sterile as ovaries are "
+    "rudimentary besides other features including lack of other secondary sexual "
+    "characters (Figure 4.17b)."))
+
+# F370-F371 - Fig 4.17 read-the-plate
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.17 labels).</b> The plate is <b>Diagrammatic "
+    "representation of genetic disorders due to sex chromosome composition in humans: "
+    "(a) Klinefelter Syndrome; (b) Turner's Syndrome</b>. The source's own spelling is "
+    "<b>represe-ntation</b>, hyphenated across a line break. The two label rows on the "
+    "plate, one per panel, are: panel (a) <b>Tall stature with feminised character "
+    "(development of breast, i.e., Gynaecomastia)</b>; panel (b) <b>Short stature and "
+    "under developed feminine character</b>."))
+
+# F376 - SUMMARY-UNIQUE: Karyotypes
+story.append(gap())
+story.append(Paragraph(
+    "<b>One sentence the chapter summary adds and the body never does:</b> <i>These can "
+    "be easily studied by analysis of Karyotypes.</i>", STYLES["NoteBox"]))
+
+# ======================================================================================
+# ---- Quick Recap (SS5 item 8) - rewritten, denser version of the NCERT summary, NOT a
+#      copy of it (SS3).  The five SUMMARY-UNIQUE folds (F372-F376) sit in their body
+#      homes above; the recap carries them as one-liners and sweeps the 27 body-present
+#      facts in NCERT's own sentence order.
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("Recap", "QUICK RECAP", level=1))
+
+story.append(b1(
+    "<b>Genetics</b> is a branch of biology which deals with <b>principles of inheritance "
+    "and its practices</b> (summary-only wording; the body's definition reads differently)."))
+story.append(b1(
+    "<b>Progeny resembling the parents in morphological and physiological features</b> "
+    "has attracted the attention of many biologists (summary-only wording)."))
+story.append(b1(
+    "<b>Mendel was the first to study this phenomenon systematically</b> (summary-only "
+    "wording)."))
+story.append(b1(
+    "<b>While studying the pattern of inheritance in pea plants of contrasting "
+    "characters, Mendel proposed the principles of inheritance, which are today referred "
+    "to as 'Mendel's Laws of Inheritance'.</b>"))
+story.append(b1(
+    "<b>He proposed that the 'factors' (later named as genes) regulating the characters "
+    "are found in pairs known as alleles.</b>"))
+story.append(b1(
+    "<b>He observed that the expression of the characters in the offspring follow a "
+    "definite pattern in different-first generations (F<sub>1</sub>), second "
+    "(F<sub>2</sub>) and so on.</b>"))
+story.append(b1(
+    "<b>Some characters are dominant over others.</b>"))
+story.append(b1(
+    "<b>The dominant characters are expressed when factors are in heterozygous condition "
+    "(Law of Dominance).</b>"))
+story.append(b1(
+    "<b>The recessive characters are only expressed in homozygous conditions.</b>"))
+story.append(b1(
+    "<b>The characters never blend in heterozygous condition.</b>"))
+story.append(b1(
+    "<b>A recessive character that was not expressed in heterozygous conditon may be "
+    "expressed again when it becomes homozygous.</b> (NCERT spelling <b>conditon</b> "
+    "preserved.)"))
+story.append(b1(
+    "<b>Hence, characters segregate while formation of gametes (Law of Segregation).</b>"))
+story.append(b1(
+    "<b>Not all characters show true dominance. Some characters show incomplete, and "
+    "some show co-dominance.</b>"))
+story.append(b1(
+    "<b>When Mendel studied the inheritance of two characters together, it was found that "
+    "the factors independently assort and combine in all permutations and combinations "
+    "(Law of Independent Assortment).</b>"))
+story.append(b1(
+    "<b>Different combinations of gametes are theoretically represented in a square "
+    "tabular form known as 'Punnett Square'.</b>"))
+story.append(b1(
+    "<b>The factors (now known as gene) on chromosomes regulating the characters are "
+    "called the genotype and the physical expression of the chraracters is called "
+    "phenotype.</b> (NCERT spelling <b>chraracters</b> preserved.)"))
+story.append(b1(
+    "<b>After knowing that the genes are located on the chromosomes, a good correlation "
+    "was drawn between Mendel's laws: segregation and assortment of chromosomes during "
+    "meiosis. The Mendel's laws were extended in the form of 'Chromosomal Theory of "
+    "Inheritance'.</b>"))
+story.append(b1(
+    "<b>Later, it was found that Mendel's law of independent assortment does not hold "
+    "true for the genes that were located on the same chromosomes. These genes were "
+    "called as linked genes.</b>"))
+story.append(b1(
+    "<b>Closely located genes assorted together, and distantly located genes, due to "
+    "recombination, assorted independently. Linkage maps, therefore, corresponded to "
+    "arrangement of genes on a chromosome.</b>"))
+story.append(b1(
+    "<b>Many genes were linked to sexes also, and called as sex-linked genes.</b>"))
+story.append(b1(
+    "<b>The two sexes (male and female) were found to have a set of chromosomes which "
+    "were common, and another set which was different. The chromosomes which were "
+    "different in two sexes were named as sex chromosomes. The remaining set was named "
+    "as autosomes.</b>"))
+story.append(b1(
+    "<b>In humans, a normal female has 22 pairs of autosomes and a pair of sex "
+    "chromosomes (Xx).</b> A male has 22 pairs of autosomes and a pair of sex "
+    "chromosome as XY. (NCERT spelling <b>Xx</b> preserved.)"))
+story.append(b1(
+    "<b>In chicken, sex chromosomes in male are ZZ, and in females are ZW.</b> (Summary-"
+    "only wording; the body's paragraph 4.6 names the chromosomes Z and W but does not "
+    "name the chicken.)"))
+story.append(b1(
+    "<b>Mutation is defined as change in the genetic material.</b>"))
+story.append(b1(
+    "<b>A point mutation is a change of a single base pair in DNA.</b>"))
+story.append(b1(
+    "<b>Sickle-cell anemia is caused due to change of one base in the gene coding for "
+    "beta-chain of hemoglobin.</b>"))
+story.append(b1(
+    "<b>Inheritable mutations can be studied by generating a pedigree of a family.</b>"))
+story.append(b1(
+    "<b>Some mutations involve changes in whole set of chromosomes (polyploidy) or "
+    "change in a subset of chromosome number (aneuploidy).</b>"))
+story.append(b1(
+    "<b>This helped in understanding the mutational basis of genetic disorders.</b>"))
+story.append(b1(
+    "<b>Down's syndrome is due to trisomy of chromosome 21, where there is an extra "
+    "copy of chromosome 21 and consequently the total number of chromosome becomes 47.</b>"))
+story.append(b1(
+    "<b>In Turner's syndrome, one X chromosome is missing and the sex chromosome is as "
+    "X0, and in Klinefelter's syndrome, the condition is XXY.</b>"))
+story.append(b1(
+    "<b>These can be easily studied by analysis of Karyotypes.</b> (Summary-only "
+    "wording; the body gives 'a karyotype of 47, XXY' as a phrase, never 'analysis of "
+    "Karyotypes' as a method.)"))
+
+# ======================================================================================

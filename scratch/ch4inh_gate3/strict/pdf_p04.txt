@@ -1,0 +1,60 @@
+Genes which code for a pair of contrasting traits are known as alleles, i.e., they are slightly different forms
+of the same gene.
+Writing a cross in symbols:
+• If we use alphabetical symbols for each gene, then the capital letter is used for the trait expressed at the F1
+stage and the small alphabet for the other trait.
+• For example, in case of the character of height, T is used for the Tall trait and t for the 'dwarf', and T and t
+are alleles of each other.
+• Hence, in plants the pair of alleles for height would be TT, Tt or tt.
+Term
+What it means
+How the height alleles map to it
+Genotype
+The pair of alleles a plant actually carries.
+TT (tall parent), Tt (F1), tt (dwarf parent)
+Phenotype
+What the plant looks like.
+Tall and dwarf
+Homozygous
+Both alleles in the pair are the same.
+True-breeding parents are TT and tt
+Heterozygous
+The two alleles in the pair are different.
+The F1 is Tt
+Dominant vs recessive
+In a pair of dissimilar alleles, one is expressed
+in the phenotype and the other is hidden.
+T is dominant over t, so Tt is phenotypically tall
+• Mendel also proposed that in a true breeding, tall or dwarf pea variety the allelic pair of genes for height
+are identical or homozygous, TT and tt, respectively.
+• TT and tt are called the genotype of the plant while the descriptive terms tall and dwarf are the
+phenotype.
+• What then would be the phenotype of a plant that had a genotype Tt?
+• As Mendel found the phenotype of the F1 heterozygote Tt to be exactly like the TT parent in appearance,
+he proposed that in a pair of dissimilar factors, one dominates the other (as in the F1) and hence is called
+the dominant factor while the other factor is recessive.
+• In this case T (for tallness) is dominant over t (for dwarfness), that is recessive.
+• (Do not use T for tall and d for dwarf because you will find it difficult to remember whether T and d are
+alleles of the same gene/character or not).
+• Alleles can be similar as in the case of homozygotes TT and tt or can be dissimilar as in the case of the
+heterozygote Tt.
+Since the Tt plant is heterozygous for genes controlling one character (height), it is a monohybrid and the
+cross between TT and tt is a monohybrid cross.
+From the F1 and F2 outcomes, Mendel inferred the segregation mechanism:
+• From the observation that the recessive parental trait is expressed without any blending in the F2
+generation, we can infer that, when the tall and dwarf plant produce gametes, by the process of meiosis,
+the alleles of the parental pair separate or segregate from each other and only one allele is transmitted to
+a gamete.
+• This segregation of alleles is a random process and so there is a 50 per cent chance of a gamete containing
+either allele, as has been verified by the results of the crossings.
+• In this way the gametes of the tall TT plants have the allele T and the gametes of the dwarf tt plants have
+the allele t.
+• During fertilisation the two alleles, T from one parent say, through the pollen, and t from the other parent,
+then through the egg, are united to produce zygotes that have one T allele and one t allele.
+4.2a
+Punnett Square - the cross on paper
+• The production of gametes by the parents, the formation of the zygotes, the F1 and F2 plants can be
+understood from a diagram called Punnett Square as shown in Figure 4.4.
+• It was developed by a British geneticist, Reginald C. Punnett.
+It is a graphical representation to calculate the probability of all possible genotypes of offspring in a
+genetic cross.
