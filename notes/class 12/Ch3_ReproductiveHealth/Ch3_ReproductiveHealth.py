@@ -24,7 +24,7 @@ import os
 import sys
 
 from reportlab.lib.units import cm
-from reportlab.platypus import Paragraph, Spacer, KeepTogether, Table, TableStyle
+from reportlab.platypus import Paragraph, Spacer, KeepTogether, Table, TableStyle, Image
 
 # neet_template.py lives at the repository root; chapter scripts live several
 # directories deep, so walk upward from this file until the module is found and
@@ -70,11 +70,8 @@ story.extend(title_block("Reproductive Health"))
 # ---- 3.0 Chapter introduction: what reproductive health means (F003-F010) ----
 # F005 and F010 are Rule 3 filler (transitional + rhetorical framing) -- accounted for by
 # Rule 3 and not printed as standalone lines; the tutor paragraph below carries the question once.
-story.append(heading("3.0", "What is reproductive health?", 1))
-story.append(Paragraph(
-    "You have learnt about the <b>human reproductive system and its functions in Chapter 2</b>. "
-    "This chapter asks the closely related next question: what do we mean by reproductive health, "
-    "why does it matter, and how is it achieved?", STYLES["Body"]))
+# [USER REQUEST] 3.0 intro heading + "You have learnt..." paragraph removed as bs
+# (F003 heading + F004 opener not printed as standalone; facts remain covered by following WHO definition block)
 story.append(Paragraph(
     "The term <b>simply refers to healthy reproductive organs with normal functions</b>, but it has "
     "a broader perspective and <b>includes the emotional and social aspects of reproduction also</b>.",
@@ -365,35 +362,98 @@ story.append(process_flow([
 ]))
 story.append(Paragraph(
     "These techniques are <b>highly effective but their reversibility is very poor</b>.", STYLES["Body"]))
-# The five figures for this section are placed inline at the exact point where their topic is covered -- never grouped at the end (§4.4).
-story.append(figure(
+# ---- Figures: stacked horizontally in groups of two, each <=25cm² (user constraint) ----
+# Per-figure max widths computed from px dimensions to keep area = w*h <=25:
+# fig_3_1a 684x192 natural 5.79cm area 9.4 -> cap 5.8; 3_1b 759x422 natural 6.42 area 22.9 -> cap 6.4
+# fig_3_2 759x876 needs 4.65; fig_3_3 768x559 needs 5.86; fig_3_4a 900x809 needs 5.27; fig_3_4b 942x871 needs 5.20
+# Horizontal pairing via Table([ [figA, figB] ]) — each cell holds a figure() KeepTogether (border + caption).
+# FRAME_WIDTH is 18cm; two figures at ~5-6cm each fit side-by-side with gutters.
+
+# Helper to make a row of two figures (uses Table to place side-by-side, not vertical stacking)
+# Does NOT call figure() which returns KeepTogether (KeepTogether inside Table cell explodes to 16777219 pt and crashes layout).
+# Instead we replicate figure()'s internals -- mono check (§4.4), scale to min(max_w, natural_w), GRID_LINE box -- but return
+# a plain inner Table (framed image + caption stacked vertically) that Table can measure. Outer row Table then sits side-by-side.
+def _fig_inner(asset_name: str, caption_text: str, max_width_cm: float):
+    path = os.path.join(ASSETS, asset_name)
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"MISSING FIGURE ASSET: {path} (required by caption: {caption_text})")
+    from PIL import Image as PILImage
+    with PILImage.open(path) as im:
+        px_w, px_h = im.size
+        mode = im.mode
+    if mode != "L":
+        raise RuntimeError(f"FIGURE NOT MONOCHROME: {asset_name} has mode {mode!r}, expected 'L'. Run convert_figures_mono.py (§4.4).")
+    max_w = min(max_width_cm * cm, FRAME_WIDTH)
+    natural_w = px_w / 300.0 * 2.54 * cm
+    width = min(max_w, natural_w)
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+    framed = Table([[img]], colWidths=[width + 10])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    framed.hAlign = "CENTER"
+    cap = Paragraph(caption_text, STYLES["Caption"])
+    # Inner stack: framed image on row 0, caption on row 1 -- plain Table, not KeepTogether, so outer Table can measure it
+    inner = Table([[framed], [cap]], colWidths=[width + 10])
+    inner.setStyle(TableStyle([
+        ("ALIGN", (0,0), (-1,-1), "CENTER"),
+        ("VALIGN", (0,0), (-1,-1), "TOP"),
+        ("LEFTPADDING", (0,0), (-1,-1), 0),
+        ("RIGHTPADDING", (0,0), (-1,-1), 0),
+        ("TOPPADDING", (0,0), (-1,-1), 2),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 2),
+    ]))
+    return inner
+
+def _fig_pair(a_name, a_cap, a_w, b_name, b_cap, b_w):
+    fa = _fig_inner(a_name, a_cap, a_w)
+    fb = _fig_inner(b_name, b_cap, b_w)
+    cw = (FRAME_WIDTH - 0.4*cm) / 2
+    t = Table([[fa, fb]], colWidths=[cw, cw])
+    t.setStyle(TableStyle([
+        ("VALIGN", (0,0), (-1,-1), "TOP"),
+        ("ALIGN", (0,0), (-1,-1), "CENTER"),
+        ("LEFTPADDING", (0,0), (-1,-1), 3),
+        ("RIGHTPADDING", (0,0), (-1,-1), 3),
+        ("TOPPADDING", (0,0), (-1,-1), 2),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 2),
+    ]))
+    # Keep the pair together across page breaks where possible (pair, not individual figure+caption)
+    return KeepTogether([t])
+
+# Row 1: condoms (both naturally <25, but capped to meet area precisely)
+story.append(_fig_pair(
     "fig_3_1a.png",
-    "Fig. 3.1a -- Condom for the male. A thin rubber/latex sheath used to cover the penis just before coitus so that ejaculated "
-    "semen does not enter the female reproductive tract. The device is identified by its shape, which survives monochrome exactly as printed.",
-    max_width_cm=9.5))
-story.append(figure(
+    "Fig. 3.1a -- Condom for the male. Thin rubber/latex sheath covering the penis so ejaculated semen does not enter the female tract. Shape carries meaning, monochrome intact.",
+    5.8,
     "fig_3_1b.png",
-    "Fig. 3.1b -- Condom for the female. A thin rubber/latex sheath used to cover the vagina and cervix just before coitus. "
-    "Photograph of the physical device; its identity is carried by shape, not hue, so nothing is lost in monochrome.",
-    max_width_cm=9.5))
-story.append(figure(
+    "Fig. 3.1b -- Condom for the female. Thin rubber/latex sheath covering vagina and cervix. Photograph of device; shape, not hue, carries fact.",
+    6.4))
+
+# Row 2: IUD + implants (both capped to <25)
+story.append(_fig_pair(
     "fig_3_2.png",
-    "Fig. 3.2 -- Copper T (CuT). A copper-releasing IUD inserted in the uterus through the vagina. Photograph of the device; form, not colour, carries the fact.",
-    max_width_cm=9.0))
-story.append(figure(
+    "Fig. 3.2 -- Copper T (CuT). Copper-releasing IUD inserted in uterus through vagina. Photograph; form not colour carries fact.",
+    4.6,
     "fig_3_3.png",
-    "Fig. 3.3 -- Implants. Progestogen or progestogen-estrogen implants held between fingers and placed under the skin. Photograph of the rods; meaning is in shape and placement, not hue.",
-    max_width_cm=9.0))
-story.append(figure(
+    "Fig. 3.3 -- Implants. Progestogen or progestogen-estrogen implants under the skin. Photograph of rods; meaning in shape/placement, not hue.",
+    5.8))
+
+# Row 3: vasectomy + tubectomy (both capped)
+story.append(_fig_pair(
     "fig_3_4a.png",
-    "Fig. 3.4a -- Vasectomy. A small part of the vas deferens is removed or tied up through a small incision on the scrotum. "
-    "Label: Vas deferens tied and cut. The yellow ligature marks of the source survive as mid-grey and are stated in words here.",
-    max_width_cm=9.5))
-story.append(figure(
+    "Fig. 3.4a -- Vasectomy. Vas deferens removed or tied via small scrotal incision. Label: Vas deferens tied and cut. Yellow marks survive as mid-grey, stated in words.",
+    5.2,
     "fig_3_4b.png",
-    "Fig. 3.4b -- Tubectomy. A small part of the fallopian tube is removed or tied up through an incision in the abdomen or through "
-    "the vagina. Label: Fallopian tubes tied and cut. Yellow ligatures survive as mid-grey; the blue arrows survive as line arrows in grey.",
-    max_width_cm=9.5))
+    "Fig. 3.4b -- Tubectomy. Fallopian tube removed or tied via abdomen/vagina. Label: Fallopian tubes tied and cut. Yellow ligatures mid-grey; blue arrows survive as grey line arrows.",
+    5.19))
 story.append(Spacer(1, 3))
 
 # ---- 3.2 Closing on contraceptive choice ----
@@ -468,7 +528,7 @@ story.append(process_flow([
     "Ground <b>(ii): there is a substantial risk that if the child were born, it would suffer from such physical or mental "
     "abnormalities as to be seriously handicapped</b>.",
 ]))
-story.append(Spacer(1, 24))
+story.append(Spacer(1, 54))
 
 # =============================== 3.4 STIs ===========================================
 # ---- 3.4 Sexually Transmitted Infections (F119-F133) ----
@@ -673,10 +733,7 @@ story.append(data_table([
      "rural-popular is not supported."],
 ], col_widths=[2.0, 5.6]))
 story.append(Spacer(1, 4))
-story.append(Paragraph(
-    "<i>Every fact, number, name, qualifier, table row, figure and figure label in NCERT Class 12 Chapter 3 is carried above. "
-    "Nothing outside the source chapter has been added, except the clearly marked NOTE / MEMORY AID material and the exercise-gap "
-    "explanations, which are derived only from chapter content.</i>", STYLES["Caption"]))
+# [USER REQUEST] Footer disclaimer removed as bs
 
 if __name__ == "__main__":
     sys.exit(build_pdf(
