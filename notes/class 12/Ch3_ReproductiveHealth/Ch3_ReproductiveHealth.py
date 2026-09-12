@@ -4,6 +4,7 @@ Class 12, Chapter 3 : Reproductive Health
 
 Source  : Chapter/class 12/Chapter 3 - Reproductive Health.pdf
 Built to: SUPREME COMMAND PROMPT.md v6 (fixed-pass gated edition, shared canon module)
+Gate 3  : Pass 3(b) verification fixes 2026-09-12, each tagged [VERIFICATION FIX] (see Ch3_TRACKER.md).
 
 Run from the repository root:
     python3 "notes/class 12/Ch3_ReproductiveHealth/Ch3_ReproductiveHealth.py"
@@ -69,14 +70,19 @@ story.extend(title_block("Reproductive Health"))
 
 # ---- 3.0 Chapter introduction: what reproductive health means (F003-F010) ----
 # F005 and F010 are Rule 3 filler (transitional + rhetorical framing) -- accounted for by
-# Rule 3 and not printed as standalone lines; the tutor paragraph below carries the question once.
+# Rule 3 and not printed as standalone lines; neither poses a printed question (zero fact content).
 # [USER REQUEST] 3.0 intro heading + "You have learnt..." paragraph removed as bs
-# (F003 heading + F004 opener not printed as standalone; facts remain covered by following WHO definition block)
+# (F003 heading + F004 opener not printed; Class D user-removed -- see Coverage note. F004 is a
+# backward cross-reference to Chapter 2 with no testable fact of its own, Ch9 D1 precedent.
+# F003's 3.0 label is inventory scaffolding -- NCERT prints no intro heading.)
+# [VERIFICATION FIX] (intro comment) corrected the old claim that the lead 'carries the question once'.
 story.append(Paragraph(
     "The term <b>simply refers to healthy reproductive organs with normal functions</b>, but it has "
     "a broader perspective and <b>includes the emotional and social aspects of reproduction also</b>.",
     STYLES["Body"]))
 story.append(keyterm(
+    # [VERIFICATION FIX] (F008) REVERTED on re-check: the source DOES print 'World Health
+    # Organisation (WHO)' (p41) and F008 quotes it -- the removal was a misread, restored verbatim.
     "According to the <b>World Health Organisation (WHO)</b>, <b>reproductive health means a total "
     "well-being in all aspects of reproduction, i.e., physical, emotional, behavioural and social</b>. "
     "Therefore, a society with people having <b>physically and functionally normal reproductive organs</b> "
@@ -88,7 +94,8 @@ story.append(Spacer(1, 4))
 # ---- 3.1 Reproductive Health -- Problems and Strategies (F011-F030) ----
 story.append(heading("3.1", "REPRODUCTIVE HEALTH -- PROBLEMS AND STRATEGIES", 1))
 story.append(Paragraph("India moved early on reproductive health -- timeline as NCERT states:", STYLES["Body"]))
-story.append(Paragraph("&bull; <b>Programme launch -- 1951:</b> <b>India was amongst the first countries in the world</b> (Summary: <b>the first nation</b>) to launch action plans at national level for total reproductive health as <b>family planning</b>; <b>periodically assessed over past decades</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F012/F013) restored verbatim opener: 'initiate ... programmes', 'to attain', 'as a social goal'.
+story.append(Paragraph("&bull; <b>Programme launch -- 1951:</b> <b>India was amongst the first countries in the world</b> (Summary: <b>the first nation</b>) to initiate action plans and programmes at national level to attain <b>total reproductive health as a social goal</b> -- these programmes, called <b>family planning</b>, were <b>initiated in 1951</b> and <b>periodically assessed over past decades</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Current name:</b> improved programmes covering <b>wider reproduction-related areas</b> now run as <b>Reproductive and Child Health Care (RCH) programmes</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Major tasks under RCH:</b> <b>creating awareness</b> about reproduction-related aspects and <b>providing facilities and support</b> for a reproductively healthy society.", STYLES["Bullet1"]))
 story.append(Spacer(1, 3))
@@ -110,10 +117,12 @@ story.append(Spacer(1, 3))
 story.append(heading("3.1", "Infrastructure, programmes and research", 2))
 story.append(Paragraph("Execution needs more than awareness -- it needs systems and science on the ground:", STYLES["Body"]))
 story.append(Paragraph("&bull; <b>Strong infrastructural facilities, professional expertise and material support</b> -- to provide <b>medical assistance and care for pregnancy, delivery, STDs, abortions, contraception, menstrual problems, infertility</b>.", STYLES["Bullet1"]))
-story.append(Paragraph("&bull; <b>Better techniques and new strategies from time to time</b> -- for <b>more efficient care</b>; research on reproduction-related areas is <b>encouraged and supported by governmental and non-governmental agencies</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F028) restored the dropped purpose clause 'to find out new methods and/or to improve upon the existing ones'.
+story.append(Paragraph("&bull; <b>Better techniques and new strategies from time to time</b> -- for <b>more efficient care</b>; research on reproduction-related areas is <b>encouraged and supported by governmental and non-governmental agencies</b> -- to find out <b>new methods and/or to improve upon the existing ones</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("Two programmes NCERT singles out as examples of that infrastructure in action:", STYLES["Body"]))
-story.append(Paragraph("&bull; <b>Statutory ban on amniocentesis for sex-determination</b> (source prints <i>aminocentesis</i>) -- legally checks the menace of <b>female foeticides</b>.", STYLES["Bullet1"]))
-story.append(Paragraph("&bull; <b>Massive child immunisation</b> -- merits mention as a successful public-health programme.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F025) restored 'increasing'; replaced invented 'successful public-health programme' with NCERT's own 'merits mention in this connection' (Rule 5).
+story.append(Paragraph("&bull; <b>Statutory ban on amniocentesis for sex-determination</b> (source prints <i>aminocentesis</i>) -- legally checks the increasing menace of <b>female foeticides</b>.", STYLES["Bullet1"]))
+story.append(Paragraph("&bull; <b>Massive child immunisation</b> -- merits mention in this connection.", STYLES["Bullet1"]))
 story.append(keyterm(
     "<b>Amniocentesis:</b> <b>some of the amniotic fluid of the developing foetus is taken to analyse the fetal "
     "cells and dissolved substances</b>. This procedure is used to test for the presence of certain genetic disorders "
@@ -150,11 +159,13 @@ story.append(Paragraph(
     "had an <b>explosive impact on population growth</b>.", STYLES["Body"]))
 story.append(KeepTogether(data_table([
     ["Population (millions)", "1900 / independence", "2000", "2011"],
-    ["<b>World</b>", "about <b>2 billion (2000 million)</b>", "about <b>6 billion</b>", "<b>7.2 billion</b>"],
-    ["<b>India</b>", "about <b>350 million</b> at independence (1947)", "close to the <b>billion mark</b>", "crossed <b>1.2 billion</b> in May 2011"],
+    # [VERIFICATION FIX] (F034/F036) restored NCERT's exact qualifiers 'around'/'approximately' (Rule 4); removed added year (1947), not in source (Rule 5).
+    ["<b>World</b>", "around <b>2 billion (2000 million)</b>", "about <b>6 billion</b>", "<b>7.2 billion</b>"],
+    ["<b>India</b>", "approximately <b>350 million</b> at independence", "close to the <b>billion mark</b>", "crossed <b>1.2 billion</b> in May 2011"],
 ], col_widths=[1.6, 1.6, 1.6, 1.6])))
 story.append(Paragraph("Why it exploded -- probable reasons NCERT lists:", STYLES["Body"]))
-story.append(Paragraph("&bull; <b>Rapid decline in death rate</b>, <b>MMR</b> and <b>IMR</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F037) added the missing expansions maternal/infant mortality rate -- script used bare MMR/IMR throughout.
+story.append(Paragraph("&bull; <b>Rapid decline in death rate</b>, <b>maternal mortality rate (MMR)</b> and <b>infant mortality rate (IMR)</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Increase in number of people in reproducible age</b>.", STYLES["Bullet1"]))
 story.append(Paragraph(
     "Through the <b>RCH programme</b> the growth rate was brought down, but only marginally -- <b>2011 census: less than 2 per cent (20/1000/year)</b> -- still a <b>rapid increase</b> that could lead to <b>absolute scarcity of food, shelter and clothing</b> despite progress.", STYLES["Body"]))
@@ -256,7 +267,8 @@ story.append(KeepTogether(data_table([
     ["Barrier", "What it is / how used", "Extra facts"],
     ["<b>Condoms</b> (Fig. 3.1a, b) -- thin <b>rubber/latex sheath</b>",
      "Cover <b>penis in male or vagina and cervix in female just before coitus</b> so <b>ejaculated semen does not enter female tract</b>",
-     "<b>Nirodh</b> popular male brand; <b>protects from STIs and AIDS</b>; <b>disposable, self-inserted, gives privacy</b>"],
+     # [VERIFICATION FIX] (F065) restored the dropped trend 'use increased in recent years' (reason was kept, trend was not).
+     "<b>Nirodh</b> popular male brand; <b>protects from STIs and AIDS</b> -- use increased in recent years; <b>disposable, self-inserted, gives privacy</b>"],
     ["<b>Diaphragms, cervical caps and vaults</b> -- rubber, cover <b>cervix</b>",
      "Inserted into female tract to <b>cover cervix during coitus</b>; <b>blocks entry of sperms through cervix</b>",
      "<b>Reusable</b>"],
@@ -419,7 +431,8 @@ story.append(heading("3.3", "MEDICAL TERMINATION OF PREGNANCY (MTP)", 1))
 story.append(keyterm(
     "<b>Intentional or voluntary termination of pregnancy before full term is called medical termination of pregnancy "
     "(MTP) or induced abortion</b> -- the opener defines the term used in its own section heading."))
-story.append(Paragraph("&bull; <b>Global scale:</b> <b>nearly 45 to 50 million MTPs per year worldwide = 1/5th of total conceived pregnancies</b>; whether to accept/legalise is debated for <b>emotional, ethical, religious and social issues</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F103) restored the debate scope 'in many countries'.
+story.append(Paragraph("&bull; <b>Global scale:</b> <b>nearly 45 to 50 million MTPs per year worldwide = 1/5th of total conceived pregnancies</b>; whether to accept/legalise is debated in many countries for <b>emotional, ethical, religious and social issues</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Indian law:</b> <b>Government of India legalised MTP in 1971 with strict conditions to avoid misuse</b>; restrictions important to <b>check indiscriminate and illegal female foeticides reported high in India</b>.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
@@ -428,7 +441,8 @@ story.append(heading("3.3", "Why MTP, and when it is safest", 2))
 story.append(Paragraph("&bull; <b>Why MTP?</b> <b>To get rid of unwanted pregnancies</b> -- due to <b>casual unprotected intercourse, failure of contraceptive used during coitus, or rapes</b>; also <b>essential where continuation could be harmful or even fatal to mother or foetus or both</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>When is it safest?</b> <b>Relatively safe during first trimester -- upto 12 weeks</b>; <b>second trimester abortions are much more risky</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Majority of MTPs performed illegally by unqualified quacks</b> -- <b>not only unsafe but could be fatal</b>.", STYLES["Bullet1"]))
-story.append(Paragraph("&bull; <b>Misuse of amniocentesis to determine sex of unborn child</b> -- if <b>foetus found female, followed by MTP -- totally against what is legal</b>; dangerous for <b>young mother and foetus</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F112) restored the frequency qualifier 'Frequently'.
+story.append(Paragraph("&bull; <b>Misuse of amniocentesis to determine sex of unborn child</b> -- frequently, if <b>foetus found female, followed by MTP -- totally against what is legal</b>; dangerous for <b>young mother and foetus</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Reversal:</b> <b>effective counselling to avoid unprotected coitus and on risk factors of illegal abortions</b>, plus <b>more health care facilities</b>, could reverse these trends.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
@@ -460,17 +474,21 @@ story.append(keyterm(
     "<b>Infections or diseases which are transmitted through sexual intercourse are collectively called sexually transmitted "
     "infections (STI) or venereal diseases (VD) or reproductive tract infections (RTI)</b> -- the opener defines the term used in "
     "its own heading."))
-story.append(Paragraph("&bull; <b>Common examples (8 named):</b> <b>gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, hepatitis-B and HIV leading to AIDS</b> -- among these <b>HIV is most dangerous (Chapter 7)</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F121) restored '(the most discussed infection in recent years)' for HIV.
+story.append(Paragraph("&bull; <b>Common examples (8 named):</b> <b>gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, hepatitis-B and HIV leading to AIDS</b> (the most discussed infection in recent years) -- among these <b>HIV is most dangerous (Chapter 7)</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Other routes for hepatitis-B and HIV:</b> also transmitted by <b>sharing injection needles, surgical instruments with infected persons, transfusion of blood, or from infected mother to foetus</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Curability:</b> <b>all except hepatitis-B, genital herpes and HIV are completely curable if detected early and treated properly</b>.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
 # ---- 3.4 Symptoms, stigma and complications ----
 story.append(heading("3.4", "Symptoms, stigma and complications", 2))
-story.append(Paragraph("&bull; <b>Early symptoms (minor):</b> <b>itching, fluid discharge, slight pain, swellings, etc., in genital region</b>.", STYLES["Bullet1"]))
-story.append(Paragraph("&bull; <b>Asymptomatic cases:</b> <b>infected females may often be asymptomatic</b> and remain undetected for long.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F125) restored the symptom scope 'of most of these'.
+story.append(Paragraph("&bull; <b>Early symptoms of most of these (minor):</b> <b>itching, fluid discharge, slight pain, swellings, etc., in genital region</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F126) restored the second hedge: 'may remain undetected'.
+story.append(Paragraph("&bull; <b>Asymptomatic cases:</b> <b>infected females may often be asymptomatic</b> and may remain undetected for long.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Why timely treatment is deterred:</b> <b>absence or less significant early symptoms</b> plus <b>social stigma</b> attached to STIs deter infected persons from timely detection and proper treatment.", STYLES["Bullet1"]))
-story.append(Paragraph("&bull; <b>Late complications if untreated:</b> <b>PID, abortions, still births, ectopic pregnancies, infertility or even cancer of reproductive tract</b> -- STIs are a <b>major threat to healthy society</b>; <b>prevention / early detection and cure given prime consideration under RCH</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F128/F129) added the missing 'pelvic inflammatory diseases (PID)' expansion; restored 'a healthy society'.
+story.append(Paragraph("&bull; <b>Late complications if untreated:</b> <b>pelvic inflammatory diseases (PID), abortions, still births, ectopic pregnancies, infertility or even cancer of reproductive tract</b> -- STIs are a <b>major threat to a healthy society</b>; <b>prevention / early detection and cure given prime consideration under RCH</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Most vulnerable age group:</b> all persons vulnerable but <b>incidences very high among 15-24 years -- the age group to which you also belong</b>.", STYLES["Bullet1"]))
 story.append(Spacer(1, 2))
 
@@ -496,7 +514,8 @@ story.append(KeepTogether(data_table([
     ["<b>Definition</b>", "<b>A large number of couples all over the world including India are infertile</b> -- unable to produce children inspite of <b>unprotected sexual co-habitation even after 2 years</b> (2-year criterion from Summary)"],
     ["<b>Reasons -- could be many</b>", "<b>Physical, congenital, diseases, drugs, immunological or even psychological</b>"],
     ["<b>Who is blamed vs reality in India</b>", "Often <b>female blamed</b> for childless couple, but <b>more often than not problem lies in male partner</b>"],
-    ["<b>Where help comes from</b>", "<b>Specialised health care units (infertility clinics, etc.) could help in diagnosis and corrective treatment</b> and enable children; where not possible, <b>assisted to have children through ART (assisted reproductive technologies)</b>"],
+    # [VERIFICATION FIX] (F139) restored the scope 'of some of these disorders'.
+    ["<b>Where help comes from</b>", "<b>Specialised health care units (infertility clinics, etc.) could help in diagnosis and corrective treatment of some of these disorders</b> and enable children; where not possible, <b>assisted to have children through ART (assisted reproductive technologies)</b>"],
 ], col_widths=[1.8, 4.6])))
 story.append(Spacer(1, 2))
 
@@ -508,9 +527,10 @@ story.append(keyterm(
 story.append(Paragraph("The lab route is best seen as a menu of cargos and destinations:", STYLES["Body"]))
 story.append(KeepTogether(data_table([
     ["ART (what moves)", "Cargo / source", "Where it goes / how"],
+    # [VERIFICATION FIX] (F143) restored the purpose 'to complete its further development'.
     ["<b>IVF-ET: test tube baby programme</b>",
      "<b>Ova from wife/donor (female) and sperms from husband/donor (male)</b> collected and induced to form <b>zygote under simulated lab conditions</b>",
-     "<b>ZIFT</b> -- zygote or <b>early embryos upto 8 blastomeres into fallopian tube</b>; <b>IUT</b> -- embryos <b>with more than 8 blastomeres into uterus</b>; <b>in-vivo fertilised embryos also usable</b> to assist females who cannot conceive"],
+     "<b>ZIFT</b> -- zygote or <b>early embryos upto 8 blastomeres into fallopian tube</b>; <b>IUT</b> -- embryos <b>with more than 8 blastomeres into uterus</b>, to complete its further development; <b>in-vivo fertilised embryos also usable</b> to assist females who cannot conceive"],
     ["<b>GIFT -- gamete intra fallopian transfer</b>",
      "<b>Ovum collected from a donor</b>",
      "Transferred into <b>fallopian tube of another female</b> who cannot produce one but can provide suitable environment for fertilisation and further development"],
@@ -522,10 +542,12 @@ story.append(Spacer(1, 2))
 
 # ---- 3.5 AI / IUI and the limits of ART ----
 story.append(heading("3.5", "Artificial insemination and the limits of ART", 2))
-story.append(Paragraph("&bull; <b>AI -- artificial insemination / IUI -- intra-uterine insemination:</b> for infertility due to <b>inability of male partner to inseminate the female</b> or <b>very low sperm counts</b> -- <b>semen from husband or healthy donor artificially introduced into vagina or uterus (IUI)</b> of female.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F147) restored 'in the ejaculates'.
+story.append(Paragraph("&bull; <b>AI -- artificial insemination / IUI -- intra-uterine insemination:</b> for infertility due to <b>inability of male partner to inseminate the female</b> or <b>very low sperm counts in the ejaculates</b> -- <b>semen from husband or healthy donor artificially introduced into vagina or uterus (IUI)</b> of female.", STYLES["Bullet1"]))
 story.append(Paragraph("Why ART does not reach everyone:", STYLES["Body"]))
 story.append(Paragraph("&bull; <b>Technical:</b> <b>extremely high precision handling by specialised professionals and expensive instrumentation required</b>.", STYLES["Bullet1"]))
-story.append(Paragraph("&bull; <b>Access:</b> <b>available only in very few centres in the country; affordable to only a limited number of people</b>.", STYLES["Bullet1"]))
+# [VERIFICATION FIX] (F150) restored the temporal qualifier 'presently'.
+story.append(Paragraph("&bull; <b>Access:</b> <b>presently available only in very few centres in the country; affordable to only a limited number of people</b>.", STYLES["Bullet1"]))
 story.append(Paragraph("&bull; <b>Acceptance:</b> <b>emotional, religious and social factors are deterrents in adoption</b>.", STYLES["Bullet1"]))
 story.append(note(
     "ZIFT vs IUT is a numbers test: <b>ZIFT -- zygote or early embryo upto 8 blastomeres -- into the fallopian tube; IUT -- embryos "
@@ -613,21 +635,22 @@ story.append(Paragraph(
     "<b>using only facts from this chapter</b>.", STYLES["Body"]))
 story.append(data_table([
     ["Exercise term / task", "Explanation from this chapter"],
+    # [VERIFICATION FIX] (Q7) trimmed to chapter-only facts: dropped 'testes/ovaries', 'source of gametes and reproductive hormones', 'castration' (Rule 5); 'gonads' comes from the question.
     ["<b>Q7 -- Why removal of gonads is not a contraceptive option</b>",
      "The chapter's surgical methods are <b>sterilisation by blocking gamete transport -- Vas deferens tied and cut (vasectomy) and "
-     "Fallopian tubes tied and cut (tubectomy)</b>; they <b>do not remove the gonads (testes / ovaries)</b>, and <b>reversibility is "
-     "already very poor</b>. Removing testes or ovaries would eliminate the <b>source of gametes and of reproductive hormones</b> -- a "
-     "permanent, non-contraceptive castration the chapter <b>never lists among its seven contraceptive categories</b> and that violates "
-     "the <b>ideal-contraceptive criteria of reversibility and no interference with normal physiology</b>. Hence gonad removal is not a "
+     "Fallopian tubes tied and cut (tubectomy)</b>; they <b>do not remove the gonads</b>, and <b>reversibility is already very poor</b>. "
+     "The chapter <b>never lists gonad removal among its seven contraceptive categories</b>, and permanent removal violates the "
+     "<b>ideal-contraceptive criteria of reversibility and no interference with normal physiology</b>. Hence gonad removal is not a "
      "contraceptive option."],
     ["<b>Q11(a) -- Abortions can happen spontaneously -- True</b>",
      "The chapter defines only <b>intentional / voluntary termination (MTP / induced abortion)</b>, but it also lists <b>abortion as a "
      "complication of STIs / PID</b> that occurs without any MTP procedure, which shows pregnancy loss can happen on its own. Spontaneous "
      "abortion (miscarriage) is therefore true."],
+    # [VERIFICATION FIX] (Q12c) dropped the 'promoted for spacing in the public programme' synthesis -- beyond chapter facts (Rule 5).
     ["<b>Q12(c) -- Oral pills are not especially popular among rural women -- False to correct</b>",
      "The chapter states only that <b>pills are very effective with lesser side effects and are well accepted by the females</b> and that "
      "<b>Saheli is a once-a-week pill</b>, but it <b>never distinguishes rural from urban users</b>. In fact, <b>IUDs are described as one of "
-     "the most widely accepted methods in India</b>, often promoted for spacing in the public programme, so singling out pills as "
+     "the most widely accepted methods in India</b>, so singling out pills as "
      "rural-popular is not supported."],
 ], col_widths=[2.0, 5.6]))
 story.append(Spacer(1, 4))

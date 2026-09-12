@@ -9,11 +9,11 @@ Unit: Class 12, Unit VI — Reproduction (chapters 2, 3, 4)
 | **Gate 1** | ✅ **CLOSED (2026-09-12)** — inventory frozen at **162 rows `F001`–`F162`, contiguous, 0 gaps, 0 duplicate IDs**, **62/62 machine checks pass** |
 | Pass 2 | ✅ **complete (2026-09-12)** — script written linearly from freeze importing `neet_template.py`; 162/162 rows ticked; PDF rebuilt 4× with polish iterations |
 | **Gate 2** | ✅ **CLOSED (2026-09-12)** — `check_pdf.py` **VERDICT WARN (0 fail, 1 benign warn)** on 9 A4 pages; also green under `--strict` if warn waived (see Gate 2 section) |
-| Pass 3 | ⬜ not started |
-| Gate 3 | ⬜ not started |
+| Pass 3 | ✅ **complete (2026-09-12)** — 3(a) 9/9 pages rendered + inspected, 3(b) bidirectional full read, 21 fixes tagged, linter re-green |
+| Gate 3 | ✅ **CLOSED (2026-09-12)** — zero confirmed defects; all 5 Gate 3 conditions + pre-closure checklist hold (see Gate 3 section) |
 | Deliverables | ✅ `Ch3_ReproductiveHealth.pdf` (9 pp) · `Ch3_ReproductiveHealth.py` · `Ch3_ReproductiveHealth_inventory.md` (162 ticked) · `assets/` (6 mono PNGs) |
 
-**Gate 2 closed; Pass 3 not started.** Not yet Done — Done requires Gate 3, but Gate 2 is the sanctioned foundation.
+**Gate 3 CLOSED (2026-09-12). ✅ DONE.** All gates closed; deliverables in place (see Gate 3 section).
 
 ---
 
@@ -280,7 +280,7 @@ Environment for this session (rebuilt; venv does not survive a session boundary)
 
 Deliverables produced by Pass 2 (final):
 - `Ch3_ReproductiveHealth.pdf` — **9 pages, A4 portrait (595×842pt), 845 KB, 6 embedded mono images**,
-  57 banner headings, 75 plates (badge plates), smallest glyph 6.0pt.
+  57 banner headings, 82 plates (badge plates), smallest glyph 6.0pt.
 - `Ch3_ReproductiveHealth.py` — exact generating script (block-marked, row IDs in comments).
 - Inventory `Ch3_ReproductiveHealth_inventory.md` — **all 162 Facts rows ticked `x`** (including 5 class-C
   Rule-3 rows and 2 Figure-labels rows).
@@ -299,7 +299,7 @@ Deliverables produced by Pass 2 (final):
 | 7 | Inventory ticked | PASS — all 162 Facts rows ticked |
 | 8 | Page geometry | PASS — all 9 pages A4 portrait (595×842pt) |
 | 9 | Orphaned headings | PASS — 57 banner headings, none stranded (3.4 fixed with 54 pt, Oral fixed with 6 pt after tightening) |
-| 10 | Badge/banner collision | PASS — 75 filled plates, no collisions |
+| 10 | Badge/banner collision | PASS — 82 filled plates, no collisions (corrected Pass 3: 75 was a stale intermediate-build count; 82 verified by machine on the final PDF, pre- and post-fix) |
 
 **HARD STOP after Gate 2 (as instructed).** Pass 3 (dual verification — full bidirectional read
 + per-page visual render check, ending in Gate 3) has **NOT** been started. The chapter is not yet
@@ -326,4 +326,35 @@ notes/class 12/Ch3_ReproductiveHealth/
   assets/fig_3_1a.png ... fig_3_4b.png  ← 6 mono PNGs
 scratch/ch3/ ...                        ← audit trail (row set, grids, contact sheets)
 ```
+## Pass 3 / Gate 3 — CLOSED (2026-09-12)
+
+### Preconditions
+- Gate 2 re-verified green at session start: `check_pdf.py` exit 0, VERDICT WARN (0 fail, 1 benign warn — check 4 device-photo flag on F158-F160 manifest wording; no person photo embedded). `.venv` rebuilt (3.11.2 · reportlab 5.0.1 · pymupdf 1.28.2 · Pillow 12.3.0 · numpy 2.4.6).
+
+### Pass 3(a) — visual render check (9/9 pages, 0 layout defects)
+- Rendered every page at 150 dpi color + 300 dpi 1-bit B&W (`scratch/ch3_gate3/render/`); inspected p01-p09 individually, then re-inspected all 9 post-fix (`render2/`).
+- No overflow / clipping / orphan heading (check 9: 57 banners) / figure squash (all 6 placed rects match computed aspect; areas 9.4-24.9 cm2 <= 25; 300 dpi, no upscale) / badge collision (check 10: 82 plates).
+- Style identity: span census Times-only; H1/H2/H3/banner/badge/flow-step signatures each resolve to exactly one count matching the script (7 H1 · 12 H2 + 26 table headers · 5 H3 · 24 badges · 13 flow steps).
+- B&W print: NOTE (solid border) vs MEMORY AID (dashed) distinct; Fig 3.4 labels legible; device photos high-contrast but shape + caption carry meaning.
+- Accepted observations (not defects): comparison-table pagination tails (p02/p04); 3.2 MEMORY AID at p06 top detached by page break (p05 full at 731/842); has_table marker on 3.2 banner; faint inherited NCERT watermark in Fig 3.4a asset; AI banner reflowed p07→p08 after fixes (no orphan).
+
+### Pass 3(b) — bidirectional full read (0 UNINVENTORIED, 21 fixes)
+- Direction 1 (inventory→script): all 162 rows adjudicated in adjacent section pairs (Intro+3.1 / 3.2 / 3.3+3.4 / 3.5+Summary+Exercises+Figures).
+- Direction 2 (source→inventory): every source sentence/heading/caption/box walked — 0 UNINVENTORIED. All 18 summary sentences mapped (15 BODY-PRESENT + 3 folds carried); all 12 exercises / 18 parts mapped (15 COVERED + 3 GAP answered in appendix from chapter facts only).
+- 21 fixes, each tagged `# [VERIFICATION FIX]` in the script: 16 dropped-qualifier/clause restorations (F012, F025, F028, F034, F036, F037, F065, F103, F112, F121, F125, F126, F128/F129, F139, F143, F147, F150 — incl. missing MMR/IMR/PID expansions), 4 Rule-5 removals ((1947), 'successful public-health programme', Q7 testes/ovaries/hormones, Q12c 'promoted' synthesis), 1 F008 removal reverted on re-check (source does print the full form), 1 intro-comment correction. Full list in the inventory Coverage note ("Drift caught and fixed").
+- Frozen rows untouched: 0 `| F` lines changed. Ticks kept honest via new Class-D disposition (F003/F004 user-removed) + legend/census/Coverage updates (metadata only).
+- Dismissed with reasons (not re-fixed): F002 contents-box variants; F038 RCH naming variant; F070 hyphen variant; F034 'rocketed'; Q11(a) '(miscarriage)' gloss.
+
+### Corrections to earlier records (this pass)
+- Plates 75 → **82** (machine truth on the final PDF, verified pre- and post-fix; 75 was a stale intermediate-build count).
+- Gate-1 checks 53/53 → **62/62** (validator grew when disposition checks were added; 62 is the live truth).
+
+### Gate 3 close — all 5 conditions + pre-closure checklist
+1. Zero confirmed defects across 3(a)+3(b) — 0 layout, 0 content (all 21 findings fixed, none outstanding).
+2. Linter green — exit 0 post-fix (9 pp A4, 6 mono, 162/162, 2/2 labels, 57 banners, 82 plates).
+3. Deliverables present — pdf · py · inventory · assets/ (6 mono PNGs) · figure audit.
+4. Rebuild reproducible — 9 pp / 30416 chars / 6 imgs / identical text SHA across two builds.
+5. Roll-ups reconciled — CHAPTER_TRACKER (29/32) + CHAPTER_STATUS (Done) updated same session.
+- Pre-closure: frozen rows byte-identical (0 changed) · no leaks (0 row-IDs/pipeline words in PDF text) · no banned glyphs · figures <=25 cm2 mono at topic · Quick Recap + appendix chapter-facts-only · hard stop, no further passes.
+
 
