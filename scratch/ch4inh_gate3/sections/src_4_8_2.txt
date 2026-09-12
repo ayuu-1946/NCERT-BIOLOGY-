@@ -1,0 +1,361 @@
+===== SOURCE PAGE 20 =====
+
+
+   BIOLOGY
+
+   and thatis why it was given the name
+   X-chromosome.Itwasalsoobservedthatin
+   a large number of insects the mechanism of
+   sexdetermination is of theXO type,i.e.,all
+   eggs bear anadditionalX-chromosome
+   the other chromosomes
+   besides
+   (autosomes).Ontheotherhand,someofthe
+   sperms bear theX-chromosome whereas
+   some donot.Eggsfertilised by sperm having
+   anX-chromosomebecome femalesand.
+   those fertilised by sperms that do not have
+   anX-chromosomebecomemales.Doyou
+   think the number of chromosomes in the
+   maleandfemaleareequal?Duetothe
+   involvementoftheX-chromosomeinthe
+   determination ofsex,itwasdesignatedto
+   be the sexchromosome.and the rest ofthe
+   XX
+   chromosomes
+   named
+   were
+   as
+   autosomes.Grasshopper isan example of
+   XOtypeofsexdeterminationinwhichthe
+   maleshaveonlyoneX-chromosomebesides
+   theautosomes,whereasfemaleshave apair
+   ofX-chromosomes.
+   These observations led to the
+   investigation ofa number of species to
+   understand the mechanism of sex
+   determination.Inanumberofotherinsects
+   Figure4.12Determinationofsexby chromosomal
+   and mammalsincludingman,XY type of sex
+   differences:(a,b)Both in humans and
+   determination is seen where both male and
+   in Drosophila the female has apair of
+   femalehavesamenumberofchromosomes.
+   XXchromosomes(homogametic) and the
+   male XY (heterogametic) composition:
+   Among themalesanX-chromosomeis
+   (c)）In many birds,female has a pair of
+   present but its counter part is distinctly
+   dissimilar chromosomes Zw and male
+   smallerandcalledtheY-chromosome.
+   twosimilarZZchromosomes
+   Females,however,have a pair of X-
+   chromosomes.Bothmalesandfemalesbear
+   samenumberofautosomes.Hence,themaleshaveautosomesplusXY,
+   while female have autosomesplusXX.In human being sand in
+   DrosophilathemaleshaveoneXandoneYchromosome,whereasfemales
+   have apairofX-chromosomesbesidesautosomes(Figure 4.12a,b).
+   In the above description you have studied about two types of sex
+   determiningmechanisms,i.e.,XO type and XY type.Butinboth cases
+   malesproducetwodifferenttypesofgametes,(a)eitherwithorwithout
+   X-chromosomeor(b)somegameteswithX-chromosomeandsomewith
+   Y-chromosome.Suchtypesofsexdeterminationmechanismisdesignated
+   to be the example of maleheterogamety.Insome otherorganisms,e.g.,
+   birds,adifferentmechanismofsexdeterminationisobserved(Figure
+   4.12c).Inthiscasethetotalnumberofchromosomeissameinboth
+   male sand females.Buttwodifferenttypesofgametesin terms of the sex
+
+   XX
+
+   XY
+
+   [a)
+
+   iP
+   AX
+
+   (b)
+
+   ZW
+
+   ZZ
+
+   (c)
+
+   70
+
+   Reprint2026-27
+
+===== SOURCE PAGE 21 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   chromosomes,areproduced by females,i.e.,femaleheterogamety.In
+   order to have a distinction with the mechanism of sexdetermination
+   describedearlier,thetwodifferentsexchromosomesofafemalebirdhas
+   beendesignatedtobetheZandWchromosomes.Intheseorganismsthe
+   femaleshaveoneZandoneWchromosome,whereasmaleshaveapairof
+   Z-chromosomesbesidestheautosomes.
+
+   4.6.1 Sex Determination in Humans
+
+   Ithas already been mentioned that the sex determining mechanism in
+   case of humans is XY type.Outof23pairsofchromosomespresent,
+   22pairsareexactlysameinbothmalesandfemales:thesearethe
+   autosomes.A pair ofX-chromosomesarepresentin thefemale,whereas
+   thepresenceofanXandYchromosomearedeterminantofthemale
+   characteristic.During spermatogenesis among males,two types of
+   gametesareproduced.5opercentofthetotalspermproducedcarry
+   theX-chromosomeandtherest50percenthasY-chromosomebesides
+   the autosomes.Females,however,produce only one type of ovum with
+   anX-chromosome.Thereisanequalprobabilityoffertilisationofthe
+   ovumwiththespermcarryingeitherXorY chromosome.In case the
+   ovumfertiliseswithaspermcarryingX-chromosomethezygotedevelops
+   intoafemale(XX)andthefertilisationofovumwithY-chromosome
+   carrying sperm results into a male offspring.Thus,it is evident that it
+   isthegeneticmakeupofthespermthatdeterminesthesexofthechild.
+
+   probability of either a male or afemalechild.Itisunfortunatethatin
+   our society women are blamed for giving birth to female children and
+   havebeenostracisedandill-treatedbecauseofthisfalsenotion.
+
+   4.6.2 SexDetermination in HoneyBee
+
+   The sex determination in honeybee is
+   based on the number of sets of
+   Parents
+   chromosomesanindividualreceives.An
+   offspring formed from the union ofa
+   sperm and an egg develops a safe male
+   Gametes:
+   (queen or worker).andan unf ert ili sed
+   eggdevelopsasamale(drone)bymeans
+   ofparthenogenesis.Thismeans that the
+   F,:
+   males have half the number of
+   chromosomesthanthatofafemale.The
+   females are diploidhaving32
+   chromosomes and males are haploid,i.e.,having 16 chromosomes.
+   Thisiscalledashaplodiploidsex-determinationsystemandhasspecial
+   characteristic features such as the males produce sperms by mitosis
+   (Figure4.13),theydonothavefatherand thuscannothavesons,but
+   haveagrandfatherandcanhavegrandsons.
+   Howis thesex-determinationmechanismdifferentinthebirds?
+   Isthespermortheeggresponsibleforthesexofthechicks?
+
+   Male
+   16
+
+   Female
+   32
+
+   Meiosis
+
+   Mitosis
+
+   16
+   16
+
+   16
+
+   Female
+   32
+
+   Male
+   16
+   Figure 4.13 Sex determination in honey bee
+
+   71
+
+   Reprint2026-27
+
+===== SOURCE PAGE 22 =====
+
+
+   BIOLOGY
+
+   4.7MUTATION
+
+   Mutation is a phenomenon which results in alteration of DNA sequences
+
+   ofan organism.In addition to recombination,mutation is another
+   phenomenonthatleadstovariationinDNA.
+   AsyouwilllearninChapter5,oneDNAhelixrunscontinuouslyfrom
+   oneendtotheotherineachchromatid,inahighlysupercoiledform.
+   Thereforeloss(deletions)orgain(insertion/duplication)ofasegmentof
+   DNA,result in alteration in chromosomes. Since genes are known to be
+   located on chromosomes,alteration in chromosomes results in
+   abnormalities or aberrations.Chromosomal
+   aberrationsarecommonlyobservedincancercells.
+   In addition tothe above,mutation also arise due
+   tochangeinasinglebasepairofDNA.Thisisknown
+   as point mutation.A classical example of such a
+   mutationissicklecellanemia.Deletionsandinsertions
+   ofbasepairsofDNA,causesframe-shiftmutations
+   (see Chapter 5).
+   The mechanism of mutation is beyond the scope
+   ofthis discussion,at thislevel.However,thereare
+   many chemical and physical factors that induce
+   mutations. These are referred to as mutagens. UV
+   radiation scan cause mutations in organisms-itis a
+   mutagen.
+
+   Male
+
+   female
+
+   sex unspecified
+
+   affected individuals
+
+   mating
+
+   mating between relatives
+   (consanguineous mating)
+
+   parents above and
+   children below
+   4.8 GENETICDISORDERS
+   (inorderofbirth-left toright)
+   4.8.1 Pedigree Analysis
+
+   The idea that disorders are inherited has been
+   prevailing in thehuman society since long. This was
+   based on the her it ability of certain characteristic
+   featuresinfamilies.After there discovery of Mendel's
+   work the practice of analysing inheritance pattern of
+   traits in human beings began.Since itis evident that
+   control crosses that can be performed in pea plant or
+   some other organisms,are not possible in case of
+   Figure 4.13 Symbols used in thehuman
+   human beings,study ofthe family history about
+   pedigree analysis
+   inheritance ofa particular trait provide san
+   alternative.Suchananalysisoftraitsinaseveralofgenerationsofafamily
+   is called thepedigreeanalysis.In the pedigree analysis the inheritance
+   ofaparticulartraitisrepresentedinthefamilytreeovergenerations.
+   Inhumangenetics.pedigree study provides a strong tool,which is
+   utilisedtotracetheinheritanceofaspecifictrait,abnormalityordisease.
+   Some ofthe important standard symbols used in the pedigree analysis
+   have been shown in Figure 4.13.
+   As you have studied in thischapter,eachandeveryfeatureinany
+   organism is controlled by one or the other gene located on the DNA present
+
+   parents with male child
+   affected with disease
+
+   five unaffected offspring
+
+   72
+
+   Reprint2026-27
+
+===== SOURCE PAGE 23 =====
+
+
+   PRINCIPLES OFINHERITANCE AND VARIATION
+
+   in thechromosome.DNAis the carrier ofgeneticinformation.Itishence
+   transmitted from one generation to the other without any change or
+   alteration.However,changesoralteration do takeplaceoccasionally.Such
+   analterationorchangeinthegeneticmaterialisreferredtoasmutation.
+   A number of disorders in human beings have been found to be associated
+   withtheinheritanceofchangedoralteredgenesorchromosomes.
+
+   4.8.2MendelianDisorders
+
+   Broadly,genetic disorders maybe grouped into two categories-Mendelian
+   disorder sand Chromosomal disorders.Mendeliandisordersaremainly
+   determined by alteration or mutation in thesinglegene.Thesedisorders
+   are transmitted to the offspring on the same lines as we have studied in
+   the principle ofinheritance.Thepattern ofinheritance of such Mendelian
+   disorderscanbetracedinafamilybythepedigreeanalysis.Mostcommon
+   andprevalentMendeliandisordersareHaemophilia,Cysticfibrosis,Sickle
+   cellanaemia,Colourblindness,Phenylketonuria,Thalassemia,etc.Itis
+   important to mention here that such Mendelian disorders maybe
+   dominantorrecessive.Bypedigree analysis one can easily understand
+   whetherthetraitinquestionisdominantorrecessive.Similarly.thetrait
+   mayalsobelinkedtothesexchromosomeasincaseofhaemophilia.Itis
+   evidentthatthisX-linkedrecessivetraitshowstransmissionfromcarrier
+   femaletomaleprogeny.ArepresentativepedigreeisshowninFigure4.14
+   for dominant andrecessivetraits.Discusswithyourteacheranddesign
+   pedigrees for characters linked to both autosomesandsexchromosome.
+
+   (a)
+
+   (b)
+
+   Figure 4.14Representative pedigree analysis of(a)Autosomal dominant trait(forexample:
+   Myo tonic dystrophy)(b) Autosomal recessive trait (for example:Sickle-cell anaemia)
+
+   ColourBlindness:Itisasex-linkedrecessivedisorderduetodefectin
+   either red or green cone of eye resulting in failure to discriminate between
+   red and green colour.Thisdefectisdue to mutation in certain genes
+   presentintheXchromosome.Itoccursinabout8per cent of males and
+   only aboutO.4percentoffemales.Thisisbecausethegenesthatleadto
+   red-greencolourblindnessareontheXchromosome.Maleshaveonly
+   oneXchromosomeandfemaleshavetwo.Thesonofawomanwhocarries
+
+   73
+
+   Reprint2026-27
+
+===== SOURCE PAGE 24 =====
+
+
+   BIOLOGY
+
+   thegenehasa50percentchanceofbeingcolourblind.Themotheris
+   not herself colour blind because the gene is recessive.That means that its
+   effectissuppressedbyhermatchingdominantnormalgene.A daughter
+   will notnormallybecolourblind,unlesshermotheris a carrier and her
+   fatheriscolourblind.
+   Haemophilia:This sex linked recessive disease,which shows its
+   transmission from unaffected carrier female to some ofthe male progeny
+   hasbeenwidelystudied.In this disease,a single protein thatis apart of
+   thecascadeofproteinsinvolvedintheclottingofbloodisaffected.Dueto
+   this,inan affected individualasimplecutwillresultinnon-stopbleeding.
+   Theheterozygousfemale(carrier)forhaemophiliamaytransmit thedisease
+   tosons.Thepossibilityofafemalebecomingahaemophilicisextremely
+   rare because mother of such a female has to beat least carrier and the
+   father should behaemophilic(unviableinthelaterstageof life).Thefamily
+   pedigree of Queen Victoria shows a number of haemophilic descendents
+   asshewasacarrierofthedisease.
+   Sickle-cellanaemia:Thisisanautosomelinkedrecessivetraitthat
+
+   single pair of allele,Hb and Hbs.Out of the three possible genotypes only
+
+   Heterozygous (Hb*Hbs) individuals appear apparently unaffected but they
+   are carrier of thediseaseasthereis50percentprobabilityof transmission
+   ofthe mutant gene to theprogeny.thus exhibitingsickle-cell trait
+   (Figure 4.15).Thedefectis caused by the substitution of Glutamic acid
+
+   .GAG...
+   NormalHb(A)gene
+   CTC..
+
+   .GTG...
+   Sickle-cell Hb(S)gene
+   ...CAC..
+
+   mRNA GAG
+
+   mRNAGUG
+
+   74
+
+   2
+   5
+   6
+   HbA peptide
+
+   6
+   2
+   HbS peptide
+
+   Figure 4.15 Micro graph of the red blood cells and the amino acid composition of the relevant
+   portion ofβ-chainof haemoglobin:(a)From a normalindividual;(b) From an individual
+   with sickle-cellanaemia
+
+   Reprint2026-27

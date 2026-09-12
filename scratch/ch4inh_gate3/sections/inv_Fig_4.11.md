@@ -1,0 +1,3 @@
+# Inventory section: Fig 4.11 (2 rows)
+- F237 [caption] Figure 4.11 caption (verbatim): "Figure 4.11 Linkage: Results of two dihybrid crosses conducted by Morgan. Cross A shows crossing between gene y and w; Cross B shows crossing between genes w and m. Here dominant wild type alleles are represented with (+) sign in superscript. Note: The strength of linkage between y and w is higher than w and m."
+- F238 [figure-labels] Figure labels: "Cross A"; "Cross B"; "Yellow, white"; "White, miniature"; "Wild type"; "F1 generation"; "Gametes"; "Parental type (98.7%)"; "Recombinant types (1.3%)"; "Parental type (62.8%)"; "Recombinant types (37.2%)"; "yellow"; "white"; "yellow, white"; "miniature"; "wild type"

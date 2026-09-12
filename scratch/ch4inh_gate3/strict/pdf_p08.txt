@@ -1,0 +1,71 @@
+• The plasma membrane of the red blood cells has sugar polymers that protrude from its surface and the
+kind of sugar is controlled by the gene.
+• The gene (I) has three alleles IA, IB and i.
+• The alleles IA and IB produce a slightly different form of the sugar while allele i does not produce any
+sugar.
+• Because humans are diploid organisms, each person possesses any two of the three I gene alleles.
+• IA and IB are completely dominant over i, in other words when IA and i are present only IA expresses
+(because i does not produce any sugar), and when IB and i are present IB expresses.
+• But when IA and IB are present together they both express their own types of sugars: this is because of
+co-dominance. Hence red blood cells have both A and B types of sugars.
+• Since there are three different alleles, there are six different combinations of these three alleles that are
+possible, and therefore, a total of six different genotypes of the human ABO blood types (Table 4.2).
+Table 4.2: Table Showing the Genetic Basis of Blood Groups in Human Population
+Allele from Parent 1
+Allele from Parent 2
+Genotype of offspring
+Blood type of offspring
+IA
+IA
+IAIA
+A
+IA
+IB
+IAIB
+AB
+IA
+i
+IAi
+A
+IB
+IA
+IAIB
+AB
+IB
+IB
+IBIB
+B
+IB
+i
+IBi
+B
+i
+i
+ii
+O
+• Do you realise that the example of ABO blood grouping also provides a good example of multiple alleles?
+Here you can see that there are more than two, i.e., three alleles, governing the same character.
+• Since in an individual only two alleles can be present, multiple alleles can be found only when population
+studies are made.
+• Occasionally, a single gene product may produce more than one effect.
+• For example, starch synthesis in pea seeds is controlled by one gene. It has two alleles (B and b). Starch is
+synthesised effectively by BB homozygotes and therefore, large starch grains are produced. In contrast, bb
+homozygotes have lesser efficiency in starch synthesis and produce smaller starch grains.
+• After maturation of the seeds, BB seeds are round and the bb seeds are wrinkled. Heterozygotes produce
+round seeds, and so B seems to be the dominant allele.
+• But, the starch grains produced are of intermediate size in Bb seeds. So if starch grain size is considered as
+the phenotype, then from this angle, the alleles show incomplete dominance.
+• Therefore, dominance is not an autonomous feature of a gene or the product that it has information for. It
+depends as much on the gene product and the production of a particular phenotype from this product as it does
+on the particular phenotype that we choose to examine, in case more than one phenotype is influenced by the
+same gene.
+4.3
+INHERITANCE OF TWO GENES
+Mendel also worked with and crossed pea plants that differed in two characters, as is seen in the cross
+between a pea plant that has seeds with yellow colour and round shape and one that had seeds of green colour
+and wrinkled shape (Figure 4.7).
+• Mendel found that the seeds resulting from the crossing of the parents, had yellow coloured and round
+shaped seeds.
+• Thus, yellow colour was dominant over green and round shape dominant over wrinkled.
+• Let us use the genotypic symbols Y for dominant yellow seed colour and y for recessive green seed colour,
+R for round shaped seeds and r for wrinkled seed shape.

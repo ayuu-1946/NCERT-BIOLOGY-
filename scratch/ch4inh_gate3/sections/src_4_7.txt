@@ -1,0 +1,228 @@
+===== SOURCE PAGE 18 =====
+
+
+   BIOLOGY
+
+   are extensively used as a starting point in the sequencing of whole
+   genomes as was done in the case of the Human Genome Sequencing
+   Project,described later.
+
+   Cross A
+
+   Cross B
+
+   yw+
+
+   MK
+
+   W
+
+   W
+
+   m
+
+   1m1
+
+   Parental
+
+   yw
+   Yellow,white
+
+   W
+   m
+   White,miniature
+
+   Wild type
+
+   Wild type
+
+   yw
+   F,generation
+   MA
+   Wild type
+
+   MA
+
+   W
+
+   W
+
+   m
+
+   Im1
+
+   W
+   m
+   wild type
+
+   Yellow,white
+
+   White,miniature
+
+   Gametes
+   Recombinant
+   Parental
+   types(1.3%)
+   type(62.8%)
+
+   Parental
+   type(98.7%)
+
+   Recombinant
+   types(37.2%)
+
+   m'
+
+   y'w
+
+   y'w
+
+   m
+   W
+
+   W
+
+   wild type
+
+   wild type
+
+   white
+
+   miniature
+
+   yw
+
+   yw
+
+   m
+   W
+
+   W
+
+   m
+
+   white
+
+   yellow,white
+
+   yellow
+
+   White,miniature
+
+   F,generation
+
+   yw
+
+   W
+
+   W*
+   m'
+   8
+
+   W'
+   m
+
+   yw
+   Wild type
+
+   yw
+   white
+
+   m
+   W
+   miniature
+
+   W
+   m
+   Wild type
+
+   yw
+
+   MA
+
+   W
+   m
+
+   W
+
+   m1
+
+   yw
+   yellow,white
+
+   yw
+   yellow
+
+   m
+   M
+   White,miniature
+
+   m
+   W
+   white
+
+   68
+
+   crossing between gene y and w; Cross B shows crossing between genes w and m.
+   Here dominant wild type allelesarerepresentedwith(+)sign in superscript
+   Note: The strength of linkage bet weeny and w is higher than w and m.
+
+   Reprint2026-27
+
+===== SOURCE PAGE 19 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   4.4POLYGENIC INHERITANCE
+
+   Mendel's studies mainly described those traits that have distinct alternate
+   formssuchasflowercolourwhichareeitherpurpleorwhite.Butifyou
+   look around you will find that there are many traits which are not so
+   distinct in their occurrence and are spread across agradient.Forexample,
+   in humans we don't just have tall or short people as two distinct
+
+   controlled by three or more genes and arethuscalledaspolygenictraits.
+   Besides the involvement of multiple genes polygenic inheritance also takes
+   into account theinfluenceofenvironment.Humanskincolourisanother
+
+   contribution ofeach allele,i.e.,theeffectofeachalleleisadditive.To
+   understand thisbetterletusassumethatthreegenesA,B,Ccontrol skin
+   colour in human with the dominantformsA,B and Crespo nsi ble for
+   dark skin colour and therecessiveformsa,b andcforlightskincolour.
+   Thegenotypewithallthedominantalleles(AABBCC)willhavethedarkest
+   skincolourandthatwithalltherecessivealleles(aabbcc)willhavethe
+   lightestskincolour.Asexpected the genotype with three dominant alleles
+   andthreerecessivealleleswillhaveanintermediateskincolour.Inthis
+   manner the number ofeach type of alleles in the genotype would determine
+   the darkness or lightness ofthe skin in anindividual.
+
+   4.5PLEIOTROPY
+
+   We have so far seen the effectof age neon a single phenotype or trait.
+   There are however instances where a single gene can exhibit multiple
+   phenotypic expression.Such a gene is called a pleiotropic gene.The
+   underlying mechanism of pleiotropy in most cases is the effectof agene
+
+   An example of this is the disease phenylketonuria,which occurs in
+   humans.The disease is caused by mutation in thegene that codes for the
+   enzymephenylalaninehydroxylase(singlegenemutation).Thismanifests
+   itself through phenotypic expression characterised by mental
+   retardation and areductioninhairandskinpigmentation.
+
+   4.6SEXDETERMINATION
+
+   The mechanism of sexdetermination has always been a puzzle before the
+   geneticists.Theinitialclueaboutthegenetic/chromosomalmechanism
+   of sexdetermination can be traced back to some ofthe experiments carried
+   outininsects.In fact,thecytologicalobservationsmadeinanumber of
+   insectsledtothedevelopmentoftheconceptofgenetic/chromosomal
+
+   69
+
+   structure all through spermatogenesis in a fewinsects,and itwas also
+
+   explainitssignificance.Furtherinvestigationsbyotherscientistsled to
+   the conclusion tha tt heX body 'of Hen king was in fact a chromosome
+
+   Reprint2026-27

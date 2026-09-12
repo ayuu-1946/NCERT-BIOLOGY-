@@ -1,0 +1,191 @@
+===== SOURCE PAGE 10 =====
+
+
+   BIOLOGY
+
+   4.2.2.1IncompleteDominance
+
+   P generation
+
+   When experiments on peas were repeated using other
+   traitsinotherplants,itwasfoundthatsometimes
+   theFhad a phenotype that did not resemble either
+   ofthetwoparentsandwasinbetweenthetwo.The
+   inheritance of flower colour in the dog flower
+   (snapdragon orAntirrhinumsp.)isagoodexample
+   tounderstandincompletedominance.In a cross
+   betweentrue-breedingred-flowered(RR) and true-
+   breedingwhite-floweredplants(rr).theF,(Rr)was
+   pink (Figure 4.6).When the F,wasself-pollinated
+   the F,resulted in the following ratio 1 (RR)Red:2
+   (Rr)Pink:1 (rr) White.Here the genotype ratios were
+   exactly as we would expect in any mendelian
+   Gametes
+   monohybrid cross,but the phenotype ratios had
+   changedfromthe3:1dominant:recessiveratio.
+   What happened was that Rwa snot completely
+   dominant over rand this made it possible to
+   distinguish Rr as pink from RR(red)andrr(white).
+   Explanation of the concept of dominance:
+   Whatexactlyisdominance?Whyaresome alleles
+   dominantandsomerecessive?To tackle these
+   questions,we must understand what a gene does.
+   Everygene,asyou know bynow,contains the
+   information toexpressaparticulartrait.Ina
+   diploid organism,there are two copies ofeach
+   gene,i.e.,as a pair ofalleles.Now,these two alleles
+   need not alwaysbeidentical,asin aheterozygote.
+   Oneof them maybe different due to some changes
+   thatithasundergone(aboutwhichyouwillread
+   furtheron,and in the next chapter)whichmodifies
+   the information thatparticularallelecontains.
+   Let's take an example ofa gene that contains
+   the information for producing an enzyme.Now
+   there are two copies of thisgene,thetwo allelic
+   forms.Let us assume(as is more common) that
+   the normal allele produces the normal enzyme
+   thatis needed for the transformation ofa
+   substrateS.Theoretically.themodifiedallelecould be responsible for
+   production of-
+
+   Red (RR)
+
+   White(rr)
+
+   Gametes
+
+   F,generation
+
+   Allpink(Rr)
+
+   Gametes
+
+   RR
+
+   Rr
+
+   F,generation
+
+   Phenotypicratio:red:pink:white
+   1:2:
+   Genotypicratio:RR:Rr:rr
+   1:2:1
+
+   Figure 4.6 Results ofmonohybrid cross in
+   the plant Snapdragon,where
+   one allele is in completely
+   dominant over the other allele
+
+   60
+
+   (i)the normal/less efficient enzyme,or
+   (i)a non-functional enzyme,or
+   (ii)no enzyme atall
+
+   Reprint2026-27
+
+===== SOURCE PAGE 11 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   Inthefirstcase,themodifiedalleleisequivalenttotheunmodified allele,
+   i.e.,itwillproducethesamephenotype/trait,i.e.,resultinthetransformation
+   ofsubstrateS.Such equivalentallelepairsareverycommon.But,if the
+   allele produces anon-functional enzyme ornoenzyme,thephenotypemay
+   be effected.Thephenotype/traitwill only be dependent on the functioning
+   ofthe unmodified allele.Theunmodified(functioning)allele,whichrepresents
+   the original phenotype is the dominant allele and the modified allele is
+   generallytherecessiveallele.Hence,intheexample above the recessive trait
+   isseenduetonon-functional enzyme or because no enzyme isproduced.
+
+   4.2.2.2Co-dominance
+
+   Till now we were discussingcrosseswheretheF,resembledeitherof the
+   twoparents(dominance)orwasin-between(incompletedominance).But,
+   in the case of co-dominance theF,generationresemblesbothparents.A
+   good example is different types of red blood cells that determine ABO
+
+   thegene I.Theplasmamembrane of thered blood cells has sugar polymers
+   that protrude from its surface and the kind of sugar is controlled by the
+   gene.Thegene(has three allelesI,Pand i.The allelesPand Pproduce
+   a slightly different form of the sugar while alle lei does not produce any
+   sugar.Becausehumansarediploidorganisms,eachpersonpossesses
+   anytwoofthethreeIgenealleles.PandParecompletelydominantover
+   i.in otherwordswhenPand ia represent onlyPexpresses(becausei
+   does not produce any sugar),and when Pand iare present Pexpresses.
+   But when A and Pare present together they both express their own types
+   ofsugars:thisisbecauseof co-dominance.Hencered blood cells have
+   bothA and Btypesof sugars.Since there arethreedifferentalleles,there
+   aresixdifferentcombinationsofthesethreeallelesthatarepossible,and
+   therefore,atotalofsixdifferentgenotypesofthehumanABOblood types
+   (Table4.2).Howmanyphenotypesarepossible?
+
+   Table 4.2:Table Showing the Genetic Basis of Blood Groups
+   in Human Population
+
+   Allele from
+   Allele from
+   Parent 2
+   Parent 1
+
+   Genotype of
+   Blood
+   offspring
+   types of
+   offspring
+
+   IATA
+   IAIB
+
+   IA
+
+   A
+
+   IA
+
+   IA
+
+   IB
+
+   AB
+
+   61
+
+   IA
+
+   IAi
+
+   A
+
+   i
+
+   IAIB
+
+   IB
+
+   IA
+
+   AB
+
+   IB
+
+   IB
+
+   IBIB
+
+   B
+
+   IB
+
+   IBi
+
+   B
+
+   i
+
+   ii
+
+   0
+
+   Reprint2026-27

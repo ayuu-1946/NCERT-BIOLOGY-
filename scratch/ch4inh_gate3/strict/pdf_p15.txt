@@ -1,0 +1,50 @@
+Such an analysis of traits in several of generations of a family is called the pedigree analysis. In the pedigree
+analysis the inheritance of a particular trait is represented in the family tree over generations.
+• In human genetics, pedigree study provides a strong tool, which is utilised to trace the inheritance of a
+specific trait, abnormality or disease.
+• Some of the important standard symbols used in the pedigree analysis have been shown in Figure 4.13.
+[NOTE] Read the plate (Figure 4.13 labels - the pedigree-symbol plate, p22). The plate is Figure 4.13 Symbols
+used in the human pedigree analysis (this is the second Figure 4.13 - same printed number, different plate from the
+honey bee one). The labels: Male, female, sex unspecified, affected individuals, mating, mating between relatives
+(consanguineous mating), parents above and children below (in order of birth - left to right), parents with male
+child affected with disease, and five unaffected offspring.
+• DNA is the carrier of genetic information. It is hence transmitted from one generation to the other without
+any change or alteration.
+• A number of disorders in human beings have been found to be associated with the inheritance of changed
+or altered genes or chromosomes.
+4.8.2
+Mendelian Disorders
+• Broadly, genetic disorders may be grouped into two categories - Mendelian disorders and Chromosomal
+disorders.
+Mendelian disorders are mainly determined by alteration or mutation in the single gene.
+• These disorders are transmitted to the offspring on the same lines as we have studied in the principle of
+inheritance. The pattern of inheritance of such Mendelian disorders can be traced in a family by the pedigree
+analysis.
+• Most common and prevalent Mendelian disorders are Haemophilia, Cystic fibrosis, Sickle cell anaemia,
+Colour blindness, Phenylketonuria, Thalassemia, etc.
+• By pedigree analysis one can easily understand whether the trait in question is dominant or recessive.
+Similarly, the trait may also be linked to the sex chromosome as in case of haemophilia.
+• It is evident that this X-linked recessive trait shows transmission from carrier female to male progeny.
+[NOTE] Read the plate (Figure 4.14 labels). The plate is Representative pedigree analysis of (a) Autosomal
+dominant trait (for example: Myo tonic dystrophy) (b) Autosomal recessive trait (for example: Sickle-cell
+anaemia). The label row is empty in the source - the source's own column headers are the trait names - so the plate
+is read by what the source itself prints: a pedigree of the Myo tonic dystrophy family on the left (autosomal
+dominant) and a pedigree of the sickle-cell anaemia family on the right (autosomal recessive). The source spells
+Myo tonic dystrophy with the space inside the word; the conventional form is myotonic dystrophy. Both are kept as
+printed.
+Colour blindness
+Colour blindness (X-linked recessive)
+Colour Blindness: It is a sex-linked recessive disorder due to defect in either red or green cone of eye resulting
+in failure to discriminate between red and green colour.
+• This defect is due to mutation in certain genes present in the X chromosome.
+• It occurs in about 8 per cent of males and only about 0.4 per cent of females.
+• This is because the genes that lead to red-green colour blindness are on the X chromosome. Males have
+only one X chromosome and females have two.
+• The son of a woman who carries the gene has a 50 per cent chance of being colour blind. The mother is not
+herself colour blind because the gene is recessive. That means that its effect is suppressed by her matching
+dominant normal gene.
+• A daughter will not normally be colour blind, unless her mother is a carrier and her father is colour blind.
+Haemophilia
+Haemophilia (X-linked recessive)
+• Haemophilia: This sex linked recessive disease, which shows its transmission from unaffected carrier female to
+some of the male progeny has been widely studied.

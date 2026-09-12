@@ -1,0 +1,14 @@
+# Inventory section: ch4 (13 rows)
+- F021 [heading] Chapter number: "CHAPTER 4"
+- F022 [heading] Chapter title: "PRINCIPLES OF INHERITANCE AND VARIATION"
+- F023 [term] Chapter contents listed as "4.1 Mendel's Laws of Inheritance", "4.2 Inheritance of One Gene", "4.3 Inheritance of Two Genes", "4.4 Sex Determination", "4.5 Mutation", "4.6 Genetic Disorders" (contents box list only - the printed body runs 4.1 to 4.8)
+- F024 [fact] "These and several related questions are dealt with, scientifically, in a branch of biology known as Genetics."
+- F025 [fact] "This subject deals with the inheritance, as well as the variation of characters from parents to offspring."
+- F026 [definition] "Inheritance is the process by which characters are passed on from parent to progeny; it is the basis of heredity."
+- F027 [definition] "Variation is the degree by which progeny differ from their parents."
+- F028 [number] "Humans knew from as early as 8000-1000 B.C. that one of the causes of variation was hidden in sexual reproduction." (dates: 8000-1000 B.C.)
+- F029 [fact] "They exploited the variations that were naturally present in the wild populations of plants and animals to selectively breed and select for organisms that possessed desirable characters."
+- F030 [example] "For example, through artificial selection and domestication from ancestral wild cows, we have well-known Indian breeds, e.g., Sahiwal cows in Punjab."
+- F372 [summary-unique] "Genetics is a branch of biology which deals with principles of inheritance and its practices." (SUMMARY-UNIQUE wording - the body defines Genetics by what it deals with, not by "principles ... and its practices")
+- F373 [summary-unique] "Progeny resembling the parents in morphological and physiological features has attracted the attention of many biologists." (SUMMARY-UNIQUE - "morphological and physiological" appears nowhere in the body)
+- F374 [summary-unique] "Mendel was the first to study this phenomenon systematically." (SUMMARY-UNIQUE - the body never claims Mendel was first, nor uses "systematically")

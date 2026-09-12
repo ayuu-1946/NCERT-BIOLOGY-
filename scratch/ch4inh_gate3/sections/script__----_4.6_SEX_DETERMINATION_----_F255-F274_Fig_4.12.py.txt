@@ -1,0 +1,96 @@
+# ---- 4.6 SEX DETERMINATION ---- F255-F274 + Fig 4.12
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.6", "SEX DETERMINATION", level=1))
+# F256-F258
+story.append(b1(
+    "<b>The mechanism of sex determination has always been a puzzle before the "
+    "geneticists.</b>"))
+story.append(b1(
+    "<b>The initial clue about the genetic/chromosomal mechanism of sex determination can "
+    "be traced back to some of the experiments carried out in insects.</b>"))
+story.append(b1(
+    "<b>In fact, the cytological observations made in a number of insects led to the "
+    "development of the concept of genetic/chromosomal basis of sex-determination.</b>"))
+# F259-F261
+story.append(b1(
+    "<b>Henking (1891) could trace a specific nuclear structure all through "
+    "spermatogenesis in a few insects, and it was also observed by him that 50 per cent of "
+    "the sperm received this structure after spermatogenesis, whereas the other 50 per "
+    "cent sperm did not receive it.</b>"))
+story.append(b1(
+    "<b>Henking gave a name to this structure as the x body but he could not explain its "
+    "significance.</b>"))
+story.append(b1(
+    "<b>Further investigations by other scientists led to the conclusion that the 'X "
+    "body' of Henking was in fact a chromosome and that is why it was given the name "
+    "X-chromosome.</b>"))
+# F262-F266
+story.append(b1(
+    "<b>It was also observed that in a large number of insects the mechanism of sex "
+    "determination is of the XO type,</b> i.e., all eggs bear an additional X-chromosome "
+    "besides the other chromosomes (autosomes)."))
+story.append(b1(
+    "<b>On the other hand, some of the sperms bear the X-chromosome whereas some do not.</b>"))
+story.append(b1(
+    "<b>Eggs fertilised by sperm having an X-chromosome become females</b> and, those "
+    "fertilised by sperms that do not have an X-chromosome become males."))
+story.append(keyterm(
+    "<b>Due to the involvement of the X-chromosome in the determination of sex, it was "
+    "designated to be the sex chromosome, and the rest of the chromosomes were named as "
+    "autosomes.</b>"))
+story.append(b1(
+    "<b>Grasshopper is an example of XO type of sex determination in which the males have "
+    "only one X-chromosome besides the autosomes, whereas females have a pair of "
+    "X-chromosomes.</b>"))
+# F267-F269
+story.append(b1(
+    "<b>In a number of other insects and mammals including man, XY type of sex "
+    "determination is seen</b> where both male and female have same number of chromosomes. "
+    "Among the males an X-chromosome is present but its counterpart is distinctly smaller "
+    "and called the Y-chromosome. Females, however, have a pair of X-chromosomes."))
+story.append(b1(
+    "<b>Both males and females bear same number of autosomes. Hence, the males have "
+    "autosomes plus XY, while female have autosomes plus XX.</b>"))
+story.append(b1(
+    "<b>In human beings and in Drosophila the males have one X and one Y chromosome, "
+    "whereas females have a pair of X-chromosomes besides autosomes (Figure 4.12a, b).</b>"))
+# F270-F272
+story.append(b1(
+    "<b>In the above description you have studied about two types of sex determining "
+    "mechanisms, i.e., XO type and XY type.</b> But in both cases males produce two "
+    "different types of gametes, (a) either with or without X-chromosome or (b) some "
+    "gametes with X-chromosome and some with Y-chromosome. Such type of sex determination "
+    "mechanism is designated to be the example of <b>male heterogamety</b>."))
+story.append(b1(
+    "<b>In some other organisms, e.g., birds, a different mechanism of sex determination "
+    "is observed (Figure 4.12 c).</b> In this case the total number of chromosome is same "
+    "in both males and females. But two different types of gametes in terms of the sex "
+    "chromosomes, are produced by females, i.e., <b>female heterogamety</b>."))
+story.append(b1(
+    "<b>In order to have a distinction with the mechanism of sex determination described "
+    "earlier, the two different sex chromosomes of a female bird has been designated to "
+    "be the Z and W chromosomes.</b> In these organisms the females have one Z and one W "
+    "chromosome, whereas males have a pair of Z-chromosomes besides the autosomes."))
+# F375 - SUMMARY-UNIQUE: chicken ZZ/ZW
+story.append(gap())
+story.append(Paragraph(
+    "<b>One sentence the chapter summary adds and the body never does:</b> <i>In chicken, "
+    "sex chromosomes in male are ZZ, and in females are ZW.</i>", STYLES["NoteBox"]))
+
+# F273-F274 - Fig 4.12 read-the-plate
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.12 labels).</b> The plate is <b>Determination of sex by "
+    "chromosomal differences: (a, b) Both in humans and in Drosophila the female has a "
+    "pair of XX chromosomes (homogametic) and the male XY (heterogametic) composition; "
+    "(c) In many birds, female has a pair of dissimilar chromosomes Zw and male two "
+    "similar ZZ chromosomes</b>. The four labels the plate carries are <b>XX</b> (panel a "
+    "and b, female), <b>XY</b> (panel a and b, male), <b>ZW</b> (panel c, female bird) "
+    "and <b>ZZ</b> (panel c, male bird). The source prints the bird pair as <b>Zw</b> and "
+    "<b>ZZ</b>; the chapter's own paragraph just above names the female chromosome <b>W</b> "
+    "(uppercase), and the conventional name is <b>ZW</b> - both spellings are kept as "
+    "printed."))
+
+# ======================================================================================

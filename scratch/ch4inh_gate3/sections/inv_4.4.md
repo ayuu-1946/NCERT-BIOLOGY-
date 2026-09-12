@@ -1,0 +1,12 @@
+# Inventory section: 4.4 (11 rows)
+- F239 [heading] "4.4 POLYGENIC INHERITANCE"
+- F240 [opener] "Mendel's studies mainly described those traits that have distinct alternate forms such as flower colour which are either purple or white."
+- F241 [fact] "But if you look around you will find that there are many traits which are not so distinct in their occurrence and are spread across a gradient."
+- F242 [example] "For example, in humans we don't just have tall or short people as two distinct alternatives but a whole range of possible heights."
+- F243 [definition] "Such traits are generally controlled by three or more genes and are thus called as polygenic traits."
+- F244 [fact] "Besides the involvement of multiple genes polygenic inheritance also takes into account the influence of environment."
+- F245 [example] "Human skin colour is another classic example for this."
+- F246 [fact] "In a polygenic trait the phenotype reflects the contribution of each allele, i.e., the effect of each allele is additive."
+- F247 [example] "To understand this better let us assume that three genes A, B, C control skin colour in human with the dominant forms A, B and C responsible for dark skin colour and the recessive forms a, b and c for light skin colour."
+- F248 [fact] "The genotype with all the dominant alleles (AABBCC) will have the darkest skin colour and that with all the recessive alleles (aabbcc) will have the lightest skin colour."
+- F249 [fact] "As expected the genotype with three dominant alleles and three recessive alleles will have an intermediate skin colour. In this manner the number of each type of alleles in the genotype would determine the darkness or lightness of the skin in an individual."

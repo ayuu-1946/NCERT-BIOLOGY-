@@ -1,0 +1,51 @@
+• In this disease, a single protein that is a part of the cascade of proteins involved in the clotting of blood is
+affected.
+• Due to this, in an affected individual a simple cut will result in non-stop bleeding.
+• The heterozygous female (carrier) for haemophilia may transmit the disease to sons.
+• The possibility of a female becoming a haemophilic is extremely rare because mother of such a female has to
+be at least carrier and the father should be haemophilic (unviable in the later stage of life).
+• The family pedigree of Queen Victoria shows a number of haemophilic descendents as she was a carrier of
+the disease.
+Sickle-cell anaemia
+Sickle-cell anaemia (autosomal recessive, single base change)
+Sickle-cell anaemia: This is an autosome linked recessive trait that can be transmitted from parents to the
+offspring when both the partners are carrier for the gene (or heterozygous).
+• The disease is controlled by a single pair of allele, HbA and HbS.
+• Out of the three possible genotypes only homozygous individuals for HbS (HbSHbS) show the diseased
+phenotype.
+• Heterozygous (HbAHbS) individuals appear apparently unaffected but they are carrier of the disease as
+there is 50 per cent probability of transmission of the mutant gene to the progeny, thus exhibiting
+sickle-cell trait (Figure 4.15).
+• The defect is caused by the substitution of Glutamic acid (Glu) by Valine (Val) at the sixth position of the
+beta globin chain of the haemoglobin molecule.
+• The substitution of amino acid in the globin protein results due to the single base substitution at the sixth
+codon of the beta globin gene from GAG to GUG.
+• The mutant haemoglobin molecule undergoes polymerisation under low oxygen tension causing the
+change in the shape of the RBC from biconcave disc to elongated sickle like structure (Figure 4.15).
+[NOTE] Read the plate (Figure 4.15 labels). The plate is Micro graph of the red blood cells and the amino acid
+composition of the relevant portion of beta-chain of haemoglobin: (a) From a normal individual; (b) From an
+individual with sickle-cell anaemia. The source spells it Micro graph. The plate labels (a) on the left and (b) on the
+right. The labels on the two gene cards are Normal Hb(A) gene and Sickle-cell Hb(S) gene. The mRNA lines are
+mRNA GAG and mRNA GUG. The peptide chains are HbA peptide and HbS peptide, and the amino acid
+sequences printed under them are Val His Leu Thr Pro Glu Glu (HbA) and Val His Leu Thr Pro Val Glu (HbS) -
+the difference is one residue: Glu at position 6 in HbA, Val at position 6 in HbS.
+Phenylketonuria
+Phenylketonuria (autosomal recessive)
+Phenylketonuria: This inborn error of metabolism is also inherited as the autosomal recessive trait.
+• The affected individual lacks an enzyme that converts the amino acid phenylalanine into tyrosine.
+• As a result of this phenylalanine is accumulated and converted into phenylpyruvic acid and other
+derivatives.
+• Accumulation of these in brain results in mental retardation.
+• These are also excreted through urine because of its poor absorption by kidney.
+Thalassemia
+Thalassemia (autosomal recessive)
+Thalassemia: This is also an autosome-linked recessive blood disease transmitted from parents to the offspring
+when both the partners are unaffected carrier for the gene (or heterozygous).
+• The defect could be due to either mutation or deletion which ultimately results in reduced rate of synthesis
+of one of the globin chains (alpha and beta chains) that make up haemoglobin. This causes the formation of
+abnormal haemoglobin molecules resulting into anaemia which is characteristic of the disease.
+• Thalassemia can be classified according to which chain of the haemoglobin molecule is affected. In alpha
+Thalassemia, production of alpha globin chain is affected while in beta Thalassemia, production of beta globin
+chain is affected.
+• alpha Thalassemia is controlled by two closely linked genes HBA1 and HBA2 on chromosome 16 of each
+parent and it is observed due to mutation or deletion of one or more of the four genes. The more genes

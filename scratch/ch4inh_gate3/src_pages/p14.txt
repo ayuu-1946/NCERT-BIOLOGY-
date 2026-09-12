@@ -1,0 +1,42 @@
+BIOLOGY
+4.3.1 Law of Independent Assortment
+In the dihybrid cross (Figure 4.7).the phenotypes round,yellow;
+wrinkled,yellow;round,green and wrinkled,green appeared in the
+ratio9:3:3:1.Sucharatiowasobservedforseveralpairsofcharacters
+thatMendelstudied.
+Theratioof9:3:3:1canbe derived as a combination series of3yellow:
+1green,with 3round:1 wrinkled.Thisderivation canbe written
+as follows:
+(3Round:1Wrinkled)(3Yellow:1Green)=9Round,Yellow:3
+Wrinkled,Yellow:3Round,Green:1Wrinkled,Green
+Based upon such observations ondihybridcrosses(crossesbetween
+plantsdifferingintwotraits)Mendelproposed a second set of generalisations
+thatwecallMendel'sLawofIndependentAssortment.Thelawstatesthat
+of characters is independent of theotherpairofcharacters'.
+The Punnett square can be effectively used to understand the
+independent segregation ofthe two pairs of genes during meiosis and
+the production of eggs and pollen in theF,RrYyplant.Considerthe
+segregationofonepairofgenesRandr.Fiftypercentof thegametes
+have thegene Rand theother5opercenthave r.Nowbesideseach
+gamete having either Ror r,it should also have the alleleYory.The
+important thing to remember here is that segregation of50percent R
+Y and 50per centy.Therefore,50per cent of the r bearing gametes
+hasYand theother50percenthasy.Similarly.50per cent oft heR
+bearinggameteshasYand theother5opercenthasy.Thus there are
+The four typesareRY,Ry.rYandryeachwithafrequencyof25per
+centor1/4ofthetotalgametesproduced.Whenyouwritedownthe
+four types of eggs and pollen on the two sides ofa Punnett square it is
+very easy to derive the composition of the zygote sth at give rise to the
+Fplants(Figure4.7).Althoughthereare16squareshowmany
+downintheformatgiven.
+Canyou,usingthePunnettsquaredataworkoutthegenotypicratio
+at the F,stage and fill in the format given? Is the genotypic ratio
+also 9:3:3:1?
+64
+Their expected Phenotypes
+S.No.
+Genotypes found in F
+4.3.2 Chromosomal TheoryofInheritance
+Mendelpublishedhisworkoninheritanceofcharactersin1865but
+for several reasons,it remained unrecognised till 19oo.Firstly,
+Reprint2026-27

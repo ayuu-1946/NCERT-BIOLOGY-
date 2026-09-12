@@ -1,0 +1,231 @@
+# ---- 4.8 GENETIC DISORDERS ---- F300-F312
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.8", "GENETIC DISORDERS", level=1))
+# F301, F302
+story.append(heading("4.8.1", "Pedigree Analysis", level=2))
+story.append(b1(
+    "<b>The idea that disorders are inherited has been prevailing in the human society "
+    "since long.</b> This was based on the heritability of certain characteristic "
+    "features in families."))
+# F303-F306
+story.append(b1(
+    "<b>After the rediscovery of Mendel's work the practice of analysing inheritance "
+    "pattern of traits in human beings began.</b>"))
+story.append(b1(
+    "<b>Since it is evident that control crosses that can be performed in pea plant or "
+    "some other organisms, are not possible in case of human beings, study of the family "
+    "history about inheritance of a particular trait provides an alternative.</b>"))
+story.append(keyterm(
+    "<b>Such an analysis of traits in several of generations of a family is called the "
+    "pedigree analysis.</b> In the pedigree analysis the inheritance of a particular "
+    "trait is represented in the family tree over generations."))
+story.append(b1(
+    "<b>In human genetics, pedigree study provides a strong tool, which is utilised to "
+    "trace the inheritance of a specific trait, abnormality or disease.</b>"))
+# F307
+story.append(b1(
+    "<b>Some of the important standard symbols used in the pedigree analysis have been "
+    "shown in Figure 4.13.</b>"))
+
+# F308-F309 - Fig 4.13b read-the-plate (pedigree symbol plate)
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.13 labels - the pedigree-symbol plate, p22).</b> The "
+    "plate is <b>Figure 4.13 Symbols used in the human pedigree analysis</b> (this is the "
+    "second Figure 4.13 - same printed number, different plate from the honey bee one). "
+    "The labels: <b>Male</b>, <b>female</b>, <b>sex unspecified</b>, <b>affected "
+    "individuals</b>, <b>mating</b>, <b>mating between relatives (consanguineous "
+    "mating)</b>, <b>parents above and children below (in order of birth - left to "
+    "right)</b>, <b>parents with male child affected with disease</b>, and <b>five "
+    "unaffected offspring</b>."))
+
+# F310-F312
+story.append(gap())
+story.append(b1(
+    "<b>DNA is the carrier of genetic information. It is hence transmitted from one "
+    "generation to the other without any change or alteration.</b>"))
+story.append(b1(
+    "<b>A number of disorders in human beings have been found to be associated with the "
+    "inheritance of changed or altered genes or chromosomes.</b>"))
+
+# F313 - opener for 4.8.2
+story.append(gap(6))
+story.append(heading("4.8.2", "Mendelian Disorders", level=2))
+story.append(b1(
+    "<b>Broadly, genetic disorders may be grouped into two categories - Mendelian "
+    "disorders and Chromosomal disorders.</b>"))
+# F314
+story.append(keyterm(
+    "<b>Mendelian disorders are mainly determined by alteration or mutation in the single "
+    "gene.</b>"))
+# F315
+story.append(b1(
+    "<b>These disorders are transmitted to the offspring on the same lines as we have "
+    "studied in the principle of inheritance.</b> The pattern of inheritance of such "
+    "Mendelian disorders can be traced in a family by the pedigree analysis."))
+# F316
+story.append(b1(
+    "<b>Most common and prevalent Mendelian disorders are Haemophilia, Cystic fibrosis, "
+    "Sickle cell anaemia, Colour blindness, Phenylketonuria, Thalassemia, etc.</b>"))
+# F317-F318
+story.append(b1(
+    "<b>By pedigree analysis one can easily understand whether the trait in question is "
+    "dominant or recessive.</b> Similarly, the trait may also be linked to the sex "
+    "chromosome as in case of haemophilia."))
+story.append(b1(
+    "<b>It is evident that this X-linked recessive trait shows transmission from carrier "
+    "female to male progeny.</b>"))
+
+# F319-F320 - Fig 4.14 (pedigree of autosomal dominant + recessive) read-the-plate
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.14 labels).</b> The plate is <b>Representative pedigree "
+    "analysis of (a) Autosomal dominant trait (for example: Myo tonic dystrophy) "
+    "(b) Autosomal recessive trait (for example: Sickle-cell anaemia)</b>. The label row "
+    "is empty in the source - the source's own column headers are the trait names - so the "
+    "plate is read by what the source itself prints: a pedigree of the Myo tonic dystrophy "
+    "family on the left (autosomal dominant) and a pedigree of the sickle-cell anaemia "
+    "family on the right (autosomal recessive). The source spells <b>Myo tonic dystrophy</b> "
+    "with the space inside the word; the conventional form is <b>myotonic dystrophy</b>. "
+    "Both are kept as printed."))
+
+# F321-F326 - Colour blindness
+story.append(gap())
+story.append(heading("Colour blindness", "Colour blindness (X-linked recessive)", level=3))
+story.append(keyterm(
+    "<b>Colour Blindness:</b> It is a sex-linked recessive disorder due to defect in either "
+    "red or green cone of eye resulting in failure to discriminate between red and green "
+    "colour."))
+story.append(b1(
+    "<b>This defect is due to mutation in certain genes present in the X chromosome.</b>"))
+story.append(b1(
+    "<b>It occurs in about 8 per cent of males and only about 0.4 per cent of females.</b>"))
+story.append(b1(
+    "<b>This is because the genes that lead to red-green colour blindness are on the X "
+    "chromosome. Males have only one X chromosome and females have two.</b>"))
+story.append(b1(
+    "<b>The son of a woman who carries the gene has a 50 per cent chance of being colour "
+    "blind.</b> The mother is not herself colour blind because the gene is recessive. That "
+    "means that its effect is suppressed by her matching dominant normal gene."))
+story.append(b1(
+    "<b>A daughter will not normally be colour blind, unless her mother is a carrier and "
+    "her father is colour blind.</b>"))
+
+# F327-F331 - Haemophilia
+story.append(gap())
+story.append(heading("Haemophilia", "Haemophilia (X-linked recessive)", level=3))
+story.append(b1(
+    "<b>Haemophilia:</b> This sex linked recessive disease, which shows its transmission "
+    "from unaffected carrier female to some of the male progeny has been widely studied."))
+story.append(b1(
+    "<b>In this disease, a single protein that is a part of the cascade of proteins "
+    "involved in the clotting of blood is affected.</b>"))
+story.append(b1(
+    "<b>Due to this, in an affected individual a simple cut will result in non-stop "
+    "bleeding.</b>"))
+story.append(b1(
+    "<b>The heterozygous female (carrier) for haemophilia may transmit the disease to "
+    "sons.</b>"))
+story.append(b1(
+    "<b>The possibility of a female becoming a haemophilic is extremely rare</b> because "
+    "mother of such a female has to be at least carrier and the father should be "
+    "haemophilic (unviable in the later stage of life)."))
+# F332 - Queen Victoria example
+story.append(b1(
+    "<b>The family pedigree of Queen Victoria shows a number of haemophilic descendents "
+    "as she was a carrier of the disease.</b>"))
+
+# F333-F339 - Sickle-cell anaemia
+story.append(gap())
+story.append(heading("Sickle-cell anaemia",
+                      "Sickle-cell anaemia (autosomal recessive, single base change)", level=3))
+story.append(keyterm(
+    "<b>Sickle-cell anaemia:</b> This is an autosome linked recessive trait that can be "
+    "transmitted from parents to the offspring when both the partners are carrier for the "
+    "gene (or heterozygous)."))
+story.append(b1(
+    "<b>The disease is controlled by a single pair of allele, Hb<sup>A</sup> and "
+    "Hb<sup>S</sup>.</b>"))
+story.append(b1(
+    "<b>Out of the three possible genotypes only homozygous individuals for Hb<sup>S</sup> "
+    "(Hb<sup>S</sup>Hb<sup>S</sup>) show the diseased phenotype.</b>"))
+story.append(b1(
+    "<b>Heterozygous (Hb<sup>A</sup>Hb<sup>S</sup>) individuals appear apparently "
+    "unaffected but they are carrier of the disease as there is 50 per cent probability of "
+    "transmission of the mutant gene to the progeny, thus exhibiting sickle-cell trait "
+    "(Figure 4.15).</b>"))
+story.append(b1(
+    "<b>The defect is caused by the substitution of Glutamic acid (Glu) by Valine (Val) at "
+    "the sixth position of the beta globin chain of the haemoglobin molecule.</b>"))
+story.append(b1(
+    "<b>The substitution of amino acid in the globin protein results due to the single "
+    "base substitution at the sixth codon of the beta globin gene from GAG to GUG.</b>"))
+story.append(b1(
+    "<b>The mutant haemoglobin molecule undergoes polymerisation under low oxygen tension "
+    "causing the change in the shape of the RBC from biconcave disc to elongated sickle "
+    "like structure (Figure 4.15).</b>"))
+
+# F340-F341 - Fig 4.15 read-the-plate
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.15 labels).</b> The plate is <b>Micro graph of the red "
+    "blood cells and the amino acid composition of the relevant portion of beta-chain of "
+    "haemoglobin: (a) From a normal individual; (b) From an individual with sickle-cell "
+    "anaemia</b>. The source spells it <b>Micro graph</b>. The plate labels (a) on the left "
+    "and (b) on the right. The labels on the two gene cards are <b>Normal Hb(A) gene</b> "
+    "and <b>Sickle-cell Hb(S) gene</b>. The mRNA lines are <b>mRNA GAG</b> and "
+    "<b>mRNA GUG</b>. The peptide chains are <b>HbA peptide</b> and <b>HbS peptide</b>, "
+    "and the amino acid sequences printed under them are <b>Val His Leu Thr Pro Glu Glu</b> "
+    "(HbA) and <b>Val His Leu Thr Pro Val Glu</b> (HbS) - the difference is one residue: "
+    "Glu at position 6 in HbA, Val at position 6 in HbS."))
+
+# F342-F346 - Phenylketonuria
+story.append(gap())
+story.append(heading("Phenylketonuria", "Phenylketonuria (autosomal recessive)", level=3))
+story.append(keyterm(
+    "<b>Phenylketonuria:</b> This inborn error of metabolism is also inherited as the "
+    "autosomal recessive trait."))
+story.append(b1(
+    "<b>The affected individual lacks an enzyme that converts the amino acid phenylalanine "
+    "into tyrosine.</b>"))
+story.append(b1(
+    "<b>As a result of this phenylalanine is accumulated and converted into phenylpyruvic "
+    "acid and other derivatives.</b>"))
+story.append(b1(
+    "<b>Accumulation of these in brain results in mental retardation.</b>"))
+story.append(b1(
+    "<b>These are also excreted through urine because of its poor absorption by kidney.</b>"))
+
+# F347-F352 - Thalassemia
+story.append(gap())
+story.append(heading("Thalassemia", "Thalassemia (autosomal recessive)", level=3))
+story.append(keyterm(
+    "<b>Thalassemia:</b> This is also an autosome-linked recessive blood disease "
+    "transmitted from parents to the offspring when both the partners are unaffected "
+    "carrier for the gene (or heterozygous)."))
+story.append(b1(
+    "<b>The defect could be due to either mutation or deletion which ultimately results in "
+    "reduced rate of synthesis of one of the globin chains (alpha and beta chains) that "
+    "make up haemoglobin.</b> This causes the formation of abnormal haemoglobin molecules "
+    "resulting into anaemia which is characteristic of the disease."))
+story.append(b1(
+    "<b>Thalassemia can be classified according to which chain of the haemoglobin molecule "
+    "is affected.</b> In alpha Thalassemia, production of alpha globin chain is affected "
+    "while in beta Thalassemia, production of beta globin chain is affected."))
+story.append(b1(
+    "<b>alpha Thalassemia is controlled by two closely linked genes HBA1 and HBA2 on "
+    "chromosome 16 of each parent and it is observed due to mutation or deletion of one or "
+    "more of the four genes.</b> The more genes affected, the less alpha globin molecules "
+    "produced."))
+story.append(b1(
+    "<b>While beta Thalassemia is controlled by a single gene HBB on chromosome 11 of each "
+    "parent and occurs due to mutation of one or both the genes.</b>"))
+# F352 - the comparison
+story.append(b1(
+    "<b>Thalassemia differs from sickle-cell anaemia in that the former is a quantitative "
+    "problem of synthesising too few globin molecules while the latter is a qualitative "
+    "problem of synthesising an incorrectly functioning globin.</b>"))
+
+# ======================================================================================

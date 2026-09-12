@@ -1,0 +1,10 @@
+# Inventory section: 4.8.1 (9 rows)
+- F301 [heading] "4.8.1 Pedigree Analysis"
+- F302 [opener] "The idea that disorders are inherited has been prevailing in the human society since long. This was based on the heritability of certain characteristic features in families."
+- F303 [fact] "After the rediscovery of Mendel's work the practice of analysing inheritance pattern of traits in human beings began."
+- F304 [fact] "Since it is evident that control crosses that can be performed in pea plant or some other organisms, are not possible in case of human beings, study of the family history about inheritance of a particular trait provides an alternative."
+- F305 [definition] "Such an analysis of traits in several of generations of a family is called the pedigree analysis. In the pedigree analysis the inheritance of a particular trait is represented in the family tree over generations."
+- F306 [fact] "In human genetics, pedigree study provides a strong tool, which is utilised to trace the inheritance of a specific trait, abnormality or disease."
+- F307 [fact] "Some of the important standard symbols used in the pedigree analysis have been shown in Figure 4.13."
+- F310 [fact] "DNA is the carrier of genetic information. It is hence transmitted from one generation to the other without any change or alteration."
+- F311 [fact] "A number of disorders in human beings have been found to be associated with the inheritance of changed or altered genes or chromosomes."

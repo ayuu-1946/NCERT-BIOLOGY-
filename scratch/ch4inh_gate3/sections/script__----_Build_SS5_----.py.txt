@@ -1,0 +1,15 @@
+# ---- Build (SS5) ----
+
+# ======================================================================================
+def main():
+    build_pdf(
+        OUT_PDF,
+        story,
+        title="Principles of Inheritance and Variation - NEET Notes (NCERT Class 12, Chapter 4)",
+        subject="NCERT Class 12 Biology, Chapter 4 - Principles of Inheritance and Variation: "
+                "NEET replacement notes",
+    )
+
+
+if __name__ == "__main__":
+    main()

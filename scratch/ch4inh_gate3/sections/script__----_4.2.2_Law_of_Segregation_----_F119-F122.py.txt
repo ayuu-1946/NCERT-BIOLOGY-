@@ -1,0 +1,19 @@
+# ---- 4.2.2 Law of Segregation ---- F119-F122
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.2.2", "Law of Segregation", level=2))
+story.append(b1(
+    "<b>This law is based on the fact that the alleles do not show any blending and that "
+    "both the characters are recovered as such in the F<sub>2</sub> generation though one "
+    "of these is not seen at the F<sub>1</sub> stage.</b>"))
+story.append(b1(
+    "<b>Though the parents contain two alleles during gamete formation, the factors or "
+    "alleles of a pair segregate from each other such that a gamete receives only one of "
+    "the two factors.</b>"))
+story.append(b1(
+    "<b>Of course, a homozygous parent produces all gametes that are similar while a "
+    "heterozygous one produces two kinds of gametes each having one allele with equal "
+    "proportion.</b>"))
+
+# ======================================================================================

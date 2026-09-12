@@ -1,0 +1,53 @@
+===== SOURCE PAGE 8 =====
+
+
+   BIOLOGY
+
+   genotypet.Asa result ofrandomfertilisation,theresultantzygotes can
+   be of thegenotypesTT,Tt or tt.
+   FromthePunnettsquareitiseasilyseenthat1/4hoftherandom
+   fertilisationsleadtoTT,1/2lead toTtand1/4htott.ThoughtheF
+   have a genotype ofTt,but the phenotypic character seen is‘tall'.At F
+   3/4thof theplantsaretall,wheresomeof them are TT while others are
+   Tt.Externallyitisnotpossibletodistinguishbetweentheplantswith
+   the genotypes TT and Tt.Hence,withinthegenopyticpairTtonlyone
+   characterT'tallisexpressed.HencethecharacterTor‘tall'issaid to
+   dominateovertheotheralleletor'dwarf'character.Itisthusduetothis
+   dominanceofonecharacterovertheotherthatalltheF,aretall(though
+
+   genotypically1/2areTt and only1/4thareTT).Thisleads to a phenotypic
+   ratioof3/4tall:(1/4TT+1/2Tt)and1/4tt,i.e.,a3:1ratio,buta
+   genotypicratioof1:2:1.
+   The1/4:1/2:1/4ratio ofTT:Tt:ttismathematicallycondensable
+   totheformofthebinomialexpression(ax+by)²,thathasthegametes
+   bearinggenesTortinequalfrequencyof/2.Theexpressionisexpanded
+   as given below:
+
+   Mendel self-pollinated the Fpl ant sand found that dwarf F,plants
+   continued to generate dwarf plants in Fand Fgenerations.Heconcluded
+
+   he would have got had he self-pollinated a tall Fplant?
+   From the pre cee ding paragraphs itis clear that though thegenotypic
+   ratios can be calculated using mathematical probability,by simply looking
+   at thephenotypeofadominanttrait,itisnotpossibletoknow the
+   genotypiccomposition.Thatis,forexample,whetheratall plant from F
+   or F,has TT or Tt composition, cannot be predicted.Therefore,to determine
+   the genotype of a tall plant at F,Mendel crossed the tall plant from F
+   with a dwarfplant.Thishe called a testcross.Ina typical testcross an
+
+   genotype is to be determined)iscrossedwiththerecessiveparent instead
+   of self-crossing.Theprogenies of such a cross can easily be analysed to
+   predict the genotype ofthetestorganism.Figure4.5showstheresultsof
+   typical testcrosswherevioletcolourflower(V)isdominantoverwhite
+   colourflower(v).
+
+   58
+
+   UsingPunnettsquare,trytofindoutthenatureofoffspringofatestcross.
+
+   Whatratiodidyouget?
+
+   Usingthegenotypesofthiscross,canyougiveageneraldefinitionfora
+   testcross?
+
+   Reprint2026-27

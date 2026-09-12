@@ -1,0 +1,92 @@
+# ---- 4.2.2.2 Co-dominance ---- F143-F167 + Table 4.2
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.2.2.2", "Co-dominance", level=2))
+# F144, F145, F146, F147
+story.append(b1(
+    "<b>Till now we were discussing crosses where the F<sub>1</sub> resembled either of the "
+    "two parents (dominance) or was in-between (incomplete dominance).</b> But, in the case "
+    "of co-dominance the F<sub>1</sub> generation <b>resembles both parents</b>."))
+story.append(b1(
+    "<b>A good example is different types of red blood cells that determine ABO blood "
+    "grouping in human beings.</b> ABO blood groups are controlled by the gene <b>I</b>."))
+story.append(b1(
+    "<b>The plasma membrane of the red blood cells has sugar polymers that protrude from "
+    "its surface and the kind of sugar is controlled by the gene.</b>"))
+story.append(b1(
+    "<b>The gene (I) has three alleles I<sup>A</sup>, I<sup>B</sup> and i.</b>"))
+# F148, F149
+story.append(b1(
+    "<b>The alleles I<sup>A</sup> and I<sup>B</sup> produce a slightly different form of "
+    "the sugar while allele i does not produce any sugar.</b>"))
+story.append(b1(
+    "<b>Because humans are diploid organisms, each person possesses any two of the three "
+    "I gene alleles.</b>"))
+# F150, F151
+story.append(b1(
+    "<b>I<sup>A</sup> and I<sup>B</sup> are completely dominant over i, in other words "
+    "when I<sup>A</sup> and i are present only I<sup>A</sup> expresses (because i does "
+    "not produce any sugar), and when I<sup>B</sup> and i are present I<sup>B</sup> "
+    "expresses.</b>"))
+story.append(b1(
+    "<b>But when I<sup>A</sup> and I<sup>B</sup> are present together they both express "
+    "their own types of sugars:</b> this is because of <b>co-dominance</b>. Hence red blood "
+    "cells have both A and B types of sugars."))
+# F152 - three alleles, six genotypes
+story.append(b1(
+    "<b>Since there are three different alleles, there are six different combinations of "
+    "these three alleles that are possible, and therefore, a total of six different "
+    "genotypes of the human ABO blood types (Table 4.2).</b>"))
+
+# F153 - Table 4.2 caption + F154-F160 the 7 rows (the table has 7 rows: the heading and 6 parent combinations)
+story.append(gap())
+story.append(body(
+    "<b>Table 4.2: Table Showing the Genetic Basis of Blood Groups in Human Population</b>"))
+story.append(data_table([
+    ["Allele from Parent 1", "Allele from Parent 2",
+     "Genotype of offspring", "Blood type of offspring"],
+    ["<b>I<sup>A</sup></b>", "<b>I<sup>A</sup></b>",
+     "<b>I<sup>A</sup>I<sup>A</sup></b>", "<b>A</b>"],
+    ["<b>I<sup>A</sup></b>", "<b>I<sup>B</sup></b>",
+     "<b>I<sup>A</sup>I<sup>B</sup></b>", "<b>AB</b>"],
+    ["<b>I<sup>A</sup></b>", "<b>i</b>", "<b>I<sup>A</sup>i</b>", "<b>A</b>"],
+    ["<b>I<sup>B</sup></b>", "<b>I<sup>A</sup></b>",
+     "<b>I<sup>A</sup>I<sup>B</sup></b>", "<b>AB</b>"],
+    ["<b>I<sup>B</sup></b>", "<b>I<sup>B</sup></b>",
+     "<b>I<sup>B</sup>I<sup>B</sup></b>", "<b>B</b>"],
+    ["<b>I<sup>B</sup></b>", "<b>i</b>", "<b>I<sup>B</sup>i</b>", "<b>B</b>"],
+    ["<b>i</b>", "<b>i</b>", "<b>ii</b>", "<b>O</b>"],
+], col_widths=[24, 24, 30, 22]))
+
+# F161-F167 - multiple alleles + pleiotropy example
+story.append(gap())
+story.append(b1(
+    "<b>Do you realise that the example of ABO blood grouping also provides a good example "
+    "of multiple alleles?</b> Here you can see that there are more than two, i.e., three "
+    "alleles, governing the same character."))
+story.append(b1(
+    "<b>Since in an individual only two alleles can be present, multiple alleles can be "
+    "found only when population studies are made.</b>"))
+story.append(b1(
+    "<b>Occasionally, a single gene product may produce more than one effect.</b>"))
+story.append(b1(
+    "<b>For example, starch synthesis in pea seeds is controlled by one gene. It has two "
+    "alleles (B and b).</b> Starch is synthesised effectively by <b>BB</b> homozygotes "
+    "and therefore, large starch grains are produced. In contrast, <b>bb</b> homozygotes "
+    "have lesser efficiency in starch synthesis and produce smaller starch grains."))
+story.append(b1(
+    "<b>After maturation of the seeds, BB seeds are round and the bb seeds are wrinkled. "
+    "Heterozygotes produce round seeds, and so B seems to be the dominant allele.</b>"))
+story.append(b1(
+    "<b>But, the starch grains produced are of intermediate size in Bb seeds.</b> So if "
+    "starch grain size is considered as the phenotype, then from this angle, the alleles "
+    "show incomplete dominance."))
+story.append(b1(
+    "<b>Therefore, dominance is not an autonomous feature of a gene or the product that it "
+    "has information for.</b> It depends as much on the gene product and the production "
+    "of a particular phenotype from this product as it does on the particular phenotype "
+    "that we choose to examine, in case more than one phenotype is influenced by the same "
+    "gene."))
+
+# ======================================================================================

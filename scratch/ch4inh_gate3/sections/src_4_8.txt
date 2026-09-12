@@ -1,0 +1,57 @@
+===== SOURCE PAGE 19 =====
+
+
+   PRINCIPLESOFINHERITANCE ANDVARIATION
+
+   4.4POLYGENIC INHERITANCE
+
+   Mendel's studies mainly described those traits that have distinct alternate
+   formssuchasflowercolourwhichareeitherpurpleorwhite.Butifyou
+   look around you will find that there are many traits which are not so
+   distinct in their occurrence and are spread across agradient.Forexample,
+   in humans we don't just have tall or short people as two distinct
+
+   controlled by three or more genes and arethuscalledaspolygenictraits.
+   Besides the involvement of multiple genes polygenic inheritance also takes
+   into account theinfluenceofenvironment.Humanskincolourisanother
+
+   contribution ofeach allele,i.e.,theeffectofeachalleleisadditive.To
+   understand thisbetterletusassumethatthreegenesA,B,Ccontrol skin
+   colour in human with the dominantformsA,B and Crespo nsi ble for
+   dark skin colour and therecessiveformsa,b andcforlightskincolour.
+   Thegenotypewithallthedominantalleles(AABBCC)willhavethedarkest
+   skincolourandthatwithalltherecessivealleles(aabbcc)willhavethe
+   lightestskincolour.Asexpected the genotype with three dominant alleles
+   andthreerecessivealleleswillhaveanintermediateskincolour.Inthis
+   manner the number ofeach type of alleles in the genotype would determine
+   the darkness or lightness ofthe skin in anindividual.
+
+   4.5PLEIOTROPY
+
+   We have so far seen the effectof age neon a single phenotype or trait.
+   There are however instances where a single gene can exhibit multiple
+   phenotypic expression.Such a gene is called a pleiotropic gene.The
+   underlying mechanism of pleiotropy in most cases is the effectof agene
+
+   An example of this is the disease phenylketonuria,which occurs in
+   humans.The disease is caused by mutation in thegene that codes for the
+   enzymephenylalaninehydroxylase(singlegenemutation).Thismanifests
+   itself through phenotypic expression characterised by mental
+   retardation and areductioninhairandskinpigmentation.
+
+   4.6SEXDETERMINATION
+
+   The mechanism of sexdetermination has always been a puzzle before the
+   geneticists.Theinitialclueaboutthegenetic/chromosomalmechanism
+   of sexdetermination can be traced back to some ofthe experiments carried
+   outininsects.In fact,thecytologicalobservationsmadeinanumber of
+   insectsledtothedevelopmentoftheconceptofgenetic/chromosomal
+
+   69
+
+   structure all through spermatogenesis in a fewinsects,and itwas also
+
+   explainitssignificance.Furtherinvestigationsbyotherscientistsled to
+   the conclusion tha tt heX body 'of Hen king was in fact a chromosome
+
+   Reprint2026-27

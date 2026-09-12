@@ -1,0 +1,136 @@
+# ---- Terms used in the exercises (SS5 item 9; Rule 2; 4 GAPs) ----
+
+#      12 of 16 exercises are answered by the body and are not reproduced (Rule 2
+#      forbids printing the same fact twice). The 4 GAPs (Q1, Q3, Q6, Q7) are worked
+#      out here, each visibly marked as worked-out and not NCERT text.
+#      Arithmetic: 16 exercises, 4 answered by design (GAP), 12 unanswered by design
+#      (COVERED), 0 overlooked.
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("Appendix", "TERMS USED IN THE EXERCISES", level=1))
+
+story.append(body(
+    "<b>The exercises</b> at the end of this NCERT chapter assume four things the chapter "
+    "itself never spells out. All four are worked out below, each visibly marked as an "
+    "answer drawn from this chapter's own sentences and not as text carried in from "
+    "elsewhere."))
+story.append(b1(
+    "<b>16 exercises, 4 answered by design (GAP), 12 unanswered by design (COVERED), 0 "
+    "overlooked.</b>"))
+
+# Q1 - GAP
+story.append(gap())
+story.append(heading("Q1", "Advantages of selecting pea plant for experiment by Mendel", level=3))
+story.append(body(
+    "<b>Worked-out answer, assembled from this chapter's own sentences in section 4.1 "
+    "(not NCERT text):</b>"))
+story.append(b1(
+    "<b>True-breeding lines.</b> The pea plant has many <b>true-breeding pea lines</b> "
+    "(F038) - varieties that, under continuous self-pollination, show the <b>stable trait "
+    "inheritance and expression for several generations</b> (F039)."))
+story.append(b1(
+    "<b>Characters with two opposing traits.</b> The pea plant has <b>characters ... that "
+    "were manifested as two opposing traits</b> (F037) - tall/dwarf, yellow/green, "
+    "round/wrinkled - 14 such pairs in total (F040)."))
+story.append(b1(
+    "<b>Artificial cross-pollination is straightforward.</b> Mendel conducted <b>artificial "
+    "pollination / cross pollination experiments</b> (F038) - emasculation and pollen "
+    "transfer are simple to do on a pea flower (Figure 4.2)."))
+story.append(b1(
+    "<b>Short life cycle and many offspring.</b> The 7-year window (1856-1863, F033) "
+    "implies a manageable generation time and enough progeny to do the statistical "
+    "analysis that the chapter credits Mendel with introducing for the first time in "
+    "biology (F034)."))
+story.append(b1(
+    "<b>Large sampling size, giving credibility to the data.</b> The chapter calls this "
+    "out by name (F035)."))
+story.append(memory_aid(
+    "<b>Five reasons, one mnemonic:</b> <b>True-breeding, Two-opposing, Cross-ability, "
+    "Short cycle, Sample size</b> - <b>T-T-C-S-S</b>. Or, said the other way: every "
+    "property the body says the pea has is the reason a question calling them "
+    "'advantages' would want named."))
+
+# Q3 - GAP
+story.append(gap())
+story.append(heading("Q3",
+                      "Gamete types for a diploid heterozygous at 4 loci (2^n rule)", level=3))
+story.append(body(
+    "<b>Worked-out answer, extension of the 4.3.1 statement (not NCERT text):</b>"))
+story.append(b1(
+    "Section 4.3.1 (F188) states that the F<sub>1</sub> plant <i>RrYy</i> produces "
+    "<b>four types of gametes (RY, Ry, rY, ry) each with a frequency of 25 per cent or "
+    "1/4</b>."))
+story.append(b1(
+    "Two heterozygous loci to <b>2<sup>2</sup> = 4</b> gamete types, each at "
+    "<b>1/4</b>."))
+story.append(b1(
+    "Generalising: <i>n</i> heterozygous loci to <b>2<sup>n</sup></b> gamete types, "
+    "each at <b>1/2<sup>n</sup></b>."))
+story.append(b1(
+    "For <i>n</i> = 4: <b>2<sup>4</sup> = 16</b> gamete types, each at "
+    "<b>1/16</b>."))
+story.append(memory_aid(
+    "<b>2<sup>n</sup> gametes, each at 1/2<sup>n</sup>:</b> two loci to 4 at 1/4; "
+    "three loci to 8 at 1/8; four loci to 16 at 1/16. The source's 4.3.1 gives "
+    "the 2-locus case as the only worked example; the rest is reasoning on top of it."))
+
+# Q6 - GAP
+story.append(gap())
+story.append(heading("Q6",
+                      "Homozygous female x heterozygous male, single locus", level=3))
+story.append(body(
+    "<b>Worked-out answer, drawing on the Law of Dominance rows of 4.2.1 (not NCERT "
+    "text):</b>"))
+story.append(b1(
+    "Cross: <b>TT &times; Tt</b> (homozygous dominant female, heterozygous male)."))
+story.append(b1(
+    "Female gametes: all <b>T</b>."))
+story.append(b1(
+    "Male gametes: <b>1/2 T</b> and <b>1/2 t</b>."))
+story.append(b1(
+    "Offspring: <b>1/2 TT</b> and <b>1/2 Tt</b>."))
+story.append(b1(
+    "<b>Genotypic ratio: 1:1.</b>"))
+story.append(b1(
+    "<b>Phenotypic ratio: all tall (1:0)</b> - by the Law of Dominance (4.2.1), T is "
+    "dominant over t, so both TT and Tt are phenotypically tall (F072, F074)."))
+story.append(memory_aid(
+    "<b>Homozygous x heterozygous, single locus:</b> <b>1 TT : 1 Tt</b> genotypically, "
+    "<b>all tall</b> phenotypically. Same gamete split as a testcross (1:1) but with a "
+    "dominant parent instead of a recessive one, so no recessive phenotype appears."))
+
+# Q7 - GAP
+story.append(gap())
+story.append(heading("Q7",
+                      "Cross TtYy (tall, yellow) x Ttyy (tall, green)", level=3))
+story.append(body(
+    "<b>Worked-out answer, derived from the 4.3.1 gamete-frequency rows (not NCERT "
+    "text):</b>"))
+story.append(b1(
+    "Parent 1 (TtYy) gametes (4.3.1, F188): <b>1/4 TY, 1/4 Ty, 1/4 tY, 1/4 ty</b>."))
+story.append(b1(
+    "Parent 2 (Ttyy) gametes: <b>1/2 Ty</b> and <b>1/2 ty</b>."))
+story.append(b1(
+    "Combine: sixteen equally-likely cells, four unique genotypes:"))
+story.append(data_table([
+    ["Offspring genotype", "Frequency", "Phenotype"],
+    ["<b>TTYy</b>", "1/4", "<b>Tall, yellow</b>"],
+    ["<b>TTyy</b>", "1/4", "<b>Tall, green</b>"],
+    ["<b>TtYy</b>", "1/4", "<b>Tall, yellow</b>"],
+    ["<b>Ttyy</b>", "1/4", "<b>Tall, green</b>"],
+], col_widths=[24, 16, 60]))
+story.append(b1(
+    "<b>Phenotypic ratio: 1 Tall-Yellow : 1 Tall-Green : 0 Dwarf-Yellow : 0 Dwarf-Green</b>."))
+story.append(b1(
+    "<b>(a) Tall and green: 1/2</b>."))
+story.append(b1(
+    "<b>(b) Dwarf and green: 0</b> - the only green offspring is <b>TTyy</b> or "
+    "<b>Ttyy</b>, both tall by the Law of Dominance (4.2.1)."))
+story.append(memory_aid(
+    "<b>TtYy x Ttyy</b> in one line: a tall-yellow crossed with a tall-green gives "
+    "<b>1/2 tall-yellow, 1/2 tall-green, no dwarf</b>. The Y/y locus is independent of "
+    "T/t (4.3.1), but the question's parent 2 carries only y, so yy is the only green "
+    "genotype and y is recessive, so green offspring are still tall on the T/t locus."))
+
+
+# ======================================================================================

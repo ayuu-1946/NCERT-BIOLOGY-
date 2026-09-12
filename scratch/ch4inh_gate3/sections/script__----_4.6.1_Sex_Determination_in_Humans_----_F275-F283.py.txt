@@ -1,0 +1,39 @@
+# ---- 4.6.1 Sex Determination in Humans ---- F275-F283
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.6.1", "Sex Determination in Humans", level=2))
+# F276
+story.append(b1(
+    "<b>It has already been mentioned that the sex determining mechanism in case of "
+    "humans is XY type.</b>"))
+# F277
+story.append(b1(
+    "<b>Out of 23 pairs of chromosomes present, 22 pairs are exactly same in both males "
+    "and females:</b> these are the autosomes."))
+# F278
+story.append(b1(
+    "<b>A pair of X-chromosomes are present in the female, whereas the presence of an X "
+    "and Y chromosome are determinant of the male characteristic.</b>"))
+# F279, F280
+story.append(b1(
+    "<b>During spermatogenesis among males, two types of gametes are produced.</b> "
+    "<b>50 per cent of the total sperm produced carry the X-chromosome and the rest 50 "
+    "per cent has Y-chromosome besides the autosomes.</b>"))
+story.append(b1(
+    "<b>Females, however, produce only one type of ovum with an X-chromosome.</b>"))
+# F281, F282
+story.append(b1(
+    "<b>There is an equal probability of fertilisation of the ovum with the sperm "
+    "carrying either X or Y chromosome.</b> In case the ovum fertilises with a sperm "
+    "carrying X-chromosome the zygote develops into a female (XX) and the fertilisation "
+    "of ovum with Y-chromosome carrying sperm results into a male offspring."))
+story.append(b1(
+    "<b>Thus, it is evident that it is the genetic make up of the sperm that determines "
+    "the sex of the child.</b>"))
+# F283
+story.append(b1(
+    "<b>It is also evident that in each pregnancy there is always 50 per cent probability "
+    "of either a male or a female child.</b>"))
+
+# ======================================================================================

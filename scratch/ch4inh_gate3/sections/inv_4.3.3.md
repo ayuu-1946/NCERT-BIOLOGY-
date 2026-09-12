@@ -1,0 +1,11 @@
+# Inventory section: 4.3.3 (10 rows)
+- F227 [heading] "4.3.3 Linkage and Recombination"
+- F228 [opener] "Morgan carried out several dihybrid crosses in Drosophila to study genes that were sex-linked."
+- F229 [fact] "The crosses were similar to the dihybrid crosses carried out by Mendel in peas. For example Morgan hybridised yellow-bodied, white-eyed females to brown-bodied, red-eyed males and intercrossed their F1 progeny."
+- F230 [number] "He observed that the two genes did not segregate independently of each other and the F2 ratio deviated very significantly from the 9:3:3:1 ratio (expected when the two genes are independent)." (ratio: 9:3:3:1)
+- F231 [fact] "Morgan and his group knew that the genes were located on the X chromosome (Section 4.4) and saw quickly that when the two genes in a dihybrid cross were situated on the same chromosome, the proportion of parental gene combinations were much higher than the non-parental type."
+- F232 [definition] "Morgan attributed this due to the physical association or linkage of the two genes and coined the term linkage to describe this physical association of genes on a chromosome and the term recombination to describe the generation of non-parental gene combinations (Figure 4.11)."
+- F233 [fact] "Morgan and his group also found that even when genes were grouped on the same chromosome, some genes were very tightly linked (showed very low recombination) (Figure 4.11, Cross A) while others were loosely linked (showed higher recombination) (Figure 4.11, Cross B)."
+- F234 [number] "For example he found that the genes white and yellow were very tightly linked and showed only 1.3 per cent recombination while white and miniature wing showed 37.2 per cent recombination." (percentages: 1.3 per cent, 37.2 per cent)
+- F235 [fact] "His student Alfred Sturtevant used the frequency of recombination between gene pairs on the same chromosome as a measure of the distance between genes and 'mapped' their position on the chromosome."
+- F236 [fact] "Today genetic maps are extensively used as a starting point in the sequencing of whole genomes as was done in the case of the Human Genome Sequencing Project, described later."

@@ -1,0 +1,37 @@
+PRINCIPLES OFINHERITANCE AND VARIATION
+in thechromosome.DNAis the carrier ofgeneticinformation.Itishence
+transmitted from one generation to the other without any change or
+alteration.However,changesoralteration do takeplaceoccasionally.Such
+analterationorchangeinthegeneticmaterialisreferredtoasmutation.
+A number of disorders in human beings have been found to be associated
+withtheinheritanceofchangedoralteredgenesorchromosomes.
+4.8.2MendelianDisorders
+Broadly,genetic disorders maybe grouped into two categories-Mendelian
+disorder sand Chromosomal disorders.Mendeliandisordersaremainly
+determined by alteration or mutation in thesinglegene.Thesedisorders
+are transmitted to the offspring on the same lines as we have studied in
+the principle ofinheritance.Thepattern ofinheritance of such Mendelian
+disorderscanbetracedinafamilybythepedigreeanalysis.Mostcommon
+andprevalentMendeliandisordersareHaemophilia,Cysticfibrosis,Sickle
+cellanaemia,Colourblindness,Phenylketonuria,Thalassemia,etc.Itis
+important to mention here that such Mendelian disorders maybe
+dominantorrecessive.Bypedigree analysis one can easily understand
+whetherthetraitinquestionisdominantorrecessive.Similarly.thetrait
+mayalsobelinkedtothesexchromosomeasincaseofhaemophilia.Itis
+evidentthatthisX-linkedrecessivetraitshowstransmissionfromcarrier
+femaletomaleprogeny.ArepresentativepedigreeisshowninFigure4.14
+for dominant andrecessivetraits.Discusswithyourteacheranddesign
+pedigrees for characters linked to both autosomesandsexchromosome.
+(a)
+(b)
+Figure 4.14Representative pedigree analysis of(a)Autosomal dominant trait(forexample:
+Myo tonic dystrophy)(b) Autosomal recessive trait (for example:Sickle-cell anaemia)
+ColourBlindness:Itisasex-linkedrecessivedisorderduetodefectin
+either red or green cone of eye resulting in failure to discriminate between
+red and green colour.Thisdefectisdue to mutation in certain genes
+presentintheXchromosome.Itoccursinabout8per cent of males and
+only aboutO.4percentoffemales.Thisisbecausethegenesthatleadto
+red-greencolourblindnessareontheXchromosome.Maleshaveonly
+oneXchromosomeandfemaleshavetwo.Thesonofawomanwhocarries
+73
+Reprint2026-27

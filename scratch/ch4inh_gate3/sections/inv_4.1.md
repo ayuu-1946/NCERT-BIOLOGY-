@@ -1,0 +1,12 @@
+# Inventory section: 4.1 (11 rows)
+- F031 [heading] "4.1 MENDEL'S LAWS OF INHERITANCE"
+- F032 [opener] "It was during the mid-nineteenth century that headway was made in the understanding of inheritance."
+- F033 [number] "Gregor Mendel, conducted hybridisation experiments on garden peas for seven years (1856-1863) and proposed the laws of inheritance in living organisms." (dates: 1856-1863; duration: seven years)
+- F034 [fact] "During Mendel's investigations into inheritance patterns it was for the first time that statistical analysis and mathematical logic were applied to problems in biology."
+- F035 [fact] "His experiments had a large sampling size, which gave greater credibility to the data that he collected."
+- F036 [fact] "Also, the confirmation of his inferences from experiments on successive generations of his test plants, proved that his results pointed to general rules of inheritance rather than being unsubstantiated ideas."
+- F037 [example] "Mendel investigated characters in the garden pea plant that were manifested as two opposing traits, e.g., tall or dwarf plants, yellow or green seeds."
+- F038 [fact] "Mendel conducted such artificial pollination/cross pollination experiments using several true-breeding pea lines."
+- F039 [definition] "A true-breeding line is one that, having undergone continuous self-pollination, shows the stable trait inheritance and expression for several generations."
+- F040 [number] "Mendel selected 14 true-breeding pea plant varieties, as pairs which were similar except for one character with contrasting traits." (count: 14)
+- F041 [example] "Some of the contrasting traits selected were smooth or wrinkled seeds, yellow or green seeds, inflated (full) or constricted green or yellow pods and tall or dwarf plants (Figure 4.1, Table 4.1)."

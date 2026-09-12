@@ -695,18 +695,23 @@ story.append(b1(
     "is dominant over white colour flower (v).</b>"))
 
 # F111-F112 - Figure 4.5 caption + labels
+# [VERIFICATION FIX] D2 (strict Gate 3): prior NOTE mis-bound plate labels WW/Ww
+# to the "Homozygous recessive" role. Source plate (book p59 / OCR p09): both top
+# panels are the homozygous-recessive tester (ww); WW and Ww label the unknown
+# dominant-phenotype parents (homozygous dominant vs heterozygous). Body V/v
+# line and the outcomes table were already role-correct; NOTE only is rewritten.
 story.append(gap())
 story.append(note(
     "<b>Read the plate (Figure 4.5 labels).</b> The plate is a <b>Diagrammatic "
-    "representation of a test cross</b>. Across the top, two <b>Homozygous recessive</b> "
-    "parents - left panel labelled <b>WW</b> and right panel labelled <b>Ww</b>. The "
-    "right-hand <b>Dominant Phenotype (Genotype unknown)</b> parent sits below, with the "
-    "two outcomes. The left outcome: <b>Result - All flowers are violet</b>, "
-    "<b>Interpretation - Unknown flower is homozygous dominant</b>. The right outcome: "
-    "<b>Half of the flowers are violet and half of the flowers are white.</b>, "
-    "<b>Unknown flower is heterozygous</b>."))
-
-# Testcross outcomes as a data_table (using the WW/Ww labels from the plate)
+    "representation of a test cross</b>. Both panels place a <b>Homozygous "
+    "recessive</b> tester (<b>ww</b>) at the top. The other parent in each panel "
+    "is the <b>Dominant Phenotype (Genotype unknown)</b>: left panel the unknown "
+    "is labelled <b>WW</b> (homozygous dominant); right panel the unknown is "
+    "labelled <b>Ww</b> (heterozygous). Left outcome: <b>Result - All flowers are "
+    "violet</b>, <b>Interpretation - Unknown flower is homozygous dominant</b>. "
+    "Right outcome: <b>Half of the flowers are violet and half of the flowers are "
+    "white</b>; <b>Unknown flower is heterozygous</b>."))
+# Testcross outcomes as a data_table (WW/Ww = unknown dominant; ww = recessive tester)
 story.append(gap())
 story.append(Paragraph(
     "<b>What the testcross distinguishes:</b>", STYLES["Body"]))
@@ -2094,6 +2099,9 @@ story.append(memory_aid(
     "dominant parent instead of a recessive one, so no recessive phenotype appears."))
 
 # Q7 - GAP
+# [VERIFICATION FIX] D1 (Gate 3(b)): prior answer dropped every t-bearing gamete from
+# Parent 1 and claimed "no dwarf" / tall-green = 1/2. Correct 4 x 2 Punnett from the
+# 4.3.1 gamete-frequency rows: (a) tall green = 3/8, (b) dwarf green = 1/8.
 story.append(gap())
 story.append(heading("Q7",
                       "Cross TtYy (tall, yellow) x Ttyy (tall, green)", level=3))
@@ -2103,29 +2111,37 @@ story.append(body(
 story.append(b1(
     "Parent 1 (TtYy) gametes (4.3.1, F188): <b>1/4 TY, 1/4 Ty, 1/4 tY, 1/4 ty</b>."))
 story.append(b1(
-    "Parent 2 (Ttyy) gametes: <b>1/2 Ty</b> and <b>1/2 ty</b>."))
+    "Parent 2 (Ttyy) gametes: <b>1/2 Ty</b> and <b>1/2 ty</b> "
+    "(T/t segregates 1:1; only y is available on the colour locus)."))
 story.append(b1(
-    "Combine: sixteen equally-likely cells, four unique genotypes:"))
+    "Combine: <b>4 x 2 = 8</b> equally-likely cells (each at <b>1/8</b>):"))
 story.append(data_table([
-    ["Offspring genotype", "Frequency", "Phenotype"],
-    ["<b>TTYy</b>", "1/4", "<b>Tall, yellow</b>"],
-    ["<b>TTyy</b>", "1/4", "<b>Tall, green</b>"],
-    ["<b>TtYy</b>", "1/4", "<b>Tall, yellow</b>"],
-    ["<b>Ttyy</b>", "1/4", "<b>Tall, green</b>"],
-], col_widths=[24, 16, 60]))
+    ["Parent 1 gamete", "x Parent 2", "Offspring", "Phenotype"],
+    ["<b>TY</b> (1/4)", "<b>Ty</b> (1/2)", "<b>TTYy</b> (1/8)", "<b>Tall, yellow</b>"],
+    ["<b>TY</b> (1/4)", "<b>ty</b> (1/2)", "<b>TtYy</b> (1/8)", "<b>Tall, yellow</b>"],
+    ["<b>Ty</b> (1/4)", "<b>Ty</b> (1/2)", "<b>TTyy</b> (1/8)", "<b>Tall, green</b>"],
+    ["<b>Ty</b> (1/4)", "<b>ty</b> (1/2)", "<b>Ttyy</b> (1/8)", "<b>Tall, green</b>"],
+    ["<b>tY</b> (1/4)", "<b>Ty</b> (1/2)", "<b>TtYy</b> (1/8)", "<b>Tall, yellow</b>"],
+    ["<b>tY</b> (1/4)", "<b>ty</b> (1/2)", "<b>ttYy</b> (1/8)", "<b>Dwarf, yellow</b>"],
+    ["<b>ty</b> (1/4)", "<b>Ty</b> (1/2)", "<b>Ttyy</b> (1/8)", "<b>Tall, green</b>"],
+    ["<b>ty</b> (1/4)", "<b>ty</b> (1/2)", "<b>ttyy</b> (1/8)", "<b>Dwarf, green</b>"],
+], col_widths=[22, 20, 24, 34]))
 story.append(b1(
-    "<b>Phenotypic ratio: 1 Tall-Yellow : 1 Tall-Green : 0 Dwarf-Yellow : 0 Dwarf-Green</b>."))
+    "<b>Phenotypic totals:</b> tall-yellow <b>3/8</b> (TTYy 1/8 + TtYy 1/8 + TtYy 1/8); "
+    "tall-green <b>3/8</b> (TTyy 1/8 + Ttyy 1/8 + Ttyy 1/8); dwarf-yellow <b>1/8</b> "
+    "(ttYy); dwarf-green <b>1/8</b> (ttyy)."))
 story.append(b1(
-    "<b>(a) Tall and green: 1/2</b>."))
+    "<b>(a) Tall and green: 3/8</b>."))
 story.append(b1(
-    "<b>(b) Dwarf and green: 0</b> - the only green offspring is <b>TTyy</b> or "
-    "<b>Ttyy</b>, both tall by the Law of Dominance (4.2.1)."))
+    "<b>(b) Dwarf and green: 1/8</b> - the t gametes from Parent 1 are required; "
+    "without them the dwarf classes vanish, which is the error the corrected table "
+    "removes."))
 story.append(memory_aid(
-    "<b>TtYy x Ttyy</b> in one line: a tall-yellow crossed with a tall-green gives "
-    "<b>1/2 tall-yellow, 1/2 tall-green, no dwarf</b>. The Y/y locus is independent of "
-    "T/t (4.3.1), but the question's parent 2 carries only y, so yy is the only green "
-    "genotype and y is recessive, so green offspring are still tall on the T/t locus."))
-
+    "<b>TtYy x Ttyy</b> in one line: <b>3/8 tall-yellow : 3/8 tall-green : 1/8 "
+    "dwarf-yellow : 1/8 dwarf-green</b>. Height still segregates 3 tall : 1 dwarf "
+    "(Parent 1 is Tt; Parent 2 is Tt too), and colour segregates 1 yellow : 1 green "
+    "(only Parent 1 carries Y). Independent assortment multiplies the two monohybrid "
+    "ratios."))
 
 # ======================================================================================
 # ---- Build (SS5) ----

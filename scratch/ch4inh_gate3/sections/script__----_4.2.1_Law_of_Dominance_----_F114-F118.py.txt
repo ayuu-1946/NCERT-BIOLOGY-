@@ -1,0 +1,19 @@
+# ---- 4.2.1 Law of Dominance ---- F114-F118
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.2.1", "Law of Dominance", level=2))
+# F115, F116, F117 as the three numbered statements
+story.append(b1(
+    "<b>(i) Characters are controlled by discrete units called factors.</b>"))
+story.append(b1(
+    "<b>(ii) Factors occur in pairs.</b>"))
+story.append(b1(
+    "<b>(iii) In a dissimilar pair of factors one member of the pair dominates (dominant) "
+    "the other (recessive).</b>"))
+story.append(b1(
+    "<b>The law of dominance is used to explain the expression of only one of the parental "
+    "characters in a monohybrid cross in the F<sub>1</sub> and the expression of both in "
+    "the F<sub>2</sub>. It also explains the proportion of 3:1 obtained at the F<sub>2</sub>.</b>"))
+
+# ======================================================================================

@@ -1078,8 +1078,14 @@ Pass 1 ran as five discrete, single-purpose sessions, each closing on a machine-
 
 ### Drift caught and fixed
 
-None — Pass 3 has not run. This section will be filled at Gate 3.
+**Gate 3(b) 2026-09-12 — 2 confirmed defects, both fixed:**
 
+| ID | Class | Where | Fix |
+|---|---|---|---|
+| **D1** | DRIFTED (wrong worked answer) | Appendix Q7 (`TtYy × Ttyy`) | Prior answer claimed tall-green **1/2**, dwarf-green **0** ("no dwarf"). Correct 4×2 Punnett from the chapter's own 4.3.1 gamete frequencies: **(a) tall green = 3/8**, **(b) dwarf green = 1/8**. Full 8-cell table restored in the script (`# [VERIFICATION FIX] D1`). |
+| **D2** | DRIFTED (label–role binding) | Fig 4.5 NOTE (`# ---- 4.2c ----`) | Prior NOTE bound plate labels **WW** / **Ww** to the "Homozygous recessive" role. Source plate (book p59 / OCR p09): recessive tester is **ww**; **WW** / **Ww** label the unknown dominant-phenotype parents. NOTE rewritten (`# [VERIFICATION FIX] D2 (strict Gate 3)`); outcomes table roles were already correct. Found under operator-ordered **strict re-audit** after the first CLOSED. |
+
+No inventory Fact row was added, removed or reworded (D1 was Rule-2 GAP appendix; D2 was a NOTE role sentence over F112 labels that listed strings without roles). Full bidirectional reading log + strict re-audit: `scratch/ch4inh_gate3/FINDINGS.md`.
 ### Figures requiring manual attention
 
 **None.** No figure failed extraction, because no figure was extracted (operator decision above). This heading is deliberately *not* used for the omitted plates.
@@ -1099,8 +1105,7 @@ One plate carries its meaning in colour: **Figure 4.9** (independent assortment 
 
 ### Linter verdict
 
-`check_pdf.py` exit 0 against the rebuilt PDF (Pass 2, Ch19-style rewrite, 2026-09-10):
-
+`check_pdf.py` exit 0 against the **final post-D2 rebuild** (Gate 3 strict close, 2026-09-12) — not a verdict carried forward:
 ```
 [PASS] 1. Footer/header band                          - no text in margin bands
 [PASS] 2. Legibility floor                            - smallest text 6.0 pt
@@ -1115,7 +1120,30 @@ One plate carries its meaning in colour: **Figure 4.9** (independent assortment 
 VERDICT: WARN   (0 fail, 2 warn)
 ```
 
-The 2 warns are the expected outcome for this chapter's operator decision (no figures embedded; profile text rows unavoidably contain the keyword "profile"). See `scratch/ch4inh_pass2/PASS3_REPORT.md` for the full Pass 3(a) + Pass 3(b) checklist. Gate 3(b) — the bidirectional full read — has NOT been done by the LLM; it is the verifier's job.
+The 2 warns are the expected outcome for this chapter's operator decision (no figures embedded; profile text rows unavoidably contain the keyword "profile") and are **accepted, not suppressed**.
+
+**Rebuild fingerprint (Gate 3 condition 5, post-D2 strict close):** 20 pp · 70,823 extracted chars · 0 embedded images · text SHA-256 prefix `403fdc209f066f4e` — identical across two consecutive builds (supersedes first-CLOSED `7a06e53d59916a5b` / 70,772 chars).
+
+---
+
+## Pass 3 / Gate 3 — CLOSED under STRICT re-audit (2026-09-12)
+
+All five Gate 3 conditions hold after operator order **"Go more strict standards"** (first CLOSED superseded). Evidence: `scratch/ch4inh_gate3/FINDINGS.md`.
+
+| Condition | State |
+|---|---|
+| 1. Zero confirmed defects remain | ✅ D1 + **D2** fixed; 0 remain |
+| 2. `check_pdf.py` green on final rebuild | ✅ exit 0 (0 fail / 2 accepted warn) |
+| 3. Pass 3(a) every page | ✅ **20/20** pages inspected at 150 dpi (+ 1-bit samples) |
+| 4. Pass 3(b) bidirectional full read + strict re-audit | ✅ per-section claims + label-role / qualifier / heavy-trim re-adjudication; **no coverage % / grep substitute** |
+| 5. Rebuild reproducible | ✅ 20 pp / 70,823 chars / 0 imgs / SHA `403fdc209f066f4e` |
+
+- **3(a):** 0 layout / orphan / overflow / badge-collision defects; cross-page Times-only style held; smallest glyph 6.0 pt.
+- **3(b) Direction 1:** 376/376 COVERED; 0 MISSING / 0 FABRICATED relative to the frozen inventory.
+- **3(b) Direction 2:** 0 new UNINVENTORIED rows. Every retained source sentence maps to a frozen row; the 39 operator-trimmed rows (Groups 1A/1B/2/partial-4) are deliberate Pass-2 cuts, not silent Pass-1 gaps — **re-adjudicated under strict pass, still no restore**.
+- **Strict re-audit:** re-read clean blocks for qualifier/label-role drift; **D2** (Fig 4.5 NOTE WW/Ww mis-bound to recessive) found and fixed; automated phrase-window "misses" treated as FP (line-breaks), not clearance evidence.
+- **SUMMARY-UNIQUE:** F372–F376 all present in body homes **and** bolded in Quick Recap (reconfirmed post-D2 rebuild).
+- **Exercise GAPs:** Q1, Q3, Q6, Q7 answered in appendix; Q7 corrected at Gate 3 (D1); D1 still correct after D2 rebuild.
 
 ---
 

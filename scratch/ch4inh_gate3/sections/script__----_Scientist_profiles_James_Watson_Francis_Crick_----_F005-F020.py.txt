@@ -1,0 +1,74 @@
+# ---- Scientist profiles: James Watson, Francis Crick ---- F005-F020
+
+#      Text only, no photograph (SS5 item 3 / SS4.4 hard no).
+#      The two profiles are presented as fact-bulleted dates; honours go in a small
+#      table because the list is enumerable.
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("Profile", "JAMES WATSON", level=2))
+# F005, F006, F007, F008, F009
+story.append(b1(
+    "<b>James Dewey Watson was born in Chicago on 6 April 1928.</b>"))
+story.append(b1(
+    "<b>In 1947, he received B.Sc. degree in Zoology.</b>"))
+story.append(b1(
+    "<b>During these years his interest in bird-watching had matured into a serious desire "
+    "to learn genetics.</b>"))
+story.append(b1(
+    "<b>This became possible when he received a Fellowship for graduate study in Zoology at "
+    "Indiana University, Bloomington, where he received his Ph.D degree in 1950 on a "
+    "study of the effect of hard X-rays on bacteriophage multiplication.</b>"))
+# F010, F011
+story.append(b1(
+    "<b>He met Crick and discovered their common interest in solving the DNA structure.</b>"))
+story.append(b1(
+    "<b>Their first serious effort, was unsatisfactory.</b>"))
+# F012
+story.append(b1(
+    "<b>Their second effort based upon more experimental evidence and better appreciation "
+    "of the nucleic acid literature resulted, early in March 1953, in the proposal of the "
+    "complementary double-helical configuration.</b>"))
+
+story.append(gap(6))
+story.append(heading("Profile", "FRANCIS CRICK", level=2))
+# F013, F014
+story.append(b1(
+    "<b>Francis Harry Compton Crick was born on 8 June 1916, at Northampton, England.</b>"))
+# F015
+story.append(b1(
+    "<b>He studied physics at University College, London and obtained a B.Sc. in 1937.</b>"))
+# F016
+story.append(b1(
+    "<b>He completed Ph.D. in 1954 on a thesis entitled X-ray Diffraction: Polypeptides and "
+    "Proteins</b>."))
+# F017
+story.append(b1(
+    "<b>A critical influence in Crick's career was his friendship with J.D. Watson, then a "
+    "young man of 23, leading in 1953 to the proposal of the double-helical structure for "
+    "DNA and the replication scheme.</b>"))
+# F018
+story.append(b1(
+    "<b>Crick was made an F.R.S. in 1959.</b>"))
+
+# F019 - the honours list
+story.append(gap())
+story.append(body(
+    "<b>The honours to Watson with Crick include:</b>"))
+story.append(data_table([
+    ["Year", "Honour"],
+    ["<b>1959</b>", "<b>John Collins Warren Prize of the Massachusetts General Hospital</b>"],
+    ["<b>1960</b>", "<b>Lasker Award</b>"],
+    ["<b>1962</b>", "<b>Research Corporation Prize</b>"],
+    ["<b>1962</b>", "<b>Nobel Prize</b>"],
+], col_widths=[20, 80]))
+
+# F020 - portrait caption text only, by SS4.4 hard no
+story.append(gap())
+story.append(note(
+    "<b>The scientist portrait plates on source page 2 are text-only by the SS4.4 hard "
+    "no</b> - the photograph of a person is never embedded, converted or recreated; "
+    "the name, dates, and achievements above carry everything examinable. The portrait "
+    "captions as the source prints them are: <b>\"JAMES WATSON\"</b> and "
+    "<b>\"FRANCIS CRICK\"</b>."))
+
+# ======================================================================================

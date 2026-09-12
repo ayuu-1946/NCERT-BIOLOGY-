@@ -1,0 +1,40 @@
+# ---- 4.6.2 Sex Determination in Honey Bee ---- F284-F290 + Fig 4.13a
+
+# ======================================================================================
+story.append(gap(6))
+story.append(heading("4.6.2", "Sex Determination in Honey Bee", level=2))
+# F285
+story.append(b1(
+    "<b>The sex determination in honey bee is based on the number of sets of chromosomes "
+    "an individual receives.</b>"))
+# F286, F287
+story.append(b1(
+    "<b>An offspring formed from the union of a sperm and an egg develops as a female "
+    "(queen or worker), and an unfertilised egg develops as a male (drone) by means of "
+    "parthenogenesis.</b>"))
+story.append(b1(
+    "<b>This means that the males have half the number of chromosomes than that of a "
+    "female.</b> The females are diploid having <b>32 chromosomes</b> and males are "
+    "haploid, i.e., having <b>16 chromosomes</b>."))
+# F288
+story.append(keyterm(
+    "<b>This is called as haplodiploid sex-determination system</b> and has special "
+    "characteristic features such as the <b>males produce sperms by mitosis (Figure "
+    "4.13), they do not have father and thus cannot have sons, but have a grandfather and "
+    "can have grandsons</b>."))
+
+# F289-F290 - Fig 4.13a read-the-plate (honey bee plate)
+story.append(gap())
+story.append(note(
+    "<b>Read the plate (Figure 4.13 labels - the honey bee plate, p21).</b> The plate is "
+    "<b>Figure 4.13 Sex determination in honey bee</b> (NCERT prints a SECOND Figure 4.13 "
+    "on p22, the pedigree-symbol plate - they share the same printed number). The honey "
+    "bee plate's labels: <b>Parents</b> at the top, with the two columns labelled "
+    "<b>Female</b> and <b>Male</b>; the row below carries <b>Gametes:</b> (the female "
+    "contributes 32, the male contributes 16); the middle row is the meiotic/mitotic "
+    "branch with <b>Meiosis</b> on the female side and <b>Mitosis</b> on the male side; "
+    "the bottom row is <b>F<sub>1</sub>:</b> - 32 on the female side (fertilised eggs) "
+    "and 16 on the male side (unfertilised eggs). The <b>32</b> and <b>16</b> chromosome "
+    "counts on the right are the diploid and haploid numbers."))
+
+# ======================================================================================

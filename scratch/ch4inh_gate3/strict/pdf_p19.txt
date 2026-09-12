@@ -1,0 +1,49 @@
+• Mutation is defined as change in the genetic material.
+• A point mutation is a change of a single base pair in DNA.
+• Sickle-cell anemia is caused due to change of one base in the gene coding for beta-chain of hemoglobin.
+• Inheritable mutations can be studied by generating a pedigree of a family.
+• Some mutations involve changes in whole set of chromosomes (polyploidy) or change in a subset of
+chromosome number (aneuploidy).
+• This helped in understanding the mutational basis of genetic disorders.
+• Down's syndrome is due to trisomy of chromosome 21, where there is an extra copy of chromosome 21
+and consequently the total number of chromosome becomes 47.
+• In Turner's syndrome, one X chromosome is missing and the sex chromosome is as X0, and in
+Klinefelter's syndrome, the condition is XXY.
+• These can be easily studied by analysis of Karyotypes. (Summary-only wording; the body gives 'a karyotype
+of 47, XXY' as a phrase, never 'analysis of Karyotypes' as a method.)
+Appendix TERMS USED IN THE EXERCISES
+The exercises at the end of this NCERT chapter assume four things the chapter itself never spells out. All four are
+worked out below, each visibly marked as an answer drawn from this chapter's own sentences and not as text
+carried in from elsewhere.
+• 16 exercises, 4 answered by design (GAP), 12 unanswered by design (COVERED), 0 overlooked.
+Q1
+Advantages of selecting pea plant for experiment by Mendel
+Worked-out answer, assembled from this chapter's own sentences in section 4.1 (not NCERT text):
+• True-breeding lines. The pea plant has many true-breeding pea lines (F038) - varieties that, under continuous
+self-pollination, show the stable trait inheritance and expression for several generations (F039).
+• Characters with two opposing traits. The pea plant has characters ... that were manifested as two opposing
+traits (F037) - tall/dwarf, yellow/green, round/wrinkled - 14 such pairs in total (F040).
+• Artificial cross-pollination is straightforward. Mendel conducted artificial pollination / cross pollination
+experiments (F038) - emasculation and pollen transfer are simple to do on a pea flower (Figure 4.2).
+• Short life cycle and many offspring. The 7-year window (1856-1863, F033) implies a manageable generation
+time and enough progeny to do the statistical analysis that the chapter credits Mendel with introducing for the
+first time in biology (F034).
+• Large sampling size, giving credibility to the data. The chapter calls this out by name (F035).
+[MEMORY AID - not in NCERT] Five reasons, one mnemonic: True-breeding, Two-opposing, Cross-ability,
+Short cycle, Sample size - T-T-C-S-S. Or, said the other way: every property the body says the pea has is the reason
+a question calling them 'advantages' would want named.
+Q3
+Gamete types for a diploid heterozygous at 4 loci (2^n rule)
+Worked-out answer, extension of the 4.3.1 statement (not NCERT text):
+• Section 4.3.1 (F188) states that the F1 plant RrYy produces four types of gametes (RY, Ry, rY, ry) each with a
+frequency of 25 per cent or 1/4.
+• Two heterozygous loci to 22 = 4 gamete types, each at 1/4.
+• Generalising: n heterozygous loci to 2n gamete types, each at 1/2n.
+• For n = 4: 24 = 16 gamete types, each at 1/16.
+[MEMORY AID - not in NCERT] 2n gametes, each at 1/2n: two loci to 4 at 1/4; three loci to 8 at 1/8; four loci to
+16 at 1/16. The source's 4.3.1 gives the 2-locus case as the only worked example; the rest is reasoning on top of it.
+Q6
+Homozygous female x heterozygous male, single locus
+Worked-out answer, drawing on the Law of Dominance rows of 4.2.1 (not NCERT text):
+• Cross: TT × Tt (homozygous dominant female, heterozygous male).
+• Female gametes: all T.
