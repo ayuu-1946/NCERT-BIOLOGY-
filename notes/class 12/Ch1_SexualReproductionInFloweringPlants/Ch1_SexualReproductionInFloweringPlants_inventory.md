@@ -345,7 +345,7 @@ All counts below were derived by re-parsing the finished `## Facts` table with a
 
 The supplied `Screenshots.zip` was extracted and audited before placement. The complete reference dimensions were: Figure 1.11(a) 828×664, Figure 1.11(b) 599×710, Figure 1.12(c) 758×1075, Figure 1.12(d) 350×253, Figure 1.12(e) 298×278, Figure 1.14(a) 300×397, Figure 1.14(b) 284×501, Figure 1.9(a)/(b) composite 298×567, Figure 1.9(c) 413×504, and Figure 1.5(b) supplied lower-stage reference 661×646. Supplied RGB references were converted to true-monochrome PNGs without masking or label reconstruction. The Figure 1.9 composite was split only at its visible panel gap; Figure 1.5b lower was restored from the NCERT source scan because the supplied reference omitted the required `Vacuoles` and `Nucleus` labels.
 
-The final PDF places Figures 1.5, 1.9, 1.11, 1.12, 1.14, and (from 2026-09-22, see D3 in `figure_layout_decisions.md`) 1.15 in horizontal panel rows with 5 pt internal cell padding. Tall panels retain their aspect ratios; no crop is stretched to force a landscape shape. Final verification was performed on the rendered PDF pages containing each target figure.
+The final PDF places Figures 1.5, 1.9, 1.11, 1.12, and 1.14 in horizontal panel rows with 5 pt internal cell padding. (Fig 1.15 was moved to a horizontal row on 2026-09-22 — D3 — and reverted to the stacked whole plate on 2026-09-23 per operator instruction — D4 in `figure_layout_decisions.md`.) Tall panels retain their aspect ratios; no crop is stretched to force a landscape shape. Final verification was performed on the rendered PDF pages containing each target figure.
 
 ---
 
@@ -366,7 +366,8 @@ handoff.
 `/vercel/share/neetenv` was absent (sandbox resets it every session). Rebuilt a
 dedicated venv at `/tmp/neetenv`: CPython 3.11.2 · reportlab 5.0.1 · pymupdf
 1.28.2 · Pillow 12.3.0 · numpy 2.4.6. Every Python command ran through
-`/tmp/neetenv/bin/python`, never bare `python3`.
+`/tmp/neetenv/bin/python`, never bare `python3`. (The venv was rebuilt again
+on 2026-09-23 after another sandbox reset — same pinned versions.)
 
 ### 1-S / 1-H / 1-O — Facts, headings, openers (re-derived)
 
@@ -484,16 +485,24 @@ machine-checked Gate 1 criterion that Ch12's draft failed; it is green here.
    to state the accurate fact. This is a header-metadata correction, which the
    Gate 1 Closure Rules explicitly permit (counts/headers may be corrected;
    rows never are).
-2. **Fig 1.15 moved to a horizontal panel row** (whole plate →
-   `compact_figure_row` 60/40) per the operator's "stack figures horizontally
-   wherever possible" instruction. Before/after numbers, the legibility
-   guard, and the documented one-line fallback are in
-   `figure_layout_decisions.md` D3. `compact_figure_row` gained an optional
-   `fractions` parameter (default equal, so the other five rows are unchanged).
-3. **Gate 2 re-run after the Fig 1.15 change:** `check_pdf.py` exits
-   **0 (0 fail, 0 warn)** on the rebuilt 18-page PDF — 108/108 labels in
-   running text, 255/255 rows ticked, all 26 embedded images monochrome,
-   smallest glyph 6.0 pt, 18/18 A4 portrait. Page count held at 18.
+2. **Fig 1.15 horizontal row — made 2026-09-22, REVERTED 2026-09-23.**
+   The 2026-09-22 session moved Fig 1.15 from the whole plate to a 60/40
+   `compact_figure_row` per the operator's "stack figures horizontally
+   wherever possible" instruction (D3, with measured before/after numbers).
+   On 2026-09-23 the operator instructed that 1.15's (a) and (b) should NOT
+   be placed side by side; the documented one-line fallback was applied and
+   Fig 1.15 is back to the stacked whole plate (`figure("fig_1_15.png",
+   max_width_cm=15.5)`, D4). The rebuilt PDF is page-for-page identical to
+   the pre-change PDF (18 pp, 0 per-page deltas); `check_pdf.py` exit 0
+   (0 fail / 0 warn). The `fractions` parameter of `compact_figure_row`
+   (added 2026-09-22, default equal) remains in the script but is unused by
+   any call site after the revert.
+3. **Gate 2 re-runs (2026-09-22 after the horizontal row; 2026-09-23 after
+   the revert):** `check_pdf.py` exits **0 (0 fail, 0 warn)** in both runs.
+   The current (post-revert) build: 18-page PDF, 108/108 labels in running
+   text, 255/255 rows ticked, all 25 embedded images monochrome, smallest
+   glyph 6.0 pt, 18/18 A4 portrait, page-for-page identical to the
+   pre-change build.
 
 ### Carry-over list (defects/notes the current gate has no authority over)
 
@@ -506,16 +515,13 @@ machine-checked Gate 1 criterion that Ch12's draft failed; it is green here.
    pass before touching the shipped set. Do not "fix" shipped assets to match
    a fresh render — the shipped set is the verified record; replace an asset
    only on a confirmed defect found in a future Gate 3(a) pass.
-2. **`fig_1_15` legibility at Gate 3(a).** Measured from the assets and the
-   PDF image bboxes: the baked labels in both (a) and (b) are ≈30 px
-   cap-top-to-descender in the 300-dpi raster — ≈6.5–7 pt type when the plate
-   rendered at the old 15.5 cm width. After the 60/40 split the (a) block
-   prints at 59% of that (≈4 pt type) and (b) at 39% (≈2.5–3 pt type). Both
-   were legible on this session's 100-dpi page rendering, but (b) is at the
-   edge of print legibility. All 18 labels are enumerated in the body text
-   and caption, so the text stands alone; Gate 3(a)'s rendered-page
-   inspection must confirm, and if it does not, apply the documented
-   one-line fallback in `figure_layout_decisions.md` D3.
+2. ~~**`fig_1_15` legibility at Gate 3(a).**~~ **RESOLVED 2026-09-23 — no
+   longer applicable.** This carried the (b)-cell baked-label legibility
+   question (≈2.5–3 pt after the 60/40 split) from the 2026-09-22 horizontal
+   row. The operator reverted Fig 1.15 to the stacked whole plate on
+   2026-09-23 (D4), so both (a) and (b) labels print again at the full
+   15.5 cm plate width (≈6.5–7 pt); Gate 3(a) needs no special Fig 1.15
+   legibility adjudication.
 3. **Cross-document reconciliation owed to the next gate session.**
    `CHAPTER_STATUS.md` and `CHAPTER_TRACKER.md` must both record this Gate 1
    closure with the gate number named (they are updated in the same session per

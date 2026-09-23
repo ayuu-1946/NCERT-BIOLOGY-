@@ -24,7 +24,7 @@ any deviation needs a row here with before/after numbers.
 | 1.12 | `fig_1_12a`…`fig_1_12e` | **horizontal row**: (a)\|(b)\|(c)\|(d)\|(e) | five self-labelled panels, two rows in source; each cleanly separable |
 | 1.13 | `fig_1_13` | single whole plate, full width | (a) fertilised embryo sac + (b) dicot embryo stages form one continuous developmental sequence; wide plate (ratio ≈1.67) |
 | 1.14 | `fig_1_14a`, `fig_1_14b` | **horizontal row**: (a)\|(b) | (a) dicot embryo above, (b) grass L.S. below in source; cleanly separable |
-| 1.15 | `fig_1_15a`, `fig_1_15b` | **horizontal row 60/40**: (a)\|(b) — **changed 2026-09-22, see D3** | cleanly separable row blocks |
+| 1.15 | `fig_1_15` | single whole plate, full width (a stacked over b) | the 2026-09-22 horizontal row (D3) was **reverted 2026-09-23** per operator instruction — keep 1.15 stacked (see D4); the panels stay cleanly separable if that ever changes |
 
 Whole-plate assets `fig_1_9`, `fig_1_12`, `fig_1_14`, `fig_1_15` remain on disk
 (valid extractions) but are **not embedded** where the sub-panel rows replace
@@ -34,6 +34,10 @@ the running-text label walk-throughs, and the manifest's sub-panel note lists
 them.
 
 ## D3 — Fig 1.15 moved from whole plate to horizontal row (2026-09-22)
+
+**SUPERSEDED 2026-09-23 — see D4.** The change below was made, rebuilt and
+documented, then reverted in full per operator instruction. The measured
+numbers are kept for the record.
 
 - **Before (measured from the pre-change PDF, p16 image bbox):** whole plate
   (2138×2151 px, (a) stacked over (b) inside one image) rendered at
@@ -65,6 +69,28 @@ them.
 - **Rebuild impact (measured):** page count unchanged (18); p16 +1,206 chars /
   +1 image, p17 +131 chars, p18 −1,283 chars; `check_pdf.py` exit 0
   (0 fail / 0 warn) on the rebuilt PDF.
+
+## D4 — Fig 1.15 reverted to the stacked whole plate (2026-09-23)
+
+Operator instruction 2026-09-23: **do not place 1.15's (a) and (b) side by
+side — keep 1.15 stacked.** The single `compact_figure_row([...],
+fractions=[0.6, 0.4])` call was replaced with the original
+`figure("fig_1_15.png", max_width_cm=15.5)` (the one-line fallback
+documented in D3). The `fractions` parameter of `compact_figure_row`
+remains in the template (default equal; unused by any call site after this
+revert).
+
+- **Rebuild impact (measured):** the rebuilt PDF is **page-for-page
+  identical** to the pre-change PDF — 18 A4 pages, 0 per-page char/image
+  deltas; `check_pdf.py` exit 0 (0 fail / 0 warn): 25 embedded mono images,
+  108/108 labels, 255/255 ticked, smallest glyph 6.0 pt, 64 banners no
+  orphan, 105 plates no collision.
+- **Carry-over C2 (baked-label legibility) of the inventory Gate 1 record is
+  resolved by this revert** — at the full 15.5 cm plate width both (a) and
+  (b) labels print at ≈6.5–7 pt, and the Gate 3(a) inspection needs no
+  special legibility adjudication for Fig 1.15.
+- The sub-panel assets `fig_1_15a` / `fig_1_15b` remain on disk (valid
+  extractions, label-verified) but are not embedded.
 
 ## Non-figure placements (context)
 
