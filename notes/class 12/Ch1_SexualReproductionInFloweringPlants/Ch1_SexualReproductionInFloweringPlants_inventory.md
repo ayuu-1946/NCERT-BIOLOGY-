@@ -13,7 +13,7 @@ Row-type census (machine-derived from the `## Facts` table by re-parsing the fin
 - fact rows: 103
 - Total Facts rows: 255 (F001..F255, contiguous, no gaps or duplicates); 26 + 24 + 12 + 15 + 17 + 58 + 103 = 255
 
-Figures: 15 numbered NCERT figures (Fig 1.1–1.15), extracted to 30 assets (whole plates + cleanly separable sub-panels). All assets `mode=L` (true monochrome). Labels below were harvested by OPENING each rendered asset (§4.4 Step 1), not by text extraction — the source PDF is a raster scan with an empty text layer, so a text-only harvest would have returned zero labels and passed check 6 vacuously.
+Figures: 15 numbered NCERT figures (Fig 1.1–1.15), extracted to 30 assets (whole plates + cleanly separable sub-panels). All assets `mode=L` (true monochrome). Labels below were harvested by OPENING each rendered asset (§4.4 Step 1), not by text extraction — the source scan carries a text layer for the body prose, but the in-figure labels are absent from that text layer (re-verified 2026-09-22: 0 of the 9 Fig 1.1 labels — Stigma, Style, Anther, Petal, Filament, Sepal, Ovary — appear in the p4 text layer), so a text-only label harvest would still have returned zero labels and passed check 6 vacuously. *(Correction 2026-09-22: this line previously read "the source PDF is a raster scan with an empty text layer" — false for the source on disk; see the Gate 1 record below. Metadata correction only; no Facts row touched.)*
 
 ## Facts
 | ID | Section | Type | Exact original wording | Ticked |
@@ -345,4 +345,191 @@ All counts below were derived by re-parsing the finished `## Facts` table with a
 
 The supplied `Screenshots.zip` was extracted and audited before placement. The complete reference dimensions were: Figure 1.11(a) 828×664, Figure 1.11(b) 599×710, Figure 1.12(c) 758×1075, Figure 1.12(d) 350×253, Figure 1.12(e) 298×278, Figure 1.14(a) 300×397, Figure 1.14(b) 284×501, Figure 1.9(a)/(b) composite 298×567, Figure 1.9(c) 413×504, and Figure 1.5(b) supplied lower-stage reference 661×646. Supplied RGB references were converted to true-monochrome PNGs without masking or label reconstruction. The Figure 1.9 composite was split only at its visible panel gap; Figure 1.5b lower was restored from the NCERT source scan because the supplied reference omitted the required `Vacuoles` and `Nucleus` labels.
 
-The final PDF places Figures 1.5, 1.9, 1.11, 1.12, and 1.14 in horizontal panel rows with 5 pt internal cell padding. Tall panels retain their aspect ratios; no crop is stretched to force a landscape shape. Final verification was performed on the rendered PDF pages containing each target figure.
+The final PDF places Figures 1.5, 1.9, 1.11, 1.12, 1.14, and (from 2026-09-22, see D3 in `figure_layout_decisions.md`) 1.15 in horizontal panel rows with 5 pt internal cell padding. Tall panels retain their aspect ratios; no crop is stretched to force a landscape shape. Final verification was performed on the rendered PDF pages containing each target figure.
+
+---
+
+## Gate 1 record — CLOSED (2026-09-22, re-derived from artifacts)
+
+This record closes Gate 1 for the chapter. It was **re-derived from the
+artifacts on disk**, not trusted from any handoff, per the SUPREME COMMAND
+Gate 1 Closure & Handoff Rules (§"A handoff's findings are claims to re-derive").
+On 2026-09-22 the five Pass 1 sessions (1-S / 1-H / 1-O / 1-F / 1-Z) had
+already run in an earlier session and the inventory was frozen at 255 rows;
+what was missing was the machine re-derivation, the asset re-verification, and
+this closure record. All five sessions' counts below were **re-derived by
+machine this session** (scripts under `scratch/ch1_gate1/`), not read off the
+handoff.
+
+### Environment (re-established this session, §0.2–0.3)
+
+`/vercel/share/neetenv` was absent (sandbox resets it every session). Rebuilt a
+dedicated venv at `/tmp/neetenv`: CPython 3.11.2 · reportlab 5.0.1 · pymupdf
+1.28.2 · Pillow 12.3.0 · numpy 2.4.6. Every Python command ran through
+`/tmp/neetenv/bin/python`, never bare `python3`.
+
+### 1-S / 1-H / 1-O — Facts, headings, openers (re-derived)
+
+`scratch/ch1_gate1/parse_inventory.py` re-parses the finished `## Facts` table:
+
+- **255 Facts rows, `F001`–`F255`, contiguous, 0 gaps, 0 duplicate IDs.**
+- **Type census (machine, case-sensitive, all lowercase):** `caption` 15 ·
+  `fact` 103 · `figure` 12 · `heading` 26 · `number` 17 · `opener` 24 · `term`
+  58 = **255**. Matches the header census exactly.
+- **Heading rows: 26 = 11 numbered + 13 unnumbered sub-headings + SUMMARY +
+  EXERCISES** (numbered IDs F004, F012, F018, F073, F116, F192, F199, F201,
+  F208, F222, F244; unnumbered F029, F038, F045, F086, F096, F103, F120, F122,
+  F130, F133, F138, F166, F174, + F251 SUMMARY, F254 EXERCISES).
+- **Opener rows: 24.**
+- **Figure-label rows: 12** (F011, F028, F037, F064, F085, F102, F137, F165,
+  F191, F219, F221, F243). The three photographic/product plates (1.4, 1.6,
+  1.10) carry a caption row but no label row by design — verified genuinely
+  unlabelled, not a failed harvest.
+- **Caption rows: 15** (one per numbered figure).
+
+Heading and opener **completeness re-check** (`scratch/ch1_gate1/
+heading_opener_check.py`): every one of the 26 heading rows and all 24 opener
+rows was matched verbatim against the source PDF's text layer — **0 missing**.
+A source census of numbered headings (regex over the source text) returns
+exactly the same 11 numbered sections (1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.3,
+1.4, 1.4.1, 1.4.2, 1.4.3, 1.5), confirming no numbered heading was left
+uninventoried.
+
+### 1-F — figures (re-verified by opening the assets)
+
+- **30 assets on disk, all `mode=L`** (true monochrome), matching the
+  "Total assets on disk: 30" manifest claim. 15 manifest rows, all
+  `Mono: yes` / `Verified: yes`.
+- **Re-extraction probe (2026-09-22):** re-running `extract_figures.py`
+  against the source on disk and diffing pixel-wise against the shipped assets
+  gives a clean three-way provenance split (re-run is destructive — assets/
+  must be backed up first, per carry-over C1):
+  - **10 assets are the supplied-reference set** — their pixel dimensions
+    match the "complete reference dimensions" in the Supplied reference-asset
+    audit exactly: `fig_1_9a` (212×289) / `fig_1_9b` (251×269) (the 298×567
+    composite split at the visible gap), `fig_1_9c` (413×504), `fig_1_11a`
+    (828×664), `fig_1_11b` (599×710), `fig_1_12c` (758×1075), `fig_1_12d`
+    (350×253), `fig_1_12e` (298×278), `fig_1_14a` (300×397), `fig_1_14b`
+    (284×501).
+  - **3 assets are byte-identical source-scan crops:** `fig_1_5a`,
+    `fig_1_5b_top`, `fig_1_5b_lower` (the 1.5b lower restore documented in the
+    audit, plus its two neighbours).
+  - **17 assets are source-scan clips with identical rect + 300 dpi
+    geometry (sizes match the current `extract_figures.py` rects to ±1 px)
+    but different pixel data** from a fresh render of the source file on disk:
+    1.1, 1.2, 1.3, 1.4, 1.6, 1.7, 1.8, 1.9, 1.10, 1.12, 1.12a, 1.12b, 1.13,
+    1.14, 1.15, 1.15a, 1.15b. Deterministic rendering means these were cut
+    from an *earlier raster* of the same pages — the source PDF in the repo
+    is a re-save of the same book content with identical page geometry (the
+    repo's git history holds only the current file, so the prior raster is
+    not on disk). Content is verified equivalent by the open-and-read pass
+    below; no asset was silently swapped. (Probe housekeeping: the re-run
+    also overwrote the 30 committed files in place and created two
+    whole-plate files that are **not part of the committed set** —
+    `fig_1_11.png` and `fig_1_5.png`; both were deleted afterwards, and
+    `assets/` was verified file-for-file and pixel-for-pixel against the
+    committed set and the pre-session backup `scratch/ch1_gate1/
+    assets_backup/`.)
+- **Label matrix re-harvest check:** every in-figure label on the 12
+  label-bearing figures was re-read off the rendered assets (contact sheets +
+  individual opens), including the dense `fig_1_15a` — four seed sub-diagrams
+  (bean seed; pea seed L.S.; groundnut seed L.S.; monocot grain L.S.) carrying
+  **all 13 (a)-panel matrix strings** (cotyledons, micropyle, seed coat,
+  endosperm, hypocotyl root axis, shoot apical meristem, root tip, scutellum,
+  coleoptile, plumule, radicle, coleorhiza, pericarp — the latter in the
+  grain sub-diagram; seed coat / endosperm / hypocotyl root axis / shoot
+  apical meristem / root tip repeat across sub-diagrams) and the five
+  (b)-fruit labels (thalamus, seed, endocarp, mesocarp, achene) verified on
+  `fig_1_15b`, as well as `fig_1_12d` (egg-nucleus / central-cell / synergid
+  set). The harvest is genuine — labels are
+  baked/vector artwork absent from the text layer, so only an open-and-read
+  pass could have produced these rows. (Plate also prints the singular
+  "Cotyledon" ×2 alongside "Cotyledons" — carry-over C4.)
+
+### Machine gate — `check_pdf.py`'s own `_extract_labels` (imported, not replicated)
+
+`_extract_labels` run against this file returns **108 labels across 12
+label-bearing figures, 0 doubled pairs, 0 phantom `Fig #` row** from the
+markdown separator. Per-figure: 1.1=7, 1.2=5, 1.3=8, 1.5=5, 1.7=15, 1.8=13,
+1.9=2, 1.11=3, 1.12=11, 1.13=11, 1.14=10, 1.15=18 (sum 108). This is the
+machine-checked Gate 1 criterion that Ch12's draft failed; it is green here.
+
+### Summary classification & exercise gaps (re-confirmed)
+
+- **15 summary sentences** = 13 BODY-PRESENT + 2 SUMMARY-UNIQUE, both folded
+  into body rows pre-freeze (`F252` "tetrasporangiate" → §1.2.1; `F253`
+  "archesporium" → §1.2.2).
+- Exercise-gap terms all have a planned home (see the Exercise-gap terms
+  table); the placentation row is a Class-XI recall note, not a body fact.
+
+### Gate 1 criteria — all met
+
+- Every fact has a Facts row; every in-figure label has a figure-label-matrix
+  row, harvested by opening each rendered asset (not text extraction).
+- Inventory validated by running `check_pdf.py`'s own `_extract_labels`
+  against it: 12 figures, 108 labels, no doubling, no phantom `Fig #` row.
+- Every header count matches a re-parse of the table; `F001..F255` contiguous.
+- Every heading (incl. unnumbered sub-headings) and every section opener has a
+  row; both re-verified verbatim against the source.
+- All 30 manifest figures `Mono: yes` / `Verified: yes`; all assets `mode=L`.
+- Every exercise-gap term has a planned home; both SUMMARY-UNIQUE facts folded.
+- Inventory saved to the chapter folder.
+
+### Corrections & decisions made this session (2026-09-22)
+
+1. **Metadata correction (no Facts row touched):** the header line previously
+   claimed "the source PDF is a raster scan with an empty text layer." That is
+   false for the source on disk — the source *does* carry a body-prose text
+   layer; only the in-figure labels are absent from it. The line was reworded
+   to state the accurate fact. This is a header-metadata correction, which the
+   Gate 1 Closure Rules explicitly permit (counts/headers may be corrected;
+   rows never are).
+2. **Fig 1.15 moved to a horizontal panel row** (whole plate →
+   `compact_figure_row` 60/40) per the operator's "stack figures horizontally
+   wherever possible" instruction. Before/after numbers, the legibility
+   guard, and the documented one-line fallback are in
+   `figure_layout_decisions.md` D3. `compact_figure_row` gained an optional
+   `fractions` parameter (default equal, so the other five rows are unchanged).
+3. **Gate 2 re-run after the Fig 1.15 change:** `check_pdf.py` exits
+   **0 (0 fail, 0 warn)** on the rebuilt 18-page PDF — 108/108 labels in
+   running text, 255/255 rows ticked, all 26 embedded images monochrome,
+   smallest glyph 6.0 pt, 18/18 A4 portrait. Page count held at 18.
+
+### Carry-over list (defects/notes the current gate has no authority over)
+
+1. **Asset provenance is split (10 supplied-reference + 3 byte-identical
+   source-scan + 17 source-scan cuts from an earlier raster — see the 1-F
+   section above), and `extract_figures.py` is destructive:** it overwrites
+   `assets/` in place, so any re-extraction run must back up `assets/` first
+   (done in this session: `scratch/ch1_gate1/assets_backup/`). After any
+   re-extraction, re-run the skill's three-part audit + the open-and-read
+   pass before touching the shipped set. Do not "fix" shipped assets to match
+   a fresh render — the shipped set is the verified record; replace an asset
+   only on a confirmed defect found in a future Gate 3(a) pass.
+2. **`fig_1_15` legibility at Gate 3(a).** Measured from the assets and the
+   PDF image bboxes: the baked labels in both (a) and (b) are ≈30 px
+   cap-top-to-descender in the 300-dpi raster — ≈6.5–7 pt type when the plate
+   rendered at the old 15.5 cm width. After the 60/40 split the (a) block
+   prints at 59% of that (≈4 pt type) and (b) at 39% (≈2.5–3 pt type). Both
+   were legible on this session's 100-dpi page rendering, but (b) is at the
+   edge of print legibility. All 18 labels are enumerated in the body text
+   and caption, so the text stands alone; Gate 3(a)'s rendered-page
+   inspection must confirm, and if it does not, apply the documented
+   one-line fallback in `figure_layout_decisions.md` D3.
+3. **Cross-document reconciliation owed to the next gate session.**
+   `CHAPTER_STATUS.md` and `CHAPTER_TRACKER.md` must both record this Gate 1
+   closure with the gate number named (they are updated in the same session per
+   §7 rule 8). Until Gate 3 closes, Ch1 is **not** in any "Done" tally.
+4. **`Cotyledon`/`Cotyledons` plate variant (cosmetic, row left as-is).**
+   `fig_1_15a` prints the plural "Cotyledons" (bean sub-diagram) and the
+   singular "Cotyledon" (×2, pea/groundnut sub-diagrams); the frozen matrix
+   row F243 lists "Cotyledons". Check 6 is substring-safe either way; a
+   frozen row is not edited for cosmetics (Gate 1 rule 5).
+5. **The 1-F contact-sheet note "Achenes" was a misread — resolved.** The
+   contact-sheet read recorded (b)'s right-side label as "Achenes" (plural);
+   a 2026-09-22 full-size open of `fig_1_15b` shows it prints "Achene"
+   (singular), exactly matching matrix row F243. No mismatch exists; no row
+   or asset change. (Same class as the earlier "Microspore" contact-sheet
+   misread of "Micropyle" — contact sheets are for screening; flagged labels
+   get a full-size open.)
+

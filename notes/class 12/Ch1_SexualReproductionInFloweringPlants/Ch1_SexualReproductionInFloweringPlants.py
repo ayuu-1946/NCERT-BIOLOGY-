@@ -63,15 +63,18 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
 
-def compact_figure_row(columns, caption_text, total_width_cm=15.9):
+def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=None):
     """Place source-preserving figure panels horizontally with 5 pt padding.
 
     Each column is either an asset name or a list of asset names to stack
     vertically inside that column. Pixels are never masked or reconstructed.
+    `fractions` optionally sets per-column width fractions (default: equal).
     """
     n = len(columns)
-    cell_w = total_width_cm * cm / n
-    def img_flow(asset_name):
+    if fractions is None:
+        fractions = [1.0 / n] * n
+    cell_ws = [total_width_cm * cm * f for f in fractions]
+    def img_flow(asset_name, cell_w):
         path = os.path.join(ASSETS, asset_name)
         from PIL import Image as PILImage
         with PILImage.open(path) as im:
@@ -82,9 +85,9 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9):
         height = width * h / w
         return RLImage(path, width=width, height=height)
     cells = []
-    for col in columns:
+    for col, cell_w in zip(columns, cell_ws):
         names = [col] if isinstance(col, str) else col
-        inner = Table([[img_flow(name)] for name in names], colWidths=[cell_w])
+        inner = Table([[img_flow(name, cell_w)] for name in names], colWidths=[cell_w])
         inner.setStyle(TableStyle([
             ("BOX", (0, 0), (-1, -1), 0.5, colors.HexColor("#555555")),
             ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
@@ -95,7 +98,7 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9):
             ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
         ]))
         cells.append(inner)
-    row = Table([cells], colWidths=[cell_w] * n)
+    row = Table([cells], colWidths=cell_ws)
     row.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
         ("LEFTPADDING", (0, 0), (-1, -1), 0),
@@ -910,13 +913,18 @@ story.append(body(
     "false fruits it labels the <b>thalamus</b> that has grown into the fleshy part, the "
     "<b>pericarp</b> with its <b>mesocarp</b> and <b>endocarp</b>, the <b>seed</b> inside, and "
     "the tiny one-seeded <b>achene</b> fruits sitting on the surface of the strawberry."))
-story.append(figure(
-    "fig_1_15.png",
+# Horizontal panel row (operator instruction: stack figures horizontally
+# wherever possible). (a) carries 13 of the 18 labels, so it takes the wider
+# 60% cell; (b) is the low-density false-fruit band and takes 40%. See
+# figure_layout_decisions.md D3 for before/after numbers and the legibility
+# note. All 18 in-figure labels remain enumerated in the body text above.
+story.append(compact_figure_row(
+    ["fig_1_15a.png", "fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
     "thalamus, seed, endocarp, mesocarp, achene.",
-    max_width_cm=15.5))
+    fractions=[0.6, 0.4]))
 story.append(body("<b>Why seed formation is an advantage.</b>"))
 story.append(b1(
     " <b>Seed formation is more dependable</b>, because pollination and fertilisation are no "
