@@ -24,6 +24,13 @@ Rects are in PDF points, in pymupdf page.rect (CropBox) coordinates: pages
 in a larger MediaBox (612 x 820.8 / 595.4 x 842.4) -- do not reuse a
 page-20 x-coordinate on page 21.
 
+CAUTION (2026-09-23): the shipped WHOLE-PLATE assets have been bottom-cropped
+in place to remove the baked "Figure 1.x ..." caption band (the template
+writes captions by rule -- see figure_layout_decisions.md D5). The rects
+below intentionally still record the source-side geometry with y1 down to
+the caption, so a fresh render of a rect will be TALLER than the shipped
+asset. Do not "restore" the caption bands.
+
 WARNING -- DESTRUCTIVE: this script writes over notes/.../assets/ in place
 AND its FIGS list renders two whole-plate files that are not part of the
 committed 30-file asset set (fig_1_5.png, fig_1_11.png) -- a fresh run

@@ -69,6 +69,9 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
     Each column is either an asset name or a list of asset names to stack
     vertically inside that column. Pixels are never masked or reconstructed.
     `fractions` optionally sets per-column width fractions (default: equal).
+    `caption_text=None` returns the bare row (no caption flowable) — used when
+    one figure spans several rows and the caption is attached once, after the
+    last row (Fig 1.12, 2026-09-23).
     """
     n = len(columns)
     if fractions is None:
@@ -106,6 +109,8 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
         ("TOPPADDING", (0, 0), (-1, -1), 0),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
     ]))
+    if caption_text is None:
+        return row
     return KeepTogether([row, Paragraph(caption_text, STYLES["Caption"])])
 
 
@@ -722,15 +727,23 @@ story.append(body(
     "the <b>synergid</b> with its <b>filiform apparatus</b>, the <b>egg cell</b> and its "
     "<b>egg nucleus</b> bounded by the <b>plasma membrane</b>, the <b>central cell</b> with "
     "the <b>polar nuclei</b>, and an <b>antipodal</b> cell at the far end."))
-story.append(compact_figure_row(
-    ["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png", "fig_1_12d.png", "fig_1_12e.png"],
-    "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
-    "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
-    "view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of "
-    "male gametes into a synergid and the movements of the sperms, one into the egg and the "
-    "other into the central cell. Labelled: pollen tube, antipodal, polar nuclei, egg cell, "
-    "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
-    "vegetative nucleus."))
+# Fig 1.12 - two horizontal rows per operator instruction (2026-09-23):
+# (a)(b)(c) on one line, then (d)(e). Single caption after the second row,
+# written by the template rule (the assets carry no caption text — the baked
+# "Figure 1.12 ..." line stays out of every 1.12 asset, verified on the p16
+# 4x grid: caption box sits at source y~470-543, below all five panels).
+story.append(KeepTogether([
+    compact_figure_row(["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png"], None),
+    compact_figure_row(["fig_1_12d.png", "fig_1_12e.png"], None),
+    Paragraph(
+        "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
+        "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
+        "view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of "
+        "male gametes into a synergid and the movements of the sperms, one into the egg and the "
+        "other into the central cell. Labelled: pollen tube, antipodal, polar nuclei, egg cell, "
+        "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
+        "vegetative nucleus.", STYLES["Caption"]),
+]))
 story.append(note(
     "<b>Artificial hybridisation</b> is one of the <b>major approaches of crop improvement "
     "programme</b>. Two techniques make sure that only the desired pollen reaches the stigma. "

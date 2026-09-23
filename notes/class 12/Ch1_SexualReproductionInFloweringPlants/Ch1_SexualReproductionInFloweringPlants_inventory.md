@@ -345,7 +345,7 @@ All counts below were derived by re-parsing the finished `## Facts` table with a
 
 The supplied `Screenshots.zip` was extracted and audited before placement. The complete reference dimensions were: Figure 1.11(a) 828×664, Figure 1.11(b) 599×710, Figure 1.12(c) 758×1075, Figure 1.12(d) 350×253, Figure 1.12(e) 298×278, Figure 1.14(a) 300×397, Figure 1.14(b) 284×501, Figure 1.9(a)/(b) composite 298×567, Figure 1.9(c) 413×504, and Figure 1.5(b) supplied lower-stage reference 661×646. Supplied RGB references were converted to true-monochrome PNGs without masking or label reconstruction. The Figure 1.9 composite was split only at its visible panel gap; Figure 1.5b lower was restored from the NCERT source scan because the supplied reference omitted the required `Vacuoles` and `Nucleus` labels.
 
-The final PDF places Figures 1.5, 1.9, 1.11, 1.12, and 1.14 in horizontal panel rows with 5 pt internal cell padding. (Fig 1.15 was moved to a horizontal row on 2026-09-22 — D3 — and reverted to the stacked whole plate on 2026-09-23 per operator instruction — D4 in `figure_layout_decisions.md`.) Tall panels retain their aspect ratios; no crop is stretched to force a landscape shape. Final verification was performed on the rendered PDF pages containing each target figure.
+The final PDF places Figures 1.5, 1.9, 1.11, and 1.14 in horizontal panel rows with 5 pt internal cell padding, and Figure 1.12 in two horizontal rows — (a)(b)(c) on one line, then (d)(e) — per operator instruction 2026-09-23 (D5 in `figure_layout_decisions.md`). (Fig 1.15 was moved to a horizontal row on 2026-09-22 — D3 — and reverted to the stacked whole plate on 2026-09-23 per operator instruction — D4. Same day: the baked "Figure 1.x …" caption bands were removed from all 13 whole-plate assets so that captions appear only where the template rule writes them — D5.) Tall panels retain their aspect ratios; no crop is stretched to force a landscape shape. Final verification was performed on the rendered PDF pages containing each target figure.
 
 ---
 
@@ -538,4 +538,36 @@ machine-checked Gate 1 criterion that Ch12's draft failed; it is green here.
    or asset change. (Same class as the earlier "Microspore" contact-sheet
    misread of "Micropyle" — contact sheets are for screening; flagged labels
    get a full-size open.)
+### Post-Gate-1 asset revision (2026-09-23, operator instruction)
 
+After Gate 1 closure the operator issued a layout/asset instruction: **stack
+Fig 1.12's (a)(b)(c) on one line, then (d)(e); use precise grids; captions
+must not be in the figure assets because captions are written by the
+template rule.** Executed 2026-09-23; full record in
+`figure_layout_decisions.md` D5:
+
+- **Fig 1.12 → two horizontal rows** (a|b|c / d|e) with one template caption
+  (`compact_figure_row` gained `caption_text=None`). Grid-verified on
+  `scratch/ch1_figs/grid_4x/p16.png`: the NCERT "Figure 1.12 …" caption box
+  (source y≈470–543 pt) sits below all five panel regions, so no 1.12 asset
+  ever contained the caption; the "Longitudinal section of a flower showing
+  growth of pollen tube" text under (c) is an in-figure label and is
+  retained.
+- **Caption bands removed from all 13 whole-plate assets** (1.1, 1.2, 1.3,
+  1.4, 1.6, 1.7, 1.8, 1.9, 1.10, 1.12, 1.13, 1.14, 1.15) — every one had the
+  NCERT "Figure 1.x …" line baked in, doubling the template caption in the
+  PDF. Bottom-only in-place crops at pixel-precise lines (row-ink profile +
+  cream-box detection; cut 10 px above the first caption line / 3 px above
+  the cream box top; fig_1_9 cut also removes the page-number "12" box and
+  grey margin bars; fig_1_2 and fig_1_10 cuts also remove a partial prose
+  line that sat below the caption). The current source raster proved
+  registration-shifted against the committed assets (fig_1_1's "Style"
+  label test), so re-rendering was rejected in favour of cropping the
+  verified raster in place — top/left/right edges untouched. Audit: 0 dark
+  ink in the final 20 px of every new bottom edge; all 13 bottom edges
+  visually verified; all 10 embedded whole plates checked in PDF context.
+  Backups: `scratch/ch1_gate1/assets_backup_precaption/` (pre-crop) and
+  `scratch/ch1_gate1/assets_backup/` (pre-session).
+- **No Facts row touched; no label changed.** Rebuild: 18 A4 pages,
+  `check_pdf.py` exit 0 (0 fail / 0 warn), 108/108 labels, 255/255 ticked,
+  107 plates no collision.
