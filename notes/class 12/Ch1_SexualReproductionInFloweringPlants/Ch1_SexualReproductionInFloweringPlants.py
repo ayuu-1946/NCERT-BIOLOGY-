@@ -50,7 +50,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer, Table, TableStyle, Image as RLImage, KeepTogether  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, Table, TableStyle, Image as RLImage, KeepTogether, PageBreak  # noqa: E402
 from reportlab.lib.units import cm  # noqa: E402
 from reportlab.lib import colors  # noqa: E402
 
@@ -63,28 +63,49 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
 
-def compact_figure_row(columns, caption_text, total_width_cm=15.9):
+def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=None,
+                       fill_columns=None):
     """Place source-preserving figure panels horizontally with 5 pt padding.
 
     Each column is either an asset name or a list of asset names to stack
     vertically inside that column. Pixels are never masked or reconstructed.
+    `fractions` optionally sets per-column width fractions (default: equal).
+    `caption_text=None` returns the bare row (no caption flowable) — used when
+    one figure spans several rows and the caption is attached once, after the
+    last row (Fig 1.12, 2026-09-23).
+    `fill_columns` optionally makes selected columns use their full cell width.
     """
     n = len(columns)
-    cell_w = total_width_cm * cm / n
-    def img_flow(asset_name):
+    if fractions is None:
+        fractions = [1.0 / n] * n
+    cell_ws = [total_width_cm * cm * f for f in fractions]
+    def img_flow(asset_name, cell_w, fill=False):
         path = os.path.join(ASSETS, asset_name)
         from PIL import Image as PILImage
         with PILImage.open(path) as im:
             w, h = im.size
         max_w = cell_w - 10
         natural_w = w / 300.0 * 2.54 * cm
-        width = min(max_w, natural_w)
+        # Fig. 1.5 is assembled from low-resolution crops. Let those panels
+        # use the full column width instead of leaving large unused white
+        # areas in the figure frame; all other panels retain their source
+        # calibrated size.
+        width = (max_w * 0.45 if asset_name.startswith("fig_1_5")
+                 else max_w * 0.70 if fill and asset_name == "fig_1_12d.png"
+                 else max_w * 0.55 if fill and asset_name == "fig_1_12e.png"
+                 else max_w if fill else min(max_w, natural_w))
+        # In the space-constrained Fig. 1.12 layout, (a)/(b) are contextual
+        # thumbnails while (c)-(e) carry the key explanatory detail. Shrink
+        # only those two lower-priority panels to release vertical space.
+        if asset_name in {"fig_1_12a.png", "fig_1_12b.png"}:
+            width = min(max_w, natural_w) * 0.45
         height = width * h / w
         return RLImage(path, width=width, height=height)
     cells = []
-    for col in columns:
+    fill_columns = set(fill_columns or ())
+    for col_index, (col, cell_w) in enumerate(zip(columns, cell_ws)):
         names = [col] if isinstance(col, str) else col
-        inner = Table([[img_flow(name)] for name in names], colWidths=[cell_w])
+        inner = Table([[img_flow(name, cell_w, col_index in fill_columns)] for name in names], colWidths=[cell_w])
         inner.setStyle(TableStyle([
             ("BOX", (0, 0), (-1, -1), 0.5, colors.HexColor("#555555")),
             ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
@@ -95,7 +116,7 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9):
             ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
         ]))
         cells.append(inner)
-    row = Table([cells], colWidths=[cell_w] * n)
+    row = Table([cells], colWidths=cell_ws)
     row.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
         ("LEFTPADDING", (0, 0), (-1, -1), 0),
@@ -103,7 +124,28 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9):
         ("TOPPADDING", (0, 0), (-1, -1), 0),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
     ]))
+    if caption_text is None:
+        return row
     return KeepTogether([row, Paragraph(caption_text, STYLES["Caption"])])
+
+
+def stacked_figure_panels(asset_names, caption_text, max_width_cm=15.9, scale=1.0):
+    """Stack independent image flowables without a shared table cell."""
+    flowables = []
+    max_width = max_width_cm * cm
+    from PIL import Image as PILImage
+    for asset_name in asset_names:
+        path = os.path.join(ASSETS, asset_name)
+        with PILImage.open(path) as im:
+            w, h = im.size
+        natural_width = w / 300.0 * 2.54 * cm
+        width = min(max_width, natural_width) * scale
+        image = RLImage(path, width=width, height=width * h / w)
+        image.hAlign = "CENTER"
+        flowables.append(image)
+    if caption_text:
+        flowables.append(Paragraph(caption_text, STYLES["Caption"]))
+    return KeepTogether(flowables)
 
 
 def body(text):
@@ -454,7 +496,7 @@ story.append(figure(
     "micropylar end, nucellus, megaspore mother cell, megaspore dyad, megaspore tetrad, "
     "synergids, egg, central cell, 2 polar nuclei, antipodals, chalazal end, polar nuclei, "
     "filiform apparatus.",
-    max_width_cm=15.0))
+    max_width_cm=11.0))
 
 # ---- 1.2.2 Female gametophyte (F103-F115) ----
 story.append(heading("1.2.2", "Female gametophyte", level=3))
@@ -719,15 +761,23 @@ story.append(body(
     "the <b>synergid</b> with its <b>filiform apparatus</b>, the <b>egg cell</b> and its "
     "<b>egg nucleus</b> bounded by the <b>plasma membrane</b>, the <b>central cell</b> with "
     "the <b>polar nuclei</b>, and an <b>antipodal</b> cell at the far end."))
-story.append(compact_figure_row(
-    ["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png", "fig_1_12d.png", "fig_1_12e.png"],
-    "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
-    "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
-    "view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of "
-    "male gametes into a synergid and the movements of the sperms, one into the egg and the "
-    "other into the central cell. Labelled: pollen tube, antipodal, polar nuclei, egg cell, "
-    "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
-    "vegetative nucleus."))
+# Fig 1.12 - two horizontal rows per operator instruction (2026-09-23):
+# (a)(b)(c) on one line, then (d)(e). Single caption after the second row,
+# written by the template rule (the assets carry no caption text — the baked
+# "Figure 1.12 ..." line stays out of every 1.12 asset, verified on the p16
+# 4x grid: caption box sits at source y~470-543, below all five panels).
+story.append(KeepTogether([
+    compact_figure_row(["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png"], None),
+    compact_figure_row(["fig_1_12d.png", "fig_1_12e.png"], None, fill_columns={0, 1}),
+    Paragraph(
+        "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
+        "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
+        "view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of "
+        "male gametes into a synergid and the movements of the sperms, one into the egg and the "
+        "other into the central cell. Labelled: pollen tube, antipodal, polar nuclei, egg cell, "
+        "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
+        "vegetative nucleus.", STYLES["Caption"]),
+]))
 story.append(note(
     "<b>Artificial hybridisation</b> is one of the <b>major approaches of crop improvement "
     "programme</b>. Two techniques make sure that only the desired pollen reaches the stigma. "
@@ -910,13 +960,19 @@ story.append(body(
     "false fruits it labels the <b>thalamus</b> that has grown into the fleshy part, the "
     "<b>pericarp</b> with its <b>mesocarp</b> and <b>endocarp</b>, the <b>seed</b> inside, and "
     "the tiny one-seeded <b>achene</b> fruits sitting on the surface of the strawberry."))
-story.append(figure(
-    "fig_1_15.png",
+# Fig 1.15 split into its labelled source panels and stacked vertically.
+# This preserves the requested (a)-above-(b) reading order while removing the
+# unused internal whitespace from the former stacked whole-plate asset.
+# Put panel (a) into the available space at the bottom of page 14. Panel (b)
+# starts the next page so the two assets remain genuinely independent.
+story.append(stacked_figure_panels(["fig_1_15a.png"], None, scale=1.00))
+story.append(PageBreak())
+story.append(stacked_figure_panels(
+    ["fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
-    "thalamus, seed, endocarp, mesocarp, achene.",
-    max_width_cm=15.5))
+    "thalamus, seed, endocarp, mesocarp, achene.", scale=0.65))
 story.append(body("<b>Why seed formation is an advantage.</b>"))
 story.append(b1(
     " <b>Seed formation is more dependable</b>, because pollination and fertilisation are no "

@@ -1,20 +1,47 @@
 """Figure extraction for Class 12 Ch1 - Sexual Reproduction in Flowering Plants.
 
-SOURCE IS A RASTER SCAN. Unlike Ch5, this PDF has NO text layer and NO vector
-drawings: every page is a single full-page image (1105x1482 px, ~130 dpi
-native). Consequences for the skill's three-part audit:
+SOURCE IS A TILED RASTER SCAN. (Corrected 2026-09-22: this file previously
+claimed the PDF had NO text layer and was "a single full-page image" -- both
+false for the source on disk; see the Ch1 inventory Gate 1 record.) The
+current file carries a text layer for the BODY PROSE (~880-3,200 chars/page),
+but the in-figure labels are ABSENT from it (baked into the raster). Pages
+are tiled (e.g. 260 image objects on p8), and page.get_drawings() returns
+tens of thousands of tiny fragments (e.g. 25,778 on p8). Consequences for the
+skill's three-part audit:
 
-  * Check A (text-layer word grazing) is VACUOUS -- page.get_text("words")
-    returns [] on every page.
-  * Check B (drawings-extent overflow) is VACUOUS -- page.get_drawings()
-    returns [] on every page.
+  * Check A (text-layer word grazing) is live for body prose (a crop that
+    bleeds a prose column is caught) but VACUOUS for in-figure labels, which
+    are not in the text layer -- a crop that clips a baked label passes A.
+  * Check B (drawings-extent overflow) is UNUSABLE -- the tiling fragments
+    flood the union; lean on C and the eyeball.
   * Check C (border-band ink) still works, and is extended in audit_figures.py
     by an ink-projection check that measures the tight ink bbox INSIDE each
     rect and asserts a whitespace margin on all four sides. That margin is
     what proves nothing was clipped, since B cannot say so here.
 
-Rects are in PDF points. Pages 1-20 and 22-25 are 612.0 x 820.8; page 21 is
-595.4 x 842.4 (A4) -- do not reuse a page-20 x-coordinate on page 21.
+Rects are in PDF points, in pymupdf page.rect (CropBox) coordinates: pages
+1-20 and 22-25 are 568.8 x 777.6 and page 21 is 551.8 x 798.8, each sitting
+in a larger MediaBox (612 x 820.8 / 595.4 x 842.4) -- do not reuse a
+page-20 x-coordinate on page 21.
+
+CAUTION (2026-09-23): the shipped WHOLE-PLATE assets have been bottom-cropped
+in place to remove the baked "Figure 1.x ..." caption band (the template
+writes captions by rule -- see figure_layout_decisions.md D5). The rects
+below intentionally still record the source-side geometry with y1 down to
+the caption, so a fresh render of a rect will be TALLER than the shipped
+asset. Do not "restore" the caption bands.
+
+WARNING -- DESTRUCTIVE: this script writes over notes/.../assets/ in place
+AND its FIGS list renders two whole-plate files that are not part of the
+committed 30-file asset set (fig_1_5.png, fig_1_11.png) -- a fresh run
+leaves 32 files behind. Back up assets/ before running it (the 2026-09-22
+Gate 1 session lost one asset set to an un-backuped re-run before restoring
+from scratch/ch1_gate1/assets_backup/, and had to delete the two stray
+whole plates). Also note: the shipped assets/ is a provenance mix (10
+supplied-reference + 3 source-scan + 17 source-scan cuts from an earlier
+raster of the same pages), so a fresh run of this script will NOT reproduce
+the shipped assets byte-for-byte -- re-audit per the skill before replacing
+anything.
 
 Conventions for this chapter:
   * Captions ARE included in the crop (the "Figure 1.N ..." line sits inside
