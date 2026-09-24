@@ -931,17 +931,15 @@ story.append(body(
     "false fruits it labels the <b>thalamus</b> that has grown into the fleshy part, the "
     "<b>pericarp</b> with its <b>mesocarp</b> and <b>endocarp</b>, the <b>seed</b> inside, and "
     "the tiny one-seeded <b>achene</b> fruits sitting on the surface of the strawberry."))
-# Fig 1.15 kept as the STACKED whole plate: (a) above (b) inside one image,
-# per operator instruction 2026-09-23 ("do not stack 1.15's a and b
-# side-by-side"). The 2026-09-22 60/40 horizontal row (D3) was reverted —
-# see figure_layout_decisions.md D3 (superseded) + D4.
-story.append(figure(
-    "fig_1_15.png",
+# Fig 1.15 split into its labelled source panels and placed side-by-side.
+# This preserves both panels while eliminating the large vertical whitespace
+# created by the former stacked whole-plate asset.
+story.append(compact_figure_row(
+    ["fig_1_15a.png", "fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
-    "thalamus, seed, endocarp, mesocarp, achene.",
-    max_width_cm=15.5))
+    "thalamus, seed, endocarp, mesocarp, achene."))
 story.append(body("<b>Why seed formation is an advantage.</b>"))
 story.append(b1(
     " <b>Seed formation is more dependable</b>, because pollination and fertilisation are no "
