@@ -1,0 +1,635 @@
+
+===== PDF PAGE 1 =====
+Sexual Reproduction in Flowering Plants
+Reproduction becomes a vital process without which species cannot survive for long. Each individual leaves
+its progeny by asexual or sexual means. The sexual mode of reproduction enables creation of new variants, so that
+survival advantage is enhanced.
+1.1
+FLOWER — A FASCINATING ORGAN OF ANGIOSPERMS
+Human beings have had an intimate relationship with flowers since time immemorial. All flowering plants show
+sexual reproduction, and the fruits and seeds we use are the end products of sexual reproduction. To a
+biologist, flowers are morphological and embryological marvels and the sites of sexual reproduction.
+The two units of sexual reproduction do not develop in the same place: the male unit develops in the anther and
+the female unit in the ovary.
+In a longitudinal section (L.S.) of a typical flower, the parts labelled in the figure are, from outside inwards, the
+sepal and the petal of the outer protective and attractive whorls, then the male part made of the anther borne on its
+filament, and the female part made of the stigma at the top, the style beneath it and the swollen ovary at the base.
+Fig. 1.1 — A diagrammatic representation of L.S. of a flower. Labelled: stigma, style, anther, petal, filament, sepal, ovary.
+1.2
+PRE-FERTILISATION : STRUCTURES AND EVENTS
+Much before the actual flower is seen on a plant, the decision that the plant is going to flower has taken place.
+Several hormonal and structural changes are initiated which lead to the differentiation and further development of
+the floral primordium. Inflorescences are formed which bear the floral buds and then the flowers.
+The androecium consists of a whorl of stamens representing the male reproductive organ; the gynoecium
+represents the female reproductive organ.
+1.2.1
+Stamen, Microsporangium and Pollen Grain
+A typical stamen has two parts — the filament, the long and slender stalk, and the anther, the terminal generally
+bilobed structure. The proximal end of the filament is attached to the thalamus or the petal of the flower. The
+number and length of stamens are variable in flowers of different species.
+• A typical angiosperm anther is bilobed, with each lobe having two theca — that is, they are dithecous. Often a
+longitudinal groove runs lengthwise separating the theca.
+
+===== PDF PAGE 2 =====
+• The anther is a four-sided (tetragonal) structure consisting of four microsporangia located at the corners, two
+in each lobe. Because it carries four microsporangia, a typical anther is also described as tetrasporangiate.
+• The microsporangia develop further and become pollen sacs. They extend longitudinally all through the length
+of an anther and are packed with pollen grains.
+The figure below labels the filament (stalk) and the anther of the stamen, and in the cut anther the four pollen
+sacs full of pollen grains, together with the line of dehiscence along which the anther will later split open.
+Fig. 1.2 — (a) A typical stamen; (b) three-dimensional cut section of an anther. Labelled: anther, pollen grains, pollen sacs, line of
+dehiscence, filament (stalk).
+1.2.1
+Structure of microsporangium
+In a transverse section, a typical microsporangium appears near circular in outline. It is generally surrounded by
+four wall layers — the epidermis, endothecium, middle layers and the tapetum.
+Wall layer (outside to inside)
+Function
+Epidermis
+One of the outer three layers: protection, and helps in dehiscence of the anther to release the
+pollen
+Endothecium
+As above — protection and dehiscence
+Middle layers
+As above — protection and dehiscence
+Tapetum (innermost)
+Nourishes the developing pollen grains. Its cells possess dense cytoplasm and generally have
+more than one nucleus
+A group of compactly arranged homogenous cells called the sporogenous tissue occupies the centre of each
+microsporangium.
+In the figure below, the young anther shows the epidermis, the endothecium, the middle layers and the tapetum
+enclosing the sporogenous tissue and its microspore mother cells; the sterile tissue joining the two lobes is the
+connective, and the dehisced anther has shed its pollen grains.
+
+===== PDF PAGE 3 =====
+Fig. 1.3 — (a) Transverse section of a young anther; (b) Enlarged view of one microsporangium showing wall layers; (c) A mature
+dehisced anther. Labelled: connective, epidermis, endothecium, sporogenous tissue, tapetum, middle layers, microspore mother
+cells, pollen grains.
+1.2.1
+Microsporogenesis
+As the anther develops, the cells of the sporogenous tissue undergo meiotic divisions to form microspore
+tetrads. Each such cell is a potential pollen or microspore mother cell.
+Microsporogenesis — the process of formation of microspores from a pollen mother cell (PMC) through
+meiosis.
+1
+Sporogenous tissue in the centre of the microsporangium: compact, homogenous cells, each a potential
+pollen mother cell (PMC) or microspore mother cell.
+2
+Meiosis in the PMC.
+3
+Microspore tetrad — the microspores, as they are formed, are arranged in a cluster of four cells.
+4
+As the anthers mature and dehydrate, the microspores dissociate from each other and develop into pollen
+grains.
+5
+Inside each microsporangium several thousands of microspores or pollen grains are formed, and they are
+released with the dehiscence of the anther.
+1.2.1
+Pollen grain
+The pollen grains represent the male gametophytes. Pollen grains are generally spherical, measuring about 25-50
+micrometers in diameter. It has a prominent two-layered wall.
+• Exine — the hard outer layer, made up of sporopollenin, which is one of the most resistant organic material
+known. It can withstand high temperatures and strong acids and alkali, and no enzyme that degrades
+sporopollenin is so far known.
+
+===== PDF PAGE 4 =====
+• The exine has prominent apertures called germ pores where sporopollenin is absent. Because of the presence of
+sporopollenin, pollen grains are well-preserved as fossils.
+• Intine — the inner wall of the pollen grain, a thin and continuous layer made up of cellulose and pectin.
+• The cytoplasm of the pollen grain is surrounded by a plasma membrane.
+Contents of a mature pollen grain. When the pollen grain is mature it contains two cells, the vegetative cell and
+the generative cell.
+Cell
+Size and contents
+Vegetative cell
+Bigger; has abundant food reserve and a large irregularly shaped nucleus
+Generative cell
+Small, and floats in the cytoplasm of the vegetative cell; spindle shaped with dense cytoplasm
+and a nucleus
+• In over 60 per cent of angiosperms, pollen grains are shed at this 2-celled stage.
+• In the remaining species, the generative cell divides mitotically to give rise to the two male gametes before
+pollen grains are shed (3-celled stage).
+Fig. 1.4 — Scanning electron micrographs of a few pollen grains. The micrographs show the sculptured exine of pollen of different
+species; this plate carries no in-figure labels.
+The maturation series in the figure below labels the vacuoles of the young microspore and its nucleus, the
+asymmetric spindle of the unequal division that follows, and the resulting vegetative cell and generative cell of
+the mature 2-celled pollen grain.
+Fig. 1.5 — (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore maturing into a pollen grain. Labelled: vacuoles,
+nucleus, asymmetric spindle, vegetative cell, generative cell.
+[NOTE] Pollen grains of many species cause severe allergies and bronchial afflictions, leading to chronic
+respiratory disorders — asthma, bronchitis, etc. Parthenium or carrot grass, which came into India as a
+contaminant with imported wheat, has become ubiquitous and causes pollen allergy.
+
+===== PDF PAGE 5 =====
+Pollen grains are rich in nutrients. Pollen tablets are used as food supplements, and such consumption is claimed
+to increase the performance of athletes and race horses.
+Fig. 1.6 — Pollen products. The plate shows commercial pollen tablets and syrups sold as food supplements; it carries no in-figure
+labels.
+Viability of pollen grains. Pollen grains have to land on the stigma before they lose viability if they have to bring
+about fertilisation. The period for which pollen grains remain viable is highly variable and depends on the
+prevailing temperature and humidity.
+Group
+Viability of shed pollen
+Some cereals — rice, wheat
+Lose viability within 30 minutes of release
+Some members of Rosaceae, Leguminoseae
+and Solanaceae
+Maintain viability for months
+Stored pollen (a large number of species)
+Can be stored for years in liquid nitrogen (minus 196 degrees C); such stored
+pollen is used as pollen banks, similar to seed banks, in crop breeding programmes
+1.2.2
+The Pistil, Megasporangium (ovule) and Embryo sac
+The gynoecium represents the female reproductive part of the flower. The gynoecium may consist of a single pistil
+(monocarpellary) or may have more than one pistil (multicarpellary). When there is more than one, the pistils
+may be fused together (syncarpous) or may be free (apocarpous).
+Each pistil has three parts — the stigma, style and ovary.
+• Stigma — serves as a landing platform for pollen grains.
+• Style — the elongated slender part beneath the stigma.
+• Ovary — the basal bulged part of the pistil. Inside the ovary is the ovarian cavity (locule), and the placenta is
+located inside the ovarian cavity.
+• Arising from the placenta are the megasporangia, commonly called ovules. The number of ovules in an ovary
+may be one (wheat, paddy, mango) to many (papaya, water melon, orchids).
+[NOTE] Class XI recall — placentation. The arrangement of ovules on the placenta inside the ovary is called
+placentation, and its types (marginal, axile, parietal, basal, free central) were studied with flower morphology in
+Class XI; this chapter assumes that recall and does not redefine them.
+The figure below labels the stigma, style and ovary of the pistil standing on the thalamus, the syncarpous ovary
+whose fused carpels are visible in section, and, in the ovule, the funicle, the hilum, the micropyle at the
+micropylar pole, the outer integument and inner integument, the nucellus, the embryo sac and the chalazal
+pole at the opposite end.
+
+===== PDF PAGE 6 =====
+Fig. 1.7 — (a) A dissected flower of Hibiscus showing pistil (other floral parts have been removed); (b) Multicarpellary,
+syncarpous pistil of Papaver; (c) A multicarpellary, apocarpous gynoecium of Michelia; (d) A diagrammatic view of a typical
+anatropous ovule. Labelled: stigma, style, ovary, thalamus, syncarpous ovary, carpels, hilum, funicle, micropyle, micropylar pole,
+outer integument, inner integument, nucellus, embryo sac, chalazal pole.
+1.2.2
+The Megasporangium (Ovule)
+Let us familiarise ourselves with the structure of a typical angiosperm ovule.
+• The ovule is a small structure attached to the placenta by means of a stalk called funicle.
+• The body of the ovule fuses with the funicle in the region called hilum; thus, hilum represents the junction
+between ovule and funicle.
+• Each ovule has one or two protective envelopes called integuments. Integuments encircle the nucellus except
+at the tip, where a small opening called the micropyle is organised.
+• Opposite the micropylar end is the chalaza, representing the basal part of the ovule.
+• Enclosed within the integuments is a mass of cells called the nucellus. Cells of the nucellus have abundant
+reserve food materials. It is within this central nucellar tissue that the archesporium differentiates, and a cell
+of the archesporium becomes the megaspore mother cell.
+• Located in the nucellus is the embryo sac or female gametophyte. An ovule generally has a single embryo sac
+formed from a megaspore.
+1.2.2
+Megasporogenesis
+Megasporogenesis — the process of formation of megaspores from the megaspore mother cell.
+• Ovules generally differentiate a single megaspore mother cell (MMC) in the micropylar region of the
+nucellus. It is a large cell containing dense cytoplasm and a prominent nucleus.
+• The MMC undergoes meiotic division. Meiosis results in the production of four megaspores.
+The figure below labels the micropylar end and the chalazal end of the ovule, the nucellus carrying the large
+megaspore mother cell, then the megaspore dyad and the megaspore tetrad; in the mature embryo sac it labels
+the two synergids with their filiform apparatus, the egg, the central cell with its 2 polar nuclei (also labelled
+simply as polar nuclei), and the three antipodals.
+
+===== PDF PAGE 7 =====
+Fig. 1.8 — (a) Parts of the ovule showing a large megaspore mother cell, a dyad and a tetrad of megaspores; (b) 2, 4, and
+8-nucleate stages of embryo sac and a mature embryo sac; (c) A diagrammatic representation of the mature embryo sac. Labelled:
+micropylar end, nucellus, megaspore mother cell, megaspore dyad, megaspore tetrad, synergids, egg, central cell, 2 polar nuclei,
+antipodals, chalazal end, polar nuclei, filiform apparatus.
+1.2.2
+Female gametophyte
+In a majority of flowering plants, one of the megaspores is functional while the other three degenerate. Only
+the functional megaspore develops into the female gametophyte (embryo sac); this method of development of the
+embryo sac from a single megaspore is termed monosporic development.
+1
+Functional megaspore — its nucleus divides mitotically to form two nuclei which move to the opposite
+poles, forming the 2-nucleate embryo sac.
+2
+Two more sequential mitotic nuclear divisions result in the formation of the 4-nucleate and later the
+8-nucleate stages of the embryo sac. These mitotic divisions are strictly free nuclear — that is, nuclear
+divisions are not followed immediately by cell wall formation.
+3
+After the 8-nucleate stage, cell walls are laid down, leading to the organisation of the typical female
+gametophyte or embryo sac.
+4
+Six of the eight nuclei are surrounded by cell walls and organised into cells; the remaining two nuclei, called
+polar nuclei, are situated below the egg apparatus in the large central cell.
+Position in the embryo
+sac
+Cells
+Notes
+Micropylar end
+Egg apparatus — three cells grouped together:
+two synergids and one egg cell
+The synergids have special cellular thickenings at
+the micropylar tip called the filiform apparatus,
+which play an important role in guiding the
+pollen tubes into the synergid
+Chalazal end
+Three cells called the antipodals
+—
+Centre
+The large central cell
+Has two polar nuclei
+[NOTE] A typical angiosperm embryo sac, at maturity, though 8-nucleate is 7-celled — six organised cells (2
+synergids + 1 egg + 3 antipodals) plus the one large central cell that still holds two free polar nuclei.
+
+===== PDF PAGE 8 =====
+[MEMORY AID - not in NCERT] Embryo sac census — "2 + 1 + 3 + 1 = 7 cells, 8 nuclei": 2 synergids, 1 egg, 3
+antipodals, 1 central cell; the central cell alone carries 2 nuclei, which is where the extra nucleus comes from.
+1.2.3
+Pollination
+In the preceding sections you have learnt that the male and female gametes in flowering plants are produced in the
+pollen grain and embryo sac, respectively. As both types of gametes are non-motile, they have to be brought
+together for fertilisation to occur.
+Pollination — transfer of pollen grains (shed from the anther) to the stigma of a pistil.
+1.2.3
+Kinds of Pollination
+Depending on the source of pollen, pollination can be divided into three types.
+Type
+Pollen travels from ... to ...
+Genetic consequence
+Autogamy
+Anther to the stigma of the same flower
+Self-pollination
+Geitonogamy
+Anther to the stigma of another flower of the
+same plant
+Functionally cross-pollination (needs a pollinating agent),
+but genetically similar to autogamy, since the pollen
+grains come from the same plant
+Xenogamy
+Anther to the stigma of a different plant
+The only type of pollination which during pollination
+brings genetically different types of pollen grains to the
+stigma
+1.2.3
+Autogamy
+In this type, pollination is achieved within the same flower — pollen is transferred from the anther to the stigma
+of the same flower. In a normal flower which opens and exposes the anthers and the stigma, complete autogamy is
+rather rare. Autogamy in such flowers requires synchrony in pollen release and stigma receptivity, and also,
+the anthers and the stigma should lie close to each other.
+Fig. 1.9 — (a) Self-pollinated flowers; (b) Cross-pollinated flowers; (c) Cleistogamous flowers.
+Some plants produce two kinds of flowers:
+• Chasmogamous flowers — similar to flowers of other species, with exposed anthers and stigma (for example
+Viola, Oxalis and Commelina). The chasmogamous flower is the one labelled in the figure below alongside the
+closed buds.
+• Cleistogamous flowers — which do not open at all. Cleistogamous flowers are invariably autogamous, as
+there is no chance of cross-pollen landing on the stigma, and they produce assured seed-set even in the
+absence of pollinators.
+1.2.3
+Geitonogamy
+Transfer of pollen grains from the anther to the stigma of another flower of the same plant. Although
+geitonogamy is functionally cross-pollination involving a pollinating agent, genetically it is similar to autogamy
+since the pollen grains come from the same plant.
+1.2.3
+Xenogamy
+Transfer of pollen grains from anther to the stigma of a different plant. This is the only type of pollination
+which during pollination brings genetically different types of pollen grains to the stigma.
+
+===== PDF PAGE 9 =====
+1.2.3
+Agents of Pollination
+Plants use two abiotic (wind and water) and one biotic (animals) agents to achieve pollination. Majority of
+plants use biotic agents for pollination; only a small proportion of plants use abiotic agents.
+Because pollen transfer by abiotic agents is not directed towards the target, the flowers produce enormous amount
+of pollen when compared to the number of ovules available for pollination.
+Abiotic agent
+Facts to remember
+Wind
+Pollination by wind is more common amongst abiotic pollinations. It requires pollen grains that are light
+and non-sticky. Such flowers often possess well-exposed stamens so that the pollen is easily dispersed, and
+a large often-feathery stigma to easily trap air-borne pollen grains. Wind-pollinated flowers often have a
+single ovule in each ovary and numerous flowers packed into an inflorescence; a familiar example is the
+corn cob. Wind-pollination is quite common in grasses.
+Water
+Pollination by water is quite rare in flowering plants and is limited to about 30 genera, mostly
+monocotyledons. (Water is, however, a regular mode of transport for the male gametes among the lower
+plant groups such as algae, bryophytes and pteridophytes.) Examples: Vallisneria and Hydrilla, and
+several marine sea-grasses such as Zostera. In Vallisneria, the female flower reaches the surface of water by
+its long stalk and the male flowers or pollen grains are released on to the surface of water. In another group,
+such as seagrasses, female flowers remain submerged in water and the pollen grains are released inside the
+water; in these the pollen is long, ribbon like. In most of the water-pollinated species, pollen grains are
+protected from wetting by a mucilaginous covering.
+[NOTE] Both wind and water pollinated flowers are not very colourful and do not produce nectar. Colour and
+nectar are advertisements aimed at animals, and an abiotic agent cannot be advertised to.
+Fig. 1.10 — A wind-pollinated plant showing compact inflorecence and well-exposed stamens. This photographic plate carries no
+in-figure labels.
+In the water-pollination panel of the figure below, the female flower of Vallisneria is labelled at the water surface
+with its stigma exposed, and the released male flower is labelled floating towards it.
+
+===== PDF PAGE 10 =====
+Fig. 1.11 — (a) Pollination by water in Vallisneria; (b) Insect pollination. Labelled: female flower, stigma, male flower.
+Biotic agents (animals). Bees, butterflies, flies, beetles, wasps, ants, moths, birds (sunbirds and humming
+birds) and bats are the common pollinating agents. Among the animals, insects, particularly bees are the
+dominant biotic pollinating agents. Even larger animals such as some primates (lemurs), arboreal
+(tree-dwelling) rodents, or even reptiles (gecko lizard and garden lizard) have also been reported as pollinators.
+• Majority of insect-pollinated flowers are large, colourful, fragrant and rich in nectar. When the flowers are
+small, a number of flowers are clustered into an inflorescence to make them conspicuous.
+• The flowers pollinated by flies and beetles secrete foul odours to attract these animals.
+• Nectar and pollen grains are the usual floral rewards. Pollen of animal-pollinated flowers is generally sticky,
+so the visiting animal gets a coating of pollen on its body and brings about pollination on contact with the stigma
+of the next flower.
+• In some species floral rewards are in providing safe places to lay eggs; an example is that of the tallest flower of
+Amorphophallus (the flower itself is about 6 feet in height).
+• A similar relationship exists between a species of moth and the plant Yucca, where both species — moth and
+the plant — cannot complete their life cycles without each other.
+• Many floral visitors consume pollen or nectar without bringing about pollination. Such floral visitors are
+referred to as pollen/nectar robbers.
+1.2.3
+Outbreeding Devices
+Majority of flowering plants produce hermaphrodite flowers and pollen grains are likely to come in contact
+with the stigma of the same flower. Continued self-pollination result in inbreeding depression. Flowering plants
+have therefore developed many devices to discourage self-pollination and to encourage cross-pollination.
+Device
+How it prevents selfing
+1. Non-synchrony
+Pollen release and stigma receptivity are not synchronised — either the pollen is released
+before the stigma becomes receptive, or the stigma becomes receptive much before the release of
+pollen
+2. Different positions
+The anther and stigma are placed at different positions so that the pollen cannot come in
+contact with the stigma of the same flower
+3. Self-incompatibility
+A genetic mechanism; it prevents self-pollen (from the same flower or other flowers of the
+same plant) from fertilising the ovules by inhibiting pollen germination or pollen tube growth
+in the pistil
+4. Unisexual flowers
+Production of unisexual flowers. If both male and female flowers are present on the same plant
+(monoecious, as in castor and maize), autogamy is prevented but not geitonogamy. If male and
+female flowers are on different plants (dioecious, as in papaya), both autogamy and
+geitonogamy are prevented
+
+===== PDF PAGE 11 =====
+1.2.3
+Pollen-pistil Interaction
+Pollination does not guarantee the transfer of the right type of pollen (compatible pollen of the same species as
+the stigma). The pistil has the ability to recognise the pollen, whether it is of the right type (compatible) or of the
+wrong type (incompatible).
+• If it is of the right type, the pistil accepts the pollen and promotes post-pollination events that leads to
+fertilisation.
+• If the pollen is of the wrong type, the pistil rejects the pollen by preventing pollen germination on the stigma or
+the pollen tube growth in the style.
+• This dialogue is mediated by chemical components of the pollen interacting with those of the pistil.
+1
+The pollen grain germinates on the stigma to produce a pollen tube through one of the germ pores.
+2
+The pollen tube grows through the tissues of the stigma and style and reaches the ovary.
+3
+Male gametes: in plants that shed pollen in the two-celled condition, the generative cell divides and forms
+the two male gametes during the growth of pollen tube in the stigma; in plants which shed pollen in the
+three-celled condition, pollen tubes carry the two male gametes from the beginning.
+4
+The pollen tube, after reaching the ovary, enters the ovule through the micropyle and then enters one of
+the synergids through the filiform apparatus.
+Pollen-pistil interaction — all these events, from pollen deposition on the stigma until pollen tubes enter the
+ovule.
+The figure below labels the growing pollen tube with its vegetative nucleus and the male gametes it carries, and,
+in the enlarged egg apparatus, the synergid with its filiform apparatus, the egg cell and its egg nucleus bounded
+by the plasma membrane, the central cell with the polar nuclei, and an antipodal cell at the far end.
+Fig. 1.12 — (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing through the style; (c) L.S. of pistil showing path
+of pollen tube growth; (d) enlarged view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of male
+gametes into a synergid and the movements of the sperms, one into the egg and the other into the central cell. Labelled: pollen
+tube, antipodal, polar nuclei, egg cell, synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes,
+vegetative nucleus.
+
+===== PDF PAGE 12 =====
+[NOTE] Artificial hybridisation is one of the major approaches of crop improvement programme. Two techniques
+make sure that only the desired pollen reaches the stigma. Emasculation — removal of anthers from the flower bud
+before the anther dehisces, using a pair of forceps. Bagging — emasculated flowers have to be covered with a bag
+of suitable size, generally made up of butter paper, to prevent contamination of its stigma with unwanted pollen. If
+the female parent produces unisexual flowers, there is no need for emasculation — the female flower buds are
+simply bagged before they open.
+1.3
+DOUBLE FERTILISATION
+After entering one of the synergids, the pollen tube releases the two male gametes into the cytoplasm of the
+synergid. Two fusions then follow.
+1
+Syngamy. One of the male gametes moves towards the egg cell and fuses with its nucleus, thus completing
+syngamy. This results in the formation of a diploid cell, the zygote.
+2
+Triple fusion. The other male gamete moves towards the two polar nuclei located in the central cell and
+fuses with them to produce a triploid primary endosperm nucleus (PEN). As this involves the fusion of
+three haploid nuclei it is termed triple fusion.
+3
+The central cell after triple fusion becomes the primary endosperm cell (PEC) and develops into the
+endosperm, while the zygote develops into an embryo.
+Double fertilisation — since two types of fusions, syngamy and triple fusion, take place in an embryo sac, the
+phenomenon is termed double fertilisation, an event unique to flowering plants.
+1.4
+POST-FERTILISATION : STRUCTURES AND EVENTS
+Following double fertilisation, events of endosperm and embryo development, maturation of ovule(s) into
+seed(s) and ovary into fruit, are collectively termed post-fertilisation events.
+1.4.1
+Endosperm
+Endosperm development precedes embryo development. The primary endosperm cell divides repeatedly and
+forms a triploid endosperm tissue. The cells of this tissue are filled with reserve food materials and are used for
+the nutrition of the developing embryo.
+1
+In the most common type of endosperm development, the PEN undergoes successive nuclear divisions to
+give rise to free nuclei. This stage of endosperm development is called free-nuclear endosperm.
+2
+Subsequently cell wall formation occurs and the endosperm becomes cellular.
+[NOTE] The coconut water from tender coconut is nothing but free-nuclear endosperm (made up of thousands of
+nuclei), and the surrounding white kernel is the cellular endosperm.
+Endosperm may either be completely consumed by the developing embryo (e.g., pea, groundnut, beans) before
+seed maturation, or it may persist in the mature seed (e.g. castor and coconut) and be used up during germination.
+1.4.2
+Embryo
+Embryo develops at the micropylar end of the embryo sac where the zygote is situated. Most zygotes divide
+only after certain amount of endosperm is formed. This is an adaptation to provide assured nutrition to the
+developing embryo.
+The early stages of embryo development (embryogeny) are similar in both monocotyledons and
+dicotyledons: the zygote gives rise to the proembryo and subsequently to the globular and heart-shaped
+embryos, and finally to the mature embryo.
+In the figure below the fertilised embryo sac labels the zygote, the primary endosperm nucleus inside the
+primary endosperm cell, the degenerating synergids at the micropylar end and the degenerating antipodal cells
+at the chalazal end. The embryo series labels the globular embryo, the heart-shaped embryo and the mature
+embryo, in which the suspensor anchors the embryo and the radicle, the cotyledon and the plumule are already
+distinct.
+
+===== PDF PAGE 13 =====
+Fig. 1.13 — (a) Fertilised embryo sac showing zygote and Primary Endosperm Nucleus (PEN); (b) Stages in embryo development
+in a dicot [shown in reduced size as compared to (a)]. Labelled: degenerating synergids, zygote, primary endosperm cell, primary
+endosperm nucleus, degenerating antipodal cells, suspensor, radicle, cotyledon, plumule, globular embryo, heart-shaped embryo.
+Part
+Dicotyledonous embryo
+Monocotyledonous embryo (grass family)
+Cotyledons
+Two cotyledons, borne on an embryonal axis
+Only one cotyledon; in the grass family the cotyledon
+is called scutellum, situated towards one side (lateral)
+of the embryonal axis
+Above the
+cotyledons
+The portion of embryonal axis above the level of
+cotyledons is the epicotyl, which terminates with
+the plumule or stem tip
+Epicotyl has a shoot apex and a few leaf primordia
+enclosed in a hollow foliar structure, the coleoptile
+Below the
+cotyledons
+The cylindrical portion below the level of
+cotyledons is the hypocotyl, that terminates at its
+lower end in the radicle or root tip; the root tip is
+covered with a root cap
+The embryonal axis has the radicle and root cap
+enclosed in an undifferentiated sheath called
+coleorrhiza (also spelt coleorhiza)
+The figure below labels, in the dicot embryo, the plumule, the two cotyledons, the hypocotyl, the radicle and its
+root cap; and in the grass embryo the scutellum, the coleoptile enclosing the shoot apex, the epiblast lying
+opposite the scutellum, and the coleorhiza sheathing the radicle.
+Fig. 1.14 — (a) A typical dicot embryo; (b) L.S. of an embryo of grass. Labelled: plumule, cotyledons, hypocotyl, radicle, root cap,
+scutellum, coleoptile, shoot apex, epiblast, coleorhiza.
+1.4.3
+Seed
+In angiosperms, the seed is the final product of sexual reproduction. It is often described as a fertilised ovule.
+Seeds are formed inside fruits.
+A seed typically consists of seed coat(s), cotyledon(s) and an embryo axis.
+
+===== PDF PAGE 14 =====
+Seed type
+Endosperm at maturity
+Examples
+Non-albuminous
+No residual endosperm, as it is completely consumed during embryo
+development
+Pea, groundnut
+Albuminous
+Retain a part of endosperm, as it is not completely used up during
+embryo development
+Wheat, maize, barley, castor
+Perisperm — in some seeds such as black pepper and beet, remnants of nucellus are also persistent; this
+residual, persistent nucellus is the perisperm.
+• Integuments of ovules harden as tough protective seed coats. The micropyle remains as a small pore in the
+seed coat, which facilitates entry of oxygen and water into the seed during germination.
+• As the seed matures, its water content is reduced and seeds become relatively dry (10-15 per cent moisture by
+mass). The general metabolic activity of the embryo slows down.
+• The embryo may enter a state of inactivity called dormancy, or, if favourable conditions are available (adequate
+moisture, oxygen and suitable temperature), they germinate.
+From ovary to fruit.
+• The wall of the ovary develops into the wall of fruit called pericarp. The fruits may be fleshy as in guava,
+orange, mango, etc., or may be dry, as in groundnut, and mustard, etc.
+• In a few species such as apple, strawberry, cashew, etc., the thalamus also contributes to fruit formation. Such
+fruits are called false fruits. Most fruits however develop only from the ovary and are called true fruits.
+• In a few species, fruits develop without fertilisation. Such fruits are called parthenocarpic fruits; banana is
+one such example. Parthenocarpy can be induced through the application of growth hormones, and such
+fruits are seedless.
+The figure below labels, in the seeds, the seed coat, the micropyle, the cotyledons and the hypocotyl root axis of
+the dicot seed, and the endosperm, scutellum, coleoptile, plumule, radicle, coleorhiza, shoot apical meristem
+and root tip of the grain. In the false fruits it labels the thalamus that has grown into the fleshy part, the pericarp
+with its mesocarp and endocarp, the seed inside, and the tiny one-seeded achene fruits sitting on the surface of
+the strawberry.
+
+===== PDF PAGE 15 =====
+Fig. 1.15 — (a) Structure of some seeds. (b) False fruits of apple and strawberry. Labelled: cotyledons, micropyle, seed coat,
+endosperm, hypocotyl root axis, shoot apical meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp,
+thalamus, seed, endocarp, mesocarp, achene.
+Why seed formation is an advantage.
+• Seed formation is more dependable, because pollination and fertilisation are no longer dependent on water.
+• Seeds have better adaptive strategies for dispersal to new habitats and help the species to colonise other
+areas.
+• They have sufficient food reserves, and the hard seed coat protects the young embryo.
+• Being products of sexual reproduction, they generate new genetic combinations leading to variations.
+Dehydration and dormancy of mature seeds are crucial for storage of seeds, which can be used as food
+throughout the year and to raise crops in the next season. Some records of seed viability:
+Record
+Species
+Age
+Oldest germinated seed
+A lupine, Lupinus arcticus, excavated from Arctic Tundra — the
+seed germinated and flowered
+After an estimated record of
+10,000 years of dormancy
+A recent record of a viable
+seed
+Date palm, Phoenix dactylifera, found during the excavation at
+King Herod's palace near the Dead Sea
+2000 years old
+[NOTE] Orchid fruits each contain thousands of tiny seeds. Similar is the case in fruits of some parasitic species
+such as Orobanche and Striga.
+1.5
+APOMIXIS AND POLYEMBRYONY
+Although seeds, in general, are the products of fertilisation, a few flowering plants such as some species of
+Asteraceae and grasses have evolved a special mechanism to produce seeds without fertilisation, called
+apomixis. Thus, apomixis is a form of asexual reproduction that mimics sexual reproduction.
+There are several ways of development of apomictic seeds.
+• In some species, the diploid egg cell is formed without reduction division and develops into the embryo
+without fertilisation.
+• In many Citrus and Mango varieties, some of the nucellar cells surrounding the embryo sac start dividing,
+protrude into the embryo sac and develop into the embryos.
+Polyembryony — occurrence of more than one embryo in a seed.
+[NOTE] Why apomixis matters to plant breeders. Hybrid seeds are costly, and the farmer cannot use the hybrid
+seeds of the produce for sowing, because the characters of the hybrid progeny segregate in the next generation. If
+these hybrids are made into apomicts, there is no segregation of characters in the hybrid progeny, so the farmer
+can keep on using the hybrid seeds to raise new crop year after year, and does not have to buy hybrid seed every
+year.
+Recap
+QUICK RECAP
+• Flowers are the seat of sexual reproduction in angiosperms. The androecium consisting of stamens
+represents the male reproductive organs and the gynoecium consisting of pistils represents the female
+reproductive organs.
+• A typical anther is bilobed, dithecous and tetrasporangiate. Four wall layers — the epidermis, endothecium,
+middle layers and the tapetum — surround the microsporangium. Cells of the sporogenous tissue undergo
+
+===== PDF PAGE 16 =====
+meiosis (microsporogenesis) to form microspore tetrads.
+• Pollen grains represent the male gametophytic generation. The pollen grains have a two-layered wall, the
+outer exine and inner intine; the exine is of sporopollenin and is interrupted by germ pores. Pollen is shed at
+the 2-celled stage in over 60 per cent of angiosperms, otherwise at the 3-celled stage.
+• The pistil has stigma, style and ovary; ovules arise from the placenta. The ovule's central tissue is the nucellus, in
+which the archesporium differentiates. A cell of the archesporium, the megaspore mother cell, divides
+meiotically (megasporogenesis) to give four megaspores, of which usually one is functional (monosporic
+development). The mature embryo sac is 7-celled and 8-nucleate.
+• Pollination is the mechanism to transfer pollen grains from the anther to the stigma — autogamy,
+geitonogamy or xenogamy. Pollinating agents are either abiotic (wind and water) or biotic (animals).
+Outbreeding devices — non-synchrony, spatial separation, self-incompatibility and unisexuality — discourage
+inbreeding depression.
+• Angiosperms exhibit double fertilisation because two fusion events occur in each embryo sac, namely
+syngamy (male gamete + egg, giving the diploid zygote) and triple fusion (male gamete + two polar nuclei,
+giving the triploid PEN).
+• Formation of endosperm always precedes development of the embryo. The mature dicotyledonous embryo
+has two cotyledons and an embryonal axis with epicotyl and hypocotyl; monocot (grass) embryos have one
+cotyledon, the scutellum, with coleoptile and coleorrhiza. The ovule becomes the seed and the ovary the fruit
+(pericarp).
+• A phenomenon called apomixis is found in some angiosperms and results in the formation of seeds without
+fertilisation. Some angiosperms produce more than one embryo in their seed; this phenomenon is called
+polyembryony.
+Terms
+TERMS USED IN THE EXERCISES
+The end-of-chapter EXERCISES lean on the following terms and sequences; each is stated here in one place so that
+a reader of these notes alone can answer them.
+Term / item assumed by an exercise
+What it means here
+Developmental sequence of the
+male gametophyte
+Sporogenous tissue, pollen mother cell, microspore tetrad, pollen grain, male gametes
+— in that order
+Tetrasporangiate anther
+Carrying four microsporangia — one at each corner of the tetragonal anther, two per lobe
+Archesporium
+The tissue differentiating within the nucellus, a cell of which becomes the megaspore
+mother cell
+Monosporic development
+Development of the embryo sac from a single (functional) megaspore
+Epicotyl vs hypocotyl
+Epicotyl is the embryonal axis above the cotyledons, ending in the plumule; hypocotyl is
+the part below the cotyledons, ending in the radicle
+Coleoptile vs coleorrhiza
+Coleoptile is the hollow foliar sheath over the shoot apex and leaf primordia; coleorrhiza is
+the undifferentiated sheath enclosing the radicle and root cap
+Integument vs testa
+Integument is the protective envelope of the ovule; after fertilisation it hardens into the
+tough seed coat (testa) of the seed
+Perisperm vs pericarp
+Perisperm is persistent residual nucellus in the seed (black pepper, beet); pericarp is the
+wall of the fruit, developed from the ovary wall
+Self-incompatibility
+A genetic mechanism preventing self-pollen from fertilising the ovules, by inhibiting pollen
+germination or pollen tube growth in the pistil
+Bagging technique
+Covering an emasculated flower with a butter-paper bag to prevent contamination of its
+stigma with unwanted pollen
+Triple fusion
+Fusion of one male gamete with the two polar nuclei of the central cell — three haploid
+nuclei in all — giving the triploid primary endosperm nucleus
+Importance of apomixis
+It mimics sexual reproduction but needs no fertilisation, so hybrid characters do not
+segregate and hybrid seed can be reused year after year
