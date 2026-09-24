@@ -23,7 +23,7 @@ Pass 1 items actioned in this pass:
      not a failed harvest.
   6. The p2 Panchanan Maheshwari portrait is NOT embedded (§4.4 hard no). The
      page also carries a full text biography, which is written as a text-only
-     scientist-profile NOTE on the final page (Gate 3(b) D1, rows F003a-F003c;
+     scientist-profile NOTE after Fig. 1.1 (Gate 3(b) D1, rows F003a-F003c;
      the earlier claim here that p2 "is a photograph only" was false).
   7. Fig 1.9 is embedded as its three cleanly separable sub-panels (a, b, c) so
      each sits inline at its own topic (autogamy / xenogamy / cleistogamy);
@@ -200,6 +200,20 @@ story.append(figure(
     "Fig. 1.1 &mdash; A diagrammatic representation of L.S. of a flower. Labelled: stigma, "
     "style, anther, petal, filament, sepal, ovary.",
     max_width_cm=12.0))
+story.append(heading("Profile", "SCIENTIST PROFILE", level=2))
+story.append(note(
+    "<b>Panchanan Maheshwari (1904-1966).</b> Born in November 1904 in <b>Jaipur</b> "
+    "(Rajasthan), he became one of the most distinguished botanists of India and of the world. "
+    "He obtained his D.Sc. at <b>Allahabad</b>, where his interest in botany, especially "
+    "morphology, was inspired by <b>Dr W. Dudgeon</b>, an American missionary teacher. He "
+    "worked on <b>embryological aspects</b> and <b>popularised the use of embryological "
+    "characters in taxonomy</b>. He established the <b>Department of Botany, University of "
+    "Delhi</b> as an important centre of research in <b>embryology and tissue culture</b>, and "
+    "emphasised the need for work on the <b>artificial culture of immature embryos</b>. His "
+    "work on <b>test tube fertilisation</b> and <b>intra-ovarian pollination</b> won worldwide "
+    "acclaim. He was a Fellow of the <b>Royal Society of London (FRS)</b> and of the Indian "
+    "National Science Academy, and led the bringing out of the very first Biology textbooks "
+    "for Higher Secondary Schools published by <b>NCERT in 1964</b>."))
 
 # ======================================================================================
 # ---- 1.2 PRE-FERTILISATION : STRUCTURES AND EVENTS (F012-F017) ----
@@ -596,7 +610,8 @@ story.append(data_table([
      "<b>large often-feathery stigma</b> to easily trap air-borne pollen grains. "
      "Wind-pollinated flowers often have a <b>single ovule in each ovary</b> and "
      "<b>numerous flowers packed into an inflorescence</b>; a familiar example is the "
-     "<b>corn cob</b>. Wind-pollination is <b>quite common in grasses</b>."],
+     "<b>corn cob</b>: its ears are the <b>stigma and style</b>, which wave in the wind "
+     "to trap pollen grains. Wind-pollination is <b>quite common in grasses</b>."],
     ["<b>Water</b>",
      "Pollination by water is <b>quite rare</b> in flowering plants and is limited to "
      "<b>about 30 genera, mostly monocotyledons</b>. (Water is, however, a regular mode of "
@@ -623,6 +638,14 @@ story.append(compact_figure_row(
     ["fig_1_11a.png", "fig_1_11b.png"],
     "Fig. 1.11 &mdash; (a) Pollination by water in <i>Vallisneria</i>; (b) Insect pollination. "
     "Labelled: female flower, stigma, male flower."))
+story.append(body(
+    "<b>Water-pollination distinctions.</b> The need for water to transport male gametes and "
+    "complete fertilisation may limit the distribution of some <b>bryophytes and "
+    "pteridophytes</b>. <i>Vallisneria</i> and <i>Hydrilla</i> grow in <b>fresh water</b>; "
+    "<i>Zostera</i> is <b>marine</b>. <b>Not all aquatic plants use water for pollination</b>: "
+    "water hyacinth and water lily have flowers above water, pollinated by <b>insects or "
+    "wind</b>. In <i>Vallisneria</i>, pollen is <b>carried passively by water currents</b> "
+    "to the female flowers; in seagrasses long, ribbon-like pollen moves inside the water."))
 story.append(gap())
 story.append(body(
     "<b>Biotic agents (animals).</b> <b>Bees, butterflies, flies, beetles, wasps, ants, "
@@ -630,7 +653,9 @@ story.append(body(
     "Among the animals, <b>insects, particularly bees are the dominant biotic pollinating "
     "agents</b>. Even <b>larger animals</b> such as some <b>primates (lemurs)</b>, "
     "<b>arboreal (tree-dwelling) rodents</b>, or even <b>reptiles (gecko lizard and garden "
-    "lizard)</b> have also been reported as pollinators."))
+    "lizard)</b> have also been reported as pollinators <b>in some species</b>. Flowers "
+    "are often <b>adapted to a particular animal species</b>; animals are attracted by "
+    "<b>colour and/or fragrance</b>, and floral <b>rewards</b> sustain their visits."))
 story.append(b1(
     " <b>Majority of insect-pollinated flowers are large, colourful, fragrant and rich in "
     "nectar.</b> When the flowers are small, a number of flowers are clustered into an "
@@ -650,7 +675,8 @@ story.append(b1(
 story.append(b1(
     " A similar relationship exists between a <b>species of moth</b> and the plant "
     "<i>Yucca</i>, where <b>both species &mdash; moth and the plant &mdash; cannot complete "
-    "their life cycles without each other</b>."))
+    "their life cycles without each other</b>. The moth <b>deposits eggs in the ovary "
+    "locule</b> while pollinating the flower; its larvae hatch as the seeds develop."))
 story.append(b1(
     " Many floral visitors consume pollen or nectar <b>without bringing about pollination</b>. "
     "Such floral visitors are referred to as <b>pollen/nectar robbers</b>."))
@@ -672,7 +698,7 @@ story.append(data_table([
                          "before the release of pollen"],
     ["2. Different positions", "<b>The anther and stigma are placed at different positions</b> "
                               "so that the pollen cannot come in contact with the stigma of "
-                              "the same flower"],
+                              "the same flower. <b>Both these devices prevent autogamy.</b>"],
     ["3. <b>Self-incompatibility</b>",
      "A <b>genetic mechanism</b>; it prevents self-pollen (from the same flower or other "
      "flowers of the same plant) from fertilising the ovules by <b>inhibiting pollen "
@@ -691,7 +717,8 @@ story.append(body(
     "<b>Pollination does not guarantee the transfer of the right type of pollen</b> "
     "(compatible pollen of the same species as the stigma). The pistil has the ability to "
     "<b>recognise the pollen</b>, whether it is of the <b>right type (compatible)</b> or of "
-    "the <b>wrong type (incompatible)</b>."))
+    "the <b>wrong type (incompatible)</b>, from another species or from the same plant "
+    "if self-incompatible."))
 story.append(b1(
     " If it is of the <b>right type</b>, the pistil <b>accepts</b> the pollen and promotes "
     "post-pollination events that leads to fertilisation."))
@@ -699,11 +726,13 @@ story.append(b1(
     " If the pollen is of the <b>wrong type</b>, the pistil <b>rejects</b> the pollen by "
     "preventing pollen germination on the stigma or the pollen tube growth in the style."))
 story.append(b1(
-    " This <b>dialogue</b> is mediated by <b>chemical components of the pollen interacting "
-    "with those of the pistil</b>."))
+    " Recognition followed by acceptance or rejection is a <b>continuous pollen-pistil "
+    "dialogue</b>, mediated by <b>chemical components of pollen and pistil</b>; some of "
+    "these components have been identified only recently."))
 story.append(process_flow([
     "The pollen grain <b>germinates on the stigma</b> to produce a <b>pollen tube</b> through "
-    "one of the <b>germ pores</b>.",
+    "one of the <b>germ pores</b>; the <b>contents of the pollen grain move into the "
+    "pollen tube</b>.",
     "The <b>pollen tube grows through the tissues of the stigma and style</b> and reaches the "
     "<b>ovary</b>.",
     "Male gametes: in plants that shed pollen in the <b>two-celled</b> condition, the "
@@ -717,34 +746,39 @@ story.append(process_flow([
 story.append(gap())
 story.append(keyterm(
     "<b>Pollen-pistil interaction</b> &mdash; all these events, from pollen deposition on the "
-    "stigma until pollen tubes enter the ovule."))
+    "stigma until pollen tubes enter the ovule. This <b>dynamic process</b> of recognition "
+    "and promotion or inhibition can help breeders obtain desired hybrids even in "
+    "incompatible pollinations."))
 # Fig 1.12 - caption F190, former label prose F191
 # Fig 1.12 - two horizontal rows per operator instruction (2026-09-23):
 # (a)(b)(c) on one line, then (d)(e). Single caption after the second row,
 # written by the template rule (the assets carry no caption text — the baked
 # "Figure 1.12 ..." line stays out of every 1.12 asset, verified on the p16
 # 4x grid: caption box sits at source y~470-543, below all five panels).
-story.append(KeepTogether([
-    compact_figure_row(["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png"], None),
-    compact_figure_row(["fig_1_12d.png", "fig_1_12e.png"], None, fill_columns={0, 1}),
-    Paragraph(
-        "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
-        "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
-        "view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of "
-        "male gametes into a synergid and the movements of the sperms, one into the egg and the "
-        "other into the central cell. Labelled: pollen tube, antipodal, polar nuclei, egg cell, "
-        "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
-        "vegetative nucleus.", STYLES["Caption"]),
-]))
+story.append(compact_figure_row(
+    ["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png"],
+    "Fig. 1.12 (a)&ndash;(c) &mdash; Pollen germination on the stigma, pollen tubes through "
+    "the style and their path through the pistil."))
+story.append(compact_figure_row(
+    ["fig_1_12d.png", "fig_1_12e.png"],
+    "Fig. 1.12 (d)&ndash;(e) &mdash; Pollen tube entering a synergid, then releasing male "
+    "gametes towards the egg and central cell. Labelled: pollen tube, antipodal, polar "
+    "nuclei, egg cell, synergid, central cell, egg nucleus, plasma membrane, filiform "
+    "apparatus, male gametes, vegetative nucleus.", fill_columns={0, 1}))
+story.append(body(
+    "<b>Pollen germination activity:</b> Pollen of pea, chickpea, <i>Crotalaria</i>, "
+    "balsam or <i>Vinca</i> dusted on <b>about 10 per cent sugar solution</b> forms "
+    "pollen tubes in <b>15&ndash;30 minutes</b>."))
 story.append(note(
-    "<b>Artificial hybridisation</b> is one of the <b>major approaches of crop improvement "
-    "programme</b>. Two techniques make sure that only the desired pollen reaches the stigma. "
-    "<b>Emasculation</b> &mdash; removal of anthers from the flower bud <b>before the anther "
-    "dehisces</b>, using a pair of forceps. <b>Bagging</b> &mdash; emasculated flowers have to "
-    "be covered with a bag of suitable size, generally made up of <b>butter paper</b>, to "
-    "prevent contamination of its stigma with unwanted pollen. If the <b>female parent "
-    "produces unisexual flowers, there is no need for emasculation</b> &mdash; the female "
-    "flower buds are simply bagged before they open."))
+    "<b>Artificial hybridisation</b> is a <b>major approach to crop improvement</b>: "
+    "breeders cross <b>different species and often genera</b> to combine desirable traits "
+    "in commercially superior varieties. <b>If the female parent bears bisexual flowers</b>, "
+    "emasculation removes anthers from the bud <b>before they dehisce</b> with forceps; "
+    "<b>bagging</b> with butter paper prevents unwanted pollen from reaching the stigma. "
+    "When the stigma becomes receptive, dust it with mature pollen from the male parent, "
+    "<b>rebag</b> and allow fruits to develop. If the female parent bears <b>unisexual "
+    "flowers</b>, no emasculation is needed: bag buds before opening, pollinate when "
+    "receptive, and rebag."))
 story.append(gap())
 
 # ======================================================================================
@@ -902,10 +936,8 @@ story.append(b1(
 # Fig 1.15 split into its labelled source panels and stacked vertically.
 # This preserves the requested (a)-above-(b) reading order while removing the
 # unused internal whitespace from the former stacked whole-plate asset.
-# Put panel (a) into the available space at the bottom of page 14. Panel (b)
-# starts the next page so the two assets remain genuinely independent.
+# Both panels follow the seed discussion without a forced page break.
 story.append(stacked_figure_panels(["fig_1_15a.png"], None, scale=1.00))
-story.append(PageBreak())
 story.append(stacked_figure_panels(
     ["fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
@@ -1063,78 +1095,6 @@ story.append(data_table([
                                       "fertilisation, so hybrid characters do not segregate "
                                       "and hybrid seed can be reused year after year"],
 ], col_widths=[1.2, 2.8]))
-
-# ======================================================================================
-# ---- Scientist profile (F003a-F003c), placed on its own final page ----
-# ======================================================================================
-# [VERIFICATION FIX D1] text-only profile; kept at the end so pages 1-16 keep the user's layout
-story.append(PageBreak())
-story.append(heading("Profile", "SCIENTIST PROFILE", level=1))
-story.append(note(
-    "<b>Panchanan Maheshwari (1904-1966).</b> Born in November 1904 in <b>Jaipur</b> "
-    "(Rajasthan), he became one of the most distinguished botanists of India and of the world. "
-    "He obtained his D.Sc. at <b>Allahabad</b>, where his interest in botany, especially "
-    "morphology, was inspired by <b>Dr W. Dudgeon</b>, an American missionary teacher. He "
-    "worked on <b>embryological aspects</b> and <b>popularised the use of embryological "
-    "characters in taxonomy</b>. He established the <b>Department of Botany, University of "
-    "Delhi</b> as an important centre of research in <b>embryology and tissue culture</b>, and "
-    "emphasised the need for work on the <b>artificial culture of immature embryos</b>. His "
-    "work on <b>test tube fertilisation</b> and <b>intra-ovarian pollination</b> won worldwide "
-    "acclaim. He was a Fellow of the <b>Royal Society of London (FRS)</b> and of the Indian "
-    "National Science Academy, and led the bringing out of the very first Biology textbooks "
-    "for Higher Secondary Schools published by <b>NCERT in 1964</b>."))
-
-# [VERIFICATION FIX D9-D16] §1.2.3 additions kept on the final page so the §1.2.3 figure pages
-# keep the user's layout (F144a, F146a-F149a, F156 qualifier, F156a, F157a, F162a, F170a,
-# F175a, F178a, F180a, F185a-F185b, F186a, F187 condition, F188a, F189a)
-story.append(gap())
-story.append(heading("1.2.3", "ADDITIONAL NCERT POINTS: POLLINATION", level=2))
-story.append(b1(
-    " <b>Wind (corn cob).</b> The ears of a corn cob are nothing but the <b>stigma and "
-    "style</b>, which wave in the wind to trap pollen grains."))
-story.append(b1(
-    " <b>Water.</b> It is believed that the <b>distribution of some bryophytes and "
-    "pteridophytes is limited</b> because of the need for water for the transport of male "
-    "gametes and fertilisation. <i>Vallisneria</i> and <i>Hydrilla</i> grow in <b>fresh "
-    "water</b>; <i>Zostera</i> is <b>marine</b>. <b>Not all aquatic plants use water for "
-    "pollination</b>: in a majority, such as <b>water hyacinth and water lily</b>, the flowers "
-    "emerge above the water and are pollinated by <b>insects or wind</b>. In "
-    "<i>Vallisneria</i>, the released pollen is <b>carried passively by water currents</b> and "
-    "some of it reaches the female flowers; in seagrasses the long, ribbon-like pollen is "
-    "carried passively inside the water."))
-story.append(b1(
-    " <b>Animals.</b> Birds, bats and even non-flying mammals and reptiles pollinate "
-    "<b>in some species</b>. Flowers of animal-pollinated plants are often <b>specifically "
-    "adapted for a particular species of animal</b>. Animals are attracted by <b>colour "
-    "and/or fragrance</b>, and flowers must <b>provide rewards</b> to sustain their visits."))
-story.append(b1(
-    " <b><i>Yucca</i> and moth.</b> The moth <b>deposits its eggs in the locule of the "
-    "ovary</b> and pollinates the flower; the <b>larvae</b> hatch as the seeds start "
-    "developing."))
-story.append(b1(
-    " <b>Outbreeding.</b> Both non-synchrony of pollen release and stigma receptivity, and "
-    "different positions of anther and stigma, <b>prevent autogamy</b>."))
-story.append(b1(
-    " <b>Pollen-pistil dialogue.</b> Pollen of the <b>wrong type</b> (from other species, or "
-    "from the same plant if it is self-incompatible) also lands on the stigma. Recognition, "
-    "followed by acceptance or rejection, is the result of a <b>continuous dialogue between "
-    "pollen grain and pistil</b>; botanists have identified some of these components only in "
-    "recent years. After compatible pollination, the <b>contents of the pollen grain move into "
-    "the pollen tube</b>. The interaction is a <b>dynamic process</b> (recognition, then "
-    "promotion or inhibition); understanding it helps breeders get desired hybrids <b>even in "
-    "incompatible pollinations</b>."))
-story.append(b1(
-    " <b>Pollen germination activity.</b> Pollen of pea, chickpea, <i>Crotalaria</i>, balsam "
-    "or <i>Vinca</i> dusted on <b>about 10 per cent sugar solution</b> forms pollen tubes in "
-    "<b>15-30 minutes</b>."))
-story.append(b1(
-    " <b>Artificial hybridisation.</b> Breeders cross <b>different species and often "
-    "genera</b> to produce commercially 'superior' varieties. Emasculation is needed only "
-    "<b>if the female parent bears bisexual flowers</b>. When the stigma of the bagged flower "
-    "becomes receptive, mature pollen from the male parent is dusted on it, the flower is "
-    "<b>rebagged</b> and the fruits are allowed to develop. Unisexual female buds are bagged "
-    "before opening, pollinated when receptive, and rebagged."))
-
 
 if __name__ == "__main__":
     sys.exit(build_pdf(
