@@ -640,29 +640,18 @@ story.append(data_table([
      "<b>large often-feathery stigma</b> to easily trap air-borne pollen grains. "
      "Wind-pollinated flowers often have a <b>single ovule in each ovary</b> and "
      "<b>numerous flowers packed into an inflorescence</b>; a familiar example is the "
-     "<b>corn cob</b> &mdash; the ears you see are nothing but the <b>stigma and style</b> "
-     "which wave in the wind to trap pollen grains. "  # [VERIFICATION FIX D9] F144a
-     "Wind-pollination is <b>quite common in grasses</b>."],
-    # [VERIFICATION FIX D10] F146a-F149a
+     "<b>corn cob</b>. Wind-pollination is <b>quite common in grasses</b>."],
     ["<b>Water</b>",
      "Pollination by water is <b>quite rare</b> in flowering plants and is limited to "
      "<b>about 30 genera, mostly monocotyledons</b>. (Water is, however, a regular mode of "
      "transport for the male gametes among the <b>lower plant groups such as algae, "
-     "bryophytes and pteridophytes</b>; it is believed, particularly for some bryophytes and "
-     "pteridophytes, that their <b>distribution is limited</b> because of the need for water "
-     "for the transport of male gametes and fertilisation.) Examples: <i>Vallisneria</i> and "
-     "<i>Hydrilla</i>, which grow in <b>fresh water</b>, and several <b>marine</b> sea-grasses "
-     "such as <i>Zostera</i>. <b>Not all aquatic plants use water for pollination</b>: in a "
-     "majority of aquatic plants such as <b>water hyacinth and water lily</b>, the flowers "
-     "emerge above the level of water and are pollinated by <b>insects or wind</b>, as in most "
-     "land plants. In <i>Vallisneria</i>, the <b>female flower</b> reaches the surface of water "
-     "by its long stalk and the <b>male flowers</b> or pollen grains are released on to the "
-     "surface of water; they are <b>carried passively by water currents</b> and some of them "
-     "eventually reach the female flowers and the stigma. In another group, such as "
-     "seagrasses, female flowers <b>remain submerged</b> in water and the pollen grains are "
-     "released <b>inside the water</b>; in many such species the pollen is <b>long, ribbon "
-     "like</b> and is carried passively inside the water, some of it reaching the stigma. "
-     "In most of the water-pollinated species, pollen grains are protected from "
+     "bryophytes and pteridophytes</b>.) Examples: <i>Vallisneria</i> and <i>Hydrilla</i>, "
+     "and several marine sea-grasses such as <i>Zostera</i>. In <i>Vallisneria</i>, the "
+     "<b>female flower</b> reaches the surface of water by its long stalk and the <b>male "
+     "flowers</b> or pollen grains are released on to the surface of water. In another group, "
+     "such as seagrasses, female flowers <b>remain submerged</b> in water and the pollen "
+     "grains are released <b>inside the water</b>; in these the pollen is <b>long, ribbon "
+     "like</b>. In most of the water-pollinated species, pollen grains are protected from "
      "wetting by a <b>mucilaginous covering</b>."],
 ], col_widths=[0.7, 3.4]))
 story.append(gap())
@@ -690,15 +679,11 @@ story.append(body(
     "Among the animals, <b>insects, particularly bees are the dominant biotic pollinating "
     "agents</b>. Even <b>larger animals</b> such as some <b>primates (lemurs)</b>, "
     "<b>arboreal (tree-dwelling) rodents</b>, or even <b>reptiles (gecko lizard and garden "
-    "lizard)</b> have also been reported as pollinators <b>in some species</b>. Often flowers "
-    "of animal-pollinated plants are <b>specifically adapted for a particular species of "
-    "animal</b>."))  # [VERIFICATION FIX D11] F156 qualifier + F156a
+    "lizard)</b> have also been reported as pollinators."))
 story.append(b1(
     " <b>Majority of insect-pollinated flowers are large, colourful, fragrant and rich in "
     "nectar.</b> When the flowers are small, a number of flowers are clustered into an "
-    "inflorescence to make them conspicuous. Animals are attracted to flowers by <b>colour "
-    "and/or fragrance</b>, and to sustain animal visits the flowers have to <b>provide "
-    "rewards</b> to the animals."))  # [VERIFICATION FIX D11] F157a
+    "inflorescence to make them conspicuous."))
 story.append(b1(
     " The flowers pollinated by <b>flies and beetles</b> secrete <b>foul odours</b> to "
     "attract these animals."))
@@ -714,9 +699,7 @@ story.append(b1(
 story.append(b1(
     " A similar relationship exists between a <b>species of moth</b> and the plant "
     "<i>Yucca</i>, where <b>both species &mdash; moth and the plant &mdash; cannot complete "
-    "their life cycles without each other</b>. The moth <b>deposits its eggs in the locule of "
-    "the ovary</b> and the flower, in turn, gets pollinated by the moth; the <b>larvae</b> of "
-    "the moth come out of the eggs as the seeds start developing."))  # [VERIFICATION FIX D12] F162a
+    "their life cycles without each other</b>."))
 story.append(b1(
     " Many floral visitors consume pollen or nectar <b>without bringing about pollination</b>. "
     "Such floral visitors are referred to as <b>pollen/nectar robbers</b>."))
@@ -738,8 +721,7 @@ story.append(data_table([
                          "before the release of pollen"],
     ["2. Different positions", "<b>The anther and stigma are placed at different positions</b> "
                               "so that the pollen cannot come in contact with the stigma of "
-                              "the same flower. <b>Both device 1 and device 2 prevent "
-                              "autogamy.</b>"],  # [VERIFICATION FIX D13] F170a
+                              "the same flower"],
     ["3. <b>Self-incompatibility</b>",
      "A <b>genetic mechanism</b>; it prevents self-pollen (from the same flower or other "
      "flowers of the same plant) from fertilising the ovules by <b>inhibiting pollen "
@@ -756,27 +738,21 @@ story.append(gap())
 story.append(heading("1.2.3", "Pollen-pistil Interaction", level=3))
 story.append(body(
     "<b>Pollination does not guarantee the transfer of the right type of pollen</b> "
-    "(compatible pollen of the same species as the stigma). Often, pollen of the <b>wrong "
-    "type</b>, either from <b>other species</b> or from the <b>same plant (if it is "
-    "self-incompatible)</b>, also land on the stigma. The pistil has the ability to "
+    "(compatible pollen of the same species as the stigma). The pistil has the ability to "
     "<b>recognise the pollen</b>, whether it is of the <b>right type (compatible)</b> or of "
-    "the <b>wrong type (incompatible)</b>."))  # [VERIFICATION FIX D14] F175a
+    "the <b>wrong type (incompatible)</b>."))
 story.append(b1(
     " If it is of the <b>right type</b>, the pistil <b>accepts</b> the pollen and promotes "
     "post-pollination events that leads to fertilisation."))
 story.append(b1(
     " If the pollen is of the <b>wrong type</b>, the pistil <b>rejects</b> the pollen by "
     "preventing pollen germination on the stigma or the pollen tube growth in the style."))
-story.append(b1(  # [VERIFICATION FIX D14] antecedent F178a restored before F179
-    " The ability of the pistil to recognise the pollen, followed by its acceptance or "
-    "rejection, is the result of a <b>continuous dialogue between pollen grain and the "
-    "pistil</b>. This dialogue is mediated by <b>chemical components of the pollen "
-    "interacting with those of the pistil</b>. It is only in recent years that botanists "
-    "have been able to identify some of these pollen and pistil components."))
+story.append(b1(
+    " This <b>dialogue</b> is mediated by <b>chemical components of the pollen interacting "
+    "with those of the pistil</b>."))
 story.append(process_flow([
-    "Following compatible pollination, the pollen grain <b>germinates on the stigma</b> to "
-    "produce a <b>pollen tube</b> through one of the <b>germ pores</b>; the <b>contents of "
-    "the pollen grain move into the pollen tube</b>.",  # [VERIFICATION FIX D15] F180a
+    "The pollen grain <b>germinates on the stigma</b> to produce a <b>pollen tube</b> through "
+    "one of the <b>germ pores</b>.",
     "The <b>pollen tube grows through the tissues of the stigma and style</b> and reaches the "
     "<b>ovary</b>.",
     "Male gametes: in plants that shed pollen in the <b>two-celled</b> condition, the "
@@ -791,15 +767,6 @@ story.append(gap())
 story.append(keyterm(
     "<b>Pollen-pistil interaction</b> &mdash; all these events, from pollen deposition on the "
     "stigma until pollen tubes enter the ovule."))
-# [VERIFICATION FIX D15] F185a-F185b
-story.append(body(
-    "Pollen-pistil interaction is a <b>dynamic process</b> involving pollen recognition "
-    "followed by <b>promotion or inhibition</b> of the pollen. Knowledge of it helps the "
-    "plant breeder manipulate pollen-pistil interaction, <b>even in incompatible "
-    "pollinations</b>, to get desired hybrids. Pollen germination is easily seen by dusting "
-    "pollen of pea, chickpea, <i>Crotalaria</i>, balsam or <i>Vinca</i> on a drop of "
-    "<b>sugar solution (about 10 per cent)</b>: pollen tubes appear after about "
-    "<b>15-30 minutes</b> under the low power of the microscope."))
 # Fig 1.12 - caption F190, label walk-through F191
 story.append(body(
     "The figure below labels the growing <b>pollen tube</b> with its <b>vegetative "
@@ -824,22 +791,15 @@ story.append(KeepTogether([
         "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
         "vegetative nucleus.", STYLES["Caption"]),
 ]))
-# [VERIFICATION FIX D16] F186a, F187 condition, F188a, F189a
 story.append(note(
-    "A breeder crosses <b>different species and often genera</b> to combine desirable "
-    "characters into commercially 'superior' varieties. <b>Artificial hybridisation</b> is "
-    "one of the <b>major approaches of crop improvement programme</b>; only the desired pollen "
-    "must be used and the stigma protected from unwanted pollen, which is achieved by "
-    "emasculation and bagging. <b>Emasculation</b> &mdash; if the <b>female parent bears "
-    "bisexual flowers</b>, removal of anthers from the flower bud <b>before the anther "
+    "<b>Artificial hybridisation</b> is one of the <b>major approaches of crop improvement "
+    "programme</b>. Two techniques make sure that only the desired pollen reaches the stigma. "
+    "<b>Emasculation</b> &mdash; removal of anthers from the flower bud <b>before the anther "
     "dehisces</b>, using a pair of forceps. <b>Bagging</b> &mdash; emasculated flowers have to "
     "be covered with a bag of suitable size, generally made up of <b>butter paper</b>, to "
-    "prevent contamination of its stigma with unwanted pollen. When the stigma of the bagged "
-    "flower attains receptivity, mature pollen collected from anthers of the male parent is "
-    "dusted on it, the flower is <b>rebagged</b>, and the fruits are allowed to develop. If the "
-    "<b>female parent produces unisexual flowers, there is no need for emasculation</b> "
-    "&mdash; the female flower buds are bagged before the flowers open, pollinated with the "
-    "desired pollen when the stigma becomes receptive, and rebagged."))
+    "prevent contamination of its stigma with unwanted pollen. If the <b>female parent "
+    "produces unisexual flowers, there is no need for emasculation</b> &mdash; the female "
+    "flower buds are simply bagged before they open."))
 story.append(gap())
 
 # ======================================================================================
@@ -1200,6 +1160,57 @@ story.append(note(
     "acclaim. He was a Fellow of the <b>Royal Society of London (FRS)</b> and of the Indian "
     "National Science Academy, and led the bringing out of the very first Biology textbooks "
     "for Higher Secondary Schools published by <b>NCERT in 1964</b>."))
+
+# [VERIFICATION FIX D9-D16] §1.2.3 additions kept on the final page so the §1.2.3 figure pages
+# keep the user's layout (F144a, F146a-F149a, F156 qualifier, F156a, F157a, F162a, F170a,
+# F175a, F178a, F180a, F185a-F185b, F186a, F187 condition, F188a, F189a)
+story.append(gap())
+story.append(heading("1.2.3", "ADDITIONAL NCERT POINTS: POLLINATION", level=2))
+story.append(b1(
+    " <b>Wind (corn cob).</b> The ears of a corn cob are nothing but the <b>stigma and "
+    "style</b>, which wave in the wind to trap pollen grains."))
+story.append(b1(
+    " <b>Water.</b> It is believed that the <b>distribution of some bryophytes and "
+    "pteridophytes is limited</b> because of the need for water for the transport of male "
+    "gametes and fertilisation. <i>Vallisneria</i> and <i>Hydrilla</i> grow in <b>fresh "
+    "water</b>; <i>Zostera</i> is <b>marine</b>. <b>Not all aquatic plants use water for "
+    "pollination</b>: in a majority, such as <b>water hyacinth and water lily</b>, the flowers "
+    "emerge above the water and are pollinated by <b>insects or wind</b>. In "
+    "<i>Vallisneria</i>, the released pollen is <b>carried passively by water currents</b> and "
+    "some of it reaches the female flowers; in seagrasses the long, ribbon-like pollen is "
+    "carried passively inside the water."))
+story.append(b1(
+    " <b>Animals.</b> Birds, bats and even non-flying mammals and reptiles pollinate "
+    "<b>in some species</b>. Flowers of animal-pollinated plants are often <b>specifically "
+    "adapted for a particular species of animal</b>. Animals are attracted by <b>colour "
+    "and/or fragrance</b>, and flowers must <b>provide rewards</b> to sustain their visits."))
+story.append(b1(
+    " <b><i>Yucca</i> and moth.</b> The moth <b>deposits its eggs in the locule of the "
+    "ovary</b> and pollinates the flower; the <b>larvae</b> hatch as the seeds start "
+    "developing."))
+story.append(b1(
+    " <b>Outbreeding.</b> Both non-synchrony of pollen release and stigma receptivity, and "
+    "different positions of anther and stigma, <b>prevent autogamy</b>."))
+story.append(b1(
+    " <b>Pollen-pistil dialogue.</b> Pollen of the <b>wrong type</b> (from other species, or "
+    "from the same plant if it is self-incompatible) also lands on the stigma. Recognition, "
+    "followed by acceptance or rejection, is the result of a <b>continuous dialogue between "
+    "pollen grain and pistil</b>; botanists have identified some of these components only in "
+    "recent years. After compatible pollination, the <b>contents of the pollen grain move into "
+    "the pollen tube</b>. The interaction is a <b>dynamic process</b> (recognition, then "
+    "promotion or inhibition); understanding it helps breeders get desired hybrids <b>even in "
+    "incompatible pollinations</b>."))
+story.append(b1(
+    " <b>Pollen germination activity.</b> Pollen of pea, chickpea, <i>Crotalaria</i>, balsam "
+    "or <i>Vinca</i> dusted on <b>about 10 per cent sugar solution</b> forms pollen tubes in "
+    "<b>15-30 minutes</b>."))
+story.append(b1(
+    " <b>Artificial hybridisation.</b> Breeders cross <b>different species and often "
+    "genera</b> to produce commercially 'superior' varieties. Emasculation is needed only "
+    "<b>if the female parent bears bisexual flowers</b>. When the stigma of the bagged flower "
+    "becomes receptive, mature pollen from the male parent is dusted on it, the flower is "
+    "<b>rebagged</b> and the fruits are allowed to develop. Unisexual female buds are bagged "
+    "before opening, pollinated when receptive, and rebagged."))
 
 
 if __name__ == "__main__":

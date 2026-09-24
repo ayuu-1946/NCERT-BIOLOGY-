@@ -102,3 +102,11 @@ Read source pp. 11–17 (from "1.2.3 Pollination" to "…and the flower rebagged
 - FP11 Script NOTE "Colour and nectar are advertisements aimed at animals…" — an answer to the NCERT in-text question, consistent with F152; not a contradiction.
 - FP12 Script "Because pollen transfer by abiotic agents is not directed towards the target…" vs NCERT "chance factor … to compensate for this uncertainties and associated loss" — faithful paraphrase of the same causal claim.
 - FP13 Observe-flowers-of-Cucumber/Mango/… activity — observation exercise; its only fact (visitors must contact anthers and stigma) is carried by F163's robber definition.
+
+---
+
+## Placement override (user instruction: do not alter figure layout)
+- D1 (Maheshwari profile) moved from after the unit opener to a new **final page 17** (PageBreak + "Scientist Profile" heading).
+- D9–D16 (§1.2.3 additions) reverted in-body to the pre-fix wording and re-homed on page 17 under "1.2.3 Additional NCERT points: Pollination". This is because the user's p11 was full and any in-body growth pushed Figs 1.12–1.15 one page later.
+- D2–D8, D17, D18 stay in place (they fit without moving anything).
+- Verified: pages 1–16 carry the same figures, same image count per page as the pre-verification PDF. Page 16 text is byte-identical. Chapter length 16 → 17 pages.
