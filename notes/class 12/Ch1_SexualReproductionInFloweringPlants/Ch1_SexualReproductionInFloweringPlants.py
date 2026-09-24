@@ -931,11 +931,11 @@ story.append(body(
     "false fruits it labels the <b>thalamus</b> that has grown into the fleshy part, the "
     "<b>pericarp</b> with its <b>mesocarp</b> and <b>endocarp</b>, the <b>seed</b> inside, and "
     "the tiny one-seeded <b>achene</b> fruits sitting on the surface of the strawberry."))
-# Fig 1.15 split into its labelled source panels and placed side-by-side.
-# This preserves both panels while eliminating the large vertical whitespace
-# created by the former stacked whole-plate asset.
+# Fig 1.15 split into its labelled source panels and stacked vertically.
+# This preserves the requested (a)-above-(b) reading order while removing the
+# unused internal whitespace from the former stacked whole-plate asset.
 story.append(compact_figure_row(
-    ["fig_1_15a.png", "fig_1_15b.png"],
+    [["fig_1_15a.png", "fig_1_15b.png"]],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
