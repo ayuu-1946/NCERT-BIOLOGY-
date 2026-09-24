@@ -24,7 +24,7 @@ Pass 1 items actioned in this pass:
      not a failed harvest.
   6. The p2 Panchanan Maheshwari portrait is NOT embedded (§4.4 hard no). The
      page also carries a full text biography, which is written as a text-only
-     scientist-profile NOTE after the unit opener (Gate 3(b) D1, rows F003a-F003c;
+     scientist-profile NOTE on the final page (Gate 3(b) D1, rows F003a-F003c;
      the earlier claim here that p2 "is a photograph only" was false).
   7. Fig 1.9 is embedded as its three cleanly separable sub-panels (a, b, c) so
      each sits inline at its own topic (autogamy / xenogamy / cleistogamy);
@@ -180,21 +180,6 @@ story.append(body(
     "long.</b> Each individual leaves its progeny by asexual or sexual means. The sexual "
     "mode of reproduction enables creation of new variants, so that survival advantage "
     "is enhanced."))
-story.append(gap())
-# [VERIFICATION FIX D1] scientist profile, text only (F003a-F003c)
-story.append(note(
-    "<b>Panchanan Maheshwari (1904-1966).</b> Born in November 1904 in <b>Jaipur</b> "
-    "(Rajasthan), he became one of the most distinguished botanists of India and of the world. "
-    "He obtained his D.Sc. at <b>Allahabad</b>, where his interest in botany, especially "
-    "morphology, was inspired by <b>Dr W. Dudgeon</b>, an American missionary teacher. He "
-    "worked on <b>embryological aspects</b> and <b>popularised the use of embryological "
-    "characters in taxonomy</b>. He established the <b>Department of Botany, University of "
-    "Delhi</b> as an important centre of research in <b>embryology and tissue culture</b>, and "
-    "emphasised the need for work on the <b>artificial culture of immature embryos</b>. His "
-    "work on <b>test tube fertilisation</b> and <b>intra-ovarian pollination</b> won worldwide "
-    "acclaim. He was a Fellow of the <b>Royal Society of London (FRS)</b> and of the Indian "
-    "National Science Academy, and led the bringing out of the very first Biology textbooks "
-    "for Higher Secondary Schools published by <b>NCERT in 1964</b>."))
 story.append(gap())
 
 # ======================================================================================
@@ -1195,6 +1180,26 @@ story.append(data_table([
                                       "fertilisation, so hybrid characters do not segregate "
                                       "and hybrid seed can be reused year after year"],
 ], col_widths=[1.2, 2.8]))
+
+# ======================================================================================
+# ---- Scientist profile (F003a-F003c), placed on its own final page ----
+# ======================================================================================
+# [VERIFICATION FIX D1] text-only profile; kept at the end so pages 1-16 keep the user's layout
+story.append(PageBreak())
+story.append(heading("Profile", "SCIENTIST PROFILE", level=1))
+story.append(note(
+    "<b>Panchanan Maheshwari (1904-1966).</b> Born in November 1904 in <b>Jaipur</b> "
+    "(Rajasthan), he became one of the most distinguished botanists of India and of the world. "
+    "He obtained his D.Sc. at <b>Allahabad</b>, where his interest in botany, especially "
+    "morphology, was inspired by <b>Dr W. Dudgeon</b>, an American missionary teacher. He "
+    "worked on <b>embryological aspects</b> and <b>popularised the use of embryological "
+    "characters in taxonomy</b>. He established the <b>Department of Botany, University of "
+    "Delhi</b> as an important centre of research in <b>embryology and tissue culture</b>, and "
+    "emphasised the need for work on the <b>artificial culture of immature embryos</b>. His "
+    "work on <b>test tube fertilisation</b> and <b>intra-ovarian pollination</b> won worldwide "
+    "acclaim. He was a Fellow of the <b>Royal Society of London (FRS)</b> and of the Indian "
+    "National Science Academy, and led the bringing out of the very first Biology textbooks "
+    "for Higher Secondary Schools published by <b>NCERT in 1964</b>."))
 
 
 if __name__ == "__main__":
