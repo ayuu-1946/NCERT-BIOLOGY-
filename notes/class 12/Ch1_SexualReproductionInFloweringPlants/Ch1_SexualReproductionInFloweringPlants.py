@@ -50,7 +50,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer, Table, TableStyle, Image as RLImage, KeepTogether  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, Table, TableStyle, Image as RLImage, KeepTogether, PageBreak  # noqa: E402
 from reportlab.lib.units import cm  # noqa: E402
 from reportlab.lib import colors  # noqa: E402
 
@@ -133,7 +133,8 @@ def stacked_figure_panels(asset_names, caption_text, max_width_cm=15.9):
         image = RLImage(path, width=width, height=width * h / w)
         image.hAlign = "CENTER"
         flowables.append(image)
-    flowables.append(Paragraph(caption_text, STYLES["Caption"]))
+    if caption_text:
+        flowables.append(Paragraph(caption_text, STYLES["Caption"]))
     return KeepTogether(flowables)
 
 
@@ -952,8 +953,12 @@ story.append(body(
 # Fig 1.15 split into its labelled source panels and stacked vertically.
 # This preserves the requested (a)-above-(b) reading order while removing the
 # unused internal whitespace from the former stacked whole-plate asset.
+# Put panel (a) into the available space at the bottom of page 14. Panel (b)
+# starts the next page so the two assets remain genuinely independent.
+story.append(stacked_figure_panels(["fig_1_15a.png"], None))
+story.append(PageBreak())
 story.append(stacked_figure_panels(
-    ["fig_1_15a.png", "fig_1_15b.png"],
+    ["fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
