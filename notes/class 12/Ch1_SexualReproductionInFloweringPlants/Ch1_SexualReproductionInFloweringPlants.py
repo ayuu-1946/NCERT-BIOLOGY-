@@ -84,7 +84,11 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
             w, h = im.size
         max_w = cell_w - 10
         natural_w = w / 300.0 * 2.54 * cm
-        width = min(max_w, natural_w)
+        # Fig. 1.5 is assembled from low-resolution crops. Let those panels
+        # use the full column width instead of leaving large unused white
+        # areas in the figure frame; all other panels retain their source
+        # calibrated size.
+        width = max_w if asset_name.startswith("fig_1_5") else min(max_w, natural_w)
         height = width * h / w
         return RLImage(path, width=width, height=height)
     cells = []
