@@ -750,21 +750,23 @@ story.append(keyterm(
     "and promotion or inhibition can help breeders obtain desired hybrids even in "
     "incompatible pollinations."))
 # Fig 1.12 - caption F190, former label prose F191
-# Fig 1.12 - two horizontal rows per operator instruction (2026-09-23):
+# Fig 1.12 - two horizontal rows kept together per operator instruction (2026-09-23):
 # (a)(b)(c) on one line, then (d)(e). Single caption after the second row,
 # written by the template rule (the assets carry no caption text — the baked
 # "Figure 1.12 ..." line stays out of every 1.12 asset, verified on the p16
 # 4x grid: caption box sits at source y~470-543, below all five panels).
-story.append(compact_figure_row(
-    ["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png"],
-    "Fig. 1.12 (a)&ndash;(c) &mdash; Pollen germination on the stigma, pollen tubes through "
-    "the style and their path through the pistil."))
-story.append(compact_figure_row(
-    ["fig_1_12d.png", "fig_1_12e.png"],
-    "Fig. 1.12 (d)&ndash;(e) &mdash; Pollen tube entering a synergid, then releasing male "
-    "gametes towards the egg and central cell. Labelled: pollen tube, antipodal, polar "
-    "nuclei, egg cell, synergid, central cell, egg nucleus, plasma membrane, filiform "
-    "apparatus, male gametes, vegetative nucleus.", fill_columns={0, 1}))
+story.append(KeepTogether([
+    compact_figure_row(["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png"], None),
+    compact_figure_row(["fig_1_12d.png", "fig_1_12e.png"], None, fill_columns={0, 1}),
+    Paragraph(
+        "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
+        "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
+        "view of an egg apparatus showing entry of pollen tube into a synergid; (e) Discharge of "
+        "male gametes into a synergid and the movements of the sperms, one into the egg and the "
+        "other into the central cell. Labelled: pollen tube, antipodal, polar nuclei, egg cell, "
+        "synergid, central cell, egg nucleus, plasma membrane, filiform apparatus, male gametes, "
+        "vegetative nucleus.", STYLES["Caption"]),
+]))
 story.append(body(
     "<b>Pollen germination activity:</b> Pollen of pea, chickpea, <i>Crotalaria</i>, "
     "balsam or <i>Vinca</i> dusted on <b>about 10 per cent sugar solution</b> forms "
@@ -1055,11 +1057,12 @@ story.append(gap())
 # ======================================================================================
 # ---- Terms used in the exercises (Rule 2 appendix; F254-F255) ----
 # ======================================================================================
-story.append(heading("Terms", "TERMS USED IN THE EXERCISES", level=1))
-story.append(body(
-    "The end-of-chapter EXERCISES lean on the following terms and sequences; each is stated "
-    "here in one place so that a reader of these notes alone can answer them."))
-story.append(data_table([
+story.append(KeepTogether([
+    heading("Terms", "TERMS USED IN THE EXERCISES", level=1),
+    body(
+        "The end-of-chapter EXERCISES lean on the following terms and sequences; each is stated "
+        "here in one place so that a reader of these notes alone can answer them."),
+    data_table([
     ["Term / item assumed by an exercise", "What it means here"],
     ["<b>Developmental sequence of the male gametophyte</b>",
      "<b>Sporogenous tissue, pollen mother cell, microspore tetrad, pollen grain, male "
@@ -1094,7 +1097,8 @@ story.append(data_table([
     ["<b>Importance of apomixis</b>", "It mimics sexual reproduction but needs no "
                                       "fertilisation, so hybrid characters do not segregate "
                                       "and hybrid seed can be reused year after year"],
-], col_widths=[1.2, 2.8]))
+], col_widths=[1.2, 2.8]),
+]))
 
 if __name__ == "__main__":
     sys.exit(build_pdf(
