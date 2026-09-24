@@ -88,7 +88,8 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
         # use the full column width instead of leaving large unused white
         # areas in the figure frame; all other panels retain their source
         # calibrated size.
-        width = max_w if asset_name.startswith("fig_1_5") else min(max_w, natural_w)
+        width = (max_w * 0.45 if asset_name.startswith("fig_1_5")
+                 else min(max_w, natural_w))
         height = width * h / w
         return RLImage(path, width=width, height=height)
     cells = []
@@ -466,7 +467,7 @@ story.append(figure(
     "micropylar end, nucellus, megaspore mother cell, megaspore dyad, megaspore tetrad, "
     "synergids, egg, central cell, 2 polar nuclei, antipodals, chalazal end, polar nuclei, "
     "filiform apparatus.",
-    max_width_cm=15.0))
+    max_width_cm=11.0))
 
 # ---- 1.2.2 Female gametophyte (F103-F115) ----
 story.append(heading("1.2.2", "Female gametophyte", level=3))
