@@ -965,14 +965,14 @@ story.append(body(
 # unused internal whitespace from the former stacked whole-plate asset.
 # Put panel (a) into the available space at the bottom of page 14. Panel (b)
 # starts the next page so the two assets remain genuinely independent.
-story.append(stacked_figure_panels(["fig_1_15a.png"], None, scale=0.80))
+story.append(stacked_figure_panels(["fig_1_15a.png"], None, scale=1.00))
 story.append(PageBreak())
 story.append(stacked_figure_panels(
     ["fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
-    "thalamus, seed, endocarp, mesocarp, achene.", scale=0.80))
+    "thalamus, seed, endocarp, mesocarp, achene.", scale=0.65))
 story.append(body("<b>Why seed formation is an advantage.</b>"))
 story.append(b1(
     " <b>Seed formation is more dependable</b>, because pollination and fertilisation are no "
