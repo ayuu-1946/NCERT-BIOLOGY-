@@ -119,6 +119,24 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
     return KeepTogether([row, Paragraph(caption_text, STYLES["Caption"])])
 
 
+def stacked_figure_panels(asset_names, caption_text, max_width_cm=15.9):
+    """Stack independent image flowables without a shared table cell."""
+    flowables = []
+    max_width = max_width_cm * cm
+    from PIL import Image as PILImage
+    for asset_name in asset_names:
+        path = os.path.join(ASSETS, asset_name)
+        with PILImage.open(path) as im:
+            w, h = im.size
+        natural_width = w / 300.0 * 2.54 * cm
+        width = min(max_width, natural_width)
+        image = RLImage(path, width=width, height=width * h / w)
+        image.hAlign = "CENTER"
+        flowables.append(image)
+    flowables.append(Paragraph(caption_text, STYLES["Caption"]))
+    return KeepTogether(flowables)
+
+
 def body(text):
     return Paragraph(text, STYLES["Body"])
 
@@ -934,8 +952,8 @@ story.append(body(
 # Fig 1.15 split into its labelled source panels and stacked vertically.
 # This preserves the requested (a)-above-(b) reading order while removing the
 # unused internal whitespace from the former stacked whole-plate asset.
-story.append(compact_figure_row(
-    [["fig_1_15a.png", "fig_1_15b.png"]],
+story.append(stacked_figure_panels(
+    ["fig_1_15a.png", "fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
