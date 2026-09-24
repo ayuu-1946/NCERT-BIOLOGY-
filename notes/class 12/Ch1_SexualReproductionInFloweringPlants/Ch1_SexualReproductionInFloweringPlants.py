@@ -63,7 +63,8 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
 
-def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=None):
+def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=None,
+                       fill_columns=None):
     """Place source-preserving figure panels horizontally with 5 pt padding.
 
     Each column is either an asset name or a list of asset names to stack
@@ -72,12 +73,13 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
     `caption_text=None` returns the bare row (no caption flowable) — used when
     one figure spans several rows and the caption is attached once, after the
     last row (Fig 1.12, 2026-09-23).
+    `fill_columns` optionally makes selected columns use their full cell width.
     """
     n = len(columns)
     if fractions is None:
         fractions = [1.0 / n] * n
     cell_ws = [total_width_cm * cm * f for f in fractions]
-    def img_flow(asset_name, cell_w):
+    def img_flow(asset_name, cell_w, fill=False):
         path = os.path.join(ASSETS, asset_name)
         from PIL import Image as PILImage
         with PILImage.open(path) as im:
@@ -89,13 +91,20 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
         # areas in the figure frame; all other panels retain their source
         # calibrated size.
         width = (max_w * 0.45 if asset_name.startswith("fig_1_5")
-                 else min(max_w, natural_w))
+                 else max_w * 0.55 if fill and asset_name in {"fig_1_12d.png", "fig_1_12e.png"}
+                 else max_w if fill else min(max_w, natural_w))
+        # In the space-constrained Fig. 1.12 layout, (a)/(b) are contextual
+        # thumbnails while (c)-(e) carry the key explanatory detail. Shrink
+        # only those two lower-priority panels to release vertical space.
+        if asset_name in {"fig_1_12a.png", "fig_1_12b.png"}:
+            width = min(max_w, natural_w) * 0.45
         height = width * h / w
         return RLImage(path, width=width, height=height)
     cells = []
-    for col, cell_w in zip(columns, cell_ws):
+    fill_columns = set(fill_columns or ())
+    for col_index, (col, cell_w) in enumerate(zip(columns, cell_ws)):
         names = [col] if isinstance(col, str) else col
-        inner = Table([[img_flow(name, cell_w)] for name in names], colWidths=[cell_w])
+        inner = Table([[img_flow(name, cell_w, col_index in fill_columns)] for name in names], colWidths=[cell_w])
         inner.setStyle(TableStyle([
             ("BOX", (0, 0), (-1, -1), 0.5, colors.HexColor("#555555")),
             ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
@@ -758,7 +767,7 @@ story.append(body(
 # 4x grid: caption box sits at source y~470-543, below all five panels).
 story.append(KeepTogether([
     compact_figure_row(["fig_1_12a.png", "fig_1_12b.png", "fig_1_12c.png"], None),
-    compact_figure_row(["fig_1_12d.png", "fig_1_12e.png"], None),
+    compact_figure_row(["fig_1_12d.png", "fig_1_12e.png"], None, fill_columns={0, 1}),
     Paragraph(
         "Fig. 1.12 &mdash; (a) Pollen grains germinating on the stigma; (b) Pollen tubes growing "
         "through the style; (c) L.S. of pistil showing path of pollen tube growth; (d) enlarged "
