@@ -16,9 +16,8 @@ Pass 1 items actioned in this pass:
   2. SUMMARY-UNIQUE F253 ("archesporium") folded into 1.2.2 nucellus description.
   3. Placentation (exercise-gap, referenced only in the source) carried as a
      one-line Class XI recall NOTE in 1.2.2.
-  4. Every in-figure label of all 12 labelled figures is written into running
-     text as an explicit "labelled in the figure" walk-through sentence, so the
-     text stands alone even if a print of the figure is illegible (§4.4 Step 4).
+  4. Figure labels are retained in the figures and captions; redundant running
+     label walk-through sentences were removed at the user's request.
   5. Fig 1.4, 1.6 and 1.10 are photographic/product plates with no in-figure
      labels; they carry a caption row only (no label row) - this is deliberate,
      not a failed harvest.
@@ -94,12 +93,13 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
         width = (max_w * 0.45 if asset_name.startswith("fig_1_5")
                  else max_w * 0.70 if fill and asset_name == "fig_1_12d.png"
                  else max_w * 0.55 if fill and asset_name == "fig_1_12e.png"
+                 else min(max_w, natural_w * 1.08) if asset_name.startswith("fig_1_11")
                  else max_w if fill else min(max_w, natural_w))
         # In the space-constrained Fig. 1.12 layout, (a)/(b) are contextual
         # thumbnails while (c)-(e) carry the key explanatory detail. Shrink
         # only those two lower-priority panels to release vertical space.
         if asset_name in {"fig_1_12a.png", "fig_1_12b.png"}:
-            width = min(max_w, natural_w) * 0.45
+            width = min(max_w, natural_w) * 0.50
         height = width * h / w
         return RLImage(path, width=width, height=height)
     cells = []
@@ -187,11 +187,6 @@ story.append(gap())
 # ======================================================================================
 story.append(heading("1.1", "FLOWER &mdash; A FASCINATING ORGAN OF ANGIOSPERMS", level=1))
 story.append(body(
-    "Human beings have had an intimate relationship with flowers since time immemorial. "
-    # [VERIFICATION FIX D2] F005a
-    "Flowers are objects of <b>aesthetic, ornamental, social, religious and cultural "
-    "value</b> &mdash; they have always been used as symbols for conveying important human "
-    "feelings such as love, affection, happiness, grief and mourning. "
     "<b>All flowering plants show sexual reproduction</b>, and the fruits and seeds we use "
     "are <b>the end products of sexual reproduction</b>. To a biologist, flowers "
     "<b>are morphological and embryological marvels and the sites of sexual "
@@ -199,18 +194,12 @@ story.append(body(
 story.append(body(
     "The two units of sexual reproduction do not develop in the same place: the male unit "
     "develops in the <b>anther</b> and the female unit in the <b>ovary</b>."))
-# Fig 1.1 - caption F010, label walk-through F011
-story.append(body(
-    "In a longitudinal section (L.S.) of a typical flower, the parts labelled in the figure "
-    "are, from outside inwards, the <b>sepal</b> and the <b>petal</b> of the outer "
-    "protective and attractive whorls, then the male part made of the <b>anther</b> "
-    "borne on its <b>filament</b>, and the female part made of the <b>stigma</b> at the "
-    "top, the <b>style</b> beneath it and the swollen <b>ovary</b> at the base."))
+# Fig 1.1 - caption F010, former label prose F011
 story.append(figure(
     "fig_1_1.png",
     "Fig. 1.1 &mdash; A diagrammatic representation of L.S. of a flower. Labelled: stigma, "
     "style, anther, petal, filament, sepal, ovary.",
-    max_width_cm=11.0))
+    max_width_cm=12.0))
 
 # ======================================================================================
 # ---- 1.2 PRE-FERTILISATION : STRUCTURES AND EVENTS (F012-F017) ----
@@ -247,16 +236,12 @@ story.append(b1(
 story.append(b1(
     " The microsporangia develop further and become <b>pollen sacs</b>. They extend "
     "longitudinally all through the length of an anther and are packed with pollen grains."))
-# Fig 1.2 - caption F027, label walk-through F028
-story.append(body(
-    "The figure below labels the <b>filament (stalk)</b> and the <b>anther</b> of the stamen, "
-    "and in the cut anther the four <b>pollen sacs</b> full of <b>pollen grains</b>, together "
-    "with the <b>line of dehiscence</b> along which the anther will later split open."))
+# Fig 1.2 - caption F027, former label prose F028
 story.append(figure(
     "fig_1_2.png",
     "Fig. 1.2 &mdash; (a) A typical stamen; (b) three-dimensional cut section of an anther. "
     "Labelled: anther, pollen grains, pollen sacs, line of dehiscence, filament (stalk).",
-    max_width_cm=7.4))
+    max_width_cm=8.5))
 
 # ---- 1.2.1 Structure of microsporangium (F029-F037) ----
 story.append(heading("1.2.1", "Structure of microsporangium", level=3))
@@ -278,13 +263,7 @@ story.append(body(  # [VERIFICATION FIX D3] qualifier restored
     "<b>When the anther is young</b>, a group of compactly arranged homogenous cells called "
     "the <b>sporogenous tissue</b> "
     "occupies the centre of each microsporangium."))
-# Fig 1.3 - caption F036, label walk-through F037
-story.append(body(
-    "In the figure below, the young anther shows the <b>epidermis</b>, the "
-    "<b>endothecium</b>, the <b>middle layers</b> and the <b>tapetum</b> enclosing the "
-    "<b>sporogenous tissue</b> and its <b>microspore mother cells</b>; the sterile tissue "
-    "joining the two lobes is the <b>connective</b>, and the dehisced anther has shed its "
-    "<b>pollen grains</b>."))
+# Fig 1.3 - caption F036, former label prose F037
 story.append(figure(
     "fig_1_3.png",
     "Fig. 1.3 &mdash; (a) Transverse section of a young anther; (b) Enlarged view of one "
@@ -354,18 +333,13 @@ story.append(b1(
 story.append(b1(
     " In the remaining species, the generative cell divides mitotically to give rise to the "
     "<b>two male gametes before pollen grains are shed</b> (<b>3-celled stage</b>)."))
-# Fig 1.4 (F062) and Fig 1.5 (F063) with label walk-through F064
+# Fig 1.4 (F062) and Fig 1.5 (F063) with former label prose F064
 story.append(figure(
     "fig_1_4.png",
     "Fig. 1.4 &mdash; Scanning electron micrographs of a few pollen grains. The micrographs "
     "show the sculptured exine of pollen of different species; this plate carries no "
     "in-figure labels.",
     max_width_cm=13.0))
-story.append(body(
-    "The maturation series in the figure below labels the <b>vacuoles</b> of the young "
-    "microspore and its <b>nucleus</b>, the <b>asymmetric spindle</b> of the unequal division "
-    "that follows, and the resulting <b>vegetative cell</b> and <b>generative cell</b> of the "
-    "mature 2-celled pollen grain."))
 story.append(compact_figure_row(
     ["fig_1_5a.png", ["fig_1_5b_top.png", "fig_1_5b_lower.png"]],
     "Fig. 1.5 &mdash; (a) Enlarged view of a pollen grain tetrad; (b) stages of a microspore "
@@ -385,7 +359,7 @@ story.append(figure(
     "fig_1_6.png",
     "Fig. 1.6 &mdash; Pollen products. The plate shows commercial pollen tablets and syrups "
     "sold as food supplements; it carries no in-figure labels.",
-    max_width_cm=14.0))
+    max_width_cm=15.4))
 story.append(gap())
 story.append(body(
     "<b>Viability of pollen grains.</b> Pollen grains have to land on the stigma "
@@ -432,14 +406,7 @@ story.append(note(
     "inside the ovary is called placentation, and its types (marginal, axile, parietal, basal, "
     "free central) were studied with flower morphology in Class XI; this chapter assumes that "
     "recall and does not redefine them."))
-# Fig 1.7 - caption F084, label walk-through F085
-story.append(body(
-    "The figure below labels the <b>stigma</b>, <b>style</b> and <b>ovary</b> of the pistil "
-    "standing on the <b>thalamus</b>, the <b>syncarpous ovary</b> whose fused <b>carpels</b> "
-    "are visible in section, and, in the ovule, the <b>funicle</b>, the <b>hilum</b>, the "
-    "<b>micropyle</b> at the <b>micropylar pole</b>, the <b>outer integument</b> and "
-    "<b>inner integument</b>, the <b>nucellus</b>, the <b>embryo sac</b> and the "
-    "<b>chalazal pole</b> at the opposite end."))
+# Fig 1.7 - caption F084, former label prose F085
 story.append(figure(
     "fig_1_7.png",
     "Fig. 1.7 &mdash; (a) A dissected flower of Hibiscus showing pistil (other floral parts "
@@ -452,8 +419,6 @@ story.append(figure(
 
 # ---- 1.2.2 The Megasporangium (Ovule) (F086-F095) ----
 story.append(heading("1.2.2", "The Megasporangium (Ovule)", level=3))
-story.append(body(
-    "Let us familiarise ourselves with the structure of a typical angiosperm ovule."))
 story.append(b1(
     " The ovule is a <b>small structure attached to the placenta</b> by means of a stalk "
     "called <b>funicle</b>."))
@@ -489,14 +454,7 @@ story.append(b1(
 story.append(b1(
     " The MMC undergoes <b>meiotic division</b>. Meiosis results in the production of "
     "<b>four megaspores</b>."))
-# Fig 1.8 - caption F101, label walk-through F102
-story.append(body(
-    "The figure below labels the <b>micropylar end</b> and the <b>chalazal end</b> of the "
-    "ovule, the <b>nucellus</b> carrying the large <b>megaspore mother cell</b>, then the "
-    "<b>megaspore dyad</b> and the <b>megaspore tetrad</b>; in the mature embryo sac it "
-    "labels the two <b>synergids</b> with their <b>filiform apparatus</b>, the <b>egg</b>, "
-    "the <b>central cell</b> with its <b>2 polar nuclei</b> (also labelled simply as "
-    "<b>polar nuclei</b>), and the three <b>antipodals</b>."))
+# Fig 1.8 - caption F101, former label prose F102
 story.append(figure(
     "fig_1_8.png",
     "Fig. 1.8 &mdash; (a) Parts of the ovule showing a large megaspore mother cell, a dyad "
@@ -554,10 +512,8 @@ story.append(gap())
 # ======================================================================================
 story.append(heading("1.2.3", "Pollination", level=2))
 story.append(body(
-    "In the preceding sections you have learnt that the male and female gametes in flowering "
-    "plants are produced in the <b>pollen grain</b> and <b>embryo sac</b>, respectively. As "
-    "<b>both types of gametes are non-motile</b>, they have to be brought together for "
-    "fertilisation to occur."))
+    "<b>Both types of gametes are non-motile</b>, so they have to be brought together "
+    "for fertilisation."))
 story.append(keyterm(
     "<b>Pollination</b> &mdash; transfer of pollen grains (shed from the anther) to the "
     "stigma of a pistil."))
@@ -657,17 +613,12 @@ story.append(data_table([
 story.append(gap())
 story.append(note(
     "<b>Both wind and water pollinated flowers are not very colourful and do not produce "
-    "nectar.</b> Colour and nectar are advertisements aimed at animals, and an abiotic agent "
-    "cannot be advertised to."))
+    "nectar.</b>"))
 story.append(figure(
     "fig_1_10.png",
     "Fig. 1.10 &mdash; A wind-pollinated plant showing compact inflorecence and well-exposed "
     "stamens. This photographic plate carries no in-figure labels.",
-    max_width_cm=7.6))
-story.append(body(
-    "In the water-pollination panel of the figure below, the <b>female flower</b> of "
-    "<i>Vallisneria</i> is labelled at the water surface with its <b>stigma</b> exposed, and "
-    "the released <b>male flower</b> is labelled floating towards it."))
+    max_width_cm=8.5))
 story.append(compact_figure_row(
     ["fig_1_11a.png", "fig_1_11b.png"],
     "Fig. 1.11 &mdash; (a) Pollination by water in <i>Vallisneria</i>; (b) Insect pollination. "
@@ -767,13 +718,7 @@ story.append(gap())
 story.append(keyterm(
     "<b>Pollen-pistil interaction</b> &mdash; all these events, from pollen deposition on the "
     "stigma until pollen tubes enter the ovule."))
-# Fig 1.12 - caption F190, label walk-through F191
-story.append(body(
-    "The figure below labels the growing <b>pollen tube</b> with its <b>vegetative "
-    "nucleus</b> and the <b>male gametes</b> it carries, and, in the enlarged egg apparatus, "
-    "the <b>synergid</b> with its <b>filiform apparatus</b>, the <b>egg cell</b> and its "
-    "<b>egg nucleus</b> bounded by the <b>plasma membrane</b>, the <b>central cell</b> with "
-    "the <b>polar nuclei</b>, and an <b>antipodal</b> cell at the far end."))
+# Fig 1.12 - caption F190, former label prose F191
 # Fig 1.12 - two horizontal rows per operator instruction (2026-09-23):
 # (a)(b)(c) on one line, then (d)(e). Single caption after the second row,
 # written by the template rule (the assets carry no caption text — the baked
@@ -872,15 +817,7 @@ story.append(body(
     "monocotyledons and dicotyledons</b>: the zygote gives rise to the <b>proembryo</b> and "
     "subsequently to the <b>globular</b> and <b>heart-shaped</b> embryos, and finally to the "
     "<b>mature embryo</b>."))
-# Fig 1.13 - caption F218, label walk-through F219
-story.append(body(
-    "In the figure below the fertilised embryo sac labels the <b>zygote</b>, the "
-    "<b>primary endosperm nucleus</b> inside the <b>primary endosperm cell</b>, the "
-    "<b>degenerating synergids</b> at the micropylar end and the <b>degenerating antipodal "
-    "cells</b> at the chalazal end. The embryo series labels the <b>globular embryo</b>, the "
-    "<b>heart-shaped embryo</b> and the mature embryo, in which the <b>suspensor</b> anchors "
-    "the embryo and the <b>radicle</b>, the <b>cotyledon</b> and the <b>plumule</b> are "
-    "already distinct."))
+# Fig 1.13 - caption F218, former label prose F219
 story.append(figure(
     "fig_1_13.png",
     "Fig. 1.13 &mdash; (a) Fertilised embryo sac showing zygote and Primary Endosperm Nucleus "
@@ -909,13 +846,7 @@ story.append(data_table([
      "undifferentiated sheath called <b>coleorrhiza</b> (also spelt coleorhiza)"],
 ], col_widths=[0.8, 1.9, 2.0]))
 story.append(gap())
-# Fig 1.14 - caption F220, label walk-through F221
-story.append(body(
-    "The figure below labels, in the dicot embryo, the <b>plumule</b>, the two "
-    "<b>cotyledons</b>, the <b>hypocotyl</b>, the <b>radicle</b> and its <b>root cap</b>; and "
-    "in the grass embryo the <b>scutellum</b>, the <b>coleoptile</b> enclosing the "
-    "<b>shoot apex</b>, the <b>epiblast</b> lying opposite the scutellum, and the "
-    "<b>coleorhiza</b> sheathing the radicle."))
+# Fig 1.14 - caption F220, former label prose F221
 story.append(compact_figure_row(
     ["fig_1_14a.png", "fig_1_14b.png"],
     "Fig. 1.14 &mdash; (a) A typical dicot embryo; (b) L.S. of an embryo of grass. Labelled: "
@@ -967,15 +898,7 @@ story.append(b1(
     "<b>parthenocarpic fruits</b>; <b>banana</b> is one such example. Parthenocarpy can be "
     "<b>induced through the application of growth hormones</b>, and such fruits are "
     "<b>seedless</b>."))
-# Fig 1.15 - caption F242, label walk-through F243
-story.append(body(
-    "The figure below labels, in the seeds, the <b>seed coat</b>, the <b>micropyle</b>, the "
-    "<b>cotyledons</b> and the <b>hypocotyl root axis</b> of the dicot seed, and the "
-    "<b>endosperm</b>, <b>scutellum</b>, <b>coleoptile</b>, <b>plumule</b>, <b>radicle</b>, "
-    "<b>coleorhiza</b>, <b>shoot apical meristem</b> and <b>root tip</b> of the grain. In the "
-    "false fruits it labels the <b>thalamus</b> that has grown into the fleshy part, the "
-    "<b>pericarp</b> with its <b>mesocarp</b> and <b>endocarp</b>, the <b>seed</b> inside, and "
-    "the tiny one-seeded <b>achene</b> fruits sitting on the surface of the strawberry."))
+# Fig 1.15 - caption F242, former label prose F243
 # Fig 1.15 split into its labelled source panels and stacked vertically.
 # This preserves the requested (a)-above-(b) reading order while removing the
 # unused internal whitespace from the former stacked whole-plate asset.
