@@ -91,7 +91,8 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
         # areas in the figure frame; all other panels retain their source
         # calibrated size.
         width = (max_w * 0.45 if asset_name.startswith("fig_1_5")
-                 else max_w * 0.55 if fill and asset_name in {"fig_1_12d.png", "fig_1_12e.png"}
+                 else max_w * 0.70 if fill and asset_name == "fig_1_12d.png"
+                 else max_w * 0.55 if fill and asset_name == "fig_1_12e.png"
                  else max_w if fill else min(max_w, natural_w))
         # In the space-constrained Fig. 1.12 layout, (a)/(b) are contextual
         # thumbnails while (c)-(e) carry the key explanatory detail. Shrink
@@ -128,7 +129,7 @@ def compact_figure_row(columns, caption_text, total_width_cm=15.9, fractions=Non
     return KeepTogether([row, Paragraph(caption_text, STYLES["Caption"])])
 
 
-def stacked_figure_panels(asset_names, caption_text, max_width_cm=15.9):
+def stacked_figure_panels(asset_names, caption_text, max_width_cm=15.9, scale=1.0):
     """Stack independent image flowables without a shared table cell."""
     flowables = []
     max_width = max_width_cm * cm
@@ -138,7 +139,7 @@ def stacked_figure_panels(asset_names, caption_text, max_width_cm=15.9):
         with PILImage.open(path) as im:
             w, h = im.size
         natural_width = w / 300.0 * 2.54 * cm
-        width = min(max_width, natural_width)
+        width = min(max_width, natural_width) * scale
         image = RLImage(path, width=width, height=width * h / w)
         image.hAlign = "CENTER"
         flowables.append(image)
@@ -964,14 +965,14 @@ story.append(body(
 # unused internal whitespace from the former stacked whole-plate asset.
 # Put panel (a) into the available space at the bottom of page 14. Panel (b)
 # starts the next page so the two assets remain genuinely independent.
-story.append(stacked_figure_panels(["fig_1_15a.png"], None))
+story.append(stacked_figure_panels(["fig_1_15a.png"], None, scale=0.80))
 story.append(PageBreak())
 story.append(stacked_figure_panels(
     ["fig_1_15b.png"],
     "Fig. 1.15 &mdash; (a) Structure of some seeds. (b) False fruits of apple and strawberry. "
     "Labelled: cotyledons, micropyle, seed coat, endosperm, hypocotyl root axis, shoot apical "
     "meristem, root tip, scutellum, coleoptile, plumule, radicle, coleorhiza, pericarp, "
-    "thalamus, seed, endocarp, mesocarp, achene."))
+    "thalamus, seed, endocarp, mesocarp, achene.", scale=0.80))
 story.append(body("<b>Why seed formation is an advantage.</b>"))
 story.append(b1(
     " <b>Seed formation is more dependable</b>, because pollination and fertilisation are no "
