@@ -3,7 +3,7 @@ Source: `Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf` �
 
 **Source-scope note:** The supplied PDF contains 19 pages and skips printed textbook pages 107–110; the corresponding material and numbered Figures 7.9–7.13 are absent. No content was imported from another edition. Inventory scope is the requested NEET syllabus: the Earthworm section has been removed from the NEET syllabus and is intentionally excluded here. This is complete for the requested syllabus scope; the omission is deliberate, not an accidental source gap.
 
-Tick legend: `x` = marked as incorporated into the Pass 2 notes script. All 398 Facts rows are ticked; `check_pdf.py --strict` confirms the tick state, but tick marks and the linter do not constitute a side-by-side semantic verification of every fact. Gate 2 closed; Gate 3 remains open. The inventory is complete for the requested NEET syllabus scope and approved filtering decisions.
+Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retained as labels in the figure artwork. All 398 Facts rows are ticked; the strict linter confirms the tick state but now fails figure-label running-text coverage after the user-requested removal of transcription NOTE boxes. The revised Gate 2 is not closed; Gate 3 remains open. The inventory remains frozen for the requested NEET syllabus scope and approved filtering decisions.
 
 ## Pass 1 session records
 
@@ -568,7 +568,7 @@ Tick legend: `x` = marked as incorporated into the Pass 2 notes script. All 398 
 - [x] Figure manifest marks all 17 numbered-figure assets `Mono: yes` and `Verified: yes`.
 - [x] Facts IDs contiguous and all Type values normalized lowercase; rows were unticked at Gate 1 freeze and were ticked during Pass 2.
 
-**Gate 1 closed for the requested NEET syllabus scope. Gate 2 closed after the strict linter run; Gate 3 is still open.** The Pass 2 notes script and PDF are in this chapter folder.
+**Gate 1 closed for the requested NEET syllabus scope. The earlier Pass 2 version passed Gate 2; the current revision does not pass its strict linter. Gate 3 remains open.** The script and revised PDF are in this chapter folder.
 
 ## Source-scope / carry-over notes
 
@@ -604,4 +604,4 @@ Printed pages 107–110 and Figures 7.9–7.13 are absent from this 19-page supp
 
 ### Linter verdict
 
-Gate 2: `/vercel/share/neetenv/bin/python check_pdf.py --strict "notes/class 11/Ch7_StructuralOrganisationInAnimals"` exited 0 on the 17-page PDF (2026-09-26): **PASS; 0 fail, 0 warn**; 17 embedded monochrome images, 143/143 figure-label strings matched, 398/398 Facts rows ticked. This is **not** the final Gate 3 linter verdict; rerun it after any Pass 3 correction and final rebuild.
+Historical Gate 2: the strict linter exited 0 on the prior 17-page PDF (2026-09-26): PASS (0 fail, 0 warn), with 143/143 labels in running text. **Current 16-page revision:** strict linter exits 1 (1 fail, 0 warn): check 6 reports 117/143 labels fully present in text, 3 partial and 23 missing because the user requested removal of all figure-label NOTE boxes. All other checks pass, including 17 embedded monochrome images and 398/398 Facts rows ticked. Labels remain visible in the diagrams; the revised Gate 2 cannot be marked closed under the current checker contract.

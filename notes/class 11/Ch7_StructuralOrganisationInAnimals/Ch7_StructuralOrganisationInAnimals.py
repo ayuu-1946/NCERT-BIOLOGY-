@@ -16,11 +16,10 @@ edition. The chapter therefore runs intro -> 7.1 -> 7.2 -> 7.4 -> 7.5.
 Block markers `# ---- N.N ----` mark every NCERT section so a Pass 3 flag can be
 found and fixed in one contiguous block. Inventory row IDs are named in the comments.
 
-FIGURE-LABEL COVERAGE (check_pdf.py check 6):
-All 17 figures carry their part-labels as artwork, so the extracted PDF text cannot
-inherit them from the image. Each figure is therefore followed by a NOTE that lists
-its labels verbatim - this puts every figure-label-matrix label (F382-F398) into the
-running text for check 6, and lets a print reader name the parts of each diagram.
+FIGURE LABELS:
+All 17 figures retain their printed labels in the artwork. At the user's request,
+redundant per-figure label-transcription NOTE boxes are omitted. As a result, text-
+extraction-based label coverage in check_pdf.py check 6 is no longer expected to pass.
 
 SUMMARY-UNIQUE folding (SS3, Rule 3): the 14 SUMMARY-UNIQUE facts (F368-F381) are
 folded into their planned body homes AND restated in the Quick Recap. Fold points
@@ -47,11 +46,11 @@ while _probe != os.path.dirname(_probe):
     _probe = os.path.dirname(_probe)
 
 from neet_template import (  # noqa: E402
-    STYLES,
+    STYLES, FRAME_WIDTH,
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, Table, TableStyle  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch7_StructuralOrganisationInAnimals.pdf")
@@ -196,16 +195,11 @@ story.append(figure(
     "fig_7_1.png",
     "Figure 7.1 Simple epithelium: (a) Squamous (b) Cuboidal (c) Columnar "
     "(d) Columnar cells bearing cilia"))  # F323 caption
-story.append(note(
-    "Figure 7.1 labels (verbatim): <b>Flattened cell</b>; <b>Cube-like cell</b>; "
-    "<b>Tall cell</b>."))  # F382 labels -> running text (check 6)
 
 # --- Fig 7.2 ---
 story.append(figure(
     "fig_7_2.png",
     "Figure 7.2 Glandular epithelium: (a) Unicellular (b) Multicellular"))  # F324 caption
-story.append(note(
-    "Figure 7.2 labels (verbatim): <b>Unicellular gland</b>; <b>Multicellular gland</b>."))  # F383
 
 # Glands: exocrine vs endocrine (comparative -> table)
 story.append(body(
@@ -233,8 +227,6 @@ story.append(body(
 story.append(figure(
     "fig_7_3.png",
     "Figure 7.3 Compound epithelium"))  # F325 caption
-story.append(note(
-    "Figure 7.3 label (verbatim): <b>Multi-layered cells</b>."))  # F384
 
 # Cell junctions (F043-F049)
 story.append(body(
@@ -304,9 +296,6 @@ story.append(b1(
 story.append(figure(
     "fig_7_4.png",
     "Figure 7.4 Loose connective tissue: (a) Areolar tissue (b) Adipose tissue"))  # F326 caption
-story.append(note(
-    "Figure 7.4 labels (verbatim): <b>Macrophage</b>; <b>Fibroblast</b>; <b>Collagen fibres</b>; "
-    "<b>Mast cell</b>; <b>Fat storage area</b>; <b>Nucleus</b>; <b>Plasma Membrane</b>."))  # F385
 
 # Dense connective tissue (F063-F068) + Fig 7.5
 story.append(heading("B", "Dense Connective Tissue", level=3))
@@ -327,8 +316,6 @@ story.append(b1(
 story.append(figure(
     "fig_7_5.png",
     "Figure 7.5 Dense connective tissue: (a) Dense regular (b) Dense irregular"))  # F327 caption
-story.append(note(
-    "Figure 7.5 label (verbatim): <b>Collagen fibre</b>."))  # F386
 
 # Specialised connective tissue (F069-F083) + Fig 7.6
 story.append(heading("C", "Specialised Connective Tissue", level=3))
@@ -374,9 +361,6 @@ story.append(body(
 story.append(figure(
     "fig_7_6.png",
     "Figure 7.6 Specialised connective tissues: (a) Cartilage (b) Bone (c) Blood"))  # F328 caption
-story.append(note(
-    "Figure 7.6 labels (verbatim): <b>Collagen fibers</b>; <b>Cartilage cell (chondrocyte)</b>; "
-    "<b>RBC</b>; <b>WBC</b>; <b>Platelets</b>."))  # F387
 
 # ======================================================================================
 # ---- 7.1.3  Muscle Tissue ---- F084-F100, F344 heading, F359 opener
@@ -428,9 +412,6 @@ story.append(figure(
     "fig_7_7.png",
     "Figure 7.7 Muscle tissue: (a) Skeletal (striated) muscle tissue (b) Smooth muscle tissue "
     "(c) Cardiac muscle tissue"))  # F329 caption
-story.append(note(
-    "Figure 7.7 labels (verbatim): <b>Nucleus</b>; <b>Striations</b>; <b>Smooth muscle "
-    "fibers</b>; <b>Junction between adjacent cells</b>."))  # F388
 
 # ======================================================================================
 # ---- 7.1.4  Neural Tissue ---- F101-F106, F345 heading, F360 opener (Fig 7.8)
@@ -454,9 +435,6 @@ story.append(body(
 story.append(figure(
     "fig_7_8.png",
     "Figure 7.8 Neural tissue (Neuron with neuroglea)"))  # F330 caption
-story.append(note(
-    "Figure 7.8 labels (verbatim): <b>Axon</b>; <b>Cell body with nucleus</b>; <b>Dendrite</b>; "
-    "<b>Neuroglea</b>."))  # F389
 
 # ======================================================================================
 # ---- 7.2  ORGAN AND ORGAN SYSTEM ---- F107-F117, F346 heading, F361 opener
@@ -532,11 +510,6 @@ story.append(body(
 story.append(figure(
     "fig_7_14.png",
     "Figure 7.14 External features of cockroach"))  # F331 caption
-story.append(note(
-    "Figure 7.14 labels (verbatim): <b>Filiform antennae</b>; <b>Compound eye</b>; <b>Head</b>; "
-    "<b>Pronotum</b>; <b>Tegmina</b>; <b>Hind wing</b>; <b>Mesothorax</b>; <b>Prothoracic "
-    "leg</b>; <b>Metathorax</b>; <b>Mesothoracic leg</b>; <b>Metathoracic leg</b>; "
-    "<b>Abdomen</b>; <b>Anal cerci</b>."))  # F390
 
 # Head (F127-F134) + Fig 7.15
 story.append(heading("Head", "Head", level=3))
@@ -558,10 +531,6 @@ story.append(b1(
 story.append(figure(
     "fig_7_15.png",
     "Figure 7.15 Head region of cockroach: (a) parts of head region (b) mouth parts"))  # F332 caption
-story.append(note(
-    "Figure 7.15 labels (verbatim): <b>Ocellus</b>; <b>Compound eye</b>; <b>Mandible</b>; "
-    "<b>Maxilla</b>; <b>Labrum</b>; <b>Labium</b>; <b>Grinding region</b>; <b>Incising "
-    "region</b>; <b>Hypopharynx</b>."))  # F391
 
 # Thorax (F135-F140) + folded F377
 story.append(heading("Thorax", "Thorax", level=3))
@@ -632,11 +601,6 @@ story.append(process_flow([
 story.append(figure(
     "fig_7_16.png",
     "Figure 7.16 Alimentary canal of cockroach"))  # F333 caption
-story.append(note(
-    "Figure 7.16 labels (verbatim): <b>Salivary gland</b>; <b>Pharynx</b>; <b>Salivary "
-    "reservoir</b>; <b>Oesophagus</b>; <b>Crop</b>; <b>Gizzard</b>; <b>Hepatic caeca</b>; "
-    "<b>Mesenteron or midgut</b>; <b>Malpighian tubules</b>; <b>Ileum</b>; <b>Colon</b>; "
-    "<b>Rectum</b>."))  # F392
 
 # Circulatory system (F159-F165) + Fig 7.17
 story.append(heading("Circ", "Circulatory System", level=3))
@@ -654,9 +618,6 @@ story.append(body(
 story.append(figure(
     "fig_7_17.png",
     "Figure 7.17 Open circulatory system of cockroach"))  # F334 caption
-story.append(note(
-    "Figure 7.17 labels (verbatim): <b>Anterior aorta</b>; <b>Alary muscles</b>; <b>Chambers of "
-    "heart</b>."))  # F393
 
 # Respiratory system (F166-F169)
 story.append(heading("Resp", "Respiratory System", level=3))
@@ -746,14 +707,6 @@ story.append(b1(
 story.append(figure(
     "fig_7_18.png",
     "Figure 7.18 Reproductive system of cockroach: (a) male (b) female"))  # F335 caption
-story.append(note(
-    "Figure 7.18 labels (verbatim): <b>Testis</b>; <b>Phallic gland</b>; <b>Small tubules</b>; "
-    "<b>Long tubules</b>; <b>Seminal vesicle</b>; <b>Vas deferens</b>; <b>Ejaculatory duct</b>; "
-    "<b>Right phallomere</b>; <b>Ventral phallomere</b>; <b>Anal cercus</b>; <b>Caudal "
-    "style</b>; <b>Pseudopenis</b>; <b>Titillator</b>; <b>Left phallomere</b>; <b>Ovary</b>; "
-    "<b>Oviduct</b>; <b>Common oviduct or vagina</b>; <b>Collaterial glands</b>; <b>Genital "
-    "chamber</b>; <b>Vestibulum</b>; <b>Genital pouch</b>; <b>Spermatheca</b>; "
-    "<b>Gonapophyses</b>."))  # F394
 
 # Economic importance (F206-F209)
 story.append(body(
@@ -821,9 +774,6 @@ story.append(b1(
 story.append(figure(
     "fig_7_19.png",
     "Figure 7.19 External features of frog"))  # F336 caption
-story.append(note(
-    "Figure 7.19 labels (verbatim): <b>Eye</b>; <b>Fore limb</b>; <b>Hind limb</b>; "
-    "<b>Head</b>; <b>Trunk</b>."))  # F395
 
 # ======================================================================================
 # ---- 7.5.2  Anatomy ---- F236-F322, F352 heading, F367 opener
@@ -932,11 +882,6 @@ story.append(figure(
     "fig_7_20.png",
     "Figure 7.20 Diagrammatic representation of internal organs of frog showing complete "
     "digestive system"))  # F337 caption
-story.append(note(
-    "Figure 7.20 labels (verbatim): <b>Heart</b>; <b>Oesophagus</b>; <b>Liver</b>; <b>Gall "
-    "bladder</b>; <b>Lung</b>; <b>Fat bodies</b>; <b>Kidney</b>; <b>Ureter</b>; <b>Urinary "
-    "bladder</b>; <b>Cloaca</b>; <b>Stomach</b>; <b>Intestine</b>; <b>Rectum</b>; <b>Cloacal "
-    "Aperture</b>."))  # F396
 
 # Control and coordination (F289-F306)
 story.append(heading("Ctrl", "Control and Coordination", level=3))
@@ -996,20 +941,20 @@ story.append(b1(
     "larval stage called the <b>tadpole</b>, which undergoes <b>metamorphosis</b> to form the "
     "adult."))  # F317, F318, F319
 
-story.append(figure(
-    "fig_7_21.png",
-    "Figure 7.21 Male reproductive system"))  # F338 caption
-story.append(note(
-    "Figure 7.21 labels (verbatim): <b>Vasa efferentia</b>; <b>Testis</b>; <b>Fat bodies</b>; "
-    "<b>Kidney</b>; <b>Adrenal gland</b>; <b>Urinogenital duct</b>; <b>Rectum</b>; <b>Urinary "
-    "bladder</b>; <b>Cloaca</b>; <b>Cloacal aperture</b>."))  # F397
-
-story.append(figure(
-    "fig_7_22.png",
-    "Figure 7.22 Female reproductive system"))  # F339 caption
-story.append(note(
-    "Figure 7.22 labels (verbatim): <b>Oviduct</b>; <b>Ovary</b>; <b>Ova</b>; <b>Ureter</b>; "
-    "<b>Cloaca</b>; <b>Cloacal aperture</b>; <b>Urinary bladder</b>."))  # F398
+# Table cells need the shared helper's framed image and caption as flowables;
+# nesting its KeepTogether wrapper inside a cell produces an infinite row height.
+reproductive_figures = Table([[
+    figure("fig_7_21.png", "Figure 7.21 Male reproductive system", max_width_cm=6.9)._content,
+    figure("fig_7_22.png", "Figure 7.22 Female reproductive system", max_width_cm=6.9)._content,
+]], colWidths=[FRAME_WIDTH / 2, FRAME_WIDTH / 2])  # F338, F339 captions
+reproductive_figures.setStyle(TableStyle([
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 0),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+    ("TOPPADDING", (0, 0), (-1, -1), 0),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+]))
+story.append(reproductive_figures)
 
 # Economic importance (F320-F322)
 story.append(body(

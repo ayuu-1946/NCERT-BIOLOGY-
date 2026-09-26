@@ -2,7 +2,7 @@
 
 ## Current status — 2026-09-26
 
-**Gate 1 closed; Gate 2 closed for the requested NEET syllabus scope; Gate 3 open.** The Earthworm section (7.3) and directly related summary/exercise material are intentionally excluded under the approved syllabus scope. The Pass 2 script and PDF are present. The strict PDF linter passes with 0 failures and 0 warnings. This is a mechanical Gate 2 result, **not** a Pass 3 content or page-by-page visual verification.
+**Gate 1 closed; revised Gate 2 is NOT closed; Gate 3 open.** The Earthworm section (7.3) and directly related summary/exercise material remain excluded under the approved syllabus scope. After the user-requested removal of all figure-label NOTE boxes, the rebuilt 16-page PDF fails the strict linter's running-text label coverage check (check 6); the earlier 17-page version passed. The diagrams still carry their printed labels, and Figures 7.21 and 7.22 now sit side by side. No Pass 3 content or page-by-page visual verification has been performed.
 
 ### Syllabus-scoped inventory evidence
 
@@ -23,10 +23,10 @@ The supplied PDF contains printed pages 100–106 and 111–122; pages 107–110
 
 ### Pass 2 build and Gate 2 evidence
 
-- Deliverables: `Ch7_StructuralOrganisationInAnimals.py` and `Ch7_StructuralOrganisationInAnimals.pdf` (17 A4 portrait pages); all 398 Facts rows marked `x` in the frozen inventory. Source is `Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf`. The script imports the shared `neet_template.py`; figure assets are in `assets/`.
-- Content order: intro, 7.1 (four tissue types), 7.2 (organ systems), 7.4 (cockroach), 7.5 (frog), Quick Recap, then the four GAP exercise subparts in the Terms Used in the Exercises appendix. The 14 SUMMARY-UNIQUE rows F368–F381 have named body fold points in the script. The 17 retained figures are embedded at their topics; their 143 figure-label strings are repeated in adjacent NOTE boxes for text-layer coverage. See `PASS2_DECISIONS.md` for the editorial boundaries and distinctions.
-- From the repository root, `/vercel/share/neetenv/bin/python check_pdf.py --strict "notes/class 11/Ch7_StructuralOrganisationInAnimals"` exits 0: **PASS, 0 fail, 0 warn**. Checks 1–10 pass; 17/17 images monochrome, 143/143 label strings matched in extracted text, 398/398 inventory rows ticked, no orphaned heading (69 banners), no badge collisions (129 plates), smallest glyph 6.0 pt. Check 4 passes because there is no portrait/photo row, not because a portrait was manually reviewed.
-- This validates the automated print and bookkeeping checks only. It does **not** attest to a human inspection of all 17 rendered pages or a bidirectional source-to-script content read. **Pass 3(a), Pass 3(b), rebuild equivalence, and Gate 3 remain pending.** Do not describe the chapter as delivered or Gate 3 closed until all five Gate 3 conditions in the source prompt have been met.
+- Deliverables: `Ch7_StructuralOrganisationInAnimals.py` and `Ch7_StructuralOrganisationInAnimals.pdf` (currently 16 A4 portrait pages); all 398 Facts rows marked `x` in the frozen inventory. Source is `Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf`. The script imports the shared `neet_template.py`; figure assets are in `assets/`.
+- Content order: intro, 7.1 (four tissue types), 7.2 (organ systems), 7.4 (cockroach), 7.5 (frog), Quick Recap, then the four GAP exercise subparts in the Terms Used in the Exercises appendix. The 14 SUMMARY-UNIQUE rows F368–F381 have named body fold points. All 17 figures remain embedded, but their separate label-transcription NOTE boxes were removed by user request. Figures 7.21 and 7.22 share one two-column row. See `PASS2_DECISIONS.md` for editorial boundaries.
+- Historical baseline (before this revision): the 17-page PDF passed the strict linter with 0 failures/warnings and 143/143 labels matched in extracted text. **Current result:** the rebuilt 16-page PDF has **1 failure (check 6), 0 warnings**: 117/143 figure labels fully matched in running text, 3 partial and 23 missing. The other nine checks pass, including 17/17 monochrome embedded images, 398/398 inventory rows ticked, A4 portrait geometry and no orphaned headings. The strict linter exits 1. This follows directly from removing the transcription boxes; the image artwork retains the labels, but the checker cannot extract text from raster artwork.
+- This records automated print/bookkeeping results only. Page 15 (the new side-by-side layout) was visually inspected; **all-page Pass 3(a), bidirectional Pass 3(b), a green final linter, rebuild equivalence, and Gate 3 remain pending.** Do not describe the revised chapter as Gate 2 closed or delivered.
 
 ### Reproduction / validation
 
