@@ -2,20 +2,20 @@
 
 ## Current status — 2026-09-26
 
-**Gate 1 closed; revised Gate 2 is NOT closed; Gate 3 open.** The Earthworm section (7.3) and directly related summary/exercise material remain excluded under the approved syllabus scope. After the user-requested removal of all figure-label NOTE boxes, the rebuilt 16-page PDF fails the strict linter's running-text label coverage check (check 6); the earlier 17-page version passed. The diagrams still carry their printed labels, and Figures 7.21 and 7.22 now sit side by side. No Pass 3 content or page-by-page visual verification has been performed.
+**Gate 1 closed; revised Gate 2 is NOT closed; Gate 3 open.** The Earthworm section (7.3) and directly related summary/exercise material remain excluded under the approved syllabus scope. After the figure-label NOTE boxes were removed at the user's request and the latest prose edits were applied, the rebuilt 16-page PDF has two strict-linter failures: figure-label running-text coverage (check 6) and four intentionally unticked, user-approved removals (check 7). No Pass 3 full-document verification has been performed.
 
 ### Syllabus-scoped inventory evidence
 
 - `Ch7_StructuralOrganisationInAnimals_inventory.md` contains **398 rows**, F001–F398, contiguous and duplicate-free: `fact` 322 · `caption` 17 · `heading` 15 · `opener` 13 · `summary-unique` 14 · `figure-labels` 17.
 - **53 syllabus-scope summary sentences** are classified: 14 SUMMARY-UNIQUE and 39 BODY-PRESENT. Retained summary wording/order is checked against the source summary.
 - **29 syllabus-scope exercise subparts** are classified: 4 GAP and 25 COVERED.
-- In the introduction, two transition/rhetorical items were accepted for removal; a general cell-count fact was rejected for removal and retained. The individual decision log follows below.
-- Figure extraction was not repeated. The figure manifest lists 17 figures and 143 parsed labels; all 22 existing PNG assets were re-probed as single-channel grayscale.
-- `verify_gate1.py` checks row counts, source alignment, retained summary/exercise classifications and figure assets for this syllabus scope.
+- The current prose revision has four accepted omissions: F007, F083, F113, and opener F355. These remain in the frozen inventory but are intentionally unticked; **394/398 rows are ticked**. Earlier intro removals and the rejected broad cell-count removal are also recorded below.
+- Figure extraction was not repeated for this prose edit. The manifest lists 17 figures and 143 parsed labels; all 22 PNG assets remain single-channel grayscale.
+- `verify_gate1.py` checks row counts, source alignment, retained summary/exercise classifications and figure assets for this syllabus scope. Since it is a pre-Pass-2 validator, its “0 rows ticked before Pass 2” assertion now reports one expected failure after the 394 retained rows were ticked and four approved omissions left unticked.
 
 ### User-accepted filtering decisions
 
-Using the pre-filter inventory IDs: **F001 accepted for removal** (chapter-transition sentence); **F006 accepted for removal** (rhetorical question); **F005 rejected for removal and retained** (general human-cell-count statement). IDs in the current inventory were then renumbered contiguously.
+Using the current inventory IDs, the new approved omissions are **F007** (redundant four-tissue-types sentence), **F083** (blood cross-reference), **F113** (redundant preview of the worked examples), and **F355** (chapter-transition opener). From the earlier pass, the chapter-transition/rhetorical intro items were accepted for removal and the broad human-cell-count fact was rejected for removal and retained.
 
 ### Source edition and figure evidence
 
@@ -23,23 +23,20 @@ The supplied PDF contains printed pages 100–106 and 111–122; pages 107–110
 
 ### Pass 2 build and Gate 2 evidence
 
-- Deliverables: `Ch7_StructuralOrganisationInAnimals.py` and `Ch7_StructuralOrganisationInAnimals.pdf` (currently 16 A4 portrait pages); all 398 Facts rows marked `x` in the frozen inventory. Source is `Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf`. The script imports the shared `neet_template.py`; figure assets are in `assets/`.
-- Content order: intro, 7.1 (four tissue types), 7.2 (organ systems), 7.4 (cockroach), 7.5 (frog), Quick Recap, then the four GAP exercise subparts in the Terms Used in the Exercises appendix. The 14 SUMMARY-UNIQUE rows F368–F381 have named body fold points. All 17 figures remain embedded, but their separate label-transcription NOTE boxes were removed by user request. Figures 7.21 and 7.22 share one two-column row. See `PASS2_DECISIONS.md` for editorial boundaries.
-- Historical baseline (before this revision): the 17-page PDF passed the strict linter with 0 failures/warnings and 143/143 labels matched in extracted text. **Current result:** the rebuilt 16-page PDF has **1 failure (check 6), 0 warnings**: 117/143 figure labels fully matched in running text, 3 partial and 23 missing. The other nine checks pass, including 17/17 monochrome embedded images, 398/398 inventory rows ticked, A4 portrait geometry and no orphaned headings. The strict linter exits 1. This follows directly from removing the transcription boxes; the image artwork retains the labels, but the checker cannot extract text from raster artwork.
-- This records automated print/bookkeeping results only. Page 15 (the new side-by-side layout) was visually inspected; **all-page Pass 3(a), bidirectional Pass 3(b), a green final linter, rebuild equivalence, and Gate 3 remain pending.** Do not describe the revised chapter as Gate 2 closed or delivered.
+- Deliverables: `Ch7_StructuralOrganisationInAnimals.py` and `Ch7_StructuralOrganisationInAnimals.pdf` (currently 16 A4 portrait pages); source is `Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf`. The script imports the shared `neet_template.py`; figure assets are in `assets/`.
+- Content order: intro, 7.1 (four tissue types), 7.2 (organ systems), 7.4 (cockroach), 7.5 (frog), Quick Recap, then the four GAP exercise subparts in the Terms Used in the Exercises appendix. The 14 SUMMARY-UNIQUE rows F368–F381 have named body fold points.
+- The eight latest requested edits are implemented in the generator: the body opens directly with unicellular organisms; redundant F007 and F113 are removed; the blood paragraph ends after the transport sentence; the evolutionary-trend sentence is reframed; the skeletal-muscle entry says only “Voluntary”; the Chapter 21 aside is removed; and the frog-colour sentence is reframed while retaining the following hibernation statement. The worked-example NOTE remains.
+- All 17 figures remain embedded, but their separate label-transcription NOTE boxes were removed by earlier user request. Figures 7.21 and 7.22 share one two-column row. See `PASS2_DECISIONS.md` for editorial boundaries and exact requested wording.
+- **Current result:** `.venv/bin/python check_pdf.py --strict 'notes/class 11/Ch7_StructuralOrganisationInAnimals'` reports **2 failures, 0 warnings**. Check 6: 117/143 figure-label strings fully matched in running text, 3 partial and 23 missing; the printed labels remain in the raster artwork. Check 7: the four approved omissions F007, F083, F113 and F355 remain unticked. The other eight checks pass, including 17/17 monochrome embedded images, A4 portrait geometry, and no orphaned headings. The strict linter exits 1; neither failure was masked or patched in the checker.
+- This records automated print/bookkeeping results only. **All-page Pass 3(a), bidirectional Pass 3(b), a green final linter, rebuild equivalence, and Gate 3 remain pending.** Do not describe the revised chapter as Gate 2 closed or fully verified.
 
 ### Reproduction / validation
 
-Gate 1 was originally checked in a repo-ignored Python 3.11.2 `.venv` when the canonical environment was unavailable. This is historical Gate 1 evidence, not the current runtime. In the Pass 2 session, `/vercel/share/neetenv` was rebuilt with Python 3.13 and the required ReportLab, pdfplumber, PyMuPDF, and Pillow packages. From the repository root:
+For this revision, the user requested using the closest local environment rather than `/vercel`. A repo-local `.venv` was created with Python 3.13.14, ReportLab 5.0.1, pdfplumber 0.11.10, PyMuPDF 1.28.2, and Pillow 12.3.0. The shared-template smoke test passed before the chapter build.
 
 ```bash
-/vercel/share/neetenv/bin/python 'notes/class 11/Ch7_StructuralOrganisationInAnimals/Ch7_StructuralOrganisationInAnimals.py'
-/vercel/share/neetenv/bin/python check_pdf.py --strict 'notes/class 11/Ch7_StructuralOrganisationInAnimals'
-```
-
-For the original Gate 1 checks (the audit depends on its original environment and may need NumPy):
-
-```bash
+.venv/bin/python 'notes/class 11/Ch7_StructuralOrganisationInAnimals/Ch7_StructuralOrganisationInAnimals.py'
+.venv/bin/python check_pdf.py --strict 'notes/class 11/Ch7_StructuralOrganisationInAnimals'
 ./.venv/bin/python 'notes/class 11/Ch7_StructuralOrganisationInAnimals/verify_gate1.py'
 ./.venv/bin/python 'notes/class 11/Ch7_StructuralOrganisationInAnimals/audit_figures.py'
 ```
