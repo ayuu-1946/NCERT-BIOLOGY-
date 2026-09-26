@@ -86,40 +86,24 @@ story += title_block("Evolution")
 # ======================================================================================
 # ---- Chapter opener (F001-F003) ----
 # ======================================================================================
-# F001 - chapter title + printed contents list
+# F001 - chapter title (printed contents list cut in Pass 3: repeats headers already in body)
 story.append(heading("Ch 6", "EVOLUTION - Chapter Opener", 1))
-story.append(body(
-    "<b>Chapter contents (as printed on the opener page):</b> 6.1 Origin of Life; 6.2 Evolution "
-    "of Life Forms - A Theory; 6.3 What are the Evidences for Evolution?; 6.4 What is Adaptive "
-    "Radiation?; 6.5 Biological Evolution; 6.6 Mechanism of Evolution; 6.7 Hardy-Weinberg "
-    "Principle; 6.8 A Brief Account of Evolution; 6.9 Origin and Evolution of Man."))
 # F002 (opener)
 story.append(body(
     "<b>Evolutionary Biology</b> is the study of <b>history of life forms on earth</b>."))
-# F003
-story.append(body(
-    "Flora and fauna on earth have changed over millions of years. To understand these changes "
-    "we must understand the context of <b>origin of life</b>, i.e., the <b>evolution of earth, of "
-    "stars and indeed of the universe itself</b>. This chapter is therefore the story of origin of "
-    "life and <b>evolution of life forms or biodiversity</b> on planet earth, told in the context "
-    "of evolution of earth and against the background of evolution of the universe itself."))
+# F003 - cut in Pass 3: restates "chapter covers origin/evolution of life" a third time, no new fact
 
 # ======================================================================================
 # ---- 6.1 Origin of Life (F004-F016) ----
 # ======================================================================================
 story.append(heading("6.1", "ORIGIN OF LIFE", 1))
-# F005 (opener), F006
-story.append(body(
-    "When we look at stars on a clear night sky we are, in a way, <b>looking back in time</b>. "
-    "<b>Stellar distances are measured in light years.</b> The light we see today started its "
-    "journey millions of years back from objects trillions of kilometres away - so when we see "
-    "stars we apparently are <b>peeping into the past</b>."))
+# F005/F006 - cut in Pass 3: star/light-years analogy, not an evolution fact, not NEET-testable
 # F007, F008, F009
 story.append(body(
     "The <b>origin of life</b> is considered a <b>unique event in the history of universe</b>. The "
     "universe is vast and <b>very old - almost 13.8 billion years old</b>. Huge <b>clusters of "
     "galaxies</b> comprise the universe; <b>galaxies contain stars and clouds of gas and dust</b>. "
-    "Considering the size of universe, the <b>earth is indeed a speck</b> - almost only a speck."))
+    "Considering the size of universe, the <b>earth is indeed a speck</b>."))
 # F010, F011, F012, F013, F014, F015 - converted to a process flow
 story.append(body(
     "The <b>Big Bang theory</b> attempts to explain the <b>origin of universe</b>. The sequence "
@@ -153,7 +137,7 @@ story.append(heading("6.1", "Theories on the Origin of Life", 2))
 story.append(heading("6.1", "Panspermia", 3))
 # F019 (opener), F020
 story.append(body(
-    "Did life come from outer space? <b>Some scientists believe that it came from outside.</b> "
+    "<b>Some scientists believe that it came from outside.</b> "
     "<b>Early Greek thinkers</b> thought units of life called <b>spores</b> were transferred to "
     "different planets including earth. <b>Panspermia</b> is still a favourite idea for some "
     "<b>astronomers</b>."))
@@ -310,8 +294,11 @@ story.append(body(
     "<b>paleontological evidence</b>."))
 # F059
 story.append(body(
-    "<i>Recall:</i> how are the ages of fossils calculated? Recollect the method of "
-    "<b>radioactive-dating</b> and the principles behind the procedure."))
+    "<i>Recall:</i> fossil ages are calculated by <b>radioactive (radiometric) dating</b> - "
+    "comparing the ratio of a radioactive <b>parent isotope</b> to its stable <b>daughter "
+    "isotope</b> in the rock, using the isotope's known <b>half-life</b> to compute elapsed time "
+    "(NCERT leaves this as an unanswered recall question; the method itself is an addition, not "
+    "detailed in this chapter)."))
 # F060 (caption) + F061 (7 labels)
 story.append(body(
     "<b>A family tree of dinosaurs</b> and their living modern day counterpart organisms "
@@ -537,14 +524,7 @@ story.append(body(
     "<b>elongation of their necks</b>; as they passed on this <b>acquired character</b> of "
     "elongated neck to succeeding generations, giraffes slowly, over the years, came to acquire "
     "long necks. <b>Nobody believes this conjecture any more.</b>"))
-# F122, F123
-story.append(body(
-    "<b>Is evolution a process or the result of a process?</b> The world we see, inanimate and "
-    "animate, is only the <b>success stories of evolution</b>. When we describe the story of this "
-    "world, we describe evolution as a <b>process</b>; when we describe the story of life on "
-    "earth, we treat evolution as a <b>consequence of a process called natural selection</b>. We "
-    "are still <b>not very clear</b> whether to regard evolution and natural selection as "
-    "processes or end result of unknown processes."))
+# F122, F123 - cut in Pass 3: "process vs result of a process" aside, no testable content
 # F124, F125, F126, F127 - Darwin's reasoning as a process flow
 story.append(body(
     "It is possible that the work of <b>Thomas Malthus on populations</b> influenced Darwin. "
@@ -757,7 +737,7 @@ story.append(body(
     "<i>Tyrannosaurus rex</i>, was <b>about 20 feet in height</b> and had huge fearsome "
     "<b>dagger-like teeth</b>. About 65 mya the dinosaurs suddenly disappeared - <b>we do not know "
     "the true reason</b>. Some say <b>climatic changes killed them</b>; some say <b>most of them "
-    "evolved into birds</b>. <b>The truth may lie in between.</b> <b>Small-sized reptiles of that "
+    "evolved into birds</b>. <b>Small-sized reptiles of that "
     "era still exist today.</b>"))
 # F185 + F170 (caption) + F171 (31 labels) - plant forms through geological periods
 story.append(body(
