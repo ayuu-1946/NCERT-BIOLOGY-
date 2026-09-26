@@ -43,7 +43,7 @@ import os
 import sys
 
 from reportlab.lib.units import cm
-from reportlab.platypus import Paragraph, Spacer, KeepTogether
+from reportlab.platypus import Paragraph, Spacer, KeepTogether, PageBreak
 
 # neet_template.py lives at the repository root; chapter scripts live several
 # directories deep, so walk upward from this file until the module is found and
@@ -954,7 +954,8 @@ story.append(figure(
     "upstream with the <b>Transcription start site</b> arrow on it, then the "
     "<b>Structural gene</b>, and the <b>Terminator</b> downstream; the upper strand runs "
     "3' to 5' and is the <b>Template strand</b>, the lower runs 5' to 3' and is the "
-    "<b>Coding strand</b>."))
+    "<b>Coding strand</b>.",
+    max_width_cm=13.0))
 story.append(Paragraph(
     "There are additional regulatory sequences further upstream or downstream to the "
     "promoter, and an <b>enhancer</b> is one such example.",
@@ -1102,6 +1103,8 @@ story.append(process_flow([
     "<b>termination factor (rho)</b>, the nascent RNA and the polymerase both fall off.",
 ]))
 story.append(Spacer(1, 4))
+# Keep Figure 5.10 on page 15 after Figure 5.9 is resized into page 12's open space.
+story.append(PageBreak())
 story.append(figure(
     "fig_5_10.png",
     "Figure 5.10 Process of transcription in bacteria. <b>Initiation</b>: the <b>RNA "
