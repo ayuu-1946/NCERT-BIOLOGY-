@@ -6,6 +6,7 @@
 - **Source:** `Chapter/class 11/Chapter 02 - Biological Classification.pdf`, p. 6; coordinates and split point are documented in `extract_figures.py`.
 - **Method:** Both halves were rendered directly from the source page at 300 dpi. The shorter lower half is centered on white to match the upper half’s dimensions; the composite is pixel-pasted with no resampling.
 - **Verification:** A/B/C extraction audits pass; all four source panels and their (a)–(d) markers were visually checked in the source grid and composite.
+- **PDF placement:** Displayed at a 10.5 cm maximum width; Figure 2.4 and its caption now fit on page 6, before the Kingdom Fungi section.
 
 ## Figures 2.2 and 2.3 — shared page
 

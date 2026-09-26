@@ -423,7 +423,7 @@ story.append(figure("fig_2_4.png",
                     "appear yellow, green, brown, blue or red in life depending on their main "
                     "pigments - that colour difference cannot be shown in a monochrome print, so "
                     "it is stated here in words.",
-                    max_width_cm=15.5))
+                    max_width_cm=10.5))
 
 # ---- 2.3 KINGDOM FUNGI ----
 story.append(heading("2.3", "Kingdom Fungi", level=1))

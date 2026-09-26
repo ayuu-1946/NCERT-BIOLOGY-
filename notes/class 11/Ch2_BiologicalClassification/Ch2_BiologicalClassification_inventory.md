@@ -302,7 +302,8 @@ Asset provenance / re-extraction record:
   are pinned in `extract_figures.py`. Both halves were rendered directly at 300 dpi; the lower half
   is white-padded to equal dimensions, not resized. The composition is checked by exact pixel
   comparison. Figure 2.2 and 2.3 source assets are unchanged; only their PDF display widths were
-  reduced to 6.2 cm to fit together on one page.
+  reduced to 6.2 cm to fit together on one page. Figure 2.4 is displayed at a 10.5 cm maximum
+  width so its composite and caption fit on PDF page 6.
 
 ## Coverage note
 - **Compression decisions** — NCERT prose merged into tables (Table 2.1 five-kingdom comparison reproduced verbatim; fungal-classes comparison table added for Q9; bacterial shapes as table) and Process Flow (fungal sexual cycle: plasmogamy -> karyogamy -> meiosis). No fact dropped.
