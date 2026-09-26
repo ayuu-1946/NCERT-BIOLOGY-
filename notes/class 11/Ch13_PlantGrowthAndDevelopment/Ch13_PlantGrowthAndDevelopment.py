@@ -81,7 +81,8 @@ story.extend(title_block("Plant Growth and Development"))
 # ---- Introduction ----  O01, F001-F006
 # ======================================================================================
 story.append(body(
-    "You have already studied the organisation of a flowering plant in Chapter 5. "
+    "Why not try to write down what you think are the necessary conditions for growth? "
+    "The essential requirements are <b>water</b>, <b>oxygen</b> and <b>nutrients</b>. "
     "<b>Development</b> is the sum of two processes: <b>growth</b> and "
     "<b>differentiation</b>. The development of a mature plant from a zygote "
     "(fertilised egg) follows a precise and highly ordered succession of events. "
