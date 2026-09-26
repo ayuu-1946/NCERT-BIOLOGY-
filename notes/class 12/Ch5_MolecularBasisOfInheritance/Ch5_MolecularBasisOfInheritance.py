@@ -88,8 +88,7 @@ story.extend(title_block("MOLECULAR BASIS OF INHERITANCE"))
 # Chapter opener: what this chapter is for. F225-F231 carry the chapter's framing -- the
 # jump from Mendel's abstract "factor" to the actual molecule.
 story.append(Paragraph(
-    "In the previous chapter you learnt about inheritance as a pattern: Mendel's "
-    "<b>factors</b>, later called <b>genes</b>, passed from parent to offspring in "
+    "Mendel's <b>factors</b>, later called <b>genes</b>, passed from parent to offspring in "
     "predictable ratios. That account never said what a gene <i>is</i> made of. This "
     "chapter answers that question at the level of the molecule. It establishes that "
     "<b>DNA</b> is the genetic material, works out how DNA is built and packaged, how it "
@@ -97,18 +96,7 @@ story.append(Paragraph(
     "(<b>transcription</b>), and -- in the second half of the chapter -- how that RNA is "
     "translated into protein and how gene expression is regulated.",
     STYLES["Body"]))
-story.append(Paragraph(
-    "The logic of the chapter is a chain of questions, each answered experimentally: "
-    "What molecule carries heredity? How is it structured? How does it copy itself "
-    "faithfully? How is its message expressed? Keep that chain in view -- NEET questions "
-    "very often test <i>which experiment proved which link</i>, not just the end result.",
-    STYLES["Body"]))
 story.append(Spacer(1, 4))
-story.append(note(
-    "<b>The central dogma.</b> Francis Crick proposed the flow of genetic information in "
-    "a cell as DNA to RNA to protein: DNA makes RNA (transcription), and RNA makes "
-    "protein (translation). This single arrow-chain is the skeleton on which the whole "
-    "chapter hangs, so it is worth fixing before anything else."))
 story.append(figure(
     "fig_5_central_dogma.png",
     # Gate 3b D1-2/D1-3: this plate's printed labels are replication, DNA,
@@ -230,9 +218,8 @@ story.append(Paragraph(
     "Stripping the bases off a polynucleotide leaves a repeating <b>sugar-phosphate</b> "
     "backbone, and the nitrogenous bases project from that backbone. In RNA, every "
     "nucleotide residue carries an <b>additional -OH group at the 2' position</b> of the "
-    "ribose. RNA also uses uracil in place of thymine -- and note that uracil is simply "
-    "<b>5-methyl uracil</b> seen from the other direction: thymine <i>is</i> 5-methyl "
-    "uracil.",
+    "ribose. RNA also uses uracil in place of thymine. Thymine is chemically "
+    "<b>5-methyluracil</b> -- uracil with a methyl group added at the 5 position.",
     STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(Paragraph(
@@ -263,7 +250,8 @@ story.append(figure(
     "Figure 5.2 A double-stranded polynucleotide chain drawn flat. The two strands run "
     "with opposite polarity -- 5' to 3' on the upper strand and 3' to 5' on the lower -- "
     "and the base pairs A with T and G with C are held together by hydrogen bonds "
-    "(the hydrogen bonds are marked; note two between A and T, three between G and C)."))
+    "(the hydrogen bonds are marked; note two between A and T, three between G and C).",
+    max_width_cm=11.0))
 story.append(Spacer(1, 3))
 # Rule 2 gap (inventory exercise-gap scan, Q2; carry-over 18). The body gives Chargaff's
 # constant ratios and the A-T / G-C pairing rule but never the step that the four base
@@ -320,7 +308,8 @@ story.append(figure(
     "Figure 5.3 DNA double helix. The two chains are coiled in a right-handed fashion; the "
     "<b>Base pairs</b> lie stacked inside the helix and the <b>Sugar phosphate "
     "backbone</b> runs outside. The pairing legend shows <b>Adenine</b> with "
-    "<b>Thymine</b> and <b>Guanine</b> with <b>Cytosine</b>."))
+    "<b>Thymine</b> and <b>Guanine</b> with <b>Cytosine</b>.",
+    max_width_cm=6.2))
 story.append(note(
     "<b>Compare the ring structures, then read the geometry off them.</b> NCERT asks: "
     "compare the structure of purines and pyrimidines, and find out why the distance "
@@ -690,14 +679,9 @@ story.append(heading("5.4", "REPLICATION", 1))
 
 story.append(Paragraph(
     "While proposing the double helical structure for DNA, <b>Watson and Crick had "
-    "immediately proposed a scheme for replication of DNA</b>. To quote their original "
-    "statement: <i>\"Now our model for deoxyribonucleic acid is, in effect, a pair of "
-    "templates, each of which is complementary to the other. We imagine that prior to "
-    "duplication the hydrogen bonds are broken, and the two chains unwind and separate. "
-    "Each chain then acts as a template for the formation of a new fellow chain, so that "
-    "eventually we shall have two pairs of chains, where we only had one before. "
-    "Moreover, the sequence of the pairs of bases will have been duplicated "
-    "exactly.\"</i>",
+    "immediately proposed a scheme for replication of DNA</b>. As NCERT puts it: "
+    "<i>\"It has not escaped our notice that the specific pairing we have postulated "
+    "immediately suggests a possible copying mechanism for the genetic material.\"</i>",
     STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(figure(
@@ -877,7 +861,8 @@ story.append(figure(
     "Figure 5.8 Replicating fork. The <b>Template DNA (parental strands)</b> separates at "
     "the fork; on the 3' to 5' template the <b>Newly synthesised strands</b> grow by "
     "<b>Continuous synthesis</b>, while on the 5' to 3' template the growth is by "
-    "<b>Discontinuous synthesis</b> -- every arrow still running 5' to 3'."))
+    "<b>Discontinuous synthesis</b> -- every arrow still running 5' to 3'.",
+    max_width_cm=6.0))
 story.append(Paragraph(
     "In eukaryotes, the replication of DNA takes place at <b>S-phase of the cell-cycle</b>. "
     "The replication of DNA and cell division cycle should be highly coordinated. A "
