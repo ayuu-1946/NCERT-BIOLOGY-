@@ -3,7 +3,7 @@ Source: `Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf` �
 
 **Source-scope note:** The supplied PDF contains 19 pages and skips printed textbook pages 107–110; the corresponding material and numbered Figures 7.9–7.13 are absent. No content was imported from another edition. Inventory scope is the requested NEET syllabus: the Earthworm section has been removed from the NEET syllabus and is intentionally excluded here. This is complete for the requested syllabus scope; the omission is deliberate, not an accidental source gap.
 
-Tick legend: `x` = written into the script and verified present in the generated PDF. **All inventory rows unticked at Gate 1; Pass 2 not started. The inventory is complete for the requested NEET syllabus scope and approved filtering decisions.**
+Tick legend: `x` = marked as incorporated into the Pass 2 notes script. All 398 Facts rows are ticked; `check_pdf.py --strict` confirms the tick state, but tick marks and the linter do not constitute a side-by-side semantic verification of every fact. Gate 2 closed; Gate 3 remains open. The inventory is complete for the requested NEET syllabus scope and approved filtering decisions.
 
 ## Pass 1 session records
 
@@ -566,12 +566,42 @@ Tick legend: `x` = written into the script and verified present in the generated
 - [x] Exercise subparts classified; every GAP has a planned Pass-2 appendix location.
 - [x] Every summary sentence classified; each SUMMARY-UNIQUE fact added as its own body Facts row before freeze.
 - [x] Figure manifest marks all 17 numbered-figure assets `Mono: yes` and `Verified: yes`.
-- [x] Facts IDs contiguous and all Type values normalized lowercase; all rows unticked.
+- [x] Facts IDs contiguous and all Type values normalized lowercase; rows were unticked at Gate 1 freeze and were ticked during Pass 2.
 
-**Gate 1 closed for the requested NEET syllabus scope; Pass 2 not started.** No chapter notes script or notes PDF has been written.
+**Gate 1 closed for the requested NEET syllabus scope. Gate 2 closed after the strict linter run; Gate 3 is still open.** The Pass 2 notes script and PDF are in this chapter folder.
 
 ## Source-scope / carry-over notes
 
 1. Supplied source edition omits printed pages 107–110 and Figures 7.9–7.13. This is documented, not filled from outside material.
 2. Source-summary/body inconsistency: summary calls adipose tissue “specialised connective tissue”, while section 7.1.2 first classifies adipose as loose connective tissue. Both source statements are preserved as written.
 3. PDF text-layer extraction was used only for prose. In-figure labels were taken from the final assets; no labels were accepted from PDF text extraction.
+
+## Coverage — Pass 2 record (Gate 3 not yet verified)
+
+### Compression decisions
+
+The Pass 2 script reformats enumerable tissue comparisons as tables and ordered cockroach/frog digestive pathways as process flows, while retaining the frozen fact rows as the writing checklist. F368–F381 (14 SUMMARY-UNIQUE rows) have named body fold points and are restated in the Quick Recap. Section 7.3 and its directly related summary/exercise items remain out of the approved syllabus scope; see the tracker and `PASS2_DECISIONS.md`. No claim of independently verified semantic completeness is made before Pass 3(b).
+
+### Exercise classification
+
+The complete per-subpart classification and answer locations are in **Exercise-gap terms** above: **29 retained subparts; 4 GAP answered by design in the appendix (7(b), 9(e), 10(e), 11(e)); 25 COVERED left unanswered separately by design because the body/figures supply their answers; 0 overlooked by the inventory classification.** Pass 3 must verify the classification and the answers, not infer them from ticks.
+
+### Drift caught and fixed
+
+No Pass 3 source-to-notes drift review has been performed. None is claimed fixed; record confirmed defects and their repairs here during Pass 3.
+
+### Figures requiring manual attention
+
+None failed extraction/conversion/verification at Gate 1; 17/17 retained figures were embedded and all pass the grayscale linter check. Final-size visual legibility and full-page layout remain for Pass 3(a).
+
+### Color-dependent figures
+
+None recorded in the frozen figure manifest. Final rendered appearance remains subject to Pass 3(a) review.
+
+### Source problems
+
+Printed pages 107–110 and Figures 7.9–7.13 are absent from this 19-page supplied edition; the excluded Earthworm material is out of the approved NEET scope. The source summary/body adipose classification differs (see S08 and 7.1.2); both are retained. No outside-edition content was supplied to fill source gaps.
+
+### Linter verdict
+
+Gate 2: `/vercel/share/neetenv/bin/python check_pdf.py --strict "notes/class 11/Ch7_StructuralOrganisationInAnimals"` exited 0 on the 17-page PDF (2026-09-26): **PASS; 0 fail, 0 warn**; 17 embedded monochrome images, 143/143 figure-label strings matched, 398/398 Facts rows ticked. This is **not** the final Gate 3 linter verdict; rerun it after any Pass 3 correction and final rebuild.
