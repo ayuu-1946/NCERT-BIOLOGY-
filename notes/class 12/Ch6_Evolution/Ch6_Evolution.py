@@ -87,7 +87,6 @@ story += title_block("Evolution")
 # ---- Chapter opener (F001-F003) ----
 # ======================================================================================
 # F001 - chapter title (printed contents list cut in Pass 3: repeats headers already in body)
-story.append(heading("Ch 6", "EVOLUTION - Chapter Opener", 1))
 # F002 (opener)
 story.append(body(
     "<b>Evolutionary Biology</b> is the study of <b>history of life forms on earth</b>."))
@@ -131,10 +130,10 @@ story.append(body(
     "billion years back</b>."))
 
 # ---- 6.1 Theories on the Origin of Life (F017) ----
-story.append(heading("6.1", "Theories on the Origin of Life", 2))
+story.append(heading("6.1.1", "Theories on the Origin of Life", 2))
 
 # ---- 6.1 Panspermia (F018-F020) ----
-story.append(heading("6.1", "Panspermia", 3))
+story.append(heading("6.1.1.1", "Panspermia", 3))
 # F019 (opener), F020
 story.append(body(
     "<b>Some scientists believe that it came from outside.</b> "
@@ -143,7 +142,7 @@ story.append(body(
     "<b>astronomers</b>."))
 
 # ---- 6.1 Spontaneous Generation (F021-F024) ----
-story.append(heading("6.1", "Spontaneous Generation", 3))
+story.append(heading("6.1.1.2", "Spontaneous Generation", 3))
 # F022 (opener)
 story.append(body(
     "For a long time it was also believed that life came out of <b>decaying and rotting matter "
@@ -158,7 +157,7 @@ story.append(body(
     "earth."))
 
 # ---- 6.1 Chemical Evolution (F025-F039, Fig 6.1 = F033/F034) ----
-story.append(heading("6.1", "Chemical Evolution", 3))
+story.append(heading("6.1.1.3", "Chemical Evolution", 3))
 # F026 (opener), F027
 story.append(body(
     "<b>Oparin of Russia</b> and <b>Haldane of England</b> proposed that the first form of life "
@@ -278,7 +277,7 @@ story.append(body(
     "<b>many quarters</b>."))
 
 # ---- 6.3 Paleontological Evidence (F054-F061, Fig 6.2) ----
-story.append(heading("6.3", "Paleontological Evidence", 2))
+story.append(heading("6.3.1", "Paleontological Evidence", 2))
 # F055 (opener), F056, F057, F058
 story.append(body(
     "<b>Fossils</b> are <b>remains of hard parts of life-forms found in rocks</b>. Rocks form "
@@ -308,7 +307,7 @@ story.append(body(
     "<b>Archaeopteryx</b> on the line leading to birds."))
 
 # ---- 6.3 Embryological Support (F062-F065) ----
-story.append(heading("6.3", "Embryological Support", 2))
+story.append(heading("6.3.2", "Embryological Support", 2))
 # F063 (opener), F064, F065
 story.append(body(
     "<b>Embryological support</b> for evolution was proposed by <b>Ernst Heckel</b>, based upon "
@@ -322,7 +321,7 @@ story.append(body(
     "animals</b>."))
 
 # ---- 6.3 Comparative Anatomy and Morphology (F066-F084, Fig 6.3) ----
-story.append(heading("6.3", "Comparative Anatomy and Morphology", 2, has_table=True))
+story.append(heading("6.3.3", "Comparative Anatomy and Morphology", 2, has_table=True))
 # F067 (opener), F068
 story.append(body(
     "Comparative anatomy and morphology shows <b>similarities and differences</b> among organisms "
@@ -391,7 +390,7 @@ story.append(body(
 
 # ---- 6.3 Natural selection in action - industrial melanism (F085-F095, Fig 6.4) ----
 # F085, F086, F087 (caption), F088-F092
-story.append(heading("6.3", "Moths before and after industrialisation", 3, has_table=True))
+story.append(heading("6.3.4", "Moths before and after industrialisation", 3, has_table=True))
 story.append(data_table([
     ["Collection", "Tree trunks", "Moth that survived", "Result"],
     ["<b>1850s</b> - before industrialisation set in",
