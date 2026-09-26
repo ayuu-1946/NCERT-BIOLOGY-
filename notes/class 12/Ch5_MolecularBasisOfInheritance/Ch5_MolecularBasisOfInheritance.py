@@ -1185,7 +1185,8 @@ story.append(figure(
     "<b>Exon</b> and <b>Intron</b> stretches; <b>Capping</b> adds the <b>Cap</b> at the "
     "<b>5'</b> end and <b>Polyadenylation</b> adds the <b>Poly A tail</b> at the <b>3'</b> "
     "end, then <b>RNA splicing</b> removes the introns to give the mature "
-    "<b>Messenger RNA</b> -- the <b>3' mRNA</b> that is exported for translation."))
+    "<b>Messenger RNA</b> -- the <b>3' mRNA</b> that is exported for translation.",
+    max_width_cm=13.0))
 story.append(Spacer(1, 3))
 story.append(Paragraph(
     "The <b>significance of such complexities is now beginning to be understood</b>. The "
