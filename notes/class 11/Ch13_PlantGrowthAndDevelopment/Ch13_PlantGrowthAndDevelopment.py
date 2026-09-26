@@ -81,8 +81,6 @@ story.extend(title_block("Plant Growth and Development"))
 # ---- Introduction ----  O01, F001-F006
 # ======================================================================================
 story.append(body(
-    "Why not try to write down what you think are the necessary conditions for growth? "
-    "The essential requirements are <b>water</b>, <b>oxygen</b> and <b>nutrients</b>. "
     "<b>Development</b> is the sum of two processes: <b>growth</b> and "
     "<b>differentiation</b>. The development of a mature plant from a zygote "
     "(fertilised egg) follows a precise and highly ordered succession of events. "
@@ -242,7 +240,6 @@ story.append(figure(
 # ---- 13.1.5 Conditions for Growth ----  H07, O07, F033-F037
 story.append(heading("13.1.5", "Conditions for Growth", level=2))
 story.append(body(
-    "Why not try to write down what you think are the necessary conditions for growth? "
     "The essential requirements are <b>water</b>, <b>oxygen</b> and <b>nutrients</b>."))
 story.append(b1(
     "<b>Water:</b> plant cells grow in size by cell enlargement, which requires water. "
