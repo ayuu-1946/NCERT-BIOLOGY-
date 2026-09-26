@@ -578,7 +578,7 @@ story.append(figure("fig_2_5.png",
                     "identified by this caption. One representative is drawn per class discussed "
                     "above - <i>Mucor</i> for the Phycomycetes, <i>Aspergillus</i> for the "
                     "Ascomycetes and <i>Agaricus</i>, the mushroom, for the Basidiomycetes.",
-                    max_width_cm=5.4))
+                    max_width_cm=17.6))
 
 # ---- 2.3.4 Deuteromycetes ----
 story.append(heading("2.3.4", "Deuteromycetes", level=2))
