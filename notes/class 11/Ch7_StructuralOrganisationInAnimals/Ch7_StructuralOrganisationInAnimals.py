@@ -591,10 +591,6 @@ story.append(process_flow([
     "and rectum</b>; the <b>rectum opens out through the anus</b>.",
 ]))  # F148, F149, F150, F151, F152, F153, F154, F155, F156, F157, F158
 
-story.append(figure(
-    "fig_7_16.png",
-    "Figure 7.16 Alimentary canal of cockroach"))  # F333 caption
-
 # Circulatory system (F159-F165) + Fig 7.17
 story.append(heading("Circ", "Circulatory System", level=3))
 story.append(body(
@@ -606,12 +602,21 @@ story.append(body(
     "The <b>heart</b> of cockroach consists of an <b>elongated muscular tube</b> lying along the "
     "<b>mid-dorsal line</b> of thorax and abdomen. It is differentiated into <b>funnel-shaped "
     "chambers with ostia</b> on either side. <b>Blood from sinuses enters the heart through "
-    "ostia</b> and is <b>pumped anteriorly to the sinuses again</b>."))  # F163, F164, F165
+    "ostia</b> and is <b>pumped anteriorly to the sinuses again</b>.",))  # F163, F164, F165
 
-story.append(figure(
-    "fig_7_17.png",
-    "Figure 7.17 Open circulatory system of cockroach",
-    max_width_cm=7.5))  # F334 caption; fit figure and caption in the preceding page's remaining space
+# Keep the two cockroach organ-system figures side by side, each with its caption.
+cockroach_system_figures = Table([[
+    figure("fig_7_16.png", "Figure 7.16 Alimentary canal of cockroach", max_width_cm=6.9)._content,
+    figure("fig_7_17.png", "Figure 7.17 Open circulatory system of cockroach", max_width_cm=6.9)._content,
+]], colWidths=[FRAME_WIDTH / 2, FRAME_WIDTH / 2])  # F333, F334
+cockroach_system_figures.setStyle(TableStyle([
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 0),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+    ("TOPPADDING", (0, 0), (-1, -1), 0),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+]))
+story.append(cockroach_system_figures)
 
 # Respiratory system (F166-F169)
 story.append(heading("Resp", "Respiratory System", level=3))
