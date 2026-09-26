@@ -3,7 +3,7 @@ Source: `Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf` �
 
 **Source-scope note:** The supplied PDF contains 19 pages and skips printed textbook pages 107–110; the corresponding material and numbered Figures 7.9–7.13 are absent. No content was imported from another edition. Inventory scope is the requested NEET syllabus: the Earthworm section has been removed from the NEET syllabus and is intentionally excluded here. This is complete for the requested syllabus scope; the omission is deliberate, not an accidental source gap.
 
-Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retained as labels in the figure artwork. All 398 Facts rows are ticked; the strict linter confirms the tick state but now fails figure-label running-text coverage after the user-requested removal of transcription NOTE boxes. The revised Gate 2 is not closed; Gate 3 remains open. The inventory remains frozen for the requested NEET syllabus scope and approved filtering decisions.
+Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retained as labels in the figure artwork. The user has explicitly approved four removals: F007, F083, F113, and opener F355; these remain unticked, and the other 394/398 rows are incorporated. The strict linter also fails figure-label running-text coverage after the user-requested removal of transcription NOTE boxes. The revised Gate 2 is not closed; Gate 3 remains open. The inventory remains frozen for the requested NEET syllabus scope and approved filtering decisions.
 
 ## Pass 1 session records
 
@@ -35,7 +35,7 @@ Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retain
 
 **Row census:** `fact` F001–F322 (322), `caption` F323–F339 (17), `heading` F340–F354 (15), `opener` F355–F367 (13), `summary-unique` F368–F381 (14), `figure-labels` F382–F398 (17). These rows total 398.
 
-**Scope note:** Earthworm has been removed from the NEET syllabus, so section 7.3 and directly related summary/exercise material are intentionally excluded. The user also accepted removing two intro items (the chapter-transition sentence and rhetorical question); a separate broad cell-count fact was rejected for removal and remains. This inventory is complete for the requested syllabus and filtering decisions.
+**Scope note:** Earthworm has been removed from the NEET syllabus, so section 7.3 and directly related summary/exercise material are intentionally excluded. The user also accepted four prose removals for this revision: F007 (redundant four-tissue statement), F083 (blood cross-reference), F113 (redundant worked-example preview), and opener F355 (chapter-transition sentence). Earlier accepted intro removals and the rejected broad cell-count removal are also recorded in the tracker. This inventory is complete for the requested syllabus and filtering decisions.
 
 **Environment:** the canonical `/vercel/share/neetenv` and `uv` were unavailable and `/vercel` was permission-denied. At the user’s direction, Gate 1 tools ran in the repo-ignored Python 3.11.2 `.venv` (reportlab 5.0.1, pdfplumber 0.11.10, pymupdf 1.28.2, Pillow 12.3.0; NumPy 2.4.6 added only for the existing figure auditor).
 
@@ -50,7 +50,7 @@ Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retain
 | F004 | intro | fact | The human body is composed of billions of cells to perform various functions. | x |
 | F005 | intro | fact | In multicellular animals, a group of similar cells alongwith intercellular substances perform a specific function. | x |
 | F006 | intro | fact | Such an organisation is called tissue. | x |
-| F007 | intro | fact | You may be surprised to know that all complex animals consist of only four basic types of tissues. | x |
+| F007 | intro | fact | You may be surprised to know that all complex animals consist of only four basic types of tissues. | |
 | F008 | intro | fact | These tissues are organised in specific proportion and pattern to form an organ like stomach, lung, heart and kidney. | x |
 | F009 | intro | fact | When two or more organs perform a common function by their physical and/or chemical interaction, they together form organ system, e.g., digestive system, respiratory system, etc. | x |
 | F010 | intro | fact | Cells, tissues, organs and organ systems split up the work in a way that exhibits division of labour and contribute to the survival of the body as a whole. | x |
@@ -126,7 +126,7 @@ Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retain
 | F080 | 7.1.2 | fact | The bone marrow in some bones is the site of production of blood cells. | x |
 | F081 | 7.1.2 | fact | Blood is a fluid connective tissue containing plasma, red blood cells (RBC), white blood cells (WBC) and platelets (Figure 7.6c). | x |
 | F082 | 7.1.2 | fact | It is the main circulating fluid that helps in the transport of various substances. | x |
-| F083 | 7.1.2 | fact | You will learn more about blood in Chapters 17 and 18. | x |
+| F083 | 7.1.2 | fact | You will learn more about blood in Chapters 17 and 18. | |
 | F084 | 7.1.3 | fact | Each muscle is made of many long, cylindrical fibres arranged in parallel arrays. | x |
 | F085 | 7.1.3 | fact | These fibres are composed of numerous fine fibrils, called myofibrils. | x |
 | F086 | 7.1.3 | fact | Muscle fibres contract (shorten) in response to stimulation, then relax (lengthen) and return to their uncontracted state in a coordinated fashion. | x |
@@ -156,7 +156,7 @@ Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retain
 | F110 | 7.2 | fact | For example, our heart consists of all the four types of tissues, i.e., epithelial, connective, muscular and neural. | x |
 | F111 | 7.2 | fact | We also notice, after some careful study that the complexity in organ and organ systems displays certain discernable trend. | x |
 | F112 | 7.2 | fact | This discernable trend is called evolutionary trend (You will study the details in class XII). | x |
-| F113 | 7.2 | fact | You are being introduced to morphology and anatomy of three organisms at different evolutionary levels to show their organisation and functioning. | x |
+| F113 | 7.2 | fact | You are being introduced to morphology and anatomy of three organisms at different evolutionary levels to show their organisation and functioning. | |
 | F114 | 7.2 | fact | Morphology refers to study of form or externally visible features. | x |
 | F115 | 7.2 | fact | In the case of plants or microbes, the term morphology precisely means only this. | x |
 | F116 | 7.2 | fact | In case of animals this refers to the external appearance of the organs or parts of the body. | x |
@@ -398,7 +398,7 @@ Tick legend: `x` = marked as incorporated into the Pass 2 notes script or retain
 | F352 | 7.5.2 | heading | "7.5.2 Anatomy" | x |
 | F353 | SUMMARY | heading | "SUMMARY" | x |
 | F354 | EXERCISES | heading | "EXERCISES" | x |
-| F355 | intro | opener | "In the preceding chapters you came across a large variety of organisms, both unicellular and multicellular, of the animal kingdom." | x |
+| F355 | intro | opener | "In the preceding chapters you came across a large variety of organisms, both unicellular and multicellular, of the animal kingdom." | |
 | F356 | 7.1 | opener | "The structure of the cells vary according to their function." | x |
 | F357 | 7.1.1 | opener | "We commonly refer to an epithelial tissue as epithelium (pl.: epithelia)." | x |
 | F358 | 7.1.2 | opener | "Connective tissues are most abundant and widely distributed in the body of complex animals." | x |

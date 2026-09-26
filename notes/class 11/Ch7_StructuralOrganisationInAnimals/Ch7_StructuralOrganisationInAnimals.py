@@ -50,7 +50,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer, Table, TableStyle  # noqa: E402
+from reportlab.platypus import KeepTogether, Paragraph, Spacer, Table, TableStyle  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch7_StructuralOrganisationInAnimals.pdf")
@@ -85,12 +85,11 @@ story = []
 story += title_block("Structural Organisation in Animals")
 
 # ======================================================================================
-# ---- intro ---- F001-F010, F355 opener (+ folded summary F368; S01)
+# ---- intro ---- F001-F010 (+ folded summary F368; S01)
 # ======================================================================================
-# F355 opener + F001-F002
+# F001-F002; opens directly with the unicellular-organism sentence per user edit.
 story.append(body(
-    "In the animal kingdom you meet a large variety of organisms, both unicellular and "
-    "multicellular. In <b>unicellular organisms</b>, all functions like <b>digestion, "
+    "In <b>unicellular organisms</b>, all functions like <b>digestion, "
     "respiration and reproduction</b> are performed by a <b>single cell</b>. In the complex "
     "body of <b>multicellular animals</b> the same basic functions are carried out by "
     "<b>different groups of cells</b> in a well organised manner."))  # F001, F002
@@ -107,11 +106,10 @@ story.append(keyterm(
     "more functions) in the body."))  # F005 + F006 term, F368 fold
 
 story.append(body(
-    "You may be surprised to know that <b>all complex animals consist of only four basic types "
-    "of tissues</b>. These tissues are organised in specific proportion and pattern to form an "
+    "Tissues are organised in specific proportion and pattern to form an "
     "<b>organ</b> like stomach, lung, heart and kidney. When <b>two or more organs</b> perform a "
     "common function by their physical and/or chemical interaction, they together form an "
-    "<b>organ system</b>, e.g., digestive system, respiratory system, etc."))  # F007, F008, F009
+    "<b>organ system</b>, e.g., digestive system, respiratory system, etc."))  # F008, F009
 
 # F010 (S01 BODY-PRESENT)
 story.append(body(
@@ -226,7 +224,8 @@ story.append(body(
 
 story.append(figure(
     "fig_7_3.png",
-    "Figure 7.3 Compound epithelium"))  # F325 caption
+    "Figure 7.3 Compound epithelium",
+    max_width_cm=12.5))  # F325 caption; 520-dpi render enlarges safely at 300-dpi effective placement
 
 # Cell junctions (F043-F049)
 story.append(body(
@@ -355,9 +354,6 @@ story.append(keyterm(
     "<b>Blood</b> - a <b>fluid connective tissue</b> containing <b>plasma, red blood cells "
     "(RBC), white blood cells (WBC) and platelets</b> (Figure 7.6c). It is the main "
     "<b>circulating fluid</b> that helps in the <b>transport of various substances</b>."))  # F081, F082
-story.append(body(
-    "You will learn more about blood in <b>Chapters 17 and 18</b>."))  # F083
-
 story.append(figure(
     "fig_7_6.png",
     "Figure 7.6 Specialised connective tissues: (a) Cartilage (b) Bone (c) Blood"))  # F328 caption
@@ -389,7 +385,7 @@ story.append(data_table([
      "Striated (striped)",
      "Closely attached to skeletal bones; e.g., biceps - fibres bundled in a parallel fashion, "
      "several bundles enclosed by a sheath of tough connective tissue",
-     "Voluntary (learn more in Chapter 20)"],
+     "Voluntary"],
     ["Smooth",
      "No striations; fibres taper at both ends (fusiform)",
      "Wall of internal organs such as blood vessels, stomach and intestine",
@@ -430,7 +426,7 @@ story.append(body(
     "When a neuron is suitably stimulated, an <b>electrical disturbance</b> is generated which "
     "swiftly travels along its <b>plasma membrane</b>. Arrival of the disturbance at the "
     "neuron's endings, or <b>output zone</b>, triggers events that may cause <b>stimulation or "
-    "inhibition</b> of adjacent neurons and other cells (details in <b>Chapter 21</b>)."))  # F105, F106
+    "inhibition</b> of adjacent neurons and other cells."))  # F105, F106
 
 story.append(figure(
     "fig_7_8.png",
@@ -451,11 +447,8 @@ story.append(body(
     "- epithelial, connective, muscular and neural."))  # F107, F108, F109, F110
 
 story.append(body(
-    "We also notice, after some careful study, that the complexity in organ and organ systems "
-    "displays a certain discernable trend. This is called the <b>evolutionary trend</b> "
-    "(details in class XII). You are being introduced to the <b>morphology and anatomy of three "
-    "organisms at different evolutionary levels</b> to show their organisation and "
-    "functioning."))  # F111, F112, F113
+    "The complexity in organ and organ systems shows a <b>discernable trend</b>, called the "
+    "<b>evolutionary trend</b> (details in class XII)."))  # F111, F112
 
 story.append(keyterm(
     "<b>Morphology</b> - the study of <b>form or externally visible features</b>. In plants or "
@@ -598,10 +591,6 @@ story.append(process_flow([
     "and rectum</b>; the <b>rectum opens out through the anus</b>.",
 ]))  # F148, F149, F150, F151, F152, F153, F154, F155, F156, F157, F158
 
-story.append(figure(
-    "fig_7_16.png",
-    "Figure 7.16 Alimentary canal of cockroach"))  # F333 caption
-
 # Circulatory system (F159-F165) + Fig 7.17
 story.append(heading("Circ", "Circulatory System", level=3))
 story.append(body(
@@ -613,11 +602,21 @@ story.append(body(
     "The <b>heart</b> of cockroach consists of an <b>elongated muscular tube</b> lying along the "
     "<b>mid-dorsal line</b> of thorax and abdomen. It is differentiated into <b>funnel-shaped "
     "chambers with ostia</b> on either side. <b>Blood from sinuses enters the heart through "
-    "ostia</b> and is <b>pumped anteriorly to the sinuses again</b>."))  # F163, F164, F165
+    "ostia</b> and is <b>pumped anteriorly to the sinuses again</b>.",))  # F163, F164, F165
 
-story.append(figure(
-    "fig_7_17.png",
-    "Figure 7.17 Open circulatory system of cockroach"))  # F334 caption
+# Keep the two cockroach organ-system figures side by side, each with its caption.
+cockroach_system_figures = Table([[
+    figure("fig_7_16.png", "Figure 7.16 Alimentary canal of cockroach", max_width_cm=6.9)._content,
+    figure("fig_7_17.png", "Figure 7.17 Open circulatory system of cockroach", max_width_cm=6.9)._content,
+]], colWidths=[FRAME_WIDTH / 2, FRAME_WIDTH / 2])  # F333, F334
+cockroach_system_figures.setStyle(TableStyle([
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 0),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+    ("TOPPADDING", (0, 0), (-1, -1), 0),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+]))
+story.append(cockroach_system_figures)
 
 # Respiratory system (F166-F169)
 story.append(heading("Resp", "Respiratory System", level=3))
@@ -729,13 +728,12 @@ story.append(body(
     "temperature varies with the temperature of the environment; such animals are called "
     "<b>cold blooded or poikilotherms</b>."))  # F210, F211, F212, F213
 story.append(b1(
-    "You might have noticed <b>changes in the colour</b> of the frogs while they are in grasses "
-    "and on dry land. They have the ability to <b>change the colour to hide them from their "
-    "enemies (camouflage)</b>. This <b>protective coloration is called mimicry</b>."))  # F214, F215, F216
-story.append(b1(
+    "Frogs <b>change colour on grasses and dry land to hide from predators</b> (camouflage); "
+    "this <b>protective coloration is called mimicry</b>."))  # F214, F215, F216
+story.append(KeepTogether([b1(
     "Frogs are <b>not seen during peak summer and winter</b>. During this period they take "
     "shelter in <b>deep burrows</b> to protect them from extreme heat and cold. This is known as "
-    "<b>summer sleep (aestivation)</b> and <b>winter sleep (hibernation)</b> respectively."))  # F217, F218, F219
+    "<b>summer sleep (aestivation)</b> and <b>winter sleep (hibernation)</b> respectively.")]))  # F217, F218, F219
 
 # ======================================================================================
 # ---- 7.5.1  Morphology ---- F220-F235, F351 heading, F366 opener

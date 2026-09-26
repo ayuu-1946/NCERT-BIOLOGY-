@@ -16,6 +16,7 @@ SRC = 'Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf'
 OUT_DIR = 'notes/class 11/Ch7_StructuralOrganisationInAnimals/assets'
 CONTACT_SHEET = 'scratch/ch7_figs/contact_sheet.png'
 RENDER_DPI = 300
+FIGURE_DPI = {'7_3': 520}  # vector crop; higher density supports larger 300-dpi-effective placement
 
 # (asset_id, 1-indexed source PDF page, (x0, y0, x1, y1) in PDF points)
 FIGS = [
@@ -94,14 +95,15 @@ def extract():
         for fid, pno, rect in FIGS:
             page = doc[pno - 1]
             clip = pymupdf.Rect(*rect) & page.rect
-            pix = page.get_pixmap(clip=clip, dpi=RENDER_DPI, alpha=False)
+            render_dpi = FIGURE_DPI.get(fid, RENDER_DPI)
+            pix = page.get_pixmap(clip=clip, dpi=render_dpi, alpha=False)
             img = ImageOps.autocontrast(
                 Image.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('L'),
                 cutoff=1,
             )
             out = os.path.join(OUT_DIR, f'fig_{fid}.png')
-            if fid in {'7_6a', '7_6b', '7_6c', '7_18a', '7_18b'}:
-                img.save(out, dpi=(RENDER_DPI, RENDER_DPI))
+            if fid in {'7_3', '7_6a', '7_6b', '7_6c', '7_18a', '7_18b'}:
+                img.save(out, dpi=(render_dpi, render_dpi))
             else:
                 img.save(out)
             order.append(fid)
