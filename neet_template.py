@@ -130,7 +130,11 @@ def _badge_section(label: str, size: float) -> Drawing:
     pad = fs * 0.42
     text_w = stringWidth(label, FONT_BOLD, fs)
     w = max(size, text_w + 2 * pad)
-    h = size
+    # Match the full banner row height. The heading table adds 2 pt top and
+    # 3 pt bottom padding; using only ``size`` here made the badge visibly
+    # shorter than the dark banner, especially for multi-part numbers such as
+    # 6.2 and 6.1.1.1. Keep this synchronized with heading()'s row padding.
+    h = size + 2 + 3
     d = Drawing(w, h)
     d.add(Rect(0, 0, w, h, fillColor=INK, strokeColor=INK, strokeWidth=0))
     # Optical centring: Times cap-height is ~0.66 em, so centre the cap box.
