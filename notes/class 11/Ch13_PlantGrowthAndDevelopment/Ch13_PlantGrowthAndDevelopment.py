@@ -219,7 +219,7 @@ story.append(figure(
     "<b>Fig. 13.4</b> - Diagrammatic representation of: (a) Arithmetic and "
     "(b) Geometric growth, and (c) Stages during embryo development showing the "
     "geometric and arithmetic phases.",
-    max_width_cm=12.5))
+    max_width_cm=10.5))
 story.append(body(
     "The measurement and the comparison of total growth per unit time is called the "
     "<b>absolute growth rate</b>. The growth of a system per unit time expressed on a "
@@ -230,13 +230,13 @@ story.append(figure(
     "<b>Fig. 13.7</b> - Diagrammatic comparison of absolute and relative growth "
     "rates. Both leaves A and B have increased their area by 5 cm<super>2</super> in a "
     "given time to produce leaves A<super>1</super> and B<super>1</super>.",
-    max_width_cm=13.0))
+    max_width_cm=10.5))
 story.append(figure(
     "fig_13_6.png",
     "<b>Fig. 13.6</b> - An idealised sigmoid growth curve, typical of cells in "
     "culture and of many higher plants and plant organs; size/weight of the organ is "
     "plotted against time.",
-    max_width_cm=6.6))
+    max_width_cm=5.5))
 
 # ---- 13.1.5 Conditions for Growth ----  H07, O07, F033-F037
 story.append(heading("13.1.5", "Conditions for Growth", level=2))
