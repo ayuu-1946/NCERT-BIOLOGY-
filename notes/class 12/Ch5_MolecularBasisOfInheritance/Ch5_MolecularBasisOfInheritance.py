@@ -43,7 +43,7 @@ import os
 import sys
 
 from reportlab.lib.units import cm
-from reportlab.platypus import Paragraph, Spacer, KeepTogether, PageBreak
+from reportlab.platypus import Paragraph, Spacer, KeepTogether
 
 # neet_template.py lives at the repository root; chapter scripts live several
 # directories deep, so walk upward from this file until the module is found and
@@ -1103,8 +1103,6 @@ story.append(process_flow([
     "<b>termination factor (rho)</b>, the nascent RNA and the polymerase both fall off.",
 ]))
 story.append(Spacer(1, 4))
-# Keep Figure 5.10 on page 15 after Figure 5.9 is resized into page 12's open space.
-story.append(PageBreak())
 story.append(figure(
     "fig_5_10.png",
     "Figure 5.10 Process of transcription in bacteria. <b>Initiation</b>: the <b>RNA "
