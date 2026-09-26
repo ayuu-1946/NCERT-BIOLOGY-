@@ -3,7 +3,9 @@ Source: `Chapter/class 12/Chapter 6 - Evolution.pdf` (17 pp) — inventoried fro
 
 **FIGURELESS EDITION — operator order.** This chapter is being produced figureless by explicit user order. No figure assets are extracted, converted, or embedded; session 1-F is therefore run as a *textual* figure sweep — every figure caption and every in-figure textual label transcribed in the source is still captured as a Facts row (Rule 1: zero information loss), and every in-figure label is entered as a `figure-label` row so that Pass 2 prose is forced to carry the figure's biological content in running text (check 6). The `Mono`/`Verified` asset obligations (§4.4 Step 2–3) do not apply because nothing is embedded; this is recorded against the Gate 1 checklist below as **N/A — figureless**, not as an unmet criterion.
 
-Tick legend: `x` = written into the script and verified present in the generated PDF. **All 198 rows are ticked** after the Pass 2 build; the Gate 1 row set remains frozen.
+Tick legend: `x` = row's substantive content written into the script and verified present in the generated PDF, except explicitly approved trivial wording omissions recorded below. **All 198 rows are ticked**; the Gate 1 row set and original wording remain frozen.
+
+**Approved page-1 trims (post-Gate 2):** Omit only the redundant concluding sentence in F003, the nearby-objects comparison adjacent to F006, the earth-as-speck analogy in F007/F009, and the unsupported comparative introduction after heading F017. The concepts, dates, and named mechanisms in those rows remain in the PDF. No page 2–5 trims were approved or made.
 
 ## Header counts — all machine-derived (§5 step 10), never hand-tallied
 

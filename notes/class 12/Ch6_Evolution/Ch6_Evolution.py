@@ -32,15 +32,15 @@ def section(number, text, level=1, first=None, has_table=False):
 
 # ---- Front matter; F001-F003 ----
 story.extend(title_block("Evolution"))
-body("<b>Evolutionary Biology</b> studies the history of life forms on earth. Changes in flora and fauna over millions of years make sense against the origin of life, the evolution of earth and stars, and the history of the universe. The story of biodiversity on earth is therefore set within the history of earth and the universe.")
+body("<b>Evolutionary Biology</b> studies the history of life forms on earth. Changes in flora and fauna over millions of years make sense against the origin of life, the evolution of earth and stars, and the history of the universe.")
 
 # ---- 6.1 Origin of Life; F004-F016 ----
-section("6.1", "Origin of Life", first="Looking at stars is, in a way, looking back in time: their light has travelled for millions of years across trillions of kilometres. Stellar distances are measured in light years; nearby objects, by comparison, appear to us in the present.")
-body("The origin of life is considered a <b>unique event</b>. Earth is only a speck in a vast universe almost <b>13.8 billion years</b> old. Huge clusters of galaxies contain stars and clouds of gas and dust. The Big Bang theory proposes an unimaginable singular explosion followed by expansion and cooling. Hydrogen and helium formed later; gravitation condensed gases into galaxies.")
+section("6.1", "Origin of Life", first="Looking at stars is, in a way, looking back in time: their light has travelled for millions of years across trillions of kilometres. Stellar distances are measured in light years.")
+body("The origin of life is considered a <b>unique event</b>. The universe is almost <b>13.8 billion years</b> old. Huge clusters of galaxies contain stars and clouds of gas and dust. The Big Bang theory proposes an unimaginable singular explosion followed by expansion and cooling. Hydrogen and helium formed later; gravitation condensed gases into galaxies.")
 body("Earth formed in the Milky Way solar system about <b>4.5 billion years ago</b>. Early earth had no atmosphere. Vapours and gases released from molten material included water vapour, methane, carbon dioxide and ammonia. Solar UV split water into hydrogen and oxygen; lighter hydrogen escaped. Oxygen combined with ammonia and methane to form water, carbon dioxide and other substances, and an ozone layer formed. Cooling caused rain to fill depressions and make oceans. Life appeared about <b>500 million years after earth formed</b>, almost four billion years ago.")
 
 # ---- 6.1 Theories on the Origin of Life; F017-F024 ----
-section("6.1", "Theories on the Origin of Life", 2, first="Several proposals address the first appearance of life, but they do not have the same experimental support.")
+section("6.1", "Theories on the Origin of Life", 2)
 section("6.1", "Panspermia", 3, first="Did life arrive from outer space? Early Greek thinkers imagined units of life called spores transferred among planets, including earth. This is <b>panspermia</b>, still favoured by some astronomers.")
 section("6.1", "Spontaneous Generation", 3, first="The former belief that life arose from decaying straw, mud or other rotting matter was called <b>spontaneous generation</b>.")
 body("<b>Louis Pasteur</b> showed that life comes only from pre-existing life: no new life arose from killed yeast in pre-sterilised flasks, whereas organisms arose when another flask containing killed yeast was open to air. This dismissed spontaneous generation, but did not explain how the first life form appeared.")
