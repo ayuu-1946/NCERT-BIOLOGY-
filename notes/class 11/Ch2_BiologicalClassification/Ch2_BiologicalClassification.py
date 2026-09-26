@@ -270,7 +270,7 @@ story.append(figure("fig_2_2.png",
                     "structures are labelled on the filament: the <b>Heterocyst</b>, the specialised "
                     "cell in which atmospheric nitrogen is fixed, and the <b>Mucilagenous sheath</b>, "
                     "the gelatinous envelope that generally surrounds the colony.",
-                    max_width_cm=7.6))
+                    max_width_cm=6.2))
 story.append(note("<b>Algal bloom</b> is the exact term Exercise 4 asks about. NCERT's body text "
                   "states the phenomenon as cyanobacteria that <b>'often form blooms in polluted "
                   "water bodies'</b> - a rapid build-up of algal growth in a water body. Compare "
@@ -304,7 +304,7 @@ story.append(figure("fig_2_3.png",
                     "outer <b>Cell wall</b>, the <b>Cell membrane</b> lying inside it, and the "
                     "<b>DNA</b> - the genetic material that is copied and separated as the cell "
                     "divides by fission.",
-                    max_width_cm=9.5))
+                    max_width_cm=6.2))
 
 story.append(heading("2.1.2e", "Mycoplasma", level=3))
 story.append(keyterm("<b>The Mycoplasma are organisms that completely lack a cell wall.</b> They "
@@ -423,7 +423,7 @@ story.append(figure("fig_2_4.png",
                     "appear yellow, green, brown, blue or red in life depending on their main "
                     "pigments - that colour difference cannot be shown in a monochrome print, so "
                     "it is stated here in words.",
-                    max_width_cm=6.6))
+                    max_width_cm=10.5))
 
 # ---- 2.3 KINGDOM FUNGI ----
 story.append(heading("2.3", "Kingdom Fungi", level=1))
@@ -578,7 +578,7 @@ story.append(figure("fig_2_5.png",
                     "identified by this caption. One representative is drawn per class discussed "
                     "above - <i>Mucor</i> for the Phycomycetes, <i>Aspergillus</i> for the "
                     "Ascomycetes and <i>Agaricus</i>, the mushroom, for the Basidiomycetes.",
-                    max_width_cm=5.4))
+                    max_width_cm=17.6))
 
 # ---- 2.3.4 Deuteromycetes ----
 story.append(heading("2.3.4", "Deuteromycetes", level=2))
