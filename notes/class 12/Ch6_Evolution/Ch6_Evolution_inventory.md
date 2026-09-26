@@ -1,16 +1,16 @@
 # Frozen Inventory — Evolution (Class 12, Chapter 6)
-Source: `Chapter/class 12/Chapter 6 - Evolution.pdf` (17 pp) — inventoried from the prepared figureless transcript `chapter_6_evolution.md` | Frozen: 2026-09-26 | Rows: **198** (`F001`..`F198`, contiguous)
+Source: `Chapter/class 12/Chapter 6 - Evolution.pdf` (17 pp) — inventoried from the prepared figureless transcript `chapter_6_evolution.md` | Frozen: 2026-09-26 | Rows: **198 inventoried → 193 active** + 5 approved Pass-3 filter removals (F003, F005, F006, F122, F123 — see "Approved Pass-3 filter removals" below; F001's printed contents-list sub-part also filtered). Original range `F001`..`F198`; the 5 retired IDs now read as intentional gaps.
 
 **FIGURELESS EDITION — operator order.** This chapter is being produced figureless by explicit user order. No figure assets are extracted, converted, or embedded; session 1-F is therefore run as a *textual* figure sweep — every figure caption and every in-figure textual label transcribed in the source is still captured as a Facts row (Rule 1: zero information loss), and every in-figure label is entered as a `figure-label` row so that Pass 2 prose is forced to carry the figure's biological content in running text (check 6). The `Mono`/`Verified` asset obligations (§4.4 Step 2–3) do not apply because nothing is embedded; this is recorded against the Gate 1 checklist below as **N/A — figureless**, not as an unmet criterion.
 
-Tick legend: `x` = written into the script and verified present in the generated PDF. **All 198 rows ticked in Pass 2 (2026-09-26)** — see the Gate 2 record below.
+Tick legend: `x` = written into the script and verified present in the generated PDF. **All 198 rows ticked in Pass 2 (2026-09-26).** **Gate 3b reconciliation (2026-09-26):** 5 rows (F003, F005, F006, F122, F123) were moved to "Approved Pass-3 filter removals" — user-approved non-NEET filler, intentionally absent from the PDF — so the active Facts ledger is now 193 rows, every one present and ticked. See the corrected Gate 2 record and the removals section below.
 
 ## Header counts — all machine-derived (§5 step 10), never hand-tallied
 
 | Count | Value |
 |---|---|
-| Facts rows total | **198** — `F001`..`F198` |
-| ID range / contiguity | `F001`..`F198` — 0 gaps, 0 duplicates |
+| Facts rows total | **193 active** (+5 approved Pass-3 removals = 198 inventoried) — `F001`..`F198` minus F003, F005, F006, F122, F123 |
+| ID range / contiguity | `F001`..`F198` — 5 IDs retired as approved removals (F003, F005, F006, F122, F123 are intentional gaps); 0 duplicates |
 | `Type: heading` rows | **17** — 1 front + 9 numbered (6.1–6.9) + 7 unnumbered sub-headings (Theories on the Origin of Life; Panspermia; Spontaneous Generation; Chemical Evolution; Paleontological Evidence; Embryological Support; Comparative Anatomy and Morphology) |
 | `Type: opener` rows | **16** — chapter opener + 6.1 + Panspermia + Spontaneous Generation + Chemical Evolution + 6.2 + 6.3 + Paleontological + Embryological + Comparative Anatomy + 6.4 + 6.5 + 6.6 + 6.7 + 6.8 + 6.9 |
 | `Type: caption` rows | **11** — one per omitted figure Fig 6.1–Fig 6.11 (F033, F060, F075, F087, F100, F104, F108, F128, F170, F178, F195) |
@@ -20,7 +20,9 @@ Tick legend: `x` = written into the script and verified present in the generated
 | Exercise questions scanned | **10** — GAP 1, COVERED 9, 0 overlooked |
 | Figures | **11** (Fig 6.1–6.11), **all deliberately omitted — figureless edition**; no assets on disk, `Mono`/`Verified` N/A |
 
-> ## GATE 2 STATUS: **GREEN — CLOSED (2026-09-26). `check_pdf.py` exit 0 — 0 FAIL, 2 eyeballed-benign WARN. Pass 3 not started.**
+> ## GATE 2 STATUS: **GREEN — CLOSED (2026-09-26). `check_pdf.py` exit 0 — 0 FAIL, 2 eyeballed-benign WARN.**
+>
+> ## GATE 3b STATUS: **RECONCILED & GREEN (2026-09-26).** VERIFY caught 6 facts silently trimmed from the PDF while the ledger still ticked 198/198 and the Gate 2 record stayed stale (claimed 34,899 chars / SHA `3b263290`; shipped PDF is 33,553 chars). All 6 were reviewed under bullshit-filter mode and **user-approved as non-NEET-testable filler removals**. The ledger and the Gate 2 record below are corrected to match the shipped PDF; `check_pdf.py` re-run is **exit 0** (0 FAIL, 2 benign WARN).
 >
 > | Gate 2 requirement (`GATE_2_PASS_2_BUILD_AND_LINT.md`) | State |
 > |---|---|
@@ -28,11 +30,11 @@ Tick legend: `x` = written into the script and verified present in the generated
 > | §0.4 smoke test (throwaway, imports `neet_template.py`) | done — H1/H2/H3 banners, table, all six icon badges, 3-step `process_flow()`, NOTE + MEMORY AID, and one real NCERT figure through the full §4.4 pipeline (clip-render → `convert("L")` → `autocontrast`). **The smoke figure was taken from the Class 12 Ch13 source, not from this chapter**, to honour the figureless order. Embedded image colorspace = 1 (GRAY); grayscale page re-view kept NOTE (double rule) vs MEMORY AID (dashed) distinct; `check_pdf.py` ran end-to-end on it (PASS). Throwaway deleted |
 > | Script written linearly from the frozen inventory, importing `neet_template.py`, nothing re-declared | done — `Ch6_Evolution.py`; only Times base-14 via `STYLES`; every block commented `# ---- N.N ----` with its row IDs |
 > | Figureless order honoured | done — `figure()` bound for API parity, **called 0 times**; `assets/` not created; PDF has **0 embedded images** |
-> | Rows ticked while writing | done — **198/198**; machine cross-check: every `F001`–`F198` is cited in a script block comment, and a token-overlap audit of every row's quoted wording against the PDF text left only 2 rows under 85% (F102 "phenomenon", F108 "picture showing" — paraphrase wording only, fact present) |
+> | Rows ticked while writing | done — **193/193 active** (F003, F005, F006, F122, F123 retired as approved Pass-3 removals; F001 contents-list sub-part filtered). Machine cross-check: every active `F001`–`F198` row is cited in a script block comment; token-overlap audit left only 2 rows under 85% (F102 "phenomenon", F108 "picture showing" — paraphrase wording only, fact present) |
 > | Figure-label coverage (check 6) | **116/116 labels fully in running text**, 0 partial, 0 missing — Miller's apparatus as a cyclic process flow; Figs 6.7/6.8/6.9/6.10 as `data_table`s; Figs 6.2/6.3/6.6 in prose |
 > | `check_pdf.py` render→lint loop | **exit 0** on the final build: checks 1, 2, 5, 6, 7, 8, 9, 10 PASS; smallest glyph 6.0 pt (badge floor, not in the WARN band) |
 >
-> **Final build:** `Ch6_Evolution.pdf` — **10 pp** A4 · 0 images · 34,899 extracted chars · SHA-256 prefix `3b263290ed16e784`. Page count is below the 17-page source because the source's 11 full-width figures are omitted by order; no content was compressed to save space.
+> **Final build (corrected in Gate 3b, 2026-09-26):** `Ch6_Evolution.pdf` — **10 pp** A4 · 0 images · **33,553 extracted chars** (pymupdf, the `check_pdf.py` extractor). The earlier record of *34,899 chars · SHA-256 prefix `3b263290ed16e784`* was **stale** — written before the 6 approved filter removals were trimmed from the script/PDF. Note the build is **not byte-reproducible**: the PDF embeds a wall-clock `CreationDate`, so its SHA changes on every build; reproducibility is instead verified on the **extracted text**, which is byte-identical across rebuilds. Page count is below the 17-page source because the source's 11 full-width figures are omitted by order; no content was compressed to save space.
 >
 > **The two WARNs, each eyeballed and confirmed benign (§6):**
 > 1. **Check 3 — "No embedded images found."** Expected: figureless edition by explicit operator order. Not a defect.
@@ -65,12 +67,9 @@ Tick legend: `x` = written into the script and verified present in the generated
 
 | ID | Section | Type | Exact original wording | Ticked |
 |----|---------|------|------------------------|--------|
-| F001 | front | heading | "CHAPTER 6 — EVOLUTION" with contents list: 6.1 Origin of Life; 6.2 Evolution of Life Forms - A Theory; 6.3 What are the Evidences for Evolution?; 6.4 What is Adaptive Radiation?; 6.5 Biological Evolution; 6.6 Mechanism of Evolution; 6.7 Hardy-Weinberg Principle; 6.8 A Brief Account of Evolution; 6.9 Origin and Evolution of Man | x |
+| F001 | front | heading | "CHAPTER 6 — EVOLUTION" (chapter-title banner). *Pass-3 filter (approved): the printed contents list (6.1 … 6.9) was removed as non-NEET-testable navigation filler — see "Approved Pass-3 filter removals". The nine section headings themselves remain in the body as their own heading rows.* | x |
 | F002 | 6-open | opener | "Evolutionary Biology is the study of history of life forms on earth." | x |
-| F003 | 6-open | concept | To understand changes in flora and fauna over millions of years we must understand "the context of origin of life, i.e., evolution of earth, of stars and indeed of the universe itself"; the chapter is "the story of origin of life and evolution of life forms or biodiversity on planet earth in the context of evolution of earth and against the background of evolution of universe itself." | x |
 | F004 | 6.1 | heading | "6.1 Origin of Life" | x |
-| F005 | 6.1 | opener | "When we look at stars on a clear night sky we are, in a way, looking back in time." | x |
-| F006 | 6.1 | concept | "Stellar distances are measured in light years." Light we see today started its journey millions of years back from trillions of kilometres away; "when we see stars we apparently are peeping into the past." | x |
 | F007 | 6.1 | concept | "The origin of life is considered a unique event in the history of universe." The universe is vast; "the earth itself is almost only a speck." | x |
 | F008 | 6.1 | number | "The universe is very old - almost 13.8 billion years old." | x |
 | F009 | 6.1 | concept | "Huge clusters of galaxies comprise the universe. Galaxies contain stars and clouds of gas and dust. Considering the size of universe, earth is indeed a speck." | x |
@@ -186,8 +185,6 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F119 | 6.5 | concept | "Branching descent and natural selection are the two key concepts of Darwinian Theory of Evolution." | x |
 | F120 | 6.5 | name | "Even before Darwin, a French naturalist Lamarck had said that evolution of life forms had occurred but driven by use and disuse of organs." | x |
 | F121 | 6.5 | example | Lamarck's giraffe example: giraffes "in an attempt to forage leaves on tall trees, had to adapt by elongation of their necks. As they passed on this acquired character of elongated neck to succeeding generations, giraffes, slowly, over the years, came to acquire long necks. Nobody believes this conjecture any more." | x |
-| F122 | 6.5 | concept | "Is evolution a process or the result of a process? The world we see, inanimate and animate, is only the success stories of evolution." | x |
-| F123 | 6.5 | concept | Describing the world = evolution as a process; describing life on earth = evolution as "a consequence of a process called natural selection." "We are still not very clear whether to regard evolution and natural selection as processes or end result of unknown processes." | x |
 | F124 | 6.5 | name | "It is possible that the work of Thomas Malthus on populations influenced Darwin." | x |
 | F125 | 6.5 | concept | Natural selection based on factual observations: "natural resources are limited, populations are stable in size except for seasonal fluctuation, members of a population vary in characteristics - in fact no two individuals are alike - even though they look superficially similar, and most variations are inherited." | x |
 | F126 | 6.5 | concept | "population size will grow exponentially if everybody reproduced maximally"; real population sizes are limited "means that there had been competition for resources. Only some survived and grew at the cost of others that could not flourish." | x |
@@ -264,6 +261,19 @@ Tick legend: `x` = written into the script and verified present in the generated
 | F197 | 6.9 | number | "Agriculture came around 10,000 years back and human settlements started. The rest of what happened is part of human history of growth and decline of civilisations." | x |
 | F198 | 6.7 | concept | **SUMMARY-UNIQUE, folded from summary sentence S6.** "Other phenomena like habitat fragmentation and genetic drift may accentuate these variations leading to appearance of new species and hence evolution." — the term *habitat fragmentation* is never stated in the body; folded here beside the §6.7 discussion of genetic drift so Pass 2 carries it as an explicit body fact. | x |
 
+## Approved Pass-3 filter removals (bullshit filter — user-approved 2026-09-26)
+
+These facts were inventoried in Pass 1 and written in Pass 2, then trimmed from the script/PDF during a later edit. Gate 3b VERIFY caught that the trim happened while the ledger still ticked 198/198 and the Gate 2 record stayed stale. Reviewed under bullshit-filter mode they are non-NEET-testable framing/philosophical filler, and were **explicitly approved for removal by the user (2026-09-26)**. They are intentionally absent from `Ch6_Evolution.pdf`; their IDs are retired from the active Facts ledger (which is why F003, F005, F006, F122, F123 now read as gaps in the `F001`..`F198` range). F001 stays in the Facts table because its chapter-title banner is present — only its printed contents-list sub-part was filtered.
+
+| ID | Section | Type | Removed wording | Rationale (non-NEET-testable) |
+|----|---------|------|-----------------|-------------------------------|
+| F001 (part) | front | heading | contents list "6.1 Origin of Life … 6.9 Origin and Evolution of Man" | Table-of-contents navigation filler; the nine section headings appear in the body as their own heading rows. Banner title (F001) retained. |
+| F003 | 6-open | concept | "the context of origin of life, i.e., evolution of earth, of stars and indeed of the universe itself"; chapter as "the story of origin of life … against the background of evolution of universe itself." | Framing prose with no testable fact; the origin-of-life-against-the-universe idea is restated testably at F007. |
+| F005 | 6.1 | opener | "When we look at stars on a clear night sky we are, in a way, looking back in time." | Rhetorical scene-setting opener. |
+| F006 | 6.1 | concept | "Stellar distances are measured in light years." … "when we see stars we apparently are peeping into the past." | Astronomy aside outside the NEET Evolution syllabus. |
+| F122 | 6.5 | concept | "Is evolution a process or the result of a process? The world we see, inanimate and animate, is only the success stories of evolution." | Philosophical rumination, non-testable. |
+| F123 | 6.5 | concept | evolution-as-process vs consequence; "We are still not very clear whether to regard evolution and natural selection as processes or end result of unknown processes." | Philosophical rumination; the natural-selection mechanism itself is retained at F125/F127. |
+
 ## Figure-label matrix
 
 The v6-mandatory figure-label matrix lives in **exactly one place — the Facts table above**, as the 8 rows whose wording begins `Figure labels:` (**F034, F061, F076, F105, F109, F129, F171, F179**), carrying **116** label strings total. It is deliberately **not** restated as a second pipe-delimited table (a duplicate would double every label under `_extract_labels` and turn its separator into a phantom `Fig #` figure). Figures 6.4, 6.5 and 6.11 carry no discrete textual labels and so have a `caption` row only. Because this is a **figureless edition**, every one of these 116 labels must be carried in Pass 2 running text (check 6) since no artwork exists to display them.
@@ -274,10 +284,10 @@ Two paragraphs, **9 sentences**. BODY-PRESENT = fact already explicit in the bod
 
 | # | Summary sentence | Classification | Folded into / Recap source |
 |---|---|---|---|
-| S1 | "The origin of life on earth can be understood only against the background of origin of universe especially earth." | BODY-PRESENT | F003, F007 |
+| S1 | "The origin of life on earth can be understood only against the background of origin of universe especially earth." | BODY-PRESENT | F007 (F003 retired in Pass-3 filter; coverage now carried by F007) |
 | S2 | "Most scientists believe chemical evolution, i.e., formation of biomolecules preceded the appearance of the first cellular forms of life." | BODY-PRESENT | F026, F027, F032, F038 |
 | S3 | "The subsequent events as to what happened to the first form of life is a conjectured story based on Darwinian ideas of organic evolution by natural selection." | BODY-PRESENT | F048, F112, F119 |
-| S4 | "Diversity of life forms on earth has been changing over millions of years." | BODY-PRESENT | F003, F044 |
+| S4 | "Diversity of life forms on earth has been changing over millions of years." | BODY-PRESENT | F044 (F003 retired in Pass-3 filter; coverage carried by F044) |
 | S5 | "It is generally believed that variations in a population result in variable fitness." | BODY-PRESENT | F045, F046, F047, F116 |
 | S6 | "Other phenomena like habitat fragmentation and genetic drift may accentuate these variations leading to appearance of new species and hence evolution." | **SUMMARY-UNIQUE** | **F198** (term *habitat fragmentation* absent from body; genetic drift itself is body-present at F152) |
 | S7 | "Homology is accounted for by the idea of branching descent." | BODY-PRESENT | F071, F119 |
@@ -333,4 +343,4 @@ Every exercise classified (Rule 2). COVERED = the rewritten body already answers
 
 ---
 
-**Gate 1 closed; Gate 2 closed (2026-09-26).** Script `Ch6_Evolution.py` + PDF `Ch6_Evolution.pdf` (10 pp, figureless, 0 images) built; 198/198 rows ticked; `check_pdf.py` exit 0. **Pass 3 (Gate 3) not started.**
+**Gate 1 closed; Gate 2 closed; Gate 3b reconciled (2026-09-26).** Script `Ch6_Evolution.py` + PDF `Ch6_Evolution.pdf` (10 pp, figureless, 0 images) built; **193/193 active rows ticked** (5 approved Pass-3 filter removals retired: F003, F005, F006, F122, F123; F001 contents-list sub-part filtered); `check_pdf.py` exit 0 (0 FAIL, 2 benign WARN). **Gate 3b: VERIFY complete, removals user-approved, ledger + Gate 2 record reconciled to the shipped PDF.**
