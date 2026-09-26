@@ -37,7 +37,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, PageBreak  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch13_PlantGrowthAndDevelopment.pdf")
@@ -196,7 +196,7 @@ story.append(figure(
     "fig_13_5.png",
     "<b>Fig. 13.5</b> - Constant linear growth, a plot of length L against time t; "
     "the height of the plant increases steadily along a straight line.",
-    max_width_cm=7.0))
+    max_width_cm=4.0))
 story.append(body(
     "In <b>geometrical growth</b> the initial growth is slow (<b>lag phase</b>) and then "
     "increases rapidly at an exponential rate (<b>log</b> or <b>exponential phase</b>), "
@@ -261,6 +261,7 @@ story.append(body(
 # ---- 13.2 Differentiation, Dedifferentiation and Redifferentiation ----
 #      H08, O08, F038-F043
 # ======================================================================================
+story.append(PageBreak())
 story.append(heading("13.2", "Differentiation, Dedifferentiation and Redifferentiation",
                       level=1))
 story.append(keyterm(
@@ -309,7 +310,7 @@ story.append(process_flow([
 story.append(figure(
     "fig_13_8.png",
     "<b>Fig. 13.8</b> - Sequence of the developmental process in a plant cell.",
-    max_width_cm=15.0))
+    max_width_cm=11.0))
 story.append(body(
     "Plants follow different pathways in response to the environment or the phases of "
     "life to form different kinds of structures. This ability is called "
@@ -321,7 +322,7 @@ story.append(body(
 story.append(figure(
     "fig_13_9.png",
     "<b>Fig. 13.9</b> - Heterophylly in (a) larkspur and (b) buttercup.",
-    max_width_cm=12.0))
+    max_width_cm=9.5))
 story.append(body(
     "Broadly, <b>development</b> is considered to be the sum of <b>growth</b> and "
     "<b>differentiation</b>. Development in plants is under the control of both "
