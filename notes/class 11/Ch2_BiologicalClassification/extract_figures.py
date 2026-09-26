@@ -1,16 +1,17 @@
-"""Extract Class 11 Biology Chapter 2, Figure 2.5 panels and compose them.
+"""Source extraction and horizontal composition for Class 11 Biology Chapter 2.
 
-Bounding boxes are in PDF points on 1-indexed source page 8 (576 x 784.8 pt).
-They were pinned from scratch/ch2_figs/grid_4x/p08.png (440 dpi, 5-pt grid),
-then cross-checked against image extents and panel-marker word boxes:
-  (a) image approx x=331.1..484.1, y=237.4..354.6; marker y=357.2..366.8
-  (b) image approx x=331.1..487.3, y=376.6..478.9; marker y=483.4..493.0
-  (c) image approx x=332.8..483.3, y=501.9..650.2; marker y=660.5..670.1
-Each crop shares the same x range so the three panel cells have equal width.
+Figure 2.4 is source-cropped from p6 using the pinned 440-dpi/5-pt-grid bounds
+(320, 100, 536.5, 656) pt. The cut between halves is y=395 pt: it keeps panels
+(a)/(b) and their markers together, then (c)/(d) together. The shorter lower
+half is centered on white to make equal-size cells; neither crop is resampled.
+Figure 2.5's three panels are independently source-cropped from p8.
+
+All crop coordinates are PDF points on the original 576 x 784.8 pt source pages.
+The script runs word-grazing, vector-overflow and 6-pt border-ink audits before
+rendering at 300 dpi. Composition is pixel-pasting only.
 """
 from __future__ import annotations
 
-import os
 from pathlib import Path
 
 import numpy as np
@@ -24,52 +25,21 @@ RENDER_DPI = 300
 BORDER_BAND_PT = 6.0
 AUDIT_DPI = 150
 DARK = 110
+GAP_PT = 6.0
 
-# (asset id, 1-indexed source page, PDF-point rectangle). The shared x bounds
-# keep all three panel cells exactly equal width; y bounds include each marker
-# while stopping above the caption and outside-column text.
-FIGS = [
-    ("2_5a", 8, (328.0, 235.0, 490.0, 367.0)),  # Figure 2.5(a), Mucor
-    ("2_5b", 8, (328.0, 374.0, 490.0, 494.0)),  # Figure 2.5(b), Aspergillus
-    ("2_5c", 8, (328.0, 499.0, 490.0, 673.0)),  # Figure 2.5(c), Agaricus
+# One full pinned crop for Figure 2.4; split at the whitespace seam between (b) and (c).
+FIG24_RECT = (320.0, 100.0, 536.5, 656.0)
+FIG24_SPLIT_Y = 395.0
+FIGS_25 = [
+    ("2_5a", 8, (328.0, 235.0, 490.0, 367.0)),  # Mucor
+    ("2_5b", 8, (328.0, 374.0, 490.0, 494.0)),  # Aspergillus
+    ("2_5c", 8, (328.0, 499.0, 490.0, 673.0)),  # Agaricus
 ]
-
-
-def extract(doc: pymupdf.Document) -> list[Image.Image]:
-    """Render each pinned panel independently at the chapter's 300-dpi scale."""
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    panels: list[Image.Image] = []
-    for fid, pno, coords in FIGS:
-        page = doc[pno - 1]
-        rect = pymupdf.Rect(*coords) & page.rect
-        pix = page.get_pixmap(clip=rect, dpi=RENDER_DPI, alpha=False)
-        panel = Image.frombytes("RGB", (pix.width, pix.height), pix.samples).convert("L")
-        path = OUT_DIR / f"fig_{fid}.png"
-        panel.save(path, format="PNG", dpi=(RENDER_DPI, RENDER_DPI), optimize=True)
-        panels.append(panel)
-        print(f"fig_{fid}: p{pno} {coords} {panel.size} mode={panel.mode} -> {path}")
-    return panels
-
-
-def compose(panels: list[Image.Image]) -> Image.Image:
-    """Place the original-scale, equal-width crops in a row; never resize them."""
-    if len(panels) != 3 or len({p.width for p in panels}) != 1:
-        raise ValueError(f"Expected 3 equal-width panel crops; got {[p.size for p in panels]}")
-    gap = round(6.0 * RENDER_DPI / 72)  # 6 PDF points, matching chapter convention
-    height = max(p.height for p in panels)
-    canvas = Image.new("L", (sum(p.width for p in panels) + 2 * gap, height), 255)
-    x = 0
-    for panel in panels:
-        canvas.paste(panel, (x, (height - panel.height) // 2))
-        x += panel.width + gap
-    out = OUT_DIR / "fig_2_5.png"
-    canvas.save(out, format="PNG", dpi=(RENDER_DPI, RENDER_DPI), optimize=True)
-    print(f"fig_2_5 horizontal: {canvas.size} mode={canvas.mode} -> {out}")
-    return canvas
+FIGS = [("2_4full", 6, FIG24_RECT)] + FIGS_25
 
 
 def audit(doc: pymupdf.Document) -> None:
-    """Mandatory NCERT extraction checks: word grazing, drawing overflow, edge ink."""
+    """Mandatory A/B/C crop audit: word grazing, drawings overflow, border ink."""
     print("--- A) text-layer word grazing ---")
     for fid, pno, coords in FIGS:
         page = doc[pno - 1]
@@ -84,7 +54,7 @@ def audit(doc: pymupdf.Document) -> None:
             inside += 1
             if inter.get_area() / max(1e-6, wr.get_area()) <= 0.9:
                 cut.append(str(word[4]))
-        print(f"  fig_{fid}: words_in_rect={inside}" + (f" GRAZING {cut}" if cut else " ok"))
+        print(f"  {fid}: words_in_rect={inside}" + (f" GRAZING {cut}" if cut else " ok"))
         if cut:
             raise RuntimeError(f"Text word cut by crop {fid}: {cut}")
 
@@ -103,11 +73,11 @@ def audit(doc: pymupdf.Document) -> None:
                 xs.extend([r.x0, r.x1])
                 ys.extend([r.y0, r.y1])
         if not xs:
-            print(f"  fig_{fid}: no vector drawings (raster figure); rely on edge audit and visual review")
+            print(f"  {fid}: raster source art; no vector drawings")
             continue
         overflow = [max(0, x0 - min(xs)), max(0, y0 - min(ys)),
                     max(0, max(xs) - x1), max(0, max(ys) - y1)]
-        print(f"  fig_{fid}: overflow L{overflow[0]:.1f} T{overflow[1]:.1f} "
+        print(f"  {fid}: overflow L{overflow[0]:.1f} T{overflow[1]:.1f} "
               f"R{overflow[2]:.1f} B{overflow[3]:.1f} pt")
         if max(overflow) > 3:
             raise RuntimeError(f"Vector artwork overflows crop {fid}: {overflow}")
@@ -134,8 +104,7 @@ def audit(doc: pymupdf.Document) -> None:
             keep = 0
             sample = None
             for py, px in zip(*np.nonzero(gray < DARK)):
-                X = region.x0 + px / z
-                Y = region.y0 + py / z
+                X, Y = region.x0 + px / z, region.y0 + py / z
                 if any(w.x0 - 1 <= X <= w.x1 + 1 and w.y0 - 1 <= Y <= w.y1 + 1 for w in words):
                     continue
                 keep += 1
@@ -143,9 +112,75 @@ def audit(doc: pymupdf.Document) -> None:
                     sample = (round(X, 1), round(Y, 1))
             if keep > 40:
                 hits.append(f"{side}:{keep}px@{sample}")
-        print(f"  fig_{fid}: " + (f"EDGE-INK {hits}" if hits else "clean"))
+        print(f"  {fid}: " + (f"EDGE-INK {hits}" if hits else "clean"))
         if hits:
             raise RuntimeError(f"Unexplained border ink for {fid}: {hits}")
+
+
+def source_crop(doc: pymupdf.Document, pno: int, coords: tuple[float, float, float, float]) -> Image.Image:
+    page = doc[pno - 1]
+    pix = page.get_pixmap(clip=pymupdf.Rect(*coords), dpi=RENDER_DPI, alpha=False)
+    return Image.frombytes("RGB", (pix.width, pix.height), pix.samples).convert("L")
+
+
+def save_png(image: Image.Image, filename: str) -> None:
+    path = OUT_DIR / filename
+    image.save(path, format="PNG", dpi=(RENDER_DPI, RENDER_DPI), optimize=True)
+    print(f"{filename}: {image.size} mode={image.mode} -> {path}")
+
+
+def build_fig24(doc: pymupdf.Document) -> None:
+    """Split a/b from c/d; make equal-size cells by white padding, then paste side by side."""
+    full = source_crop(doc, 6, FIG24_RECT)
+    x0, y0, _, _ = FIG24_RECT
+    split = round((FIG24_SPLIT_Y - y0) * RENDER_DPI / 72)
+    upper = full.crop((0, 0, full.width, split))
+    lower_original = full.crop((0, split, full.width, full.height))
+    cell_h = max(upper.height, lower_original.height)
+    lower = Image.new("L", (full.width, cell_h), 255)
+    lower_y = (cell_h - lower_original.height) // 2
+    lower.paste(lower_original, (0, lower_y))
+    save_png(upper, "fig_2_4_top.png")
+    save_png(lower, "fig_2_4_bottom.png")
+
+    gap = round(GAP_PT * RENDER_DPI / 72)
+    composite = Image.new("L", (2 * full.width + gap, cell_h), 255)
+    composite.paste(upper, (0, 0))
+    composite.paste(lower, (full.width + gap, 0))
+    save_png(composite, "fig_2_4.png")
+
+    if composite.crop((0, 0, full.width, cell_h)).tobytes() != upper.tobytes():
+        raise RuntimeError("Figure 2.4 top half pixels changed during composition")
+    if composite.crop((full.width + gap, 0, 2 * full.width + gap, cell_h)).tobytes() != lower.tobytes():
+        raise RuntimeError("Figure 2.4 bottom half pixels changed during composition")
+    if upper.crop((0, 0, upper.width, upper.height)).tobytes() != full.crop((0, 0, full.width, split)).tobytes():
+        raise RuntimeError("Figure 2.4 upper source pixels changed")
+    if lower.crop((0, lower_y, lower.width, lower_y + lower_original.height)).tobytes() != lower_original.tobytes():
+        raise RuntimeError("Figure 2.4 lower source pixels changed")
+    if upper.size != lower.size:
+        raise RuntimeError(f"Figure 2.4 halves must be equal-size: {upper.size} vs {lower.size}")
+    print(f"Figure 2.4 split at source y={FIG24_SPLIT_Y:g} pt; equal-size cells; no resizing")
+
+
+def build_fig25(doc: pymupdf.Document) -> None:
+    panels: list[Image.Image] = []
+    for fid, pno, coords in FIGS_25:
+        panel = source_crop(doc, pno, coords)
+        save_png(panel, f"fig_{fid}.png")
+        panels.append(panel)
+    if len({p.width for p in panels}) != 1:
+        raise ValueError(f"Expected equal-width Figure 2.5 panels; got {[p.size for p in panels]}")
+    gap = round(GAP_PT * RENDER_DPI / 72)
+    height = max(p.height for p in panels)
+    composite = Image.new("L", (sum(p.width for p in panels) + 2 * gap, height), 255)
+    x = 0
+    for panel in panels:
+        y = (height - panel.height) // 2
+        composite.paste(panel, (x, y))
+        if composite.crop((x, y, x + panel.width, y + panel.height)).tobytes() != panel.tobytes():
+            raise RuntimeError("Figure 2.5 composition altered panel pixels")
+        x += panel.width + gap
+    save_png(composite, "fig_2_5.png")
 
 
 def main() -> None:
@@ -153,15 +188,9 @@ def main() -> None:
         raise FileNotFoundError(SRC)
     doc = pymupdf.open(SRC)
     audit(doc)
-    panels = extract(doc)
-    composite = compose(panels)
-    # Enforce equal cell widths and prove composition is a direct pixel paste.
-    for panel, x in zip(panels, [0, panels[0].width + round(6 * RENDER_DPI / 72),
-                                 2 * (panels[0].width + round(6 * RENDER_DPI / 72))]):
-        y = (composite.height - panel.height) // 2
-        if composite.crop((x, y, x + panel.width, y + panel.height)).tobytes() != panel.tobytes():
-            raise RuntimeError("Composite altered panel pixels")
-    print("Composition check passed: all panel pixels pasted unchanged; no resampling.")
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    build_fig24(doc)
+    build_fig25(doc)
 
 
 if __name__ == "__main__":

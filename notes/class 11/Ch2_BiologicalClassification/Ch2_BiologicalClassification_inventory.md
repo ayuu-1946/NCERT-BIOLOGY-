@@ -281,7 +281,7 @@ and are written into the Monera and Fungi body sections (not only into the Quick
 | Fig 2.1 | Bacteria of different shapes | assets/fig_2_1.png | p3 | 2001 x 601 | L | yes | yes |
 | Fig 2.2 | A filamentous blue-green algae - Nostoc | assets/fig_2_2.png | p4 | 938 x 934 | L | yes | yes |
 | Fig 2.3 | A dividing bacterium | assets/fig_2_3.png | p5 | 947 x 634 | L | yes | yes (re-cropped) |
-| Fig 2.4 | (a) Dinoflagellates (b) Euglena (c) Slime mould (d) Paramoecium | assets/fig_2_4.png | p6 | 918 x 2380 | L | yes | yes |
+| Fig 2.4 | (a) Dinoflagellates (b) Euglena (c) Slime mould (d) Paramoecium | assets/fig_2_4.png (horizontal a/b + c/d halves); halves: assets/fig_2_4_top.png, assets/fig_2_4_bottom.png | p6 | composite 1831 x 1229; each half 903 x 1229 | L | yes | yes (two source halves, pixel-preserving) |
 | Fig 2.5 | Fungi: (a) Mucor (b) Aspergillus (c) Agaricus | assets/fig_2_5.png (horizontal composite); panels: assets/fig_2_5a.png, assets/fig_2_5b.png, assets/fig_2_5c.png | p8 | composite 2078 x 726; each panel 676 px wide | L | yes | yes (panels separately source-cropped; composite pixel-preserving) |
 | Fig 2.6 | (a) Tobacco Mosaic Virus (TMV) (b) Bacteriophage | assets/fig_2_6.png | p11 | 2001 x 1105 | L | yes | yes |
 
@@ -297,7 +297,12 @@ Asset provenance / re-extraction record:
   word-grazing clean; drawings check correctly identifies raster-only panels; 6-pt border-ink
   check clean. All three panel files and the composite are `mode=L`; visual inspection confirms
   the labels (a), (b), (c), image edges, and panel order are intact.
-- The other five numbered figure assets were not changed in this update.
+- **Fig 2.4 — split into two equal-size source halves and composed horizontally.** The upper half
+  contains panels (a)/(b), the lower half (c)/(d); source coordinates and the split between panels
+  are pinned in `extract_figures.py`. Both halves were rendered directly at 300 dpi; the lower half
+  is white-padded to equal dimensions, not resized. The composition is checked by exact pixel
+  comparison. Figure 2.2 and 2.3 source assets are unchanged; only their PDF display widths were
+  reduced to 6.2 cm to fit together on one page.
 
 ## Coverage note
 - **Compression decisions** — NCERT prose merged into tables (Table 2.1 five-kingdom comparison reproduced verbatim; fungal-classes comparison table added for Q9; bacterial shapes as table) and Process Flow (fungal sexual cycle: plasmogamy -> karyogamy -> meiosis). No fact dropped.
