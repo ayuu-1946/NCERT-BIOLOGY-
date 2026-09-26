@@ -862,7 +862,7 @@ story.append(figure(
     "the fork; on the 3' to 5' template the <b>Newly synthesised strands</b> grow by "
     "<b>Continuous synthesis</b>, while on the 5' to 3' template the growth is by "
     "<b>Discontinuous synthesis</b> -- every arrow still running 5' to 3'.",
-    max_width_cm=6.0))
+    max_width_cm=5.0))
 story.append(Paragraph(
     "In eukaryotes, the replication of DNA takes place at <b>S-phase of the cell-cycle</b>. "
     "The replication of DNA and cell division cycle should be highly coordinated. A "
