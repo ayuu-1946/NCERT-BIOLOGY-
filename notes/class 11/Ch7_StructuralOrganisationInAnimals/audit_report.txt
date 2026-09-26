@@ -1,8 +1,10 @@
 Class 11 Chapter 7 — figure crop audit
 Source: Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf (exact user-supplied 19-page PDF; SHA-256 checked against attachment)
 Environment: Python 3.13.14, PyMuPDF 1.28.2, Pillow 12.3.0, NumPy 2.5.3
-Panel renders: clipped at 300 dpi; grayscale mode L with autocontrast
+Panel renders: standard crops at 300 dpi; Figure 7.3 vector crop at 520 dpi; grayscale mode L with autocontrast
 Figure census: 17 numbered figures (7.1–7.8 and 7.14–7.22); Figures 7.6 and 7.18 have a/b(/c) panel crops and native-scale horizontal composites.
+
+PDF layout sizing: Figure 7.3 maximum width 12.5 cm; the complete cell-junction table begins on page 3. Figure 7.17 maximum width 7.5 cm; its image and caption fit on page 9. Other figure display sizes are unchanged.
 
 Final rectangles (PDF points):
 fig_7_1   page 2:  (41, 293, 525, 471.7)

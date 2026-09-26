@@ -224,7 +224,8 @@ story.append(body(
 
 story.append(figure(
     "fig_7_3.png",
-    "Figure 7.3 Compound epithelium"))  # F325 caption
+    "Figure 7.3 Compound epithelium",
+    max_width_cm=12.5))  # F325 caption; 520-dpi render enlarges safely at 300-dpi effective placement
 
 # Cell junctions (F043-F049)
 story.append(body(
@@ -609,7 +610,8 @@ story.append(body(
 
 story.append(figure(
     "fig_7_17.png",
-    "Figure 7.17 Open circulatory system of cockroach"))  # F334 caption
+    "Figure 7.17 Open circulatory system of cockroach",
+    max_width_cm=7.5))  # F334 caption; fit figure and caption in the preceding page's remaining space
 
 # Respiratory system (F166-F169)
 story.append(heading("Resp", "Respiratory System", level=3))
