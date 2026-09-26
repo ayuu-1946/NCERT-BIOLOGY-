@@ -123,8 +123,8 @@ story += title_block("Chemical Coordination and Integration")
 # ---- 19.intro ---- F003-F007 (opener F003), chapter map F008-F011
 # ======================================================================================
 story.append(body(
-    "You have already learnt that the <b>neural system provides a point-to-point rapid "
-    "coordination</b> among organs. The <b>neural coordination is fast but short-lived</b>."))
+    "The <b>neural system provides a point-to-point rapid coordination</b> among organs. "
+    "The <b>neural coordination is fast but short-lived</b>."))
 
 story.append(body(
     "As the <b>nerve fibres do not innervate all cells of the body</b> and the <b>cellular "
@@ -255,7 +255,7 @@ story.append(gap(6))
 story.append(heading("19.2.1", "The Hypothalamus", level=2))
 
 story.append(body(
-    "As you know, the hypothalamus is the <b>basal part of diencephalon, forebrain</b> "
+    "The hypothalamus is the <b>basal part of diencephalon, forebrain</b> "
     "(Figure 19.1) and it <b>regulates a wide spectrum of body functions</b>."))
 
 story.append(keyterm(
@@ -854,8 +854,7 @@ story.append(gap(6))
 story.append(heading("19.3", "HORMONES OF HEART, KIDNEY AND GASTROINTESTINAL TRACT", level=1))
 
 story.append(body(
-    "Now you know about the <b>endocrine glands and their hormones</b>. However, as mentioned "
-    "earlier, <b>hormones are also secreted by some tissues which are not endocrine glands</b>."))
+    "<b>Hormones are also secreted by some tissues which are not endocrine glands</b>."))
 
 story.append(gap())
 story.append(data_table([

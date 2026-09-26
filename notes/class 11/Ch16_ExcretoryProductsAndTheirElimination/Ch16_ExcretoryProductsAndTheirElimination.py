@@ -1007,8 +1007,7 @@ story.append(body(
     "it gets filled with urine."))
 
 story.append(keyterm(
-    "<b>Micturition</b> - the process of release of urine. <i>[Exercise 6 asks you to explain "
-    "it.]</i>"))
+    "<b>Micturition</b> - the process of release of urine."))
 
 story.append(keyterm(
     "<b>Micturition reflex</b> - the neural mechanisms causing micturition."))
