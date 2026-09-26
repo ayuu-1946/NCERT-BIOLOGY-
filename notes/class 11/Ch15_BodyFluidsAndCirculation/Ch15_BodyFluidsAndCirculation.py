@@ -331,13 +331,8 @@ story.append(note(
 # ======================================================================================
 story.append(heading("15.1.4", "Coagulation of Blood", 2))
 story.append(body(
-    "When you <b>cut your finger or hurt yourself</b>, your wound <b>does not continue to "
-    "bleed for a long time</b>; usually the blood <b>stops flowing after sometime</b>. Do you "
-    "know why? Blood exhibits <b>coagulation or clotting</b> in response to an <b>injury or "
-    "trauma</b>. This is a mechanism to <b>prevent excessive loss of blood</b> from the body."))
-story.append(body(
-    "You would have observed a <b>dark reddish brown scum</b> formed at the site of a cut or "
-    "an injury over a period of time."))
+    "Blood exhibits <b>coagulation or clotting</b> in response to an <b>injury or trauma</b>. "
+    "This is a mechanism to <b>prevent excessive loss of blood</b> from the body."))
 story.append(keyterm(
     "It is a <b>clot</b> or <b>coagulam</b> formed mainly of a <b>network of threads called "
     "fibrins</b>, in which <b>dead and damaged formed elements</b> of blood are trapped."))
@@ -604,11 +599,7 @@ story.append(note("These sounds are of <b>clinical diagnostic significance</b>."
 # ======================================================================================
 story.append(heading("15.3.3", "Electrocardiogram (ECG)", 2))
 story.append(body(
-    "You are probably familiar with this scene from a typical hospital television show: a "
-    "<b>patient is hooked up to a monitoring machine</b> that shows <b>voltage traces</b> on a "
-    "screen and makes the sound '... pip... pip... pip..... peeeeeeeeeeeeeeeeeeeeee' as the "
-    "patient goes into <b>cardiac arrest</b>. This type of machine "
-    "(<b>electro-cardiograph</b>) is used to obtain an <b>electrocardiogram (ECG)</b>."))
+    "An <b>electro-cardiograph</b> is used to obtain an <b>electrocardiogram (ECG)</b>."))
 story.append(keyterm(
     "<b>ECG</b> is a <b>graphical representation of the electrical activity of the heart</b> "
     "during a <b>cardiac cycle</b>."))
@@ -618,8 +609,7 @@ story.append(b1(
     "ankle</b>) that <b>continuously monitor the heart activity</b>."))
 story.append(b1(
     "For a <b>detailed evaluation</b> of the heart's function, <b>multiple leads</b> are "
-    "attached to the <b>chest region</b>. Here, we will talk <b>only about a standard "
-    "ECG</b>."))
+    "attached to the <b>chest region</b>."))
 story.append(b1(
     "Each <b>peak</b> in the ECG is identified with a <b>letter from P to T</b> that "
     "corresponds to a <b>specific electrical activity</b> of the heart."))

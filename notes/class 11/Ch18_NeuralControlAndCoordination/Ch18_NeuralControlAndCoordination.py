@@ -140,11 +140,6 @@ story.append(body(
     "integrate <b>all</b> the activities of the organs so that they function in a "
     "<b>synchronised fashion</b>."))
 
-story.append(note(
-    "<b>Scope of this chapter.</b> You will learn about the <b>neural system of human</b> and "
-    "the <b>mechanisms of neural coordination</b> - the <b>transmission of nerve impulse</b> and "
-    "<b>impulse conduction across a synapse</b>."))
-
 story.append(gap())
 
 # ======================================================================================
@@ -225,13 +220,12 @@ story.append(keyterm(
 
 story.append(gap())
 story.append(note(
-    "<b>Exercise gap closed here (Exercise 10f: cranial nerves vs spinal nerves).</b> NCERT's "
+    "NCERT's "
     "own text names <b>spinal and cranial nerves</b> only once, as the place where myelinated "
     "nerve fibres are found (18.3), and never defines either. Both are <b>PNS</b> nerves and "
     "they are told apart by <b>where they leave the CNS</b>: <b>cranial nerves arise from the "
     "brain</b>, while <b>spinal nerves arise from the spinal cord</b>. Each carries afferent "
-    "fibres, efferent fibres, or both. <i>Beyond this chapter's own sentences - kept because "
-    "Exercise 10(f) demands the distinction (Rule 2).</i>"))
+    "fibres, efferent fibres, or both."))
 
 story.append(gap())
 
@@ -322,7 +316,7 @@ story.append(heading("18.3.1", "Generation and Conduction of Nerve Impulse", lev
 
 story.append(body(
     "Neurons are <b>excitable cells</b> because their <b>membranes are in a polarised "
-    "state</b>. <i>Why is the membrane of a neuron polarised?</i>"))
+    "state</b>."))
 
 story.append(b1(
     "<b>Different types of ion channels</b> are present on the neural membrane, and these ion "
@@ -416,20 +410,17 @@ story.append(note(
     "<b>The impulse travels as a wave.</b> Taken end to end, the nerve impulse is <b>conducted "
     "along the axon membrane in the form of a wave of depolarisation and repolarisation</b>: "
     "depolarisation sweeps forward site by site while the sites just behind it are already being "
-    "repolarised. <i>(NCERT states this only in the chapter summary; it is folded in here, at "
-    "the mechanism it describes.)</i>"))
+    "repolarised."))
 
 story.append(gap())
 story.append(note(
-    "<b>Exercise gap closed here (Exercise 10b: conduction in a myelinated vs an unmyelinated "
-    "nerve fibre).</b> The chapter defines both fibre types (18.3) but never contrasts how they "
+    "The chapter defines both fibre types (18.3) but never contrasts how they "
     "conduct. In an <b>unmyelinated</b> fibre the bare membrane is depolarised at <b>every "
     "successive point</b>, exactly as the A-to-B sequence above describes, so conduction is "
     "<b>continuous and slower</b>. In a <b>myelinated</b> fibre the <b>myelin sheath insulates "
     "the axon</b> and the membrane is exposed only at the <b>nodes of Ranvier</b>, so the "
     "impulse is regenerated <b>node to node</b> - <b>saltatory (jumping) conduction</b>, which "
-    "is <b>faster</b> and uses less energy. <i>Beyond this chapter's own sentences - kept "
-    "because Exercise 10(b) demands the contrast (Rule 2).</i>"))
+    "is <b>faster</b> and uses less energy."))
 
 story.append(gap())
 
@@ -480,11 +471,6 @@ story.append(note(
     "<b>Synapse</b> shows the <b>Pre-synaptic membrane</b>, the <b>Synaptic cleft</b> and the "
     "<b>Post-synaptic membrane</b>, with <b>Neurotransmitters</b> crossing the cleft to the "
     "<b>Receptors</b> drawn on the post-synaptic membrane."))
-
-story.append(gap())
-story.append(body(
-    "<i>How does the pre-synaptic neuron transmit an impulse (action potential) across the "
-    "synaptic cleft to the post-synaptic neuron?</i>"))
 
 story.append(process_flow([
     "The <b>axon terminals contain vesicles filled with neurotransmitters</b>.",
@@ -623,19 +609,15 @@ story.append(b1(
     "sexual behaviour</b>, the <b>expression of emotional reactions</b> (e.g., <b>excitement, "
     "pleasure, rage and fear</b>) and <b>motivation</b>."))
 story.append(b1(
-    "The limbic system is <b>also concerned with olfaction and autonomic responses</b>. "
-    "<i>(Stated only in the NCERT summary; folded in here with the rest of the limbic "
-    "functions.)</i>"))
+    "The limbic system is <b>also concerned with olfaction and autonomic responses</b>."))
 
 story.append(gap())
 story.append(note(
-    "<b>Exercise gap closed here (Exercise 9b: which part of our central neural system acts as a "
-    "master clock?).</b> The chapter states that the brain controls the <b>circadian (24-hour) "
+    "The chapter states that the brain controls the <b>circadian (24-hour) "
     "rhythms</b> of our body (18.4) but never names the timekeeper. That role belongs to the "
     "<b>hypothalamus</b>, whose <b>suprachiasmatic nucleus</b> is the body's <b>master "
     "clock</b> - consistent with the hypothalamus already being the centre for body "
-    "temperature, eating and drinking. <i>The name of the nucleus is beyond this chapter's own "
-    "sentences - kept because Exercise 9(b) demands it (Rule 2).</i>"))
+    "temperature, eating and drinking."))
 
 story.append(gap())
 

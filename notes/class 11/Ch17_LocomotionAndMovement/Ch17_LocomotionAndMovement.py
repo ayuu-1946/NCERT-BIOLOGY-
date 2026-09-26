@@ -162,8 +162,8 @@ story.append(gap())
 story.append(heading("17.2", "Muscle", level=1))
 
 story.append(body(
-    "You have studied in Chapter 8 that <b>cilia and flagella are outgrowths of the cell "
-    "membrane</b>. Flagellar movement helps in the <b>swimming of spermatozoa</b>, the "
+    "<b>Cilia and flagella are outgrowths of the cell membrane</b>. Flagellar movement helps in "
+    "the <b>swimming of spermatozoa</b>, the "
     "maintenance of water current in the <b>canal system of sponges</b>, and in the "
     "locomotion of Protists like <i>Euglena</i>."))
 

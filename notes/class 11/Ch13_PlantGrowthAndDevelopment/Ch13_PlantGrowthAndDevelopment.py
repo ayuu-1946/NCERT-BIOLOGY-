@@ -81,7 +81,6 @@ story.extend(title_block("Plant Growth and Development"))
 # ---- Introduction ----  O01, F001-F006
 # ======================================================================================
 story.append(body(
-    "You have already studied the organisation of a flowering plant in Chapter 5. "
     "<b>Development</b> is the sum of two processes: <b>growth</b> and "
     "<b>differentiation</b>. The development of a mature plant from a zygote "
     "(fertilised egg) follows a precise and highly ordered succession of events. "
@@ -196,7 +195,7 @@ story.append(figure(
     "fig_13_5.png",
     "<b>Fig. 13.5</b> - Constant linear growth, a plot of length L against time t; "
     "the height of the plant increases steadily along a straight line.",
-    max_width_cm=7.0))
+    max_width_cm=4.0))
 story.append(body(
     "In <b>geometrical growth</b> the initial growth is slow (<b>lag phase</b>) and then "
     "increases rapidly at an exponential rate (<b>log</b> or <b>exponential phase</b>), "
@@ -219,7 +218,7 @@ story.append(figure(
     "<b>Fig. 13.4</b> - Diagrammatic representation of: (a) Arithmetic and "
     "(b) Geometric growth, and (c) Stages during embryo development showing the "
     "geometric and arithmetic phases.",
-    max_width_cm=12.5))
+    max_width_cm=10.5))
 story.append(body(
     "The measurement and the comparison of total growth per unit time is called the "
     "<b>absolute growth rate</b>. The growth of a system per unit time expressed on a "
@@ -230,18 +229,17 @@ story.append(figure(
     "<b>Fig. 13.7</b> - Diagrammatic comparison of absolute and relative growth "
     "rates. Both leaves A and B have increased their area by 5 cm<super>2</super> in a "
     "given time to produce leaves A<super>1</super> and B<super>1</super>.",
-    max_width_cm=13.0))
+    max_width_cm=10.5))
 story.append(figure(
     "fig_13_6.png",
     "<b>Fig. 13.6</b> - An idealised sigmoid growth curve, typical of cells in "
     "culture and of many higher plants and plant organs; size/weight of the organ is "
     "plotted against time.",
-    max_width_cm=6.6))
+    max_width_cm=5.5))
 
 # ---- 13.1.5 Conditions for Growth ----  H07, O07, F033-F037
 story.append(heading("13.1.5", "Conditions for Growth", level=2))
 story.append(body(
-    "Why not try to write down what you think are the necessary conditions for growth? "
     "The essential requirements are <b>water</b>, <b>oxygen</b> and <b>nutrients</b>."))
 story.append(b1(
     "<b>Water:</b> plant cells grow in size by cell enlargement, which requires water. "
@@ -261,6 +259,7 @@ story.append(body(
 # ---- 13.2 Differentiation, Dedifferentiation and Redifferentiation ----
 #      H08, O08, F038-F043
 # ======================================================================================
+story.append(PageBreak())
 story.append(heading("13.2", "Differentiation, Dedifferentiation and Redifferentiation",
                       level=1))
 story.append(keyterm(
@@ -309,7 +308,7 @@ story.append(process_flow([
 story.append(figure(
     "fig_13_8.png",
     "<b>Fig. 13.8</b> - Sequence of the developmental process in a plant cell.",
-    max_width_cm=15.0))
+    max_width_cm=11.0))
 story.append(body(
     "Plants follow different pathways in response to the environment or the phases of "
     "life to form different kinds of structures. This ability is called "
@@ -321,7 +320,7 @@ story.append(body(
 story.append(figure(
     "fig_13_9.png",
     "<b>Fig. 13.9</b> - Heterophylly in (a) larkspur and (b) buttercup.",
-    max_width_cm=12.0))
+    max_width_cm=9.5))
 story.append(body(
     "Broadly, <b>development</b> is considered to be the sum of <b>growth</b> and "
     "<b>differentiation</b>. Development in plants is under the control of both "
@@ -544,7 +543,6 @@ story.append(note(
 # ======================================================================================
 # ---- Quick Recap (SS5 item 8 - rewritten summary) ----  H19
 # ======================================================================================
-story.append(PageBreak())
 story.append(heading("", "Quick Recap", level=1))
 story.append(b1(
     "<b>Growth</b> is the irreversible, permanent increase in size of an organ, its "
