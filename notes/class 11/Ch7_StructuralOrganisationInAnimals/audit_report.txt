@@ -1,0 +1,100 @@
+Class 11 Chapter 7 — figure crop audit
+Source: Chapter/class 11/Chapter 07 - Structural Organisation in Animals.pdf (exact user-supplied 19-page PDF; SHA-256 checked against attachment)
+Environment: Python 3.13.14, PyMuPDF 1.28.2, Pillow 12.3.0, NumPy 2.5.3
+Panel renders: clipped at 300 dpi; grayscale mode L with autocontrast
+Figure census: 17 numbered figures (7.1–7.8 and 7.14–7.22); Figures 7.6 and 7.18 have a/b(/c) panel crops and native-scale horizontal composites.
+
+Final rectangles (PDF points):
+fig_7_1   page 2:  (41, 293, 525, 471.7)
+fig_7_2   page 3:  (65, 98, 333, 235)
+fig_7_3   page 3:  (105, 323, 310, 425)
+fig_7_4   page 4:  (55, 90, 538, 253)
+fig_7_5   page 4:  (350, 305, 542, 670)
+fig_7_6a  page 5:  (65, 85, 253, 211.3)
+fig_7_6b  page 5:  (78, 214, 177, 327)
+fig_7_6c  page 5:  (92, 328, 231, 442)
+fig_7_7   page 6:  (65, 100, 535, 294)
+fig_7_8   page 6:  (280, 505, 540, 687)
+fig_7_14  page 8:  (175, 480, 540, 697)
+fig_7_15  page 9:  (60, 459, 555, 698)
+fig_7_16  page 10: (295, 100, 538, 369)
+fig_7_17  page 10: (292, 382, 520, 695)
+fig_7_18a page 12: (148, 80, 443, 326.5)
+fig_7_18b page 12: (98, 327, 492, 537)
+fig_7_19  page 13: (70, 460, 285, 594)
+fig_7_20  page 14: (88, 100, 530, 432)
+fig_7_21  page 16: (305, 100, 540, 329.5)
+fig_7_22  page 16: (298, 425, 540, 691)
+
+Horizontal composites:
+- fig_7_6.png: fig_7_6a.png, fig_7_6b.png, fig_7_6c.png in a/b/c order; native panel pixels, vertically centred, separated by 24 px white gutters. Size 1826 x 527 px.
+- fig_7_18.png: fig_7_18a.png and fig_7_18b.png in a/b order; native panel pixels, vertically centred, separated by a 24 px white gutter. Size 2896 x 1028 px.
+Both composites are mode L and carry 300-dpi metadata; no panel is upscaled or resampled.
+
+--- A) Text-layer word grazing ---
+fig_7_1: words_in_rect=10 ok
+fig_7_2: words_in_rect=6 ok
+fig_7_3: words_in_rect=3 ok
+fig_7_4: words_in_rect=16 ok
+fig_7_5: words_in_rect=4 ok
+fig_7_6a: words_in_rect=1 ok
+fig_7_6b: words_in_rect=1 ok
+fig_7_6c: words_in_rect=4 ok
+fig_7_7: words_in_rect=14 ok
+fig_7_8: words_in_rect=7 ok
+fig_7_14: words_in_rect=0 ok (raster figure; A non-diagnostic)
+fig_7_15: words_in_rect=20 ok
+fig_7_16: words_in_rect=18 ok
+fig_7_17: words_in_rect=7 ok
+fig_7_18a: words_in_rect=26 ok
+fig_7_18b: words_in_rect=17 ok
+fig_7_19: words_in_rect=7 ok
+fig_7_20: words_in_rect=18 ok
+fig_7_21: words_in_rect=17 ok
+fig_7_22: words_in_rect=9 ok
+
+--- B) Drawing-extent overflow ---
+fig_7_1: OVERFLOW T47.9 B16.3 — explained: the source's pale diagonal page watermark is composed of many small vector paths. The union exceeds the crop's top/bottom, but visual inspection of the 440-dpi grid and final PNG confirms all Figure 7.1 artwork is present. The crop intentionally excludes watermark beyond the figure and ends above the caption.
+fig_7_2: ok
+fig_7_3: ok
+fig_7_4: ok
+fig_7_5: ok
+fig_7_6a: ok
+fig_7_6b: ok
+fig_7_6c: OVERFLOW T11.3 — explained: a vector-path bounding box for the upper RBC overlaps the vertical gap at the end of the Figure 7.6(b) marker. The clean 600-dpi source detail shows visible RBC ink begins below y=328; the final crop retains complete RBC artwork and excludes the preceding “(b)” marker.
+fig_7_7: ok
+fig_7_8: no drawings (raster figure; B not applicable)
+fig_7_14: no drawings (raster figure; B not applicable)
+fig_7_15: ok
+fig_7_16: ok
+fig_7_17: ok
+fig_7_18a: OVERFLOW B12.5 — explained: the male colored-body vector path extends into the tight vertical gap immediately above female panel (b). This is the reciprocal overlap of the female panel’s top bound; the clean 600-dpi source junction and final PNG show the male body, all labels, and the (a) marker complete, while avoiding visible panel (b) artwork.
+fig_7_18b: OVERFLOW T12.5 — explained: the female colored-body vector path begins above the visible start of panel (b), in the same narrow inter-panel gap. The clean 600-dpi source junction and final PNG confirm complete female artwork and labels, with the male (a) marker excluded.
+fig_7_19: ok
+fig_7_20: ok
+fig_7_21: ok
+fig_7_22: no drawings (raster figure; B not applicable)
+
+--- C) Unexplained dark ink in 6-point border band ---
+fig_7_1: clean
+fig_7_2: clean
+fig_7_3: clean
+fig_7_4: clean
+fig_7_5: clean
+fig_7_6a: clean
+fig_7_6b: clean
+fig_7_6c: clean
+fig_7_7: clean
+fig_7_8: clean
+fig_7_14: clean
+fig_7_15: clean
+fig_7_16: clean
+fig_7_17: clean
+fig_7_18a: clean
+fig_7_18b: clean
+fig_7_19: clean
+fig_7_20: clean
+fig_7_21: clean
+fig_7_22: clean
+
+Visual review: Figure 7.18(a) and Figure 7.18(b) final crops were each opened individually and compared with their 440-dpi / 5-point page grid. The panel junction was also viewed from a clean 600-dpi source render. The horizontal composite and full asset contact sheet were reviewed; all labels, lines, boundaries, caption exclusion, and a/b order were confirmed. Figure 7.6’s three crops and horizontal composite were already individually reviewed. The printed source spelling “Collaterial glands” is retained in the inventory. Captions remain excluded from figure assets.
