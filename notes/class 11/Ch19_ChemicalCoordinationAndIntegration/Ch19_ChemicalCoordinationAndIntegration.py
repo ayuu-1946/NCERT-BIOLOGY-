@@ -232,12 +232,6 @@ story.append(gap())
 story.append(figure("fig_19_1.png", "Figure 19.1 Location of endocrine glands",
                     max_width_cm=9.1))
 
-story.append(note(
-    "<b>Read the plate (Figure 19.1 labels).</b> Working down the body the plate marks the "
-    "<b>Hypothalamus</b> and, just below it, the <b>Pituitary</b>; the <b>Pineal</b> on the "
-    "dorsal side of the forebrain; the <b>Thyroid and Parathyroid</b> in the neck; the "
-    "<b>Thymus</b> behind the sternum; the <b>Pancreas</b> and, above the kidney, the "
-    "<b>Adrenal</b>; and the gonads - <b>Ovary (in female)</b> and <b>Testis (in male)</b>."))
 
 story.append(gap())
 story.append(memory_aid(
@@ -327,11 +321,6 @@ story.append(figure("fig_19_2.png",
                     "Figure 19.2 Diagrammatic representation of pituitary and its relationship "
                     "with hypothalamus", max_width_cm=9.1))
 
-story.append(note(
-    "<b>Read the plate (Figure 19.2 labels).</b> The plate marks the <b>Hypothalamus</b> at the "
-    "top with its <b>Hypothalamic neurons</b> running down the stalk; the <b>Portal "
-    "circulation</b> carrying hypothalamic hormones into the <b>Anterior pituitary</b>; and the "
-    "<b>Posterior pituitary</b>, which the neurons reach directly."))
 
 story.append(gap())
 story.append(Paragraph("<b>Growth hormone (GH) - the two directions of error</b>", STYLES["Body"]))
@@ -454,20 +443,12 @@ story.append(figure("fig_19_3a.png",
                     "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
                     "(a) Ventral side", max_width_cm=5.3))
 
-story.append(note(
-    "<b>Read the plate (Figure 19.3 (a) labels).</b> On the ventral side the plate marks the "
-    "<b>Vocal cord</b> above, the two lobes of the <b>Thyroid</b> astride the <b>Trachea</b>."))
 
 story.append(gap())
 story.append(figure("fig_19_3b.png",
                     "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
                     "(b) Dorsal side", max_width_cm=5.3))
 
-story.append(note(
-    "<b>Read the plate (Figure 19.3 (b) labels).</b> The dorsal view marks the four "
-    "<b>Parathyroid glands</b> on the back of the thyroid lobes - the same organ seen from "
-    # [VERIFICATION FIX] Pass 3(a) D1: printed "SS19.2.5" - same leak as above.
-    "behind, which is why Section 19.2.5 refers to this panel."))
 
 story.append(gap())
 story.append(Paragraph("<b>Too little iodine, too much hormone</b>", STYLES["Body"]))
@@ -592,11 +573,6 @@ story.append(figure("fig_19_4.png",
                     "Figure 19.4  Diagrammatic representation of : (a) Adrenal gland above kidney "
                     "(b) Section showing two parts of adrenal gland", max_width_cm=8.3))
 
-story.append(note(
-    "<b>Read the plate (Figure 19.4 labels).</b> Panel (a) marks the <b>Adrenal gland</b> sitting "
-    "on top of the <b>Kidney</b>; panel (b) cuts the same gland open to show the outer <b>Adrenal "
-    "cortex</b> enclosing the central <b>Adrenal medulla</b>. Both panels are delivered as one "
-    "plate because their parts interleave horizontally."))
 
 story.append(note(
     "<b>Underproduction of hormones by the adrenal cortex alters carbohydrate metabolism</b>, "
@@ -980,28 +956,13 @@ story.append(figure("fig_19_5a.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
                     "(a) Protein hormone", max_width_cm=10.9))
 
-story.append(note(
-    "<b>Read the plate (Figure 19.5 (a) labels).</b> A <b>Hormone (e.g., FSH)</b> reaches a "
-    "<b>Receptor</b> held in the <b>Ovarian cell membrane</b>; that binding is <b>Response 1</b>, "
-    "the <b>(Generation of second messenger)</b> step <b>(Cyclic AMP or " + CAPP + ")</b>; the "
-    "messenger drives <b>Biochemical responses</b>, which end in <b>Physiological responses "
-    "(e.g., ovarian growth)</b>."))
 
 story.append(gap())
 story.append(figure("fig_19_5b.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
                     "(b) Steroid hormone", max_width_cm=10.9))
 
-story.append(note(
-    "<b>Read the plate (Figure 19.5 (b) labels).</b> A <b>Hormone (e.g., estrogen)</b> crosses the "
-    "<b>Uterine cell membrane</b>, and inside the <b>Nucleus</b> the <b>Hormone-receptor "
-    "complex</b> acts on the <b>Genome</b>; <b>mRNA</b> is transcribed, <b>Proteins</b> are made, "
-    "and the outcome is <b>Physiological responses (Tissue growth and differentiation)</b>."))
 
-story.append(note(
-    "Both Figure 19.5 captions are printed here with the source's own <b>Diagramatic</b>, which is "
-    "how page 11 spells it - Figures 19.2, 19.3 and 19.4 use the correct <b>Diagrammatic</b> in "
-    "the same book."))
 
 story.append(gap())
 story.append(memory_aid(

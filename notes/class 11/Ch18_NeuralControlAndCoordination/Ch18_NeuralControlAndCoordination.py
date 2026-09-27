@@ -261,12 +261,6 @@ story.append(data_table([
 story.append(gap())
 story.append(figure("fig_18_1.png", "Fig. 18.1 - Structure of a neuron", max_width_cm=5.9))
 
-story.append(note(
-    "<b>Read the plate (Figure 18.1 labels).</b> The diagram marks the <b>Dendrites</b>, the "
-    "<b>Nissl's granules</b> inside the <b>Cell body</b>, the <b>Nucleus</b> within that cell "
-    "body, the <b>Schwan cell</b> (the plate's own spelling of the <b>Schwann cell</b>) wrapping "
-    "the <b>Axon</b> as a <b>Myelin sheath</b>, a <b>Node of Ranvier</b> between two sheaths, "
-    "and at the far end the <b>Axon terminal</b> ending in a <b>Synaptic knob</b>."))
 
 story.append(gap())
 story.append(body(
@@ -390,12 +384,6 @@ story.append(figure(
     "Fig. 18.2 - Diagrammatic representation of impulse conduction through an axon (at points A "
     "and B)", max_width_cm=9.3))
 
-story.append(note(
-    f"<b>Read the plate (Figure 18.2 labels).</b> The plate marks the stimulated site <b>A</b> "
-    f"and the site immediately ahead, <b>B</b>, with rows of plus and minus charge marks on the "
-    f"two membrane surfaces and <b>Na</b> printed at each site where sodium ({NA}) rushes "
-    f"inwards. Reading the panels top to bottom shows the reversed polarity travelling from "
-    f"<b>A</b> to <b>B</b> along the axon."))
 
 story.append(gap())
 story.append(body(
@@ -465,12 +453,6 @@ story.append(gap())
 story.append(figure("fig_18_3.png", "Fig. 18.3 - Diagram showing axon terminal and synapse",
                     max_width_cm=6.4))
 
-story.append(note(
-    "<b>Read the plate (Figure 18.3 labels).</b> The plate follows the <b>Axon</b> into its "
-    "<b>Axon terminal</b>, which holds the <b>Synaptic vesicles</b>; the enlarged inset of the "
-    "<b>Synapse</b> shows the <b>Pre-synaptic membrane</b>, the <b>Synaptic cleft</b> and the "
-    "<b>Post-synaptic membrane</b>, with <b>Neurotransmitters</b> crossing the cleft to the "
-    "<b>Receptors</b> drawn on the post-synaptic membrane."))
 
 story.append(process_flow([
     "The <b>axon terminals contain vesicles filled with neurotransmitters</b>.",
@@ -532,13 +514,6 @@ story.append(figure(
     "(NCERT prints 'sagital'; the conventional spelling is 'sagittal')",
     max_width_cm=10.1))
 
-story.append(note(
-    "<b>Read the plate (Figure 18.4 labels).</b> A bracket marks the <b>Forebrain</b>, inside "
-    "which the plate names the <b>Cerebrum</b>, one <b>Cerebral hemisphere</b> of the pair, the "
-    "<b>Corpus callosum</b> joining them, the <b>Thalamus</b> and the <b>Hypothalamus</b>. "
-    "Below it are the <b>Midbrain</b>, with its <b>Cerebral aqueduct</b>, and the "
-    "<b>Hindbrain</b> - <b>Pons</b>, <b>Cerebellum</b> and <b>Medulla</b> - which continues into "
-    "the <b>Spinal cord</b>."))
 
 story.append(gap())
 

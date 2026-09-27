@@ -289,19 +289,11 @@ story.append(note(
 story.append(gap())
 story.append(figure("fig_16_1.png", "Figure 16.1 Human Urinary system"))
 
-story.append(note(
-    "<b>Figure 16.1 labels, verbatim:</b> \"Inferior vena cava\"; \"Adrenal gland\"; "
-    "\"Renal artery\"; \"Renal vein\"; \"Pelvis\"; \"Kidney\"; \"Medulla\"; \"Cortex\"; "
-    "\"Dorsal aorta\"; \"Ureter\"; \"Urinary bladder\"; \"Urethra\"."))
 
 story.append(gap())
 story.append(figure("fig_16_2.png",
                     "Figure 16.2 Longitudinal section (Diagrammatic) of Kidney"))
 
-story.append(note(
-    "<b>Figure 16.2 labels, verbatim:</b> \"Medullary pyramid\"; \"Renal column\"; "
-    "\"Calyx\"; \"Renal artery\"; \"Renal vein\"; \"Renal pelvis\"; \"Ureter\"; "
-    "\"Cortex\"; \"Renal capsule\"."))
 
 story.append(gap())
 story.append(memory_aid(
@@ -334,9 +326,6 @@ story.append(keyterm(
 story.append(gap())
 story.append(figure("fig_16_4.png", "Figure 16.4 Malpighian body (renal corpuscle)"))
 
-story.append(note(
-    "<b>Figure 16.4 labels, verbatim:</b> \"Afferent arteriole\"; \"Efferent arteriole\"; "
-    "\"Bowman's capsule\"; \"Proximal convoluted tubule\"."))
 
 story.append(gap())
 story.append(body("The renal tubule then runs through four named segments in strict order:"))
@@ -402,11 +391,6 @@ story.append(figure("fig_16_3.png",
                     "Figure 16.3 A diagrammatic representation of a nephron showing blood "
                     "vessels, duct and tubule"))
 
-story.append(note(
-    "<b>Figure 16.3 labels, verbatim:</b> \"Afferent arteriole\"; \"Efferent arteriole\"; "
-    "\"Glomerulus\"; \"Bowman's capsule\"; \"Proximal convoluted tubule\"; \"Distal "
-    "convoluted tubule\"; \"Descending limb of loop of Henle\"; \"Ascending limb of loop of "
-    "Henle\"; \"Henle's loop\"; \"Vasa recta\"; \"Collecting duct\"."))
 
 story.append(gap())
 story.append(memory_aid(
@@ -723,11 +707,6 @@ story.append(figure("fig_16_5.png",
                     "parts of the nephron (Arrows indicate direction of movement of "
                     "materials.)"))
 
-story.append(note(
-    "<b>Figure 16.5 labels, verbatim:</b> \"Proximal convoluted tubule\"; \"Distal convoluted "
-    f"tubule\"; \"Cortex\"; \"Medulla\"; \"{HCO3}\"; \"NaCl\"; \"Nutrients\"; \"{H2O}\"; "
-    f"\"{K}\"; \"{H}\"; \"{NH3}\"; \"Descending limb of loop of Henle\"; \"Thick segment of "
-    "ascending limb\"; \"Thin segment of ascending limb\"; \"Collecting duct\"; \"Urea\"."))
 
 story.append(gap())
 story.append(heading("16.3s", "Segment-by-Segment Summary of Tubular Function", level=2))
@@ -836,14 +815,6 @@ story.append(figure("fig_16_6.png",
                     "Figure 16.6 Diagrammatic representation of a nephron and vasa recta "
                     "showing counter current mechanisms"))
 
-story.append(note(
-    "<b>Figure 16.6 labels, verbatim:</b> \"Afferent arteriole\"; \"Efferent arteriole\"; "
-    "\"Bowman's capsule\"; \"Glomerulus\"; \"Cortex\"; \"Outer medulla\"; \"Inner medulla\"; "
-    f"\"{H2O}\"; \"NaCl\"; \"Urea\"; \"Vasa recta\"; \"Nephron\". The osmolarity scale is "
-    f"drawn as \"300 {MOSM}\", \"600 {MOSM}\", \"900 {MOSM}\" and \"1200 {MOSM}\", with tick "
-    "marks reading \"200\", \"300\", \"400\", \"600\", \"800\", \"900\", \"1000\" and "
-    "\"1200\" - values that exist only in the artwork, so they are listed here to keep the "
-    "printed gradient readable."))
 
 story.append(gap())
 story.append(memory_aid(

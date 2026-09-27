@@ -223,9 +223,6 @@ story.append(figure(
     "fig_17_1.png",
     "Figure 17.1 Diagrammatic cross sectional view of a muscle showing muscle bundles and "
     "muscle fibres"))
-story.append(note(
-    "<b>Figure 17.1 labels:</b> Fascicle (muscle bundle); Muscle fibre (muscle cell); "
-    "Sarcolemma; Blood capillary."))
 
 story.append(gap())
 story.append(body(
@@ -285,9 +282,6 @@ story.append(figure(
     "fig_17_2.png",
     "Figure 17.2 Diagrammatic representation of (a) anatomy of a muscle fibre showing a "
     "sarcomere (b) a sarcomere"))
-story.append(note(
-    "<b>Figure 17.2 labels:</b> Z line; A band; I band; H zone; Sarcomere; panels (a) and "
-    "(b)."))
 
 story.append(gap())
 
@@ -328,9 +322,6 @@ story.append(data_table([
 story.append(figure(
     "fig_17_3.png",
     "Figure 17.3 (a) An actin (thin) filament (b) Myosin monomer (Meromyosin)"))
-story.append(note(
-    "<b>Figure 17.3 labels:</b> Troponin; Tropomyosin; F actin; Actin binding sites; ATP "
-    "binding sites; Head; Cross arm; panels (a) and (b)."))
 
 story.append(gap())
 
@@ -388,19 +379,12 @@ story.append(figure(
     "fig_17_4.png",
     "Figure 17.4 Stages in cross bridge formation, rotation of head and breaking of cross "
     "bridge"))
-story.append(note(
-    "<b>Figure 17.4 labels:</b> Actin filament; Myosin filament; P; ADP; ATP; Cross bridge; "
-    "Myosin head; Sliding/rotation of the head; (Formation of cross bridge); (Breaking of "
-    "cross bridge)."))
 
 story.append(gap())
 story.append(figure(
     "fig_17_5.png",
     "Figure 17.5 Sliding-filament theory of muscle contraction (movement of the thin "
     "filaments and the relative size of the I band and H zones)"))
-story.append(note(
-    "<b>Figure 17.5 labels:</b> H zone; I band; A band; Z line; Two Sarcomeres; and the "
-    "three staged states Relaxed, Contracting and Maximally Contracted."))
 
 story.append(gap())
 story.append(body(
@@ -466,10 +450,6 @@ story.append(b1(
 story.append(figure(
     "fig_17_6.png",
     "Figure 17.6 Diagrammatic view of human skull"))
-story.append(note(
-    "<b>Figure 17.6 labels:</b> Parietal bone; Frontal bone; Temporal bone; Occipital bone; "
-    "Occipital condyle; Sphenoid bone; Ethmoid bone; Lacrimal bone; Nasal bone; Zygomatic "
-    "bone; Maxilla; Mandible; Hyoid bone."))
 
 story.append(gap())
 story.append(body(
@@ -493,9 +473,6 @@ story.append(b1(
 story.append(figure(
     "fig_17_7.png",
     "Figure 17.7 Vertebral column (right lateral view)"))
-story.append(note(
-    "<b>Figure 17.7 labels:</b> Cervical vertebra; Thoracic vertebra; Lumbar vertebra; "
-    "Intervertebral disc; Sacrum; Coccyx."))
 
 story.append(gap())
 story.append(body(
@@ -522,9 +499,6 @@ story.append(b1(
 story.append(figure(
     "fig_17_8.png",
     "Figure 17.8 Ribs and rib cage"))
-story.append(note(
-    "<b>Figure 17.8 labels:</b> rib pairs numbered 1 to 12; True ribs; False ribs; Floating "
-    "ribs; Sternum; Ribs; Vertebral column."))
 
 story.append(gap())
 story.append(heading("17.3.append", "Appendicular Skeleton", level=3))
@@ -568,9 +542,6 @@ story.append(b1(
 story.append(figure(
     "fig_17_9.png",
     "Figure 17.9 Right pectoral girdle and upper arm. (frontal view)"))
-story.append(note(
-    "<b>Figure 17.9 labels:</b> Clavicle; Scapula; Humerus; Radius; Ulna; Carpals; "
-    "Metacarpals; Phalanges."))
 
 story.append(gap())
 story.append(body("<b>Pelvic girdle</b> (Figure 17.10):"))
@@ -587,9 +558,6 @@ story.append(b1(
 story.append(figure(
     "fig_17_10.png",
     "Figure 17.10 Right pelvic girdle and lower limb bones (frontal view)"))
-story.append(note(
-    "<b>Figure 17.10 labels:</b> Ilium; Pubis; Ischium; Coxal bone; Sacrum; Femur; Patella; "
-    "Tibia; Fibula; Tarsals; Metatarsals; Phalanges."))
 
 story.append(gap())
 story.append(memory_aid(

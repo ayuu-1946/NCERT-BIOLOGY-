@@ -109,16 +109,6 @@ story.append(body(
     "<b>Blood</b> is the <b>most commonly used body fluid</b> by most of the higher organisms, "
     "including humans, for this purpose. Another body fluid, <b>lymph</b>, also helps in the "
     "transport of certain substances."))
-story.append(note(
-    "This chapter covers the <b>composition and properties of blood and lymph (tissue "
-    "fluid)</b>, and the <b>mechanism of circulation of blood</b>."))
-story.append(body("<b>Chapter contents</b> (p. 193 margin panel):"))
-story.append(b1("<b>15.1</b> Blood"))
-story.append(b1("<b>15.2</b> Lymph (Tissue Fluid)"))
-story.append(b1("<b>15.3</b> Circulatory Pathways"))
-story.append(b1("<b>15.4</b> Double Circulation"))
-story.append(b1("<b>15.5</b> Regulation of Cardiac Activity"))
-story.append(b1("<b>15.6</b> Disorders of Circulatory System"))
 
 # ======================================================================================
 # ---- 15.1 Blood ---- F012-F013 (heading F012, opener F013) + exercise-gap Ex 4
@@ -236,9 +226,6 @@ story.append(b1(
 
 story.append(figure("fig_15_1.png",
                     "Figure 15.1 Diagrammatic representation of formed elements in blood"))
-story.append(note(
-    "<b>Figure 15.1 callouts, verbatim:</b> R B C; Platelets; Eosinophil; Basophil; "
-    "Neutrophil; Monocyte; T lymphocyte; B lymphocyte."))
 
 # ======================================================================================
 # ---- 15.1.3 Blood Groups ---- F051-F054 (heading F051, opener F052)
@@ -516,11 +503,6 @@ story.append(b1(
     f"{PER_MIN}</b>)."))
 
 story.append(figure("fig_15_2.png", "Figure 15.2 Section of a human heart"))
-story.append(note(
-    "<b>Figure 15.2 callouts, verbatim:</b> Vena cava; Sino-atrial node; Right atrium; "
-    "Atrio-ventricular node; Chordae tendinae; Right ventricle; Aorta; Pulmonary artery; "
-    "Pulmonary veins; Left atrium; Bundle of His; Left ventricle; Interventricular septum; "
-    "Apex."))
 
 # ======================================================================================
 # ---- 15.3.2 Cardiac Cycle ---- F145-F171 (heading F145, opener F146, folded S-U F166)
@@ -631,8 +613,6 @@ story.append(note(
     "abnormality or disease</b>. Hence, it is of a <b>great clinical significance</b>."))
 story.append(figure("fig_15_3.png",
                     "Figure 15.3 Diagrammatic presentation of a standard ECG"))
-story.append(note(
-    "<b>Figure 15.3 callouts, verbatim:</b> P; Q; R; S; T."))
 
 # ======================================================================================
 # ---- 15.4 Double Circulation ---- F188-F200 (heading F188, opener F189, folded S-U F199)
@@ -684,10 +664,6 @@ story.append(b1(
 
 story.append(figure("fig_15_4.png",
                     "Figure 15.4 Schematic plan of blood circulation in human"))
-story.append(note(
-    "<b>Figure 15.4 callouts, verbatim:</b> Lungs; Pulmonary artery; Pulmonary Vein; Vena cava "
-    "(great veins); RA; RV; LA; LV; Heart; Dorsal aorta; Body parts; Smooth muscle; Lumen; "
-    "Vein; Capillary; Artery."))
 
 # ======================================================================================
 # ---- 15.5 Regulation of Cardiac Activity ---- F201-F206 (heading F201, opener F202)
