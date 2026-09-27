@@ -400,7 +400,7 @@ story.append(figure(
     "fig_13_10.png",
     "<b>Fig. 13.10</b> - Experiment used to demonstrate that the tip of the coleoptile "
     "is the source of auxin. Arrows indicate the direction of light.",
-    max_width_cm=8.5))
+    max_width_cm=7.0))
 
 # ---- 13.4.3 Physiological Effects of Plant Growth Regulators ----  H13
 story.append(heading("13.4.3", "Physiological Effects of Plant Growth Regulators",
@@ -439,7 +439,7 @@ story.append(figure(
     "<b>Fig. 13.11</b> - Apical dominance in plants: (a) A plant with the apical bud "
     "intact; (b) A plant with the apical bud removed. Note the growth of the lateral "
     "buds into branches after decapitation.",
-    max_width_cm=8.5))
+    max_width_cm=7.5))
 
 # ---- 13.4.3.2 Gibberellins ----  H15, O13, F067-F070
 story.append(heading("13.4.3.2", "Gibberellins", level=3))
