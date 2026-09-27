@@ -218,7 +218,7 @@ story.append(figure(
     "<b>Fig. 13.4</b> - Diagrammatic representation of: (a) Arithmetic and "
     "(b) Geometric growth, and (c) Stages during embryo development showing the "
     "geometric and arithmetic phases.",
-    max_width_cm=10.5))
+    max_width_cm=8.0))
 story.append(body(
     "The measurement and the comparison of total growth per unit time is called the "
     "<b>absolute growth rate</b>. The growth of a system per unit time expressed on a "
