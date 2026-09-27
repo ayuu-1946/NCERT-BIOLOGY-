@@ -37,7 +37,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer, PageBreak  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch13_PlantGrowthAndDevelopment.pdf")
@@ -259,7 +259,6 @@ story.append(body(
 # ---- 13.2 Differentiation, Dedifferentiation and Redifferentiation ----
 #      H08, O08, F038-F043
 # ======================================================================================
-story.append(PageBreak())
 story.append(heading("13.2", "Differentiation, Dedifferentiation and Redifferentiation",
                       level=1))
 story.append(keyterm(
