@@ -137,11 +137,11 @@ TARGET_CAPTION = ParagraphStyle(
 )
 TARGET_TABLE_CELL = ParagraphStyle(
     "TargetTableCell", parent=STYLES["TableCell"], fontName="Times-Roman",
-    fontSize=8.5, leading=9.8, textColor=INK,
+    fontSize=8.0, leading=9.0, textColor=INK,
 )
 TARGET_TABLE_HEAD = ParagraphStyle(
     "TargetTableHead", parent=STYLES["TableHead"], fontName="Times-Bold",
-    fontSize=8.5, leading=9.8, textColor=white, alignment=TA_CENTER,
+    fontSize=8.0, leading=9.0, textColor=white, alignment=TA_CENTER,
 )
 
 def title_block(title_text: str, motif_size: float = 42):
@@ -215,8 +215,8 @@ def process_flow(steps, cyclic: bool = False):
         ("ALIGN", (0, 0), (0, -1), "CENTER"),
         ("LEFTPADDING", (0, 0), (0, -1), 2),
         ("RIGHTPADDING", (0, 0), (0, -1), 2),
-        ("TOPPADDING", (0, 0), (-1, -1), 1.4),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 1.4),
+        ("TOPPADDING", (0, 0), (-1, -1), 0.9),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0.9),
         ("LEFTPADDING", (1, 0), (1, -1), 6),
         ("RIGHTPADDING", (1, 0), (1, -1), 4),
     ]
