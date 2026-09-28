@@ -431,7 +431,7 @@ story.append(gap())
 # only, which is why 39 green checks missed a wrong caption).
 story.append(figure("fig_16_3.png",
                     "Figure 16.3 A diagrammatic representation of a nephron showing blood "
-                    "vessels, duct and tubule"))
+                    "vessels, duct and tubule", max_width_cm=13.0))
 
 
 story.append(gap())
@@ -747,7 +747,7 @@ story.append(gap())
 story.append(figure("fig_16_5.png",
                     "Figure 16.5 Reabsorption and secretion of major substances at different "
                     "parts of the nephron (Arrows indicate direction of movement of "
-                    "materials.)"))
+                    "materials.)", max_width_cm=8.8))
 
 
 story.append(gap())
@@ -855,7 +855,7 @@ story.append(b1(
 story.append(gap())
 story.append(figure("fig_16_6.png",
                     "Figure 16.6 Diagrammatic representation of a nephron and vasa recta "
-                    "showing counter current mechanisms"))
+                    "showing counter current mechanisms", max_width_cm=8.8))
 
 
 story.append(gap())
