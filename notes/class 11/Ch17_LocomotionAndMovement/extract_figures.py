@@ -75,6 +75,7 @@ FIGS = [
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     doc = pymupdf.open(SRC)
+    saved = {}
     for fid, pno, rect in FIGS:
         page = doc[pno - 1]
         clip = pymupdf.Rect(*rect) & page.rect
@@ -99,7 +100,22 @@ def main():
         img = ImageOps.autocontrast(img.convert("L"), cutoff=1)
         out = os.path.join(OUT_DIR, f"fig_{fid}.png")
         img.save(out, optimize=True)
+        saved[fid] = img
         print(f"fig_{fid}: p{pno} {rect} {img.size} mode={img.mode} -> {out}")
+
+    # Generate horizontally merged fig_17_9_10.png
+    if "17_9" in saved and "17_10" in saved:
+        img9 = saved["17_9"]
+        img10 = saved["17_10"]
+        gap_px = 60
+        total_w = img9.width + gap_px + img10.width
+        total_h = max(img9.height, img10.height)
+        merged = Image.new("L", (total_w, total_h), 255)
+        merged.paste(img9, (0, 0))
+        merged.paste(img10, (img9.width + gap_px, 0))
+        out_merged = os.path.join(OUT_DIR, "fig_17_9_10.png")
+        merged.save(out_merged, optimize=True)
+        print(f"fig_17_9_10 (merged 17.9 + 17.10): {merged.size} mode={merged.mode} -> {out_merged}")
 
 if __name__ == "__main__":
     sys.exit(main())
