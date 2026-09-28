@@ -77,9 +77,12 @@ while _probe != os.path.dirname(_probe):
 from neet_template import (  # noqa: E402
     STYLES,
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
+    GRID_LINE,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, Table, TableStyle, Image  # noqa: E402
+from reportlab.lib.units import cm  # noqa: E402
+from PIL import Image as PILImage  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch19_ChemicalCoordinationAndIntegration.pdf")
@@ -94,6 +97,41 @@ CAPP = "Ca<super>++</super>"
 def figure(asset_name, caption_text, max_width_cm=15.9):
     """Chapter-local binding of the shared figure() helper (SS0.6)."""
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
+
+
+def figure_cell(asset_name, caption_text, max_width_cm=6.2):
+    """Unwrapped figure cell used when two figures share one table row."""
+    path = os.path.join(ASSETS, asset_name)
+    with PILImage.open(path) as im:
+        px_w, px_h = im.size
+        if im.mode != "L":
+            raise RuntimeError(f"FIGURE NOT MONOCHROME: {asset_name}")
+    max_w = max_width_cm * cm
+    natural_w = px_w / 300.0 * 2.54 * cm
+    width = min(max_w, natural_w)
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+    framed = Table([[img]], colWidths=[width + 10])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    framed.hAlign = "CENTER"
+    cell = Table([[framed], [Paragraph(caption_text, STYLES["Caption"])]],
+                 colWidths=[width + 10])
+    cell.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    return cell
 
 
 def body(text):
@@ -439,15 +477,29 @@ story.append(body(
     "the normal rate of hormone synthesis</b> in the thyroid."))
 
 story.append(gap())
-story.append(figure("fig_19_3a.png",
-                    "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
-                    "(a) Ventral side", max_width_cm=5.3))
-
+figures_19_3a_19_3b = Table([[
+    figure_cell("fig_19_3a.png",
+                "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
+                "(a) Ventral side", max_width_cm=6.2),
+    figure_cell("fig_19_3b.png",
+                "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
+                "(b) Dorsal side", max_width_cm=6.2),
+]], colWidths=[8.75 * cm, 8.75 * cm])
+figures_19_3a_19_3b.setStyle(TableStyle([
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 0),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+    ("TOPPADDING", (0, 0), (-1, -1), 0),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+]))
+figures_19_3a_19_3b.hAlign = "CENTER"
+story.append(figures_19_3a_19_3b)
 
 story.append(gap())
-story.append(figure("fig_19_3b.png",
-                    "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
-                    "(b) Dorsal side", max_width_cm=5.3))
+story.append(note(
+    "<b>Reading Figure 19.3:</b> On the ventral side (a), the <b>vocal cord</b>, <b>thyroid</b>, "
+    "and <b>trachea</b> are shown. On the dorsal side (b), the four <b>parathyroid glands</b> "
+    "are embedded on the posterior surface of the thyroid lobes."))
 
 
 story.append(gap())
@@ -961,6 +1013,13 @@ story.append(gap())
 story.append(figure("fig_19_5b.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
                     "(b) Steroid hormone", max_width_cm=10.9))
+
+story.append(gap())
+story.append(note(
+    "<b>Reading Figure 19.5 (b):</b> The steroid hormone (e.g., estrogen) enters through the "
+    "<b>uterine cell membrane</b> into the <b>nucleus</b>, forming a <b>hormone-receptor complex</b> "
+    "with intracellular receptors that interacts with the <b>genome</b> to produce <b>mRNA</b> "
+    "and <b>proteins</b>, resulting in <b>physiological responses (tissue growth and differentiation)</b>."))
 
 
 
