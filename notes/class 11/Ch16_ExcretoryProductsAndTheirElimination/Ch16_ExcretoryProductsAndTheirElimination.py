@@ -76,12 +76,12 @@ CO2 = "CO<sub>2</sub>"
 MOSM = "mOsmolL<super>-1</super>"
 
 
-def figure(asset_name, caption_text, max_width_cm=10.5):
+def figure(asset_name, caption_text, max_width_cm=8.0):
     """Chapter-local binding of the shared figure() helper (SS0.6)."""
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
 
-def figure_cell(asset_name, caption_text, max_width_cm=7.7):
+def figure_cell(asset_name, caption_text, max_width_cm=6.2):
     """Unwrapped figure cell used when two figures share one table row."""
     path = os.path.join(ASSETS, asset_name)
     with PILImage.open(path) as im:
@@ -431,7 +431,7 @@ story.append(gap())
 # only, which is why 39 green checks missed a wrong caption).
 story.append(figure("fig_16_3.png",
                     "Figure 16.3 A diagrammatic representation of a nephron showing blood "
-                    "vessels, duct and tubule", max_width_cm=13.0))
+                    "vessels, duct and tubule", max_width_cm=9.5))
 
 
 story.append(gap())
@@ -747,7 +747,7 @@ story.append(gap())
 story.append(figure("fig_16_5.png",
                     "Figure 16.5 Reabsorption and secretion of major substances at different "
                     "parts of the nephron (Arrows indicate direction of movement of "
-                    "materials.)", max_width_cm=8.8))
+                    "materials.)", max_width_cm=7.5))
 
 
 story.append(gap())
@@ -855,7 +855,7 @@ story.append(b1(
 story.append(gap())
 story.append(figure("fig_16_6.png",
                     "Figure 16.6 Diagrammatic representation of a nephron and vasa recta "
-                    "showing counter current mechanisms", max_width_cm=8.8))
+                    "showing counter current mechanisms", max_width_cm=7.5))
 
 
 story.append(gap())
