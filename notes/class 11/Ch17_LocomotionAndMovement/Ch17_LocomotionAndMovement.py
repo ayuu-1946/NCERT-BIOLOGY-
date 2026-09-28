@@ -276,49 +276,6 @@ def data_table(rows, col_widths=None, font_size=9.5):
     return t
 
 def figure(asset_name, caption_text, max_width_cm=15.9):
-    # Same source assets and grayscale discipline as the classic template;
-    # target layout removes the visibly bulky frame/padding.
-    path = os.path.join(ASSETS, asset_name)
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"MISSING FIGURE ASSET: {path}")
-    img = None
-    try:
-        from PIL import Image as PILImage
-        with PILImage.open(path) as im:
-            px_w, px_h = im.size
-            if im.mode != "L":
-                raise RuntimeError(
-                    f"FIGURE NOT MONOCHROME: {asset_name} has mode {im.mode!r}"
-                )
-    except Exception as exc:
-        if isinstance(exc, RuntimeError):
-            raise
-        raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
-    max_w = min(max_width_cm * cm, FRAME_WIDTH)
-    natural_w = px_w / 300.0 * 2.54 * cm
-    width = min(max_w, natural_w)
-    height = width * px_h / px_w
-    img = Image(path, width=width, height=height)
-    return KeepTogether([
-        Spacer(1, 4),
-        Table([[img]], colWidths=[width], style=[
-            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-            ("LEFTPADDING", (0, 0), (-1, -1), 0),
-            ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-            ("TOPPADDING", (0, 0), (-1, -1), 0),
-            ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-        ]),
-        Paragraph(caption_text, TARGET_CAPTION),
-    ])
-
-def body(text):
-    return Paragraph(text, TARGET_BODY)
-
-def gap(h=2.5):
-    return Spacer(1, h)
-
-def figure(asset_name, caption_text, max_width_cm=15.9):
     """Chapter-local binding of the shared figure() helper (SS0.6)."""
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
