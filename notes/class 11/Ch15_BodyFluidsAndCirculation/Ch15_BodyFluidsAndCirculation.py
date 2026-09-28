@@ -533,7 +533,8 @@ story.append(b1(
     f"Our heart normally beats <b>70-75 times in a minute</b> (average <b>72 beats "
     f"{PER_MIN}</b>)."))
 
-story.append(figure("fig_15_2.png", "Figure 15.2 Section of a human heart"))
+story.append(figure("fig_15_2.png", "Figure 15.2 Section of a human heart",
+                    max_width_cm=10.5))
 
 # ======================================================================================
 # ---- 15.3.2 Cardiac Cycle ---- F145-F171 (heading F145, opener F146, folded S-U F166)
