@@ -64,6 +64,7 @@ from reportlab.lib.colors import HexColor, white  # noqa: E402
 from reportlab.lib.enums import TA_LEFT, TA_CENTER  # noqa: E402
 from reportlab.lib.styles import ParagraphStyle  # noqa: E402
 from reportlab.pdfbase.pdfmetrics import stringWidth  # noqa: E402
+from reportlab.lib.units import cm  # noqa: E402
 from reportlab.platypus import (  # noqa: E402
     Paragraph, Spacer, KeepTogether, Table, TableStyle, Image, HRFlowable,
     CondPageBreak, PageBreak,
@@ -337,6 +338,58 @@ def b2(text):
 def gap(h=4):
     return Spacer(1, h)
 
+
+
+# Re-apply the chapter-local target wrappers after the legacy helper bindings above.
+# This keeps the existing story skeleton intact while making the emitted PDF match the
+# supplied reference geometry/typography.
+def figure(asset_name, caption_text, max_width_cm=15.9):
+    path = os.path.join(ASSETS, asset_name)
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"MISSING FIGURE ASSET: {path}")
+    from PIL import Image as PILImage
+    try:
+        with PILImage.open(path) as im:
+            px_w, px_h = im.size
+            if im.mode != "L":
+                raise RuntimeError(
+                    f"FIGURE NOT MONOCHROME: {asset_name} has mode {im.mode!r}"
+                )
+    except RuntimeError:
+        raise
+    except Exception as exc:
+        raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
+    max_w = min(max_width_cm * cm, FRAME_WIDTH)
+    natural_w = px_w / 300.0 * 2.54 * cm
+    width = min(max_w, natural_w)
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+    fig_tbl = Table([[img]], colWidths=[width])
+    fig_tbl.setStyle(TableStyle([
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    return KeepTogether([
+        Spacer(1, 4),
+        fig_tbl,
+        Paragraph(caption_text, TARGET_CAPTION),
+    ])
+
+def body(text):
+    return Paragraph(text, TARGET_BODY)
+
+def b1(text):
+    return Paragraph("&bull; " + text, TARGET_BULLET)
+
+def b2(text):
+    return Paragraph("- " + text, TARGET_BULLET)
+
+def gap(h=2.5):
+    return Spacer(1, h)
 
 story = []
 
