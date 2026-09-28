@@ -438,8 +438,7 @@ Each was inserted **in Content Order at its own body section**, not appended at 
 |---|---|---|---|---:|---|---|
 | Fig 19.1 | Figure 19.1 Location of endocrine glands | Location of endocrine glands | `assets/fig_19_1.png` | 2 | yes | yes |
 | Fig 19.2 | Figure 19.2 Diagrammatic representation of pituitary and its relationship with hypothalamus | Pituitary and hypothalamus | `assets/fig_19_2.png` | 3 | yes | yes |
-| Fig 19.3 (a) | Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid (a) Ventral side | Thyroid/parathyroid, ventral | `assets/fig_19_3a.png` | 4 | yes | yes |
-| Fig 19.3 (b) | Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid (b) Dorsal side | Thyroid/parathyroid, dorsal | `assets/fig_19_3b.png` | 4 | yes | yes |
+| Fig 19.3 | Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid (a) Ventral side (b) Dorsal side | Thyroid/parathyroid, ventral and dorsal | `assets/fig_19_3.png` | 4 | yes | yes |
 | Fig 19.4 (a)/(b) | Figure 19.4  Diagrammatic representation of : (a) Adrenal gland above kidney (b) Section showing two parts of adrenal gland | Adrenal gland and section | `assets/fig_19_4.png` | 6 | yes | yes |
 | Fig 19.5 (a) | Figure 19.5 Diagramatic representation of the mechanism of hormone action : (a) Protein hormone | Mechanism, protein hormone | `assets/fig_19_5a.png` | 10 | yes | yes |
 | Fig 19.5 (b) | Figure 19.5 Diagramatic representation of the mechanism of hormone action : (b) Steroid hormone | Mechanism, steroid hormone | `assets/fig_19_5b.png` | 11 | yes | yes |

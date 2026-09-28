@@ -1457,7 +1457,13 @@ story.append(b1(
 # ---- BUILD ---- (SS0.6: build_pdf owns page furniture)
 # ======================================================================================
 
-sys.exit(build_pdf(
-    OUT_PDF, story,
-    title="Class 11 Chapter 16 - Excretory Products and their Elimination (NEET notes)",
-    subject="NEET Biology"))
+def main():
+    return build_pdf(
+        OUT_PDF, story,
+        title="Class 11 Chapter 16 - Excretory Products and their Elimination (NEET notes)",
+        subject="NEET Biology")
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+

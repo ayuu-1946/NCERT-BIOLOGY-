@@ -439,15 +439,15 @@ story.append(body(
     "the normal rate of hormone synthesis</b> in the thyroid."))
 
 story.append(gap())
-story.append(figure("fig_19_3a.png",
+story.append(figure("fig_19_3.png",
                     "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
-                    "(a) Ventral side", max_width_cm=5.3))
-
+                    "(a) Ventral side (b) Dorsal side", max_width_cm=13.0))
 
 story.append(gap())
-story.append(figure("fig_19_3b.png",
-                    "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
-                    "(b) Dorsal side", max_width_cm=5.3))
+story.append(note(
+    "<b>Reading Figure 19.3:</b> On the ventral side (a), the <b>vocal cord</b>, <b>thyroid</b>, "
+    "and <b>trachea</b> are shown. On the dorsal side (b), the four <b>parathyroid glands</b> "
+    "are embedded on the posterior surface of the thyroid lobes."))
 
 
 story.append(gap())
@@ -961,6 +961,13 @@ story.append(gap())
 story.append(figure("fig_19_5b.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
                     "(b) Steroid hormone", max_width_cm=10.9))
+
+story.append(gap())
+story.append(note(
+    "<b>Reading Figure 19.5 (b):</b> The steroid hormone (e.g., estrogen) enters through the "
+    "<b>uterine cell membrane</b> into the <b>nucleus</b>, forming a <b>hormone-receptor complex</b> "
+    "with intracellular receptors that interacts with the <b>genome</b> to produce <b>mRNA</b> "
+    "and <b>proteins</b>, resulting in <b>physiological responses (tissue growth and differentiation)</b>."))
 
 
 
