@@ -76,7 +76,7 @@ CO2 = "CO<sub>2</sub>"
 MOSM = "mOsmolL<super>-1</super>"
 
 
-def figure(asset_name, caption_text, max_width_cm=15.9):
+def figure(asset_name, caption_text, max_width_cm=10.5):
     """Chapter-local binding of the shared figure() helper (SS0.6)."""
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
