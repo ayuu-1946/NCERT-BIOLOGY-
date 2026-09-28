@@ -896,7 +896,6 @@ story.append(gap())
 # ======================================================================================
 # ---- 17.5 DISORDERS OF MUSCULAR AND SKELETAL SYSTEM ---- F165-F171 (heading F165)
 # ======================================================================================
-story.append(PageBreak())
 story.append(heading("17.5", "Disorders of Muscular and Skeletal System", level=1))
 
 story.append(data_table([
