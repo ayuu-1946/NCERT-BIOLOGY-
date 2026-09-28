@@ -318,7 +318,7 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
         raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
     max_w = min(max_width_cm * cm, FRAME_WIDTH)
     if asset_name in {"fig_17_5.png", "fig_17_9.png", "fig_17_10.png"}:
-        max_w = min(max_w, 5.0 * cm)
+        max_w = min(max_w, 4.0 * cm)
     natural_w = px_w / 300.0 * 2.54 * cm
     width = min(max_w, natural_w)
     height = width * px_h / px_w
@@ -919,15 +919,6 @@ story.append(data_table([
 ], col_widths=[22, 78]))
 
 story.append(gap())
-story.append(note(
-    "Chapter map recap: <b>movement</b> (amoeboid / ciliary / muscular) leads to "
-    "<b>muscle</b> (skeletal / visceral / cardiac), whose contractile unit is the "
-    "<b>sarcomere</b>; contraction runs by the <b>sliding filament theory</b>; muscles act "
-    "on the <b>skeletal system</b> (206 bones: axial + appendicular) through <b>joints</b>. "
-    "Disorders can strike either the muscular side (myasthenia gravis, muscular dystrophy, "
-    "tetany) or the skeletal/joint side (arthritis, osteoporosis, gout)."))
-
-
 story.append(PageBreak())
 
 # ======================================================================================
