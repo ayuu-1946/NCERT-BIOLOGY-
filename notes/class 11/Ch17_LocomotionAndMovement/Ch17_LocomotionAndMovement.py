@@ -108,11 +108,11 @@ TARGET_TITLE = ParagraphStyle(
 )
 TARGET_BODY = ParagraphStyle(
     "TargetBody", parent=STYLES["Body"], fontName="Times-Roman",
-    fontSize=10.5, leading=13.2, spaceBefore=0, spaceAfter=2.5,
+    fontSize=9.6, leading=11.25, spaceBefore=0, spaceAfter=1.4,
 )
 TARGET_BULLET = ParagraphStyle(
-    "TargetBullet", parent=TARGET_BODY, leftIndent=0.52 * cm,
-    firstLineIndent=-0.34 * cm, spaceBefore=0, spaceAfter=1.8,
+    "TargetBullet", parent=TARGET_BODY, leftIndent=0.48 * cm,
+    firstLineIndent=-0.30 * cm, spaceBefore=0, spaceAfter=0.8,
 )
 TARGET_H1 = ParagraphStyle(
     "TargetH1", parent=STYLES["Body"], fontName="Times-Bold",
@@ -120,28 +120,28 @@ TARGET_H1 = ParagraphStyle(
 )
 TARGET_H2 = ParagraphStyle(
     "TargetH2", parent=STYLES["Body"], fontName="Times-Bold",
-    fontSize=11.5, leading=13.2, textColor=INK, spaceBefore=0, spaceAfter=0,
+    fontSize=10.8, leading=12.0, textColor=INK, spaceBefore=0, spaceAfter=0,
 )
 TARGET_H3 = ParagraphStyle(
     "TargetH3", parent=STYLES["Body"], fontName="Times-Bold",
-    fontSize=10.5, leading=12.2, textColor=INK, spaceBefore=0, spaceAfter=0,
+    fontSize=10.0, leading=11.0, textColor=INK, spaceBefore=0, spaceAfter=0,
 )
 TARGET_NOTE = ParagraphStyle(
     "TargetNote", parent=STYLES["NoteBox"], fontName="Times-Roman",
-    fontSize=10.0, leading=12.2, textColor=INK, spaceBefore=0, spaceAfter=0,
+    fontSize=9.1, leading=10.5, textColor=INK, spaceBefore=0, spaceAfter=0,
 )
 TARGET_CAPTION = ParagraphStyle(
     "TargetCaption", parent=STYLES["Caption"], fontName="Times-Italic",
-    fontSize=9.0, leading=10.8, textColor=HexColor("#6B7280"),
+    fontSize=8.3, leading=9.5, textColor=HexColor("#6B7280"),
     alignment=TA_CENTER, spaceBefore=2, spaceAfter=6,
 )
 TARGET_TABLE_CELL = ParagraphStyle(
     "TargetTableCell", parent=STYLES["TableCell"], fontName="Times-Roman",
-    fontSize=9.5, leading=11.2, textColor=INK,
+    fontSize=8.5, leading=9.8, textColor=INK,
 )
 TARGET_TABLE_HEAD = ParagraphStyle(
     "TargetTableHead", parent=STYLES["TableHead"], fontName="Times-Bold",
-    fontSize=9.5, leading=11.2, textColor=white, alignment=TA_CENTER,
+    fontSize=8.5, leading=9.8, textColor=white, alignment=TA_CENTER,
 )
 
 def title_block(title_text: str, motif_size: float = 42):
@@ -215,8 +215,8 @@ def process_flow(steps, cyclic: bool = False):
         ("ALIGN", (0, 0), (0, -1), "CENTER"),
         ("LEFTPADDING", (0, 0), (0, -1), 2),
         ("RIGHTPADDING", (0, 0), (0, -1), 2),
-        ("TOPPADDING", (0, 0), (-1, -1), 2.2),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 2.2),
+        ("TOPPADDING", (0, 0), (-1, -1), 1.4),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 1.4),
         ("LEFTPADDING", (1, 0), (1, -1), 6),
         ("RIGHTPADDING", (1, 0), (1, -1), 4),
     ]
