@@ -317,6 +317,8 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
     except Exception as exc:
         raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
     max_w = min(max_width_cm * cm, FRAME_WIDTH)
+    if asset_name in {"fig_17_5.png", "fig_17_9.png", "fig_17_10.png"}:
+        max_w = min(max_w, 10.0 * cm)
     natural_w = px_w / 300.0 * 2.54 * cm
     width = min(max_w, natural_w)
     height = width * px_h / px_w
