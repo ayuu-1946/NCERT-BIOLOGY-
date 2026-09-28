@@ -51,6 +51,36 @@ from reportlab.platypus import Paragraph  # noqa: E402
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch15_BodyFluidsAndCirculation.pdf")
 
+# Moderate whole-document compaction: preserve readable table typography while reducing
+# repeated leading, heading, caption, note-box, and table padding throughout the chapter.
+for _style_name, _leading, _space_after in (
+    ("Body", 13.0, 1.5),
+    ("Bullet1", 13.0, 0.5),
+    ("Bullet2", 12.7, 0.5),
+    ("Bullet3", 12.4, 0.5),
+):
+    _compact_style = STYLES[_style_name].clone(
+        name=f"{_style_name}-Ch15-global", leading=_leading, spaceAfter=_space_after)
+    STYLES[_style_name] = _compact_style
+for _style_name, _space_after, _border_padding in (
+    ("H1", 3.5, 2),
+    ("H2", 3.0, 1.5),
+    ("H3", 2.5, 1.5),
+):
+    _compact_style = STYLES[_style_name].clone(
+        name=f"{_style_name}-Ch15-global", spaceAfter=_space_after,
+        borderPadding=_border_padding)
+    STYLES[_style_name] = _compact_style
+STYLES["Caption"] = STYLES["Caption"].clone(
+    name="Caption-Ch15-global", leading=11.5, spaceBefore=2, spaceAfter=4)
+STYLES["NoteBox"] = STYLES["NoteBox"].clone(
+    name="NoteBox-Ch15-global", leading=12.5, borderPadding=4)
+STYLES["TableCell"] = STYLES["TableCell"].clone(
+    name="TableCell-Ch15-global", fontSize=9.0, leading=10.5)
+STYLES["TableHead"] = STYLES["TableHead"].clone(
+    name="TableHead-Ch15-global", fontSize=9.0, leading=10.5)
+TABLE_PADDING.update(top=2, bottom=2, left=3, right=3)
+
 # Inline chemistry / unit shorthands (check 5: tags, never Unicode sub/superscripts)
 O2 = "O<sub>2</sub>"
 CO2 = "CO<sub>2</sub>"
@@ -662,36 +692,6 @@ story.append(b1(
 story.append(b1(
     "A special <b>coronary system</b> of blood vessels is present in our body <b>exclusively "
     "for the circulation of blood to and from the cardiac musculature</b>."))
-
-# Compact only the final three pages: preserve the chapter's normal typography above while
-# reducing avoidable leading, heading padding, caption spacing, and table padding below.
-for _style_name, _leading, _space_after in (
-    ("Body", 13.0, 1.5),
-    ("Bullet1", 13.0, 0.5),
-    ("Bullet2", 12.7, 0.5),
-    ("Bullet3", 12.4, 0.5),
-):
-    _compact_style = STYLES[_style_name].clone(
-        name=f"{_style_name}-Ch15-final", leading=_leading, spaceAfter=_space_after)
-    STYLES[_style_name] = _compact_style
-for _style_name, _space_after, _border_padding in (
-    ("H1", 3.5, 2),
-    ("H2", 3.0, 1.5),
-    ("H3", 2.5, 1.5),
-):
-    _compact_style = STYLES[_style_name].clone(
-        name=f"{_style_name}-Ch15-final", spaceAfter=_space_after,
-        borderPadding=_border_padding)
-    STYLES[_style_name] = _compact_style
-STYLES["Caption"] = STYLES["Caption"].clone(
-    name="Caption-Ch15-final", leading=11.5, spaceBefore=2, spaceAfter=4)
-STYLES["NoteBox"] = STYLES["NoteBox"].clone(
-    name="NoteBox-Ch15-final", leading=12.5, borderPadding=4)
-STYLES["TableCell"] = STYLES["TableCell"].clone(
-    name="TableCell-Ch15-final", fontSize=8.2, leading=9.2)
-STYLES["TableHead"] = STYLES["TableHead"].clone(
-    name="TableHead-Ch15-final", fontSize=8.2, leading=9.2)
-TABLE_PADDING.update(top=1.5, bottom=1.5, left=3, right=3)
 
 story.append(figure("fig_15_4.png",
                     "Figure 15.4 Schematic plan of blood circulation in human"))
