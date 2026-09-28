@@ -318,7 +318,7 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
         raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
     max_w = min(max_width_cm * cm, FRAME_WIDTH)
     if asset_name in {"fig_17_5.png", "fig_17_9.png", "fig_17_10.png"}:
-        max_w = min(max_w, 10.0 * cm)
+        max_w = min(max_w, 7.5 * cm)
     natural_w = px_w / 300.0 * 2.54 * cm
     width = min(max_w, natural_w)
     height = width * px_h / px_w
@@ -927,70 +927,6 @@ story.append(note(
     "Disorders can strike either the muscular side (myasthenia gravis, muscular dystrophy, "
     "tetany) or the skeletal/joint side (arthritis, osteoporosis, gout)."))
 
-
-# ======================================================================================
-# ---- SUMMARY (Quick Recap, SS5 item 8) ---- F172 (heading F172)
-# [VERIFICATION FIX] D1: the chapter closed on 17.5 with no Quick Recap at all, although
-# inventory row F172 (the NCERT SUMMARY heading) was ticked. Written as a denser rewrite of
-# the NCERT summary (textbook pp. 227-228), not a copy. The recap also carries the summary's
-# "fins ... wings" movement forms (D4), which the body prose never names.
-# ======================================================================================
-story.append(heading("S", "SUMMARY", level=1))
-
-story.append(body(
-    "<b>Movement is an essential feature of all living beings.</b> <b>Protoplasmic streaming, "
-    "ciliary movements</b>, and the <b>movements of fins, limbs, wings</b>, etc., are some of "
-    "the forms exhibited by animals. A <b>voluntary movement that causes the animal to change "
-    "its place is locomotion</b>. Animals move <b>generally</b> in search of food, shelter, "
-    "mate, breeding ground, better climate, or to protect themselves."))
-
-story.append(gap())
-story.append(body(
-    "The cells of the human body exhibit <b>amoeboid, ciliary and muscular</b> movements. "
-    "Locomotion and many other movements require <b>coordinated muscular activity</b>. "
-    "<b>Three types of muscles</b> are present in our body: <b>skeletal</b> muscles are "
-    "attached to skeletal elements and are <b>striated and voluntary</b>; <b>visceral</b> "
-    "muscles, in the inner walls of visceral organs, are <b>nonstriated and involuntary</b>; "
-    "<b>cardiac</b> muscles, the muscles of the heart, are <b>striated, branched and "
-    "involuntary</b>. Muscles possess <b>excitability, contractility, extensibility and "
-    "elasticity</b>, and contribute <b>40-50 per cent</b> of an adult's body weight."))
-
-story.append(gap())
-story.append(body(
-    "The <b>muscle fibre is the anatomical unit</b> of muscle; each fibre holds many "
-    "parallelly arranged <b>myofibrils</b>, and each myofibril many serially arranged "
-    "<b>sarcomeres</b>, which are the <b>functional units</b>. Each sarcomere has a central "
-    "<b>'A' band</b> of thick <b>myosin</b> filaments and <b>two half 'I' bands</b> of thin "
-    "<b>actin</b> filaments on either side, marked by <b>'Z' lines</b>; the <b>'H' zone</b> is "
-    "the part of the thick filament not overlapped by thin filaments. Actin and myosin are "
-    "<b>polymerised proteins with contractility</b>. On a resting actin filament the active "
-    "sites for myosin are <b>masked by troponin</b>. The <b>myosin head contains ATPase</b> "
-    "and carries <b>ATP binding sites</b> and <b>active sites for actin</b>."))
-
-story.append(gap())
-story.append(body(
-    "A <b>motor neuron</b> carries the signal to the muscle fibre, generating an <b>action "
-    f"potential</b> in it; this releases <b>{CAPP}</b> from the <b>sarcoplasmic reticulum</b>. "
-    f"{CAPP} activates actin, which binds the <b>myosin head</b> to form a <b>cross bridge</b>. "
-    "The cross bridges <b>pull the actin filaments</b>, sliding them over the myosin filaments "
-    f"- i.e. <b>contraction</b>, in which the <b>'I' bands shorten while the 'A' bands keep "
-    f"their length</b>. {CAPP} is then <b>returned to the sarcoplasmic reticulum</b>, actin is "
-    "inactivated, the cross bridges are broken and the muscle <b>relaxes</b>. Repeated "
-    "stimulation leads to <b>fatigue</b> (lactic acid from anaerobic glycogen breakdown). "
-    "Muscles are classified as <b>Red and White fibres</b> based primarily on the amount of "
-    "the red-coloured <b>myoglobin</b> pigment in them."))
-
-story.append(gap())
-story.append(body(
-    "<b>Bones and cartilages</b> constitute our skeletal system (<b>206 bones</b>), divisible "
-    "into <b>axial</b> and <b>appendicular</b>. <b>Skull, vertebral column, ribs and "
-    "sternum</b> constitute the axial skeleton (<b>80 bones</b>); <b>limb bones and girdles</b> "
-    "form the appendicular skeleton (<b>30 bones per limb</b>). <b>Three types of joints</b> "
-    "are formed between bones, or between bone and cartilage - <b>fibrous, cartilaginous and "
-    "synovial</b>. <b>Synovial joints allow considerable movement</b> and therefore play a "
-    "significant role in locomotion. Disorders may strike the muscular side (<b>myasthenia "
-    "gravis, muscular dystrophy, tetany</b>) or the skeletal/joint side (<b>arthritis, "
-    "osteoporosis, gout</b>)."))
 
 story.append(PageBreak())
 
