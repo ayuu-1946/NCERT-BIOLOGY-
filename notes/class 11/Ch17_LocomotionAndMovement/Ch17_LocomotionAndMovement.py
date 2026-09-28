@@ -252,9 +252,21 @@ def memory_aid(text: str):
     return _target_box(text, "MEMORY AID")
 
 def data_table(rows, col_widths=None, font_size=9.5):
-    body = [[Paragraph(c, TARGET_TABLE_HEAD) for c in rows[0]]]
+    compact_disorder = len(rows) == 7 and len(rows[0]) == 2
+    cell_style = TARGET_TABLE_CELL
+    head_style = TARGET_TABLE_HEAD
+    if compact_disorder:
+        cell_style = ParagraphStyle(
+            "TargetDisorderCell", parent=TARGET_TABLE_CELL,
+            fontSize=6.7, leading=7.5,
+        )
+        head_style = ParagraphStyle(
+            "TargetDisorderHead", parent=TARGET_TABLE_HEAD,
+            fontSize=7.0, leading=7.8,
+        )
+    body = [[Paragraph(c, head_style) for c in rows[0]]]
     for r in rows[1:]:
-        body.append([Paragraph(c, TARGET_TABLE_CELL) for c in r])
+        body.append([Paragraph(c, cell_style) for c in r])
     if col_widths:
         total = sum(col_widths)
         col_widths = [w / total * FRAME_WIDTH for w in col_widths]
