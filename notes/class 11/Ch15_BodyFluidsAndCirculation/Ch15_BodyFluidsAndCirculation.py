@@ -820,44 +820,7 @@ story.append(b1(
     "hormonal mechanisms</b>."))
 
 # ======================================================================================
-# ---- Exercises (SS5 item 9) ---- F227-F241 (heading F227, questions F228-F241)
-# ======================================================================================
-story.append(heading("Ex", "Exercises - and Where Each Is Answered", 1, has_table=True))
-story.append(data_table([
-    ["#", "Exercise question", "Answered in"],
-    ["1", "Name the components of the formed elements in the blood and mention one major "
-          "function of each of them.", "15.1.2 (RBC, WBC table, platelets) + Figure 15.1"],
-    ["2", "What is the importance of plasma proteins?",
-     "15.1.1 - fibrinogen (clotting), globulins (defense), albumins (osmotic balance)"],
-    ["3", "Match Column I with Column II. Column I: (a) Eosinophils (b) RBC (c) AB Group "
-          "(d) Platelets (e) Systole. Column II: (i) Coagulation (ii) Universal Recipient "
-          "(iii) Resist Infections (iv) Contraction of Heart (v) Gas transport",
-     "(a)-(iii) 15.1.2b; (b)-(v) 15.1.2a; (c)-(ii) 15.1.3.1; (d)-(i) 15.1.2c; "
-     "(e)-(iv) 15.3.2"],
-    ["4", "Why do we consider blood as a connective tissue?",
-     "15.1 - fluid matrix (plasma) plus formed elements, mesodermal in origin"],
-    ["5", "What is the difference between lymph and blood?",
-     "15.2 - blood versus lymph table"],
-    ["6", "What is meant by double circulation? What is its significance?",
-     "15.4 - pulmonary and systemic pathways; significance stated in the NOTE"],
-    ["7", "Write the differences between: (a) Blood and Lymph (b) Open and Closed system of "
-          "circulation (c) Systole and Diastole (d) P-wave and T-wave",
-     "(a) 15.2 table; (b) 15.3; (c) 15.3.2; (d) 15.3.3"],
-    ["8", "Describe the evolutionary change in the pattern of heart among the vertebrates.",
-     "15.3a - the 2 / 3 / 4-chambered heart table"],
-    ["9", "Why do we call our heart myogenic?",
-     "15.5 - auto regulated by the nodal tissue itself"],
-    ["10", "Sino-atrial node is called the pacemaker of our heart. Why?",
-     "15.3.1b - SAN generates the maximum action potentials and sets the rhythm"],
-    ["11", "What is the significance of atrio-ventricular node and atrio-ventricular bundle "
-           "in the functioning of heart?",
-     "15.3.1b + 15.3.2 - they conduct the action potential to the ventricular musculature"],
-    ["12", "Define a cardiac cycle and the cardiac output.", "15.3.2 and 15.3.2a"],
-    ["13", "Explain heart sounds.", "15.3.2b - lub and dub"],
-    ["14", "Draw a standard ECG and explain the different segments in it.",
-     "15.3.3 + Figure 15.3 - P wave, QRS complex, T wave"],
-], col_widths=[0.5, 5.6, 4.6]))
-
+# ---- Exercises section intentionally omitted ----
 if __name__ == "__main__":
     sys.exit(build_pdf(
         OUT_PDF, story,
