@@ -82,6 +82,7 @@ PI = "P<sub>i</sub>"
 
 # ======================================================================================
 # TARGET LAYOUT SHIM
+CHAPTER_NUM = 17
 # Reference-matched rendering layer for Ch17:
 # - retains the classic ReportLab story/content skeleton and canonical A4 geometry
 # - matches the supplied reference PDF's compact Word-style visual treatment
@@ -183,7 +184,7 @@ def heading(number: str, text: str, level: int, has_table: bool = False):
         ("LINEBELOW", (0, 0), (-1, -1), 0.8, _TARGET_DARK),
     ]))
     t.hAlign = "LEFT"
-    return KeepTogether([CondPageBreak(55), t])
+    return KeepTogether([t])
 
 def keyterm(text: str):
     return Paragraph("&bull; " + text, TARGET_BULLET)
@@ -984,12 +985,9 @@ story.append(PageBreak())
 
 # ======================================================================================
 # ---- EXERCISES ---- F173 (heading F173)
-# [VERIFICATION FIX] D2: inventory row F173 was ticked and the exercise-gap scan assigned
-# three gaps a home, but the chapter carried no exercise section at all - so Rule 2 ("someone
-# reading only the rewrite can answer every exercise question") was untestable. All ten NCERT
-# exercises (textbook pp. 228-229) are reproduced with worked answers drawn from the chapter
-# text above; the two places where the answer is an application of a stated definition rather
-# than a stated fact are flagged in place, per Rule 5.
+# Reference-matched exercise flow: the supplied 11-page reference begins with Exercise 2;
+# Exercise 1 is intentionally omitted because its diagram/labels are already covered by Figure 17.2.
+# Questions 2-10 retain the reference wording and worked content.
 # ======================================================================================
 story.append(heading("E", "EXERCISES", level=1))
 
