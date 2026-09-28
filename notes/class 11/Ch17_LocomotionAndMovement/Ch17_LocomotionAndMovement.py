@@ -46,10 +46,30 @@ while _probe != os.path.dirname(_probe):
 
 from neet_template import (  # noqa: E402
     STYLES,
-    heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
+    FRAME_WIDTH,
+    heading as _classic_heading,
+    keyterm as _classic_keyterm,
+    process_flow as _classic_process_flow,
+    note as _classic_note,
+    memory_aid as _classic_memory_aid,
+    data_table as _classic_data_table,
+    title_block as _classic_title_block,
+    build_pdf,
+    DARK_GREY,
+    GRID_LINE,
+    INK,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.lib.colors import HexColor, white  # noqa: E402
+from reportlab.lib.enums import TA_LEFT, TA_CENTER  # noqa: E402
+from reportlab.lib.styles import ParagraphStyle  # noqa: E402
+from reportlab.pdfbase.pdfmetrics import stringWidth  # noqa: E402
+from reportlab.platypus import (  # noqa: E402
+    Paragraph, Spacer, KeepTogether, Table, TableStyle, Image, HRFlowable,
+    CondPageBreak, PageBreak,
+)
+from reportlab.graphics.shapes import Drawing, Rect, String  # noqa: E402
+
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch17_LocomotionAndMovement.pdf")
@@ -58,6 +78,243 @@ OUT_PDF = os.path.join(HERE, "Ch17_LocomotionAndMovement.pdf")
 CAPP = "Ca<super>++</super>"
 PI = "P<sub>i</sub>"
 
+
+
+# ======================================================================================
+# TARGET LAYOUT SHIM
+# Reference-matched rendering layer for Ch17:
+# - retains the classic ReportLab story/content skeleton and canonical A4 geometry
+# - matches the supplied reference PDF's compact Word-style visual treatment
+# - does NOT modify the repo-level frozen neet_template.py
+# ======================================================================================
+
+_TARGET_DARK = HexColor("#1F2937")
+_TARGET_GRID = HexColor("#D1D5DB")
+_TARGET_ALT = HexColor("#F3F4F6")
+_TARGET_BOX = HexColor("#F8F9FA")
+_TARGET_GREY = HexColor("#6B7280")
+
+TARGET_CHAPTER = ParagraphStyle(
+    "TargetChapter", parent=STYLES["Body"], fontName="Times-Bold",
+    fontSize=11, leading=13, textColor=_TARGET_GREY,
+    leftIndent=0, spaceBefore=0, spaceAfter=1,
+)
+TARGET_TITLE = ParagraphStyle(
+    "TargetTitle", parent=STYLES["Title"], fontName="Times-Bold",
+    fontSize=24, leading=27, alignment=TA_LEFT, textColor=INK,
+    spaceBefore=0, spaceAfter=0,
+)
+TARGET_BODY = ParagraphStyle(
+    "TargetBody", parent=STYLES["Body"], fontName="Times-Roman",
+    fontSize=10.5, leading=13.2, spaceBefore=0, spaceAfter=2.5,
+)
+TARGET_BULLET = ParagraphStyle(
+    "TargetBullet", parent=TARGET_BODY, leftIndent=0.52 * cm,
+    firstLineIndent=-0.34 * cm, spaceBefore=0, spaceAfter=1.8,
+)
+TARGET_H1 = ParagraphStyle(
+    "TargetH1", parent=STYLES["Body"], fontName="Times-Bold",
+    fontSize=13.5, leading=15.5, textColor=INK, spaceBefore=0, spaceAfter=0,
+)
+TARGET_H2 = ParagraphStyle(
+    "TargetH2", parent=STYLES["Body"], fontName="Times-Bold",
+    fontSize=11.5, leading=13.2, textColor=INK, spaceBefore=0, spaceAfter=0,
+)
+TARGET_H3 = ParagraphStyle(
+    "TargetH3", parent=STYLES["Body"], fontName="Times-Bold",
+    fontSize=10.5, leading=12.2, textColor=INK, spaceBefore=0, spaceAfter=0,
+)
+TARGET_NOTE = ParagraphStyle(
+    "TargetNote", parent=STYLES["NoteBox"], fontName="Times-Roman",
+    fontSize=10.0, leading=12.2, textColor=INK, spaceBefore=0, spaceAfter=0,
+)
+TARGET_CAPTION = ParagraphStyle(
+    "TargetCaption", parent=STYLES["Caption"], fontName="Times-Italic",
+    fontSize=9.0, leading=10.8, textColor=HexColor("#6B7280"),
+    alignment=TA_CENTER, spaceBefore=2, spaceAfter=6,
+)
+TARGET_TABLE_CELL = ParagraphStyle(
+    "TargetTableCell", parent=STYLES["TableCell"], fontName="Times-Roman",
+    fontSize=9.5, leading=11.2, textColor=INK,
+)
+TARGET_TABLE_HEAD = ParagraphStyle(
+    "TargetTableHead", parent=STYLES["TableHead"], fontName="Times-Bold",
+    fontSize=9.5, leading=11.2, textColor=white, alignment=TA_CENTER,
+)
+
+def title_block(title_text: str, motif_size: float = 42):
+    chap = Paragraph(f"CHAPTER {CHAPTER_NUM}", TARGET_CHAPTER)
+    title = Paragraph(title_text, TARGET_TITLE)
+    rule = HRFlowable(
+        width="100%", thickness=1.0, color=_TARGET_DARK,
+        spaceBefore=8, spaceAfter=10,
+    )
+    return [chap, title, rule]
+
+def _target_badge(label: str, height: float = 18.0):
+    fs = 9.0 if len(label) <= 5 else 8.4
+    pad = 7.0
+    width = max(1.25 * cm, stringWidth(label, "Times-Bold", fs) + 2 * pad)
+    d = Drawing(width, height)
+    d.add(Rect(0, 0, width, height, fillColor=_TARGET_DARK,
+               strokeColor=_TARGET_DARK, strokeWidth=0))
+    d.add(String(
+        width / 2, (height - fs * 0.66) / 2,
+        label, fontName="Times-Bold", fontSize=fs,
+        fillColor=white, textAnchor="middle",
+    ))
+    return d
+
+def heading(number: str, text: str, level: int, has_table: bool = False):
+    style = {1: TARGET_H1, 2: TARGET_H2, 3: TARGET_H3}[level]
+    badge = _target_badge(number, 18 if level < 3 else 17)
+    t = Table(
+        [[badge, Paragraph(text, style)]],
+        colWidths=[badge.width, FRAME_WIDTH - badge.width],
+    )
+    t.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("LEFTPADDING", (0, 0), (0, 0), 0),
+        ("RIGHTPADDING", (0, 0), (0, 0), 0),
+        ("LEFTPADDING", (1, 0), (1, 0), 7),
+        ("RIGHTPADDING", (1, 0), (1, 0), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 1),
+        ("LINEBELOW", (0, 0), (-1, -1), 0.8, _TARGET_DARK),
+    ]))
+    t.hAlign = "LEFT"
+    return KeepTogether([CondPageBreak(55), t])
+
+def keyterm(text: str):
+    return Paragraph("&bull; " + text, TARGET_BULLET)
+
+def b1(text):
+    return Paragraph("&bull; " + text, TARGET_BULLET)
+
+def b2(text):
+    return Paragraph("- " + text, TARGET_BULLET)
+
+def process_flow(steps, cyclic: bool = False):
+    rows = []
+    for i, step in enumerate(steps, 1):
+        rows.append([
+            Paragraph(str(i), ParagraphStyle(
+                f"StepBadge{i}", parent=TARGET_TABLE_HEAD,
+                fontSize=9.5, leading=10.5, alignment=TA_CENTER,
+            )),
+            Paragraph(step, TARGET_BULLET),
+        ])
+    t = Table(rows, colWidths=[0.72 * cm, FRAME_WIDTH - 0.72 * cm])
+    cmds = [
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("GRID", (0, 0), (-1, -1), 0.4, _TARGET_GRID),
+        ("BACKGROUND", (0, 0), (0, -1), _TARGET_DARK),
+        ("TEXTCOLOR", (0, 0), (0, -1), white),
+        ("ALIGN", (0, 0), (0, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (0, -1), 2),
+        ("RIGHTPADDING", (0, 0), (0, -1), 2),
+        ("TOPPADDING", (0, 0), (-1, -1), 2.2),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 2.2),
+        ("LEFTPADDING", (1, 0), (1, -1), 6),
+        ("RIGHTPADDING", (1, 0), (1, -1), 4),
+    ]
+    for r in range(len(rows)):
+        if r % 2 == 1:
+            cmds.append(("BACKGROUND", (1, r), (1, r), _TARGET_ALT))
+    t.setStyle(TableStyle(cmds))
+    t.hAlign = "LEFT"
+    return t
+
+def _target_box(text: str, kind: str):
+    inner = Paragraph(text, TARGET_NOTE)
+    outer = Table([[inner]], colWidths=[FRAME_WIDTH])
+    style = [
+        ("BACKGROUND", (0, 0), (-1, -1), _TARGET_BOX),
+        ("LEFTPADDING", (0, 0), (-1, -1), 8),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]
+    if kind == "NOTE":
+        style.append(("LINEBEFORE", (0, 0), (0, -1), 2.0, _TARGET_DARK))
+    else:
+        style.append(("BOX", (0, 0), (-1, -1), 0.7, _TARGET_GRID, None, (3, 2)))
+    outer.setStyle(TableStyle(style))
+    outer.hAlign = "LEFT"
+    return outer
+
+def note(text: str):
+    return _target_box(text, "NOTE")
+
+def memory_aid(text: str):
+    return _target_box(text, "MEMORY AID")
+
+def data_table(rows, col_widths=None, font_size=9.5):
+    body = [[Paragraph(c, TARGET_TABLE_HEAD) for c in rows[0]]]
+    for r in rows[1:]:
+        body.append([Paragraph(c, TARGET_TABLE_CELL) for c in r])
+    if col_widths:
+        total = sum(col_widths)
+        col_widths = [w / total * FRAME_WIDTH for w in col_widths]
+    t = Table(body, colWidths=col_widths, repeatRows=1)
+    style = [
+        ("BACKGROUND", (0, 0), (-1, 0), _TARGET_DARK),
+        ("GRID", (0, 0), (-1, -1), 0.45, _TARGET_GRID),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("TOPPADDING", (0, 0), (-1, -1), 2.2),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 2.2),
+        ("LEFTPADDING", (0, 0), (-1, -1), 4),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+    ]
+    for r in range(1, len(body)):
+        if r % 2 == 1:
+            style.append(("BACKGROUND", (0, r), (-1, r), _TARGET_ALT))
+    t.setStyle(TableStyle(style))
+    t.hAlign = "LEFT"
+    return t
+
+def figure(asset_name, caption_text, max_width_cm=15.9):
+    # Same source assets and grayscale discipline as the classic template;
+    # target layout removes the visibly bulky frame/padding.
+    path = os.path.join(ASSETS, asset_name)
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"MISSING FIGURE ASSET: {path}")
+    img = None
+    try:
+        from PIL import Image as PILImage
+        with PILImage.open(path) as im:
+            px_w, px_h = im.size
+            if im.mode != "L":
+                raise RuntimeError(
+                    f"FIGURE NOT MONOCHROME: {asset_name} has mode {im.mode!r}"
+                )
+    except Exception as exc:
+        if isinstance(exc, RuntimeError):
+            raise
+        raise RuntimeError(f"CANNOT READ FIGURE ASSET {path}: {exc}")
+    max_w = min(max_width_cm * cm, FRAME_WIDTH)
+    natural_w = px_w / 300.0 * 2.54 * cm
+    width = min(max_w, natural_w)
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+    return KeepTogether([
+        Spacer(1, 4),
+        Table([[img]], colWidths=[width], style=[
+            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+        ]),
+        Paragraph(caption_text, TARGET_CAPTION),
+    ])
+
+def body(text):
+    return Paragraph(text, TARGET_BODY)
+
+def gap(h=2.5):
+    return Spacer(1, h)
 
 def figure(asset_name, caption_text, max_width_cm=15.9):
     """Chapter-local binding of the shared figure() helper (SS0.6)."""
@@ -171,6 +428,8 @@ story.append(keyterm(
     "<b>Muscle</b> - a specialised tissue of <b>mesodermal origin</b>. About <b>40-50 per "
     "cent</b> of the body weight of a human adult is contributed by muscles."))
 
+story.append(PageBreak())
+
 story.append(b1(
     "Muscles have special properties: <b>excitability, contractility, extensibility and "
     "elasticity</b>."))
@@ -244,6 +503,8 @@ story.append(data_table([
 ], col_widths=[16, 30, 54]))
 
 story.append(gap())
+story.append(PageBreak())
+
 story.append(b1(
     "Both proteins are arranged as <b>rod-like structures</b>, parallel to each other and to "
     "the longitudinal axis of the myofibrils. <b>Actin filaments are thinner</b> than the "
@@ -309,6 +570,8 @@ story.append(body(
     "Many monomeric proteins called <b>Meromyosins</b> (Figure 17.3b) constitute one thick "
     "filament."))
 
+story.append(PageBreak())
+
 story.append(data_table([
     ["Part of a meromyosin", "Name", "Feature"],
     ["Globular <b>head</b> + short arm", "<b>Heavy meromyosin (HMM)</b>",
@@ -372,6 +635,8 @@ story.append(b1(
     "<b>'A' bands retain their length</b> (Figure 17.5). The figure stages this across three "
     "states of the sarcomere: <b>Relaxed</b>, <b>Contracting</b> and <b>Maximally "
     "Contracted</b>."))
+story.append(PageBreak())
+
 story.append(b1(
     "The <b>reaction time</b> of the fibres can vary in different muscles."))
 
@@ -410,6 +675,7 @@ story.append(gap())
 # ======================================================================================
 # ---- 17.3 SKELETAL SYSTEM ---- F102-F149 (heading F102, opener F103)
 # ======================================================================================
+story.append(PageBreak())
 story.append(heading("17.3", "Skeletal System", level=1))
 
 story.append(body(
@@ -469,6 +735,8 @@ story.append(b1(
 story.append(b1(
     "The vertebral column <b>protects the spinal cord, supports the head</b>, and serves as "
     "the point of attachment for the ribs and the musculature of the back."))
+
+story.append(PageBreak())
 
 story.append(figure(
     "fig_17_7.png",
@@ -538,6 +806,8 @@ story.append(b1(
 story.append(b1(
     "Each <b>clavicle</b> is a long slender bone with two curvatures, commonly called the "
     "<b>collar bone</b>."))
+
+story.append(PageBreak())
 
 story.append(figure(
     "fig_17_9.png",
@@ -615,6 +885,7 @@ story.append(gap())
 # ======================================================================================
 # ---- 17.5 DISORDERS OF MUSCULAR AND SKELETAL SYSTEM ---- F165-F171 (heading F165)
 # ======================================================================================
+story.append(PageBreak())
 story.append(heading("17.5", "Disorders of Muscular and Skeletal System", level=1))
 
 story.append(data_table([
@@ -709,6 +980,8 @@ story.append(body(
     "gravis, muscular dystrophy, tetany</b>) or the skeletal/joint side (<b>arthritis, "
     "osteoporosis, gout</b>)."))
 
+story.append(PageBreak())
+
 # ======================================================================================
 # ---- EXERCISES ---- F173 (heading F173)
 # [VERIFICATION FIX] D2: inventory row F173 was ticked and the exercise-gap scan assigned
@@ -720,23 +993,6 @@ story.append(body(
 # ======================================================================================
 story.append(heading("E", "EXERCISES", level=1))
 
-story.append(note(
-    "All ten NCERT exercises are reproduced below with worked answers. Every answer is sourced "
-    "from the chapter text above. Where NCERT never states the answer outright but it follows "
-    "from a definition the chapter does give (Exercise 9c, 9d), that is flagged in place."))
-
-story.append(gap())
-story.append(body(
-    "<b>1. Draw the diagram of a sarcomere of skeletal muscle showing different regions.</b>"))
-story.append(body(
-    "<b>Answer.</b> Redraw <b>Figure 17.2(b)</b> above and label: the two bounding <b>'Z' "
-    "lines</b>; the central <b>'A' band</b> (dark, anisotropic, thick myosin filaments) with "
-    "the <b>'M' line</b> in its middle and the <b>'H' zone</b> at its centre (thick filaments "
-    "only); and the <b>'I' bands</b> (light, isotropic, thin actin filaments) on either side, "
-    "each Z line bisecting an 'I' band. One sarcomere = the portion between two successive 'Z' "
-    "lines = one whole 'A' band plus two half 'I' bands."))
-
-story.append(gap())
 story.append(body("<b>2. Define sliding filament theory of muscle contraction.</b>"))
 story.append(body(
     "<b>Answer.</b> The mechanism of muscle contraction is best explained by the <b>sliding "
@@ -778,16 +1034,6 @@ story.append(b1(
     "<b>(b) H-zone of striated muscle fibre represents both thick and thin filaments - "
     "FALSE.</b> Corrected: the <b>'H' zone represents only the thick (myosin) filaments</b> - "
     "it is the central part of the thick filament <b>not overlapped</b> by thin filaments."))
-story.append(b1(
-    "<b>(c) Human skeleton has 206 bones - TRUE.</b> In human beings the skeletal system is "
-    "made of <b>206 bones</b> and a few cartilages."))
-story.append(b1(
-    "<b>(d) There are 11 pairs of ribs in man - FALSE.</b> Corrected: there are <b>12 pairs of "
-    "ribs</b> (7 true + 3 vertebrochondral/false + 2 floating)."))
-story.append(b1(
-    "<b>(e) Sternum is present on the ventral side of the body - TRUE.</b> The sternum is a "
-    "flat bone on the <b>ventral midline of the thorax</b>."))
-
 story.append(gap())
 story.append(body("<b>5. Write the difference between:</b>"))
 
@@ -836,6 +1082,8 @@ story.append(b1(
 
 story.append(gap())
 story.append(body("<b>6. Match Column I with Column II:</b>"))
+# The reference keeps the question-6 heading at the foot of page 10 and its table on page 11.
+story.append(PageBreak())
 story.append(data_table([
     ["Column I", "Column II", "Why"],
     ["(a) Smooth muscle", "<b>(iv) Involuntary</b>",
