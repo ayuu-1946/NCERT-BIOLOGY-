@@ -36,6 +36,7 @@ from neet_template import (  # noqa: E402
     STYLES,
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
+from neet_template import TABLE_PADDING  # noqa: E402
 from neet_template import figure as _shared_figure  # noqa: E402
 from reportlab.platypus import Paragraph, Spacer  # noqa: E402
 
@@ -401,6 +402,32 @@ story.append(figure(
     "<b>Fig. 13.10</b> - Experiment used to demonstrate that the tip of the coleoptile "
     "is the source of auxin. Arrows indicate the direction of light.",
     max_width_cm=7.0))
+
+# Compact only the final three pages: preserve the chapter's normal typography above while
+# reducing avoidable leading, heading padding, caption spacing, and table padding below.
+for _style_name, _leading, _space_after in (
+    ("Body", 13.0, 1.5),
+    ("Bullet1", 13.0, 0.5),
+    ("Bullet2", 12.7, 0.5),
+    ("Bullet3", 12.4, 0.5),
+):
+    _compact_style = STYLES[_style_name].clone(
+        name=f"{_style_name}-Ch13-final", leading=_leading, spaceAfter=_space_after)
+    STYLES[_style_name] = _compact_style
+for _style_name, _space_after, _border_padding in (
+    ("H1", 3.5, 2),
+    ("H2", 3.0, 1.5),
+    ("H3", 2.5, 1.5),
+):
+    _compact_style = STYLES[_style_name].clone(
+        name=f"{_style_name}-Ch13-final", spaceAfter=_space_after,
+        borderPadding=_border_padding)
+    STYLES[_style_name] = _compact_style
+STYLES["Caption"] = STYLES["Caption"].clone(
+    name="Caption-Ch13-final", leading=11.5, spaceBefore=2, spaceAfter=4)
+STYLES["NoteBox"] = STYLES["NoteBox"].clone(
+    name="NoteBox-Ch13-final", leading=12.5, borderPadding=4)
+TABLE_PADDING.update(top=2, bottom=2)
 
 # ---- 13.4.3 Physiological Effects of Plant Growth Regulators ----  H13
 story.append(heading("13.4.3", "Physiological Effects of Plant Growth Regulators",
