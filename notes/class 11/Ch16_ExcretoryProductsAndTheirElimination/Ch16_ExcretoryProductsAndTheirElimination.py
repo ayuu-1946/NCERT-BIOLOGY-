@@ -53,9 +53,12 @@ while _probe != os.path.dirname(_probe):
 from neet_template import (  # noqa: E402
     STYLES,
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
+    GRID_LINE,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, Table, TableStyle, Image  # noqa: E402
+from reportlab.lib.units import cm  # noqa: E402
+from PIL import Image as PILImage  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch16_ExcretoryProductsAndTheirElimination.pdf")
@@ -77,6 +80,40 @@ def figure(asset_name, caption_text, max_width_cm=15.9):
     """Chapter-local binding of the shared figure() helper (SS0.6)."""
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
+
+def figure_cell(asset_name, caption_text, max_width_cm=7.7):
+    """Unwrapped figure cell used when two figures share one table row."""
+    path = os.path.join(ASSETS, asset_name)
+    with PILImage.open(path) as im:
+        px_w, px_h = im.size
+        if im.mode != "L":
+            raise RuntimeError(f"FIGURE NOT MONOCHROME: {asset_name}")
+    max_w = max_width_cm * cm
+    natural_w = px_w / 300.0 * 2.54 * cm
+    width = min(max_w, natural_w)
+    height = width * px_h / px_w
+    img = Image(path, width=width, height=height)
+    framed = Table([[img]], colWidths=[width + 10])
+    framed.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.5, GRID_LINE),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    framed.hAlign = "CENTER"
+    cell = Table([[framed], [Paragraph(caption_text, STYLES["Caption"])]],
+                 colWidths=[width + 10])
+    cell.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    return cell
 
 def body(text):
     return Paragraph(text, STYLES["Body"])
@@ -287,14 +324,19 @@ story.append(note(
     "cortex supplies the aldosterone that appears in 16.5."))
 
 story.append(gap())
-story.append(figure("fig_16_1.png", "Figure 16.1 Human Urinary system"))
-
-
-story.append(gap())
-story.append(figure("fig_16_2.png",
-                    "Figure 16.2 Longitudinal section (Diagrammatic) of Kidney"))
-
-
+figures_16_1_16_2 = Table([[
+    figure_cell("fig_16_1.png", "Figure 16.1 Human Urinary system"),
+    figure_cell("fig_16_2.png", "Figure 16.2 Longitudinal section (Diagrammatic) of Kidney"),
+]], colWidths=[8.75 * cm, 8.75 * cm])
+figures_16_1_16_2.setStyle(TableStyle([
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 0),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+    ("TOPPADDING", (0, 0), (-1, -1), 0),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+]))
+figures_16_1_16_2.hAlign = "CENTER"
+story.append(figures_16_1_16_2)
 story.append(gap())
 story.append(memory_aid(
     "<b>Urine's one-way road: Nephron -&gt; Collecting duct -&gt; Medullary pyramid -&gt; "
