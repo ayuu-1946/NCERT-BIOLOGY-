@@ -1,0 +1,1007 @@
+{
+ "class 11/Ch10_CellCycleAndCellDivision": [
+  {
+   "line": 199,
+   "text": "NCERT stops the reader three times inside this section to think, and each question is answerable from the chapter itself. (i) How do plants and animals continue to grow all their lives? Do all cells in a plant divide all the time? Do you think all cells continue to divide in all plants and animals? Can you tell the name and the location of tissues having cells that divide all their life in higher plants? Do animals have similar meristematic tissues? - the meristematic tissues, the apical and the lateral cambium, are the plant tissues whose mitotic divisions continue lifelong (10.3), and heart cells and G0 cells show that not all cells keep dividing. (ii) From your recollection of examples of alternation of generations in plants (Chapter 3) identify plant species and stages at which mitosis is seen in haploid cells - the chapter's own answer is that plants can show mitotic divisions in both haploid and diploid cells. (iii) You have studied mitosis in onion root tip cells. It has 16 chromosomes in each cell. Can you tell how many chromosomes will the cell have at G1 phase, after S phase, and after M phase? Also, what will be the DNA content of the cells at G1, after S and at G2, if the content after M phase is 2C? - worked out in the NOTE above.",
+   "tags": [
+    "Back-reference",
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 370,
+   "text": "NCERT asks here: are you aware of some examples where you have studied about haploid and diploid insects? The chapter's own example of a haploid animal cell dividing by mitosis is the male honey bee (10.1.1).",
+   "tags": [
+    "Back-reference",
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 11/Ch11_PhotosynthesisInHigherPlants": [
+  {
+   "line": 313,
+   "text": "It is interesting to learn about those simple experiments that led to a gradual development in our understanding of photosynthesis.",
+   "tags": [
+    "Throat-clearing"
+   ]
+  },
+  {
+   "line": 369,
+   "text": "His later studies showed that the green substance in plants (chlorophyll as we know it now) is located in special bodies (later called chloroplasts) within plant cells.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 519,
+   "text": "Looking at plants have you ever wondered why and how there are so many shades of green in their leaves - even in the same plant?",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 694,
+   "text": "You would then ask, How does PS II supply electrons continuously?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 777,
+   "text": "Let us now try and understand how actually ATP is synthesised in the chloroplast. The chemiosmotic hypothesis has been put forward to explain the mechanism by which ATP is synthesised in the chloroplast.",
+   "tags": [
+    "Hedge/filler adverb",
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 921,
+   "text": "Let us now ask ourselves a question that was asked by the scientists who were struggling to understand the 'dark reaction'.",
+   "tags": [
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 1095,
+   "text": "It is important to register that the mesophyll cells lack RuBisCO enzyme.",
+   "tags": [
+    "Throat-clearing"
+   ]
+  },
+  {
+   "line": 1462,
+   "text": "By looking at a plant externally, can you tell whether a plant is C3 or C4? Why and how?",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 1474,
+   "text": "Suppose there were plants that had a high concentration of Chlorophyll b, but lacked chlorophyll a, would it carry out photosynthesis? Then why do plants have chlorophyll b and other accessory pigments?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 1491,
+   "text": "Why is the colour of a leaf kept in the dark frequently becomes yellow, or pale green? Which pigment do you think is more stable?",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 1505,
+   "text": "Look at leaves of the same plant on the shady side and compare it with the leaves on the sunny side. Or, compare the potted plants kept in the sunlight with those in the shade. Which of them has leaves that are darker green? Why?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 11/Ch12_RespirationInPlants": [
+  {
+   "line": 399,
+   "text": "What is the metabolic fate of pyruvate? This depends on the cellular need. There are three major ways in which different cells handle pyruvic acid produced by glycolysis.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 649,
+   "text": "You have already studied about the mechanism of membrane-linked ATP synthesis as explained by the chemiosmotic hypothesis in the earlier chapter.",
+   "tags": [
+    "Back-reference"
+   ]
+  }
+ ],
+ "class 11/Ch13_PlantGrowthAndDevelopment": [],
+ "class 11/Ch1_TheLivingWorld": [
+  {
+   "line": 218,
+   "text": "We easily recognise groups such as plants, animals, dogs, cats or insects, and the moment we use such a term we associate certain characters with the organism in that group: think of 'dogs' and you see dogs, not cats; think of 'Alsatians' and you know exactly what is meant; say 'mammals' and you think of animals with external ears and body hair; say 'Wheat' and you picture wheat plants, not rice.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 254,
+   "text": "Do not blur the four terms. Identification = which organism is this? Nomenclature = what is its one valid name? Classification = grouping into taxa on easily observable characters. Taxonomy = the whole process of classifying organisms into taxa. Systematics is the widest: identification + nomenclature + classification, plus evolutionary relationships.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 469,
+   "text": "These exercise questions lean on points the chapter body assumes rather than states outright. Each answer below is assembled only from facts stated in this chapter.",
+   "tags": [
+    "Roadmap filler",
+    "Vague quantifier"
+   ]
+  },
+  {
+   "line": 488,
+   "text": "The meaning of 'species' (Q8). In this chapter, a species is a group of individual organisms with fundamental similarities, distinguishable from closely related species by distinct morphological differences - a morphological criterion. The unit profile adds that Ernst Mayr pioneered the currently accepted definition of a biological species. For higher plants and animals these criteria work well; for bacteria this chapter supplies no criterion at all, so that part of the question is deliberately left to discussion with your teacher rather than answered from outside sources.",
+   "tags": [
+    "Roadmap filler",
+    "Vague quantifier"
+   ]
+  }
+ ],
+ "class 11/Ch2_BiologicalClassification": [
+  {
+   "line": 122,
+   "text": "Table 2.1 gives a comparative account of different characteristics of the five kingdoms - it is the single most examinable table in this chapter.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 124,
+   "text": "A three-domain system has also been proposed, that divides the Kingdom Monera into two domains, leaving the remaining eukaryotic kingdoms in the third domain, and thereby a six kingdom classification. (You will learn about this system in detail in higher classes.)",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 147,
+   "text": "Let us look at this five kingdom classification to understand the issues and considerations that influenced the classification system.",
+   "tags": [
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 183,
+   "text": "In this chapter we will study characteristics of Kingdoms Monera, Protista and Fungi of the Whittaker system of classification. The Kingdoms Plantae and Animalia, commonly referred to as plant and animal kingdoms respectively, will be dealt separately in chapters 3 and 4 - so sections 2.4 and 2.5 below are deliberately brief in NCERT itself.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 774,
+   "text": "Would you call viruses living or non-living? - the chapter puts this question to you directly, and gives you both sides rather than a verdict: viruses are not considered truly 'living' if living means having a cell structure, and they are inert crystalline structures outside the living cell; yet they carry infectious genetic material and, once inside a host cell, take over its machinery to replicate. Answer it with these facts, not with a one-word label.",
+   "tags": [
+    "Rhetorical question",
+    "Vague quantifier"
+   ]
+  },
+  {
+   "line": 814,
+   "text": "So close is their association that if one saw a lichen in nature one would never imagine that they had two different organisms within them.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 862,
+   "text": "These exercise questions lean on points the chapter body assumes rather than states outright. Each answer below is assembled only from facts stated in this chapter.",
+   "tags": [
+    "Roadmap filler",
+    "Vague quantifier"
+   ]
+  },
+  {
+   "line": 946,
+   "text": "Are viruses living or non-living (Q12)? The chapter poses this question itself and supplies both sides rather than a verdict - see the note in section 2.6a. Against: viruses are not considered truly 'living' if living means having a cell structure, they have an inert crystalline structure outside the living cell, they could be crystallised, and they are obligate parasites. For: they contain infectious genetic material and, once they infect a cell, they take over the machinery of the host cell to replicate themselves.",
+   "tags": [
+    "Rhetorical question",
+    "Vague quantifier"
+   ]
+  }
+ ],
+ "class 11/Ch3_PlantKingdom": [
+  {
+   "line": 54,
+   "text": "The chapter map is 3.1 Algae; 3.2 Bryophytes; 3.3 Pteridophytes; 3.4 Gymnosperms; 3.5 Angiosperms. In the previous chapter, living organisms were placed under Whittaker's 1969 Five Kingdom classification: Monera, Protista, Fungi, Animalia and Plantae. Here the focus narrows to classification within Kingdom Plantae, popularly called the plant kingdom.",
+   "tags": [
+    "Back-reference"
+   ]
+  }
+ ],
+ "class 11/Ch4_AnimalKingdom": [],
+ "class 11/Ch5_MorphologyOfFloweringPlants": [
+  {
+   "line": 252,
+   "text": "What are the features that distinguish a stem from a root? The morphological features of stems - the presence of nodes and internodes, multicellular hair and positively phototropic nature - help to differentiate the stems from roots.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 11/Ch6_AnatomyOfFloweringPlants": [],
+ "class 11/Ch7_StructuralOrganisationInAnimals": [
+  {
+   "line": 1052,
+   "text": "Protonema [Q10(e)] - the green, branched, filamentous first stage of the gametophyte in the life cycle of a moss. It is a plant structure and does not belong to the animals studied in this chapter.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 11/Ch8_CellTheUnitOfLife": [
+  {
+   "line": 221,
+   "text": "These smaller DNA are called plasmids. The plasmid DNA confers certain unique phenotypic characters to such bacteria. One such character is resistance to antibiotics. In higher classes you will learn that this plasmid DNA is used to monitor bacterial transformation with foreign DNA.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 761,
+   "text": "Normally, there is only one nucleus per cell, variations in the number of nuclei are also frequently observed. Can you recollect names of organisms that have more than one nucleus per cell?",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 764,
+   "text": "Some mature cells even lack nucleus, e.g., erythrocytes of many mammals and sieve tube cells of vascular plants. Would you consider these cells as 'living'?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 783,
+   "text": "Chromatin contains DNA and some basic proteins called histones, some non-histone proteins and also RNA. A single human cell has approximately two metre long thread of DNA distributed among its forty six (twenty three pairs) chromosomes. You will study the details of DNA packaging in the form of a chromosome in class XII.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 879,
+   "text": "Q9 - 'Multicellular organisms have division of labour.' The phrase division of labour appears nowhere in this chapter's text, so it is explained here from chapter facts only. A unicellular organism must perform all the essential functions of life within its one cell, because it is capable of (i) independent existence and (ii) performing the essential functions of life. A multicellular organism is composed of many cells, and the shape of the cell may vary with the function they perform - so different cells take on different functions instead of each one doing everything. That distribution of functions among cells is what the exercise calls division of labour. No fact from outside the chapter is used.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 889,
+   "text": "Q13 - 'Describe the nucleus and centrosome with the help of labelled diagrams.' The nucleus half is answered by Figure 8.11 above. For the centrosome, NCERT prints no figure at all in this chapter, and none is invented here. Answer it in words from section 8.5.9: a centrosome usually contains two cylindrical centrioles surrounded by amorphous pericentriolar materials; the two centrioles lie perpendicular to each other; each has a cartwheel organisation made of nine evenly spaced peripheral fibrils of tubulin protein, each fibril a triplet with adjacent triplets linked; the proteinaceous hub at the centre of the proximal region is joined to the peripheral triplets by radial spokes.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 11/Ch9_Biomolecules": [
+  {
+   "line": 95,
+   "text": "There is a wide diversity in living organisms in our biosphere. Are all living organisms made of the same chemicals, i.e., elements and compounds? Although there is a bewildering diversity of living organisms, their chemical composition and metabolic reactions appear to be remarkably similar.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 220,
+   "text": "Another simple lipid is glycerol which is trihydroxy propane. Many lipids have both glycerol and fatty acids; here the fatty acids are found esterified with glycerol. They can then be monoglycerides, diglycerides and triglycerides. These are also called fats and oils based on melting point. Oils have lower melting point (e.g., gingelly oil) and hence remain as oil in winters. Can you identify a fat from the market?",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 321,
+   "text": "The molecules in the insoluble fraction, with the exception of lipids, are polymeric substances. Then why do lipids, whose molecular weights do not exceed 800 Da, come under the acid-insoluble (macromolecular) fraction?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 568,
+   "text": "How do Enzymes bring about such High Rates of Chemical Conversions?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 131,
+   "text": "We wish to know what type of organic compounds are found in living organisms. How does one go about finding the answer? To get an answer, one has to perform a chemical analysis.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 12/Ch10_BiotechnologyAndItsApplications": [
+  {
+   "line": 72,
+   "text": "Biotechnology, as learnt in the previous chapter, essentially deals with the industrial-scale production of biopharmaceuticals and biologicals using genetically modified microbes, fungi, plants and animals.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 217,
+   "text": "Why does the Bt toxin not kill the Bacillus itself? Because the Bt toxin protein exists as inactive protoxins. It becomes toxic only after an insect ingests it, so the crystal is harmless while stored inside the bacterium. (This is the answer to Exercise 4: the crystals do not kill the bacteria because the toxin is inactive.)",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 326,
+   "text": "Management of adult-onset diabetes is possible by taking insulin at regular time intervals. What would a diabetic patient do if enough human insulin were not available? One would have to isolate and use insulin from other animals -- but would animal insulin be just as effective, and would it not elicit an immune response in the human body? The elegant answer is a bacterium that could make human insulin: one can then easily grow a large quantity of bacteria and make as much insulin as needed.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 12/Ch11_OrganismsAndPopulations": [
+  {
+   "line": 121,
+   "text": "Our living world is fascinatingly diverse and amazingly complex. We can try to understand its complexity by investigating processes at various levels of biological organisation - macromolecules, cells, tissues, organs, individual organisms, population, communities, ecosystems and biomes.",
+   "tags": [
+    "Editorial adjective",
+    "Reader address",
+    "Vague quantifier"
+   ]
+  },
+  {
+   "line": 139,
+   "text": "When you observe nature around you with a scientific frame of mind you will certainly come up with many interesting questions of both types - Why are night-blooming flowers generally white? How does the bee know which flower has nectar? Why does cactus have so many thorns? How does the chick spures recognise her own mother? - and so on.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 153,
+   "text": "You have already learnt in previous classes that Ecology is a subject which studies the interactions among organisms and between the organism and its physical (abiotic) environment. As a branch of biology, ecology is the study of the relationships of living organisms with the abiotic (physico-chemical factors) and biotic components (other species) of their environment.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 159,
+   "text": "Ecology is basically concerned with four levels of biological organisation - organisms, populations, communities and biomes. In this chapter we explore ecology at population levels.",
+   "tags": [
+    "Hedge/filler adverb",
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 331,
+   "text": "Does the growth of a population with time show any specific and predictable pattern? We have been concerned about unbridled human population growth and problems created by it in our country, and it is therefore natural for us to be curious if different animal populations in nature behave the same way or show some restraints on growth. Perhaps we can learn a lesson or two from nature on how to control population growth.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 406,
+   "text": "Now think of a tiny Paramecium starting with just one individual and, through binary fission, doubling in numbers every day - imagine what a mind-boggling population size it would reach in 64 days (provided food and space remain unlimited).",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 497,
+   "text": "So, which is desirable for maximising fitness? Ecologists suggest that life history traits of organisms have evolved in relation to the constraints imposed by the abiotic and biotic components of the habitat in which they live. Evolution of life history traits in different species is currently an important area of research being conducted by ecologists.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 508,
+   "text": "Can you think of any natural habitat on earth that is inhabited just by a single species? There is no such habitat and such a situation is even inconceivable. For any species, the minimal requirement is one more species on which it can feed.",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 513,
+   "text": "Even a plant species, which makes its own food, cannot survive alone; it needs soil microbes to break down the organic matter in soil and return the inorganic nutrients for absorption. And then, how will the plant manage pollination without an animal agent?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 558,
+   "text": "What would happen to all the energy fixed by autotrophic organisms if the community has no animals to eat the plants? You can think of predation as nature's way of transferring to higher trophic levels the energy fixed by plants.",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 562,
+   "text": "When we think of predator and prey, most probably it is the tiger and the deer that readily come to our mind, but a sparrow eating any seed is no less a predator.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 708,
+   "text": "Majority of the parasites harm the host: they may reduce the survival, growth and reproduction of the host and reduce its population density. They might render the host more vulnerable to predation by making it physically weak. NCERT asks: do you believe that an ideal parasite should be able to thrive within the host without harming it? Then why didn't natural selection lead to the evolution of such totally harmless parasites?",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 736,
+   "text": "Two NCERT prompts here. (1) The female mosquito is not considered a parasite, although it needs our blood for reproduction - can you explain why? (2) Try to follow the movements of the cuckoo (koel) and the crow in your neighborhood park during the breeding season (spring to summer) and watch brood parasitism in action.",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 782,
+   "text": "But the mutually beneficial system should also be safeguarded against 'cheaters' - for example, animals that try to steal nectar without aiding in pollination.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 882,
+   "text": "NCERT's ten exercise questions for this chapter, and the two things they assume but the chapter never states outright. Everything below is built only from statements already made in this chapter.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 12/Ch12_Ecosystem": [
+  {
+   "line": 94,
+   "text": "We will first look at the structure of the ecosystem, in order to appreciate the input (productivity), transfer of energy (food chain/web, nutrient cycling) and the output (degradation and energy loss). We will also look at the relationships - cycles, chains, webs - that are created as a result of these energy flows within the system and their inter-relationship.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 106,
+   "text": "In earlier classes, you have looked at the various components of the environment - abiotic and biotic. You studied how the individual biotic and abiotic factors affected each other and their surrounding. Let us look at these components in a more integrated manner and see how the flow of energy takes place within these components of the ecosystem.",
+   "tags": [
+    "Back-reference",
+    "Invitation filler",
+    "Vague quantifier"
+   ]
+  },
+  {
+   "line": 144,
+   "text": "To understand the ethos of an aquatic ecosystem let us take a small pond as an example. This is fairly a self-sustainable unit and rather simple example that explains even the complex interactions that exist in an aquatic ecosystem. A pond is a shallow water body in which all the above-mentioned four basic components of an ecosystem are well exhibited.",
+   "tags": [
+    "Invitation filler",
+    "Vague quantifier"
+   ]
+  },
+  {
+   "line": 267,
+   "text": "It is important to note that all the above steps in decomposition operate simultaneously on the detritus (Figure 12.1). Humification and mineralisation occur during decomposition in the soil.",
+   "tags": [
+    "Throat-clearing"
+   ]
+  },
+  {
+   "line": 335,
+   "text": "Thermodynamics: Is this in keeping with the first law of thermodynamics? Ecosystems are not exempt from the Second Law of thermodynamics either - they need a constant supply of energy to synthesise the molecules they require, to counteract the universal tendency toward increasing disorderliness.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 446,
+   "text": "In nature, it is possible to have so many levels - producer, herbivore, primary carnivore, secondary carnivore - in the grazing food chain (Figure 12.3). (NCERT prompt: Do you think there is any such limitation in a detritus food chain?)",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 489,
+   "text": "For example, a sparrow is a primary consumer when it eats seeds, fruits, peas, and a secondary consumer when it eats insects and worms. (NCERT prompt: Can you work out how many trophic levels human beings function at in a food chain?)",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 538,
+   "text": "Pyramid of biomass in the sea is generally inverted because the biomass of fishes far exceeds that of phytoplankton. (NCERT prompt: Isn't that a paradox? How would you explain this?)",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 613,
+   "text": "NCERT's eleven exercise questions assume a few terms/facts the chapter never states outright. Everything below is built only from statements already made in this chapter (plus the Summary).",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 659,
+   "text": "7-11 (long answers): 7. Describe the components of an ecosystem. 8. Define ecological pyramids and describe, with examples, pyramids of number and biomass. 9. What is primary productivity? Describe factors that affect it. 10. Define decomposition and describe its processes and products. 11. Give an account of energy flow in an ecosystem - all answered by the sections above.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 12/Ch13_BiodiversityAndConservation": [
+  {
+   "line": 109,
+   "text": "Would it function any differently if the diversity was much less?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 263,
+   "text": "It should be noted that these estimates do not give any figures for prokaryotes.",
+   "tags": [
+    "Throat-clearing"
+   ]
+  },
+  {
+   "line": 362,
+   "text": "What is so special about tropics that might account for their greater biological diversity? Ecologists and evolutionary biologists have proposed various hypotheses; some important ones are:",
+   "tags": [
+    "Rhetorical question",
+    "Vague quantifier"
+   ]
+  },
+  {
+   "line": 440,
+   "text": "Does the number of species in a community really matter to the functioning of the ecosystem? This is a question for which ecologists have not been able to give a definitive answer.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 477,
+   "text": "Would Western Ghats ecosystems be less functional if one of its tree frog species is lost forever?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 479,
+   "text": "How is our quality of life affected if, say, instead of 20,000 we have only 15,000 species of ants on earth?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 557,
+   "text": "How is the 'Sixth Extinction' presently in progress different from the previous episodes? The difference is in the rates. The current species extinction rates are estimated to be 100 to 1,000 times faster than in the pre-human times, and our activities are responsible for the faster rates.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 648,
+   "text": "For NCERT exercise 10 (\"can you think of a situation where we deliberately want to make a species extinct, and how would you justify it?\") the chapter itself supplies no content at all, so this reasoning is outside NCERT and is not examinable as NCERT text. The defensible answer is a disease-causing organism that exists only to harm - the smallpox virus (already eradicated), the polio virus, or the Guinea worm. Justification: eradicating such a parasite ends enormous human suffering, and these organisms occupy no ecosystem role that other species depend on obligatorily.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 699,
+   "text": "The fast-dwindling Amazon forest is estimated to produce, through photosynthesis, 20 per cent of the total oxygen in the earth's atmosphere. Can we put an economic value on this service by nature? You can get some idea by finding out how much your neighborhood hospital spends on a cylinder of oxygen.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 704,
+   "text": "Pollination - without which plants cannot give us fruits or seeds - is another service ecosystems provide through pollinators: bees, bumblebees, birds and bats. What will be the costs of accomplishing pollination without help from natural pollinators?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 709,
+   "text": "There are other intangible benefits we derive from nature - the aesthetic pleasures of walking through thick woods, watching spring flowers in full bloom or waking up to a bulbul's song in the morning. Can we put a price tag on such things?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 715,
+   "text": "Summary-sourced list, and the answer to exercise 8. The chapter summary (not the body) states that besides the direct benefits - food, fibre, firewood, pharmaceuticals and so on - there are many indirect benefits we receive through ecosystem services such as pollination, pest control, climate moderation and flood control. Exercise 8 additionally asks how the biotic components deliver control of floods and soil erosion; soil erosion is named nowhere in this chapter, so that part is necessary inference, not NCERT text: vegetation cover and root systems bind the soil and slow surface run-off, so rain soaks in instead of sheeting off, which both checks erosion and moderates flooding.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 12/Ch1_SexualReproductionInFloweringPlants": [],
+ "class 12/Ch2_HumanReproduction": [],
+ "class 12/Ch3_ReproductiveHealth": [
+  {
+   "line": 441,
+   "text": "&bull; Why MTP? To get rid of unwanted pregnancies -- due to casual unprotected intercourse, failure of contraceptive used during coitus, or rapes; also essential where continuation could be harmful or even fatal to mother or foetus or both.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 442,
+   "text": "&bull; When is it safest? Relatively safe during first trimester -- upto 12 weeks; second trimester abortions are much more risky.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 12/Ch4_PrinciplesOfInheritanceAndVariation": [
+  {
+   "line": 509,
+   "text": "What then would be the phenotype of a plant that had a genotype Tt?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 519,
+   "text": "(Do not use T for tall and d for dwarf because you will find it difficult to remember whether T and d are alleles of the same gene/character or not).",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 824,
+   "text": "Explanation of the concept of dominance: What exactly is dominance? Why are some alleles dominant and some recessive?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 827,
+   "text": "To tackle these questions, we must understand what a gene does. Every gene, as you know by now, contains the information to express a particular trait.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 833,
+   "text": "One of them may be different due to some changes that it has undergone (about which you will read further on, and in the next chapter) which modifies the information that particular allele contains.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 838,
+   "text": "Let's take an example of a gene that contains the information for producing an enzyme. Now there are two copies of this gene, the two allelic forms.",
+   "tags": [
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 841,
+   "text": "Let us assume (as is more common) that the normal allele produces the normal enzyme that is needed for the transformation of a substrate S.",
+   "tags": [
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 927,
+   "text": "Do you realise that the example of ABO blood grouping also provides a good example of multiple alleles? Here you can see that there are more than two, i.e., three alleles, governing the same character.",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 974,
+   "text": "Let us use the genotypic symbols Y for dominant yellow seed colour and y for recessive green seed colour, R for round shaped seeds and r for wrinkled seed shape.",
+   "tags": [
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 1117,
+   "text": "Read the plate (Figure 4.8 labels). The plate is Meiosis and germ cell formation in a cell with four chromosomes. Can you see how chromosomes segregate when germ cells are formed? The plate is laid out in time order: a G2 cell with paired chromosomes, a Bivalent stage (two homologous chromosomes paired), Meiosis I with its anaphase (the homologs pulled to opposite poles), Meiosis II (the sister chromatids separated), and the four final Germ cells.",
+   "tags": [
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 1143,
+   "text": "Recall that you have studied the behaviour of chromosomes during mitosis (equational division) and during meiosis (reduction division). The important things to remember are that chromosomes as well as genes occur in pairs.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 1294,
+   "text": "But if you look around you will find that there are many traits which are not so distinct in their occurrence and are spread across a gradient.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 1313,
+   "text": "To understand this better let us assume that three genes A, B, C control skin colour in human with the dominant forms A, B and C responsible for dark skin colour and the recessive forms a, b and c for light skin colour.",
+   "tags": [
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 1410,
+   "text": "In the above description you have studied about two types of sex determining mechanisms, i.e., XO type and XY type. But in both cases males produce two different types of gametes, (a) either with or without X-chromosome or (b) some gametes with X-chromosome and some with Y-chromosome. Such type of sex determination mechanism is designated to be the example of male heterogamety.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 1537,
+   "text": "As you will learn in Chapter 5, one DNA helix runs continuously from one end to the other in each chromatid, in a highly supercoiled form.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 12/Ch5_MolecularBasisOfInheritance": [
+  {
+   "line": 151,
+   "text": "Let us recapitulate the chemical structure of a polynucleotide chain, whether DNA or RNA. A nucleotide is built up in three stages, and each stage adds one component.",
+   "tags": [
+    "Invitation filler"
+   ]
+  },
+  {
+   "line": 332,
+   "text": "Take the distance between two consecutive base pairs as 0.34 nm (0.34 x 10-9 m). Then the length of the DNA double helix in a typical mammalian cell -- with its 6.6 x 109 bp (the diploid figure, twice the haploid 3.3 x 109) -- comes to 6.6 x 109 bp x 0.34 x 10-9 m/bp = 2.2 metres. A length of DNA far greater than the dimension of a typical nucleus, which is approximately 10-6 m. How is such a long polymer packaged in a cell?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 400,
+   "text": "Counting the nucleosomes in a mammalian cell. NCERT asks how many such beads you imagine are present in a mammalian cell. With 6.6 x 109 bp of DNA and about 200 bp per nucleosome, the estimate is 6.6 x 109 divided by 200, that is approximately 3.3 x 107 nucleosomes -- of the order of thirty million beads on the string.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 510,
+   "text": "DNA versus DNase -- do not confuse the two names. NCERT asks whether you can think of any difference between DNAs and DNase. DNA is the nucleic acid, the genetic material itself. DNase is an enzyme (a protein) that degrades DNA -- the suffix -ase marks an enzyme, as in protease (degrades protein) and RNase (degrades RNA). One is the substrate, the other is the scissors.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 656,
+   "text": "From the foregoing discussion, an immediate question becomes evident -- which is the first genetic material? The properties just compared give the answer.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 896,
+   "text": "Why not both strands? There are two reasons. First, if both strands act as a template, they would code for RNA molecules with different sequences (as complementarity does not mean identical), and in turn, if they code for proteins, the sequence of amino acids in the proteins would be different. Hence, one segment of the DNA would be coding for two different proteins, and this would complicate the genetic information transfer machinery. Second, the two RNA molecules if produced simultaneously would be complementary to each other, hence would form a double-stranded RNA. This would prevent RNA from being translated into protein and the exercise of transcription would become a futile one.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 1199,
+   "text": "Eukaryotic processing in order: cap the 5' end, tail the 3' end, then splice. Remember the polymerase division of labour by the rRNA / mRNA / tRNA order of I / II / III -- polymerase II is the one that matters most in this chapter because it makes hnRNA, the precursor of mRNA. And note the contrast that NEET likes: in bacteria transcription and translation are coupled (no processing, no nucleus); in eukaryotes they are separated by processing and by the nuclear envelope.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 1360,
+   "text": "Worked exercise (NCERT, in-body). If following is the sequence of nucleotides in mRNA, predict the sequence of amino acid coded by it (take help of the checkerboard): -AUG UUU UUC UUC UUU UUU UUC-. Reading Table 5.1 codon by codon: AUG = Met, UUU = Phe, UUC = Phe, UUC = Phe, UUU = Phe, UUU = Phe, UUC = Phe. So the peptide is Met-Phe-Phe-Phe-Phe-Phe-Phe.Now try the opposite. Following is the sequence of amino acids coded by an mRNA. Predict the nucleotide sequence in the RNA: Met-Phe-Phe-Phe-Phe-Phe-Phe. Do you face any difficulty in predicting the opposite? Yes -- and that is the point of the question. Met is unambiguous (only AUG), but each Phe could be UUU or UUC, so six positions have two choices each and the answer is not unique.Can you now correlate which two properties of genetic code you have learnt? The forward direction works unambiguously because the code is a triplet read contiguously without punctuation; the reverse direction is ambiguous because the code is degenerate. Degeneracy is why translation is one-way readable: codon to amino acid is certain, amino acid to codon is not.",
+   "tags": [
+    "Back-reference",
+    "Reader address",
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 1391,
+   "text": "The relationships between genes and DNA are best understood by mutation studies. You have studied about mutation and its effect in Chapter 4.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 1753,
+   "text": "Why the operon switches itself off again -- and the answer to \"can you think for how long the lac operon would be expressed in the presence of lactose?\" Only as long as the lactose lasts. Put the facts of this section in a line: lactose is the inducer, and lactose is also the substrate of beta-galactosidase, the very enzyme the operon switches on. So the induced enzyme consumes the inducer -- hydrolysing it to galactose and glucose, neither of which can act as an inducer. As the lactose is used up there is nothing left to inactivate the repressor, the repressor binds the operator again, and transcription stops. The operon is therefore self-limiting: it stays on only while its own substrate is present.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 1782,
+   "text": "In the preceding sections you have learnt that it is the sequence of bases in DNA that determines the genetic information of a given organism. In other words, genetic make-up of an organism or an individual lies in the DNA sequences. If two individuals differ, then their DNA sequences should also be different, at least at some places. These assumptions led to the quest of finding out the complete DNA sequence of human genome.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 1798,
+   "text": "Human Genome Project (HGP) was called a mega project. You can imagine the magnitude and the requirements for the project if we simply define the aims of the project as follows.",
+   "tags": [
+    "Hedge/filler adverb",
+    "Reader address"
+   ]
+  },
+  {
+   "line": 2021,
+   "text": "As stated in the preceding section, 99.9 per cent of base sequence among humans is the same. Assuming human genome as 3 x 10^9 bp, in how many base sequences would there be differences? It is these differences in sequence of DNA which make every individual unique in their phenotypic appearance.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 2026,
+   "text": "If one aims to find out genetic differences between two individuals or among individuals of a population, sequencing the DNA every time would be a daunting and expensive task. Imagine trying to compare two sets of 3 x 10^6 base pairs.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 2033,
+   "text": "A printing inconsistency in the source, so you do not think you misread. This section quotes the human genome as 3 x 10^9 bp and then, two sentences later, as 3 x 10^6 base pairs. Both are reproduced above exactly as NCERT prints them. The figure established by the Human Genome Project in the preceding section is 3 x 10^9 (about 3164.7 million bp); the 10^6 is the source's own slip.",
+   "tags": [
+    "Reader address"
+   ]
+  },
+  {
+   "line": 2095,
+   "text": "(Recall different kind of mutations and their effects that you have already studied in Chapter 4, and in the preceding sections in this chapter. Recall also the definition of alleles from Chapter 4.)",
+   "tags": [
+    "Back-reference",
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 2108,
+   "text": "The probability of such variation to be observed in non-coding DNA sequence would be higher, as mutations in these sequences may not have any immediate effect/impact in an individual's reproductive ability. These mutations keep on accumulating generation after generation, and form one of the basis of variability/polymorphism. There is a variety of different types of polymorphisms ranging from single nucleotide change to very large scale changes. For evolution and speciation, such polymorphisms play very important role, and you will study these in details at higher classes.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 2167,
+   "text": "The sensitivity of the technique has been increased by use of polymerase chain reaction (PCR -- you will study about it in Chapter 9). Consequently, DNA from a single cell is enough to perform DNA fingerprinting analysis. Currently, many different probes are used to generate DNA fingerprints.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 12/Ch6_Evolution": [
+  {
+   "line": 295,
+   "text": "Recall: fossil ages are calculated by radioactive (radiometric) dating - comparing the ratio of a radioactive parent isotope to its stable daughter isotope in the rock, using the isotope's known half-life to compute elapsed time (NCERT leaves this as an unanswered recall question; the method itself is an addition, not detailed in this chapter).",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 383,
+   "text": "Man has bred selected plants and animals for agriculture, horticulture, sport or security, and has domesticated many wild animals and crops. This intensive breeding programme has created breeds that differ from other breeds (for example dogs) but still are of the same group. The argument: if within hundreds of years man could create new breeds, could not nature have done the same over millions of years?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 570,
+   "text": "What is the origin of this variation and how does speciation occur? Even though Mendel had talked of inheritable factors influencing phenotype, Darwin either ignored these observations or kept silence.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ],
+ "class 12/Ch7_HumanHealthAndDisease": [
+  {
+   "line": 465,
+   "text": "Biotechnology (about which you will read more in Chapter 10) is at the verge of making available newer and safer vaccines.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 479,
+   "text": "Everyday we are exposed to a large number of infectious agents. However, only a few of these exposures result in disease. Why? Because the body is able to defend itself from most of these foreign agents.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 1504,
+   "text": "NCERT names the route but never the grouping: it writes air-borne and vector-borne, yet for food and water it only ever says 'transmitted through food and water'. The diseases in this chapter that travel that way - and so are the ones a question calling them water-borne is asking about - are typhoid, amoebiasis and ascariasis. This is stated where the prevention measures are covered, in section 7.1.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 1513,
+   "text": "The exercise asking about DNA vaccines and injecting a suitable gene uses two terms that do not occur anywhere in this chapter. The chapter's own answer to that question is \"Discuss with your teacher\", which concedes the point.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 12/Ch8_MicrobesInHumanWelfare": [
+  {
+   "line": 93,
+   "text": "Besides macroscopic plants and animals, microbes are the major components of biological systems on this earth. You have studied about the diversity of living organisms in Class XI: recall which Kingdoms among the living organisms contain micro-organisms, and which of those groups are only microscopic.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 169,
+   "text": "In chapter 7, you have read that microbes cause a large number of diseases in human beings. They also cause diseases in animals and plants. But this should not make you think that all microbes are harmful; several microbes are useful to man in diverse ways. Some of the most important contributions of microbes to human welfare are discussed in this chapter.",
+   "tags": [
+    "Back-reference",
+    "Reader address",
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 204,
+   "text": "The dough used for making foods such as dosa and idli is also fermented by bacteria. The puffed-up appearance of dough is due to the production of CO2 gas. Two questions worth answering from Class XI: which metabolic pathway is taking place resulting in the formation of CO2, and where do the bacteria for these fermentations come from?",
+   "tags": [
+    "Rhetorical question"
+   ]
+  },
+  {
+   "line": 341,
+   "text": "After Penicillin, other antibiotics were also purified from other microbes - it is worth naming some other antibiotics and finding out their sources. Antibiotics have greatly improved our capacity to treat deadly diseases such as plague, whooping cough (kali khansi), diphtheria (gal ghotu) and leprosy (kusht rog), which used to kill millions all over the globe. Today, we cannot imagine a world without antibiotics.",
+   "tags": [
+    "Reader address",
+    "Throat-clearing"
+   ]
+  },
+  {
+   "line": 403,
+   "text": "Beyond the body text - for exercise Q13(a). The term single cell protein (SCP) appears nowhere in this chapter's body. SCP is microbial biomass - the cells of microbes such as Spirulina grown in bulk - used as protein-rich food or animal feed. This definition is exercise support, not an NCERT sentence from this chapter.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  },
+  {
+   "line": 425,
+   "text": "Sewage contains large amounts of organic matter and microbes. Many of which are pathogenic. It is worth wondering where this huge quantity of sewage or urban waste water is disposed off daily: it cannot be discharged into natural water bodies like rivers and streams directly - and you can understand why, because that organic matter and those pathogens would go straight into the river. Before disposal, hence, sewage is treated in sewage treatment plants (STPs) to make it less polluting.",
+   "tags": [
+    "Throat-clearing"
+   ]
+  },
+  {
+   "line": 726,
+   "text": "You have studied about the nodules on the roots of leguminous plants formed by the symbiotic association of Rhizobium. These bacteria fix atmospheric nitrogen into organic forms, which is used by the plant as nutrient. Other bacteria can fix atmospheric nitrogen while free-living in the soil (examples Azospirillum and Azotobacter), thus enriching the nitrogen content of the soil.",
+   "tags": [
+    "Back-reference"
+   ]
+  },
+  {
+   "line": 770,
+   "text": "Beyond the body text - for exercise Q13(b), the role of microbes in soil. Assembled only from facts already in this chapter: soil microbes fix atmospheric nitrogen (Rhizobium in root nodules; free-living Azospirillum and Azotobacter), mobilise phosphorus to the plant through mycorrhiza (Glomus), add organic matter and increase fertility (cyanobacteria and blue green algae), and - as the sewage sections show - decompose organic matter, because the heterotrophic microbes that treat sewage digest exactly the organic matter and the microbial sludge fed to them. The general decomposer role is not stated as such in this chapter's body.",
+   "tags": [
+    "Roadmap filler"
+   ]
+  }
+ ],
+ "class 12/Ch9_BiotechnologyPrinciplesAndProcesses": [
+  {
+   "line": 199,
+   "text": "What happens to a piece of DNA that is somehow transferred into an alien organism? Most likely, this piece of DNA would not be able to multiply itself in the progeny cells of the organism. But when it gets integrated into the genome of the recipient, it may multiply and be inherited along with the host DNA - because the alien piece of DNA has become part of a chromosome, which has the ability to replicate.",
+   "tags": [
+    "Rhetorical question"
+   ]
+  }
+ ]
+}
