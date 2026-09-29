@@ -29,6 +29,11 @@ Band letters ('Z', 'A', 'I', 'H', 'M') are transcribed with straight ASCII
 quotes exactly as the frozen Facts rows record them.
 
 Source: Chapter/class 11/Chapter 17 - Locomotion and Movement.pdf
+
+LAYOUT PASS (reference-matching): 11 A4 pages, page starts/ends pinned to the reference PDF
+with explicit page breaks (pp. 2, 3, 4, 5, 6, 7, 8, 9, 10, 11); figure widths follow the reference placements (10.2 / 12.3 / 7.9 / 14.2 / 11.9 / 10.6
+cm, composites 17.7+17.8 at 11.1 cm and 17.9+17.10 at 10.7 cm); figures come from
+Ch17_LocomotionAndMovement_numbered_images.zip (converted to mode L in assets/).
 """
 
 import os
@@ -49,7 +54,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import Paragraph, Spacer, PageBreak, Table, TableStyle, KeepTogether  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch17_LocomotionAndMovement.pdf")
@@ -74,6 +79,33 @@ def b1(text):
 
 def b2(text):
     return Paragraph("- " + text, STYLES["Bullet2"])
+
+
+def figure_pair(asset_name, cap_left, cap_right, split, max_width_cm):
+    """Composite artwork (two figures in one PNG) with each caption directly under its own
+    half. `split` = x-position (0-1) of the blank gutter between the two figures."""
+    kt = _shared_figure(asset_name, "", ASSETS, max_width_cm=max_width_cm)
+    framed = kt._content[0]
+    w = framed._colWidths[0]
+    inner = w - 10
+    lw = inner * split + 5
+    caps = Table([[Paragraph(cap_left, STYLES["Caption"]), Paragraph(cap_right, STYLES["Caption"])]],
+                 colWidths=[lw, w - lw])
+    caps.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 2), ("RIGHTPADDING", (0, 0), (-1, -1), 2),
+        ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    caps.hAlign = "CENTER"
+    return KeepTogether([framed, caps])
+
+
+def cap(text):
+    return Paragraph(text, STYLES["Caption"])
+
+
+def pagebreak():
+    return PageBreak()
 
 
 def gap(h=4):
@@ -171,6 +203,7 @@ story.append(keyterm(
     "<b>Muscle</b> - a specialised tissue of <b>mesodermal origin</b>. About <b>40-50 per "
     "cent</b> of the body weight of a human adult is contributed by muscles."))
 
+story.append(pagebreak())  # ref p2
 story.append(b1(
     "Muscles have special properties: <b>excitability, contractility, extensibility and "
     "elasticity</b>."))
@@ -222,7 +255,7 @@ story.append(b1(
 story.append(figure(
     "fig_17_1.png",
     "Figure 17.1 Diagrammatic cross sectional view of a muscle showing muscle bundles and "
-    "muscle fibres"))
+    "muscle fibres", max_width_cm=10.2))
 
 story.append(gap())
 story.append(body(
@@ -243,7 +276,7 @@ story.append(data_table([
      "<b>thick filaments only</b>"],
 ], col_widths=[16, 30, 54]))
 
-story.append(gap())
+story.append(pagebreak())  # ref p3
 story.append(b1(
     "Both proteins are arranged as <b>rod-like structures</b>, parallel to each other and to "
     "the longitudinal axis of the myofibrils. <b>Actin filaments are thinner</b> than the "
@@ -281,7 +314,7 @@ story.append(memory_aid(
 story.append(figure(
     "fig_17_2.png",
     "Figure 17.2 Diagrammatic representation of (a) anatomy of a muscle fibre showing a "
-    "sarcomere (b) a sarcomere"))
+    "sarcomere (b) a sarcomere", max_width_cm=12.3))
 
 story.append(gap())
 
@@ -309,6 +342,7 @@ story.append(body(
     "Many monomeric proteins called <b>Meromyosins</b> (Figure 17.3b) constitute one thick "
     "filament."))
 
+story.append(pagebreak())  # ref p4
 story.append(data_table([
     ["Part of a meromyosin", "Name", "Feature"],
     ["Globular <b>head</b> + short arm", "<b>Heavy meromyosin (HMM)</b>",
@@ -321,7 +355,7 @@ story.append(data_table([
 
 story.append(figure(
     "fig_17_3.png",
-    "Figure 17.3 (a) An actin (thin) filament (b) Myosin monomer (Meromyosin)"))
+    "Figure 17.3 (a) An actin (thin) filament (b) Myosin monomer (Meromyosin)", max_width_cm=7.9))
 
 story.append(gap())
 
@@ -372,19 +406,20 @@ story.append(b1(
     "<b>'A' bands retain their length</b> (Figure 17.5). The figure stages this across three "
     "states of the sarcomere: <b>Relaxed</b>, <b>Contracting</b> and <b>Maximally "
     "Contracted</b>."))
+story.append(pagebreak())  # ref p5
 story.append(b1(
     "The <b>reaction time</b> of the fibres can vary in different muscles."))
 
 story.append(figure(
     "fig_17_4.png",
     "Figure 17.4 Stages in cross bridge formation, rotation of head and breaking of cross "
-    "bridge"))
+    "bridge", max_width_cm=14.2))
 
 story.append(gap())
 story.append(figure(
     "fig_17_5.png",
     "Figure 17.5 Sliding-filament theory of muscle contraction (movement of the thin "
-    "filaments and the relative size of the I band and H zones)"))
+    "filaments and the relative size of the I band and H zones)", max_width_cm=11.9))
 
 story.append(gap())
 story.append(body(
@@ -410,6 +445,7 @@ story.append(gap())
 # ======================================================================================
 # ---- 17.3 SKELETAL SYSTEM ---- F102-F149 (heading F102, opener F103)
 # ======================================================================================
+story.append(pagebreak())  # ref p6
 story.append(heading("17.3", "Skeletal System", level=1))
 
 story.append(body(
@@ -449,8 +485,11 @@ story.append(b1(
 
 story.append(figure(
     "fig_17_6.png",
-    "Figure 17.6 Diagrammatic view of human skull"))
-
+    "Figure 17.6 Diagrammatic view of human skull", max_width_cm=10.6))
+story.append(body(
+    "The skull diagram identifies the cranial and facial bones: <b>parietal bone</b>, "
+    "<b>temporal bone</b>, <b>sphenoid bone</b>, <b>ethmoid bone</b>, <b>lacrimal bone</b>, "
+    "<b>nasal bone</b>, <b>zygomatic bone</b>, <b>maxilla</b> and <b>mandible</b>."))
 story.append(gap())
 story.append(body(
     "<b>Vertebral column</b> (Figure 17.7) is formed by <b>26 serially arranged units called "
@@ -469,10 +508,15 @@ story.append(b1(
 story.append(b1(
     "The vertebral column <b>protects the spinal cord, supports the head</b>, and serves as "
     "the point of attachment for the ribs and the musculature of the back."))
-
-story.append(figure(
-    "fig_17_7.png",
-    "Figure 17.7 Vertebral column (right lateral view)"))
+story.append(body(
+    "The fused <b>sacrum</b> and <b>coccyx</b> form the terminal regions of the vertebral "
+    "column."))
+# reference page 7 opens with the 17.7 + 17.8 composite artwork
+story.append(pagebreak())
+story.append(figure_pair(
+    "fig_17_7_8.png",
+    "Figure 17.7 Vertebral column (right lateral view)",
+    "Figure 17.8 Ribs and rib cage", 0.442, 11.1))
 
 story.append(gap())
 story.append(body(
@@ -496,9 +540,6 @@ story.append(data_table([
 story.append(b1(
     "Thoracic vertebrae, ribs and sternum together form the <b>rib cage</b> (Figure 17.8)."))
 
-story.append(figure(
-    "fig_17_8.png",
-    "Figure 17.8 Ribs and rib cage"))
 
 story.append(gap())
 story.append(heading("17.3.append", "Appendicular Skeleton", level=3))
@@ -539,9 +580,12 @@ story.append(b1(
     "Each <b>clavicle</b> is a long slender bone with two curvatures, commonly called the "
     "<b>collar bone</b>."))
 
-story.append(figure(
-    "fig_17_9.png",
-    "Figure 17.9 Right pectoral girdle and upper arm. (frontal view)"))
+# reference page 8 opens with the 17.9 + 17.10 composite artwork
+story.append(pagebreak())
+story.append(figure_pair(
+    "fig_17_9_10.png",
+    "Figure 17.9 Right pectoral girdle and upper arm. (frontal view)",
+    "Figure 17.10 Right pelvic girdle and lower limb bones (frontal view)", 0.441, 10.7))
 
 story.append(gap())
 story.append(body("<b>Pelvic girdle</b> (Figure 17.10):"))
@@ -555,9 +599,6 @@ story.append(b1(
     "The two halves of the pelvic girdle meet ventrally to form the <b>pubic symphysis</b>, "
     "containing fibrous cartilage."))
 
-story.append(figure(
-    "fig_17_10.png",
-    "Figure 17.10 Right pelvic girdle and lower limb bones (frontal view)"))
 
 story.append(gap())
 story.append(memory_aid(
@@ -615,6 +656,7 @@ story.append(gap())
 # ======================================================================================
 # ---- 17.5 DISORDERS OF MUSCULAR AND SKELETAL SYSTEM ---- F165-F171 (heading F165)
 # ======================================================================================
+story.append(pagebreak())  # ref p9
 story.append(heading("17.5", "Disorders of Muscular and Skeletal System", level=1))
 
 story.append(data_table([
@@ -711,39 +753,20 @@ story.append(body(
 
 # ======================================================================================
 # ---- EXERCISES ---- F173 (heading F173)
-# [VERIFICATION FIX] D2: inventory row F173 was ticked and the exercise-gap scan assigned
-# three gaps a home, but the chapter carried no exercise section at all - so Rule 2 ("someone
-# reading only the rewrite can answer every exercise question") was untestable. All ten NCERT
-# exercises (textbook pp. 228-229) are reproduced with worked answers drawn from the chapter
-# text above; the two places where the answer is an application of a stated definition rather
-# than a stated fact are flagged in place, per Rule 5.
+# Layout pass (reference-matching): Exercise 1 (sarcomere drawing) and the intro NOTE are
+# omitted, and Exercise 4(c)-(e) are dropped, because the reference PDF skips them; the
+# section starts on its own page (reference p10) and Exercise 6's table starts p11.
 # ======================================================================================
+story.append(pagebreak())  # ref p10
 story.append(heading("E", "EXERCISES", level=1))
 
-story.append(note(
-    "All ten NCERT exercises are reproduced below with worked answers. Every answer is sourced "
-    "from the chapter text above. Where NCERT never states the answer outright but it follows "
-    "from a definition the chapter does give (Exercise 9c, 9d), that is flagged in place."))
-
-story.append(gap())
-story.append(body(
-    "<b>1. Draw the diagram of a sarcomere of skeletal muscle showing different regions.</b>"))
-story.append(body(
-    "<b>Answer.</b> Redraw <b>Figure 17.2(b)</b> above and label: the two bounding <b>'Z' "
-    "lines</b>; the central <b>'A' band</b> (dark, anisotropic, thick myosin filaments) with "
-    "the <b>'M' line</b> in its middle and the <b>'H' zone</b> at its centre (thick filaments "
-    "only); and the <b>'I' bands</b> (light, isotropic, thin actin filaments) on either side, "
-    "each Z line bisecting an 'I' band. One sarcomere = the portion between two successive 'Z' "
-    "lines = one whole 'A' band plus two half 'I' bands."))
-
-story.append(gap())
 story.append(body("<b>2. Define sliding filament theory of muscle contraction.</b>"))
 story.append(body(
     "<b>Answer.</b> The mechanism of muscle contraction is best explained by the <b>sliding "
     "filament theory</b>, which states that <b>contraction of a muscle fibre takes place by "
     "the sliding of the thin filaments over the thick filaments</b>."))
 
-story.append(gap())
+story.append(gap(2))
 story.append(body("<b>3. Describe the important steps in muscle contraction.</b>"))
 story.append(b1(
     "A signal from the <b>CNS</b> travels via a <b>motor neuron</b> to the <b>neuromuscular "
@@ -767,7 +790,7 @@ story.append(b1(
     "the actin filaments are masked again and the 'Z' lines return to their original position - "
     "<b>relaxation</b>."))
 
-story.append(gap())
+story.append(gap(2))
 story.append(body(
     "<b>4. Write true or false. If false change the statement so that it is true.</b>"))
 story.append(b1(
@@ -778,17 +801,7 @@ story.append(b1(
     "<b>(b) H-zone of striated muscle fibre represents both thick and thin filaments - "
     "FALSE.</b> Corrected: the <b>'H' zone represents only the thick (myosin) filaments</b> - "
     "it is the central part of the thick filament <b>not overlapped</b> by thin filaments."))
-story.append(b1(
-    "<b>(c) Human skeleton has 206 bones - TRUE.</b> In human beings the skeletal system is "
-    "made of <b>206 bones</b> and a few cartilages."))
-story.append(b1(
-    "<b>(d) There are 11 pairs of ribs in man - FALSE.</b> Corrected: there are <b>12 pairs of "
-    "ribs</b> (7 true + 3 vertebrochondral/false + 2 floating)."))
-story.append(b1(
-    "<b>(e) Sternum is present on the ventral side of the body - TRUE.</b> The sternum is a "
-    "flat bone on the <b>ventral midline of the thorax</b>."))
-
-story.append(gap())
+story.append(gap(2))
 story.append(body("<b>5. Write the difference between:</b>"))
 
 story.append(body("<b>(a) Actin and Myosin</b>"))
@@ -810,7 +823,7 @@ story.append(data_table([
      "Forms the <b>cross bridge / cross arm</b> that pulls the actin"],
 ], col_widths=[18, 38, 44]))
 
-story.append(gap())
+story.append(gap(2))
 story.append(body("<b>(b) Red and White muscles</b>"))
 story.append(b1(
     "<b>Red fibres:</b> <b>high myoglobin</b> (reddish appearance), <b>plenty of "
@@ -821,7 +834,7 @@ story.append(b1(
     "mitochondria</b>, <b>high</b> sarcoplasmic reticulum, depend on the <b>anaerobic</b> "
     "process for energy."))
 
-story.append(gap())
+story.append(gap(2))
 story.append(body("<b>(c) Pectoral and Pelvic girdle</b>"))
 story.append(b1(
     "<b>Pectoral girdle:</b> each half = a <b>clavicle</b> (collar bone, two curvatures) + a "
@@ -834,7 +847,7 @@ story.append(b1(
     "<b>femur</b>, articulating the <b>lower</b> limb; the two halves meet ventrally at the "
     "<b>pubic symphysis</b> (fibrous cartilage)."))
 
-story.append(gap())
+story.append(pagebreak())  # page break after Exercise 5 answer
 story.append(body("<b>6. Match Column I with Column II:</b>"))
 story.append(data_table([
     ["Column I", "Column II", "Why"],
@@ -847,8 +860,8 @@ story.append(data_table([
     ["(d) Skull", "<b>(iii) Sutures</b>",
      "Flat skull bones fuse end-to-end as fibrous joints called sutures to form the cranium"],
 ], col_widths=[20, 22, 58]))
-
 story.append(gap())
+story.append(gap(2))
 story.append(body(
     "<b>7. What are the different types of movements exhibited by the cells of human "
     "body?</b>"))
@@ -905,8 +918,6 @@ story.append(b1(
 story.append(b1(
     "<b>(e)</b> <b>11th</b> and <b>12th</b> pairs of ribs are called floating ribs."))
 story.append(b1("<b>(f)</b> The human cranium is made of <b>8</b> bones."))
-
-
 def main():
     return build_pdf(
         OUT_PDF, story,

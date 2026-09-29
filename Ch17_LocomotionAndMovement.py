@@ -486,7 +486,10 @@ story.append(b1(
 story.append(figure(
     "fig_17_6.png",
     "Figure 17.6 Diagrammatic view of human skull", max_width_cm=10.6))
-
+story.append(body(
+    "The skull diagram identifies the cranial and facial bones: <b>parietal bone</b>, "
+    "<b>temporal bone</b>, <b>sphenoid bone</b>, <b>ethmoid bone</b>, <b>lacrimal bone</b>, "
+    "<b>nasal bone</b>, <b>zygomatic bone</b>, <b>maxilla</b> and <b>mandible</b>."))
 story.append(gap())
 story.append(body(
     "<b>Vertebral column</b> (Figure 17.7) is formed by <b>26 serially arranged units called "
@@ -505,7 +508,9 @@ story.append(b1(
 story.append(b1(
     "The vertebral column <b>protects the spinal cord, supports the head</b>, and serves as "
     "the point of attachment for the ribs and the musculature of the back."))
-
+story.append(body(
+    "The fused <b>sacrum</b> and <b>coccyx</b> form the terminal regions of the vertebral "
+    "column."))
 # reference page 7 opens with the 17.7 + 17.8 composite artwork
 story.append(pagebreak())
 story.append(figure_pair(
@@ -842,9 +847,8 @@ story.append(b1(
     "<b>femur</b>, articulating the <b>lower</b> limb; the two halves meet ventrally at the "
     "<b>pubic symphysis</b> (fibrous cartilage)."))
 
-story.append(gap(2))
+story.append(pagebreak())  # page break after Exercise 5 answer
 story.append(body("<b>6. Match Column I with Column II:</b>"))
-story.append(pagebreak())  # ref p11
 story.append(data_table([
     ["Column I", "Column II", "Why"],
     ["(a) Smooth muscle", "<b>(iv) Involuntary</b>",
@@ -856,8 +860,8 @@ story.append(data_table([
     ["(d) Skull", "<b>(iii) Sutures</b>",
      "Flat skull bones fuse end-to-end as fibrous joints called sutures to form the cranium"],
 ], col_widths=[20, 22, 58]))
-
 story.append(gap())
+story.append(gap(2))
 story.append(body(
     "<b>7. What are the different types of movements exhibited by the cells of human "
     "body?</b>"))
@@ -914,8 +918,6 @@ story.append(b1(
 story.append(b1(
     "<b>(e)</b> <b>11th</b> and <b>12th</b> pairs of ribs are called floating ribs."))
 story.append(b1("<b>(f)</b> The human cranium is made of <b>8</b> bones."))
-
-
 def main():
     return build_pdf(
         OUT_PDF, story,
