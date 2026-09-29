@@ -79,7 +79,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import PageBreak, Paragraph, Spacer  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch19_ChemicalCoordinationAndIntegration.pdf")
@@ -134,18 +134,6 @@ story.append(body(
 story.append(body(
     "The <b>neural system and the endocrine system jointly coordinate and regulate the "
     "physiological functions</b> in the body."))
-
-story.append(gap())
-story.append(data_table([
-    ["Chapter 19 map", "What it covers"],
-    ["<b>19.1 Endocrine Glands and Hormones</b>", "What a ductless gland and a hormone are"],
-    ["<b>19.2 Human Endocrine System</b>",
-     "The ten glands in fixed order: hypothalamus, pituitary, pineal, thyroid, parathyroid, "
-     "thymus, adrenal, pancreas, testis, ovary"],
-    ["<b>19.3 Hormones of Heart, Kidney and Gastrointestinal Tract</b>",
-     "Hormone sources that are <b>not</b> endocrine glands"],
-    ["<b>19.4 Mechanism of Hormone Action</b>", "How a hormone acts once it reaches its target"],
-], col_widths=[38, 62]))
 
 story.append(gap())
 story.append(memory_aid(
@@ -228,9 +216,11 @@ story.append(body(
     "of all major endocrine glands and hypothalamus</b> of the human body is given in the "
     "following sections."))
 
+# ref p2 — the reference starts with the Figure 19.1 plate.
+story.append(PageBreak())
 story.append(gap())
 story.append(figure("fig_19_1.png", "Figure 19.1 Location of endocrine glands",
-                    max_width_cm=9.1))
+                    max_width_cm=7.2))
 
 
 story.append(gap())
@@ -281,6 +271,8 @@ story.append(note(
     "hypothalamus</b> (Figure 19.2) - so the two lobes are reached by two different routes: the "
     "<b>anterior</b> by <b>blood</b> (portal system), the <b>posterior</b> by <b>nerve</b>."))
 
+# ref p3 — the reference starts the pituitary subsection here.
+story.append(PageBreak())
 # ======================================================================================
 # ---- 19.2.2 The Pituitary Gland ---- F038-F069 (opener F039) + Fig 19.2 labels F213
 # ======================================================================================
@@ -319,7 +311,7 @@ story.append(note(
 story.append(gap())
 story.append(figure("fig_19_2.png",
                     "Figure 19.2 Diagrammatic representation of pituitary and its relationship "
-                    "with hypothalamus", max_width_cm=9.1))
+                    "with hypothalamus", max_width_cm=6.8))
 
 
 story.append(gap())
@@ -339,6 +331,8 @@ story.append(note(
     "<b>Acromegaly is hard to diagnose in the early stages</b> and often <b>goes undetected for "
     "many years</b>, until <b>changes in external features become noticeable</b>."))
 
+# ref p4 — the reference starts with the anterior-pituitary hormone table.
+story.append(PageBreak())
 story.append(gap())
 story.append(Paragraph("<b>What each anterior-pituitary hormone does</b>", STYLES["Body"]))
 story.append(data_table([
@@ -420,6 +414,8 @@ story.append(b1(
 # ======================================================================================
 # ---- 19.2.4 Thyroid Gland ---- F076-F095 (opener F077) + Fig 19.3 labels F214, F215
 # ======================================================================================
+# ref p5 — the reference starts the thyroid subsection here.
+story.append(PageBreak())
 story.append(gap(6))
 story.append(heading("19.2.4", "Thyroid Gland", level=2))
 
@@ -441,7 +437,7 @@ story.append(body(
 story.append(gap())
 story.append(figure("fig_19_3.png",
                     "Figure 19.3 Diagrammatic view of the position of Thyroid and Parathyroid "
-                    "(a) Ventral side (b) Dorsal side", max_width_cm=13.0))
+                    "(a) Ventral side (b) Dorsal side", max_width_cm=8.3))
 
 story.append(gap())
 story.append(note(
@@ -497,6 +493,8 @@ story.append(keyterm(
 # ======================================================================================
 # ---- 19.2.5 Parathyroid Gland ---- F096-F104 (opener F097)
 # ======================================================================================
+# ref p6 — the reference starts the parathyroid subsection here.
+story.append(PageBreak())
 story.append(gap(6))
 story.append(heading("19.2.5", "Parathyroid Gland", level=2))
 
@@ -571,7 +569,7 @@ story.append(body(
 story.append(gap())
 story.append(figure("fig_19_4.png",
                     "Figure 19.4  Diagrammatic representation of : (a) Adrenal gland above kidney "
-                    "(b) Section showing two parts of adrenal gland", max_width_cm=8.3))
+                    "(b) Section showing two parts of adrenal gland", max_width_cm=6.2))
 
 
 story.append(note(
@@ -579,6 +577,8 @@ story.append(note(
     "causing <b>acute weakness and fatigue</b>, leading to a disease called <b>Addison's "
     "disease</b>."))
 
+# ref p7 — the reference starts with the adrenal-medulla subsection.
+story.append(PageBreak())
 story.append(gap())
 story.append(heading("Medulla", "Adrenal medulla - the catecholamines", level=3))
 
@@ -657,6 +657,8 @@ story.append(process_flow([
     "pressure and blood pressure</b>.",
 ]))
 
+# ref p8 — the reference starts with the adrenal-cortex note.
+story.append(PageBreak())
 story.append(gap())
 story.append(note(
     "<b>Small amounts of androgenic steroids</b> are also secreted by the adrenal cortex, which "
@@ -741,10 +743,11 @@ story.append(memory_aid(
     "<b>Alphabet trick:</b> <b>A</b>lpha comes first and gives glucAgon, which raises sugar; "
     "<b>B</b>eta gives insulin, which <b>B</b>rings sugar down. Hyper- and hypo-glycemia are "
     "therefore alpha and beta respectively."))
-
 # ======================================================================================
 # ---- 19.2.9 Testis ---- F157-F167 (opener F158)
 # ======================================================================================
+# ref p9 — section 19.2.9 starts after the two preceding boxes.
+story.append(PageBreak())
 story.append(gap(6))
 story.append(heading("19.2.9", "Testis", level=2))
 
@@ -815,6 +818,12 @@ story.append(data_table([
      "female secondary sex organs, development of growing ovarian follicles, appearance of female "
      "secondary sex characters</b> (e.g., <b>high pitch of voice</b>, etc.) and <b>mammary gland "
      "development</b>. Estrogens also <b>regulate female sexual behaviour</b>"],
+], col_widths=[24, 76]))
+
+# Continue the 19.2.10 table on the same page when space permits; do not strand the
+# Progesterone row on a new page merely to preserve the earlier reference break.
+story.append(data_table([
+    ["Hormone", "Actions"],
     ["<b>Progesterone</b> - the exercises call it the <b>Progestational hormone</b>",
      "<b>Progesterone supports pregnancy.</b> It also <b>acts on the mammary glands</b> and "
      "<b>stimulates the formation of alveoli (sac-like structures which store milk)</b> and "
@@ -890,6 +899,8 @@ story.append(memory_aid(
 # ---- 19.4 MECHANISM OF HORMONE ACTION ---- F193-F208 (opener F194)
 #      Carry-forward 5: Figure 19.5 (a) and (b) stay inside this section.
 # ======================================================================================
+# Continue into the mechanism section as soon as the preceding GI content ends; the
+# reclaimed page space should be used rather than preserved as a blank region.
 story.append(gap(6))
 story.append(heading("19.4", "MECHANISM OF HORMONE ACTION", level=1))
 
@@ -954,13 +965,14 @@ story.append(note(
 story.append(gap())
 story.append(figure("fig_19_5a.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
-                    "(a) Protein hormone", max_width_cm=10.9))
+                    "(a) Protein hormone", max_width_cm=9.6))
 
 
+# Continue Figure 19.5(b) and the recap into the remaining page space.
 story.append(gap())
 story.append(figure("fig_19_5b.png",
                     "Figure 19.5 Diagramatic representation of the mechanism of hormone action : "
-                    "(b) Steroid hormone", max_width_cm=10.9))
+                    "(b) Steroid hormone", max_width_cm=10.6))
 
 story.append(gap())
 story.append(note(
@@ -1023,41 +1035,8 @@ story.append(b1(
     "from the kidney drives RBC formation, and the <b>gastrointestinal tract</b> secretes "
     "<b>gastrin, secretin, cholecystokinin</b> and <b>gastric inhibitory peptide</b>."))
 
-# ======================================================================================
-# ---- Appendix (source EXERCISES F210 and the trailing NOTE page F211) ----
-#      Rule 5: anything here that goes beyond this chapter's own sentences is labelled.
-# ======================================================================================
-story.append(gap(6))
-story.append(heading("Appendix", "Terms the exercises use, and where they are answered", level=1))
-
-story.append(data_table([
-    ["Term as the exercises print it", "This chapter's own wording", "Section"],
-    ["<b>Exocrine gland</b>",
-     "The chapter defines the <b>endocrine gland as ductless</b>; the exocrine gland is therefore "
-     "the <b>duct-bearing</b> kind. <b>Stated as an addition</b> - the chapter never defines it",
-     "19.1"],
-    ["<b>Atrium</b>", "The body says <b>atrial wall</b> of the heart (ANF)", "19.3"],
-    ["<b>G-I Tract</b>", "The body says <b>gastro-intestinal tract</b>", "19.3"],
-    ["<b>Hypoglycemic / hyperglycemic hormone</b>",
-     "The body uses the nouns <b>hypoglycemia</b> (insulin) and <b>hyperglycemia</b> (glucagon)",
-     "19.2.8"],
-    ["<b>Gonadotrophic hormones</b>",
-     "<b>LH and FSH stimulate gonadal activity</b> and hence are called <b>gonadotrophins</b>",
-     "19.2.2"],
-    ["<b>Blood pressure lowering hormone</b>", "<b>ANF decreases blood pressure</b>", "19.3"],
-    ["<b>Thyrotrophin, Corticotrophin, Melanotrophin, Progestational hormone</b>",
-     "<b>TSH, ACTH, MSH</b> and <b>progesterone</b> - the only place the book prints these four "
-     "names is the exercise list",
-     "19.2.2, 19.2.10"],
-    ["<b>Mechanism of action of FSH</b>",
-     "The <b>membrane-bound receptor plus second messenger</b> route, drawn with <b>Hormone "
-     "(e.g., FSH)</b> in Figure 19.5a",
-     "19.4"],
-], col_widths=[26, 60, 14]))
-
-story.append(note(
-    "The textbook's <b>final page carries only the word NOTE</b> above a blank panel and the "
-    "reprint line - it holds <b>no biology</b>, so nothing from it is reproduced here."))
+# The supplied layout reference ends after the Quick recap; exercise terminology remains
+# in the frozen inventory rather than creating a separate extra page.
 
 if __name__ == "__main__":
     sys.exit(build_pdf(
