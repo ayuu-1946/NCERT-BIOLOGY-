@@ -36,7 +36,7 @@ from neet_template import (  # noqa: E402
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph  # noqa: E402
+from reportlab.platypus import Paragraph, PageBreak  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch14_BreathingAndExchangeOfGases.pdf")
@@ -142,6 +142,7 @@ story.append(process_flow([
     "Each <b>terminal bronchiole</b> gives rise to a number of <b>very thin, irregular-walled "
     f"and vascularised bag-like structures called alveoli</b>.",
 ]))
+story.append(PageBreak())  # ref p2: continue the airway block on the next page
 story.append(body(
     "The <b>trachea, primary, secondary and tertiary bronchi, and initial bronchioles</b> are "
     "supported by <b>incomplete cartilaginous rings</b>. The <b>branching network of bronchi, "
@@ -159,7 +160,7 @@ story.append(figure(
     "that ends in <b>Alveoli</b>; the <b>Cut end of rib</b> and the two <b>Pleural membranes</b> "
     "with <b>Pleural fluid</b> between them enclose the <b>Lung</b>, with the <b>heart</b> lying "
     "between the lungs and the dome-shaped <b>Diaphragm</b> below.",
-    max_width_cm=14.6))
+    max_width_cm=15.7))
 
 story.append(heading("14.1.1b", "Conducting Part vs Exchange Part", 3, has_table=True))
 story.append(data_table([
@@ -194,6 +195,7 @@ story.append(note(
 # ======================================================================================
 # ---- 14.2 Mechanism of Breathing ---- F040-F053 (heading F133, opener F040)
 # ======================================================================================
+story.append(PageBreak())  # ref p3: start the mechanism section on a fresh page
 story.append(heading("14.2", "Mechanism of Breathing", 1))
 story.append(body(
     "Breathing involves <b>two stages</b>: <b>inspiration</b>, during which <b>atmospheric air is "
@@ -404,7 +406,7 @@ story.append(figure(
     f"saturation of haemoglobin with oxygen</b> and the horizontal axis is the <b>Partial pressure "
     f"of oxygen (mm Hg)</b>; the plotted sigmoid line is the <b>Oxygen dissociation curve</b> "
     f"itself.",
-    max_width_cm=9.4))
+    max_width_cm=6.3))
 story.append(data_table([
     ["Site", "Conditions", "Result"],
     ["<b>In the alveoli</b>",
@@ -471,7 +473,7 @@ story.append(figure(
     f"away, while the <b>Systemic arteries</b> deliver it to the <b>Body tissues</b> and the "
     f"<b>Systemic veins</b> return it. In the figure the two gases are marked <b>CO2</b> and "
     f"<b>O2</b>.",
-    max_width_cm=14.6))
+    max_width_cm=15.4))
 
 # ======================================================================================
 # ---- 14.5 Regulation of Respiration ---- F116-F123 (heading F139, opener F116)
@@ -626,13 +628,6 @@ story.append(memory_aid(
     "<b>pO<sub>2</sub> is higher</b>) while carbon dioxide rises <b>0.3 to 40</b> (so atmospheric "
     "<b>pCO<sub>2</sub> is lesser</b>). Air arriving from outside is <b>oxygen-rich and "
     "carbon-dioxide-poor</b> - which is the whole point of ventilating the alveoli."))
-
-story.append(Paragraph(
-    "<i>Every fact, number, name, qualifier, table row, figure and figure label in NCERT Class 11 "
-    "Chapter 14 is carried above. Nothing outside the source chapter has been added, except the "
-    "clearly marked MEMORY AID boxes and the exercise-gap explanations, which are derived only "
-    "from chapter content.</i>", STYLES["Caption"]))
-
 
 def main():
     return build_pdf(
