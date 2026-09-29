@@ -215,12 +215,7 @@ story.append(body("Since it is <b>nearly impossible</b> to study all the living 
 story.append(keyterm("<b>Classification</b> - the process by which anything is grouped into "
                      "<b>convenient categories</b> based on some <b>easily observable "
                      "characters</b>."))
-story.append(body("We easily recognise groups such as plants, animals, dogs, cats or insects, and "
-                  "the moment we use such a term we associate certain characters with the organism "
-                  "in that group: think of 'dogs' and you see dogs, not cats; think of 'Alsatians' "
-                  "and you know exactly what is meant; say <b>'mammals'</b> and you think of "
-                  "animals with <b>external ears and body hair</b>; say 'Wheat' and you picture "
-                  "wheat plants, not rice."))
+story.append(body('A group name (dogs, mammals, wheat) instantly recalls a set of shared characters; this is the basis of classification.'))
 story.append(keyterm("<b>Taxa</b> - the scientific term for such convenient categories. Taxa can "
                      "indicate categories at <b>very different levels</b>: 'Plants', 'Wheat', "
                      "'animals', 'mammals' and 'dogs' are all taxa - yet a dog is a mammal and "
@@ -288,7 +283,7 @@ story.append(heading("1.2.1", "Species", level=3))
 story.append(body("Taxonomic studies consider a group of individual organisms with "
                   "<b>fundamental similarities</b> as a <b>species</b>. One should be able to "
                   "distinguish one species from the other <b>closely related species</b> based on "
-                  "the <b>distinct morphological differences</b>."))
+                  "the <b>distinct morphological differences</b>. Ernst Mayr pioneered the currently accepted definition of a biological species."))
 story.append(b1("In <i>Mangifera indica</i>, <i>Solanum tuberosum</i> (potato) and "
                 "<i>Panthera leo</i> (lion), the names <i>indica</i>, <i>tuberosum</i> and "
                 "<i>leo</i> represent the <b>specific epithets</b>, while the first words "
@@ -466,9 +461,7 @@ story.append(b1("Taxonomic studies of species of plants and animals are useful i
 
 # ---- Appendix: Terms used in the exercises (Rule 2) ----
 story.append(heading("Appendix", "Terms Used in the Exercises", level=1))
-story.append(body("These exercise questions lean on points the chapter body assumes rather than "
-                  "states outright. Each answer below is assembled <b>only</b> from facts stated "
-                  "in this chapter."))
+
 story.append(b1("<b>Why classification systems keep changing (Q2).</b> Three chapter facts explain "
                 "it: (i) as we explore new areas, and even old ones, <b>new organisms are "
                 "continuously being identified</b>, so the arrangement must accommodate them; "
@@ -485,14 +478,7 @@ story.append(b1("<b>What identification of individuals and populations gives us 
                 "world</b> arrive at the same name and no name is reused for another known "
                 "organism; and it is how the count of <b>known and described species "
                 "(1.7-1.8 million)</b>, i.e. our record of <b>biodiversity</b>, is built."))
-story.append(b1("<b>The meaning of 'species' (Q8).</b> In this chapter, a species is a group of "
-                "individual organisms with <b>fundamental similarities</b>, distinguishable from "
-                "closely related species by <b>distinct morphological differences</b> - a "
-                "morphological criterion. The unit profile adds that <b>Ernst Mayr pioneered the "
-                "currently accepted definition of a biological species</b>. For higher plants and "
-                "animals these criteria work well; <b>for bacteria this chapter supplies no "
-                "criterion at all</b>, so that part of the question is deliberately left to "
-                "discussion with your teacher rather than answered from outside sources."))
+
 story.append(b1("<b>Answer keys the chapter fixes directly.</b> Q5 - the correctly written name is "
                 "<i>Mangifera indica</i> (genus capitalised, specific epithet in small letters). "
                 "Q7 - the correct sequence is <b>Species, Genus, Order, Phylum</b>, i.e. option "

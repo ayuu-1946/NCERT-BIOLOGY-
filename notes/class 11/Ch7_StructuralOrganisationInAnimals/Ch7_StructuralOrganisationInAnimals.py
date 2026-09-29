@@ -1049,10 +1049,7 @@ story.append(keyterm(
     "<b>Coxa</b> [Q10(e)] - the <b>basal segment of an insect leg</b>, which attaches the leg "
     "to the thoracic segment. (The cockroach's thoracic segments - mesothorax and metathorax - "
     "are described in 7.4.1.)"))
-story.append(keyterm(
-    "<b>Protonema</b> [Q10(e)] - the <b>green, branched, filamentous first stage</b> of the "
-    "gametophyte in the life cycle of a <b>moss</b>. It is a plant structure and does not belong "
-    "to the animals studied in this chapter."))
+story.append(keyterm('Protonema is the first, green, branched, filamentous gametophyte stage of a moss.'))
 story.append(keyterm(
     "<b>Typhlosole</b> [Q11(e)] - the <b>internal median fold of the dorsal wall of the "
     "intestine of the earthworm</b>, which <b>increases the absorptive surface area</b>. "

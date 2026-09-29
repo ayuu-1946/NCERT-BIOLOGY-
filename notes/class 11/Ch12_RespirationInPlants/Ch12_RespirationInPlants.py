@@ -396,10 +396,7 @@ story.append(process_flow([
     "<b>Pyruvic acid (3C)</b> is then the <b>key product of glycolysis</b>.",
 ]))
 story.append(gap())
-story.append(body(
-    "<b>What is the metabolic fate of pyruvate? This depends on the cellular need.</b> There "
-    "are <b>three major ways in which different cells handle pyruvic acid produced by "
-    "glycolysis</b>."))
+story.append(body('Pyruvate has three fates depending on cellular need: lactic acid fermentation, alcoholic fermentation, or aerobic respiration.'))
 story.append(data_table([
     ["Fate of pyruvic acid", "Conditions", "Outcome"],
     ["<b>Lactic acid fermentation</b>", "<b>Anaerobic</b>",
@@ -646,9 +643,7 @@ story.append(keyterm(
 # the freeze AND from this block (new row F117a). It names a real, NEET-examinable process
 # ("chemiosmotic hypothesis") and belongs in source order between F117 (oxidative
 # phosphorylation) and F118 (energy released -> ATP synthase), so it is restored here.
-story.append(body(
-    "<b>You have already studied about the mechanism of membrane-linked ATP synthesis as "
-    "explained by the chemiosmotic hypothesis in the earlier chapter.</b>"))
+story.append(body('ATP synthesis here follows the chemiosmotic mechanism (see Chapter 11).'))
 story.append(heading("12.4.2a", "ATP Synthase - the F<sub>1</sub>/F<sub>0</sub> Machine", 3))
 story.append(body(
     "The <b>energy released during the electron transport system is utilised in synthesising "

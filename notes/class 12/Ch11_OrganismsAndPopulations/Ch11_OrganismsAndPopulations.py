@@ -118,11 +118,7 @@ story.append(b1("Due to his efforts, the Government of India established the <b>
 # ---- Chapter opener (F023-F031, F030a) ----
 # ======================================================================================
 story.append(heading("Ch 11", "ORGANISMS AND POPULATIONS - Chapter Opener", 1))
-story.append(body(
-    "Our living world is fascinatingly diverse and amazingly complex. We can try to understand "
-    "its complexity by investigating processes at various levels of biological organisation - "
-    "<b>macromolecules, cells, tissues, organs, individual organisms, population, communities, "
-    "ecosystems and biomes</b>."))
+story.append(body('Biological organisation spans macromolecules, cells, tissues, organs, organisms, populations, communities, ecosystems and biomes; ecology examines interactions at the organism, population, community and biome levels.'))
 story.append(body(
     "At any level of biological organisation we can ask <b>two types of questions</b>. When we "
     "hear the bulbul singing early morning in the garden, we may ask <i>'How does the bird "
@@ -136,11 +132,7 @@ story.append(data_table([
      "For the second question, the answer <b>may lie</b> in the bird's <b>need to communicate "
      "with its mate during breeding season</b>"],
 ], col_widths=[2.0, 3.2, 5.4]))
-story.append(body(
-    "When you observe nature around you with a scientific frame of mind you will certainly come "
-    "up with many interesting questions <b>of both types</b> - Why are night-blooming flowers "
-    "generally white? How does the bee know which flower has nectar? Why does cactus have so "
-    "many thorns? How does the chick spures recognise her own mother? - and so on."))
+
 story.append(note(
     "NCERT prints \"chick spures\" in this list of questions; the wording is reproduced as "
     "printed. Note the qualifier in the first question: night-blooming flowers are "
@@ -150,16 +142,8 @@ story.append(note(
 # ---- 11.1 POPULATIONS (F032-F035) ----
 # ======================================================================================
 story.append(heading("11.1", "POPULATIONS", 1))
-story.append(body(
-    "You have already learnt in previous classes that <b>Ecology</b> is a subject which studies "
-    "the interactions among organisms and between the organism and its physical (<b>abiotic</b>) "
-    "environment. As a branch of biology, ecology is the study of the relationships of living "
-    "organisms with the <b>abiotic (physico-chemical factors)</b> and <b>biotic components "
-    "(other species)</b> of their environment."))
-story.append(keyterm(
-    "Ecology is basically concerned with <b>four levels of biological organisation</b> - "
-    "<b>organisms, populations, communities and biomes</b>. In this chapter we explore ecology "
-    "at <b>population</b> levels."))
+story.append(body('Ecology is the study of interactions between organisms and the abiotic (physico-chemical) and biotic (other species) components of their environment.'))
+story.append(keyterm('The four levels are organisms, populations, communities and biomes; this chapter focuses on organisms and populations.'))
 
 # ======================================================================================
 # ---- 11.1.1 Population Attributes (F036-F069, F251) ----
@@ -328,12 +312,7 @@ story.append(memory_aid(
 
 # ---- 11.1.2 Growth Models (F085-F088) ----
 story.append(heading("11.1.2", "Growth Models", 3))
-story.append(body(
-    "Does the growth of a population with time show any <b>specific and predictable pattern</b>? "
-    "We have been concerned about <b>unbridled human population growth</b> and problems created "
-    "by it in our country, and it is therefore natural for us to be curious if different animal "
-    "populations in nature behave the same way or show some restraints on growth. Perhaps we can "
-    "learn a lesson or two from nature on how to control population growth."))
+story.append(body('Population growth follows predictable exponential or logistic patterns, while natural populations face restraints on growth.'))
 
 # ---- 11.1.2 (i) Exponential growth (F089-F112, F252a, F253) ----
 story.append(heading("(i)", "Exponential growth", 3))
@@ -403,11 +382,7 @@ story.append(process_flow([
     "<b>all the wheat produced in his entire kingdom pooled together</b> would still be "
     "<b>inadequate</b> to cover all the <b>64 squares</b>.",
 ]))
-story.append(body(
-    "Now think of a tiny <i>Paramecium</i> starting with just <b>one individual</b> and, through "
-    "<b>binary fission</b>, <b>doubling in numbers every day</b> - imagine what a mind-boggling "
-    "population size it would reach in <b>64 days</b> (provided <b>food and space remain "
-    "unlimited</b>)."))
+story.append(body('If one Paramecium doubled by binary fission each day, it would reach an enormous population in 64 days, provided food and space remained unlimited.'))
 
 # ---- 11.1.2 (ii) Logistic growth (F113-F127, F252) ----
 story.append(heading("(ii)", "Logistic growth", 3))
@@ -494,26 +469,14 @@ story.append(data_table([
      "<b>Oysters, pelagic fishes</b>", "A <b>small number of large-sized</b> offspring - "
      "<b>birds, mammals</b>"],
 ], col_widths=[2.6, 4.0, 4.0]))
-story.append(body(
-    "So, <b>which is desirable for maximising fitness</b>? Ecologists suggest that <b>life history "
-    "traits</b> of organisms have evolved <b>in relation to the constraints imposed by the abiotic "
-    "and biotic components of the habitat</b> in which they live. Evolution of life history traits "
-    "in different species is <b>currently an important area of research</b> being conducted by "
-    "ecologists."))
+story.append(body('Life-history traits evolve under the abiotic and biotic constraints of a habitat, a subject of continuing ecological study.'))
 
 # ======================================================================================
 # ---- 11.1.4 Population Interactions (F136-F157, Table 11.1) ----
 # ======================================================================================
 story.append(heading("11.1.4", "Population Interactions", 2))
-story.append(body(
-    "Can you think of any natural habitat on earth that is inhabited <b>just by a single "
-    "species</b>? <b>There is no such habitat</b> and such a situation is <b>even "
-    "inconceivable</b>. For any species, the <b>minimal requirement is one more species on which "
-    "it can feed</b>."))
-story.append(b1("Even a <b>plant species</b>, which makes its own food, <b>cannot survive "
-                "alone</b>; it needs <b>soil microbes</b> to break down the <b>organic matter</b> "
-                "in soil and return the <b>inorganic nutrients</b> for absorption. And then, how "
-                "will the plant manage <b>pollination without an animal agent</b>?"))
+story.append(body('No natural habitat contains just one species; every species depends on at least one other species for food.'))
+story.append(b1('Even autotrophs depend on other organisms: soil microbes return nutrients, and animal pollinators enable pollination.'))
 story.append(keyterm(
     "In nature, animals, plants and microbes <b>do not and cannot live in isolation</b> but "
     "interact in various ways to form a <b>biological community</b>. Even in <b>minimal "
@@ -555,13 +518,8 @@ story.append(memory_aid(
 
 # ---- 11.1.4 (i) Predation (F158-F182, F254) ----
 story.append(heading("(i)", "Predation", 3))
-story.append(body(
-    "What would happen to <b>all the energy fixed by autotrophic organisms</b> if the community "
-    "has <b>no animals to eat the plants</b>? You can think of <b>predation</b> as nature's way "
-    "of <b>transferring to higher trophic levels the energy fixed by plants</b>."))
-story.append(b1("When we think of predator and prey, <b>most probably</b> it is the <b>tiger and "
-                "the deer</b> that readily come to our mind, but a <b>sparrow eating any seed is "
-                "no less a predator</b>."))
+story.append(body('Predation transfers energy fixed by plants to higher trophic levels.'))
+story.append(b1('Predation is not limited to tiger and deer: a sparrow eating seeds is also a predator.'))
 story.append(b1("Although animals eating plants are categorised separately as <b>herbivores</b>, "
                 "they are, <b>in a broad ecological context, not very different from "
                 "predators</b>."))
@@ -705,13 +663,7 @@ story.append(b2("The <b>human liver fluke</b> (a <b>trematode</b> parasite) depe
                 "intermediate hosts (a snail and a fish)</b> to complete its life cycle."))
 story.append(b2("The <b>malarial parasite</b> needs a <b>vector (mosquito)</b> to spread to other "
                 "hosts."))
-story.append(note(
-    "<b>Majority</b> of the parasites <b>harm</b> the host: they <b>may</b> reduce the "
-    "<b>survival, growth and reproduction</b> of the host and reduce its <b>population "
-    "density</b>. They <b>might</b> render the host <b>more vulnerable to predation</b> by making "
-    "it <b>physically weak</b>. NCERT asks: do you believe that an <b>ideal parasite</b> should be "
-    "able to thrive within the host <b>without harming it</b>? Then why didn't natural selection "
-    "lead to the evolution of such <b>totally harmless parasites</b>?"))
+story.append(note('Most parasites harm their hosts: they may reduce host survival, growth and reproduction and lower population density; they might also make the host more vulnerable to predation by weakening it physically.'))
 story.append(data_table([
     ["Type", "Definition", "Examples / features"],
     ["<b>Ectoparasites</b>", "Parasites that feed on the <b>external surface</b> of the host "
@@ -733,11 +685,7 @@ story.append(data_table([
      "the host's egg in size and colour</b>, to <b>reduce the chances of the host bird detecting "
      "the foreign eggs and ejecting them from the nest</b>"],
 ], col_widths=[2.0, 3.6, 5.0]))
-story.append(note(
-    "Two NCERT prompts here. (1) The <b>female mosquito is not considered a parasite</b>, although "
-    "it needs our blood for reproduction - can you explain why? (2) Try to follow the movements of "
-    "the <b>cuckoo (koel)</b> and the <b>crow</b> in your neighborhood park during the <b>breeding "
-    "season (spring to summer)</b> and watch <b>brood parasitism</b> in action."))
+story.append(note("In brood parasitism, the cuckoo (koel) lays its eggs in the crow's nest; this occurs during the breeding season, from spring to summer."))
 
 # ---- 11.1.4 (iv) Commensalism (F220-F224) ----
 story.append(heading("(iv)", "Commensalism", 3))
@@ -779,9 +727,7 @@ story.append(body(
     "for the services that plants expect from them."))
 story.append(b1("Plants offer <b>rewards or fees</b> in the form of <b>pollen and nectar for "
                 "pollinators</b> and <b>juicy and nutritious fruits for seed dispersers</b>."))
-story.append(b1("But the mutually beneficial system <b>should also be safeguarded against "
-                "'cheaters'</b> - for example, <b>animals that try to steal nectar without aiding "
-                "in pollination</b>."))
+story.append(b1('Mutualisms must guard against cheaters, such as nectar thieves that do not pollinate.'))
 story.append(keyterm(
     "This is why plant-animal interactions <b>often involve co-evolution of the mutualists</b>, "
     "that is, the <b>evolutions of the flower and its pollinator species are tightly linked with "
@@ -879,10 +825,7 @@ story.append(b1("In competition it is presumed that the <b>superior competitor e
 # ---- Terms used in the exercises (Rule 2 appendix, F255-F265) ----
 # ======================================================================================
 story.append(heading("Appendix", "TERMS USED IN THE EXERCISES", 1))
-story.append(body(
-    "NCERT's ten exercise questions for this chapter, and the two things they assume but the "
-    "chapter never states outright. Everything below is built only from statements already made in "
-    "this chapter."))
+
 story.append(data_table([
     ["#", "NCERT exercise question", "Where the chapter answers it"],
     ["1", "List the attributes that populations possess but not individuals.",

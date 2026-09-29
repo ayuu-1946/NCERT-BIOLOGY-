@@ -462,9 +462,7 @@ story.append(b1(
     "A large number of other infectious diseases like <b>polio</b>, <b>diphtheria</b>, "
     "<b>pneumonia</b> and <b>tetanus</b> have been <b>controlled to a large extent</b> by the use "
     "of vaccines."))
-story.append(b1(
-    "<b>Biotechnology</b> (about which you will read more in <b>Chapter 10</b>) is <b>at the verge "
-    "of making available newer and safer vaccines</b>."))
+story.append(b1('Biotechnology (Chapter 10) is yielding newer, safer vaccines.'))
 story.append(b1(
     "<b>Discovery of antibiotics</b> and various other <b>drugs</b> has also enabled us to "
     "<b>effectively treat infectious diseases</b>."))
@@ -476,10 +474,7 @@ story.append(gap())
 story.append(heading("7.2", "IMMUNITY", 1))
 # F309 (opener), F079
 # [FILLER TRIM, point 3] "This is due to the fact that" -> "Because"
-story.append(body(
-    "<b>Everyday we are exposed to a large number of infectious agents.</b> However, <b>only a few "
-    "of these exposures result in disease</b>. Why? Because the <b>body is able to defend itself "
-    "from most of these foreign agents</b>."))
+story.append(body('Every day, we are exposed to many infectious agents, yet only a few exposures result in disease because the body defends itself from most of these foreign agents.'))
 # F080, F081
 story.append(keyterm(
     "This <b>overall ability of the host to fight the disease-causing organisms, conferred by the "
@@ -1501,19 +1496,10 @@ story.append(body(
     "answer every question."))
 story.append(gap())
 story.append(heading("App. 1", "\"Water-borne\" diseases", 3))
-story.append(body(
-    "NCERT names the <b>route</b> but never the <b>grouping</b>: it writes <b>air-borne</b> and "
-    "<b>vector-borne</b>, yet for food and water it only ever says <b>'transmitted through food and "
-    "water'</b>. The diseases in <b>this chapter</b> that travel that way - and so are the ones a "
-    "question calling them <b>water-borne</b> is asking about - are <b>typhoid</b>, "
-    "<b>amoebiasis</b> and <b>ascariasis</b>. This is stated where the prevention measures are "
-    "covered, in section 7.1."))
+story.append(body('Food- and water-borne diseases covered in this chapter include typhoid, amoebiasis and ascariasis.'))
 story.append(gap())
 story.append(heading("App. 2", "\"DNA vaccines\" and \"a suitable gene\"", 3))
-story.append(body(
-    "The exercise asking about <b>DNA vaccines</b> and injecting <b>a suitable gene</b> uses two "
-    "terms that <b>do not occur anywhere in this chapter</b>. The chapter's own answer to that "
-    "question is <b>\"Discuss with your teacher\"</b>, which concedes the point."))
+
 story.append(body("<b>What this chapter does support:</b>"))
 story.append(b1(
     "<b>Recombinant DNA technology</b> has allowed the <b>production of antigenic polypeptides of "

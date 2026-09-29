@@ -218,11 +218,7 @@ story.append(B("- There is <b>no well-defined nucleus</b>. The genetic material 
                "eukaryotes.)"))
 story.append(P("In addition to the genomic DNA (the single chromosome/circular DNA), many "
                "bacteria have small circular DNA outside the genomic DNA."))
-story.append(keyterm("These smaller DNA are called <b>plasmids</b>. The plasmid DNA confers "
-                     "certain unique phenotypic characters to such bacteria. One such character "
-                     "is <b>resistance to antibiotics</b>. In higher classes you will learn that "
-                     "this plasmid DNA is used to monitor bacterial transformation with foreign "
-                     "DNA."))
+story.append(keyterm('Plasmids are small extra-chromosomal DNA molecules that confer unique phenotypes, such as antibiotic resistance, and can be used to monitor bacterial transformation with foreign DNA.'))
 story.append(P("No organelles, like the ones in eukaryotes, are found in prokaryotic cells "
                "<b>except for ribosomes</b>. Prokaryotes have something unique in the form of "
                "<b>inclusions</b>."))
@@ -758,12 +754,8 @@ story.append(note("<b>From the printed summary (folded in here because the body 
                   "The <b>inner membrane</b> encloses the nucleoplasm and the chromatin material. "
                   "The nucleus not only <b>controls the activities of organelles</b> but also "
                   "<b>plays a major role in heredity</b>."))
-story.append(P("<b>Normally</b>, there is only one nucleus per cell, variations in the number of "
-               "nuclei are also <b>frequently</b> observed. <i>Can you recollect names of "
-               "organisms that have more than one nucleus per cell?</i>"))
-story.append(P("<b>Some</b> mature cells even <b>lack nucleus</b>, e.g., <b>erythrocytes of many "
-               "mammals</b> and <b>sieve tube cells of vascular plants</b>. <i>Would you consider "
-               "these cells as 'living'?</i>"))
+story.append(P('Normally, there is one nucleus per cell, although variations in the number of nuclei are frequently observed.'))
+story.append(P('Some mature cells lack a nucleus, including erythrocytes of many mammals and sieve-tube cells of vascular plants.'))
 story.append(keyterm("The <b>nuclear matrix</b> or the <b>nucleoplasm</b> contains nucleolus and "
                      "chromatin."))
 story.append(P("The <b>nucleoli</b> are spherical structures present in the nucleoplasm. The "
@@ -780,11 +772,7 @@ story.append(heading("8.5.10", "Chromatin and chromosomes", level=3))
 story.append(P("The interphase nucleus has a <b>loose and indistinct network</b> of nucleoprotein "
                "fibres called <b>chromatin</b>. But during different stages of cell division, "
                "cells show <b>structured chromosomes</b> in place of the nucleus."))
-story.append(P("Chromatin contains <b>DNA</b> and some basic proteins called <b>histones</b>, "
-               "some <b>non-histone proteins</b> and also <b>RNA</b>. A single human cell has "
-               "approximately <b>two metre long thread of DNA</b> distributed among its <b>forty "
-               "six (twenty three pairs)</b> chromosomes. You will study the details of DNA "
-               "packaging in the form of a chromosome in class XII."))
+story.append(P('Chromatin contains DNA, histones, non-histone proteins and RNA. A human cell contains approximately two metres of DNA distributed among 46 chromosomes (23 pairs).'))
 story.append(keyterm("Every chromosome (<b>visible only in dividing cells</b>) essentially has a "
                      "<b>primary constriction</b> or the <b>centromere</b> on the sides of which "
                      "disc shaped structures called <b>kinetochores</b> are present "
@@ -876,30 +864,17 @@ story.append(keyterm("<b>Q4 - correct option.</b> In prokaryotes, there are no m
 story.append(keyterm("<b>Q7 - the two double-membrane-bound organelles</b> are the "
                      "<b>mitochondria</b> and the <b>chloroplast</b> (plastids). Figure 8.7 and "
                      "Figure 8.8 above are the two labelled diagrams the question asks for."))
-story.append(note("<b>Q9 - 'Multicellular organisms have division of labour.'</b> The phrase "
-                  "<b>division of labour</b> appears nowhere in this chapter's text, so it is "
-                  "explained here from chapter facts only. A unicellular organism must perform "
-                  "<b>all</b> the essential functions of life within its one cell, because it is "
-                  "capable of (i) independent existence and (ii) performing the essential "
-                  "functions of life. A multicellular organism is composed of <b>many</b> cells, "
-                  "and the shape of the cell <b>may</b> vary with the function they perform - so "
-                  "different cells take on different functions instead of each one doing "
-                  "everything. That distribution of functions among cells is what the exercise "
-                  "calls division of labour. No fact from outside the chapter is used."))
-story.append(note("<b>Q13 - 'Describe the nucleus and centrosome with the help of labelled "
-                  "diagrams.'</b> The nucleus half is answered by Figure 8.11 above. For the "
-                  "centrosome, <b>NCERT prints no figure at all in this chapter</b>, and none is "
-                  "invented here. Answer it in words from section 8.5.9: a centrosome usually "
-                  "contains two cylindrical centrioles surrounded by amorphous pericentriolar "
-                  "materials; the two centrioles lie perpendicular to each other; each has a "
-                  "cartwheel organisation made of nine evenly spaced peripheral fibrils of tubulin "
-                  "protein, each fibril a triplet with adjacent triplets linked; the proteinaceous "
-                  "hub at the centre of the proximal region is joined to the peripheral triplets "
-                  "by radial spokes."))
+
+
 story.append(memory_aid("Double-membrane organelles worth remembering as a pair: "
                         "<b>mitochondrion</b> and <b>chloroplast</b> - both double membrane bound, "
                         "both carrying their own circular DNA and their own 70S ribosomes."))
 
+
+# Closing appendix: only GAP questions are reproduced.
+story.append(heading("Appendix", "Terms used in the exercises", level=1))
+story.append(P('<b>Q9. Multicellular organisms have division of labour. Explain.</b>'))
+story.append(P('<b>Addition (built from chapter facts):</b> A unicellular organism performs all essential functions of life within its single cell. In a multicellular organism, cell shape varies with function, so different cells perform different functions; this distribution of functions is division of labour.'))
 
 if __name__ == "__main__":
     sys.exit(build_pdf(OUT_PDF, story,

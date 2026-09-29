@@ -506,8 +506,7 @@ story.append(b1(
 story.append(b1(
     "<b>TT and tt are called the genotype of the plant while the descriptive terms tall "
     "and dwarf are the phenotype.</b>"))
-story.append(b1(
-    "<b>What then would be the phenotype of a plant that had a genotype Tt?</b>"))
+story.append(b1('A plant with genotype Tt has the tall phenotype because T is dominant.'))
 story.append(b1(
     "<b>As Mendel found the phenotype of the F<sub>1</sub> heterozygote Tt to be exactly "
     "like the TT parent in appearance, he proposed that in a pair of dissimilar factors, "
@@ -516,9 +515,7 @@ story.append(b1(
 story.append(b1(
     "<b>In this case T (for tallness) is dominant over t (for dwarfness), that is "
     "recessive.</b>"))
-story.append(b1(
-    "<b>(Do not use T for tall and d for dwarf because you will find it difficult to "
-    "remember whether T and d are alleles of the same gene/character or not).</b>"))
+story.append(b1('Use the same letter in uppercase and lowercase for the two alleles of one gene (T/t), not T/d.'))
 story.append(b1(
     "<b>Alleles can be similar as in the case of homozygotes TT and tt or can be "
     "dissimilar as in the case of the heterozygote Tt.</b>"))
@@ -819,28 +816,16 @@ story.append(note(
 
 # F130-F133 - "What exactly is dominance?" + the enzyme-based explanation
 story.append(gap())
-story.append(Paragraph(
-    "<b>What the snapdragon result forces us to ask:</b>", STYLES["Body"]))
-story.append(b1(
-    "<b>Explanation of the concept of dominance: What exactly is dominance? Why are some "
-    "alleles dominant and some recessive?</b>"))
-story.append(b1(
-    "<b>To tackle these questions, we must understand what a gene does.</b> Every gene, as "
-    "you know by now, contains the information to express a particular trait."))
+
+story.append(b1('<b>Concept of Dominance</b>'))
+story.append(b1('Each gene carries the information to express a particular trait.'))
 story.append(b1(
     "<b>In a diploid organism, there are two copies of each gene, i.e., as a pair of "
     "alleles. Now, these two alleles need not always be identical, as in a heterozygote.</b>"))
-story.append(b1(
-    "<b>One of them may be different due to some changes that it has undergone</b> "
-    "(about which you will read further on, and in the next chapter) <b>which modifies the "
-    "information that particular allele contains.</b>"))
+story.append(b1('One allele may be altered by mutation, modifying the information it carries.'))
 # F134, F135, F136 - enzyme example
-story.append(b1(
-    "<b>Let's take an example of a gene that contains the information for producing an "
-    "enzyme.</b> Now there are two copies of this gene, the two allelic forms."))
-story.append(b1(
-    "<b>Let us assume (as is more common) that the normal allele produces the normal enzyme "
-    "that is needed for the transformation of a substrate S.</b>"))
+story.append(b1('For example, a gene coding for an enzyme is present as two alleles.'))
+story.append(b1('Usually, the normal allele produces the normal enzyme that transforms substrate S.'))
 story.append(b1(
     "<b>Theoretically, the modified allele could be responsible for production of - "
     "(i) the normal/less efficient enzyme, or (ii) a non-functional enzyme, or (iii) no "
@@ -924,10 +909,7 @@ story.append(data_table([
 
 # F161-F167 - multiple alleles + pleiotropy example
 story.append(gap())
-story.append(b1(
-    "<b>Do you realise that the example of ABO blood grouping also provides a good example "
-    "of multiple alleles?</b> Here you can see that there are more than two, i.e., three "
-    "alleles, governing the same character."))
+story.append(b1('ABO blood groups also show multiple alleles: three alleles (I<super>A</super>, I<super>B</super> and i) govern one character.'))
 story.append(b1(
     "<b>Since in an individual only two alleles can be present, multiple alleles can be "
     "found only when population studies are made.</b>"))
@@ -971,10 +953,7 @@ story.append(b1(
 story.append(b1(
     "<b>Thus, yellow colour was dominant over green and round shape dominant over "
     "wrinkled.</b>"))
-story.append(b1(
-    "<b>Let us use the genotypic symbols Y for dominant yellow seed colour and y for "
-    "recessive green seed colour, R for round shaped seeds and r for wrinkled seed "
-    "shape.</b>"))
+story.append(b1('Symbols: Y = yellow (dominant), y = green; R = round (dominant), r = wrinkled.'))
 story.append(b1(
     "<b>The genotype of the parents can then be written as RRYY and rryy.</b>"))
 # F174
@@ -1114,14 +1093,7 @@ story.append(b1(
 
 # F212-F213 - Fig 4.8 read-the-plate (meiosis)
 story.append(gap())
-story.append(note(
-    "<b>Read the plate (Figure 4.8 labels).</b> The plate is <b>Meiosis and germ cell "
-    "formation in a cell with four chromosomes. Can you see how chromosomes segregate when "
-    "germ cells are formed?</b> The plate is laid out in time order: a <b>G<sub>2</sub></b> "
-    "cell with paired chromosomes, a <b>Bivalent</b> stage (two homologous chromosomes "
-    "paired), <b>Meiosis I</b> with its <b>anaphase</b> (the homologs pulled to opposite "
-    "poles), <b>Meiosis II</b> (the sister chromatids separated), and the four final "
-    "<b>Germ cells</b>."))
+story.append(note('Figure 4.8 shows chromosome segregation in a four-chromosome cell: after G2, homologues form a bivalent; homologues separate in meiosis I, and sister chromatids separate in meiosis II.'))
 
 # F214-F220 - Table 4.3 (chromosome vs gene comparison)
 story.append(gap())
@@ -1140,10 +1112,7 @@ story.append(data_table([
 
 # F202-F205
 story.append(gap())
-story.append(b1(
-    "<b>Recall that you have studied the behaviour of chromosomes during mitosis "
-    "(equational division) and during meiosis (reduction division).</b> The important "
-    "things to remember are that chromosomes as well as genes occur in pairs."))
+story.append(b1('Chromosomes and genes both occur in pairs; mitosis is equational division, whereas meiosis is reduction division.'))
 story.append(b1(
     "<b>The two alleles of a gene pair are located on homologous sites on homologous "
     "chromosomes.</b>"))
@@ -1291,9 +1260,7 @@ story.append(heading("4.4", "POLYGENIC INHERITANCE", level=1))
 story.append(b1(
     "<b>Mendel's studies mainly described those traits that have distinct alternate forms "
     "such as flower colour which are either purple or white.</b>"))
-story.append(b1(
-    "<b>But if you look around you will find that there are many traits which are not so "
-    "distinct in their occurrence and are spread across a gradient.</b>"))
+story.append(b1('Many traits vary along a gradient rather than in discrete categories; such variation is associated with polygenic inheritance.'))
 story.append(b1(
     "<b>For example, in humans we don't just have tall or short people as two distinct "
     "alternatives but a whole range of possible heights.</b>"))
@@ -1310,10 +1277,7 @@ story.append(b1(
 story.append(b1(
     "<b>In a polygenic trait the phenotype reflects the contribution of each allele, i.e., "
     "the effect of each allele is additive.</b>"))
-story.append(b1(
-    "<b>To understand this better let us assume that three genes A, B, C control skin "
-    "colour in human with the dominant forms A, B and C responsible for dark skin colour "
-    "and the recessive forms a, b and c for light skin colour.</b>"))
+story.append(b1('In the model, three genes A, B and C control human skin colour: dominant alleles A, B and C are associated with dark skin, while recessive alleles a, b and c are associated with light skin.'))
 story.append(b1(
     "<b>The genotype with all the dominant alleles (AABBCC) will have the darkest skin "
     "colour and that with all the recessive alleles (aabbcc) will have the lightest skin "
@@ -1407,12 +1371,7 @@ story.append(b1(
     "<b>In human beings and in Drosophila the males have one X and one Y chromosome, "
     "whereas females have a pair of X-chromosomes besides autosomes (Figure 4.12a, b).</b>"))
 # F270-F272
-story.append(b1(
-    "<b>In the above description you have studied about two types of sex determining "
-    "mechanisms, i.e., XO type and XY type.</b> But in both cases males produce two "
-    "different types of gametes, (a) either with or without X-chromosome or (b) some "
-    "gametes with X-chromosome and some with Y-chromosome. Such type of sex determination "
-    "mechanism is designated to be the example of <b>male heterogamety</b>."))
+story.append(b1('In both XO and XY types, males produce two different gamete types: with or without an X chromosome in the XO type, and with an X or a Y chromosome in the XY type. This is male heterogamety.'))
 story.append(b1(
     "<b>In some other organisms, e.g., birds, a different mechanism of sex determination "
     "is observed (Figure 4.12 c).</b> In this case the total number of chromosome is same "
@@ -1534,9 +1493,7 @@ story.append(b1(
     "<b>In addition to recombination, mutation is another phenomenon that leads to "
     "variation in DNA.</b>"))
 # F294-F296
-story.append(b1(
-    "<b>As you will learn in Chapter 5, one DNA helix runs continuously from one end to "
-    "the other in each chromatid, in a highly supercoiled form.</b>"))
+story.append(b1('Each chromatid carries one continuous, highly supercoiled DNA double helix.'))
 story.append(b1(
     "<b>Therefore loss (deletions) or gain (insertion/duplication) of a segment of DNA, "
     "result in alteration in chromosomes.</b> Since genes are known to be located on "

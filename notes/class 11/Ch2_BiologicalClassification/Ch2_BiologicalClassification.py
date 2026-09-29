@@ -119,12 +119,8 @@ story.append(body("<b>R.H. Whittaker (1969) proposed a Five Kingdom Classificati
 story.append(keyterm("<b>The main criteria for classification used by him include cell structure, "
                      "body organisation, mode of nutrition, reproduction</b> and <b>phylogenetic "
                      "relationships.</b>"))
-story.append(b1("<b>Table 2.1 gives a comparative account of different characteristics of the "
-                "five kingdoms</b> - it is the single most examinable table in this chapter."))
-story.append(b1("A <b>three-domain system</b> has also been proposed, that divides the "
-                "<b>Kingdom Monera into two domains</b>, leaving the remaining eukaryotic kingdoms "
-                "in the <b>third domain</b>, and thereby a <b>six kingdom classification</b>. "
-                "(You will learn about this system in detail in higher classes.)"))
+story.append(b1('Table 2.1 compares the characteristics of the five kingdoms.'))
+story.append(b1('The three-domain system splits Monera into two domains and places the eukaryotic kingdoms in the third, yielding a six-kingdom classification.'))
 
 # ---- Table 2.1 (verbatim from source) ----
 story.append(heading("T 2.1", "Characteristics of the Five Kingdoms", level=2, has_table=True))
@@ -144,8 +140,7 @@ story.append(data_table([
 
 # ---- 2.1(intro) continued - the issues that drove the regrouping ----
 story.append(heading("2.1a", "What Drove the Regrouping - The 'Plants' Problem", level=2))
-story.append(body("Let us look at this five kingdom classification to understand the "
-                  "<b>issues and considerations</b> that influenced the classification system."))
+
 story.append(b1("<b>Earlier classification systems included bacteria, blue green algae, fungi, "
                 "mosses, ferns, gymnosperms and the angiosperms under 'Plants'.</b> The character "
                 "that <b>unified this whole kingdom</b> was that all the organisms included had a "
@@ -180,11 +175,7 @@ story.append(b1("Over time, an attempt has been made to evolve a classification 
                 "reflects <b>not only the morphological, physiological and reproductive "
                 "similarities, but is also phylogenetic</b>, i.e., is <b>based on evolutionary "
                 "relationships</b>."))
-story.append(note("In this chapter we will study characteristics of <b>Kingdoms Monera, Protista "
-                  "and Fungi</b> of the Whittaker system of classification. The Kingdoms "
-                  "<b>Plantae</b> and <b>Animalia</b>, commonly referred to as plant and animal "
-                  "kingdoms respectively, will be dealt separately in <b>chapters 3 and 4</b> - so "
-                  "sections 2.4 and 2.5 below are deliberately brief in NCERT itself."))
+
 
 # ---- 2.1 KINGDOM MONERA ----
 story.append(heading("2.1", "Kingdom Monera - Bacteria", level=1))
@@ -771,13 +762,7 @@ story.append(memory_aid("Four viral diseases of humans to name on demand: <b>mum
                         "herpes, influenza</b> (and <b>AIDS</b>). Plant symptoms: <b>mosaic "
                         "formation, leaf rolling and curling, yellowing and vein clearing, "
                         "dwarfing and stunted growth</b>."))
-story.append(note("<b>Would you call viruses living or non-living?</b> - the chapter puts this "
-                  "question to you directly, and gives you both sides rather than a verdict: "
-                  "viruses are <b>not considered truly 'living'</b> if living means having a "
-                  "<b>cell structure</b>, and they are <b>inert crystalline structures outside the "
-                  "living cell</b>; yet they carry <b>infectious genetic material</b> and, once "
-                  "inside a host cell, <b>take over its machinery to replicate</b>. Answer it with "
-                  "these facts, not with a one-word label."))
+story.append(note('Viruses are not considered truly living when life requires cell structure; outside a host they are inert crystals, yet they carry infectious genetic material and replicate using host-cell machinery inside a cell.'))
 
 story.append(heading("2.6b", "Viroids", level=2))
 story.append(keyterm("<b>In 1971, T.O. Diener discovered a new infectious agent that was smaller "
@@ -811,8 +796,7 @@ story.append(keyterm("<b>Lichens are symbiotic associations i.e. mutually useful
                      "respectively.</b>"))
 story.append(b1("<b>Algae prepare food for fungi and fungi provide shelter and absorb mineral "
                 "nutrients and water for its partner.</b>"))
-story.append(b1("<b>So close is their association that if one saw a lichen in nature one would "
-                "never imagine that they had two different organisms within them.</b>"))
+story.append(b1('The algal and fungal partners are so intimately associated that a lichen appears to be one organism.'))
 story.append(b1("<b>Lichens are very good pollution indicators - they do not grow in polluted "
                 "areas.</b>"))
 story.append(memory_aid("<b>Phyco</b>biont = the <b>alga</b> = <b>autotrophic</b> = makes the "
@@ -859,9 +843,7 @@ story.append(b1("<b>Viruses, viroids, prions and lichens find no mention in the 
 
 # ---- Appendix: terms the exercises assume (Rule 2 exercise-gap coverage) ----
 story.append(heading("Appendix", "Terms Used in the Exercises", level=1))
-story.append(body("These exercise questions lean on points the chapter body assumes rather than "
-                  "states outright. Each answer below is assembled <b>only</b> from facts stated "
-                  "in this chapter."))
+
 story.append(b1("<b>Why classification systems keep changing (Q1).</b> The <b>earlier "
                 "classifications included bacteria, blue-green algae, fungi, mosses, ferns, "
                 "gymnosperms and the angiosperms under 'Plants'</b>, so <b>groups which widely "
@@ -943,14 +925,7 @@ story.append(b1("<b>Virus structure, genetic material and viral diseases (Q11).<
                 "stranded RNA or double stranded DNA</b>; and <b>bacteriophages are usually double "
                 "stranded DNA viruses</b>. Four diseases: <b>mumps, small pox, herpes and "
                 "influenza</b> (<b>AIDS</b> is also caused by a virus)."))
-story.append(b1("<b>Are viruses living or non-living (Q12)?</b> The chapter poses this question "
-                "itself and supplies both sides rather than a verdict - see the note in section "
-                "2.6a. Against: viruses are <b>not considered truly 'living'</b> if living means "
-                "having a <b>cell structure</b>, they have an <b>inert crystalline structure "
-                "outside the living cell</b>, they <b>could be crystallised</b>, and they are "
-                "<b>obligate parasites</b>. For: they contain <b>infectious genetic material</b> "
-                "and, once they infect a cell, they <b>take over the machinery of the host cell to "
-                "replicate themselves</b>."))
+
 
 if __name__ == "__main__":
     sys.exit(build_pdf(OUT_PDF, story,

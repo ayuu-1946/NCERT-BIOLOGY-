@@ -106,7 +106,7 @@ story.append(b1("Why are there so many species?"))
 story.append(b1("Did such great diversity exist throughout earth's history?"))
 story.append(b1("How did this diversification come about?"))
 story.append(b1("How and why is this diversity important to the biosphere?"))
-story.append(b1("Would it function any differently if the diversity was much less?"))
+
 story.append(b1("How do humans benefit from the diversity of life?"))
 
 # ======================================================================================
@@ -260,8 +260,7 @@ story.append(data_table([
 ], col_widths=[2.2, 8.0]))
 story.append(gap())
 # F040, F041, F042 - prokaryotes are outside these estimates
-story.append(b1(
-    "It should be noted that <b>these estimates do not give any figures for prokaryotes</b>."))
+story.append(b1('These estimates exclude prokaryotes.'))
 story.append(b1(
     "Biologists are <b>not sure how many prokaryotic species</b> there might be. "
     "<b>Conventional taxonomic methods are not suitable for identifying microbial species</b>, "
@@ -359,10 +358,7 @@ story.append(gap())
 # F066, F067, F068 - the three hypotheses
 # [VERIFICATION FIX] F065a (Pass 3(b) direction 2, UNINVENTORIED) - NCERT's own framing sentence,
 # restored verbatim in place of the earlier paraphrase.
-story.append(body(
-    "<b>What is so special about tropics that might account for their greater biological "
-    "diversity?</b> <b>Ecologists and evolutionary biologists</b> have proposed <b>various "
-    "hypotheses</b>; some important ones are:"))
+story.append(body('Three main hypotheses have been proposed to explain the greater species diversity of the tropics.'))
 story.append(data_table([
     ["Hypothesis", "Reasoning (NCERT)"],
     ["<b>(a) More evolutionary time</b>",
@@ -437,10 +433,7 @@ story.append(note(
 # ======================================================================================
 story.append(heading("13.1.3", "The importance of Species Diversity to the Ecosystem", 2))
 # F083 (opener), F084
-story.append(body(
-    "<b>Does the number of species in a community really matter to the functioning of the "
-    "ecosystem?</b> This is a question for which <b>ecologists have not been able to give a "
-    "definitive answer</b>."))
+story.append(body("Whether species richness affects ecosystem function remains unsettled; Tilman's plots showed that greater species richness reduces year-to-year variation in total biomass."))
 # F085, F086
 story.append(b1(
     "For <b>many decades</b>, ecologists believed that <b>communities with more species, "
@@ -474,10 +467,8 @@ story.append(gap())
 # F091 - the three questions NCERT poses
 story.append(body("NCERT poses three questions here:"))
 story.append(b1("Does it really matter to us if a few species become extinct?"))
-story.append(b1("Would <b>Western Ghats</b> ecosystems be <b>less functional</b> if one of its "
-                "<b>tree frog species</b> is lost forever?"))
-story.append(b1("How is our quality of life affected if, say, instead of <b>20,000</b> we have "
-                "only <b>15,000 species of ants</b> on earth?"))
+
+
 story.append(gap())
 # F092, F093, F094 - the rivet popper hypothesis
 # [VERIFICATION FIX] F092a (Pass 3(b) direction 2, UNINVENTORIED) - the first half of NCERT's
@@ -554,11 +545,7 @@ story.append(b1(
     "species. The chapter summary dates the origin of life more precisely: <b>life originated on "
     "earth nearly 3.8 billion years ago</b>, since when there had been <b>enormous "
     "diversification of life forms</b>."))
-story.append(b1(
-    "<b>How is the 'Sixth Extinction' presently in progress different from the previous "
-    "episodes? The difference is in the rates.</b> The <b>current species extinction rates</b> "
-    "are estimated to be <b>100 to 1,000 times faster than in the pre-human times</b>, and "
-    "<b>our activities are responsible for the faster rates</b>."))
+story.append(b1("The 'Sixth Extinction' now in progress differs in rate: current species extinction rates are estimated to be 100 to 1,000 times faster than in pre-human times, and human activities are responsible."))
 story.append(b1(
     "Ecologists warn that <b>if the present trends continue, nearly half of all the species on "
     "earth might be wiped out within the next 100 years</b>."))
@@ -645,15 +632,7 @@ story.append(b1(
     "Another example is the case of a <b>coevolved plant-pollinator mutualism</b>, where "
     "<b>extinction of one invariably leads to the extinction of the other</b>."))
 # Exercise gap Q10 - F189 - explicitly marked outside NCERT
-story.append(memory_aid(
-    "<b>For NCERT exercise 10</b> (\"can you think of a situation where we <b>deliberately want "
-    "to make a species extinct</b>, and how would you justify it?\") the chapter itself supplies "
-    "<b>no content at all</b>, so this reasoning is <b>outside NCERT</b> and is <b>not</b> "
-    "examinable as NCERT text. The defensible answer is a <b>disease-causing organism</b> that "
-    "exists only to harm - the <b>smallpox virus</b> (already eradicated), the <b>polio "
-    "virus</b>, or the <b>Guinea worm</b>. Justification: eradicating such a parasite ends "
-    "enormous human suffering, and these organisms occupy no ecosystem role that other species "
-    "depend on obligatorily."))
+
 
 # ======================================================================================
 # ---- 13.2 BIODIVERSITY CONSERVATION (F133) ----
@@ -696,32 +675,11 @@ story.append(heading("13.2.1", "Broadly utilitarian arguments", 3))
 story.append(b1(
     "The <b>broadly utilitarian argument</b> says that <b>biodiversity plays a major role in many "
     "ecosystem services that nature provides</b>."))
-story.append(b1(
-    "The <b>fast-dwindling Amazon forest</b> is estimated to produce, <b>through "
-    "photosynthesis</b>, <b>20 per cent of the total oxygen in the earth's atmosphere</b>. "
-    "<b>Can we put an economic value on this service by nature?</b> You can get some idea by "
-    "finding out <b>how much your neighborhood hospital spends on a cylinder of oxygen</b>."))
-story.append(b1(
-    "<b>Pollination</b> - <b>without which plants cannot give us fruits or seeds</b> - is another "
-    "service ecosystems provide through <b>pollinators</b>: <b>bees, bumblebees, birds and "
-    "bats</b>. <b>What will be the costs of accomplishing pollination without help from natural "
-    "pollinators?</b>"))
-story.append(b1(
-    "There are other <b>intangible benefits</b> we derive from nature - the <b>aesthetic "
-    "pleasures of walking through thick woods</b>, <b>watching spring flowers in full bloom</b> "
-    "or <b>waking up to a bulbul's song in the morning</b>. <b>Can we put a price tag on such "
-    "things?</b>"))
+story.append(b1("The fast-dwindling Amazon forest is estimated to produce, through photosynthesis, 20 per cent of the total oxygen in the earth's atmosphere."))
+story.append(b1('Pollination by bees, bumblebees, birds and bats is an ecosystem service; without it, plants cannot produce fruits or seeds.'))
+story.append(b1('Intangible benefits include the aesthetic value of woods, flowers and birdsong; these benefits cannot be priced.'))
 # F183 + F188 - summary-sourced service list, visibly attributed, plus the soil-erosion inference
-story.append(note(
-    "<b>Summary-sourced list, and the answer to exercise 8.</b> The <b>chapter summary</b> (not "
-    "the body) states that besides the <b>direct benefits</b> - <b>food, fibre, firewood, "
-    "pharmaceuticals</b> and so on - there are <b>many indirect benefits we receive through "
-    "ecosystem services such as pollination, pest control, climate moderation and flood "
-    "control</b>. <b>Exercise 8</b> additionally asks how the <b>biotic components</b> deliver "
-    "<b>control of floods and soil erosion</b>; <b>soil erosion is named nowhere in this "
-    "chapter</b>, so that part is <b>necessary inference, not NCERT text</b>: vegetation cover "
-    "and root systems <b>bind the soil</b> and <b>slow surface run-off</b>, so rain soaks in "
-    "instead of sheeting off, which both <b>checks erosion</b> and <b>moderates flooding</b>."))
+story.append(note('Besides direct benefits such as food, fibre, firewood and pharmaceuticals, biodiversity provides indirect benefits through ecosystem services such as pollination, pest control, climate moderation and flood control.'))
 
 # Ethical - F147
 story.append(heading("13.2.1", "The ethical argument", 3))
@@ -935,12 +893,11 @@ story.append(data_table([
      "mammals), against a shallow <b>Z of 0.1 to 0.2</b> for areas within one region. See the "
      "NOTE at the end of 13.1.2 (ii)."],
     ["<b>Q8</b>",
-     "<b>Control of floods and soil erosion</b> as ecosystem services delivered by the "
-     "<b>biotic components</b>. <b>Flood control</b> is named only in the chapter summary; "
-     "<b>soil erosion</b> is named nowhere in the chapter.",
-     "<b>Vegetation cover and root systems bind the soil and slow surface run-off</b>, so water "
-     "soaks in rather than sheeting away - checking <b>erosion</b> and moderating <b>floods</b>. "
-     "Marked in 13.2.1 as summary-sourced plus necessary inference, not body text."],
+     "Among the ecosystem services are control of floods and soil erosion. How is this achieved "
+     "by the biotic components of the ecosystem?",
+     "<b>Addition (reasoning beyond chapter text):</b> Vegetation cover and root systems bind the "
+     "soil and slow surface run-off, allowing more rainwater to soak in; this checks erosion and "
+     "moderates flooding."],
     ["<b>Q9</b>",
      "The figure <b>animals 72 per cent</b> against <b>plants 22 per cent</b>. The body says "
      "animals are <b>more than 70 per cent</b>; the exact <b>72 per cent</b> appears only in the "
@@ -948,12 +905,12 @@ story.append(data_table([
      "Both forms are valid - see the NOTE in 13.1.1. Plant species diversity (<b>22 per cent</b>) "
      "is <b>much less</b> than that of animals (<b>72 per cent</b> in the exercise's wording)."],
     ["<b>Q10</b>",
-     "A situation where we <b>deliberately want to make a species extinct</b>, and its "
-     "justification. The body offers <b>no content at all</b> on deliberate extinction.",
-     "Answered in the <b>MEMORY AID</b> box at the end of 13.1.4, and explicitly marked "
-     "<b>not in NCERT</b>: disease-causing organisms such as the <b>smallpox virus</b>, "
-     "<b>polio virus</b> and <b>Guinea worm</b>."],
+     "Can you think of a situation where we deliberately want to make a species extinct? How "
+     "would you justify it?",
+     "<b>Addition (reasoning beyond chapter text):</b> A disease-causing organism such as the "
+     "smallpox virus (eradicated) or polio virus; eradicating such a pathogen ends human suffering."],
 ], col_widths=[1.4, 4.6, 5.4]))
+
 
 
 def main():

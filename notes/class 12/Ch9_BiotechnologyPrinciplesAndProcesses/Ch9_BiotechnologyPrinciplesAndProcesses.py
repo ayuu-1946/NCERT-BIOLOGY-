@@ -196,13 +196,7 @@ story.append(Spacer(1, 3))
 
 # ---- 9.1 (cont.) The fate of alien DNA and the origin of replication ----
 story.append(heading("9.1", "Fate of an alien piece of DNA: the origin of replication", 2))
-story.append(Paragraph(
-    "What happens to a piece of DNA that is somehow transferred into an alien organism? "
-    "<b>Most likely</b>, this piece of DNA would <b>not</b> be able to multiply itself in the "
-    "progeny cells of the organism. But when it gets <b>integrated into the genome</b> of the "
-    "recipient, it <b>may</b> multiply and be inherited along with the host DNA - because the "
-    "alien piece of DNA has become part of a chromosome, which has the ability to replicate.",
-    STYLES["Body"]))
+story.append(Paragraph('Alien DNA multiplies in a host only when integrated into its genome and linked to an origin of replication; it then replicates with the chromosome.', STYLES["Body"]))
 story.append(keyterm(
     "In a chromosome there is a specific DNA sequence called the <b>origin of replication</b>, "
     "which is responsible for <b>initiating replication</b>. Therefore, for the multiplication of "
