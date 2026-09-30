@@ -57,7 +57,7 @@ from neet_template import (  # noqa: E402
     build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
-from reportlab.platypus import Paragraph, Spacer  # noqa: E402
+from reportlab.platypus import PageBreak, Paragraph, Spacer  # noqa: E402
 from reportlab.lib.units import cm  # noqa: E402
 
 ASSETS = os.path.join(HERE, "assets")
@@ -239,10 +239,6 @@ story.append(process_flow([
     "water and minerals from the soil.",
 ]))
 story.append(figure("fig_5_3.png", "Fig. 5.3 - The regions of the root-tip"))
-story.append(P(
-    "Read the plate from the tip upwards: <b>Root cap</b>, then the <b>Region of meristematic "
-    "activity</b>, then the <b>Region of elongation</b>, and finally the <b>Region of "
-    "maturation</b>, from which each <b>Root hair</b> emerges."))
 story.append(note(
     "The three regions are a developmental sequence, not three different tissues: the same cell "
     "is first produced in the meristematic region, then elongates, then matures."))
@@ -404,6 +400,7 @@ story.append(figure(
     "Fig. 5.9 - Position of floral parts on thalamus : (a) Hypogynous (b) and (c) Perigynous (d) Epigynous"))
 
 # ---- 5.5.1 Parts of a Flower (F145-F148) ----
+story.append(PageBreak())
 story.append(heading("5.5.1", "Parts of a Flower", level=2))
 story.append(P(
     "Each flower normally has four floral whorls, viz., calyx, corolla, androecium and gynoecium."))
