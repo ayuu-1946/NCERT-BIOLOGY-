@@ -23,7 +23,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))))
 
-from reportlab.platypus import Spacer
+from reportlab.platypus import Spacer, PageBreak
+from copy import copy
 from reportlab.lib.units import cm
 
 from neet_template import (  # noqa: E402
@@ -38,12 +39,48 @@ ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch8_CellTheUnitOfLife.pdf")
 
 
+# Chapter-local compact rhythm: preserve the template's typeface and hierarchy while
+# reducing only leading and paragraph gaps to eliminate avoidable white space.
+_COMPACT_BODY = copy(STYLES["Body"])
+_COMPACT_BODY.leading = 13.0
+_COMPACT_BODY.spaceAfter = 1.5
+_COMPACT_BULLETS = {}
+for _level in (1, 2, 3):
+    _style = copy(STYLES[f"Bullet{_level}"])
+    _style.leading = {1: 13.0, 2: 12.6, 3: 12.3}[_level]
+    _style.spaceAfter = 0.5
+    _COMPACT_BULLETS[_level] = _style
+
 def P(text, style="Body"):
+    if style == "Body":
+        return Paragraph(text, _COMPACT_BODY)
     return Paragraph(text, STYLES[style])
 
 
 def B(text, level=1):
-    return Paragraph(text, STYLES[f"Bullet{level}"])
+    return Paragraph(text, _COMPACT_BULLETS[level])
+
+
+# Local figure sizing only; the shared template remains untouched.
+_FIGURE_WIDTHS_CM = {
+    "fig_8_1.png": 12.5,
+    "fig_8_2.png": 8.4,
+    "fig_8_3a.png": 12.5,
+    "fig_8_3b.png": 12.5,
+    "fig_8_4.png": 14.0,
+    "fig_8_5.png": 9.2,
+    "fig_8_6.png": 8.6,
+    "fig_8_7.png": 12.2,
+    "fig_8_8.png": 9.7,
+    "fig_8_9.png": 6.7,
+    "fig_8_10.png": 15.9,
+    "fig_8_11.png": 9.4,
+    "fig_8_12.png": 5.3,
+    "fig_8_13.png": 12.5,
+}
+def matched_figure(asset_name, caption_text, _assets_dir=None):
+    return figure(asset_name, caption_text, ASSETS,
+                  max_width_cm=_FIGURE_WIDTHS_CM.get(asset_name, 12.5))
 
 
 def labels_line(labels):
@@ -118,6 +155,8 @@ story.append(P("Unicellular organisms are capable of (i) independent existence a
                "structure of a cell does not ensure independent living."))
 story.append(keyterm("Hence, <b>cell</b> is the fundamental structural and functional unit of "
                      "all living organisms."))
+# ref p2
+story.append(PageBreak())
 story.append(P("<b>Antonie Von Leeuwenhoek</b> first saw and described a live cell. "
                "<b>Robert Brown</b> later discovered the nucleus. The invention of the microscope "
                "and its improvement leading to the electron microscope revealed all the "
@@ -182,17 +221,9 @@ story.append(B("- Among multicellular organisms, <b>human red blood cells</b> ar
 story.append(B("- <b>Nerve cells</b> are some of the longest cells."))
 story.append(P("They may be disc-like, polygonal, columnar, cuboid, thread like, or even "
                "irregular. The shape of the cell may vary with the function they perform."))
-story.append(figure("fig_8_1.png",
+story.append(matched_figure("fig_8_1.png",
                     "Figure 8.1 Diagram showing different shapes of the cells",
                     ASSETS))
-story.append(labels_line([
-    "Red blood cells (round and biconcave)",
-    "White blood cells (amoeboid)",
-    "Columnar epithelial cells (long and narrow)",
-    "Nerve cell (Branched and long)",
-    "A tracheid (elongated)",
-    "Mesophyll cells (round and oval)",
-]))
 
 # ---- 8.4 ---- Prokaryotic Cells  (F061-F080, Fig 8.2)
 story.append(heading("8.4", "Prokaryotic Cells", level=1))
@@ -225,16 +256,10 @@ story.append(P("No organelles, like the ones in eukaryotes, are found in prokary
 story.append(keyterm("A specialised differentiated form of cell membrane called <b>mesosome</b> "
                      "is the characteristic of prokaryotes. They are essentially infoldings of "
                      "cell membrane."))
-story.append(figure("fig_8_2.png",
+story.append(matched_figure("fig_8_2.png",
                     "Figure 8.2 Diagram showing comparison of eukaryotic cell with other "
                     "organisms",
                     ASSETS))
-story.append(labels_line([
-    "A typical eukaryotic cell (10-20 um)",
-    "Typical bacteria (1-2 um)",
-    "PPLO (about 0.1 um)",
-    "Viruses (0.02-0.2 um)",
-]))
 
 # ---- 8.4.1 ---- Cell Envelope and its Modifications  (F081-F103)
 story.append(heading("8.4.1", "Cell Envelope and its Modifications", level=2))
@@ -327,25 +352,14 @@ story.append(P("Plant and animal cells are different as the former possess cell 
                "and a large central vacuole which are absent in animal cells. On the other hand, "
                "animal cells have centrioles which are absent in <b>almost all</b> plant cells "
                "(Figure 8.3)."))
-story.append(figure("fig_8_3a.png",
+story.append(matched_figure("fig_8_3a.png",
                     "Figure 8.3 Diagram showing : (a) Plant cell (b) Animal cell "
                     "- part (a) Plant cell",
                     ASSETS))
-story.append(labels_line([
-    "Rough endoplasmic reticulum", "Lysosome", "Smooth endoplasmic reticulum", "Plasmodesmata",
-    "Microtubule", "Nucleus", "Nucleolus", "Golgi apparatus", "Nuclear envelope",
-    "Plasma membrane", "Vacuole", "Middle lamella", "Cell wall", "Mitochondrion", "Ribosomes",
-    "Chloroplast", "Cytoplasm", "Peroxisome",
-]))
-story.append(figure("fig_8_3b.png",
+story.append(matched_figure("fig_8_3b.png",
                     "Figure 8.3 Diagram showing : (a) Plant cell (b) Animal cell "
                     "- part (b) Animal cell",
                     ASSETS))
-story.append(labels_line([
-    "Golgi apparatus", "Microvilli", "Plasma membrane", "Centriole", "Peroxisome", "Lysosome",
-    "Ribosomes", "Mitochondrion", "Rough endoplasmic reticulum", "Cytoplasm", "Nucleus",
-    "Nucleolus", "Nuclear envelope", "Smooth endoplasmic reticulum",
-]))
 
 # ---- 8.5.1 ---- Cell Membrane  (F124-F149, Fig 8.4)
 story.append(heading("8.5.1", "Cell Membrane", level=2))
@@ -380,6 +394,8 @@ story.append(P("The fluid nature of the membrane is also important from the poin
                "functions like cell growth, formation of intercellular junctions, secretion, "
                "endocytosis, cell division etc."))
 
+# ref p7
+story.append(PageBreak())
 story.append(heading("8.5.1", "Transport across the membrane", level=3))
 story.append(P("<b>One of the most important functions</b> of the plasma membrane is the "
                "transport of the molecules across it. The membrane is <b>selectively permeable</b> "
@@ -405,7 +421,7 @@ story.append(data_table([
      "transport, e.g., Na+/K+ Pump."],
 ], col_widths=[1, 2.6]))
 story.append(Spacer(1, 0.15 * cm))
-story.append(figure("fig_8_4.png",
+story.append(matched_figure("fig_8_4.png",
                     "Figure 8.4 Fluid mosaic model of plasma membrane. <b>Read this figure by "
                     "position and shape, not by colour:</b> the source prints the proteins in "
                     "red/orange, the phospholipid bilayer in blue, the sugar chains in orange and "
@@ -418,11 +434,10 @@ story.append(figure("fig_8_4.png",
                     "outward from the outer surface; and <b>cholesterol</b> is the short rod "
                     "lying inside the bilayer among the tails.",
                     ASSETS))
-story.append(labels_line([
-    "Sugar", "Peripheral Protein", "Phospholipid bilayer", "Cholesterol", "Integral protein",
-]))
 
 # ---- 8.5.2 ---- Cell Wall  (F150-F155)
+# ref p8
+story.append(PageBreak())
 story.append(heading("8.5.2", "Cell Wall", level=2))
 story.append(keyterm("A <b>non-living rigid structure</b> called the <b>cell wall</b> forms an "
                      "outer covering for the plasma membrane of <b>fungi</b> and <b>plants</b>."))
@@ -478,11 +493,7 @@ story.append(Spacer(1, 0.15 * cm))
 story.append(note("<b>From the printed summary (folded in here because the body never says it):</b> "
                   "ER helps in the <b>transport of substances</b>, synthesis of proteins, "
                   "<b>lipoproteins</b> and <b>glycogen</b>."))
-story.append(figure("fig_8_5.png", "Figure 8.5 Endoplasmic reticulum", ASSETS))
-story.append(labels_line([
-    "Nucleus", "Nuclear pore", "Rough endoplasmic reticulum", "Ribosome",
-    "Smooth Endoplasmic reticulum",
-]))
+story.append(matched_figure("fig_8_5.png", "Figure 8.5 Endoplasmic reticulum", ASSETS))
 
 # ---- 8.5.3.2 ---- Golgi Apparatus  (F170-F182, Fig 8.6)
 story.append(heading("8.5.3.2", "Golgi Apparatus", level=3))
@@ -509,8 +520,7 @@ story.append(process_flow([
 ]))
 story.append(keyterm("Golgi apparatus is the important site of formation of "
                      "<b>glycoproteins</b> and <b>glycolipids</b>."))
-story.append(figure("fig_8_6.png", "Figure 8.6 Golgi apparatus", ASSETS))
-story.append(labels_line(["Cisternae"]))
+story.append(matched_figure("fig_8_6.png", "Figure 8.6 Golgi apparatus", ASSETS))
 
 # ---- 8.5.3.3 ---- Lysosomes  (F183-F185, + F312 folded)
 story.append(heading("8.5.3.3", "Lysosomes", level=3))
@@ -571,11 +581,8 @@ story.append(P("The matrix also possesses <b>single circular DNA molecule</b>, a
 story.append(note("<b>From the printed summary (folded in here because the body never says it):</b> "
                   "Mitochondria help in <b>oxidative phosphorylation</b> and generation of "
                   "<b>adenosine triphosphate</b>."))
-story.append(figure("fig_8_7.png",
+story.append(matched_figure("fig_8_7.png",
                     "Figure 8.7 Structure of mitochondrion (Longitudinal section)", ASSETS))
-story.append(labels_line([
-    "Outer membrane", "Inner membrane", "Inter-membrane space", "Matrix", "Crista",
-]))
 
 # ---- 8.5.5 ---- Plastids  (F209-F233, Fig 8.8, + F317 folded)
 story.append(heading("8.5.5", "Plastids", level=2))
@@ -627,10 +634,7 @@ story.append(P("The ribosomes of the chloroplasts are <b>smaller (70S)</b> than 
 story.append(note("<b>From the printed summary (folded in here because the body never says it):</b> "
                   "The <b>grana</b>, in the plastid, is the site of <b>light reactions</b> and the "
                   "<b>stroma</b> of <b>dark reactions</b>."))
-story.append(figure("fig_8_8.png", "Figure 8.8 Sectional view of chloroplast", ASSETS))
-story.append(labels_line([
-    "Outer membrane", "Inner membrane", "Granum", "Thylakoid", "Stroma lamella", "Stroma",
-]))
+story.append(matched_figure("fig_8_8.png", "Figure 8.8 Sectional view of chloroplast", ASSETS))
 
 # ---- 8.5.6 ---- Ribosomes  (F234-F242, Fig 8.9)
 story.append(heading("8.5.6", "Ribosomes", level=2))
@@ -649,8 +653,7 @@ story.append(P("The eukaryotic ribosomes are <b>80S</b> while the prokaryotic ri
                "(Fig 8.9). <b>Both 70S and 80S ribosomes are composed of two subunits.</b>"))
 story.append(keyterm("Here <b>'S' (Svedberg's Unit)</b> stands for the <b>sedimentation "
                      "coefficient</b>; it is <b>indirectly</b> a measure of density and size."))
-story.append(figure("fig_8_9.png", "Figure 8.9 Ribosome", ASSETS))
-story.append(labels_line(["Large subunit", "Small subunit"]))
+story.append(matched_figure("fig_8_9.png", "Figure 8.9 Ribosome", ASSETS))
 
 # ---- 8.5.7 ---- Cytoskeleton  (F243-F244)
 story.append(heading("8.5.7", "Cytoskeleton", level=2))
@@ -691,7 +694,7 @@ story.append(P("The central tubules are connected by <b>bridges</b> and is also 
                "peripheral doublets are also interconnected by <b>linkers</b>."))
 story.append(P("Both the cilium and flagellum emerge from centriole-like structure called the "
                "<b>basal bodies</b>."))
-story.append(figure("fig_8_10.png",
+story.append(matched_figure("fig_8_10.png",
                     "Figure 8.10 Section of cilia/flagella showing different parts : "
                     "(a) Electron micrograph (b) Diagrammatic representation of internal "
                     "structure. <b>Read part (b) by position and geometry, not by colour:</b> the "
@@ -705,10 +708,6 @@ story.append(figure("fig_8_10.png",
                     "central tubules; and the <b>peripheral microtubules (doublets)</b> are the "
                     "nine paired rings arranged around the inside of the membrane.",
                     ASSETS))
-story.append(labels_line([
-    "Plasma membrane", "Peripheral microtubules (doublets)", "Central sheath",
-    "Interdoublet bridge", "Central microtuble", "Radial spoke",
-]))
 story.append(note("The label above is printed in the source as <b>Central microtuble</b>, missing "
                   "the second 'u'. The NCERT spelling is reproduced exactly as printed; the "
                   "running text uses the correct <b>central microtubule</b>."))
@@ -763,10 +762,7 @@ story.append(P("The <b>nucleoli</b> are spherical structures present in the nucl
                "<b>not a membrane bound structure</b>. It is a site for <b>active ribosomal RNA "
                "synthesis</b>. <b>Larger and more numerous</b> nucleoli are present in cells "
                "actively carrying out protein synthesis."))
-story.append(figure("fig_8_11.png", "Figure 8.11 Structure of nucleus", ASSETS))
-story.append(labels_line([
-    "Nucleoplasm", "Nucleolus", "Nuclear pore", "Nuclear membrane",
-]))
+story.append(matched_figure("fig_8_11.png", "Figure 8.11 Structure of nucleus", ASSETS))
 
 story.append(heading("8.5.10", "Chromatin and chromosomes", level=3))
 story.append(P("The interphase nucleus has a <b>loose and indistinct network</b> of nucleoprotein "
@@ -777,8 +773,7 @@ story.append(keyterm("Every chromosome (<b>visible only in dividing cells</b>) e
                      "<b>primary constriction</b> or the <b>centromere</b> on the sides of which "
                      "disc shaped structures called <b>kinetochores</b> are present "
                      "(Figure 8.12). <b>Centromere holds two chromatids of a chromosome.</b>"))
-story.append(figure("fig_8_12.png", "Figure 8.12 Chromosome with kinetochore", ASSETS))
-story.append(labels_line(["Kinetochore"]))
+story.append(matched_figure("fig_8_12.png", "Figure 8.12 Chromosome with kinetochore", ASSETS))
 story.append(P("Based on the position of the centromere, the chromosomes can be classified into "
                "<b>four types</b> (Figure 8.13)."))
 story.append(data_table([
@@ -797,55 +792,23 @@ story.append(Spacer(1, 0.15 * cm))
 story.append(P("<b>Sometimes</b> a few chromosomes have <b>non-staining secondary "
                "constrictions</b> at a constant location. This gives the appearance of a small "
                "fragment called the <b>satellite</b>."))
-story.append(figure("fig_8_13.png",
+story.append(matched_figure("fig_8_13.png",
                     "Figure 8.13 Types of chromosomes based on the position of centromere",
                     ASSETS))
-story.append(labels_line([
-    "Satellite", "Secondary constriction", "Short arm", "Long arm", "Centromere",
-]))
 
 # ---- 8.5.11 ---- Microbodies  (F303)
 story.append(heading("8.5.11", "Microbodies", level=2))
 story.append(keyterm("<b>Many</b> membrane bound minute vesicles called <b>microbodies</b> that "
                      "contain various enzymes, are present in <b>both plant and animal cells</b>."))
-
-# ---- R ---- Quick Recap (printed summary sentences already present in the body)
-story.append(heading("R", "Quick Recap - the printed summary, sentence by sentence", level=1))
-story.append(note("Every sentence below is reproduced from the chapter's own printed SUMMARY. The "
-                  "sentences that add something the body never states have already been folded "
-                  "into their named section above, so nothing here is a new fact."))
-story.append(B("- All organisms are made of cells or aggregates of cells."))
-story.append(B("- Based on the presence or absence of a membrane bound nucleus and other "
-               "organelles, cells and hence organisms can be named as eukaryotic or prokaryotic."))
-story.append(B("- A typical eukaryotic cell consists of a cell membrane, nucleus and cytoplasm."))
-story.append(B("- Centrosome and centriole form the basal body of cilia and flagella that "
-               "facilitate locomotion."))
-story.append(B("- Nucleus contains nucleoli and chromatin network. It not only controls the "
-               "activities of organelles but also plays a major role in heredity."))
-story.append(B("- Endoplasmic reticulum contains tubules or cisternae. They are of two types: "
-               "rough and smooth."))
-story.append(B("- ER helps in the transport of substances, synthesis of proteins, lipoproteins "
-               "and glycogen."))
-story.append(B("- The golgi body is a membranous organelle composed of flattened sacs. The "
-               "secretions of cells are packed in them and transported from the cell."))
-story.append(B("- Lysosomes are single membrane structures containing enzymes for digestion of "
-               "all types of macromolecules."))
-story.append(B("- Ribosomes are involved in protein synthesis. These occur freely in the "
-               "cytoplasm or are associated with ER."))
-story.append(B("- Mitochondria help in oxidative phosphorylation and generation of adenosine "
-               "triphosphate. They are bound by double membrane; the outer membrane is smooth and "
-               "inner one folds into several cristae."))
-story.append(B("- Plastids are pigment containing organelles found in plant cells. The grana, in "
-               "the plastid, is the site of light reactions and the stroma of dark reactions."))
-story.append(B("- The green coloured plastids are chloroplasts, which contain chlorophyll, "
-               "whereas the other coloured plastids are chromoplasts, which may contain pigments "
-               "like carotene and xanthophyll."))
-story.append(B("- The inner membrane encloses the nucleoplasm and the chromatin material."))
-story.append(B("- Thus, cell is the structural and functional unit of life."))
 story.append(note("The summary's phrase 'found in plant cells <b>only</b>' is deliberately not "
                   "reproduced above. The chapter body states plastids are found in all plant cells "
                   "<b>and in euglenoides</b>, and the body's more specific statement is the one "
                   "kept - see section 8.5.5."))
+
+
+# ---- R ---- Quick Recap
+# The printed summary is already folded into the body where it adds information;
+# the reference layout retains only the qualification attached to Microbodies.
 
 # ---- E ---- Terms used in the exercises  (F321-F325 + the two exercise gaps)
 story.append(heading("E", "Terms Used in the Exercises", level=1))
