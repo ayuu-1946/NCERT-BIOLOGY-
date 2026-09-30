@@ -196,23 +196,7 @@ story.append(P("<b>Which cells divide by mitosis.</b> In animals, mitotic cell d
                "exceptions</b> to this where haploid cells divide by mitosis, for example, "
                "<b>male honey bees</b>. Against this, the plants can show mitotic divisions in "
                "<b>both</b> haploid and diploid cells."))
-story.append(note("NCERT stops the reader three times inside this section to think, and each "
-                  "question is answerable from the chapter itself. (i) How do plants and animals "
-                  "continue to grow all their lives? Do all cells in a plant divide all the time? "
-                  "Do you think all cells continue to divide in all plants and animals? Can you "
-                  "tell the name and the location of tissues having cells that divide all their "
-                  "life in higher plants? Do animals have similar meristematic tissues? - the "
-                  "meristematic tissues, the apical and the lateral cambium, are the plant tissues "
-                  "whose mitotic divisions continue lifelong (10.3), and heart cells and G0 cells "
-                  "show that not all cells keep dividing. (ii) From your recollection of examples "
-                  "of alternation of generations in plants (Chapter 3) identify plant species and "
-                  "stages at which mitosis is seen in haploid cells - the chapter's own answer is "
-                  "that plants can show mitotic divisions in both haploid and diploid cells. "
-                  "(iii) You have studied mitosis in onion root tip cells. It has 16 chromosomes "
-                  "in each cell. Can you tell how many chromosomes will the cell have at G1 phase, "
-                  "after S phase, and after M phase? Also, what will be the DNA content of the "
-                  "cells at G1, after S and at G2, if the content after M phase is 2C? - worked "
-                  "out in the NOTE above."))
+story.append(note('Plant meristems, including apical meristems and lateral cambium, divide throughout life. Most differentiated cells exit the cell cycle into G0.'))
 
 # ---- 10.2 M Phase ---- (F046-F050)
 story.append(H("10.2", "M Phase (Mitosis) - Equational Division", 1,
@@ -367,9 +351,7 @@ story.append(H("10.3", "Significance of Mitosis", 1,
 # [VERIFICATION FIX] Pass 3(b) MISSING -> 10.3: NCERT's linking sentence "It is very essential
 # to understand the significance of this division in the life of an organism." was absent from
 # this block; restored above, between F091 and F093, where NCERT places it.
-story.append(P("NCERT asks here: are you aware of some examples where you have studied about "
-               "haploid and diploid insects? The chapter's own example of a haploid animal cell "
-               "dividing by mitosis is the <b>male honey bee</b> (10.1.1)."))
+story.append(P('Haploid animal cells can divide by mitosis; the male honey bee is an example (10.1.1).'))
 story.append(B("&bull; <b>Growth.</b> The growth of multicellular organisms is due to mitosis."))
 story.append(B("&bull; <b>Restoring the nucleo-cytoplasmic ratio.</b> Cell growth results in "
                "disturbing the ratio between the nucleus and the cytoplasm. It therefore becomes "

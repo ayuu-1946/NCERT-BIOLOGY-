@@ -90,11 +90,7 @@ story.append(body(
     "8.6 Microbes as Biofertilisers."))
 story.append(gap())
 # F002 (opener), F003 (crossref), F004 (question)
-story.append(body(
-    "Besides <b>macroscopic plants and animals</b>, <b>microbes are the major components of "
-    "biological systems on this earth</b>. You have studied about the diversity of living "
-    "organisms in <b>Class XI</b>: recall which Kingdoms among the living organisms contain "
-    "micro-organisms, and which of those groups are <b>only</b> microscopic."))
+story.append(body('Microbes are major components of biological systems and occur in Monera, Protista and Fungi (Class XI).'))
 # F005, F006, F007, F008
 story.append(body(
     "Microbes are present <b>everywhere</b> - in soil, water, air, inside our bodies and that of "
@@ -166,12 +162,7 @@ story.append(body(
 story.append(gap())
 
 # F016 (opener, second intro block, p3), F017, F018, F019
-story.append(body(
-    "In <b>chapter 7</b>, you have read that <b>microbes cause a large number of diseases in human "
-    "beings</b>. They also cause diseases in <b>animals and plants</b>. But this should "
-    "<b>not</b> make you think that <b>all microbes are harmful</b>; <b>several microbes are "
-    "useful to man in diverse ways</b>. Some of the <b>most important contributions of microbes to "
-    "human welfare</b> are discussed in this chapter."))
+story.append(body('Microbes cause disease (Chapter 7), but many are useful to humans; their key contributions follow.'))
 story.append(gap())
 
 # ======================================================================================
@@ -201,12 +192,7 @@ story.append(body(
     "In our <b>stomach</b> too, the LAB play a <b>very beneficial role in checking disease-causing "
     "microbes</b>."))
 # F028, F029, F030
-story.append(body(
-    "The <b>dough</b> used for making foods such as <b>dosa</b> and <b>idli</b> is also "
-    "<b>fermented by bacteria</b>. The <b>puffed-up appearance of dough</b> is due to the "
-    "<b>production of CO2 gas</b>. Two questions worth answering from Class XI: which "
-    "<b>metabolic pathway</b> is taking place resulting in the formation of CO2, and where do the "
-    "<b>bacteria for these fermentations</b> come from?"))
+story.append(body('Dosa and idli dough is fermented by bacteria; its puffed-up appearance is due to the production of CO<sub>2</sub> gas.'))
 # F031, F032, F033, F034
 story.append(body(
     "Similarly, the dough used for making <b>bread</b> is fermented using <b>baker's yeast</b> "
@@ -338,13 +324,7 @@ story.append(process_flow([
 ]))
 story.append(gap())
 # F062, F063, F064, F065
-story.append(body(
-    "After Penicillin, <b>other antibiotics were also purified from other microbes</b> - it is "
-    "worth naming some other antibiotics and finding out their sources. Antibiotics have "
-    "<b>greatly improved our capacity to treat deadly diseases</b> such as <b>plague</b>, "
-    "<b>whooping cough (kali khansi)</b>, <b>diphtheria (gal ghotu)</b> and <b>leprosy (kusht "
-    "rog)</b>, which <b>used to kill millions all over the globe</b>. Today, <b>we cannot imagine "
-    "a world without antibiotics</b>."))
+story.append(body('Other antibiotics followed penicillin; antibiotics are used to treat plague, whooping cough, diphtheria and leprosy.'))
 # F195 - SUMMARY-UNIQUE fold-in (pneumonia)
 story.append(body(
     "Stated in the chapter's own summary: <b>antibiotics have played a major role in controlling "
@@ -400,11 +380,7 @@ story.append(data_table([
 ], col_widths=[3.0, 2.8, 4.2]))
 story.append(gap())
 # Exercise-gap item 2 (Q13(a), single cell protein) - explicitly beyond the NCERT body text
-story.append(note(
-    "<b>Beyond the body text - for exercise Q13(a).</b> The term <b>single cell protein (SCP)</b> "
-    "appears nowhere in this chapter's body. SCP is <b>microbial biomass</b> - the cells of "
-    "microbes such as <b>Spirulina</b> grown in bulk - used as <b>protein-rich food or animal "
-    "feed</b>. This definition is exercise support, not an NCERT sentence from this chapter."))
+
 story.append(gap())
 
 # ======================================================================================
@@ -422,13 +398,7 @@ story.append(keyterm("This <b>municipal waste-water</b> is also called <b>sewage
 # urban waste water is disposed off daily?", with its "you can understand why" nudge
 # - had no inventory row, so the section stated the treatment before the problem.
 # Row F085a added.
-story.append(body(
-    "Sewage <b>contains large amounts of organic matter and microbes</b>. <b>Many of which are "
-    "pathogenic</b>. It is worth wondering <b>where this huge quantity of sewage or urban waste "
-    "water is disposed off daily</b>: it <b>cannot be discharged into natural water bodies</b> "
-    "like rivers and streams <b>directly</b> - and you can understand why, because that organic "
-    "matter and those pathogens would go straight into the river. <b>Before disposal, hence, "
-    "sewage is treated in sewage treatment plants (STPs) to make it less polluting</b>."))
+story.append(body('Sewage contains abundant organic matter and pathogens, so it is treated in sewage treatment plants before discharge into water bodies.'))
 # F088, F089
 story.append(body(
     "<b>Treatment of waste water is done by the heterotrophic microbes naturally present in the "
@@ -723,12 +693,7 @@ story.append(keyterm(
     "<b>Biofertilisers</b> are <b>organisms that enrich the nutrient quality of the soil</b>. The "
     "<b>main sources of biofertilisers are bacteria, fungi and cyanobacteria</b>."))
 # F182, F183, F184
-story.append(body(
-    "You have studied about the <b>nodules on the roots of leguminous plants</b> formed by the "
-    "<b>symbiotic association of Rhizobium</b>. These bacteria <b>fix atmospheric nitrogen into "
-    "organic forms, which is used by the plant as nutrient</b>. <b>Other bacteria can fix "
-    "atmospheric nitrogen while free-living in the soil</b> (examples <i>Azospirillum</i> and "
-    "<i>Azotobacter</i>), thus <b>enriching the nitrogen content of the soil</b>."))
+story.append(body('Nitrogen-fixing microbes include symbiotic Rhizobium in legume root nodules and free-living Azospirillum and Azotobacter.'))
 # F185, F186, F187, F188, F189
 story.append(body(
     "<b>Fungi are also known to form symbiotic associations with plants (mycorrhiza)</b>, and "
@@ -767,15 +732,7 @@ story.append(body(
     "to reduce dependence on chemical fertilisers</b>."))
 story.append(gap())
 # Exercise-gap item 3 (Q13(b), role of microbes in soil) - explicitly beyond the NCERT body text
-story.append(note(
-    "<b>Beyond the body text - for exercise Q13(b), the role of microbes in soil.</b> Assembled "
-    "only from facts already in this chapter: soil microbes <b>fix atmospheric nitrogen</b> "
-    "(<i>Rhizobium</i> in root nodules; free-living <i>Azospirillum</i> and <i>Azotobacter</i>), "
-    "<b>mobilise phosphorus</b> to the plant through <b>mycorrhiza</b> (<i>Glomus</i>), <b>add "
-    "organic matter and increase fertility</b> (cyanobacteria and blue green algae), and - as the "
-    "sewage sections show - <b>decompose organic matter</b>, because the heterotrophic microbes "
-    "that treat sewage digest exactly the organic matter and the microbial sludge fed to them. "
-    "The general decomposer role is not stated as such in this chapter's body."))
+
 story.append(gap())
 
 # ======================================================================================
@@ -870,6 +827,14 @@ story.append(KeepTogether([
          "the BOD of waste water, the more is its polluting potential</b>."),
 ]))
 
+
+# Closing appendix: only GAP questions are reproduced.
+story.append(heading("Appendix", "Terms used in the exercises", level=1))
+story.append(body('<b>Q13(a). Find out the role of microbes in the following and discuss it with your teacher: Single cell protein (SCP).</b>'))
+story.append(body('<b>Addition (not stated in this chapter):</b> Single-cell protein (SCP) is microbial biomass; for example, Spirulina can be grown in bulk and used as protein-rich food or animal feed.'))
+story.append(body('<b>Q13(b). Find out the role of microbes in the following and discuss it with your teacher: Soil.</b>'))
+story.append(body('<b>Answer (from chapter facts):</b> Microbes contribute to soil fertility through nitrogen fixation (Rhizobium, Azospirillum and Azotobacter), phosphorus availability through mycorrhiza (Glomus), and organic matter and fertility through cyanobacteria.'))
+story.append(body('<b>Addition (not stated in this chapter):</b> Soil microbes also decompose organic matter.'))
 
 if __name__ == "__main__":
     sys.exit(build_pdf(

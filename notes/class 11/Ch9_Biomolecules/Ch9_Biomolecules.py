@@ -92,10 +92,7 @@ story.append(P("<i>Class 11 - Chapter 9 - NEET replacement notes built from the 
 story.append(Spacer(1, 0.18 * cm))
 
 # ---- Chapter opener ---- (F001-F007, summary-unique F265, F266, F267 folded here)
-story.append(P("There is a wide diversity in living organisms in our biosphere. Are all living "
-               "organisms made of the same chemicals, i.e., elements and compounds? "
-               "<b>Although there is a bewildering diversity of living organisms, their chemical "
-               "composition and metabolic reactions appear to be remarkably similar.</b>"))
+story.append(P('Despite enormous diversity, organisms share remarkably similar chemical composition and metabolic reactions.'))
 story.append(P("If we perform a chemical analysis on a plant tissue, animal tissue or a microbial "
                "paste, we obtain a list of elements like carbon, hydrogen, oxygen and several "
                "others, and their respective content per unit mass of a living tissue. If the same "
@@ -128,9 +125,7 @@ story.append(P("<i>Table 9.1 - A Comparison of Elements Present in Non-living an
 
 # ---- 9.1 How to Analyse Chemical Composition? ---- (F008-F071)
 story.append(H("9.1", "How to Analyse Chemical Composition?", 1,
-               P("We wish to know what type of organic compounds are found in living organisms. "
-                 "How does one go about finding the answer? To get an answer, one has to perform a "
-                 "chemical analysis.")))
+               P('Organic compounds in living tissues are identified by chemical analysis.')))
 story.append(P("We can take any living tissue (a vegetable or a piece of liver, etc.) and grind it "
                "in trichloroacetic acid (Cl3CCOOH) using a mortar and a pestle. We obtain a thick "
                "slurry. If we were to strain this through a cheesecloth or cotton we would obtain "
@@ -217,12 +212,7 @@ story.append(P("The R group could be a methyl (-CH3), or ethyl (-C2H5) or a high
                "including the carboxyl carbon; <b>arachidonic acid</b> has 20 carbon atoms "
                "including the carboxyl carbon. Fatty acids could be <b>saturated</b> (without "
                "double bond) or <b>unsaturated</b> (with one or more C=C double bonds)."))
-story.append(P("Another simple lipid is <b>glycerol</b> which is trihydroxy propane. Many lipids "
-               "have both glycerol and fatty acids; here the fatty acids are found <b>esterified</b> "
-               "with glycerol. They can then be <b>monoglycerides, diglycerides and "
-               "triglycerides</b>. These are also called <b>fats and oils</b> based on melting "
-               "point. Oils have lower melting point (e.g., gingelly oil) and hence remain as oil "
-               "in winters. Can you identify a fat from the market?"))
+story.append(P('Many lipids contain glycerol and fatty acids; the fatty acids are esterified with glycerol. They may be monoglycerides, diglycerides or triglycerides. Fats and oils are distinguished by melting point: oils have lower melting points, while fats have higher melting points.'))
 story.append(P("Some lipids have phosphorous and a phosphorylated organic compound in them. These "
                "are <b>phospholipids</b>. They are found in cell membrane; <b>lecithin</b> is one "
                "example. Some tissues, especially the neural tissues, have lipids with more complex "
@@ -318,9 +308,7 @@ story.append(keyterm("Those which have molecular weights <b>less than one thousa
                      "those found in the acid-insoluble fraction are called <b>macromolecules</b> "
                      "or biomacromolecules. There are <b>thousands</b> of such small molecular "
                      "weight biomolecules, all under <b>1000 Da</b>."))
-story.append(P("The molecules in the insoluble fraction, with the exception of lipids, are "
-               "<b>polymeric substances</b>. Then why do lipids, whose molecular weights do not "
-               "exceed 800 Da, come under the acid-insoluble (macromolecular) fraction?"))
+story.append(P('Lipids (molecular weights below 800 Da) are not polymers, yet they occur in the acid-insoluble fraction because grinding forms insoluble membrane vesicles.'))
 story.append(note("Lipids are indeed small molecular weight compounds and are present not only as "
                   "such but also arranged into structures like cell membrane and other membranes. "
                   "When we grind a tissue, we disrupt the cell structure: cell membrane and other "
@@ -565,7 +553,7 @@ story.append(P("In our skeletal muscle, under anaerobic conditions, <b>lactic ac
 # [VERIFICATION FIX] D9: NCERT's antecedent sentence "The chemical or metabolic conversion
 # refers to a reaction." was absent - the block opened straight at the substrate definition,
 # leaving "conversion" (the word in this very heading) undefined. Restored as F194a.
-story.append(H("9.8.2", "How do Enzymes bring about such High Rates of Chemical Conversions?", 2,
+story.append(H("9.8.2", 'Mechanism of Enzyme Action - How Rates Increase', 2,
                keyterm("The <b>chemical or metabolic conversion</b> referred to here is a "
                        "<b>reaction</b>. The chemical which is converted into a product is called a "
                        "<b>'substrate'</b>. Enzymes - i.e. proteins with three-dimensional "

@@ -148,10 +148,7 @@ story.append(memory_aid(
 # --- 5.1.1 Structure of Polynucleotide Chain (F234 heading, F250 opener, F001-F051) ---
 story.append(heading("5.1.1", "Structure of Polynucleotide Chain", 2))
 
-story.append(Paragraph(
-    "Let us recapitulate the chemical structure of a polynucleotide chain, whether DNA or "
-    "RNA. A nucleotide is built up in three stages, and each stage adds one component.",
-    STYLES["Body"]))
+story.append(Paragraph('Polynucleotide structure: a nucleotide is built in three steps, each adding one component.', STYLES["Body"]))
 story.append(process_flow([
     "<b>Nitrogenous base.</b> Start with a nitrogen-containing ring compound. There are "
     "two classes: <b>purines</b> and <b>pyrimidines</b>.",
@@ -329,16 +326,7 @@ story.append(memory_aid(
 # --- 5.1.2 Packaging of DNA Helix (F235 heading, F251 opener, F059-F079) ---
 story.append(heading("5.1.2", "Packaging of DNA Helix", 2))
 
-story.append(Paragraph(
-    "Take the distance between two consecutive base pairs as <b>0.34 nm</b> "
-    "(0.34 x 10<super>-9</super> m). Then the length of the DNA double helix in a typical "
-    "mammalian cell -- with its <b>6.6 x 10<super>9</super> bp</b> (the diploid figure, "
-    "twice the haploid 3.3 x 10<super>9</super>) -- comes to "
-    "<b>6.6 x 10<super>9</super> bp x 0.34 x 10<super>-9</super> m/bp = 2.2 metres</b>. "
-    "A length of DNA far greater than the dimension of a typical nucleus, which is "
-    "approximately <b>10<super>-6</super> m</b>. How is such a long polymer packaged in a "
-    "cell?",
-    STYLES["Body"]))
+story.append(Paragraph('In a typical mammalian cell, 6.6 x 10<super>9</super> base pairs spaced 0.34 x 10<super>-9</super> m apart form a DNA double helix about 2.2 metres long, far greater than the approximately 10<super>-6</super> m dimension of a typical nucleus.', STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(note(
     "<b>Working the E. coli figure the other way.</b> NCERT asks: if the length of "
@@ -397,13 +385,7 @@ story.append(figure(
     "nucleosomes of chromatin appear as dark beads threaded on the lighter string of the "
     "intervening DNA."))
 story.append(Spacer(1, 3))
-story.append(note(
-    "<b>Counting the nucleosomes in a mammalian cell.</b> NCERT asks how many such beads "
-    "you imagine are present in a mammalian cell. With <b>6.6 x 10<super>9</super> bp</b> "
-    "of DNA and about <b>200 bp per nucleosome</b>, the estimate is "
-    "6.6 x 10<super>9</super> divided by 200, that is approximately "
-    "<b>3.3 x 10<super>7</super> nucleosomes</b> -- of the order of thirty million beads "
-    "on the string."))
+story.append(note('An estimate for a mammalian cell is 6.6 x 10<super>9</super> bp / 200 bp per nucleosome, or approximately 3.3 x 10<super>7</super> nucleosomes.'))
 story.append(Spacer(1, 3))
 story.append(memory_aid(
     "The packaging hierarchy is a single ladder of increasing order: "
@@ -507,13 +489,7 @@ story.append(Paragraph(
     "were convinced at this stage.",
     STYLES["Body"]))
 story.append(Spacer(1, 3))
-story.append(note(
-    "<b>DNA versus DNase -- do not confuse the two names.</b> NCERT asks whether you can "
-    "think of any difference between DNAs and DNase. <b>DNA</b> is the nucleic acid, the "
-    "genetic material itself. <b>DNase</b> is an <b>enzyme</b> (a protein) that "
-    "<i>degrades</i> DNA -- the suffix <b>-ase</b> marks an enzyme, as in protease "
-    "(degrades protein) and RNase (degrades RNA). One is the substrate, the other is the "
-    "scissors."))
+story.append(note('DNA is the genetic material; DNase is an enzyme that degrades DNA, and the suffix -ase marks an enzyme.'))
 
 # --- 5.2.1 The Genetic Material is DNA (F239 heading, F255 opener) ---
 story.append(heading("5.2.1", "The Genetic Material is DNA", 2))
@@ -653,10 +629,7 @@ story.append(memory_aid(
 # --------------------------------------------------------------------------------------
 story.append(heading("5.3", "RNA WORLD", 1))
 
-story.append(Paragraph(
-    "From the foregoing discussion, an immediate question becomes evident -- <b>which is "
-    "the first genetic material?</b> The properties just compared give the answer.",
-    STYLES["Body"]))
+story.append(Paragraph('RNA is regarded as the first genetic material; the supporting evidence follows.', STYLES["Body"]))
 story.append(Paragraph(
     "<b>RNA was the first genetic material.</b> There is now enough evidence to suggest "
     "that essential life processes (such as <b>metabolism</b>, <b>translation</b>, "
@@ -893,17 +866,7 @@ story.append(Paragraph(
     "raises two questions that the section must answer: why both strands are not copied, "
     "and why only a segment is copied.",
     STYLES["Body"]))
-story.append(Paragraph(
-    "<b>Why not both strands?</b> There are two reasons. First, if both strands act as a "
-    "template, they would code for RNA molecules with <b>different sequences</b> (as "
-    "complementarity does not mean identical), and in turn, if they code for proteins, the "
-    "sequence of amino acids in the proteins would be different. Hence, <b>one segment of "
-    "the DNA would be coding for two different proteins</b>, and this would complicate "
-    "the genetic information transfer machinery. Second, the <b>two RNA molecules if "
-    "produced simultaneously would be complementary to each other</b>, hence would form a "
-    "<b>double-stranded RNA</b>. This would prevent RNA from being translated into "
-    "protein and the <b>exercise of transcription would become a futile one</b>.",
-    STYLES["Body"]))
+story.append(Paragraph('Only one DNA strand is transcribed: if both strands acted as templates, they would code for different proteins, while the complementary RNAs would pair to form double-stranded RNA and block translation.', STYLES["Body"]))
 
 # --- 5.5.1 Transcription Unit (F246 heading, F262 opener, F191-F205) ---
 story.append(heading("5.5.1", "Transcription Unit", 2))
@@ -1357,24 +1320,8 @@ story.append(data_table([
      "<b>UAA, UAG, UGA are stop terminator codons.</b>"],
 ], col_widths=[2.1, 6.9]))
 story.append(Spacer(1, 4))
-story.append(note(
-    "<b>Worked exercise (NCERT, in-body).</b> <i>If following is the sequence of "
-    "nucleotides in mRNA, predict the sequence of amino acid coded by it (take help of the "
-    "checkerboard):</i> <b>-AUG UUU UUC UUC UUU UUU UUC-</b>. Reading Table 5.1 codon by "
-    "codon: AUG = <b>Met</b>, UUU = <b>Phe</b>, UUC = <b>Phe</b>, UUC = <b>Phe</b>, "
-    "UUU = <b>Phe</b>, UUU = <b>Phe</b>, UUC = <b>Phe</b>. So the peptide is "
-    "<b>Met-Phe-Phe-Phe-Phe-Phe-Phe</b>.<br/><br/>"
-    "<i>Now try the opposite. Following is the sequence of amino acids coded by an mRNA. "
-    "Predict the nucleotide sequence in the RNA:</i> <b>Met-Phe-Phe-Phe-Phe-Phe-Phe</b>. "
-    "<i>Do you face any difficulty in predicting the opposite?</i> Yes -- and that is the "
-    "point of the question. <b>Met</b> is unambiguous (only <b>AUG</b>), but each "
-    "<b>Phe</b> could be <b>UUU or UUC</b>, so six positions have two choices each and the "
-    "answer is not unique.<br/><br/>"
-    "<i>Can you now correlate which two properties of genetic code you have learnt?</i> "
-    "The forward direction works unambiguously because the code is a <b>triplet</b> read "
-    "<b>contiguously without punctuation</b>; the reverse direction is ambiguous because "
-    "the code is <b>degenerate</b>. Degeneracy is why translation is one-way readable: "
-    "<b>codon to amino acid is certain, amino acid to codon is not</b>."))
+story.append(Paragraph("<b>Worked forward example:</b> mRNA -AUG UUU UUC UUC UUU UUU UUC- codes for Met-Phe-Phe-Phe-Phe-Phe-Phe.", STYLES["Body"]))
+story.append(note("<b>Reverse prediction is ambiguous:</b> phenylalanine (Phe) is coded by both UUU and UUC because the genetic code is degenerate (5.6)."))
 story.append(Spacer(1, 3))
 story.append(memory_aid(
     "Fix the numbers: <b>4 bases, triplet code, 4^3 = 64 codons, 61 coding + 3 stop, for "
@@ -1388,10 +1335,7 @@ story.append(memory_aid(
 # ---- 5.6.1 Mutations and Genetic Code (F484 heading, F497 opener, F292-F305) ----
 story.append(heading("5.6.1", "Mutations and Genetic Code", 2))
 
-story.append(Paragraph(
-    "The <b>relationships between genes and DNA are best understood by mutation "
-    "studies</b>. You have studied about <b>mutation and its effect in Chapter 4</b>.",
-    STYLES["Body"]))
+story.append(Paragraph('The gene-DNA relationship is best understood through mutation studies (Chapter 4).', STYLES["Body"]))
 story.append(Paragraph(
     "Effects of <b>large deletions and rearrangements</b> in a segment of DNA are easy to "
     "comprehend. It may result in <b>loss or gain of a gene and so a function</b>. The "
@@ -1750,17 +1694,7 @@ story.append(Paragraph(
     "well, but it is beyond the scope of discussion at this level.</b>",
     STYLES["Body"]))
 story.append(Spacer(1, 3))
-story.append(note(
-    "<b>Why the operon switches itself off again -- and the answer to <i>\"can you think "
-    "for how long the lac operon would be expressed in the presence of lactose?\"</i></b> "
-    "Only <b>as long as the lactose lasts</b>. Put the facts of this section in a line: "
-    "<b>lactose is the inducer</b>, and <b>lactose is also the substrate of "
-    "beta-galactosidase</b>, the very enzyme the operon switches on. So the induced enzyme "
-    "<b>consumes the inducer</b> -- hydrolysing it to <b>galactose and glucose</b>, neither "
-    "of which <b>can act as an inducer</b>. As the lactose is used up there is nothing left "
-    "to <b>inactivate the repressor</b>, the repressor <b>binds the operator again</b>, and "
-    "<b>transcription stops</b>. The operon is therefore self-limiting: it stays on only "
-    "while its own substrate is present."))
+story.append(note('The lac operon stays on only while lactose lasts: lactose is both the inducer and the substrate of beta-galactosidase; once lactose is hydrolysed, the repressor rebinds the operator.'))
 story.append(Spacer(1, 3))
 story.append(memory_aid(
     "Gene letters, in order: <b>i-z-y-a</b> = <b>inhibitor (repressor), beta-gal, permease, "
@@ -1779,14 +1713,7 @@ story.append(memory_aid(
 #      site below; Rule 2 gap Q14(d) Bioinformatics extends F381/F382) ----
 story.append(heading("5.9", "HUMAN GENOME PROJECT", 1))
 
-story.append(Paragraph(
-    "In the preceding sections you have learnt that it is the <b>sequence of bases in DNA "
-    "that determines the genetic information of a given organism</b>. In other words, "
-    "<b>genetic make-up of an organism or an individual lies in the DNA sequences</b>. If "
-    "<b>two individuals differ, then their DNA sequences should also be different, at least "
-    "at some places</b>. These assumptions led to the <b>quest of finding out the complete "
-    "DNA sequence of human genome</b>.",
-    STYLES["Body"]))
+story.append(Paragraph('Genetic information lies in the DNA base sequence; differences between individuals reflect sequence differences, providing the rationale for the Human Genome Project.', STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(Paragraph(
     "With the establishment of <b>genetic engineering techniques</b> where it was possible "
@@ -1795,10 +1722,7 @@ story.append(Paragraph(
     "sequencing human genome was launched in the year 1990</b>.",
     STYLES["Body"]))
 story.append(Spacer(1, 3))
-story.append(keyterm(
-    "<b>Human Genome Project (HGP) was called a mega project.</b> You can imagine the "
-    "magnitude and the requirements for the project if we simply define the aims of the "
-    "project as follows."))
+story.append(keyterm('The Human Genome Project (HGP) was a mega project. Its aims were:'))
 story.append(data_table([
     ["What makes it a mega project", "The figure NCERT gives"],
     ["<b>Size of the genome</b>",
@@ -2018,25 +1942,10 @@ story.append(memory_aid(
 #      table per the inventory's exercise-gap scan -- no new fact added) ----
 story.append(heading("5.10", "DNA FINGERPRINTING", 1))
 
-story.append(keyterm(
-    "As stated in the preceding section, <b>99.9 per cent of base sequence among humans is "
-    "the same</b>. Assuming human genome as <b>3 x 10^9 bp</b>, in how many base sequences "
-    "would there be differences? It is <b>these differences in sequence of DNA which make "
-    "every individual unique in their phenotypic appearance</b>."))
-story.append(Paragraph(
-    "If one aims to <b>find out genetic differences between two individuals or among "
-    "individuals of a population</b>, <b>sequencing the DNA every time would be a daunting "
-    "and expensive task</b>. <b>Imagine trying to compare two sets of 3 x 10^6 base "
-    "pairs.</b>",
-    STYLES["Body"]))
+story.append(keyterm('Among humans, 99.9 per cent of the base sequence is the same. With the human genome taken as 3 x 10<super>9</super> bp, the remaining 0.1 per cent is about 3 x 10<super>6</super> bp, the figure NCERT uses next. These DNA-sequence differences make each individual unique in phenotypic appearance.'))
+story.append(Paragraph('Repeated DNA sequencing to compare individuals or a population would be daunting and expensive; comparing two sets of 3 x 10<super>6</super> base pairs illustrates the scale addressed by DNA fingerprinting.', STYLES["Body"]))
 story.append(Spacer(1, 3))
-story.append(note(
-    "<b>A printing inconsistency in the source, so you do not think you misread.</b> This "
-    "section quotes the human genome as <b>3 x 10^9 bp</b> and then, two sentences later, "
-    "as <b>3 x 10^6 base pairs</b>. Both are reproduced above exactly as NCERT prints "
-    "them. The figure established by the Human Genome Project in the preceding section is "
-    "<b>3 x 10^9</b> (about <b>3164.7 million bp</b>); the <b>10^6</b> is the source's own "
-    "slip."))
+
 story.append(Spacer(1, 4))
 story.append(keyterm(
     "<b>DNA fingerprinting is a very quick way to compare the DNA sequences of any two "
@@ -2092,11 +2001,7 @@ story.append(keyterm(
     "has traditionally been described as a DNA polymorphism if more than one variant "
     "(allele) at a locus occurs in human population with a frequency greater than "
     "0.01</b>."))
-story.append(Paragraph(
-    "(Recall different kind of <b>mutations</b> and their effects that you have already "
-    "studied in <b>Chapter 4</b>, and in the preceding sections in this chapter. Recall "
-    "also the definition of <b>alleles</b> from Chapter 4.)",
-    STYLES["Body"]))
+
 story.append(Paragraph(
     "<b>New mutations may arise in an individual either in somatic cells or in the germ "
     "cells</b> (cells that generate gametes in sexually reproducing organisms). If a "
@@ -2105,16 +2010,7 @@ story.append(Paragraph(
     "(through sexual reproduction).",
     STYLES["Body"]))
 story.append(Spacer(1, 3))
-story.append(Paragraph(
-    "The <b>probability of such variation to be observed in non-coding DNA sequence would "
-    "be higher</b>, as <b>mutations in these sequences may not have any immediate "
-    "effect/impact in an individual's reproductive ability</b>. These <b>mutations keep on "
-    "accumulating generation after generation, and form one of the basis of "
-    "variability/polymorphism</b>. There is a <b>variety of different types of "
-    "polymorphisms ranging from single nucleotide change to very large scale changes</b>. "
-    "For <b>evolution and speciation, such polymorphisms play very important role</b>, and "
-    "you will study these in details at higher classes.",
-    STYLES["Body"]))
+story.append(Paragraph('Variation is more likely to be observed in non-coding DNA because mutations there may have no immediate effect on reproductive ability. Such mutations accumulate across generations and form a basis of polymorphism, from single-nucleotide changes to larger-scale variation.', STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(keyterm(
     "The <b>technique of DNA Fingerprinting was initially developed by Alec Jeffreys</b>. "
@@ -2164,12 +2060,7 @@ story.append(figure(
     "numbers of VNTR</b>. Reading the gel, the <b>banding pattern of the crime-scene DNA "
     "matches individual B, and not individual A</b>."))
 story.append(Spacer(1, 3))
-story.append(Paragraph(
-    "The <b>sensitivity of the technique has been increased by use of polymerase chain "
-    "reaction (PCR</b> -- you will study about it in <b>Chapter 9</b>). Consequently, "
-    "<b>DNA from a single cell is enough to perform DNA fingerprinting analysis</b>. "
-    "<b>Currently, many different probes are used to generate DNA fingerprints.</b>",
-    STYLES["Body"]))
+story.append(Paragraph('PCR (Chapter 9) increased the sensitivity of DNA fingerprinting: DNA from a single cell is sufficient, and many different probes are now used.', STYLES["Body"]))
 story.append(Spacer(1, 3))
 story.append(Paragraph(
     "In addition to application in <b>forensic science</b>, it has much wider application, "

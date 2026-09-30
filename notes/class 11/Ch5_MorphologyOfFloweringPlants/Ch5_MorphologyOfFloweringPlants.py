@@ -249,10 +249,7 @@ story.append(note(
 
 # ---- 5.2 THE STEM (F059-F069, fold F276) ----
 story.append(heading("5.2", "The Stem", level=1))
-story.append(P(
-    "What are the features that distinguish a stem from a root? The morphological features of "
-    "stems - the presence of nodes and internodes, multicellular hair and positively phototropic "
-    "nature - help to differentiate the stems from roots."))
+story.append(P('Stem vs root: stems bear nodes and internodes, multicellular hairs, and are positively phototropic.'))
 story.append(keyterm(
     "<b>Stem:</b> the ascending part of the axis bearing branches, leaves, flowers and fruits. "
     "It develops from the plumule of the embryo of a germinating seed."))

@@ -91,24 +91,14 @@ story.append(data_table([
      "man-made ecosystems"],
 ], col_widths=[3.4, 7.2]))
 # F010
-story.append(body(
-    "We will first look at the <b>structure</b> of the ecosystem, in order to appreciate the "
-    "<b>input (productivity)</b>, <b>transfer of energy (food chain/web, nutrient cycling)</b> and "
-    "the <b>output (degradation and energy loss)</b>. We will also look at the relationships - "
-    "<b>cycles, chains, webs</b> - that are created as a result of these energy flows within the "
-    "system and their inter-relationship."))
+
 
 # ======================================================================================
 # ---- 12.1 ECOSYSTEM - STRUCTURE AND FUNCTION (F011-F033, F173, F175) ----
 # ======================================================================================
 story.append(heading("12.1", "ECOSYSTEM - STRUCTURE AND FUNCTION", 1))
 # F012 (opener), F013, F014
-story.append(body(
-    "In earlier classes, you have looked at the various components of the environment - "
-    "<b>abiotic</b> and <b>biotic</b>. You studied how the individual biotic and abiotic factors "
-    "affected each other and their surrounding. Let us look at these components in a more "
-    "<b>integrated manner</b> and see how the <b>flow of energy</b> takes place within these "
-    "components of the ecosystem."))
+story.append(body('Ecosystem structure links inputs (productivity), energy transfer (food chains, food webs and nutrient cycling) and outputs (degradation and energy loss); the cycles, chains and webs formed by these flows interact.'))
 # F015 + F173 (summary-unique: abiotic = air/water/soil; biotic = producers/consumers/decomposers)
 story.append(body(
     "Interaction of biotic and abiotic components results in a <b>physical structure that is "
@@ -141,12 +131,7 @@ story.append(process_flow([
 ]))
 # F024-F031 - the pond example
 story.append(heading("12.1", "The pond as an example of an aquatic ecosystem", 3))
-story.append(body(
-    "To understand the ethos of an aquatic ecosystem let us take a <b>small pond</b> as an example. "
-    "This is <b>fairly a self-sustainable unit</b> and rather simple example that explains even the "
-    "complex interactions that exist in an aquatic ecosystem. A pond is a <b>shallow water body</b> "
-    "in which all the above-mentioned <b>four basic components</b> of an ecosystem are well "
-    "exhibited."))
+story.append(body('A pond is a shallow, self-sustaining aquatic model that shows all four basic ecosystem components.'))
 story.append(data_table([
     ["Component in the pond", "What it is"],
     ["<b>Abiotic</b>", "The <b>water</b> with all the <b>dissolved inorganic and organic "
@@ -264,10 +249,7 @@ story.append(process_flow([
     "below).",
 ]))
 # F063 - simultaneity qualifier (marks-critical)
-story.append(note(
-    "It is important to note that <b>all the above steps in decomposition operate simultaneously</b> "
-    "on the detritus (Figure 12.1). Humification and mineralisation occur <b>during decomposition in "
-    "the soil</b>."))
+story.append(note('All steps of decomposition operate simultaneously on detritus; humification and mineralisation occur in soil.'))
 # F065, F066, F067
 story.append(keyterm(
     "<b>Humification</b> leads to accumulation of a <b>dark coloured amorphous substance called "
@@ -332,11 +314,7 @@ story.append(body(
     "organisms of an ecosystem. All organisms are <b>dependent for their food on producers</b>, "
     "either <b>directly or indirectly</b>. So you find a <b>unidirectional flow of energy</b> from "
     "the sun to producers and then to consumers."))
-story.append(note(
-    "<b>Thermodynamics:</b> Is this in keeping with the <b>first law of thermodynamics</b>? "
-    "Ecosystems are <b>not exempt from the Second Law of thermodynamics</b> either - they need a "
-    "<b>constant supply of energy</b> to synthesise the molecules they require, to <b>counteract "
-    "the universal tendency toward increasing disorderliness</b>."))
+story.append(note('Ecosystems obey both laws of thermodynamics: they need a constant energy input to build molecules and counter increasing disorder.'))
 # F084, F085, F086
 story.append(keyterm(
     "<b>Producers</b>: the <b>green plants in the ecosystem</b> are called producers. In a "
@@ -443,10 +421,7 @@ story.append(keyterm(
     "<b>10 per cent law:</b> the number of trophic levels in the grazing food chain is <b>restricted "
     "as the transfer of energy follows the 10 per cent law</b> - only <b>10 per cent</b> of the "
     "energy is transferred to each trophic level from the lower trophic level."))
-story.append(body(
-    "In nature, it is possible to have <b>so many levels - producer, herbivore, primary carnivore, "
-    "secondary carnivore</b> - in the grazing food chain (Figure 12.3). (<b>NCERT prompt:</b> Do "
-    "you think there is any such limitation in a detritus food chain?)"))
+story.append(body('A grazing food chain can have many trophic levels: producer, herbivore, primary carnivore and secondary carnivore.'))
 # Figure 12.3 - energy flow diagram; cover its labels (F158, F159): Sun, Heat, trophic levels
 story.append(body(
     "<b>Energy flow through different trophic levels (Figure 12.3):</b> energy from the <b>Sun</b> "
@@ -486,10 +461,7 @@ story.append(b1("A given organism <b>may occupy more than one trophic level simu
                 "must remember that the <b>trophic level represents a functional level, not a "
                 "species as such</b>."))
 # F141 - sparrow example
-story.append(b1("For example, a <b>sparrow</b> is a <b>primary consumer</b> when it eats <b>seeds, "
-                "fruits, peas</b>, and a <b>secondary consumer</b> when it eats <b>insects and "
-                "worms</b>. (<b>NCERT prompt:</b> Can you work out how many trophic levels human "
-                "beings function at in a food chain?)"))
+story.append(b1('A sparrow is a primary consumer when it eats seeds, fruits or peas, and a secondary consumer when it eats insects or worms.'))
 # F143, F144 - upright pyramids
 story.append(body(
     "In <b>most ecosystems</b>, all the pyramids - <b>of number, of energy and biomass</b> - are "
@@ -535,9 +507,7 @@ story.append(b1("<b>Pyramid of numbers on a big tree:</b> if you count the numbe
                 "feeding on a big tree</b>, then add the <b>small birds depending on the insects</b> "
                 "and the <b>larger birds eating the smaller</b>, the pyramid of numbers you get is "
                 "<b>not upright</b> (it is inverted/spindle-shaped). (NCERT asks you to draw it.)"))
-story.append(b1("<b>Pyramid of biomass in the sea</b> is <b>generally inverted</b> because the "
-                "<b>biomass of fishes far exceeds that of phytoplankton</b>. (<b>NCERT prompt:</b> "
-                "Isn't that a paradox? How would you explain this?)"))
+story.append(b1('The biomass pyramid in the sea is generally inverted because the biomass of fishes far exceeds that of phytoplankton.'))
 story.append(keyterm(
     "<b>Pyramid of energy is always upright, can never be inverted</b>, because when energy flows "
     "from a particular trophic level to the next, <b>some energy is always lost as heat at each "
@@ -610,9 +580,7 @@ story.append(b1("<b>Nutrient cycling</b> is the storage and movement of nutrient
 # ---- Terms used in the exercises (Rule 2 appendix) + exercises list (F191-F195) ----
 # ======================================================================================
 story.append(heading("Appendix", "TERMS USED IN THE EXERCISES", 1))
-story.append(body(
-    "NCERT's eleven exercise questions assume a few terms/facts the chapter never states outright. "
-    "Everything below is built only from statements already made in this chapter (plus the Summary)."))
+
 story.append(data_table([
     ["Term / fact assumed", "Explanation (from this chapter)"],
     ["<b>Litter</b> (Ex 6(e): distinguish <b>litter and detritus</b>)", "The body never defines "
@@ -656,12 +624,7 @@ story.append(body(
     "<b>6. Distinguish between:</b> (a) Grazing food chain and detritus food chain; (b) Production "
     "and decomposition; (c) Upright and inverted pyramid; (d) Food chain and Food web; (e) Litter "
     "and detritus; (f) Primary and secondary productivity - all covered above."))
-story.append(body(
-    "<b>7-11 (long answers):</b> 7. Describe the components of an ecosystem. 8. Define ecological "
-    "pyramids and describe, with examples, pyramids of number and biomass. 9. What is primary "
-    "productivity? Describe factors that affect it. 10. Define decomposition and describe its "
-    "processes and products. 11. Give an account of energy flow in an ecosystem - all answered by "
-    "the sections above."))
+
 
 # ---- Closing caption ----
 story.append(Paragraph(

@@ -292,12 +292,7 @@ story.append(body(
     "life forms are restricted to certain geological time-spans</b>. All this is called "
     "<b>paleontological evidence</b>."))
 # F059
-story.append(body(
-    "<i>Recall:</i> fossil ages are calculated by <b>radioactive (radiometric) dating</b> - "
-    "comparing the ratio of a radioactive <b>parent isotope</b> to its stable <b>daughter "
-    "isotope</b> in the rock, using the isotope's known <b>half-life</b> to compute elapsed time "
-    "(NCERT leaves this as an unanswered recall question; the method itself is an addition, not "
-    "detailed in this chapter)."))
+story.append(memory_aid('Radiometric dating estimates fossil ages by comparing a radioactive parent isotope with its stable daughter isotope and using the known half-life to calculate elapsed time.'))
 # F060 (caption) + F061 (7 labels)
 story.append(body(
     "<b>A family tree of dinosaurs</b> and their living modern day counterpart organisms "
@@ -380,13 +375,7 @@ story.append(body(
     "similarities</b> point to the same shared ancestry as <b>structural similarities</b> among "
     "diverse organisms."))
 # F083, F084
-story.append(body(
-    "Man has bred selected plants and animals for <b>agriculture, horticulture, sport or "
-    "security</b>, and has <b>domesticated many wild animals and crops</b>. This intensive "
-    "breeding programme has created <b>breeds that differ from other breeds</b> (for example "
-    "<b>dogs</b>) but still are of the <b>same group</b>. The argument: if within <b>hundreds of "
-    "years</b> man could create new breeds, could not nature have done the same over <b>millions "
-    "of years</b>?"))
+story.append(body('Artificial selection for agriculture, horticulture, sport or security has produced new breeds of domesticated plants and animals, such as dogs, within hundreds of years; natural selection could produce comparable changes over millions of years.'))
 
 # ---- 6.3 Natural selection in action - industrial melanism (F085-F095, Fig 6.4) ----
 # F085, F086, F087 (caption), F088-F092
@@ -567,10 +556,7 @@ story.append(gap(8))
 # ======================================================================================
 story.append(heading("6.6", "MECHANISM OF EVOLUTION", 1, has_table=True))
 # F131 (opener), F132
-story.append(body(
-    "<b>What is the origin of this variation and how does speciation occur?</b> Even though "
-    "<b>Mendel</b> had talked of <b>inheritable factors influencing phenotype</b>, Darwin either "
-    "<b>ignored these observations or kept silence</b>."))
+story.append(body('Darwin did not explain the origin of variation or speciation; although Mendel described inheritable factors influencing phenotype, Darwin ignored those observations or remained silent.'))
 # F133, F134
 story.append(body(
     "In the <b>first decade of twentieth century</b>, <b>Hugo de Vries</b>, based on his work on "

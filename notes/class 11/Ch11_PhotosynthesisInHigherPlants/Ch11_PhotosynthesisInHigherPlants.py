@@ -310,9 +310,7 @@ story.append(process_flow([
 # ======================================================================================
 story.append(heading("11.2", "EARLY EXPERIMENTS", 1))
 # F249 (opener), F023
-story.append(body(
-    "It is interesting to learn about those simple experiments that led to a <b>gradual "
-    "development</b> in our understanding of photosynthesis."))
+
 
 # ---- 11.2 Joseph Priestley (F024-F029) ----
 story.append(heading("11.2a", "Joseph Priestley (1733-1804)", 3))
@@ -366,10 +364,7 @@ story.append(b1(
     "Sachs found that the <b>green parts in plants</b> is where <b>glucose is made</b>, and that "
     "the glucose is usually stored as starch."))
 # F035
-story.append(b1(
-    "His later studies showed that the <b>green substance</b> in plants (<b>chlorophyll</b> as we "
-    "know it now) is located in <b>special bodies</b> (later called <b>chloroplasts</b>) within "
-    "plant cells."))
+story.append(b1('His later studies showed that the green substance in plants (chlorophyll) is located in special bodies, later called chloroplasts, within plant cells.'))
 
 # ---- 11.2 T.W Engelmann (F037-F040) ----
 story.append(heading("11.2d", "T.W Engelmann (1843-1909)", 3))
@@ -516,9 +511,7 @@ story.append(note(
 # ======================================================================================
 story.append(heading("11.4", "HOW MANY TYPES OF PIGMENTS ARE INVOLVED IN PHOTOSYNTHESIS?", 1))
 # F251 (opener)
-story.append(body(
-    "Looking at plants have you ever wondered <b>why and how there are so many shades of green</b> "
-    "in their leaves - even in the same plant?"))
+story.append(body('Leaves differ in shade of green because they contain several pigments—chlorophyll a, chlorophyll b, xanthophylls and carotenoids—in different proportions.'))
 # F065, F066, F067
 story.append(b1(
     "The leaf pigments of any green plant can be separated through <b>paper chromatography</b>. A "
@@ -691,8 +684,7 @@ story.append(body(
 # ======================================================================================
 story.append(heading("11.6.1", "Splitting of Water", 2))
 # F254 (opener)
-story.append(body(
-    "You would then ask, <b>How does PS II supply electrons continuously?</b>"))
+story.append(body('Photosystem II receives replacement electrons continuously through the splitting of water (photolysis).'))
 # F092, F093, F094, F095
 story.append(b1(
     "The electrons that were <b>moved from photosystem II must be replaced</b>, and this is "
@@ -774,10 +766,7 @@ story.append(b1(
 # ======================================================================================
 story.append(heading("11.6.3", "Chemiosmotic Hypothesis", 2))
 # F256 (opener), F109
-story.append(body(
-    "Let us now try and understand how actually ATP is synthesised in the chloroplast. The "
-    "<b>chemiosmotic hypothesis</b> has been put forward to explain the <b>mechanism by which ATP "
-    "is synthesised in the chloroplast</b>."))
+story.append(body('ATP synthesis in the chloroplast is explained by the chemiosmotic hypothesis.'))
 # F110, F111
 story.append(b1(
     "<b>Like in respiration</b>, in photosynthesis too <b>ATP synthesis is linked to development "
@@ -918,9 +907,7 @@ story.append(data_table([
 # ======================================================================================
 story.append(heading("11.7.1", "The Primary Acceptor of CO<sub>2</sub>", 2))
 # F258 (opener)
-story.append(body(
-    "Let us now ask ourselves a question that was asked by the scientists who were struggling to "
-    "understand the <b>'dark reaction'</b>."))
+story.append(body('The dark reaction involves two key points: the primary CO<sub>2</sub> acceptor and the first stable product of CO<sub>2</sub> fixation.'))
 # F136, F135
 story.append(b1(
     "Scientists believed that <b>since the first product was a C<sub>3</sub> acid</b>, the "
@@ -1092,8 +1079,7 @@ story.append(b1(
     "(PEP)</b> and is <b>present in the mesophyll cells</b>. The enzyme responsible for the "
     "<b>primary CO<sub>2</sub> fixation</b> in C<sub>4</sub> plants is <b>PEP carboxylase</b> or "
     "<b>PEPcase</b>."))
-story.append(note(
-    "It is important to register that the <b>mesophyll cells lack RuBisCO enzyme</b>."))
+story.append(note('Mesophyll cells of C<sub>4</sub> plants lack RuBisCO.'))
 story.append(gap())
 # F161, F162, F163, F164, F165
 story.append(process_flow([
@@ -1459,8 +1445,7 @@ story.append(body(
 story.append(gap())
 
 # ---- Gap 1 - Exercise 1: the negative EXTERNAL C3/C4 claim is never made in the body ----
-story.append(heading("Ex. 1", "By looking at a plant externally, can you tell whether a plant is "
-                              "C<sub>3</sub> or C<sub>4</sub>? Why and how?", 3))
+story.append(note('C3 and C4 plants differ in leaf anatomy; C4 leaves show Kranz anatomy, with bundle-sheath cells.'))
 story.append(body(
     "<b>No.</b> <b>[addition]</b> C<sub>3</sub> and C<sub>4</sub> plants <b>cannot be "
     "distinguished by external appearance</b>. Every criterion this chapter gives is "
@@ -1471,10 +1456,7 @@ story.append(body(
 story.append(gap())
 
 # ---- Gap 2 - Exercise 5: chlorophyll b alone is never stated to be insufficient ----
-story.append(heading("Ex. 5", "Suppose there were plants that had a high concentration of "
-                              "Chlorophyll b, but lacked chlorophyll a, would it carry out "
-                              "photosynthesis? Then why do plants have chlorophyll b and other "
-                              "accessory pigments?", 3))
+story.append(note('Chlorophyll a is the chief pigment of photosynthesis. Accessory pigments (chlorophyll b, xanthophylls and carotenoids) absorb a wider range of wavelengths and protect chlorophyll a from photo-oxidation.'))
 story.append(body(
     "<b>No, it would not.</b> <b>[addition]</b> <b>Chlorophyll a is indispensable</b>: this "
     "chapter states that chlorophyll a is the <b>chief pigment associated with "
@@ -1488,9 +1470,7 @@ story.append(body(
 story.append(gap())
 
 # ---- Gap 3 - Exercise 6: the dark-degradation stability ordering is never stated ----
-story.append(heading("Ex. 6", "Why is the colour of a leaf kept in the dark frequently becomes "
-                              "yellow, or pale green? Which pigment do you think is more stable?",
-                     3))
+story.append(memory_aid('A leaf kept in the dark turns yellow or pale green because chlorophyll breaks down while the more stable carotenoids and xanthophylls remain.'))
 story.append(body(
     "<b>[addition]</b> A leaf kept <b>in the dark</b> turns <b>yellow or pale green</b> because "
     "<b>chlorophyll breaks down faster in the dark than the carotenoids do</b>. As the green "
@@ -1502,10 +1482,7 @@ story.append(body(
 story.append(gap())
 
 # ---- Gap 4 - Exercise 7: why shade leaves are darker green is never explained ----
-story.append(heading("Ex. 7", "Look at leaves of the same plant on the shady side and compare it "
-                              "with the leaves on the sunny side. Or, compare the potted plants "
-                              "kept in the sunlight with those in the shade. Which of them has "
-                              "leaves that are darker green? Why?", 3))
+
 story.append(body(
     "The <b>leaves on the shady side</b> - and the <b>potted plants kept in the shade</b> - have "
     "the <b>darker green</b> leaves. <b>[addition]</b> A <b>shade leaf builds more chlorophyll "

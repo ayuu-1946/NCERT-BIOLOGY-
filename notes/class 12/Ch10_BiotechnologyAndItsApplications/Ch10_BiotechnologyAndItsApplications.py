@@ -69,10 +69,7 @@ story.extend(title_block("Biotechnology and Its Applications"))
 
 # ---- 10.0 Chapter introduction: what this chapter is about (F001-F007) ----
 story.append(heading("10", "WHAT THIS CHAPTER IS ABOUT", 1))
-story.append(keyterm(
-    "<b>Biotechnology</b>, as learnt in the previous chapter, essentially deals with the "
-    "<b>industrial-scale production</b> of <b>biopharmaceuticals and biologicals</b> using "
-    "<b>genetically modified microbes, fungi, plants and animals</b>."))
+story.append(keyterm('Biotechnology is the industrial-scale production of biopharmaceuticals and biologicals using genetically modified microbes, fungi, plants and animals.'))
 story.append(Paragraph(
     "The applications of biotechnology include <b>therapeutics, diagnostics, genetically "
     "modified crops for agriculture, processed food, bioremediation, waste treatment, and "
@@ -214,11 +211,7 @@ story.append(Paragraph(
     "and <b>dipterans</b> (flies, mosquitoes). <i>B. thuringiensis</i> forms <b>protein "
     "crystals</b> during a particular phase of its growth, and these crystals contain a "
     "<b>toxic insecticidal protein</b>.", STYLES["Body"]))
-story.append(note(
-    "<b>Why does the Bt toxin not kill the <i>Bacillus</i> itself?</b> Because the Bt toxin "
-    "protein exists as <b>inactive protoxins</b>. It becomes toxic only after an insect ingests "
-    "it, so the crystal is harmless while stored inside the bacterium. (This is the answer to "
-    "Exercise 4: the crystals do not kill the bacteria because <b>the toxin is inactive</b>.)"))
+story.append(note('Bt toxin does not kill Bacillus: it is stored as an inactive protoxin and becomes active only in the alkaline pH of an insect gut.'))
 story.append(Paragraph(
     "The mechanism of insect killing runs as follows:", STYLES["Body"]))
 story.append(process_flow([
@@ -323,14 +316,7 @@ story.append(Spacer(1, 4))
 
 # ---- 10.2.1 Genetically Engineered Insulin (F070-F082, F138) + Figure 10.3 ----
 story.append(heading("10.2.1", "Genetically Engineered Insulin", 2))
-story.append(Paragraph(
-    "Management of <b>adult-onset diabetes</b> is possible by taking <b>insulin</b> at regular "
-    "time intervals. What would a diabetic patient do if enough human insulin were not "
-    "available? One would have to <b>isolate and use insulin from other animals</b> -- but "
-    "would animal insulin be just as effective, and would it not <b>elicit an immune "
-    "response</b> in the human body? The elegant answer is a <b>bacterium that could make human "
-    "insulin</b>: one can then easily grow a large quantity of bacteria and make as much "
-    "insulin as needed.", STYLES["Body"]))
+story.append(Paragraph('Adult-onset diabetes can be managed with insulin taken at regular intervals. Insulin from slaughtered cattle or pigs can cause allergy or other immune reactions; recombinant human insulin was produced in E. coli using rDNA technology by Eli Lilly in 1983.', STYLES["Body"]))
 story.append(Paragraph(
     "Insulin used for diabetes was <b>earlier extracted from the pancreas of slaughtered cattle "
     "and pigs</b>. Insulin from an animal source, though, caused <b>some patients to develop "
