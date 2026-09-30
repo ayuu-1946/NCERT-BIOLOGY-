@@ -27,6 +27,7 @@ sys.path.insert(0, ROOT)
 from reportlab.platypus import Paragraph, Spacer, KeepTogether
 from reportlab.lib.units import cm
 
+from reportlab.platypus import PageBreak
 from neet_template import (
     STYLES, FRAME_WIDTH, DARK_GREY, GRID_LINE,
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
@@ -125,11 +126,13 @@ story.append(process_flow([
     "not attempt answering the second question.</i>",
 ]))
 
+# ref p2
+story.append(PageBreak())
+
 # ---- 1.1 Diversity in the Living World ----
 story.append(heading("1.1", "Diversity in the Living World", level=1))
-story.append(body("Look around and you see a large variety of living organisms - potted plants, "
-                  "insects, birds, your pets, other animals and plants. Several organisms "
-                  "<b>cannot be seen with the naked eye</b>, yet they are all around you. Increase "
+story.append(body("Several organisms <b>cannot be seen with the naked eye</b>, yet they are all around "
+                  "you. Increase "
                   "the area you observe and the range and variety of organisms increases; visit a "
                   "<b>dense forest</b> and you would <i>probably</i> see a much greater number and "
                   "kinds of living organisms."))
@@ -195,6 +198,12 @@ story.append(data_table([
     ["2. Order of words", "The <b>first word</b> represents the <b>genus</b>; the <b>second "
                           "component</b> denotes the <b>specific epithet</b>.",
      "<i>Mangifera</i> = genus, <i>indica</i> = specific epithet"],
+], col_widths=[1, 3, 1.5]))
+
+# ref p3
+story.append(PageBreak())
+story.append(data_table([
+    ["Rule", "What it says", "Illustration"],
     ["3. Handwriting vs print", "Both words, when <b>handwritten</b>, are <b>separately "
                                 "underlined</b>; when printed they are in <b>italics</b> - to "
                                 "indicate their Latin origin.", "<u>Mangifera</u> <u>indica</u>"],
@@ -252,6 +261,9 @@ story.append(note("Do not blur the four terms. <b>Identification</b> = which org
                   "process of classifying organisms into taxa. <b>Systematics</b> is the widest: "
                   "identification + nomenclature + classification, <i>plus</i> evolutionary "
                   "relationships."))
+
+# ref p4
+story.append(PageBreak())
 
 # ---- 1.2 Taxonomic Categories ----
 story.append(heading("1.2", "Taxonomic Categories", level=1))
@@ -325,6 +337,9 @@ story.append(data_table([
      "<b>Canidae</b> (dog) vs <b>Felidae</b> (cat)"],
 ], col_widths=[0.9, 3.1, 1.4]))
 
+# ref p5
+story.append(PageBreak())
+
 # ---- 1.2.4 Order ----
 story.append(heading("1.2.4", "Order", level=3))
 story.append(body("Categories like <b>species, genus and families</b> are based on a <b>number of "
@@ -389,10 +404,14 @@ story.append(data_table([
     ["<b>Species</b>", "The <b>lowest category</b>; individuals with <b>fundamental similarities</b>",
      "<i>Panthera leo</i>; <i>Homo sapiens</i>"],
 ], col_widths=[1.15, 2.35, 2.0]))
+
+# ref p6
+story.append(PageBreak())
+
 story.append(figure("fig_1_1.png",
                     "Fig. 1.1 - Taxonomic categories showing hierarchial arrangement in ascending "
                     "order.",
-                    max_width_cm=7.0))
+                    max_width_cm=4.1))
 story.append(body("Reading the hierarchy tells you the <b>basis of arrangement</b>:"))
 story.append(b1("As we go <b>higher</b> from species to kingdom, the <b>number of common "
                 "characteristics goes on decreasing</b>."))
@@ -411,24 +430,28 @@ story.append(memory_aid("Ascending order <b>Species to Kingdom</b>: <b>S</b>ome 
 # intro line, four data rows and reading NOTE, so the banner can never be stranded
 # alone at the bottom of a page while the table flows to the next (Pass 3 layout fix;
 # F107, F110-F114).
+table_1_1 = data_table([
+    ["Common Name", "Biological Name", "Genus", "Family", "Order", "Class", "Phylum/Division"],
+    ["Man", "<i>Homo sapiens</i>", "<i>Homo</i>", "Hominidae", "Primata", "Mammalia",
+     "Chordata"],
+    ["Housefly", "<i>Musca domestica</i>", "<i>Musca</i>", "Muscidae", "Diptera", "Insecta",
+     "Arthropoda"],
+    ["Mango", "<i>Mangifera indica</i>", "<i>Mangifera</i>", "Anacardiaceae", "Sapindales",
+     "Dicotyledonae", "Angiospermae"],
+    ["Wheat", "<i>Triticum aestivum</i>", "<i>Triticum</i>", "Poaceae", "Poales",
+     "Monocotyledonae", "Angiospermae"],
+], col_widths=[1.05, 1.5, 1.1, 1.5, 1.15, 1.5, 1.5], font_size=9.0)
+table_1_1_note = note("Read Table 1.1 column-wise for the two plant entries: mango is "
+                      "<b>Dicotyledonae</b> and wheat is <b>Monocotyledonae</b>, yet both are "
+                      "<b>Angiospermae</b> - the class differs while the division is the same.")
+table_1_1_heading_group = heading("Table 1.1", "Organisms with their Taxonomic Categories", level=2)
+table_1_1_heading = table_1_1_heading_group._content[-1]
 story.append(KeepTogether([
-    heading("Table 1.1", "Organisms with their Taxonomic Categories", level=2),
+    table_1_1_heading,
     body("Table 1.1 indicates the taxonomic categories to which some common organisms "
          "like <b>housefly, man, mango and wheat</b> belong."),
-    data_table([
-        ["Common Name", "Biological Name", "Genus", "Family", "Order", "Class", "Phylum/Division"],
-        ["Man", "<i>Homo sapiens</i>", "<i>Homo</i>", "Hominidae", "Primata", "Mammalia",
-         "Chordata"],
-        ["Housefly", "<i>Musca domestica</i>", "<i>Musca</i>", "Muscidae", "Diptera", "Insecta",
-         "Arthropoda"],
-        ["Mango", "<i>Mangifera indica</i>", "<i>Mangifera</i>", "Anacardiaceae", "Sapindales",
-         "Dicotyledonae", "Angiospermae"],
-        ["Wheat", "<i>Triticum aestivum</i>", "<i>Triticum</i>", "Poaceae", "Poales",
-         "Monocotyledonae", "Angiospermae"],
-    ], col_widths=[1.05, 1.5, 1.1, 1.5, 1.15, 1.5, 1.5], font_size=9.0),
-    note("Read Table 1.1 column-wise for the two plant entries: mango is "
-         "<b>Dicotyledonae</b> and wheat is <b>Monocotyledonae</b>, yet both are "
-         "<b>Angiospermae</b> - the class differs while the division is the same."),
+    table_1_1,
+    table_1_1_note,
 ]))
 
 # ---- Quick Recap ----
@@ -441,6 +464,10 @@ story.append(b1("The living world is <b>rich in variety</b>. Millions of plants 
 story.append(b1("To facilitate the study of kinds and diversity of organisms, biologists evolved "
                 "<b>rules and principles for identification, nomenclature and classification</b>; "
                 "the branch of knowledge dealing with these aspects is <b>taxonomy</b>."))
+
+# ref p7
+story.append(PageBreak())
+
 story.append(b1("The basics of taxonomy - identification, naming and classification - are "
                 "<b>universally evolved under international codes</b>: <b>ICBN</b> for plants, "
                 "<b>ICZN</b> for animals."))
