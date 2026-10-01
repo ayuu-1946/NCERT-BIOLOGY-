@@ -199,9 +199,6 @@ story.append(figure(
     "fig_6_1.png",
     "Figure 6.1 Diagrammatic representation: (a) stomata with bean-shaped guard cells "
     "(b) stomata with dumb-bell shaped guard cell"))  # F035 caption
-story.append(note(
-    "Figure 6.1 labels (verbatim): <b>Epidermal cells</b>; <b>Subsidiary cells</b>; "
-    "<b>Chloroplast</b>; <b>Guard cells</b>; <b>Stomatal pore</b>."))  # F036 labels -> running text (check 6)
 
 # ======================================================================================
 # ---- 6.1.2  The Ground Tissue System ---- F037-F041 (+ folded summary F127, F128)
@@ -263,8 +260,6 @@ story.append(figure(
     "fig_6_2.png",
     "Figure 6.2 Various types of vascular bundles: (a) radial (b) conjoint closed "
     "(c) conjoint open"))  # F052 caption
-story.append(note(
-    "Figure 6.2 labels (verbatim): <b>Xylem</b>; <b>Phloem</b>; <b>Cambium</b>."))  # F053 labels
 
 # ======================================================================================
 # ---- 6.2  Anatomy of Dicotyledonous and Monocotyledonous Plants ---- F054-F055 (+ F130)
@@ -338,10 +333,6 @@ story.append(b1(
 story.append(figure(
     "fig_6_3.png",
     "Figure 6.3 T.S.: (a) Dicot root (Primary) (b) Monocot root"))  # F071 caption
-story.append(note(
-    "Figure 6.3 labels (verbatim): <b>Root hair</b>; <b>Epidermis</b>; <b>Cortex</b>; "
-    "<b>Endodermis</b>; <b>Pericycle</b>; <b>Protoxylem</b>; <b>Metaxylem</b>; <b>Pith</b>; "
-    "<b>Phloem</b>."))  # F072 labels
 
 # ======================================================================================
 # ---- 6.2.3  Dicotyledonous Stem ---- F079-F092 (+ Fig 6.4 with 6.2.4)
@@ -401,17 +392,9 @@ story.append(b1(
     "within the vascular bundles."))  # F097
 
 # --- Fig 6.4 ---
-# [VERIFICATION FIX D4] figure + its label NOTE held on one page (they were split by a
-# page break, leaving the label list stranded at the top of the next page).
-story.append(KeepTogether([figure(
+story.append(figure(
     "fig_6_4.png",
-    "Figure 6.4 T.S. of stem: (a) Dicot (b) Monocot"),  # F098 caption
-    note(
-    "Figure 6.4 labels (verbatim): <b>Epidermal hair</b>; <b>Epidermis</b>; <b>Hypodermis</b>; "
-    "<b>Parenchyma</b>; <b>Endodermis</b>; <b>Pericycle</b>; <b>Vascular bundle</b>; "
-    "<b>Medullary rays</b>; <b>Pith</b>; <b>Collenchyma</b>; <b>Phloem</b>; <b>Cambium</b>; "
-    "<b>Metaxylem</b>; <b>Protoxylem</b>; <b>Xylem</b>; <b>Vascular bundles</b>; <b>Ground "
-    "tissue</b>.")]))  # F099 labels [VERIFICATION FIX D2: 'Xylem' label of the monocot panel added - 17 labels]
+    "Figure 6.4 T.S. of stem: (a) Dicot (b) Monocot"))  # F098 caption
 
 # ======================================================================================
 # ---- 6.2.5  Dorsiventral (Dicotyledonous) Leaf ---- F100-F114 (+ Fig 6.5 with 6.2.6)
@@ -489,11 +472,6 @@ story.append(b1(
 story.append(figure(
     "fig_6_5.png",
     "Figure 6.5 T.S. of leaf: (a) Dicot (b) Monocot"))  # F115 caption
-story.append(note(
-    "Figure 6.5 labels (verbatim): <b>Bundle sheath</b>; <b>Xylem</b>; <b>Phloem</b>; "
-    "<b>Adaxial epidermis</b>; <b>Palisade mesophyll</b>; <b>Air cavity</b>; <b>Spongy "
-    "mesophyll</b>; <b>Sub-stomatal cavity</b>; <b>Stoma</b>; <b>Abaxial epidermis</b>; "
-    "<b>Mesophyll</b>."))  # F116 labels
 
 # ======================================================================================
 # ---- QUICK RECAP (from NCERT SUMMARY; F124 heading) ----
