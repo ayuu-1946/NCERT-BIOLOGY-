@@ -213,7 +213,8 @@ def motif_dna(size: float = 42) -> Drawing:
 ORPHAN_GUARD_PT = 100
 
 
-def heading(number: str, text: str, level: int, has_table: bool = False):
+def heading(number: str, text: str, level: int, has_table: bool = False,
+            page_guard: bool = True):
     """Banner heading with its section-number badge (§4.1 + Heading structure).
     `number` is the NCERT section number, kept visible for traceability (§3).
 
@@ -221,9 +222,13 @@ def heading(number: str, text: str, level: int, has_table: bool = False):
     bare Table: a bare banner has nothing binding it to the text beneath it, so a
     heading landing near a page break is left stranded at the foot of the page
     while its section body starts overleaf. That is the "orphaned heading" layout
-    bug §6 Pass 3(a) exists to catch, and it is a mechanical defect, so it belongs
-    in the frozen template (fixed once for every chapter) and in check_pdf.py's
-    automated gate (check 9) - not in a per-chapter workaround.
+    bug §6 Pass 3(a) exists to catch, so the guarded default remains in the shared
+    template and in check_pdf.py's automated gate (check 9). A chapter-specific
+    natural-flow layout may explicitly opt out and must be checked after building.
+
+    `page_guard=False` keeps the banner atomic but omits the conditional blank-tail
+    guard, for chapter-specific natural-flow layouts. The default preserves all
+    existing chapter behavior.
     """
     size = {1: 13.5, 2: 11.5, 3: 10.0}[level]
     badge = _badge_section(number, size)
@@ -255,7 +260,9 @@ def heading(number: str, text: str, level: int, has_table: bool = False):
         ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
     ]))
     t.hAlign = "LEFT"
-    return KeepTogether([CondPageBreak(ORPHAN_GUARD_PT), t])
+    if page_guard:
+        return KeepTogether([CondPageBreak(ORPHAN_GUARD_PT), t])
+    return KeepTogether([t])
 
 
 def keyterm(text: str):

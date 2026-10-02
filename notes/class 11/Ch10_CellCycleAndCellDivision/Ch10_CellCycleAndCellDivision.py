@@ -27,11 +27,13 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))))
 
-from reportlab.platypus import Spacer, Paragraph, KeepTogether  # noqa: E402
+from reportlab.platypus import Spacer, Paragraph  # noqa: E402
 from reportlab.lib.units import cm  # noqa: E402
+from reportlab.lib.styles import ParagraphStyle  # noqa: E402
+from PIL import Image as PILImage  # noqa: E402
 
 from neet_template import (  # noqa: E402
-    STYLES,
+    STYLES, FRAME_WIDTH,
     heading, keyterm, process_flow, note, memory_aid, data_table, title_block, build_pdf,
 )
 from neet_template import figure as _shared_figure  # noqa: E402
@@ -41,7 +43,16 @@ ASSETS = os.path.join(HERE, "assets")
 OUT_PDF = os.path.join(HERE, "Ch10_CellCycleAndCellDivision.pdf")
 
 
+FIGURE_SCALE = 0.60
+
 def figure(asset_name, caption_text, max_width_cm=15.9):
+    """Scale only this chapter's figure artwork to 60%, preserving its aspect ratio."""
+    asset_path = os.path.join(ASSETS, asset_name)
+    if os.path.exists(asset_path):
+        with PILImage.open(asset_path) as source_image:
+            natural_width_cm = source_image.width / 300.0 * 2.54
+        base_width_cm = min(max_width_cm, natural_width_cm, FRAME_WIDTH / cm)
+        max_width_cm = FIGURE_SCALE * base_width_cm
     return _shared_figure(asset_name, caption_text, ASSETS, max_width_cm=max_width_cm)
 
 
@@ -53,30 +64,30 @@ def B(text, level=1):
     return Paragraph(text, STYLES[f"Bullet{level}"])
 
 
+# Spacing overrides are limited to the final exercise-summary section.
+EXERCISE_INTRO_STYLE = ParagraphStyle("ExerciseSummaryIntro", parent=STYLES["Body"], spaceAfter=0)
+EXERCISE_BULLET_STYLE = ParagraphStyle("ExerciseSummaryBullet", parent=STYLES["Bullet1"], spaceAfter=0)
+FINAL_EXERCISE_BULLET_STYLE = ParagraphStyle(
+    "FinalExerciseSummaryBullet", parent=STYLES["Bullet1"], leading=13.0, spaceAfter=0)
+
+
+def EXI(text):
+    return Paragraph(text, EXERCISE_INTRO_STYLE)
+
+
+def EXB(text, final=False):
+    return Paragraph(text, FINAL_EXERCISE_BULLET_STYLE if final else EXERCISE_BULLET_STYLE)
+
+
 def H(number, text, level, follow, has_table=False):
-    """Heading kept together with the flowable that follows it (v6 s4 tech rules)."""
-    return KeepTogether([heading(number, text, level, has_table=has_table), follow])
-
-
-def labels_line(labels):
-    """Reproduce the in-figure labels verbatim beneath a figure.
-
-    v6 s4.4 requires every in-figure label catalogued in the inventory
-    (L01-L08) to appear in the running text, so a reader working from a bad
-    photocopy of the diagram can still name every part. NCERT's own spelling of
-    each label is preserved exactly - including Figure 10.3's "Metaphase 1" /
-    "Anaphase 1" / "Telophase 1" with the digit 1, where the body text uses the
-    roman "I" (Rule 4, and the source-spelling note in the inventory).
-    """
-    return P("<i>Labels printed in the figure:</i> " + "; ".join(labels))
+    """Return heading and opener as adjacent flowables; omit this chapter's page guard."""
+    return [heading(number, text, level, has_table=has_table, page_guard=False), follow]
 
 
 story = []
 
 # ---- Title block ----
 story.extend(title_block("Cell Cycle and Cell Division"))
-story.append(P("<i>Class 11 - Chapter 10 - NEET replacement notes built from the NCERT "
-               "chapter text, its 4 figures (8 panels), its summary and its 16 exercises.</i>"))
 story.append(Spacer(1, 0.18 * cm))
 
 # ---- Chapter opener ---- (F001-F005)
@@ -90,7 +101,7 @@ story.append(P("Every organism, even the largest, starts its life from a <b>sing
                "structure consisting of millions of cells."))
 
 # ---- 10.1 Cell Cycle ---- (F157-F159 summary-unique opener, F006-F013)
-story.append(H("10.1", "Cell Cycle", 1,
+story.extend(H("10.1", "Cell Cycle", 1,
                P("According to the <b>cell theory</b>, cells arise from preexisting cells. Any "
                  "sexually reproducing organism starts its life cycle from a single-celled "
                  "<b>zygote</b>. Cell division does not stop with the formation of the mature "
@@ -110,7 +121,7 @@ story.append(P("Although cell growth (in terms of cytoplasmic increase) is a con
                "control."))
 
 # ---- 10.1.1 Phases of Cell Cycle ---- (F014-F045, F160-F162)
-story.append(H("10.1.1", "Phases of Cell Cycle", 2,
+story.extend(H("10.1.1", "Phases of Cell Cycle", 2,
                P("A typical eukaryotic cell cycle is illustrated by human cells in culture. These "
                  "cells divide once in approximately every <b>24 hours</b>. However, this duration "
                  "of cell cycle <b>can vary</b> from organism to organism and also from cell type "
@@ -154,8 +165,6 @@ story.append(note("The S phase doubles the DNA (2C to 4C) but not the chromosome
 story.append(figure("fig_10_1.png",
                     "Fig. 10.1 - A diagrammatic view of cell cycle indicating formation of two "
                     "cells from one cell.", max_width_cm=10.4))
-story.append(labels_line(["M Phase", "Cytokinesis", "Telophase", "Anaphase", "Metaphase",
-                          "Prophase", "G1", "S", "G2", "G0"]))
 story.append(P("The cycle runs continuously, one round feeding the next:"))
 story.append(process_flow([
     "<b>G1</b> - cell grows, metabolises normally, duplicates most organelles; DNA is not yet "
@@ -199,7 +208,7 @@ story.append(P("<b>Which cells divide by mitosis.</b> In animals, mitotic cell d
 story.append(note('Plant meristems, including apical meristems and lateral cambium, divide throughout life. Most differentiated cells exit the cell cycle into G0.'))
 
 # ---- 10.2 M Phase ---- (F046-F050)
-story.append(H("10.2", "M Phase (Mitosis) - Equational Division", 1,
+story.extend(H("10.2", "M Phase (Mitosis) - Equational Division", 1,
                P("This is the most dramatic period of the cell cycle, involving a major "
                  "reorganisation of virtually all components of the cell. Since the number of "
                  "chromosomes in the parent and progeny cells is the same, it is also called as "
@@ -217,7 +226,7 @@ story.append(process_flow([
 ]))
 
 # ---- 10.2.1 Prophase ---- (F051-F060, F163, F164)
-story.append(H("10.2.1", "Prophase", 3,
+story.extend(H("10.2.1", "Prophase", 3,
                P("Prophase, which is the first stage of karyokinesis of mitosis, follows the S and "
                  "G2 phases of interphase. In the S and G2 phases, the new DNA molecules formed "
                  "are <b>not distinct but intertwined</b>. Prophase is marked by the initiation of "
@@ -246,10 +255,9 @@ story.append(P("Cells at the end of prophase, when viewed under the microscope, 
 story.append(figure("fig_10_2a.png",
                     "Fig. 10.2 (a) - A diagrammatic view of stages in mitosis: early prophase and "
                     "late prophase.", max_width_cm=8.6))
-story.append(labels_line(["Early Prophase", "Late Prophase"]))
 
 # ---- 10.2.2 Metaphase ---- (F061-F071)
-story.append(H("10.2.2", "Metaphase", 3,
+story.extend(H("10.2.2", "Metaphase", 3,
                P("The complete disintegration of the nuclear envelope marks the start of the second "
                  "phase of mitosis, hence the chromosomes are spread through the cytoplasm of the "
                  "cell. By this stage, condensation of chromosomes is completed and they can be "
@@ -273,10 +281,9 @@ story.append(B("&bull; Chromosomes are moved to spindle equator and get aligned 
 story.append(figure("fig_10_2b.png",
                     "Fig. 10.2 (b) - A diagrammatic view of stages in mitosis: transition to "
                     "metaphase and metaphase.", max_width_cm=8.6))
-story.append(labels_line(["Transition to Metaphase", "Metaphase"]))
 
 # ---- 10.2.3 Anaphase ---- (F072-F076)
-story.append(H("10.2.3", "Anaphase", 3,
+story.extend(H("10.2.3", "Anaphase", 3,
                P("At the onset of anaphase, each chromosome arranged at the metaphase plate is "
                  "split <b>simultaneously</b> and the two daughter chromatids, now referred to as "
                  "<b>daughter chromosomes</b> of the future daughter nuclei, begin their migration "
@@ -290,10 +297,9 @@ story.append(B("&bull; Chromatids move to opposite poles."))
 story.append(figure("fig_10_2c.png",
                     "Fig. 10.2 (c) - A diagrammatic view of stages in Mitosis: anaphase.",
                     max_width_cm=8.0))
-story.append(labels_line(["Anaphase"]))
 
 # ---- 10.2.4 Telophase ---- (F077-F081, F165)
-story.append(H("10.2.4", "Telophase", 3,
+story.extend(H("10.2.4", "Telophase", 3,
                P("At the beginning of the final stage of karyokinesis, i.e., telophase, the "
                  "chromosomes that have reached their respective poles <b>decondense and lose "
                  "their individuality</b>. The individual chromosomes can no longer be seen and "
@@ -309,10 +315,9 @@ story.append(B("&bull; Nucleolus, golgi complex and ER reform."))
 story.append(figure("fig_10_2d.png",
                     "Fig. 10.2 (d) - A diagrammatic view of stages in Mitosis: telophase.",
                     max_width_cm=8.0))
-story.append(labels_line(["Telophase"]))
 
 # ---- 10.2.5 Cytokinesis ---- (F082-F089)
-story.append(H("10.2.5", "Cytokinesis", 3,
+story.extend(H("10.2.5", "Cytokinesis", 3,
                P("Mitosis accomplishes not only the segregation of duplicated chromosomes into "
                  "daughter nuclei (karyokinesis), but the cell itself is divided into two daughter "
                  "cells by the separation of cytoplasm called <b>cytokinesis</b>, at the end of "
@@ -338,10 +343,9 @@ story.append(figure("fig_10_2e.png",
                     "Fig. 10.2 (e) - A diagrammatic view of stages in Mitosis: interphase, the "
                     "state the daughter cells return to once division is complete.",
                     max_width_cm=8.0))
-story.append(labels_line(["Interphase"]))
 
 # ---- 10.3 Significance of Mitosis ---- (F090-F099)
-story.append(H("10.3", "Significance of Mitosis", 1,
+story.extend(H("10.3", "Significance of Mitosis", 1,
                P("Mitosis or the equational division is <b>usually</b> restricted to the diploid "
                  "cells <b>only</b>. However, in <b>some</b> lower plants and in <b>some</b> social "
                  "insects haploid cells also divide by mitosis. It is very essential to understand "
@@ -364,7 +368,7 @@ story.append(B("&bull; <b>Continuous growth in plants.</b> Mitotic divisions in 
                "plants throughout their life."))
 
 # ---- 10.4 Meiosis ---- (F100-F110, F166)
-story.append(H("10.4", "Meiosis - Reduction Division", 1,
+story.extend(H("10.4", "Meiosis - Reduction Division", 1,
                P("The production of offspring by sexual reproduction includes the fusion of two "
                  "gametes, each with a complete <b>haploid</b> set of chromosomes. Gametes are "
                  "formed from specialised <b>diploid</b> cells.")))
@@ -419,7 +423,7 @@ story.append(data_table([
 ], col_widths=[1.5, 2.6, 3.9]))
 
 # ---- 10.4.1 Meiosis I ---- (F111-F143, F167)
-story.append(H("10.4.1", "Meiosis I", 2,
+story.extend(H("10.4.1", "Meiosis I", 2,
                P("Prophase of the first meiotic division is typically <b>longer and more "
                  "complex</b> when compared to prophase of mitosis. It has been further subdivided "
                  "into the following five phases based on chromosomal behaviour, i.e., "
@@ -470,10 +474,9 @@ story.append(keyterm("The stage between the two meiotic divisions is called <b>i
                      "interkinesis. Interkinesis is followed by prophase II, a much simpler "
                      "prophase than prophase I."))
 story.append(figure("fig_10_3.png", "Fig. 10.3 - Stages of Meiosis I.", max_width_cm=15.9))
-story.append(labels_line(["Prophase I", "Metaphase 1", "Anaphase 1", "Telophase 1"]))
 
 # ---- 10.4.2 Meiosis II ---- (F144-F152)
-story.append(H("10.4.2", "Meiosis II", 2,
+story.extend(H("10.4.2", "Meiosis II", 2,
                P("<b>Prophase II.</b> Meiosis II is initiated immediately after cytokinesis, "
                  "<b>usually</b> before the chromosomes have fully elongated. In contrast to "
                  "meiosis I, <b>meiosis II resembles a normal mitosis</b>. The nuclear membrane "
@@ -490,7 +493,6 @@ story.append(P("<b>Telophase II.</b> Meiosis ends with telophase II, in which th
                "resulting in the formation of a <b>tetrad of cells</b>, i.e., four haploid "
                "daughter cells."))
 story.append(figure("fig_10_4.png", "Fig. 10.4 - Stages of Meiosis II.", max_width_cm=15.9))
-story.append(labels_line(["Prophase II", "Metaphase II", "Anaphase II", "Telophase II"]))
 story.append(memory_aid("Prophase I substages in order - <b>L</b>eptotene, <b>Z</b>ygotene, "
                         "<b>P</b>achytene, <b>D</b>iplotene, <b>D</b>iakinesis: read them as "
                         "\"<b>LZ PDD</b>\". The two D stages are the late ones, and the pairing "
@@ -498,7 +500,7 @@ story.append(memory_aid("Prophase I substages in order - <b>L</b>eptotene, <b>Z<
                         "(P for pachytene)."))
 
 # ---- 10.5 Significance of Meiosis ---- (F153-F156)
-story.append(H("10.5", "Significance of Meiosis", 1,
+story.extend(H("10.5", "Significance of Meiosis", 1,
                P("Meiosis is the mechanism by which <b>conservation of specific chromosome number "
                  "of each species</b> is achieved across generations in sexually reproducing "
                  "organisms, even though the process, per se, <b>paradoxically</b>, results in "
@@ -508,7 +510,7 @@ story.append(P("It also increases the <b>genetic variability</b> in the populati
                "<b>evolution</b>."))
 
 # ---- Quick Recap ---- (rewritten, denser version of the NCERT summary)
-story.append(H("QR", "Quick Recap", 1,
+story.extend(H("QR", "Quick Recap", 1,
                P("Cells arise from preexisting cells (cell theory); a sexually reproducing "
                  "organism starts its life cycle from a single-celled zygote, and cell division "
                  "does not stop with the mature organism but continues throughout its life cycle. "
@@ -547,23 +549,23 @@ story.append(B("&bull; <b>Meiosis</b>, in contrast, occurs in the diploid cells 
                "increases genetic variability, which matters for evolution."))
 
 # ---- Appendix ---- Terms used in the exercises (Rule 2)
-story.append(H("EX", "Terms Used in the Exercises", 1,
-               P("These are the points the end-of-chapter questions lean on that the chapter body "
+story.extend(H("EX", "Terms Used in the Exercises", 1,
+               EXI("These are the points the end-of-chapter questions lean on that the chapter body "
                  "states in a scattered way, or does not state at all. Nothing here is imported "
                  "from outside this chapter; where the chapter genuinely does not supply an "
                  "answer, that is said plainly.")))
-story.append(B("&bull; <b>\"Average cell cycle span for a mammalian cell\" (Q1).</b> The chapter "
+story.append(EXB("&bull; <b>\"Average cell cycle span for a mammalian cell\" (Q1).</b> The chapter "
                "never uses the word <i>mammalian</i>: it gives the figure for human cells in "
                "culture, which divide once in approximately every 24 hours, of which cell division "
                "proper lasts for only about an hour. That 24-hour figure is the average the "
                "question asks for."))
-story.append(B("&bull; <b>Four daughter cells equal or unequal in size (Q9).</b> The chapter "
+story.append(EXB("&bull; <b>Four daughter cells equal or unequal in size (Q9).</b> The chapter "
                "states that meiosis is met during gametogenesis in plants and animals and that "
                "cytokinesis after telophase II gives a tetrad of cells, i.e., four haploid "
                "daughter cells. It does <b>not</b> state their relative sizes anywhere, so the "
                "equal-versus-unequal comparison is beyond what this chapter supplies; answer it "
                "from the gametogenesis chapters rather than from here."))
-story.append(B("&bull; <b>Haploid cells in higher plants where cell division does not occur "
+story.append(EXB("&bull; <b>Haploid cells in higher plants where cell division does not occur "
                "(Q13 ii).</b> The chapter supplies the two halves of this discussion separately: "
                "cells that do not divide further exit G1 into the quiescent stage (G0), where they "
                "remain metabolically active but no longer proliferate unless called on to do so; "
@@ -571,21 +573,21 @@ story.append(B("&bull; <b>Haploid cells in higher plants where cell division doe
                "haploid dividing stages to be identified from alternation of generations "
                "(Chapter 3). Haploid plant cells that are <b>not</b> dividing are therefore G0-type "
                "cells of the haploid generation; the chapter names no specific example."))
-story.append(B("&bull; <b>\"Can there be mitosis without DNA replication in the S phase?\" "
+story.append(EXB("&bull; <b>\"Can there be mitosis without DNA replication in the S phase?\" "
                "(Q14).</b> No, as the chapter states the sequence: DNA synthesis occurs only "
                "during one specific stage of the cell cycle, the S phase, which marks DNA "
                "replication and chromosome duplication; and prophase, the first stage of "
                "karyokinesis of mitosis, follows the S and G2 phases of interphase. Mitosis "
                "distributes replicated chromosomes, so the replication must have happened first."))
-story.append(B("&bull; <b>\"Can there be DNA replication without cell division?\" (Q15).</b> Yes. "
+story.append(EXB("&bull; <b>\"Can there be DNA replication without cell division?\" (Q15).</b> Yes. "
                "In some organisms karyokinesis is not followed by cytokinesis, giving a "
                "multinucleate condition and the formation of a syncytium, e.g., liquid endosperm "
                "in coconut. Note also that no DNA replication takes place during interkinesis, the "
                "stage between the two meiotic divisions."))
-story.append(B("&bull; <b>Chromosome number (N) and DNA content (C) at every stage (Q16), and the "
+story.append(EXB("&bull; <b>Chromosome number (N) and DNA content (C) at every stage (Q16), and the "
                "mitosis-versus-meiosis differences (Q11).</b> Both are answered by the two tables "
                "in the body: the DNA-content table in 10.1.1 and the comparison table in 10.4. "
-               "Neither adds a fact beyond 10.1.1-10.4."))
+               "Neither adds a fact beyond 10.1.1-10.4.", final=True))
 
 
 def main():
